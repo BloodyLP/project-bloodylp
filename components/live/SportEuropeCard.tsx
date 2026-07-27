@@ -181,7 +181,7 @@ export default function SportEuropeCard() {
                         </span>
 
                         <Image
-                            src="/logos/sporteurope-logo.png"
+                            src="/logos/sporteurope.tv-logo.png"
                             alt="SportEurope"
 
                             width={340}
