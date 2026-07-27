@@ -17,6 +17,8 @@ import "./globals.css";
 
 import Script from "next/script";
 
+import { Analytics } from "@vercel/analytics/next";
+
 import Footer from "@/components/layout/footer/Footer";
 
 import { metadata } from "@/lib/seo/metadata";
@@ -52,6 +54,8 @@ export default function RootLayout({
                 {children}
 
                 <Footer />
+
+                <Analytics />
 
                 <Script
                     id="person-jsonld"
