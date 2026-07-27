@@ -1,0 +1,276 @@
+/* =====================================================
+   BLOODY DESIGN SYSTEM
+
+   HERO FOG
+
+   Version: 3.0
+===================================================== */
+
+/* ==============================================
+   CONTAINER
+============================================== */
+
+.hero-fog-svg{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:340px;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:5;
+
+}
+
+/* ==============================================
+   BASE
+============================================== */
+
+.hero-fog-back,
+.hero-fog-main,
+.hero-fog-front{
+
+    position:absolute;
+
+    inset:0;
+
+    filter:
+        url(#fogFilter)
+        blur(40px);
+
+}
+
+/* ==============================================
+   BACK
+============================================== */
+
+.hero-fog-back{
+
+    background:
+
+        radial-gradient(
+
+            ellipse at center bottom,
+
+            rgba(255,255,255,.18) 0%,
+
+            rgba(255,255,255,.10) 45%,
+
+            transparent 100%
+
+        );
+
+    opacity:.35;
+
+    transform:scale(1.15);
+
+    animation:fogBack 24s ease-in-out infinite;
+
+}
+
+/* ==============================================
+   MAIN
+============================================== */
+
+.hero-fog-main{
+
+    background:
+
+        radial-gradient(
+
+            ellipse at center bottom,
+
+            rgba(255,255,255,.42) 0%,
+
+            rgba(255,255,255,.16) 55%,
+
+            transparent 100%
+
+        );
+
+    opacity:.55;
+
+    animation:fogMain 18s ease-in-out infinite;
+
+}
+
+/* ==============================================
+   FRONT
+============================================== */
+
+.hero-fog-front{
+
+    background:
+
+        radial-gradient(
+
+            ellipse at center bottom,
+
+            rgba(181,255,69,.12) 0%,
+
+            rgba(255,255,255,.20) 25%,
+
+            rgba(255,255,255,.10) 60%,
+
+            transparent 100%
+
+        );
+
+    mix-blend-mode:screen;
+
+    opacity:.60;
+
+    animation:fogFront 20s ease-in-out infinite;
+
+}
+
+/* ==============================================
+   ANIMATION
+============================================== */
+
+@keyframes fogBack{
+
+    0%,100%{
+
+        transform:
+            translateX(0px)
+            scale(1.15);
+
+    }
+
+    50%{
+
+        transform:
+            translateX(-35px)
+            scale(1.18);
+
+    }
+
+}
+
+@keyframes fogMain{
+
+    0%,100%{
+
+        transform:
+            translateX(0px);
+
+    }
+
+    50%{
+
+        transform:
+            translateX(25px);
+
+    }
+
+}
+
+@keyframes fogFront{
+
+    0%,100%{
+
+        transform:
+            translateX(0px);
+
+    }
+
+    50%{
+
+        transform:
+            translateX(-18px);
+
+    }
+
+}
+
+/* =====================================================
+   HERO FOG
+===================================================== */
+
+@keyframes fogFront{
+
+    0%{
+
+        transform:
+            translateX(0px);
+
+    }
+
+    50%{
+
+        transform:
+            translateX(-24px);
+
+    }
+
+    100%{
+
+        transform:
+            translateX(0px);
+
+    }
+
+}
+
+@keyframes fogBack{
+
+    0%{
+
+        transform:
+            translateX(0px)
+            scale(1.08);
+
+    }
+
+    50%{
+
+        transform:
+            translateX(28px)
+            scale(1.10);
+
+    }
+
+    100%{
+
+        transform:
+            translateX(0px)
+            scale(1.08);
+
+    }
+
+}
+
+.animate-fog-front{
+
+    animation:
+
+        fogFront
+
+        18s
+
+        ease-in-out
+
+        infinite;
+
+}
+
+.animate-fog-back{
+
+    animation:
+
+        fogBack
+
+        28s
+
+        ease-in-out
+
+        infinite;
+
+}

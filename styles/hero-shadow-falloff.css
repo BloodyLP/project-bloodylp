@@ -1,0 +1,88 @@
+/* =====================================================
+   BLOODY DESIGN SYSTEM
+
+   HERO SHADOW FALLOFF
+
+   Version: 1.0
+
+===================================================== */
+
+/* ==============================================
+   BASE
+============================================== */
+
+.hero-shadow-falloff{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+/* ==============================================
+   LEFT DARKENING
+============================================== */
+
+.hero-shadow-left{
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:58%;
+    height:100%;
+
+    background:
+
+        linear-gradient(
+
+            to right,
+
+            rgba(0,0,0,.55),
+
+            rgba(0,0,0,.18),
+
+            transparent
+
+        );
+
+}
+
+/* ==============================================
+   HERO FOCUS
+============================================== */
+
+.hero-shadow-focus{
+
+    position:absolute;
+
+    right:120px;
+    top:80px;
+
+    width:900px;
+    height:900px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            transparent 20%,
+
+            rgba(0,0,0,.10) 65%,
+
+            rgba(0,0,0,.28) 100%
+
+        );
+
+    filter:blur(140px);
+
+}

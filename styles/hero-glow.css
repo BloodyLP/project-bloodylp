@@ -1,0 +1,161 @@
+/* =====================================================
+   BLOODY DESIGN SYSTEM
+
+   HERO GLOW
+
+   Version: 1.0
+
+===================================================== */
+
+/* ==============================================
+   BASE
+============================================== */
+
+.hero-glow{
+
+    position:absolute;
+
+    pointer-events:none;
+
+    mix-blend-mode:screen;
+
+    border-radius:9999px;
+
+    z-index:2;
+
+    will-change:
+        transform,
+        opacity;
+
+}
+
+/* ==============================================
+   PRIMARY
+============================================== */
+
+.hero-glow-primary{
+
+    width:680px;
+    height:760px;
+
+    right:230px;
+    top:90px;
+
+    background:
+
+        radial-gradient(
+
+            ellipse at 40% 50%,
+
+            rgba(181,255,69,.22) 0%,
+
+            rgba(181,255,69,.12) 36%,
+
+            rgba(181,255,69,.05) 62%,
+
+            transparent 86%
+
+        );
+
+    filter:blur(120px);
+
+    animation:
+
+        glowFloat
+
+        18s
+
+        ease-in-out
+
+        infinite;
+
+}
+
+/* ==============================================
+   FILL
+============================================== */
+
+.hero-glow-fill{
+
+    width:420px;
+    height:500px;
+
+    right:330px;
+    top:180px;
+
+    background:
+
+        radial-gradient(
+
+            ellipse,
+
+            rgba(181,255,69,.08) 0%,
+
+            transparent 82%
+
+        );
+
+    filter:blur(90px);
+
+    animation:
+
+        glowFloat
+
+        24s
+
+        ease-in-out
+
+        infinite reverse;
+
+}
+
+/* ==============================================
+   BOUNCE
+============================================== */
+
+.hero-glow-bounce{
+
+    width:380px;
+    height:180px;
+
+    right:320px;
+    bottom:60px;
+
+    background:
+
+        radial-gradient(
+
+            ellipse,
+
+            rgba(181,255,69,.06) 0%,
+
+            transparent 82%
+
+        );
+
+    filter:blur(75px);
+
+    animation:
+
+        glowFloat
+
+        20s
+
+        ease-in-out
+
+        infinite;
+
+}
+
+/* =====================================================
+   RESPONSIBILITY
+
+   ✔ Primary Light
+   ✔ Fill Light
+   ✔ Bounce Light
+
+   ✖ No Halo
+   ✖ No Atmosphere
+   ✖ No Rim Light
+
+===================================================== */

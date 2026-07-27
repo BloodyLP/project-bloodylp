@@ -1,0 +1,157 @@
+/* =====================================================
+   BLOODY DESIGN SYSTEM
+
+   HERO HALO
+
+   Version: 1.0
+
+===================================================== */
+
+/* ==============================================
+   BASE
+============================================== */
+
+.hero-halo{
+
+    position:absolute;
+
+    pointer-events:none;
+
+    border-radius:9999px;
+
+    mix-blend-mode:screen;
+
+    filter:blur(70px);
+
+    z-index:3;
+
+    will-change:
+        transform,
+        opacity;
+
+}
+
+/* ==============================================
+   HEAD
+============================================== */
+
+.hero-halo-head{
+
+    width:150px;
+    height:150px;
+
+    right:330px;
+    top:120px;
+
+    background:
+
+        rgba(181,255,69,.16);
+
+    animation:
+
+        haloFloat
+
+        10s
+
+        ease-in-out
+
+        infinite;
+
+}
+
+/* ==============================================
+   SHOULDER
+============================================== */
+
+.hero-halo-shoulder{
+
+    width:220px;
+    height:220px;
+
+    right:230px;
+    top:250px;
+
+    background:
+
+        rgba(181,255,69,.14);
+
+    animation:
+
+        haloFloatSlow
+
+        14s
+
+        ease-in-out
+
+        infinite;
+
+}
+
+/* ==============================================
+   ARM
+============================================== */
+
+.hero-halo-arm{
+
+    width:170px;
+    height:170px;
+
+    right:175px;
+    top:510px;
+
+    background:
+
+        rgba(181,255,69,.11);
+
+    animation:
+
+        haloFloat
+
+        12s
+
+        ease-in-out
+
+        infinite reverse;
+
+}
+
+/* ==============================================
+   BOTTOM
+============================================== */
+
+.hero-halo-bottom{
+
+    width:280px;
+    height:130px;
+
+    right:185px;
+    bottom:45px;
+
+    background:
+
+        rgba(181,255,69,.09);
+
+    animation:
+
+        haloFloatSlow
+
+        18s
+
+        ease-in-out
+
+        infinite;
+
+}
+
+/* =====================================================
+   RESPONSIBILITY
+
+   ✔ Rim Light
+   ✔ Shoulder Light
+   ✔ Head Light
+
+   ✖ No Background Lighting
+   ✖ No Atmosphere
+   ✖ No Glow
+
+===================================================== */

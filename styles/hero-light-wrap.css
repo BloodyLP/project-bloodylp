@@ -1,0 +1,128 @@
+/* =====================================================
+   BLOODY DESIGN SYSTEM
+
+   HERO LIGHT WRAP
+
+   Version: 1.0
+
+===================================================== */
+
+/* ==============================================
+   BASE
+============================================== */
+
+.hero-light-wrap{
+
+    position:absolute;
+
+    pointer-events:none;
+
+    mix-blend-mode:screen;
+
+    filter:blur(34px);
+
+    z-index:4;
+
+    opacity:.38;
+
+}
+
+/* ==============================================
+   MAIN
+============================================== */
+
+.hero-light-wrap-main{
+
+    right:245px;
+
+    top:70px;
+
+    width:110px;
+
+    height:720px;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+
+            to bottom,
+
+            transparent,
+
+            rgba(181,255,69,.00) 10%,
+
+            rgba(181,255,69,.08) 22%,
+
+            rgba(181,255,69,.28) 48%,
+
+            rgba(181,255,69,.12) 72%,
+
+            transparent
+
+        );
+
+    animation:
+
+        wrapFloat
+
+        18s
+
+        ease-in-out
+
+        infinite;
+
+}
+
+/* ==============================================
+   SHOULDER
+============================================== */
+
+.hero-light-wrap-shoulder{
+
+    right:300px;
+
+    top:250px;
+
+    width:170px;
+
+    height:240px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(181,255,69,.18),
+
+            transparent 72%
+
+        );
+
+    animation:
+
+        haloFloatSlow
+
+        16s
+
+        ease-in-out
+
+        infinite;
+
+}
+
+/* =====================================================
+   RESPONSIBILITY
+
+   ✔ Edge separation
+   ✔ Subject integration
+
+   ✖ No Glow
+   ✖ No Background
+   ✖ No Halo
+
+===================================================== */

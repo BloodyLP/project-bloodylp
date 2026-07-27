@@ -1,0 +1,118 @@
+/* =====================================================
+   BLOODY DESIGN SYSTEM
+
+   HERO ATMOSPHERE
+
+   Version: 1.0
+
+===================================================== */
+
+/* ==============================================
+   BASE
+============================================== */
+
+.hero-atmosphere{
+
+    position:absolute;
+
+    pointer-events:none;
+
+    border-radius:9999px;
+
+    filter:blur(180px);
+
+    mix-blend-mode:screen;
+
+    z-index:1;
+
+    will-change:
+        transform,
+        opacity;
+
+}
+
+/* ==============================================
+   MAIN
+============================================== */
+
+.hero-atmosphere-main{
+
+    width:900px;
+    height:900px;
+
+    right:140px;
+    top:40px;
+
+    background:
+
+        radial-gradient(
+
+            ellipse,
+
+            rgba(181,255,69,.035) 0%,
+
+            rgba(181,255,69,.018) 48%,
+
+            transparent 84%
+
+        );
+
+    animation:
+
+        atmosphereFloat
+
+        34s
+
+        ease-in-out
+
+        infinite;
+
+}
+
+/* ==============================================
+   SECONDARY
+============================================== */
+
+.hero-atmosphere-secondary{
+
+    width:680px;
+    height:680px;
+
+    right:320px;
+    top:170px;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(181,255,69,.022) 0%,
+
+            transparent 82%
+
+        );
+
+    animation:
+
+        atmosphereFloatReverse
+
+        42s
+
+        ease-in-out
+
+        infinite;
+
+}
+
+/* =====================================================
+   RESPONSIBILITY
+
+   ✔ Atmospheric depth
+   ✔ Slow movement
+
+   ✖ No spotlight
+   ✖ No glow
+   ✖ No halo
+
+===================================================== */

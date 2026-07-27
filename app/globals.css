@@ -1,0 +1,1526 @@
+/* =====================================================
+   BLOODYLP HOMEPAGE
+
+   Global Styles
+
+   Version: 3.0
+
+   Bloody Design System
+===================================================== */
+
+@import "tailwindcss";
+@import "../styles/hero-atmosphere.css";
+@import "../styles/hero-background.css";
+@import "../styles/hero-directional-light.css";
+@import "../styles/hero-fog.css";
+@import "../styles/hero-glow.css";
+@import "../styles/hero-halo.css";
+@import "../styles/hero-light-wrap.css";
+@import "../styles/hero-shadow-falloff.css";
+@import "../styles/hero-animations.css";
+
+:root {
+  --background: #09090b;
+  --foreground: #ffffff;
+
+  --mouse-x: 0;
+--mouse-y: 0;
+}
+
+@theme inline {
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Typography */
+
+  --font-display: var(--font-heading);
+  --font-ui: var(--font-body);
+  --font-body: var(--font-body);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+
+  font-family: var(--font-body);
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =====================================================
+   Typography
+===================================================== */
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-ui {
+  font-family: var(--font-ui);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* =====================================================
+   Hero Smoke Animation
+===================================================== */
+
+@keyframes smokeOne {
+
+  0% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+
+  50% {
+    transform: translateY(-20px) translateX(12px) scale(1.06);
+  }
+
+  100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+
+}
+
+@keyframes smokeTwo {
+
+  0% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+
+  50% {
+    transform: translateY(18px) translateX(-14px) scale(1.08);
+  }
+
+  100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+
+}
+
+@keyframes smokeThree {
+
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+
+  50% {
+    transform: translateY(-14px) scale(1.05);
+  }
+
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+
+}
+
+.animate-smoke-one {
+  animation: smokeOne 18s ease-in-out infinite;
+}
+
+.animate-smoke-two {
+  animation: smokeTwo 24s ease-in-out infinite;
+}
+
+.animate-smoke-three {
+  animation: smokeThree 20s ease-in-out infinite;
+}
+
+/* =====================================================
+   Hero Embers 2.0
+===================================================== */
+
+@keyframes emberFloat {
+
+  0% {
+
+    transform:
+      translateY(0)
+      translateX(0)
+      scale(.5);
+
+    opacity: 0;
+
+  }
+
+  10% {
+
+    opacity: 1;
+
+  }
+
+  50% {
+
+    transform:
+      translateY(-90px)
+      translateX(var(--drift))
+      scale(1);
+
+  }
+
+  100% {
+
+    transform:
+      translateY(-220px)
+      translateX(calc(var(--drift) * -0.5))
+      scale(.3);
+
+    opacity: 0;
+
+  }
+
+}
+
+.animate-ember {
+
+  animation-name: emberFloat;
+
+  animation-timing-function: linear;
+
+  animation-iteration-count: infinite;
+
+  will-change: transform, opacity;
+
+}
+
+/* =====================================================
+   Hero Light Rays
+===================================================== */
+
+@keyframes rayOne {
+
+  0% {
+
+    transform:
+      rotate(24deg)
+      translateY(0px);
+
+    opacity: .35;
+
+  }
+
+  50% {
+
+    transform:
+      rotate(24deg)
+      translateY(-12px);
+
+    opacity: .55;
+
+  }
+
+  100% {
+
+    transform:
+      rotate(24deg)
+      translateY(0px);
+
+    opacity: .35;
+
+  }
+
+}
+
+@keyframes rayTwo {
+
+  0% {
+
+    transform:
+      rotate(18deg)
+      translateY(0px);
+
+    opacity: .25;
+
+  }
+
+  50% {
+
+    transform:
+      rotate(18deg)
+      translateY(10px);
+
+    opacity: .45;
+
+  }
+
+  100% {
+
+    transform:
+      rotate(18deg)
+      translateY(0px);
+
+    opacity: .25;
+
+  }
+
+}
+
+.animate-ray-one {
+
+  animation:
+    rayOne
+    18s
+    ease-in-out
+    infinite;
+
+}
+
+.animate-ray-two {
+
+  animation:
+    rayTwo
+    22s
+    ease-in-out
+    infinite;
+
+}
+
+/* =====================================================
+   Hero Ambient Light
+===================================================== */
+
+@keyframes ambientOne {
+
+  0% {
+
+    opacity: .45;
+
+    transform:
+      translateY(-50%)
+      scale(1);
+
+  }
+
+  50% {
+
+    opacity: .65;
+
+    transform:
+      translateY(-50%)
+      scale(1.04);
+
+  }
+
+  100% {
+
+    opacity: .45;
+
+    transform:
+      translateY(-50%)
+      scale(1);
+
+  }
+
+}
+
+@keyframes ambientTwo {
+
+  0% {
+
+    opacity: .35;
+
+    transform:
+      scale(1);
+
+  }
+
+  50% {
+
+    opacity: .55;
+
+    transform:
+      scale(1.08);
+
+  }
+
+  100% {
+
+    opacity: .35;
+
+    transform:
+      scale(1);
+
+  }
+
+}
+
+@keyframes ambientThree {
+
+  0% {
+
+    opacity: .25;
+
+  }
+
+  50% {
+
+    opacity: .45;
+
+  }
+
+  100% {
+
+    opacity: .25;
+
+  }
+
+}
+
+.animate-ambient {
+
+  animation:
+    ambientOne
+    12s
+    ease-in-out
+    infinite;
+
+}
+
+.animate-ambient-two {
+
+  animation:
+    ambientTwo
+    10s
+    ease-in-out
+    infinite;
+
+}
+
+.animate-ambient-three {
+
+  animation:
+    ambientThree
+    8s
+    ease-in-out
+    infinite;
+
+}
+
+/* =====================================================
+   Hero Star
+===================================================== */
+
+@keyframes heroStar {
+
+  0% {
+
+    transform: scale(1) rotate(0deg);
+
+    opacity: .9;
+
+  }
+
+  50% {
+
+    transform: scale(1.18) rotate(45deg);
+
+    opacity: 1;
+
+    filter: drop-shadow(0 0 16px rgba(163,230,53,.9));
+
+  }
+
+  100% {
+
+    transform: scale(1) rotate(90deg);
+
+    opacity: .9;
+
+  }
+
+}
+
+.animate-hero-star {
+
+  animation:
+    heroStar
+    7s
+    ease-in-out
+    infinite;
+
+}
+
+/* =====================================================
+   Hero Fog
+===================================================== */
+
+@keyframes fogDrift {
+
+  0% {
+
+    transform:
+      translateX(0px)
+      translateY(0px);
+
+  }
+
+  25% {
+
+    transform:
+      translateX(-20px)
+      translateY(-6px);
+
+  }
+
+  50% {
+
+    transform:
+      translateX(18px)
+      translateY(-12px);
+
+  }
+
+  75% {
+
+    transform:
+      translateX(-12px)
+      translateY(-4px);
+
+  }
+
+  100% {
+
+    transform:
+      translateX(0px)
+      translateY(0px);
+
+  }
+
+}
+
+.animate-fog-drift{
+
+    animation:
+        fogDrift
+        45s
+        ease-in-out
+        infinite;
+
+}
+
+.animate-fog-cloud {
+
+  animation-name: fogCloud;
+
+  animation-timing-function: ease-in-out;
+
+  animation-iteration-count: infinite;
+
+  will-change: transform;
+
+}
+
+/* =====================================================
+   Hero Ground Light
+===================================================== */
+
+@keyframes groundLight {
+
+  0% {
+
+    opacity: .45;
+
+    transform:
+      scale(1);
+
+  }
+
+  50% {
+
+    opacity: .65;
+
+    transform:
+      scale(1.08);
+
+  }
+
+  100% {
+
+    opacity: .45;
+
+    transform:
+      scale(1);
+
+  }
+
+}
+
+@keyframes groundLightTwo {
+
+  0% {
+
+    opacity: .25;
+
+    transform:
+      scale(1);
+
+  }
+
+  50% {
+
+    opacity: .45;
+
+    transform:
+      scale(1.05);
+
+  }
+
+  100% {
+
+    opacity: .25;
+
+    transform:
+      scale(1);
+
+  }
+
+}
+
+.animate-ground-light{
+
+    animation:
+        groundLight
+        14s
+        ease-in-out
+        infinite;
+
+}
+
+.animate-ground-light-two{
+
+    animation:
+        groundLightTwo
+        18s
+        ease-in-out
+        infinite;
+
+}
+
+/* =====================================================
+   Hero Fog Asset
+===================================================== */
+
+@keyframes fogLeft {
+
+  0% {
+
+    transform:
+      translateX(0px)
+      translateY(0px)
+      scale(1);
+
+  }
+
+  50% {
+
+    transform:
+      translateX(-40px)
+      translateY(-8px)
+      scale(1.03);
+
+  }
+
+  100% {
+
+    transform:
+      translateX(0px)
+      translateY(0px)
+      scale(1);
+
+  }
+
+}
+
+@keyframes fogRight {
+
+  0% {
+
+    transform:
+      translateX(0px)
+      translateY(0px)
+      scaleX(-1)
+      scale(1);
+
+  }
+
+  50% {
+
+    transform:
+      translateX(35px)
+      translateY(-6px)
+      scaleX(-1)
+      scale(1.04);
+
+  }
+
+  100% {
+
+    transform:
+      translateX(0px)
+      translateY(0px)
+      scaleX(-1)
+      scale(1);
+
+  }
+
+}
+
+.animate-fog-left {
+
+  animation:
+    fogLeft
+    40s
+    ease-in-out
+    infinite;
+
+}
+
+.animate-fog-right {
+
+  animation:
+    fogRight
+    54s
+    ease-in-out
+    infinite;
+
+}
+
+/* =====================================================
+   Hero Dust
+===================================================== */
+
+@keyframes dust {
+
+  0% {
+
+    transform:
+      translateY(0px)
+      translateX(0px)
+      scale(.8);
+
+    opacity:.15;
+
+  }
+
+  20%{
+
+    opacity:.55;
+
+  }
+
+  50%{
+
+    transform:
+      translateY(-18px)
+      translateX(10px)
+      scale(1);
+
+    opacity:.85;
+
+  }
+
+  80%{
+
+    opacity:.45;
+
+  }
+
+  100%{
+
+    transform:
+      translateY(-40px)
+      translateX(-8px)
+      scale(.7);
+
+    opacity:.1;
+
+  }
+
+}
+
+.animate-dust{
+
+    animation-name:dust;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count:infinite;
+
+    will-change:
+      transform,
+      opacity;
+
+}
+
+/* =====================================================
+   Lime Fog
+===================================================== */
+
+@keyframes fogLeft {
+
+    0%{
+
+        transform:
+            translateX(-25px)
+            translateY(0px)
+            scale(1);
+
+    }
+
+    50%{
+
+        transform:
+            translateX(15px)
+            translateY(-6px)
+            scale(1.04);
+
+    }
+
+    100%{
+
+        transform:
+            translateX(-25px)
+            translateY(0px)
+            scale(1);
+
+    }
+
+}
+
+@keyframes fogRight {
+
+    0%{
+
+        transform:
+            translateX(18px)
+            translateY(0px)
+            scale(1);
+
+    }
+
+    50%{
+
+        transform:
+            translateX(-18px)
+            translateY(5px)
+            scale(1.05);
+
+    }
+
+    100%{
+
+        transform:
+            translateX(18px)
+            translateY(0px)
+            scale(1);
+
+    }
+
+}
+
+/* ==========================================
+   Aurora
+========================================== */
+
+@keyframes aurora {
+
+    0%{
+
+        transform:
+        translateX(0px)
+        translateY(0px)
+        rotate(0deg)
+        scale(1);
+
+    }
+
+    25%{
+
+        transform:
+        translateX(-12px)
+        translateY(8px)
+        rotate(1deg)
+        scale(1.04);
+
+    }
+
+    50%{
+
+        transform:
+        translateX(10px)
+        translateY(-10px)
+        rotate(-1deg)
+        scale(1.08);
+
+    }
+
+    75%{
+
+        transform:
+        translateX(-8px)
+        translateY(6px)
+        rotate(1deg)
+        scale(1.03);
+
+    }
+
+    100%{
+
+        transform:
+        translateX(0px)
+        translateY(0px)
+        rotate(0deg)
+        scale(1);
+
+    }
+
+}
+
+.animate-aurora{
+
+    animation:
+    aurora
+    18s
+    ease-in-out
+    infinite;
+
+}
+
+.animate-aurora-two{
+
+    animation:
+    aurora
+    27s
+    ease-in-out
+    infinite
+    reverse;
+
+}
+
+/* =====================================================
+   HERO AURORA
+===================================================== */
+
+.hero-aurora{
+
+    position:absolute;
+
+    right: 100px;
+    top: 200px;
+
+    width:720px;
+    height:760px;
+
+    border-radius:10%;
+
+    pointer-events:none;
+
+    mix-blend-mode:screen;
+
+    filter:blur(50px);
+
+    opacity: 0.95;
+
+    z-index:2;
+
+}
+
+/* ========================= */
+
+.hero-aurora-one{
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(203, 225, 31, 0.55) 0%,
+            rgba(163,230,53,.28) 38%,
+            rgba(163,230,53,.08) 68%,
+            transparent 100%
+        );
+
+    animation:
+        auroraOne
+        18s
+        ease-in-out
+        infinite;
+
+}
+
+/* ========================= */
+
+.hero-aurora-two{
+
+    background:
+        radial-gradient(
+           ellipse at center,
+           rgba(203, 225, 31, 0.55) 0%,
+            rgba(163,230,53,.16) 42%,
+            transparent 100%
+        );
+
+    transform:scale(.50);
+
+    animation:
+        auroraTwo
+        24s
+        ease-in-out
+        infinite;
+
+}
+
+/* ========================= */
+
+.hero-aurora-three{
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(120,255,120,.30) 0%,
+            rgba(163,230,53,.12) 45%,
+            transparent 100%
+        );
+
+    transform:scale(.50);
+
+    animation:
+        auroraThree
+        30s
+        ease-in-out
+        infinite;
+
+}
+
+/* ===================================================== */
+
+@keyframes auroraOne{
+
+0%{
+
+transform:
+translate(0px,0px)
+rotate(0deg)
+scale(1);
+
+}
+
+25%{
+
+transform:
+translate(-18px,10px)
+rotate(2deg)
+scale(1.04);
+
+}
+
+50%{
+
+transform:
+translate(16px,-12px)
+rotate(-2deg)
+scale(1.08);
+
+}
+
+75%{
+
+transform:
+translate(-10px,8px)
+rotate(1deg)
+scale(1.03);
+
+}
+
+100%{
+
+transform:
+translate(0px,0px)
+rotate(0deg)
+scale(1);
+
+}
+
+}
+
+@keyframes auroraTwo{
+
+0%{
+
+transform:
+scale(.82)
+translate(0px,0px);
+
+}
+
+50%{
+
+transform:
+scale(.90)
+translate(24px,-18px);
+
+}
+
+100%{
+
+transform:
+scale(.82)
+translate(0px,0px);
+
+}
+
+}
+
+@keyframes auroraThree{
+
+0%{
+
+transform:
+scale(1.18)
+translate(0px,0px);
+
+}
+
+50%{
+
+transform:
+scale(1.28)
+translate(-26px,12px);
+
+}
+
+100%{
+
+transform:
+scale(1.18)
+translate(0px,0px);
+
+}
+
+}
+
+/* =====================================================
+   HERO AURORA - MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .hero-aurora {
+
+        right: -60px;
+        top: 40px;
+
+        width: 520px;
+        height: 560px;
+
+        opacity: .55;
+
+        filter: blur(42px);
+
+    }
+
+}
+/* =====================================================
+   ANIMATIONEN
+===================================================== */
+
+@keyframes glowMain{
+
+    0%,100%{
+
+        transform:
+            translate(0px,0px)
+            scale(1);
+
+        opacity:.82;
+
+    }
+
+    50%{
+
+        transform:
+            translate(-8px,-5px)
+            scale(1.05);
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes glowSecondary{
+
+    0%,100%{
+
+        transform:
+            translate(0px,0px)
+            scale(1);
+
+        opacity:.65;
+
+    }
+
+    50%{
+
+        transform:
+            translate(8px,6px)
+            scale(1.06);
+
+        opacity:.90;
+
+    }
+
+}
+
+@keyframes glowBottom{
+
+    0%,100%{
+
+        transform:
+            translateY(0px)
+            scale(1);
+
+        opacity:.55;
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-8px)
+            scale(1.05);
+
+        opacity:.78;
+
+    }
+
+}
+/* ===================================================== */
+/* ANIMATIONEN                                           */
+/* ===================================================== */
+
+@keyframes glowMain{
+
+    0%,100%{
+
+        transform:
+            translate(0px,0px)
+            scale(1);
+
+        opacity:.22;
+
+    }
+
+    50%{
+
+        transform:
+            translate(-10px,-6px)
+            scale(1.05);
+
+        opacity:.30;
+
+    }
+
+}
+
+@keyframes glowSecondary{
+
+    0%,100%{
+
+        transform:
+            translate(0px,0px)
+            scale(1);
+
+        opacity:.16;
+
+    }
+
+    50%{
+
+        transform:
+            translate(8px,8px)
+            scale(1.08);
+
+        opacity:.24;
+
+    }
+
+}
+
+@keyframes glowBottom{
+
+    0%,100%{
+
+        transform:
+            translateY(0px)
+            scale(1);
+
+        opacity:.14;
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-8px)
+            scale(1.05);
+
+        opacity:.22;
+
+    }
+
+}
+/* =====================================================
+   CHARACTER GLOW
+===================================================== */
+
+@keyframes characterGlow {
+
+  0% {
+
+    transform:
+      scale(1.03)
+      translate(0px,0px);
+
+    opacity:.32;
+
+  }
+
+  25% {
+
+    transform:
+      scale(1.04)
+      translate(-3px,-2px);
+
+    opacity:.38;
+
+  }
+
+  50% {
+
+    transform:
+      scale(1.05)
+      translate(4px,3px);
+
+    opacity:.45;
+
+  }
+
+  75% {
+
+    transform:
+      scale(1.04)
+      translate(-2px,2px);
+
+    opacity:.36;
+
+  }
+
+  100% {
+
+    transform:
+      scale(1.03)
+      translate(0px,0px);
+
+    opacity:.32;
+
+  }
+
+}
+
+.animate-character-glow{
+
+    animation:
+        characterGlow
+        12s
+        ease-in-out
+        infinite;
+
+}
+/* =====================================================
+   HERO PARTICLES
+===================================================== */
+
+.hero-particle{
+
+    position:absolute;
+
+    border-radius:999px;
+
+    background:#B6FF45;
+
+    box-shadow:
+        0 0 8px rgba(182,255,69,.8),
+        0 0 18px rgba(182,255,69,.45);
+
+    pointer-events:none;
+
+    opacity:.35;
+
+    animation-name:particleFloat;
+
+    animation-timing-function:linear;
+
+    animation-iteration-count:infinite;
+
+}
+
+@keyframes particleFloat{
+
+    0%{
+
+        transform:
+            translateY(0px)
+            scale(.8);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:.45;
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-18px)
+            translateX(4px)
+            scale(1);
+
+        opacity:.75;
+
+    }
+
+    100%{
+
+        transform:
+            translateY(-42px)
+            translateX(-4px)
+            scale(.85);
+
+        opacity:0;
+
+    }
+
+}
+
+/* =====================================================
+   HERO BREATHING
+===================================================== */
+
+.hero-scene{
+
+    animation:
+        heroBreathing
+        24s
+        ease-in-out
+        infinite;
+
+    will-change:transform;
+
+}
+
+@keyframes heroBreathing{
+
+    0%{
+
+        transform:
+            translate(0px,0px);
+
+    }
+
+    20%{
+
+        transform:
+            translate(-3px,-2px);
+
+    }
+
+    40%{
+
+        transform:
+            translate(2px,-5px);
+
+    }
+
+    60%{
+
+        transform:
+            translate(4px,-2px);
+
+    }
+
+    80%{
+
+        transform:
+            translate(-2px,1px);
+
+    }
+
+    100%{
+
+        transform:
+            translate(0px,0px);
+
+    }
+
+}
+/* =====================================================
+   BDS DEBUG MODE
+===================================================== */
+
+.debug-outline-red{
+    outline:2px solid red !important;
+}
+
+.debug-outline-blue{
+    outline:2px solid deepskyblue !important;
+}
+
+.debug-outline-green{
+    outline:2px solid lime !important;
+}
+
+.debug-outline-yellow{
+    outline:2px solid yellow !important;
+}
+
+.debug-outline-magenta{
+    outline:2px solid magenta !important;
+}
+
+.debug-outline-cyan{
+    outline:2px solid cyan !important;
+}
+
+.debug-outline-orange{
+    outline:2px solid orange !important;
+}
+.hero-dust{
+
+    position:absolute;
+
+    border-radius:999px;
+
+    background:rgba(181,255,69,.22);
+
+    box-shadow:
+        0 0 6px rgba(181,255,69,.18);
+
+    pointer-events:none;
+
+    opacity:.45;
+
+}

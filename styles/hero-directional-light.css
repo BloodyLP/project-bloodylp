@@ -1,0 +1,79 @@
+/* =====================================================
+   BLOODY DESIGN SYSTEM
+
+   HERO DIRECTIONAL LIGHT
+
+   Version: 1.0
+
+===================================================== */
+
+/* ==============================================
+   DIRECTIONAL LIGHT
+============================================== */
+
+.hero-directional-light{
+
+    position:absolute;
+
+    pointer-events:none;
+
+    z-index:2;
+
+    right:120px;
+    top:80px;
+
+    width:720px;
+    height:780px;
+
+    mix-blend-mode:screen;
+
+    filter:blur(85px);
+
+    opacity:.18;
+
+    background:
+
+        conic-gradient(
+
+            from 210deg,
+
+            transparent 0deg,
+
+            rgba(181,255,69,.02) 40deg,
+
+            rgba(181,255,69,.06) 80deg,
+
+            rgba(181,255,69,.16) 110deg,
+
+            rgba(181,255,69,.08) 150deg,
+
+            transparent 220deg,
+
+            transparent 360deg
+
+        );
+
+    animation:
+
+        directionalLight
+
+        26s
+
+        ease-in-out
+
+        infinite;
+
+}
+
+/* =====================================================
+   RESPONSIBILITY
+
+   ✔ Light Direction
+   ✔ Shoulder Direction
+   ✔ Depth
+
+   ✖ No Glow
+   ✖ No Halo
+   ✖ No Background
+
+===================================================== */

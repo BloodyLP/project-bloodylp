@@ -1,0 +1,63 @@
+/* =====================================================
+   BLOODY DESIGN SYSTEM
+
+   Global Styles
+
+   Version 4.0
+===================================================== */
+
+@import "tailwindcss";
+
+/* =====================================================
+   BDS STYLES
+===================================================== */
+
+@import "./styles/hero-background.css";
+@import "./styles/hero-atmosphere.css";
+@import "./styles/hero-glow.css";
+@import "./styles/hero-halo.css";
+@import "./styles/hero-light-wrap.css";
+@import "./styles/hero-directional-light.css";
+@import "./styles/hero-particles.css";
+@import "./styles/hero-noise.css";
+@import "./styles/hero-animations.css";
+@import "./styles/debug.css";
+
+/* =====================================================
+   ROOT
+===================================================== */
+
+:root{
+    --background:#09090b;
+    --foreground:#ffffff;
+    --mouse-x:0;
+    --mouse-y:0;
+}
+
+@theme inline{
+    --color-background:var(--background);
+    --color-foreground:var(--foreground);
+
+    --font-display:"Big Shoulders Display",sans-serif;
+    --font-ui:"Rajdhani",sans-serif;
+    --font-body:"Rajdhani",sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--background);
+    color:var(--foreground);
+    font-family:var(--font-body);
+    min-height:100vh;
+    overflow-x:hidden;
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+.font-display{font-family:var(--font-display);}
+.font-ui{font-family:var(--font-ui);}
+.font-body{font-family:var(--font-body);}
