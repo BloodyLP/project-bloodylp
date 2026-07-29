@@ -45,7 +45,7 @@ export default function ServiceRecord({
                 />
 
                 <Portrait
-                    portrait={member.portrait}
+                    avatar={member.avatar}
                     name={member.name}
                 />
 

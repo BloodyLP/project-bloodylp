@@ -21,18 +21,18 @@
 import styles from "./Portrait.module.css";
 
 interface PortraitProps {
-    portrait: string;
+    avatar: string;
     name: string;
 }
 
 export default function Portrait({
-    portrait,
+    avatar,
     name,
 }: PortraitProps) {
     return (
         <section className={styles.portrait}>
             <img
-                src={portrait}
+                src={avatar}
                 alt={name}
                 className={styles.image}
             />
