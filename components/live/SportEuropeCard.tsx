@@ -140,8 +140,8 @@ export default function SportEuropeCard() {
                         <Image
                             src="/logos/sporteurope.tv-logo.png"
                             alt="SportEurope.TV"
-                            width={270}
-                            height={65}
+                            width={220}
+                            height={53}
                             priority
                             className="mt-5"
                         />
