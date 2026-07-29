@@ -24,6 +24,7 @@ import type { ServiceRecordMember } from "@/components/community/service-record"
 
 const testMember: ServiceRecordMember = {
     id: "1",
+    slug: "bloodylp",
 
     recordNumber: "BA-0001",
 
