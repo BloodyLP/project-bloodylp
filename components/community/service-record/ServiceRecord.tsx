@@ -50,8 +50,13 @@ export default function ServiceRecord({
                 />
 
                 <Body
-                    member={member}
-                />
+    name={member.name}
+    rank={member.rank}
+    unit={member.unit}
+    assignment={member.assignment}
+    enlisted={member.enlisted}
+    prestige={String(member.prestige)}
+/>
 
                 <Footer
                     version={SERVICE_RECORD_VERSION}
