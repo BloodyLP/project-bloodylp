@@ -41,7 +41,7 @@ const testMember: ServiceRecordMember = {
 
     enlisted: "2025",
 
-    portrait: "/images/test-avatar.png",
+    avatar: "/images/test-avatar.png",
 
     decorations: [],
 };
