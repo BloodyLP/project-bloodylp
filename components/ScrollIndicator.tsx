@@ -41,7 +41,7 @@ export default function ScrollIndicator() {
 
         md:bottom-20
 
-        xl:bottom-0
+        xl:bottom-
       "
     >
       <motion.div

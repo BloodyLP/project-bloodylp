@@ -53,7 +53,7 @@ export const BRAND = {
 
         instagram: "https://www.instagram.com/alexander.blattmann",
 
-        discord: "https://discord.gg/https://discord.gg/3Mmn4zHSA",
+        discord: "https://discord.gg/3Mmn4zHSA",
 
         tiktok: "https://www.tiktok.com/@bloodylp1307",
 
