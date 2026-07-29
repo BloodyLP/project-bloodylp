@@ -10,7 +10,7 @@
  * Header
  *
  * Version:
- * MK-I
+ * MK-II
  *
  * Author:
  * BloodyLP & ChatGPT
@@ -23,7 +23,6 @@ import styles from "./Header.module.css";
 import {
     CARD_TITLE,
     CARD_SUBTITLE,
-    SERVICE_RECORD_VERSION,
 } from "../constants";
 
 interface HeaderProps {
@@ -35,16 +34,22 @@ export default function Header({
 }: HeaderProps) {
     return (
         <header className={styles.header}>
-            <div>
+            <div className={styles.titleBlock}>
+
                 <h2>{CARD_TITLE}</h2>
 
                 <span>{CARD_SUBTITLE}</span>
+
+                <small>PERSONNEL FILE</small>
+
             </div>
 
             <div className={styles.record}>
-                <span>{SERVICE_RECORD_VERSION}</span>
+
+                <span>ID</span>
 
                 <strong>{recordNumber}</strong>
+
             </div>
         </header>
     );

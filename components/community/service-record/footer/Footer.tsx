@@ -10,7 +10,7 @@
  * Footer
  *
  * Version:
- * MK-I
+ * MK-II
  *
  * Author:
  * BloodyLP & ChatGPT
@@ -29,9 +29,15 @@ export default function Footer({
 }: FooterProps) {
     return (
         <footer className={styles.footer}>
-            <span>BloodyArmy Community</span>
 
-            <span>{version}</span>
+            <span className={styles.label}>
+                BloodyArmy Member
+            </span>
+
+            <span className={styles.version}>
+                {version}
+            </span>
+
         </footer>
     );
 }

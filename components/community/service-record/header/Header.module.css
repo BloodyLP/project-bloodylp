@@ -10,39 +10,79 @@
  * Header
  *
  * Version:
- * MK-I
+ * MK-II
  *
  * ============================================
  */
 
 .header {
     display: flex;
-
     justify-content: space-between;
+    align-items: flex-start;
 
-    align-items: center;
+    padding: 22px 24px 18px;
 
-    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.header h2 {
+.titleBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.titleBlock h2 {
     margin: 0;
 
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+
+    color: #ffffff;
 }
 
-.header span {
-    display: block;
+.titleBlock span {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
 
-    font-size: .75rem;
+    color: rgba(255, 255, 255, 0.68);
+}
 
-    opacity: .7;
+.titleBlock small {
+    margin-top: 4px;
+
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+
+    color: rgba(163, 230, 53, 0.90);
 }
 
 .record {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+
     text-align: right;
 }
 
+.record span {
+    font-size: 0.60rem;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
 .record strong {
-    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.10em;
+
+    color: #ffffff;
 }

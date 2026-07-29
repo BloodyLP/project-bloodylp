@@ -4,16 +4,13 @@
  * ============================================
  *
  * Project:
- * Service Record Framework
+ * BloodyArmy Website
  *
  * Component:
  * ServiceRecord
  *
  * Version:
- * MK-I
- *
- * Author:
- * BloodyLP & ChatGPT
+ * MK-III
  *
  * ============================================
  */
@@ -23,23 +20,30 @@ import styles from "./ServiceRecord.module.css";
 import Layout from "./layout/Layout";
 import Header from "./header/Header";
 import Portrait from "./portrait/Portrait";
+import Rank from "./rank/Rank";
 import Body from "./body/Body";
 import Footer from "./footer/Footer";
 
 import { SERVICE_RECORD_VERSION } from "./constants";
 
-import type { ServiceRecordMember } from "./types";
+import type { ServiceRecordMember } from "@/types/service-record";
 
 interface ServiceRecordProps {
+
     member: ServiceRecordMember;
+
 }
 
 export default function ServiceRecord({
     member,
 }: ServiceRecordProps) {
+
     return (
+
         <article className={styles.serviceRecord}>
+
             <Layout>
+
                 <Header
                     recordNumber={member.recordNumber}
                 />
@@ -49,19 +53,22 @@ export default function ServiceRecord({
                     name={member.name}
                 />
 
+                <Rank
+                    rank={member.rank}
+                />
+
                 <Body
-    name={member.name}
-    rank={member.rank}
-    unit={member.unit}
-    assignment={member.assignment}
-    enlisted={member.enlisted}
-    prestige={String(member.prestige)}
-/>
+                    member={member}
+                />
 
                 <Footer
                     version={SERVICE_RECORD_VERSION}
                 />
+
             </Layout>
+
         </article>
+
     );
+
 }

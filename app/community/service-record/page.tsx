@@ -23,26 +23,31 @@ import { ServiceRecord } from "@/components/community/service-record";
 import type { ServiceRecordMember } from "@/components/community/service-record";
 
 const testMember: ServiceRecordMember = {
+
     id: "1",
+
     slug: "bloodylp",
 
     recordNumber: "BA-0001",
 
-    name: "Alexander Blattmann",
+    name: "BloodyLP",
 
-    rank: "General",
+    avatar: "/members/bloodylp/avatar.png",
+
+    rank: "General of the Army",
 
     rankCategory: "general",
 
-    prestige: 3,
+    rankInsignia:
+        "/ranks/general/general-of-the-army.png",
 
     unit: "BloodyArmy",
 
     assignment: "Community Commander",
 
-    enlisted: "2025",
+    enlisted: "2016",
 
-    avatar: "/images/test-avatar.png",
+    prestige: 0,
 
     decorations: [],
 };

@@ -10,23 +10,37 @@
  * Footer
  *
  * Version:
- * MK-I
+ * MK-II
  *
  * ============================================
  */
 
 .footer {
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
 
     padding: 18px 24px;
 
-    border-top: 1px solid rgba(255,255,255,.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 
-    font-size: .75rem;
+    background: rgba(255, 255, 255, 0.015);
+}
 
-    opacity: .75;
+.label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.60);
+}
+
+.version {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+
+    color: #ffffff;
 }

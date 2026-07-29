@@ -4,70 +4,69 @@
  * ============================================
  *
  * Project:
- * Service Record Framework
+ * BloodyArmy Website
  *
  * Component:
  * Body
  *
  * Version:
- * MK-I
+ * MK-II
  *
- * Author:
- * BloodyLP & ChatGPT
+ * Description:
+ * Zeigt die persönlichen Daten eines Mitglieds.
  *
  * ============================================
  */
 
 import styles from "./Body.module.css";
 
+import { ServiceRecord } from "@/lib/serviceRecord";
+
+import type { ServiceRecordMember } from "@/types/service-record";
+
 interface BodyProps {
-    name: string;
-    rank: string;
-    unit: string;
-    assignment: string;
-    enlisted: string;
-    prestige: string;
+
+    member: ServiceRecordMember;
+
 }
 
 export default function Body({
-    name,
-    rank,
-    unit,
-    assignment,
-    enlisted,
-    prestige,
+    member,
 }: BodyProps) {
+
+    const unit = ServiceRecord.unit(member.unit);
+    const assignment = ServiceRecord.assignment(member.assignment);
+
     return (
+
         <section className={styles.body}>
+
+            <h3 className={styles.sectionTitle}>
+                PERSONAL DATA
+            </h3>
+
             <div className={styles.row}>
-                <span>Name</span>
-                <strong>{name}</strong>
+                <span className={styles.label}>Name</span>
+                <span className={styles.value}>{member.name}</span>
             </div>
 
             <div className={styles.row}>
-                <span>Dienstgrad</span>
-                <strong>{rank}</strong>
+                <span className={styles.label}>Einheit</span>
+                <span className={styles.value}>{unit.title}</span>
             </div>
 
             <div className={styles.row}>
-                <span>Einheit</span>
-                <strong>{unit}</strong>
+                <span className={styles.label}>Verwendung</span>
+                <span className={styles.value}>{assignment.title}</span>
             </div>
 
             <div className={styles.row}>
-                <span>Verwendung</span>
-                <strong>{assignment}</strong>
+                <span className={styles.label}>Mitglied seit</span>
+                <span className={styles.value}>{member.enlisted}</span>
             </div>
 
-            <div className={styles.row}>
-                <span>Mitglied seit</span>
-                <strong>{enlisted}</strong>
-            </div>
-
-            <div className={styles.row}>
-                <span>Prestige</span>
-                <strong>{prestige}</strong>
-            </div>
         </section>
+
     );
+
 }
