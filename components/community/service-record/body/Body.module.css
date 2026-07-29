@@ -1,0 +1,47 @@
+/**
+ * ============================================
+ * BloodyArmy
+ * ============================================
+ *
+ * Project:
+ * Service Record Framework
+ *
+ * Component:
+ * Body
+ *
+ * Version:
+ * MK-I
+ *
+ * ============================================
+ */
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 0 24px 24px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 6px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.row span {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.row strong {
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: right;
+}

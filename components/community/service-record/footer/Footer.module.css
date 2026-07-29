@@ -1,0 +1,32 @@
+/**
+ * ============================================
+ * BloodyArmy
+ * ============================================
+ *
+ * Project:
+ * Service Record Framework
+ *
+ * Component:
+ * Footer
+ *
+ * Version:
+ * MK-I
+ *
+ * ============================================
+ */
+
+.footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 18px 24px;
+
+    border-top: 1px solid rgba(255,255,255,.08);
+
+    font-size: .75rem;
+
+    opacity: .75;
+}

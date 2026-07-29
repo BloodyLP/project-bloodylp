@@ -1,0 +1,48 @@
+/**
+ * ============================================
+ * BloodyArmy
+ * ============================================
+ *
+ * Project:
+ * Service Record Framework
+ *
+ * Component:
+ * Header
+ *
+ * Version:
+ * MK-I
+ *
+ * ============================================
+ */
+
+.header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+.header h2 {
+    margin: 0;
+
+    font-size: 1.2rem;
+}
+
+.header span {
+    display: block;
+
+    font-size: .75rem;
+
+    opacity: .7;
+}
+
+.record {
+    text-align: right;
+}
+
+.record strong {
+    display: block;
+}

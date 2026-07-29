@@ -1,0 +1,30 @@
+/**
+ * ============================================
+ * BloodyArmy
+ * ============================================
+ *
+ * Project:
+ * Service Record Framework
+ *
+ * Component:
+ * Layout
+ *
+ * Version:
+ * MK-I
+ *
+ * ============================================
+ */
+
+.layout {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+
+    grid-template-rows:
+        auto
+        1fr
+        auto;
+
+    position: relative;
+}
