@@ -28,7 +28,7 @@ interface FooterProps {
 
 export default function Footer({
 
-    version = "MK-II",
+    version = "BA-I",
 
 }: FooterProps) {
 
@@ -37,7 +37,7 @@ export default function Footer({
         <footer className={styles.footer}>
 
             <span className={styles.label}>
-                BloodyArmy Member
+                BloodyArmy Member Card
             </span>
 
             <span className={styles.version}>

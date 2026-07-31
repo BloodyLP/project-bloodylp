@@ -11,6 +11,7 @@
 
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 type ErrorRetryActionsProps = {
@@ -49,7 +50,7 @@ export default function ErrorRetryActions({
       {/* Home */}
       {/* ================================= */}
 
-      <a
+      <Link
         href="/"
         className="
           inline-flex
@@ -82,7 +83,7 @@ export default function ErrorRetryActions({
         <span className="mr-2">🏠</span>
 
         Zur Einsatzzentrale
-      </a>
+      </Link>
 
       {/* ================================= */}
       {/* Retry */}

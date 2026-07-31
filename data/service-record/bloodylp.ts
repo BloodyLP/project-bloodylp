@@ -67,7 +67,7 @@ export const bloodylp: ServiceRecordMember = {
     /**
      * Eintrittsjahr
      */
-    enlisted: "2016",
+    enlisted: "2019",
 
     /**
      * Prestige

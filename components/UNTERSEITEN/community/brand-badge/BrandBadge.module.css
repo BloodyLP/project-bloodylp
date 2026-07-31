@@ -1,0 +1,81 @@
+.badge {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+
+    width: fit-content;
+
+    margin: 2rem 0;
+
+    padding: .9rem 1.4rem;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,.04);
+
+    border: 1px solid rgba(163,230,53,.25);
+
+    backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.25);
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.badge:hover{
+
+    transform: translateY(-4px);
+
+    border-color: var(--color-lime);
+
+    box-shadow:
+        0 0 30px rgba(163,230,53,.18);
+
+}
+
+.logo{
+
+    border-radius:50%;
+
+    filter: drop-shadow(0 0 12px rgba(163,230,53,.25));
+
+}
+
+.content{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.name{
+
+    color:var(--color-lime);
+
+    font-size:1rem;
+
+    font-weight:800;
+
+    letter-spacing:.22em;
+
+}
+
+.est{
+
+    margin-top:.15rem;
+
+    color:rgba(255,255,255,.65);
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+    letter-spacing:.25em;
+
+}
