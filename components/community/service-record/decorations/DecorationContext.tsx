@@ -2,6 +2,7 @@
 
 import {
     createContext,
+    useContext,
     useMemo,
     useState,
     type Dispatch,
@@ -33,7 +34,9 @@ interface DecorationProviderProps {
 }
 
 export function DecorationProvider({
+
     children,
+
 }: DecorationProviderProps) {
 
     const [
@@ -61,5 +64,27 @@ export function DecorationProvider({
         </DecorationContext.Provider>
 
     );
+
+}
+
+/**
+ * Custom Hook
+ */
+
+export function useDecoration() {
+
+    const context = useContext(
+        DecorationContext
+    );
+
+    if (!context) {
+
+        throw new Error(
+            "useDecoration must be used within a DecorationProvider."
+        );
+
+    }
+
+    return context;
 
 }
