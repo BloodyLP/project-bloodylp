@@ -3,77 +3,79 @@
 //
 // Root Layout
 //
-// Version: 3.1
+// Version: 3.2
 //
 // Bloody Design System
 // =====================================================
 
 import {
-    bodyFont,
-    headingFont,
+  bodyFont,
+  headingFont,
 } from "@/lib/config/fonts";
 
 import "./globals.css";
 
 import Script from "next/script";
 
-
 import { Analytics } from "@vercel/analytics/next";
 
+import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/footer/Footer";
 
 import { metadata } from "@/lib/seo/metadata";
 import {
-    personJsonLd,
-    websiteJsonLd,
+  personJsonLd,
+  websiteJsonLd,
 } from "@/lib/seo/structured-data";
 
 export { metadata };
 
 export default function RootLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-    return (
-        <html
-    lang="de"
-    className={`
+  return (
+    <html
+      lang="de"
+      className={`
         ${headingFont.variable}
         ${bodyFont.variable}
         h-full
         antialiased
-    `}
->
-            <body
-                className="
-                    min-h-full
-                    bg-black
-                    text-white
-                "
-            >
-                {children}
+      `}
+    >
+      <body
+        className="
+          min-h-full
+          bg-black
+          text-white
+        "
+      >
+        <Navbar />
 
-                <Footer />
+        <main>{children}</main>
 
-                <Analytics />
+        <Footer />
 
-                <Script
-                    id="person-jsonld"
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify(personJsonLd),
-                    }}
-                />
+        <Analytics />
 
-                <Script
-                    id="website-jsonld"
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify(websiteJsonLd),
-                    }}
-                />
-            </body>
-        </html>
-    );
+        <Script
+          id="person-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personJsonLd),
+          }}
+        />
+
+        <Script
+          id="website-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd),
+          }}
+        />
+      </body>
+    </html>
+  );
 }
