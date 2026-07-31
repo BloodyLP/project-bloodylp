@@ -4,10 +4,10 @@
  * ============================================
  *
  * Project:
- * Service Record Framework
+ * BloodyArmy Website
  *
  * Component:
- * Layout
+ * DecorationRow
  *
  * Version:
  * MK-II
@@ -15,10 +15,16 @@
  * ============================================
  */
 
-.layout {
-    display: flex;
-    flex-direction: column;
+.row{
 
-    width: 100%;
-    height: 100%;
+    display:flex;
+
+    flex-wrap:wrap;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+    padding:0 18px 18px;
+
 }

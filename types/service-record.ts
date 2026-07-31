@@ -16,8 +16,8 @@
  */
 
 import type { RankId } from "@/data/service-record/ranks";
-import type { UnitId } from "@/data/service-record/units";
-import type { AssignmentId } from "@/data/service-record/assignments";
+import type { OrganizationId } from "@/data/service-record/organizations";
+import type { PositionId } from "@/data/service-record/positions";
 
 export interface ServiceRecordMember {
 
@@ -52,14 +52,19 @@ export interface ServiceRecordMember {
     rank: RankId;
 
     /**
-     * Einheit
+     * Organisation
      */
-    unit: UnitId;
+    organization: OrganizationId;
 
     /**
-     * Verwendung
+     * Position
      */
-    assignment: AssignmentId;
+    position: PositionId;
+
+    /**
+     * Reihe
+     */
+    line: number;
 
     /**
      * Eintritt
@@ -67,9 +72,19 @@ export interface ServiceRecordMember {
     enlisted: string;
 
     /**
-     * Prestige
+     * Prestige-Level
+     *
+     * Werte:
+     * 1 - 10
      */
     prestige: number;
+
+    /**
+     * Patreon-Level
+     *
+     * 0 = kein Patreon
+     */
+    patreon: number;
 
     /**
      * Aktiv

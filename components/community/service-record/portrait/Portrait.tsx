@@ -4,75 +4,68 @@
  * ============================================
  *
  * Project:
- * Service Record Framework
+ * BloodyArmy Website
  *
  * Component:
  * Portrait
  *
  * Version:
- * MK-II
+ * MK-V Premium Portrait
  *
  * ============================================
  */
 
 import styles from "./Portrait.module.css";
 
+import { ServiceRecord } from "@/lib/service-record";
+
+import type { ServiceRecordMember } from "@/types/service-record";
+
 interface PortraitProps {
-    avatar: string;
-    name: string;
-    rank: string;
-    rankInsignia: string;
+    member: ServiceRecordMember;
 }
 
 export default function Portrait({
-    avatar,
-    name,
-    rank,
-    rankInsignia,
+    member,
 }: PortraitProps) {
+
+    const rank = ServiceRecord.rank(member.rank);
+
     return (
+
         <section className={styles.portrait}>
 
             <div className={styles.frame}>
 
+                <span className={styles.cornerTL}></span>
+                <span className={styles.cornerTR}></span>
+                <span className={styles.cornerBL}></span>
+                <span className={styles.cornerBR}></span>
+
                 <img
-                    src={avatar}
-                    alt={name}
+                    src={member.avatar}
+                    alt={member.name}
                     className={styles.image}
                 />
 
-                <div className={styles.namePlate}>
-                    {name}
+                <div className={styles.imageOverlay}></div>
+
+                <div className={styles.footer}>
+
+                    <div className={styles.name}>
+                        {member.name}
+                    </div>
+
+                    <div className={styles.rank}>
+                        {rank.title}
+                    </div>
+
                 </div>
-
-                <div className={styles.rankPlate}>
-
-                    <div className={styles.prestigePlate}>
-
-    <span className={styles.prestigeLabel}>
-        PRESTIGE LEVEL
-    </span>
-
-    <div className={styles.prestigeStars}>
-        ★ ★ ★ ★ 
-    </div>
-
-</div>
-
-    <img
-        src={rankInsignia}
-        alt={rank}
-        className={styles.rankImage}
-    />
-
-    <span className={styles.rankText}>
-        {rank}
-    </span>
-
-</div>
 
             </div>
 
         </section>
+
     );
+
 }

@@ -10,7 +10,7 @@
  * Body
  *
  * Version:
- * MK-II
+ * MK-IV
  *
  * ============================================
  */
@@ -20,9 +20,9 @@
     display: flex;
     flex-direction: column;
 
-    gap: 14px;
+    gap: 12px;
 
-    padding: 20px;
+    padding: 14px 18px;
 
 }
 
@@ -30,7 +30,7 @@
 
     margin: 0;
 
-    font-size: .72rem;
+    font-size: .75rem;
 
     font-weight: 800;
 
@@ -38,45 +38,104 @@
 
     text-transform: uppercase;
 
-    color: #A3E635;
+    color: #9EFF2E;
 
 }
 
-.row {
+.grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+}
+
+.item {
+
+    position: relative;
 
     display: flex;
 
-    justify-content: space-between;
+    flex-direction: column;
 
-    align-items: center;
+    gap: 6px;
 
-    gap: 20px;
+    padding: 14px;
 
-    padding-bottom: 10px;
+    overflow: hidden;
 
-    border-bottom: 1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.035),
+            rgba(255,255,255,.015)
+        );
+
+    transition:
+        border-color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+.item::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #9EFF2E 0%,
+            #7ED321 55%,
+            transparent 100%
+        );
+
+}
+
+.item:hover {
+
+    border-color: rgba(158,255,46,.35);
+
+    box-shadow:
+        0 0 12px rgba(158,255,46,.10);
 
 }
 
 .label {
 
-    font-size: .72rem;
+    font-size: .68rem;
 
-    text-transform: uppercase;
+    font-weight: 700;
 
     letter-spacing: .12em;
 
-    color: rgba(255,255,255,.55);
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,.60);
 
 }
 
 .value {
 
-    text-align: right;
-
-    font-size: .78rem;
+    font-size: .90rem;
 
     font-weight: 700;
+
+    line-height: 1.2;
 
     color: #FFFFFF;
 

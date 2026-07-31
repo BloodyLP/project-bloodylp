@@ -1,0 +1,120 @@
+.card{
+
+    width:180px;
+
+    height:220px;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #2b2b2b,
+            #1a1a1a
+        );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.25s;
+
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            #d9d9d9,
+
+            transparent
+
+        );
+
+}
+
+.card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#d9d9d9;
+
+    box-shadow:
+
+        0 0 20px rgba(255,255,255,.15);
+
+}
+
+.icon{
+
+    font-size:52px;
+
+}
+
+.title{
+
+    text-align:center;
+
+    font-size:.8rem;
+
+    font-weight:800;
+
+    letter-spacing:.12em;
+
+    color:white;
+
+    line-height:1.4;
+
+}
+
+.count{
+
+    font-size:2rem;
+
+    font-weight:900;
+
+    color:#d9d9d9;
+
+}
+
+.years{
+
+    width:140px;
+
+    text-align:center;
+
+    color:#9a9a9a;
+
+    font-size:.75rem;
+
+    line-height:1.5;
+
+}

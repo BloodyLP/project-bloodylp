@@ -9,22 +9,23 @@
  * Component:
  * ServiceRecord
  *
- * Version:
- * MK-III
+ * Description:
+ * Hauptkomponente des Service Records.
  *
  * ============================================
  */
 
 import styles from "./ServiceRecord.module.css";
 
-import Layout from "./layout/Layout";
-import Header from "./header/Header";
-import Portrait from "./portrait/Portrait";
-import Rank from "./rank/Rank";
-import Body from "./body/Body";
-import Footer from "./footer/Footer";
-
-import { SERVICE_RECORD_VERSION } from "./constants";
+import Header from "./header";
+import Identity from "./identity";
+import Portrait from "./portrait";
+import Body from "./body";
+import Decorations from "./decorations";
+import DecorationRow from "./decorations/DecorationRow";
+import Prestige from "./decorations/prestige";
+import StanleyCup from "./decorations/stanley-cup";
+import Footer from "./footer";
 
 import type { ServiceRecordMember } from "@/types/service-record";
 
@@ -35,37 +36,74 @@ interface ServiceRecordProps {
 }
 
 export default function ServiceRecord({
+
     member,
+
 }: ServiceRecordProps) {
 
     return (
 
         <article className={styles.serviceRecord}>
 
-            <Layout>
+            <Header
+                recordNumber={member.recordNumber}
+            />
 
-                <Header
-                    recordNumber={member.recordNumber}
-                />
+            <Identity
+                rank={member.rank}
+                organization={member.organization}
+            />
 
-                <Portrait
-                    avatar={member.avatar}
-                    name={member.name}
-                />
+            <Portrait
+                member={member}
+            />
 
-                <Rank
-                    rank={member.rank}
-                />
+            <Body
+                member={member}
+            />
 
-                <Body
-                    member={member}
-                />
+            <Decorations>
 
-                <Footer
-                    version={SERVICE_RECORD_VERSION}
-                />
+                <DecorationRow>
 
-            </Layout>
+                    <Prestige
+                        member={member}
+                    />
+
+                    <StanleyCup
+                        member={member}
+                    />
+
+                    {/*
+                        Orders
+                        <Orders member={member} />
+                    */}
+
+                    {/*
+                        Medals
+                        <Medals member={member} />
+                    */}
+
+                    {/*
+                        Ribbon Racks
+                        <RibbonRacks member={member} />
+                    */}
+
+                    {/*
+                        Badges
+                        <Badges member={member} />
+                    */}
+
+                    {/*
+                        Achievements
+                        <Achievements member={member} />
+                    */}
+
+                </DecorationRow>
+
+            </Decorations>
+
+            <Footer />
 
         </article>
 

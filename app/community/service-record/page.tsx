@@ -4,56 +4,22 @@
  * ============================================
  *
  * Project:
- * Service Record Framework
+ * BloodyArmy Website
  *
- * Component:
- * Service Record Test Page
- *
- * Version:
- * MK-I
- *
- * Author:
- * BloodyLP & ChatGPT
+ * Page:
+ * Service Record Test
  *
  * ============================================
  */
 
 import { ServiceRecord } from "@/components/community/service-record";
 
-import type { ServiceRecordMember } from "@/components/community/service-record";
-
-const testMember: ServiceRecordMember = {
-
-    id: "1",
-
-    slug: "bloodylp",
-
-    recordNumber: "BA-0001",
-
-    name: "BloodyLP",
-
-    avatar: "/members/bloodylp/avatar.png",
-
-    rank: "General of the Army",
-
-    rankCategory: "general",
-
-    rankInsignia:
-        "/ranks/general/general-of-the-army.png",
-
-    unit: "BloodyArmy",
-
-    assignment: "Community Commander",
-
-    enlisted: "2016",
-
-    prestige: 0,
-
-    decorations: [],
-};
+import { bloodylp } from "@/data/service-record/bloodylp";
 
 export default function ServiceRecordPage() {
+
     return (
+
         <main
             style={{
                 minHeight: "100vh",
@@ -64,7 +30,13 @@ export default function ServiceRecordPage() {
                 padding: "40px",
             }}
         >
-            <ServiceRecord member={testMember} />
+
+            <ServiceRecord
+                member={bloodylp}
+            />
+
         </main>
+
     );
+
 }

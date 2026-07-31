@@ -21,13 +21,19 @@
 import styles from "./Footer.module.css";
 
 interface FooterProps {
-    version: string;
+
+    version?: string;
+
 }
 
 export default function Footer({
-    version,
+
+    version = "MK-II",
+
 }: FooterProps) {
+
     return (
+
         <footer className={styles.footer}>
 
             <span className={styles.label}>
@@ -39,5 +45,7 @@ export default function Footer({
             </span>
 
         </footer>
+
     );
+
 }

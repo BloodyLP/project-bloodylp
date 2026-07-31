@@ -4,41 +4,121 @@
  * ============================================
  *
  * Project:
- * Service Record Framework
+ * BloodyArmy Website
  *
  * Data:
  * BloodyLP
  *
- * Version:
- * MK-I
+ * Description:
+ * Service Record Datensatz von BloodyLP.
  *
  * ============================================
  */
 
-import type { ServiceRecordMember } from "@/components/community/service-record/types";
+import type { ServiceRecordMember } from "@/types/service-record";
 
 export const bloodylp: ServiceRecordMember = {
-    id: "1",
 
+    /**
+     * Interne UUID
+     */
+    id: "BA-001",
+
+    /**
+     * URL
+     */
     slug: "bloodylp",
 
-    recordNumber: "BA-0001",
+    /**
+     * Service Record Nummer
+     */
+    recordNumber: "BA-001",
 
-    name: "Alexander Blattmann",
+    /**
+     * Anzeigename
+     */
+    name: "BloodyLP",
 
-    rank: "General of the Army",
-
-    rankCategory: "general",
-
-    prestige: 0,
-
-    unit: "BloodyArmy",
-
-    assignment: "Community Commander",
-
-    enlisted: "2016",
-
+    /**
+     * Avatar
+     */
     avatar: "/members/bloodylp/avatar.png",
 
-    decorations: [],
+    /**
+     * Dienstgrad
+     */
+    rank: "generalOfTheArmy",
+
+    /**
+     * Organisation
+     */
+    organization: "bloodyArmy",
+
+    /**
+     * Position
+     */
+    position: "leftWing",
+
+    /**
+     * Reihe
+     */
+    line: 1,
+
+    /**
+     * Eintrittsjahr
+     */
+    enlisted: "2016",
+
+    /**
+     * Prestige
+     */
+    prestige: 10,
+
+    /**
+     * Patreon
+     */
+    patreon: 0,
+
+    /**
+     * Aktiv
+     */
+    active: true,
+
+    /**
+     * Sichtbar
+     */
+    visible: true,
+
+    /**
+     * Decorations
+     */
+    decorations: [
+        "stanley-cup",
+    ],
+
+    /**
+     * Ribbon Rack
+     */
+    ribbons: [],
+
+    /**
+     * Medaillen
+     */
+    medals: [],
+
+    /**
+     * Abzeichen
+     */
+    badges: [],
+
+    /**
+     * Achievements
+     */
+    achievements: [],
+
+    /**
+     * Bemerkung
+     */
+    remarks: "Founder der BloodyArmy.",
+
 };

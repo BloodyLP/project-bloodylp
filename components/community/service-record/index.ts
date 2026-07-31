@@ -4,22 +4,21 @@
  * ============================================
  *
  * Project:
- * Service Record Framework
+ * BloodyArmy Website
  *
- * Component:
- * Index
+ * Module:
+ * Service Record
  *
- * Version:
- * MK-I
+ * File:
+ * index.ts
  *
- * Author:
- * BloodyLP & ChatGPT
+ * Description:
+ * Öffentliche Exporte des Service Record
+ * Moduls.
  *
  * ============================================
  */
 
 export { default as ServiceRecord } from "./ServiceRecord";
-
-export * from "./types";
 
 export * from "./constants";

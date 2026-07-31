@@ -1,0 +1,253 @@
+.card {
+    --accent: #8cff38;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 160px;
+    height: 225px;
+
+    overflow: hidden;
+
+    background: linear-gradient(
+        180deg,
+        #1d1f22 0%,
+        #17191b 100%
+    );
+
+    border: 2px solid rgba(255,255,255,.08);
+    border-radius: 14px;
+
+    transition:
+        border-color .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+}
+
+.card:hover{
+
+    transform: translateY(-3px);
+
+    border-color:var(--accent);
+
+    background:linear-gradient(
+        180deg,
+        #222427 0%,
+        #191b1d 100%
+    );
+
+    box-shadow:
+        0 0 0 1px color-mix(
+            in srgb,
+            var(--accent) 65%,
+            transparent
+        ),
+        0 0 20px color-mix(
+            in srgb,
+            var(--accent) 30%,
+            transparent
+        ),
+        0 10px 24px rgba(0,0,0,.45);
+
+}
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:10px 12px;
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+    background:rgba(255,255,255,.02);
+
+}
+
+.category{
+
+    font-size:.62rem;
+
+    font-weight:700;
+
+    letter-spacing:.16em;
+
+    text-transform:uppercase;
+
+    color:#98a0a4;
+
+}
+
+.code{
+
+    font-size:.60rem;
+
+    font-weight:700;
+
+    color:#d7d7d7;
+
+}
+
+.badge{
+
+    position:relative;
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:18px;
+
+}
+
+.image{
+
+    object-fit:contain;
+
+    transition:
+        transform .25s ease,
+        filter .25s ease;
+
+    filter:
+        drop-shadow(
+            0 8px 18px rgba(0,0,0,.45)
+        );
+
+}
+
+.card:hover .image{
+
+    transform:scale(1.08);
+
+    filter:
+
+        drop-shadow(
+            0 8px 18px rgba(0,0,0,.45)
+        )
+
+        drop-shadow(
+            0 0 18px color-mix(
+                in srgb,
+                var(--accent) 35%,
+                transparent
+            )
+        );
+
+}
+
+.footer{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:2px;
+
+    padding:10px;
+
+    border-top:1px solid rgba(255,255,255,.06);
+
+    background:rgba(255,255,255,.02);
+
+}
+
+.title{
+
+    margin:0;
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    color:#fff;
+
+    text-align:center;
+
+}
+
+.subtitle{
+
+    font-size:.68rem;
+
+    color:#98a0a4;
+
+    text-align:center;
+
+}
+
+.classification{
+
+    margin-top:4px;
+
+    padding:3px 8px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    color:var(--accent);
+
+    font-size:.58rem;
+
+    font-weight:700;
+
+    letter-spacing:.05em;
+
+    text-transform:uppercase;
+
+}
+
+/* ============================= */
+/* PRESTIGE FARBEN               */
+/* ============================= */
+
+.steel{
+    --accent:#8e9398;
+}
+
+.bronze{
+    --accent:#b86c34;
+}
+
+.silver{
+    --accent:#d2d6dc;
+}
+
+.gold{
+    --accent:#f6c84a;
+}
+
+.platinum{
+    --accent:#dff5ff;
+}
+
+.emerald{
+    --accent:#41d978;
+}
+
+.sapphire{
+    --accent:#4f84ff;
+}
+
+.ruby{
+    --accent:#ff5673;
+}
+
+.obsidian{
+    --accent:#8f66ff;
+}
+
+.founder{
+    --accent:#8cff38;
+}

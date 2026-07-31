@@ -1,0 +1,47 @@
+/**
+ * ============================================
+ * BloodyArmy
+ * ============================================
+ *
+ * Project:
+ * BloodyArmy Website
+ *
+ * Component:
+ * Identity
+ *
+ * Version:
+ * MK-IV
+ *
+ * ============================================
+ */
+
+.identity{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:4px;
+
+    /* etwas mehr Abstand zum Header */
+    padding:12px 0 6px;
+
+}
+
+.insignia{
+
+    width:42px;
+
+    height:auto;
+
+    object-fit:contain;
+
+    filter:drop-shadow(
+        0 2px 8px rgba(0,0,0,.35)
+    );
+
+}

@@ -1,10 +1,10 @@
 import { RANKS } from "@/data/service-record/ranks";
-import { UNITS } from "@/data/service-record/units";
-import { ASSIGNMENTS } from "@/data/service-record/assignments";
+import { ORGANIZATIONS } from "@/data/service-record/organizations";
+import { POSITIONS } from "@/data/service-record/positions";
 
 import type { RankId } from "@/data/service-record/ranks";
-import type { UnitId } from "@/data/service-record/units";
-import type { AssignmentId } from "@/data/service-record/assignments";
+import type { OrganizationId } from "@/data/service-record/organizations";
+import type { PositionId } from "@/data/service-record/positions";
 
 export const ServiceRecord = {
 
@@ -12,12 +12,12 @@ export const ServiceRecord = {
         return RANKS[id];
     },
 
-    unit(id: UnitId) {
-        return UNITS[id];
+    organization(id: OrganizationId) {
+        return ORGANIZATIONS[id];
     },
 
-    assignment(id: AssignmentId) {
-        return ASSIGNMENTS[id];
+    position(id: PositionId) {
+        return POSITIONS[id];
     }
 
 };

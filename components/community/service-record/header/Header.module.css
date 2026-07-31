@@ -16,73 +16,134 @@
  */
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
 
-    padding: 22px 24px 18px;
+    display:flex;
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    padding:18px 22px 14px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
 }
 
-.titleBlock {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+.titleBlock{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:0px;
+
 }
 
-.titleBlock h2 {
-    margin: 0;
+.titleBlock h2{
 
-    font-size: 1.15rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
+    margin:0;
 
-    color: #ffffff;
+    font-size:1.20rem;
+
+    font-weight:800;
+
+    letter-spacing:.08em;
+
+    color:#ffffff;
+
 }
 
-.titleBlock span {
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
+.titleBlock span{
 
-    color: rgba(255, 255, 255, 0.68);
+    font-size:.68rem;
+
+    font-weight:600;
+
+    letter-spacing:.28em;
+
+    text-transform:uppercase;
+
+    color:rgba(255,255,255,.65);
+
 }
 
-.titleBlock small {
-    margin-top: 4px;
+.titleBlock small{
 
-    font-size: 0.58rem;
-    font-weight: 700;
-    letter-spacing: 0.34em;
-    text-transform: uppercase;
+    margin-top:0px;
 
-    color: rgba(163, 230, 53, 0.90);
+    font-size:.70rem;
+
+    font-weight:700;
+
+    letter-spacing:.34em;
+
+    text-transform:uppercase;
+
+    color:#9EFF2E;
+
 }
 
-.record {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 4px;
+/* ===================================== */
 
-    text-align: right;
+.recordBox{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    min-width:92px;
+
+    padding:8px 12px;
+
+    border-radius:10px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(255,255,255,.04),
+
+            rgba(255,255,255,.02)
+
+        );
+
 }
 
-.record span {
-    font-size: 0.60rem;
-    font-weight: 700;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
+.recordLabel{
 
-    color: rgba(255, 255, 255, 0.55);
+    font-size:.90rem;
+
+    font-weight:700;
+
+    letter-spacing:.24em;
+
+    text-transform:uppercase;
+
+    color:#ffffff;
+
 }
 
-.record strong {
-    font-size: 1rem;
-    font-weight: 800;
-    letter-spacing: 0.10em;
+.recordNumber{
 
-    color: #ffffff;
+    margin-top:2px;
+
+    font-size:.82rem;
+
+    font-weight:800;
+
+    letter-spacing:.10em;
+
+    color:#9EFF2E;
+
+    text-shadow:
+        0 0 6px rgba(158,255,46,.25);
+
 }

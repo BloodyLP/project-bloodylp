@@ -62,7 +62,7 @@ export interface Rank {
 export const RANKS: Record<RankId, Rank> = {
 
     soldat: {
-        id: "Soldat",
+        id: "soldat",
         title: "Soldat",
         group: "Mannschaften",
         nato: "OR-1",

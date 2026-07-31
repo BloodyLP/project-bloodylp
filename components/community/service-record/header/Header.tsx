@@ -34,23 +34,27 @@ export default function Header({
 }: HeaderProps) {
     return (
         <header className={styles.header}>
+
             <div className={styles.titleBlock}>
 
                 <h2>{CARD_TITLE}</h2>
 
-                <span>{CARD_SUBTITLE}</span>
-
-                <small>PERSONNEL FILE</small>
+                <small>PERSONALAKTE</small>
 
             </div>
 
-            <div className={styles.record}>
+            <div className={styles.recordBox}>
 
-                <span>ID</span>
+                <span className={styles.recordLabel}>
+                    ARMY-ID
+                </span>
 
-                <strong>{recordNumber}</strong>
+                <strong className={styles.recordNumber}>
+                    {recordNumber}
+                </strong>
 
             </div>
+
         </header>
     );
 }
