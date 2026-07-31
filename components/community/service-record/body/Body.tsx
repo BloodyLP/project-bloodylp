@@ -37,7 +37,7 @@ export default function Body({
         <section className={styles.body}>
 
             <h3 className={styles.sectionTitle}>
-                PERSONNEL DATA
+                PERSÖNLICHE DATEN
             </h3>
 
             <div className={styles.grid}>

@@ -17,32 +17,32 @@
 
 import type { ServiceRecordMember } from "@/types/service-record";
 
-export const bloodylp: ServiceRecordMember = {
+export const dungeon: ServiceRecordMember = {
 
     /**
      * Interne UUID
      */
-    id: "BA-001",
+    id: "BA-002",
 
     /**
      * URL
      */
-    slug: "bloodylp",
+    slug: "dungeon_62",
 
     /**
      * Service Record Nummer
      */
-    recordNumber: "BA-001",
+    recordNumber: "BA-002",
 
     /**
      * Anzeigename
      */
-    name: "BloodyLP",
+    name: "Dungeon_62",
 
     /**
      * Avatar
      */
-    avatar: "/members/bloodylp/avatar.png",
+    avatar: "/members/dungeon/avatar.png",
 
     /**
      * Dienstgrad
@@ -57,22 +57,22 @@ export const bloodylp: ServiceRecordMember = {
     /**
      * Position
      */
-    position: "leftWing",
+    position: "rightWing",
 
     /**
      * Reihe
      */
-    line: 1,
+    line: 2,
 
     /**
      * Eintrittsjahr
      */
-    enlisted: "2016",
+    enlisted: "2017",
 
     /**
      * Prestige
      */
-    prestige: 10 ,
+    prestige: 1 ,
 
     /**
      * Patreon
