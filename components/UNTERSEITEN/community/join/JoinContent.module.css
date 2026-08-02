@@ -1,0 +1,145 @@
+.content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    max-width:900px;
+
+    margin:0 auto 6rem;
+
+}
+
+.overline{
+
+    display:block;
+
+    margin-bottom:1rem;
+
+    color:var(--color-lime);
+
+    text-transform:uppercase;
+
+    letter-spacing:.35em;
+
+    font-size:.9rem;
+
+    font-weight:800;
+
+}
+
+.title{
+
+    margin:0 0 1.5rem;
+
+    color:#FFFFFF;
+
+    font-size:clamp(3rem,6vw,5.5rem);
+
+    line-height:1.05;
+
+    font-weight:900;
+
+}
+
+.title span{
+
+    display:block;
+
+    color:var(--color-lime);
+
+}
+
+.lead{
+
+    margin-bottom:2rem;
+
+    color:#ECECEC;
+
+    font-size:1.35rem;
+
+    font-weight:600;
+
+    line-height:1.7;
+
+}
+
+.text{
+
+    max-width:760px;
+
+    margin:0 auto;
+
+    color:#D8D8D8;
+
+    font-size:1.15rem;
+
+    line-height:2;
+
+}
+
+.text strong{
+
+    color:var(--color-lime);
+
+    font-weight:700;
+
+}
+
+@media(max-width:900px){
+
+    .content{
+
+        margin-bottom:4rem;
+
+    }
+
+    .title{
+
+        font-size:2.8rem;
+
+    }
+
+    .lead{
+
+        font-size:1.2rem;
+
+    }
+
+    .text{
+
+        font-size:1.05rem;
+
+        line-height:1.9;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .title{
+
+        font-size:2.3rem;
+
+    }
+
+    .lead{
+
+        font-size:1.05rem;
+
+    }
+
+    .text{
+
+        font-size:1rem;
+
+        line-height:1.8;
+
+    }
+
+}
