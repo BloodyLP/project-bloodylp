@@ -1,23 +1,17 @@
 /* ================================= */
-/* CAREER STATS WRAPPER */
+/* WRAPPER */
 /* ================================= */
 
 
-.wrapper{
-
+.wrapper {
 
     width:100%;
 
-
     display:flex;
-
 
     flex-direction:column;
 
-
-    gap:1rem;
-
-
+    gap:1.2rem;
 
 }
 
@@ -28,17 +22,35 @@
 
 
 /* ================================= */
-/* STAT SECTION */
+/* HEADER */
 /* ================================= */
 
 
-.section{
+.header {
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:.5rem;
+
+
+
+    padding:1rem;
+
+
+
+    border-radius:18px;
+
 
 
     background:
 
 
-        rgba(255,255,255,.035);
+        rgba(255,255,255,.04);
 
 
 
@@ -47,16 +59,7 @@
 
         1px solid
 
-
-        rgba(255,255,255,.10);
-
-
-
-    border-radius:16px;
-
-
-
-    padding:1rem;
+        rgba(255,255,255,.1);
 
 
 
@@ -68,39 +71,24 @@
 
 
 
-.section h3,
+.title {
 
 
-.total h3{
+    color:#A3E635;
 
 
-    margin:0 0 .8rem;
-
-
-
-    color:
-
-
-        var(--color-lime);
-
-
-
-    font-size:.75rem;
-
+    font-size:.9rem;
 
 
     font-weight:950;
 
 
-
-    letter-spacing:.25em;
-
+    letter-spacing:.2em;
 
 
     text-transform:uppercase;
 
 
-
 }
 
 
@@ -109,211 +97,19 @@
 
 
 
-/* ================================= */
-/* TABLE */
-/* ================================= */
-
-
-.table{
-
-
-    display:flex;
-
-
-    flex-direction:column;
-
-
-
-    width:100%;
-
-
-
-    overflow:hidden;
-
-
-
-    border-radius:12px;
-
-
-
-}
-
-
-
-
-
-
-
-.rowHeader,
-
-
-.row{
-
-
-    display:grid;
-
-
-
-    grid-template-columns:
-
-
-        1.5fr
-
-
-        .45fr
-
-
-        .45fr
-
-
-        .45fr
-
-
-        .45fr
-
-
-        .55fr
-
-
-        .55fr;
-
-
-
-    align-items:center;
-
-
-
-    gap:.25rem;
-
-
-
-    padding:.55rem .35rem;
-
-
-
-    text-align:center;
-
-
-
-}
-
-
-
-
-
-
-
-.rowHeader{
-
-
-    background:
-
-
-        rgba(163,230,53,.12);
-
-
-
-    border-bottom:
-
-
-        1px solid
-
-
-        rgba(163,230,53,.25);
-
-
-
-    color:
-
-
-        var(--color-lime);
-
-
-
-    font-size:.58rem;
-
-
-
-    font-weight:950;
-
-
-
-    letter-spacing:.12em;
-
-
-
-    text-transform:uppercase;
-
-
-
-}
-
-
-
-
-
-
-
-.row{
+.member {
 
 
     color:#FFFFFF;
 
 
-
-    font-size:.68rem;
-
+    font-size:1.1rem;
 
 
-    font-weight:850;
+    font-weight:900;
 
 
-
-    border-bottom:
-
-
-        1px solid
-
-
-        rgba(255,255,255,.06);
-
-
-
-}
-
-
-
-
-
-
-
-.row:last-child{
-
-
-    border-bottom:none;
-
-
-
-}
-
-
-
-
-
-
-
-.row span:first-child{
-
-
-    text-align:left;
-
-
-
-    color:
-
-
-        rgba(255,255,255,.8);
-
+    letter-spacing:.08em;
 
 
 }
@@ -325,11 +121,32 @@
 
 
 /* ================================= */
-/* TOTAL CAREER */
+/* PLAYER PROFILE */
 /* ================================= */
 
 
-.total{
+.playerProfile {
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+    gap:1rem;
+
+
+
+    padding:1.2rem;
+
+
+
+    border-radius:18px;
+
 
 
     background:
@@ -339,9 +156,9 @@
 
             180deg,
 
-            rgba(163,230,53,.14),
+            rgba(255,255,255,.06),
 
-            rgba(255,255,255,.04)
+            rgba(255,255,255,.025)
 
         );
 
@@ -352,8 +169,218 @@
 
         1px solid
 
+        rgba(255,255,255,.1);
 
-        rgba(163,230,53,.3);
+
+
+}
+
+
+
+
+
+
+
+.playerIdentity {
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:.35rem;
+
+
+}
+
+
+
+
+
+
+
+.playerIdentity span {
+
+
+    color:#A3E635;
+
+
+    font-size:.75rem;
+
+
+    font-weight:950;
+
+
+    letter-spacing:.18em;
+
+
+    text-transform:uppercase;
+
+
+}
+
+
+
+
+
+
+
+.playerIdentity strong {
+
+
+    color:#FFFFFF;
+
+
+    font-size:1.45rem;
+
+
+    font-weight:950;
+
+
+    letter-spacing:.08em;
+
+
+    text-transform:uppercase;
+
+
+}
+
+
+
+
+
+
+
+.playerData {
+
+
+    display:flex;
+
+
+    gap:1.5rem;
+
+
+}
+
+
+
+
+
+
+
+.playerData div {
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    align-items:center;
+
+
+}
+
+
+
+
+
+
+
+.playerData span {
+
+
+    color:#FFFFFF;
+
+
+    opacity:.65;
+
+
+    font-size:.7rem;
+
+
+    font-weight:900;
+
+
+    letter-spacing:.15em;
+
+
+    text-transform:uppercase;
+
+
+}
+
+
+
+
+
+
+
+.playerData strong {
+
+
+    margin-top:.25rem;
+
+
+    color:#A3E635;
+
+
+    font-size:1.25rem;
+
+
+    font-weight:950;
+
+
+}
+
+
+
+
+
+
+
+/* ================================= */
+/* CONTENT */
+/* ================================= */
+
+
+.content {
+
+
+    width:100%;
+
+
+}
+
+
+
+
+
+
+
+.empty {
+
+
+    padding:2rem;
+
+
+    text-align:center;
+
+
+
+    color:#FFFFFF;
+
+
+    font-size:.9rem;
+
+
+    font-weight:900;
+
+
+    letter-spacing:.12em;
 
 
 
@@ -361,7 +388,10 @@
 
 
 
-    padding:1rem;
+    background:
+
+
+        rgba(255,255,255,.04);
 
 
 
@@ -373,100 +403,95 @@
 
 
 
-.totalGrid{
+/* ================================= */
+/* FOOTER */
+/* ================================= */
 
 
-    display:grid;
-
-
-
-    grid-template-columns:
-
-
-        repeat(3,1fr);
-
-
-
-    gap:.7rem;
-
-
-
-}
-
-
-
-
-
-
-
-.totalGrid div{
+.footer {
 
 
     display:flex;
 
 
-
-    flex-direction:column;
-
-
-
-    align-items:center;
-
-
-
     justify-content:center;
 
 
-
-    min-height:70px;
-
+    padding-top:.8rem;
 
 
-    border-radius:12px;
+}
+
+
+
+
+
+
+
+.backButton {
+
+
+    width:90%;
+
+
+
+    min-height:48px;
+
+
+
+    border:none;
+
+
+    border-radius:999px;
+
+
+
+    cursor:pointer;
 
 
 
     background:
 
 
-        rgba(0,0,0,.25);
+        linear-gradient(
+
+            180deg,
+
+            #ECFFC0,
+
+            #A3E635
+
+        );
 
 
 
-}
+    color:#111111;
 
 
 
+    font-size:.85rem;
 
 
+    font-weight:950;
 
 
-.totalGrid span{
-
-
-    color:
-
-
-        rgba(255,255,255,.6);
-
-
-
-    font-size:.52rem;
-
-
-
-    font-weight:900;
-
-
-
-    letter-spacing:.14em;
-
+    letter-spacing:.16em;
 
 
     text-transform:uppercase;
 
 
 
+    transition:
+
+
+        transform .2s ease,
+
+
+        box-shadow .2s ease;
+
+
+
 }
 
 
@@ -475,22 +500,17 @@
 
 
 
-.totalGrid strong{
+.backButton:hover {
 
 
-    margin-top:.25rem;
-
-
-
-    color:#FFFFFF;
+    transform:translateY(-3px);
 
 
 
-    font-size:1.15rem;
+    box-shadow:
 
 
-
-    font-weight:950;
+        0 0 25px rgba(163,230,53,.55);
 
 
 
@@ -507,38 +527,40 @@
 /* ================================= */
 
 
-@media(max-width:500px){
+@media(max-width:700px){
 
 
 
-    .rowHeader,
+    .playerProfile {
 
 
-    .row{
+        flex-direction:column;
 
 
-        font-size:.6rem;
-
-
-
-        padding:.45rem .2rem;
-
+        align-items:flex-start;
 
 
     }
 
 
 
+    .playerData {
 
 
-    .totalGrid{
+        width:100%;
 
 
-        grid-template-columns:
+        justify-content:space-around;
 
 
-            repeat(2,1fr);
+    }
 
+
+
+    .playerIdentity strong {
+
+
+        font-size:1.2rem;
 
 
     }

@@ -1,26 +1,17 @@
 /* ================================= */
-/* CAREER STATS WRAPPER */
+/* WRAPPER */
 /* ================================= */
 
 
-.wrapper{
-
+.wrapper {
 
     width:100%;
 
-
-
     display:flex;
-
-
 
     flex-direction:column;
 
-
-
-    gap:1.2rem;
-
-
+    gap:1.5rem;
 
 }
 
@@ -29,39 +20,14 @@
 
 
 
-
 /* ================================= */
-/* STAT SECTION */
+/* SECTION */
 /* ================================= */
 
 
-.section{
+.section {
 
-
-    background:
-
-
-        rgba(255,255,255,.035);
-
-
-
-    border:
-
-
-        1px solid
-
-
-        rgba(255,255,255,.10);
-
-
-
-    border-radius:18px;
-
-
-
-    padding:1rem;
-
-
+    width:100%;
 
 }
 
@@ -69,42 +35,25 @@
 
 
 
+.section h3 {
 
 
-.section h3,
+    margin:0 0 1rem;
 
 
-.total h3{
+    color:#FFFFFF;
 
 
-    margin:
-
-
-        0 0 1rem;
-
-
-
-    color:
-
-
-        var(--color-lime);
-
-
-
-    font-size:.78rem;
-
+    font-size:1.35rem !important;
 
 
     font-weight:950;
 
 
-
-    letter-spacing:.28em;
-
+    letter-spacing:.16em;
 
 
     text-transform:uppercase;
-
 
 
 }
@@ -120,26 +69,31 @@
 /* ================================= */
 
 
-.table{
-
-
-    display:flex;
-
-
-
-    flex-direction:column;
-
+.table {
 
 
     width:100%;
 
 
-
     overflow:hidden;
 
 
+    border-radius:18px;
 
-    border-radius:12px;
+
+    background:
+
+
+        rgba(255,255,255,.04);
+
+
+
+    border:
+
+
+        1px solid
+
+        rgba(255,255,255,.1);
 
 
 
@@ -151,54 +105,52 @@
 
 
 
-.rowHeader,
+/* ================================= */
+/* HEADER */
+/* ================================= */
 
 
-.row{
+.rowHeader {
 
 
     display:grid;
 
 
-
     grid-template-columns:
 
 
-        1.5fr
+        1.2fr
 
+        .7fr
 
-        .45fr
+        .7fr
 
+        .7fr
 
-        .45fr
+        .8fr
 
+        .8fr
 
-        .45fr
-
-
-        .45fr
-
-
-        .55fr
-
-
-        .55fr;
+        .8fr;
 
 
 
     align-items:center;
 
 
-
-    gap:.25rem;
-
+    padding:
 
 
-    padding:.65rem .4rem;
+        .85rem
+
+        1rem;
 
 
 
-    text-align:center;
+    background:
+
+
+        rgba(163,230,53,.18);
 
 
 
@@ -210,43 +162,22 @@
 
 
 
-.rowHeader{
+.rowHeader span {
 
 
-    background:
+    color:#FFFFFF;
 
 
-        rgba(163,230,53,.15);
+    text-align:center;
 
 
-
-    border-bottom:
-
-
-        1px solid
-
-
-        rgba(163,230,53,.35);
-
-
-
-    color:
-
-
-        var(--color-lime);
-
-
-
-    font-size:.58rem;
-
+    font-size:.95rem !important;
 
 
     font-weight:950;
 
 
-
-    letter-spacing:.15em;
-
+    letter-spacing:.14em;
 
 
     text-transform:uppercase;
@@ -261,18 +192,63 @@
 
 
 
-.row{
+.rowHeader span:first-child {
 
 
-    color:#FFFFFF;
+    text-align:left;
+
+
+}
 
 
 
-    font-size:.72rem;
 
 
 
-    font-weight:850;
+
+/* ================================= */
+/* ROW */
+/* ================================= */
+
+
+.row {
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+
+        1.2fr
+
+        .7fr
+
+        .7fr
+
+        .7fr
+
+        .8fr
+
+        .8fr
+
+        .8fr;
+
+
+
+    align-items:center;
+
+
+    padding:
+
+
+        .85rem
+
+        1rem;
+
+
+
+    min-height:52px;
 
 
 
@@ -281,15 +257,7 @@
 
         1px solid
 
-
-        rgba(255,255,255,.06);
-
-
-
-    transition:
-
-
-        background .25s ease;
+        rgba(255,255,255,.08);
 
 
 
@@ -301,29 +269,19 @@
 
 
 
-.row:hover{
+.row span {
 
 
-    background:
+    color:#FFFFFF;
 
 
-        rgba(163,230,53,.08);
+    text-align:center;
 
 
-
-}
-
+    font-size:1.05rem !important;
 
 
-
-
-
-
-.row:last-child{
-
-
-    border-bottom:none;
-
+    font-weight:850;
 
 
 }
@@ -332,23 +290,75 @@
 
 
 
-
-
-.row span:first-child{
+.row span:first-child {
 
 
     text-align:left;
 
 
+    font-size:1rem !important;
 
-    color:
+
+}
 
 
-        rgba(255,255,255,.85);
 
+
+
+
+
+.row:last-child {
+
+
+    border-bottom:none;
+
+
+}
+
+
+
+
+
+
+
+/* ================================= */
+/* POINTS */
+/* ================================= */
+
+
+.highlightHeader {
+
+
+    color:#A3E635 !important;
+
+
+    font-size:1.05rem !important;
+
+
+}
+
+
+
+
+
+
+
+.highlightPoints {
+
+
+    color:#A3E635 !important;
+
+
+    font-size:1.35rem !important;
 
 
     font-weight:950;
+
+
+    text-shadow:
+
+
+        0 0 15px rgba(163,230,53,.65);
 
 
 
@@ -365,46 +375,22 @@
 /* ================================= */
 
 
-.emptyRow{
+.emptyRow {
 
 
-    min-height:60px;
+    padding:2rem;
 
 
-
-    display:flex;
-
+    color:#FFFFFF;
 
 
-    align-items:center;
+    text-align:center;
 
 
-
-    justify-content:center;
-
-
-
-    color:
-
-
-        rgba(255,255,255,.45);
-
-
-
-    font-size:.65rem;
-
+    font-size:1.2rem;
 
 
     font-weight:900;
-
-
-
-    letter-spacing:.2em;
-
-
-
-    text-transform:uppercase;
-
 
 
 }
@@ -420,7 +406,18 @@
 /* ================================= */
 
 
-.total{
+.total {
+
+
+    margin-top:1.5rem;
+
+
+    padding:1.5rem;
+
+
+
+    border-radius:24px;
+
 
 
     background:
@@ -430,7 +427,7 @@
 
             180deg,
 
-            rgba(163,230,53,.16),
+            rgba(163,230,53,.14),
 
             rgba(255,255,255,.04)
 
@@ -443,16 +440,17 @@
 
         1px solid
 
-
         rgba(163,230,53,.35);
 
 
 
-    border-radius:20px;
+    box-shadow:
 
 
+        0 0 35px rgba(163,230,53,.12),
 
-    padding:1.2rem;
+
+        inset 0 0 25px rgba(0,0,0,.25);
 
 
 
@@ -464,11 +462,50 @@
 
 
 
-.totalGrid{
+.total h3 {
+
+
+    margin:0 0 1.4rem;
+
+
+    text-align:center;
+
+
+    color:#A3E635;
+
+
+    font-size:1.45rem !important;
+
+
+    font-weight:950;
+
+
+    letter-spacing:.25em;
+
+
+    text-transform:uppercase;
+
+
+
+    text-shadow:
+
+
+        0 0 18px rgba(163,230,53,.55);
+
+
+
+}
+
+
+
+
+
+
+
+.totalGrid {
 
 
     display:grid;
-
 
 
     grid-template-columns:
@@ -478,8 +515,7 @@
 
 
 
-    gap:.8rem;
-
+    gap:1rem;
 
 
 }
@@ -490,37 +526,53 @@
 
 
 
-.totalGrid div{
+.totalGrid div {
 
 
-    min-height:75px;
+    position:relative;
+
+
+    overflow:hidden;
+
+
+
+    min-height:95px;
 
 
 
     display:flex;
 
 
-
     flex-direction:column;
 
 
-
     justify-content:center;
-
 
 
     align-items:center;
 
 
 
-    border-radius:14px;
+    padding:1rem;
+
+
+
+    border-radius:18px;
 
 
 
     background:
 
 
-        rgba(0,0,0,.25);
+        linear-gradient(
+
+            180deg,
+
+            rgba(255,255,255,.08),
+
+            rgba(255,255,255,.025)
+
+        );
 
 
 
@@ -529,8 +581,7 @@
 
         1px solid
 
-
-        rgba(255,255,255,.05);
+        rgba(255,255,255,.12);
 
 
 
@@ -542,26 +593,60 @@
 
 
 
-.totalGrid span{
+.totalGrid div::before {
 
 
-    color:
+    content:"";
 
 
-        rgba(255,255,255,.55);
+    position:absolute;
+
+
+    top:0;
+
+
+    left:15%;
+
+
+    right:15%;
+
+
+    height:2px;
 
 
 
-    font-size:.55rem;
+    background:#A3E635;
 
 
 
-    font-weight:900;
+    opacity:.5;
+
+
+}
 
 
 
-    letter-spacing:.15em;
 
+
+
+
+.totalGrid span {
+
+
+    color:#FFFFFF;
+
+
+    opacity:.75;
+
+
+
+    font-size:.75rem !important;
+
+
+    font-weight:950;
+
+
+    letter-spacing:.18em;
 
 
     text-transform:uppercase;
@@ -576,10 +661,10 @@
 
 
 
-.totalGrid strong{
+.totalGrid strong {
 
 
-    margin-top:.3rem;
+    margin-top:.35rem;
 
 
 
@@ -587,116 +672,164 @@
 
 
 
-    font-size:1.25rem;
-
+    font-size:1.7rem !important;
 
 
     font-weight:950;
 
 
-
-}
-
-
-
-
-
-
-
-/* ================================= */
-/* MOBILE */
-/* ================================= */
-
-
-@media(max-width:500px){
-
-
-
-    .rowHeader,
-
-
-    .row{
-
-
-        padding:.5rem .2rem;
-
-
-
-        font-size:.6rem;
-
-
-
-    }
-
-
-
-
-
-    .totalGrid{
-
-
-        grid-template-columns:
-
-
-            repeat(2,1fr);
-
-
-
-    }
-
-
-
-}
-
-/* ================================= */
-/* POINT HIGHLIGHT */
-/* ================================= */
-
-
-.highlightHeader {
-
-    color:#A3E635;
-
-    font-weight:950;
-
-}
-
-
-
-.highlightPoints {
-
-    color:#A3E635 !important;
-
-    font-size:1.15rem;
-
-    font-weight:950;
 
     text-shadow:
 
-        0 0 12px rgba(163,230,53,.65);
+
+        0 0 12px rgba(255,255,255,.25);
+
+
 
 }
 
+
+
+
+
+
+
+/* ================================= */
+/* POINTS FEATURE */
+/* ================================= */
 
 
 .highlightTotal {
 
-    color:#A3E635 !important;
+
+    transform:translateY(-5px);
+
+
+
+    background:
+
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(163,230,53,.22),
+
+            rgba(163,230,53,.05)
+
+        ) !important;
+
+
+
+    border:
+
+
+        1px solid
+
+        rgba(163,230,53,.65) !important;
+
+
+
+    box-shadow:
+
+
+        0 0 35px rgba(163,230,53,.25);
+
+
 
 }
+
+
+
+
+
+
+
+.highlightTotal span {
+
+
+    color:#ECFFC0;
+
+
+}
+
+
+
+
 
 
 
 .highlightTotal strong {
 
-    color:#A3E635 !important;
 
-    font-size:1.25rem;
+    color:#A3E635;
 
-    font-weight:950;
+
+    font-size:2.2rem !important;
+
 
     text-shadow:
 
-        0 0 18px rgba(163,230,53,.65);
+
+        0 0 25px rgba(163,230,53,.85);
+
+
+
+}
+
+
+
+
+
+
+
+/* ================================= */
+/* RESPONSIVE */
+/* ================================= */
+
+
+@media(max-width:700px){
+
+
+
+    .rowHeader span {
+
+
+        font-size:.75rem !important;
+
+
+    }
+
+
+
+    .row span {
+
+
+        font-size:.9rem !important;
+
+
+    }
+
+
+
+    .highlightPoints {
+
+
+        font-size:1.15rem !important;
+
+
+    }
+
+
+
+    .totalGrid {
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
 
 }
