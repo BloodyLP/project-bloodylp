@@ -1,10 +1,19 @@
-import {
+"use client";
+
+
+import CareerStats from "./CareerStats";
+
+
+import type {
 
     CareerStatsData,
 
-    emptyCareerStats,
+} from "./types";
 
-    founderStats,
+
+import {
+
+    emptyCareerStats,
 
 } from "./data";
 
@@ -12,32 +21,56 @@ import {
 
 
 
-export const memberCareerStats:Record<string,CareerStatsData> = {
 
 
-
-    "ba-001":founderStats,
-
+type MemberCareerStatsProps = {
 
 
-    "ba-002":emptyCareerStats,
-
-
-
-    "ba-003":emptyCareerStats,
-
-
-
-    "ba-004":emptyCareerStats,
-
-
-
-    "ba-005":emptyCareerStats,
-
-
-
-    "ba-006":emptyCareerStats,
-
+    stats?:CareerStatsData;
 
 
 };
+
+
+
+
+
+
+
+
+
+export default function MemberCareerStats({
+
+
+    stats,
+
+
+}:MemberCareerStatsProps){
+
+
+
+    return (
+
+
+
+        <CareerStats
+
+
+            stats={
+
+                stats
+
+                ??
+
+                emptyCareerStats
+
+            }
+
+
+        />
+
+
+
+    );
+
+}

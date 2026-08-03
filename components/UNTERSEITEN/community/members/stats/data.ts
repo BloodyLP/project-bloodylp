@@ -1,105 +1,78 @@
-import type { CareerStatsData } from "./types";
+import type {
 
+    CareerStatsData,
 
+} from "./types";
 
 
-export const emptyCareerStats: CareerStatsData = {
 
 
-    seasons: []
 
 
-};
 
 
 
+export const emptyCareerStats:CareerStatsData = {
 
 
+    seasons: [],
 
 
-export const founderStats: CareerStatsData = {
+    regularSeason: [],
 
 
-    seasons: [
+    playoffs: [],
 
 
-        {
+    total: {
 
 
-            year:"2019",
+        season:"GESAMT",
 
 
-            games:82,
+        year:"GESAMT",
 
-            goals:46,
 
-            assists:32,
+        games:0,
 
-            points:78,
 
-            plusMinus:48,
+        goals:0,
 
-            penaltyMinutes:21,
 
+        assists:0,
 
 
-            playoffGames:19,
+        points:0,
 
-            playoffGoals:15,
 
-            playoffAssists:8,
+        plusMinus:0,
 
-            playoffPoints:23,
 
-            playoffPlusMinus:16,
+        penaltyMinutes:0,
 
-            playoffPenaltyMinutes:4,
 
+        playoffGames:0,
 
 
-            titles:[]
+        playoffGoals:0,
 
-        },
 
+        playoffAssists:0,
 
-        {
 
+        playoffPoints:0,
 
-            year:"2020",
 
-            games:0,
+        playoffPlusMinus:0,
 
-            goals:0,
 
-            assists:0,
+        playoffPenaltyMinutes:0,
 
-            points:0,
 
-            plusMinus:0,
+        titles:[]
 
-            penaltyMinutes:0,
 
+    }
 
-
-            playoffGames:0,
-
-            playoffGoals:0,
-
-            playoffAssists:0,
-
-            playoffPoints:0,
-
-            playoffPlusMinus:0,
-
-            playoffPenaltyMinutes:0,
-
-
-
-            titles:[]
-
-        }
-
-
-    ]
 
 };
