@@ -1,7 +1,11 @@
 export type SeasonStats = {
 
 
-    year:string;
+    season?:string;
+
+
+    year?:string;
+
 
 
     games:number;
@@ -22,28 +26,32 @@ export type SeasonStats = {
     penaltyMinutes:number;
 
 
-    playoffGames:number;
+
+    playoffGames?:number;
 
 
-    playoffGoals:number;
+    playoffGoals?:number;
 
 
-    playoffAssists:number;
+    playoffAssists?:number;
 
 
-    playoffPoints:number;
+    playoffPoints?:number;
 
 
-    playoffPlusMinus:number;
+    playoffPlusMinus?:number;
 
 
-    playoffPenaltyMinutes:number;
+    playoffPenaltyMinutes?:number;
 
 
-    titles:string[];
+
+    titles?:string[];
 
 
 };
+
+
 
 
 
@@ -54,7 +62,10 @@ export type SeasonStats = {
 export type CareerStatsInput = {
 
 
-    seasons:SeasonStats[];
+    regularSeason:SeasonStats[];
+
+
+    playoffs:SeasonStats[];
 
 
 };
@@ -65,10 +76,24 @@ export type CareerStatsInput = {
 
 
 
+
+
 export type CareerStatsData = {
 
 
-    seasons:SeasonStats[];
+    seasons?:SeasonStats[];
+
+
+
+    regularSeason:SeasonStats[];
+
+
+
+    playoffs:SeasonStats[];
+
+
+
+    total:SeasonStats;
 
 
 };

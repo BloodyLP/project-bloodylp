@@ -70,6 +70,7 @@ function StatsTable({
 
 
 
+
             <div className={styles.table}>
 
 
@@ -132,6 +133,7 @@ function StatsTable({
 
 
 
+
                 {
 
 
@@ -174,7 +176,7 @@ function StatsTable({
 
                                     ?
 
-                                    season.playoffGames
+                                    season.playoffGames ?? 0
 
                                     :
 
@@ -194,7 +196,7 @@ function StatsTable({
 
                                     ?
 
-                                    season.playoffGoals
+                                    season.playoffGoals ?? 0
 
                                     :
 
@@ -214,7 +216,7 @@ function StatsTable({
 
                                     ?
 
-                                    season.playoffAssists
+                                    season.playoffAssists ?? 0
 
                                     :
 
@@ -224,11 +226,9 @@ function StatsTable({
 
                             </span>
 
-                                                        <span className={
 
-                                styles.highlightPoints
 
-                            }>
+                            <span className={styles.highlightPoints}>
 
 
                                 {
@@ -237,7 +237,7 @@ function StatsTable({
 
                                     ?
 
-                                    season.playoffPoints
+                                    season.playoffPoints ?? 0
 
                                     :
 
@@ -248,11 +248,7 @@ function StatsTable({
 
                             </span>
 
-
-
-
-
-                            <span>
+                                                        <span>
 
 
                                 {
@@ -266,19 +262,20 @@ function StatsTable({
 
                                     (
 
-                                        season.playoffPlusMinus > 0
+
+                                        (season.playoffPlusMinus ?? 0) > 0
 
 
                                         ?
 
 
-                                        `+${season.playoffPlusMinus}`
+                                        `+${season.playoffPlusMinus ?? 0}`
 
 
                                         :
 
 
-                                        season.playoffPlusMinus
+                                        season.playoffPlusMinus ?? 0
 
 
                                     )
@@ -288,6 +285,7 @@ function StatsTable({
 
 
                                     (
+
 
                                         season.plusMinus > 0
 
@@ -316,6 +314,8 @@ function StatsTable({
 
 
 
+
+
                             <span>
 
 
@@ -328,7 +328,7 @@ function StatsTable({
                                     ?
 
 
-                                    season.playoffPenaltyMinutes
+                                    season.playoffPenaltyMinutes ?? 0
 
 
                                     :
@@ -409,152 +409,153 @@ export default function CareerStats({
 
 
 
+
     const total = seasons.reduce(
 
 
-    (acc,season)=>(
+        (acc,season)=>(
+
+
+
+            {
+
+
+                games:
+
+
+                    acc.games
+
+                    +
+
+                    season.games
+
+                    +
+
+                    (season.playoffGames ?? 0),
+
+
+
+
+
+                goals:
+
+
+                    acc.goals
+
+                    +
+
+                    season.goals
+
+                    +
+
+                    (season.playoffGoals ?? 0),
+
+
+
+
+
+                assists:
+
+
+                    acc.assists
+
+                    +
+
+                    season.assists
+
+                    +
+
+                    (season.playoffAssists ?? 0),
+
+
+
+
+
+                points:
+
+
+                    acc.points
+
+                    +
+
+                    season.points
+
+                    +
+
+                    (season.playoffPoints ?? 0),
+
+
+
+
+
+                plusMinus:
+
+
+                    acc.plusMinus
+
+                    +
+
+                    season.plusMinus
+
+                    +
+
+                    (season.playoffPlusMinus ?? 0),
+
+
+
+
+
+                penaltyMinutes:
+
+
+                    acc.penaltyMinutes
+
+                    +
+
+                    season.penaltyMinutes
+
+                    +
+
+                    (season.playoffPenaltyMinutes ?? 0)
+
+
+
+            }
+
+
+
+        ),
 
 
 
         {
 
 
-            games:
-
-                acc.games
-
-                +
-
-                season.games
-
-                +
-
-                season.playoffGames,
+            games:0,
 
 
+            goals:0,
 
 
-
-            goals:
-
-                acc.goals
-
-                +
-
-                season.goals
-
-                +
-
-                season.playoffGoals,
+            assists:0,
 
 
+            points:0,
 
 
-
-            assists:
-
-                acc.assists
-
-                +
-
-                season.assists
-
-                +
-
-                season.playoffAssists,
+            plusMinus:0,
 
 
-
-
-
-            points:
-
-                acc.points
-
-                +
-
-                season.points
-
-                +
-
-                season.playoffPoints,
-
-
-
-
-
-            plusMinus:
-
-                acc.plusMinus
-
-                +
-
-                season.plusMinus
-
-                +
-
-                season.playoffPlusMinus,
-
-
-
-
-
-            penaltyMinutes:
-
-                acc.penaltyMinutes
-
-                +
-
-                season.penaltyMinutes
-
-                +
-
-                season.playoffPenaltyMinutes
+            penaltyMinutes:0
 
 
 
         }
 
 
-
-    ),
-
-
-
-    {
-
-
-        games:0,
-
-
-        goals:0,
-
-
-        assists:0,
-
-
-        points:0,
-
-
-        plusMinus:0,
-
-
-        penaltyMinutes:0
-
-
-
-    }
-
-
-);
-
-
-
-
-
-
-
-    return (
+    );
+    
+        return (
 
 
 
@@ -598,6 +599,8 @@ export default function CareerStats({
 
 
 
+
+
             <section className={styles.total}>
 
 
@@ -607,8 +610,13 @@ export default function CareerStats({
 
                 </h3>
 
-                                <div className={styles.totalGrid}>
 
+
+
+
+
+
+                <div className={styles.totalGrid}>
 
 
                     <div>
@@ -784,7 +792,10 @@ export default function CareerStats({
 
 
 
+
             </section>
+
+
 
 
 
