@@ -1,50 +1,155 @@
 .hero {
-    width: 100%;
 
-    min-height: 100vh;
+    width:100%;
 
-    display: flex;
-    align-items: center;
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
 
     padding:
-        clamp(8rem, 10vh, 9rem)
+
+        clamp(7rem,10vh,9rem)
+
         2rem
+
         3rem;
+
 }
+
+
+
+
+
+
 
 .container {
-    width: 100%;
 
-    max-width: 1450px;
 
-    margin: 0 auto;
+    width:100%;
 
-    display: grid;
 
-    grid-template-columns: 1.08fr .92fr;
 
-    gap: 2.5rem;
+    max-width:1450px;
 
-    align-items: center;
+
+
+    margin:0 auto;
+
+
+
+    display:grid;
+
+
+
+    grid-template-columns:
+
+
+        1.08fr
+
+        .92fr;
+
+
+
+    gap:2.5rem;
+
+
+
+    align-items:center;
+
+
 }
 
-@media (max-width: 1100px) {
+
+
+
+
+
+
+@media(max-width:1100px){
+
+
 
     .hero {
 
-        min-height: auto;
+
+        min-height:auto;
+
+
 
         padding:
-            8rem
+
+
+            7rem
+
             2rem
+
             4rem;
+
+
     }
+
+
+
+
+
 
     .container {
 
-        grid-template-columns: 1fr;
 
-        gap: 4rem;
+        grid-template-columns:1fr;
+
+
+
+        gap:4rem;
+
+
     }
+
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:600px){
+
+
+
+    .hero {
+
+
+        padding:
+
+
+            6rem
+
+            1.2rem
+
+            3rem;
+
+
+    }
+
+
+
+
+
+
+    .container {
+
+
+        gap:3rem;
+
+
+    }
+
+
 
 }
