@@ -1,0 +1,23 @@
+.wrapper {
+
+    display:flex;
+
+    justify-content:center;
+
+    width:100%;
+
+    margin:
+
+        3rem auto
+
+        5rem;
+
+}
+
+
+
+.wrapper article {
+
+    max-width:430px;
+
+}

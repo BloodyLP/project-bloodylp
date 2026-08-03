@@ -1,0 +1,168 @@
+.header {
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:0 auto;
+
+}
+
+
+
+/* ================================= */
+/* OVERLINE */
+/* ================================= */
+
+
+.overline {
+
+    color:#A3E635;
+
+    font-size:.85rem;
+
+    font-weight:950;
+
+    letter-spacing:.45em;
+
+    text-transform:uppercase;
+
+}
+
+
+
+
+
+/* ================================= */
+/* TITLE */
+/* ================================= */
+
+
+.title {
+
+    margin:
+
+        .8rem
+
+        0
+
+        0;
+
+
+    color:#FFFFFF;
+
+    font-size:
+
+        clamp(
+
+            2.5rem,
+
+            5vw,
+
+            4rem
+
+        );
+
+
+    font-weight:950;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+}
+
+
+
+
+
+
+/* ================================= */
+/* STARS */
+/* ================================= */
+
+
+.stars {
+
+    margin-top:.6rem;
+
+    margin-bottom:1.8rem;
+
+    color:#EAB308;
+
+    font-size:1.35rem;
+
+    font-weight:950;
+
+    letter-spacing:.45em;
+
+    text-shadow:
+
+        0 0 15px rgba(234,179,8,.35);
+
+}
+
+
+
+
+
+/* ================================= */
+/* DESCRIPTION */
+/* ================================= */
+
+
+.description {
+
+    margin:
+
+        .5rem
+
+        0;
+
+
+    color:#BDBDBD;
+
+    font-size:1.05rem;
+
+    line-height:1.8;
+
+    letter-spacing:.05em;
+
+}
+
+
+
+
+
+@media(max-width:700px){
+
+
+    .title {
+
+        font-size:2.2rem;
+
+    }
+
+
+    .stars {
+
+        font-size:1.1rem;
+
+        letter-spacing:.3em;
+
+    }
+
+
+    .description {
+
+        font-size:.95rem;
+
+    }
+
+}

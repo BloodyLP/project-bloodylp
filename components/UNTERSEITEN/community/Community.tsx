@@ -5,6 +5,7 @@ import styles from "./Community.module.css";
 import CommunityHero from "./hero";
 import History from "./history";
 import Values from "./values";
+import Members from "./members";
 import Join from "./join";
 
 export default function Community() {
@@ -28,6 +29,12 @@ export default function Community() {
             {/* ================================= */}
 
             <Values />
+
+            {/* ================================= */}
+            {/* Unsere Mitglieder */}
+            {/* ================================= */}
+
+            <Members />
 
             {/* ================================= */}
             {/* Mitglied werden */}

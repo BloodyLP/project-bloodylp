@@ -1,0 +1,45 @@
+.grid {
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(3, 430px);
+
+    justify-content:center;
+
+    align-items:start;
+
+    gap:3rem;
+
+    width:100%;
+
+}
+
+
+
+@media(max-width:1400px){
+
+    .grid {
+
+        grid-template-columns:
+
+            repeat(2, 430px);
+
+    }
+
+}
+
+
+
+@media(max-width:950px){
+
+    .grid {
+
+        grid-template-columns:
+
+            1fr;
+
+    }
+
+}

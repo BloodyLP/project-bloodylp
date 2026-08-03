@@ -1,0 +1,453 @@
+/* ================================= */
+/* ARCHIVE CONTAINER */
+/* ================================= */
+
+
+.archive {
+
+    width:100%;
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1.2rem;
+
+}
+
+
+
+
+
+/* ================================= */
+/* ARCHIVE FOLDER */
+/* ================================= */
+
+
+.folder {
+
+    width:100%;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+
+    border:
+
+        1px solid
+
+        rgba(255,255,255,.12);
+
+
+
+    background:
+
+        rgba(255,255,255,.035);
+
+
+
+    backdrop-filter:
+
+        blur(18px);
+
+
+
+    box-shadow:
+
+        0 20px 50px rgba(0,0,0,.25);
+
+
+
+    transition:
+
+        border-color .35s ease,
+
+        box-shadow .35s ease;
+
+}
+
+
+
+.folder:hover {
+
+
+    border-color:
+
+        rgba(163,230,53,.35);
+
+
+
+    box-shadow:
+
+        0 25px 70px rgba(0,0,0,.35),
+
+        0 0 30px rgba(163,230,53,.08);
+
+}
+
+
+
+
+
+/* ================================= */
+/* FOLDER HEADER */
+/* ================================= */
+
+
+.folderHeader {
+
+    width:100%;
+
+
+    display:flex;
+
+    align-items:center;
+
+
+    gap:1rem;
+
+
+
+    padding:
+
+        1.1rem
+
+        1.35rem;
+
+
+
+    cursor:pointer;
+
+
+    border:none;
+
+
+    background:
+
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(255,255,255,.08),
+
+            rgba(255,255,255,.03)
+
+        );
+
+
+
+    color:#FFFFFF;
+
+
+
+    transition:
+
+        background .35s ease;
+
+}
+
+
+
+.folderHeader:hover {
+
+
+    background:
+
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(163,230,53,.12),
+
+            rgba(163,230,53,.04)
+
+        );
+
+}
+
+
+
+
+
+/* ================================= */
+/* ARROW */
+/* ================================= */
+
+
+.arrow {
+
+    width:28px;
+
+
+    color:
+
+        #A3E635;
+
+
+
+    font-size:
+
+        1rem;
+
+
+
+    font-weight:
+
+        900;
+
+
+
+    text-align:center;
+
+}
+
+
+
+
+
+/* ================================= */
+/* TITLE */
+/* ================================= */
+
+
+.folderTitle {
+
+
+    flex:1;
+
+
+    text-align:left;
+
+
+
+    color:#FFFFFF;
+
+
+
+    font-size:
+
+        .95rem;
+
+
+
+    font-weight:
+
+        950;
+
+
+
+    letter-spacing:
+
+        .25em;
+
+
+
+    text-transform:
+
+        uppercase;
+
+
+}
+
+
+
+
+
+/* ================================= */
+/* COUNT */
+/* ================================= */
+
+
+.folderCount {
+
+
+    color:
+
+        #EAB308;
+
+
+
+    font-size:
+
+        .78rem;
+
+
+
+    font-weight:
+
+        950;
+
+
+
+    letter-spacing:
+
+        .18em;
+
+
+
+    text-transform:
+
+        uppercase;
+
+
+}
+
+
+
+
+
+/* ================================= */
+/* CONTENT */
+/* ================================= */
+
+
+.folderContent {
+
+
+    display:grid;
+
+
+
+    grid-template-columns:
+
+        repeat(3,minmax(260px,1fr));
+
+
+
+    gap:
+
+        1.5rem;
+
+
+
+    padding:
+
+        1.5rem;
+
+
+
+    background:
+
+
+        rgba(0,0,0,.18);
+
+
+
+    border-top:
+
+
+        1px solid
+
+        rgba(255,255,255,.06);
+
+
+}
+
+
+
+
+
+/* ================================= */
+/* RESPONSIVE */
+/* ================================= */
+
+
+@media(max-width:1200px){
+
+
+    .archive {
+
+        max-width:900px;
+
+    }
+
+
+
+    .folderContent {
+
+
+        grid-template-columns:
+
+            repeat(2,minmax(260px,1fr));
+
+
+    }
+
+
+}
+
+
+
+
+
+@media(max-width:750px){
+
+
+    .folderHeader {
+
+
+        padding:
+
+            1rem;
+
+
+
+    }
+
+
+
+    .folderTitle {
+
+
+        font-size:
+
+            .8rem;
+
+
+
+        letter-spacing:
+
+            .15em;
+
+
+    }
+
+
+
+    .folderCount {
+
+
+        font-size:
+
+            .65rem;
+
+
+    }
+
+
+
+    .folderContent {
+
+
+        grid-template-columns:
+
+            1fr;
+
+
+
+        padding:
+
+            1rem;
+
+
+    }
+
+
+}

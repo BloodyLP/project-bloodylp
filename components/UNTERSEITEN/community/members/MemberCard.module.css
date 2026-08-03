@@ -1,0 +1,696 @@
+.card {
+
+    position:relative;
+
+    overflow:hidden;
+
+    width:100%;
+
+    max-width:430px;
+
+    min-height:680px;
+
+    margin:0 auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            #292929,
+
+            #181818
+
+        );
+
+    border:
+
+        1px solid
+
+        rgba(255,255,255,.12);
+
+    border-radius:30px;
+
+    box-shadow:
+
+        0 30px 70px rgba(0,0,0,.45);
+
+    transition:
+
+        transform .35s ease,
+
+        box-shadow .35s ease,
+
+        border-color .35s ease;
+
+}
+
+
+
+.card::before {
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+
+            circle at top,
+
+            rgba(163,230,53,.10),
+
+            transparent 45%
+
+        );
+
+    pointer-events:none;
+
+}
+
+
+
+.card:hover {
+
+    transform:
+
+        translateY(-8px);
+
+    border-color:
+
+        rgba(163,230,53,.4);
+
+    box-shadow:
+
+        0 35px 90px rgba(0,0,0,.55),
+
+        0 0 35px rgba(163,230,53,.15);
+
+}
+
+
+
+/* ================================= */
+/* HEADER */
+/* ================================= */
+
+
+.header {
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:1rem;
+
+    padding:
+
+        1.35rem
+
+        1.4rem;
+
+    border-bottom:
+
+        1px solid
+
+        rgba(255,255,255,.08);
+
+}
+
+
+
+.rankArea {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.8rem;
+
+    min-width:0;
+
+    flex:1;
+
+}
+
+
+
+.rankImage {
+
+    width:58px;
+
+    height:58px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+
+}
+
+
+
+.rankContent {
+
+    display:flex;
+
+    align-items:center;
+
+    min-width:0;
+
+}
+
+
+
+.rankTitle {
+
+    margin:0;
+
+    color:#FFFFFF;
+
+    font-size:.92rem;
+
+    font-weight:950;
+
+    letter-spacing:.05em;
+
+    line-height:1.35;
+
+    text-transform:uppercase;
+
+    white-space:normal;
+
+    max-width:150px;
+
+}
+
+
+
+.armyId {
+
+    flex-shrink:0;
+
+    padding:
+
+        .55rem
+
+        .85rem;
+
+    min-width:72px;
+
+    text-align:center;
+
+    border-radius:12px;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            #464646,
+
+            #1c1c1c
+
+        );
+
+    border:
+
+        1px solid
+
+        rgba(255,255,255,.15);
+
+    color:#FFFFFF;
+
+    font-size:.80rem;
+
+    font-weight:900;
+
+    letter-spacing:.15em;
+
+    white-space:nowrap;
+
+}
+
+
+
+/* ================================= */
+/* AVATAR */
+/* ================================= */
+
+
+.avatarWrapper {
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    justify-content:center;
+
+    padding:
+
+        2rem
+
+        2rem
+
+        1rem;
+
+}
+
+
+
+.avatar {
+
+    width:240px;
+
+    height:240px;
+
+    object-fit:cover;
+
+    border-radius:26px;
+
+    border:
+
+        3px solid
+
+        rgba(163,230,53,.35);
+
+    box-shadow:
+
+        0 0 30px rgba(163,230,53,.18),
+
+        0 20px 45px rgba(0,0,0,.5);
+
+}
+
+/* ================================= */
+/* IDENTITY */
+/* ================================= */
+
+
+.identity {
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+
+.name {
+
+    margin:0;
+
+    color:#FFFFFF;
+
+    font-size:2.5rem;
+
+    font-weight:950;
+
+    letter-spacing:.06em;
+
+    text-transform:uppercase;
+
+}
+
+
+
+/* ================================= */
+/* BADGE */
+/* ================================= */
+
+
+.badge {
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:42%;
+
+    min-height:38px;
+
+    margin-top:.8rem;
+
+    padding:
+
+        .35rem
+
+        1rem;
+
+    border-radius:10px;
+
+    border:2px solid;
+
+}
+
+
+
+.badge::before {
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(255,255,255,.15),
+
+            transparent
+
+        );
+
+}
+
+
+
+.badgeTitle {
+
+    position:relative;
+
+    z-index:2;
+
+    color:inherit;
+
+    font-size:.92rem;
+
+    font-weight:950;
+
+    letter-spacing:.20em;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.badgeSubtitle {
+
+    display:none;
+
+}
+
+
+
+/* ================================= */
+/* PRESTIGE BADGE */
+/* ================================= */
+
+
+.prestigeBadge {
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:48%;
+
+    min-height:42px;
+
+    margin-top:.6rem;
+
+    padding:
+
+        .4rem
+
+        1rem;
+
+    border-radius:10px;
+
+    border:2px solid;
+
+}
+
+
+
+.prestigeTitle {
+
+    font-size:.72rem;
+
+    font-weight:950;
+
+    letter-spacing:.25em;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.prestigeSubtitle {
+
+    margin-top:.2rem;
+
+    font-size:.55rem;
+
+    font-weight:700;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+    opacity:.9;
+
+}
+
+
+
+/* ================================= */
+/* FOOTER */
+/* ================================= */
+
+
+.footer {
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:2rem;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:1.2rem;
+
+    padding:
+
+        1.5rem
+
+        1.5rem
+
+        1.8rem;
+
+    border-top:
+
+        1px solid
+
+        rgba(255,255,255,.08);
+
+}
+
+
+
+.joined {
+
+    color:#FFFFFF;
+
+    font-size:.95rem;
+
+    font-weight:900;
+
+    letter-spacing:.25em;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.button {
+
+    width:90%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:
+
+        1rem;
+
+    border-radius:999px;
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            #ECFFC0,
+
+            #A3E635
+
+        );
+
+    color:#111111;
+
+    font-size:1.1rem;
+
+    font-weight:950;
+
+    letter-spacing:.2em;
+
+    text-transform:uppercase;
+
+    text-decoration:none;
+
+    box-shadow:
+
+        0 0 30px rgba(163,230,53,.25);
+
+    transition:.3s ease;
+
+}
+
+
+
+.button:hover {
+
+    transform:
+
+        translateY(-3px);
+
+    box-shadow:
+
+        0 0 45px rgba(163,230,53,.45);
+
+}
+
+
+
+/* ================================= */
+/* RESPONSIVE */
+/* ================================= */
+
+
+@media(max-width:700px){
+
+
+    .header {
+
+        gap:.6rem;
+
+    }
+
+
+
+    .rankTitle {
+
+        font-size:.72rem;
+
+        max-width:130px;
+
+    }
+
+
+
+    .rankImage {
+
+        width:52px;
+
+        height:52px;
+
+    }
+
+
+
+    .armyId {
+
+        font-size:.65rem;
+
+        min-width:65px;
+
+    }
+
+
+
+    .avatar {
+
+        width:210px;
+
+        height:210px;
+
+    }
+
+
+
+    .name {
+
+        font-size:1.8rem;
+
+    }
+
+
+
+    .badge {
+
+        width:50%;
+
+    }
+
+
+
+    .prestigeBadge {
+
+        width:55%;
+
+    }
+
+
+}
