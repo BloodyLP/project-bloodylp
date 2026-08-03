@@ -5,9 +5,12 @@ import { useState } from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
 
+
 import MemberCard from "../MemberCard";
 
+
 import { badgeThemes } from "../badgeThemes";
+
 
 import styles from "./PersonnelArchive.module.css";
 
@@ -22,6 +25,7 @@ type ArchiveFolderProps = {
 
     members:any[];
 
+
 };
 
 
@@ -30,17 +34,20 @@ type ArchiveFolderProps = {
 
 export default function ArchiveFolder({
 
+
     title,
 
     theme,
 
     members,
 
+
 }:ArchiveFolderProps){
 
 
 
     const [open,setOpen] = useState(false);
+
 
 
 
@@ -59,30 +66,48 @@ export default function ArchiveFolder({
     return (
 
 
+
         <section
+
+
 
             className={styles.folder}
 
 
+
             style={{
+
 
                 borderColor:
 
                     `${color}55`
 
+
             }}
 
+
+
         >
+
+
+
+
+            {/* ================================= */}
+            {/* HEADER */}
+            {/* ================================= */}
 
 
 
             <button
 
 
+
                 className={styles.folderHeader}
 
 
+
                 onClick={()=>setOpen(!open)}
+
 
 
                 style={{
@@ -98,6 +123,7 @@ export default function ArchiveFolder({
 
 
             >
+
 
 
 
@@ -127,19 +153,25 @@ export default function ArchiveFolder({
 
                 <span
 
+
                     className={styles.folderCount}
+
 
 
                     style={{
 
 
+
                         color:color
+
 
 
                     }}
 
 
+
                 >
+
 
 
                     {members.length
@@ -150,10 +182,13 @@ export default function ArchiveFolder({
 
                     }
 
-                    {" "}AKTEN
+
+                    {" "}MEMBER
+
 
 
                 </span>
+
 
 
 
@@ -165,6 +200,14 @@ export default function ArchiveFolder({
 
 
 
+
+
+            {/* ================================= */}
+            {/* CONTENT */}
+            {/* ================================= */}
+
+
+
             <AnimatePresence>
 
 
@@ -173,14 +216,20 @@ export default function ArchiveFolder({
 
 
 
+
                     <motion.div
+
+
 
 
                         className={styles.folderContent}
 
 
 
+
+
                         initial={{
+
 
 
                             opacity:0,
@@ -193,7 +242,11 @@ export default function ArchiveFolder({
 
 
 
+
+
+
                         animate={{
+
 
 
                             opacity:1,
@@ -206,7 +259,11 @@ export default function ArchiveFolder({
 
 
 
+
+
+
                         exit={{
+
 
 
                             opacity:0,
@@ -219,7 +276,11 @@ export default function ArchiveFolder({
 
 
 
+
+
+
                         transition={{
+
 
 
                             duration:.35,
@@ -229,7 +290,11 @@ export default function ArchiveFolder({
 
 
 
+
+
                     >
+
+
 
 
 
@@ -237,26 +302,46 @@ export default function ArchiveFolder({
 
 
 
+
+
                             <MemberCard
+
 
 
                                 key={member.id}
 
 
+
+                                compact
+
+
+
                                 {...member}
 
 
+
+
+
                             />
+
+
+
 
 
                         ))}
 
 
 
+
+
                     </motion.div>
 
 
+
+
                 )}
+
+
 
 
 
@@ -264,7 +349,11 @@ export default function ArchiveFolder({
 
 
 
+
+
+
         </section>
+
 
 
     );

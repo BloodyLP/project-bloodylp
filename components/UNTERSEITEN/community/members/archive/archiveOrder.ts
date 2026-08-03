@@ -22,6 +22,7 @@ export const archiveOrder = [
     "prestigeI",
 
 
+
     "generale",
 
     "stabsoffiziere",

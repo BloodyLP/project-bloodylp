@@ -1,0 +1,702 @@
+/* ================================= */
+/* CAREER STATS WRAPPER */
+/* ================================= */
+
+
+.wrapper{
+
+
+    width:100%;
+
+
+
+    display:flex;
+
+
+
+    flex-direction:column;
+
+
+
+    gap:1.2rem;
+
+
+
+}
+
+
+
+
+
+
+
+/* ================================= */
+/* STAT SECTION */
+/* ================================= */
+
+
+.section{
+
+
+    background:
+
+
+        rgba(255,255,255,.035);
+
+
+
+    border:
+
+
+        1px solid
+
+
+        rgba(255,255,255,.10);
+
+
+
+    border-radius:18px;
+
+
+
+    padding:1rem;
+
+
+
+}
+
+
+
+
+
+
+
+.section h3,
+
+
+.total h3{
+
+
+    margin:
+
+
+        0 0 1rem;
+
+
+
+    color:
+
+
+        var(--color-lime);
+
+
+
+    font-size:.78rem;
+
+
+
+    font-weight:950;
+
+
+
+    letter-spacing:.28em;
+
+
+
+    text-transform:uppercase;
+
+
+
+}
+
+
+
+
+
+
+
+/* ================================= */
+/* TABLE */
+/* ================================= */
+
+
+.table{
+
+
+    display:flex;
+
+
+
+    flex-direction:column;
+
+
+
+    width:100%;
+
+
+
+    overflow:hidden;
+
+
+
+    border-radius:12px;
+
+
+
+}
+
+
+
+
+
+
+
+.rowHeader,
+
+
+.row{
+
+
+    display:grid;
+
+
+
+    grid-template-columns:
+
+
+        1.5fr
+
+
+        .45fr
+
+
+        .45fr
+
+
+        .45fr
+
+
+        .45fr
+
+
+        .55fr
+
+
+        .55fr;
+
+
+
+    align-items:center;
+
+
+
+    gap:.25rem;
+
+
+
+    padding:.65rem .4rem;
+
+
+
+    text-align:center;
+
+
+
+}
+
+
+
+
+
+
+
+.rowHeader{
+
+
+    background:
+
+
+        rgba(163,230,53,.15);
+
+
+
+    border-bottom:
+
+
+        1px solid
+
+
+        rgba(163,230,53,.35);
+
+
+
+    color:
+
+
+        var(--color-lime);
+
+
+
+    font-size:.58rem;
+
+
+
+    font-weight:950;
+
+
+
+    letter-spacing:.15em;
+
+
+
+    text-transform:uppercase;
+
+
+
+}
+
+
+
+
+
+
+
+.row{
+
+
+    color:#FFFFFF;
+
+
+
+    font-size:.72rem;
+
+
+
+    font-weight:850;
+
+
+
+    border-bottom:
+
+
+        1px solid
+
+
+        rgba(255,255,255,.06);
+
+
+
+    transition:
+
+
+        background .25s ease;
+
+
+
+}
+
+
+
+
+
+
+
+.row:hover{
+
+
+    background:
+
+
+        rgba(163,230,53,.08);
+
+
+
+}
+
+
+
+
+
+
+
+.row:last-child{
+
+
+    border-bottom:none;
+
+
+
+}
+
+
+
+
+
+
+
+.row span:first-child{
+
+
+    text-align:left;
+
+
+
+    color:
+
+
+        rgba(255,255,255,.85);
+
+
+
+    font-weight:950;
+
+
+
+}
+
+
+
+
+
+
+
+/* ================================= */
+/* EMPTY */
+/* ================================= */
+
+
+.emptyRow{
+
+
+    min-height:60px;
+
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    justify-content:center;
+
+
+
+    color:
+
+
+        rgba(255,255,255,.45);
+
+
+
+    font-size:.65rem;
+
+
+
+    font-weight:900;
+
+
+
+    letter-spacing:.2em;
+
+
+
+    text-transform:uppercase;
+
+
+
+}
+
+
+
+
+
+
+
+/* ================================= */
+/* TOTAL CAREER */
+/* ================================= */
+
+
+.total{
+
+
+    background:
+
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(163,230,53,.16),
+
+            rgba(255,255,255,.04)
+
+        );
+
+
+
+    border:
+
+
+        1px solid
+
+
+        rgba(163,230,53,.35);
+
+
+
+    border-radius:20px;
+
+
+
+    padding:1.2rem;
+
+
+
+}
+
+
+
+
+
+
+
+.totalGrid{
+
+
+    display:grid;
+
+
+
+    grid-template-columns:
+
+
+        repeat(3,1fr);
+
+
+
+    gap:.8rem;
+
+
+
+}
+
+
+
+
+
+
+
+.totalGrid div{
+
+
+    min-height:75px;
+
+
+
+    display:flex;
+
+
+
+    flex-direction:column;
+
+
+
+    justify-content:center;
+
+
+
+    align-items:center;
+
+
+
+    border-radius:14px;
+
+
+
+    background:
+
+
+        rgba(0,0,0,.25);
+
+
+
+    border:
+
+
+        1px solid
+
+
+        rgba(255,255,255,.05);
+
+
+
+}
+
+
+
+
+
+
+
+.totalGrid span{
+
+
+    color:
+
+
+        rgba(255,255,255,.55);
+
+
+
+    font-size:.55rem;
+
+
+
+    font-weight:900;
+
+
+
+    letter-spacing:.15em;
+
+
+
+    text-transform:uppercase;
+
+
+
+}
+
+
+
+
+
+
+
+.totalGrid strong{
+
+
+    margin-top:.3rem;
+
+
+
+    color:#FFFFFF;
+
+
+
+    font-size:1.25rem;
+
+
+
+    font-weight:950;
+
+
+
+}
+
+
+
+
+
+
+
+/* ================================= */
+/* MOBILE */
+/* ================================= */
+
+
+@media(max-width:500px){
+
+
+
+    .rowHeader,
+
+
+    .row{
+
+
+        padding:.5rem .2rem;
+
+
+
+        font-size:.6rem;
+
+
+
+    }
+
+
+
+
+
+    .totalGrid{
+
+
+        grid-template-columns:
+
+
+            repeat(2,1fr);
+
+
+
+    }
+
+
+
+}
+
+/* ================================= */
+/* POINT HIGHLIGHT */
+/* ================================= */
+
+
+.highlightHeader {
+
+    color:#A3E635;
+
+    font-weight:950;
+
+}
+
+
+
+.highlightPoints {
+
+    color:#A3E635 !important;
+
+    font-size:1.15rem;
+
+    font-weight:950;
+
+    text-shadow:
+
+        0 0 12px rgba(163,230,53,.65);
+
+}
+
+
+
+.highlightTotal {
+
+    color:#A3E635 !important;
+
+}
+
+
+
+.highlightTotal strong {
+
+    color:#A3E635 !important;
+
+    font-size:1.25rem;
+
+    font-weight:950;
+
+    text-shadow:
+
+        0 0 18px rgba(163,230,53,.65);
+
+}

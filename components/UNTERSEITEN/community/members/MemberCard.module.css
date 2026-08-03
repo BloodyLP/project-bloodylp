@@ -1,3 +1,7 @@
+/* ================================= */
+/* CARD */
+/* ================================= */
+
 .card {
 
     position:relative;
@@ -6,27 +10,26 @@
 
     width:100%;
 
-    max-width:430px;
+    max-width:500px;
 
-    min-height:680px;
+    min-height:580px;
 
     margin:0 auto;
+
 
     display:flex;
 
     flex-direction:column;
 
+
     background:
 
         linear-gradient(
-
             180deg,
-
             #292929,
-
             #181818
-
         );
+
 
     border:
 
@@ -34,67 +37,151 @@
 
         rgba(255,255,255,.12);
 
+
     border-radius:30px;
+
 
     box-shadow:
 
         0 30px 70px rgba(0,0,0,.45);
 
+
     transition:
 
         transform .35s ease,
 
-        box-shadow .35s ease,
-
-        border-color .35s ease;
+        box-shadow .35s ease;
 
 }
 
 
-
-.card::before {
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-
-        radial-gradient(
-
-            circle at top,
-
-            rgba(163,230,53,.10),
-
-            transparent 45%
-
-        );
-
-    pointer-events:none;
-
-}
 
 
 
 .card:hover {
 
+
     transform:
 
         translateY(-8px);
 
-    border-color:
 
-        rgba(163,230,53,.4);
 
     box-shadow:
 
+
         0 35px 90px rgba(0,0,0,.55),
 
-        0 0 35px rgba(163,230,53,.15);
+
+        0 0 40px rgba(163,230,53,.25);
+
 
 }
+
+
+
+
+
+
+
+/* ================================= */
+/* FLIP */
+/* ================================= */
+
+
+.flipContainer {
+
+    width:100%;
+
+    max-width:480px;
+
+    margin:auto;
+
+    perspective:1400px;
+
+}
+
+
+
+
+
+.flipInner {
+
+    position:relative;
+
+    width:100%;
+
+    min-height:580px;
+
+    transform-style:preserve-3d;
+
+}
+
+
+
+
+
+.flipInner.flipped {
+
+    transform:rotateY(180deg);
+
+}
+
+
+
+
+
+.flipInner > .card,
+
+.flipInner > .back {
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    width:100%;
+
+
+    height:580px;
+
+
+    min-height:580px;
+
+
+    backface-visibility:hidden;
+
+
+    -webkit-backface-visibility:hidden;
+
+}
+
+
+
+
+
+.flipInner > .card {
+
+    transform:rotateY(0deg);
+
+}
+
+
+
+
+
+.flipInner > .back {
+
+    transform:rotateY(180deg);
+
+}
+
+
+
+
+
 
 
 
@@ -105,25 +192,35 @@
 
 .header {
 
+
     position:relative;
+
 
     z-index:2;
 
+
     display:flex;
+
 
     align-items:center;
 
+
     justify-content:space-between;
+
 
     gap:1rem;
 
+
     padding:
+
 
         1.35rem
 
         1.4rem;
 
+
     border-bottom:
+
 
         1px solid
 
@@ -133,89 +230,120 @@
 
 
 
+
+
 .rankArea {
+
 
     display:flex;
 
+
     align-items:center;
+
 
     gap:.8rem;
 
+
     min-width:0;
 
-    flex:1;
 
 }
+
+
 
 
 
 .rankImage {
 
-    width:58px;
 
-    height:58px;
+    width:60px;
+
+
+    height:60px;
+
 
     object-fit:contain;
 
+
     flex-shrink:0;
 
+
 }
+
+
 
 
 
 .rankContent {
 
-    display:flex;
-
-    align-items:center;
 
     min-width:0;
 
+
 }
+
+
 
 
 
 .rankTitle {
 
+
     margin:0;
+
 
     color:#FFFFFF;
 
-    font-size:.92rem;
+
+    font-size:0.98rem;
+
 
     font-weight:950;
 
-    letter-spacing:.05em;
 
-    line-height:1.35;
+    letter-spacing:.08em;
+
+
+    line-height:1.25;
+
 
     text-transform:uppercase;
 
-    white-space:normal;
 
-    max-width:150px;
+    max-width:170px;
+
 
 }
 
 
 
+
+
 .armyId {
+
 
     flex-shrink:0;
 
+
     padding:
+
 
         .55rem
 
         .85rem;
 
+
     min-width:72px;
+
 
     text-align:center;
 
+
     border-radius:12px;
 
+
     background:
+
 
         linear-gradient(
 
@@ -227,25 +355,28 @@
 
         );
 
+
     border:
+
 
         1px solid
 
         rgba(255,255,255,.15);
 
+
     color:#FFFFFF;
 
-    font-size:.80rem;
+
+    font-size:.8rem;
+
 
     font-weight:900;
 
+
     letter-spacing:.15em;
 
-    white-space:nowrap;
 
 }
-
-
 
 /* ================================= */
 /* AVATAR */
@@ -254,15 +385,21 @@
 
 .avatarWrapper {
 
+
     position:relative;
+
 
     z-index:2;
 
+
     display:flex;
+
 
     justify-content:center;
 
+
     padding:
+
 
         2rem
 
@@ -270,33 +407,57 @@
 
         1rem;
 
+
 }
+
+
+
+
 
 
 
 .avatar {
 
+
     width:240px;
+
 
     height:240px;
 
+
     object-fit:cover;
+
 
     border-radius:26px;
 
+
     border:
+
 
         3px solid
 
         rgba(163,230,53,.35);
 
+
+
     box-shadow:
+
 
         0 0 30px rgba(163,230,53,.18),
 
+
         0 20px 45px rgba(0,0,0,.5);
 
+
 }
+
+
+
+
+
+
+
+
 
 /* ================================= */
 /* IDENTITY */
@@ -305,35 +466,70 @@
 
 .identity {
 
+
     position:relative;
+
 
     z-index:2;
 
+
     display:flex;
+
 
     flex-direction:column;
 
+
     align-items:center;
 
+
 }
+
+
+
+
 
 
 
 .name {
 
+
+    width:100%;
+
+
     margin:0;
+
+
+    text-align:center;
+
 
     color:#FFFFFF;
 
+
     font-size:2.5rem;
+
 
     font-weight:950;
 
+
     letter-spacing:.06em;
+
+
+    line-height:1.1;
+
 
     text-transform:uppercase;
 
+
+    word-break:break-word;
+
+
 }
+
+
+
+
+
+
 
 
 
@@ -344,154 +540,82 @@
 
 .badge {
 
+
     position:relative;
+
 
     overflow:hidden;
 
+
     display:flex;
 
-    align-items:center;
 
     justify-content:center;
 
-    width:42%;
+
+    align-items:center;
+
+
+    min-width:140px;
+
 
     min-height:38px;
 
+
     margin-top:.8rem;
 
+
     padding:
+
 
         .35rem
 
         1rem;
 
+
+
     border-radius:10px;
+
 
     border:2px solid;
 
-}
-
-
-
-.badge::before {
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-
-        linear-gradient(
-
-            180deg,
-
-            rgba(255,255,255,.15),
-
-            transparent
-
-        );
 
 }
+
+
+
+
 
 
 
 .badgeTitle {
 
+
     position:relative;
+
 
     z-index:2;
 
-    color:inherit;
 
-    font-size:.92rem;
+    font-size:.85rem;
+
 
     font-weight:950;
 
-    letter-spacing:.20em;
+
+    letter-spacing:.18em;
+
 
     text-transform:uppercase;
 
-}
-
-
-
-.badgeSubtitle {
-
-    display:none;
 
 }
 
 
 
-/* ================================= */
-/* PRESTIGE BADGE */
-/* ================================= */
-
-
-.prestigeBadge {
-
-    position:relative;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    justify-content:center;
-
-    width:48%;
-
-    min-height:42px;
-
-    margin-top:.6rem;
-
-    padding:
-
-        .4rem
-
-        1rem;
-
-    border-radius:10px;
-
-    border:2px solid;
-
-}
 
 
 
-.prestigeTitle {
-
-    font-size:.72rem;
-
-    font-weight:950;
-
-    letter-spacing:.25em;
-
-    text-transform:uppercase;
-
-}
-
-
-
-.prestigeSubtitle {
-
-    margin-top:.2rem;
-
-    font-size:.55rem;
-
-    font-weight:700;
-
-    letter-spacing:.12em;
-
-    text-transform:uppercase;
-
-    opacity:.9;
-
-}
 
 
 
@@ -502,21 +626,30 @@
 
 .footer {
 
+
     position:relative;
+
 
     z-index:2;
 
-    margin-top:2rem;
+
+    margin-top:auto;
+
 
     display:flex;
 
+
     flex-direction:column;
+
 
     align-items:center;
 
+
     gap:1.2rem;
 
+
     padding:
+
 
         1.5rem
 
@@ -524,49 +657,67 @@
 
         1.8rem;
 
-    border-top:
-
-        1px solid
-
-        rgba(255,255,255,.08);
 
 }
+
+
+
+
 
 
 
 .joined {
 
+
     color:#FFFFFF;
 
-    font-size:.95rem;
+
+    font-size:.90rem;
+
 
     font-weight:900;
 
+
     letter-spacing:.25em;
+
 
     text-transform:uppercase;
 
+
 }
 
+/* ================================= */
+/* BUTTON */
+/* ================================= */
 
 
-.button {
+.actionButton {
+
 
     width:90%;
 
+
+    min-height:52px;
+
+
     display:flex;
 
-    justify-content:center;
 
     align-items:center;
 
-    padding:
 
-        1rem;
+    justify-content:center;
+
+
+    padding:1rem;
+
 
     border-radius:999px;
 
+
+
     background:
+
 
         linear-gradient(
 
@@ -578,39 +729,348 @@
 
         );
 
+
+
     color:#111111;
 
-    font-size:1.1rem;
+
+    font-size:.9rem;
+
 
     font-weight:950;
 
-    letter-spacing:.2em;
+
+    letter-spacing:.18em;
+
 
     text-transform:uppercase;
 
+
     text-decoration:none;
 
-    box-shadow:
 
-        0 0 30px rgba(163,230,53,.25);
+    text-align:center;
 
-    transition:.3s ease;
+
+    white-space:normal;
+
+
+    transition:
+
+
+        transform .25s ease,
+
+
+        box-shadow .25s ease;
+
+
 
 }
 
 
 
-.button:hover {
+
+
+.actionButton:hover {
+
 
     transform:
 
-        translateY(-3px);
+
+        translateY(-4px)
+
+        scale(1.03);
+
+
 
     box-shadow:
 
-        0 0 45px rgba(163,230,53,.45);
+
+        0 0 25px rgba(163,230,53,.55),
+
+
+        0 10px 25px rgba(0,0,0,.35);
+
+
 
 }
+
+
+
+
+
+
+
+
+
+/* ================================= */
+/* COMPACT / PRESTIGE */
+/* ================================= */
+
+
+.compact {
+
+
+    max-width:330px;
+
+
+    min-height:420px;
+
+
+    border-radius:22px;
+
+
+}
+
+
+
+
+
+.compact .header {
+
+
+    padding:.8rem;
+
+
+}
+
+
+
+
+
+.compact .rankImage {
+
+
+    width:42px;
+
+
+    height:42px;
+
+
+}
+
+
+
+
+
+.compact .rankTitle {
+
+
+    font-size:.8rem;
+
+
+    max-width:120px;
+
+
+}
+
+
+
+
+
+.compact .armyId {
+
+
+    font-size:.8rem;
+
+
+    min-width:55px;
+
+
+}
+
+
+
+
+
+.compact .avatarWrapper {
+
+
+    padding:1rem;
+
+
+}
+
+
+
+
+
+.compact .avatar {
+
+
+    width:220px;
+
+
+    height:220px;
+
+
+    border-radius:18px;
+
+
+}
+
+
+
+
+
+.compact .name {
+
+
+    font-size:1.5rem;
+
+
+}
+
+
+
+
+
+.compact .badge {
+
+
+    min-width:120px;
+
+
+    min-height:32px;
+
+
+}
+
+
+
+
+
+.compact .badgeTitle {
+
+
+    font-size:.65rem;
+
+
+}
+
+
+
+
+
+.compact .footer {
+
+
+    margin-top:auto;
+
+
+    padding:1rem;
+
+
+}
+
+
+
+
+
+.compact .actionButton {
+
+
+    min-height:38px;
+
+
+    font-size:.70rem;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ================================= */
+/* COMPACT FLIP HEIGHT */
+/* ================================= */
+
+
+.compactContainer .flipInner {
+
+
+    min-height:580px;
+
+
+}
+
+
+
+
+
+.compactContainer .flipInner > .card,
+
+.compactContainer .flipInner > .back {
+
+
+    height:580px;
+
+
+    min-height:580px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ================================= */
+/* FOUNDER CARD */
+/* ================================= */
+
+
+.founder {
+
+
+    min-height:700px;
+
+
+}
+
+
+
+
+
+.flipInner:has(.founder) {
+
+
+    min-height:700px;
+
+
+}
+
+
+
+
+
+.flipInner:has(.founder) > .founder,
+
+.flipInner:has(.founder) > .back {
+
+
+    height:700px;
+
+
+    min-height:700px;
+
+
+}
+
+
+
+
+
+
 
 
 
@@ -622,49 +1082,14 @@
 @media(max-width:700px){
 
 
-    .header {
-
-        gap:.6rem;
-
-    }
-
-
-
-    .rankTitle {
-
-        font-size:.72rem;
-
-        max-width:130px;
-
-    }
-
-
-
-    .rankImage {
-
-        width:52px;
-
-        height:52px;
-
-    }
-
-
-
-    .armyId {
-
-        font-size:.65rem;
-
-        min-width:65px;
-
-    }
-
-
-
     .avatar {
+
 
         width:210px;
 
+
         height:210px;
+
 
     }
 
@@ -672,23 +1097,9 @@
 
     .name {
 
+
         font-size:1.8rem;
 
-    }
-
-
-
-    .badge {
-
-        width:50%;
-
-    }
-
-
-
-    .prestigeBadge {
-
-        width:55%;
 
     }
 

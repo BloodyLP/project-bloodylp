@@ -5,6 +5,9 @@ import MemberCard from "./MemberCard";
 
 import { members } from "./data";
 
+import styles from "./FounderCard.module.css";
+
+
 
 
 export default function FounderCard(){
@@ -12,7 +15,7 @@ export default function FounderCard(){
 
     const founder = members.find(
 
-        (member) =>
+        (member)=>
 
             member.badge?.title === "FOUNDER"
 
@@ -28,13 +31,44 @@ export default function FounderCard(){
 
 
 
+
+
     return (
 
-        <MemberCard
 
-            {...founder}
+        <section className={styles.wrapper}>
 
-        />
+
+            <div className={styles.commandLabel}>
+
+
+                COMMAND PROFILE
+
+
+            </div>
+
+
+
+
+
+            <div className={styles.founderCard}>
+
+
+                <MemberCard
+
+
+                    {...founder}
+
+
+                />
+
+
+            </div>
+
+
+
+        </section>
+
 
     );
 

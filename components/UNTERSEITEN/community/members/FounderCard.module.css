@@ -1,10 +1,20 @@
+/* ================================= */
+/* WRAPPER */
+/* ================================= */
+
+
 .wrapper {
+
+    position:relative;
 
     display:flex;
 
-    justify-content:center;
+    flex-direction:column;
+
+    align-items:center;
 
     width:100%;
+
 
     margin:
 
@@ -16,8 +26,143 @@
 
 
 
-.wrapper article {
+
+
+/* ================================= */
+/* COMMAND LABEL */
+/* ================================= */
+
+
+.commandLabel {
+
+    margin-bottom:1.25rem;
+
+
+    color:#A3E635;
+
+
+    font-size:.85rem;
+
+
+    font-weight:950;
+
+
+    letter-spacing:.45em;
+
+
+    text-transform:uppercase;
+
+
+    text-shadow:
+
+        0 0 20px rgba(163,230,53,.45);
+
+}
+
+
+
+
+
+/* ================================= */
+/* FOUNDER CARD WRAPPER */
+/* ================================= */
+
+
+.founderCard {
+
+    width:100%;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+}
+
+
+
+
+
+/* ================================= */
+/* FOUNDER BASE CARD */
+/* ================================= */
+
+
+.founderCard :global(.card) {
+
 
     max-width:430px;
+
+
+    min-height:680px;
+
+}
+
+
+
+
+
+/* ================================= */
+/* FOUNDER AVATAR */
+/* ================================= */
+
+
+.founderCard :global(.avatar) {
+
+
+    width:240px;
+
+
+    height:240px;
+
+}
+
+
+
+
+
+/* ================================= */
+/* FOUNDER BUTTONS */
+/* ================================= */
+
+
+.founderCard :global(.actionButton) {
+
+
+    width:90%;
+
+}
+
+
+
+
+
+/* ================================= */
+/* FOUNDER FLIP HEIGHT */
+/* ================================= */
+
+
+.founderCard :global(.flipInner) {
+
+
+    min-height:680px;
+
+}
+
+
+
+
+
+.founderCard :global(.flipInner > .card),
+
+
+.founderCard :global(.flipInner > .back) {
+
+
+    height:680px;
+
+
+    min-height:680px;
 
 }

@@ -165,4 +165,67 @@
 
     }
 
+    /* ================================= */
+/* GOLD STARS */
+/* ================================= */
+
+
+.stars {
+
+
+    color:#EAB308;
+
+
+    font-size:1.4rem;
+
+
+    letter-spacing:.35em;
+
+
+    text-shadow:
+
+
+        0 2px 0 #8A5A00,
+
+
+        0 4px 8px rgba(0,0,0,.65),
+
+
+        0 0 20px rgba(234,179,8,.55);
+
+
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            #FFF3B0,
+
+            #EAB308,
+
+            #A16207
+
+        );
+
+
+
+    -webkit-background-clip:text;
+
+
+    -webkit-text-fill-color:transparent;
+
+
+
+    filter:
+
+        drop-shadow(
+
+            0 0 8px rgba(234,179,8,.45)
+
+        );
+
+}
+
 }

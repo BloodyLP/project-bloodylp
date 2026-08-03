@@ -1,0 +1,547 @@
+/* ================================= */
+/* CAREER STATS WRAPPER */
+/* ================================= */
+
+
+.wrapper{
+
+
+    width:100%;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:1rem;
+
+
+
+}
+
+
+
+
+
+
+
+/* ================================= */
+/* STAT SECTION */
+/* ================================= */
+
+
+.section{
+
+
+    background:
+
+
+        rgba(255,255,255,.035);
+
+
+
+    border:
+
+
+        1px solid
+
+
+        rgba(255,255,255,.10);
+
+
+
+    border-radius:16px;
+
+
+
+    padding:1rem;
+
+
+
+}
+
+
+
+
+
+
+
+.section h3,
+
+
+.total h3{
+
+
+    margin:0 0 .8rem;
+
+
+
+    color:
+
+
+        var(--color-lime);
+
+
+
+    font-size:.75rem;
+
+
+
+    font-weight:950;
+
+
+
+    letter-spacing:.25em;
+
+
+
+    text-transform:uppercase;
+
+
+
+}
+
+
+
+
+
+
+
+/* ================================= */
+/* TABLE */
+/* ================================= */
+
+
+.table{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+
+    width:100%;
+
+
+
+    overflow:hidden;
+
+
+
+    border-radius:12px;
+
+
+
+}
+
+
+
+
+
+
+
+.rowHeader,
+
+
+.row{
+
+
+    display:grid;
+
+
+
+    grid-template-columns:
+
+
+        1.5fr
+
+
+        .45fr
+
+
+        .45fr
+
+
+        .45fr
+
+
+        .45fr
+
+
+        .55fr
+
+
+        .55fr;
+
+
+
+    align-items:center;
+
+
+
+    gap:.25rem;
+
+
+
+    padding:.55rem .35rem;
+
+
+
+    text-align:center;
+
+
+
+}
+
+
+
+
+
+
+
+.rowHeader{
+
+
+    background:
+
+
+        rgba(163,230,53,.12);
+
+
+
+    border-bottom:
+
+
+        1px solid
+
+
+        rgba(163,230,53,.25);
+
+
+
+    color:
+
+
+        var(--color-lime);
+
+
+
+    font-size:.58rem;
+
+
+
+    font-weight:950;
+
+
+
+    letter-spacing:.12em;
+
+
+
+    text-transform:uppercase;
+
+
+
+}
+
+
+
+
+
+
+
+.row{
+
+
+    color:#FFFFFF;
+
+
+
+    font-size:.68rem;
+
+
+
+    font-weight:850;
+
+
+
+    border-bottom:
+
+
+        1px solid
+
+
+        rgba(255,255,255,.06);
+
+
+
+}
+
+
+
+
+
+
+
+.row:last-child{
+
+
+    border-bottom:none;
+
+
+
+}
+
+
+
+
+
+
+
+.row span:first-child{
+
+
+    text-align:left;
+
+
+
+    color:
+
+
+        rgba(255,255,255,.8);
+
+
+
+}
+
+
+
+
+
+
+
+/* ================================= */
+/* TOTAL CAREER */
+/* ================================= */
+
+
+.total{
+
+
+    background:
+
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(163,230,53,.14),
+
+            rgba(255,255,255,.04)
+
+        );
+
+
+
+    border:
+
+
+        1px solid
+
+
+        rgba(163,230,53,.3);
+
+
+
+    border-radius:18px;
+
+
+
+    padding:1rem;
+
+
+
+}
+
+
+
+
+
+
+
+.totalGrid{
+
+
+    display:grid;
+
+
+
+    grid-template-columns:
+
+
+        repeat(3,1fr);
+
+
+
+    gap:.7rem;
+
+
+
+}
+
+
+
+
+
+
+
+.totalGrid div{
+
+
+    display:flex;
+
+
+
+    flex-direction:column;
+
+
+
+    align-items:center;
+
+
+
+    justify-content:center;
+
+
+
+    min-height:70px;
+
+
+
+    border-radius:12px;
+
+
+
+    background:
+
+
+        rgba(0,0,0,.25);
+
+
+
+}
+
+
+
+
+
+
+
+.totalGrid span{
+
+
+    color:
+
+
+        rgba(255,255,255,.6);
+
+
+
+    font-size:.52rem;
+
+
+
+    font-weight:900;
+
+
+
+    letter-spacing:.14em;
+
+
+
+    text-transform:uppercase;
+
+
+
+}
+
+
+
+
+
+
+
+.totalGrid strong{
+
+
+    margin-top:.25rem;
+
+
+
+    color:#FFFFFF;
+
+
+
+    font-size:1.15rem;
+
+
+
+    font-weight:950;
+
+
+
+}
+
+
+
+
+
+
+
+/* ================================= */
+/* RESPONSIVE */
+/* ================================= */
+
+
+@media(max-width:500px){
+
+
+
+    .rowHeader,
+
+
+    .row{
+
+
+        font-size:.6rem;
+
+
+
+        padding:.45rem .2rem;
+
+
+
+    }
+
+
+
+
+
+    .totalGrid{
+
+
+        grid-template-columns:
+
+
+            repeat(2,1fr);
+
+
+
+    }
+
+
+}

@@ -1,60 +1,95 @@
 "use client";
 
+
 import Image from "next/image";
+
 import Link from "next/link";
+
+import { useState } from "react";
+
 import { motion } from "framer-motion";
 
+
+import MemberCardBack from "./MemberCardBack";
+
 import styles from "./MemberCard.module.css";
+
 
 import { badgeThemes } from "./badgeThemes";
 
 
+
+
 type MemberCardProps = {
 
-    id: string;
 
-    armyId: string;
+    id:string;
 
-    name: string;
+    armyId:string;
 
-    avatar: string;
+    name:string;
 
-    joinedLabel: string;
+    avatar:string;
 
-
-    rank: {
-
-        title: string;
-
-        image: string;
-
-    };
+    joinedLabel:string;
 
 
-    badge: {
+    compact?:boolean;
 
-        title: string;
 
-        theme: string;
+    rank:{
+
+        title:string;
+
+        image:string;
 
     };
 
 
-    prestige?: {
+    badge:{
 
-        level: number;
+        title:string;
 
-        key: string | null;
+        subtitle?:string;
 
-        title: string | null;
+        theme:string;
 
     };
+
+
+    prestige?:{
+
+        level:number;
+
+        key:string|null;
+
+        title:string|null;
+
+    };
+
+
+    stats?:any;
+
+
+    profile?:{
+
+        position:string;
+
+        number:string;
+
+    };
+
 
 };
 
 
 
+
+
+
+
 export default function MemberCard({
+
 
     id,
 
@@ -72,7 +107,20 @@ export default function MemberCard({
 
     prestige,
 
-}: MemberCardProps) {
+    stats,
+
+    profile,
+
+    compact=false
+
+
+}:MemberCardProps){
+
+
+
+    const [flipped,setFlipped]=useState(false);
+
+
 
 
 
@@ -82,263 +130,358 @@ export default function MemberCard({
 
 
 
-    /*
-        Founder bleibt Founder
-    */
-
-    if (badge.title !== "FOUNDER" && prestige?.level && prestige.level > 0) {
 
 
-        displayTitle = `PRESTIGE ${prestige.level}`;
+    if(
 
-        displayTheme = prestige.key ?? badge.theme;
+        badge.title !== "FOUNDER"
 
+        &&
+
+        prestige?.level
+
+        &&
+
+        prestige.level > 0
+
+    ){
+
+        displayTitle=`PRESTIGE ${prestige.level}`;
+
+        displayTheme=prestige.key ?? badge.theme;
 
     }
 
 
 
-    const theme = badgeThemes[displayTheme];
+
+
+
+    const theme=badgeThemes[displayTheme];
+
+
+
 
 
 
     return (
 
-        <motion.article
-
-            className={styles.card}
 
 
-            initial={{
+        <div
 
-                opacity:0,
+    className={
 
-                y:40,
+        compact
 
-            }}
+        ?
 
+        `${styles.flipContainer} ${styles.compactContainer}`
 
-            whileInView={{
+        :
 
-                opacity:1,
+        styles.flipContainer
 
-                y:0,
+    }
 
-            }}
-
-
-            viewport={{
-
-                once:true,
-
-                amount:.2,
-
-            }}
-
-
-            transition={{
-
-                duration:.6,
-
-            }}
-
-
-            whileHover={{
-
-                y:-8,
-
-            }}
-
-        >
+>
 
 
 
-            {/* HEADER */}
 
 
-            <header className={styles.header}>
-
-
-                <div className={styles.rankArea}>
-
-
-                    <Image
-
-                        src={rank.image}
-
-                        alt={rank.title}
-
-                        width={70}
-
-                        height={70}
-
-                        className={styles.rankImage}
-
-                    />
+            <motion.div
 
 
 
-                    <div className={styles.rankContent}>
+                className={styles.flipInner}
 
 
-                        <h2 className={styles.rankTitle}>
 
-                            {rank.title}
+                animate={{
 
-                        </h2>
+                    rotateY: flipped ? 180 : 0
+
+                }}
+
+
+
+                transition={{
+
+                    duration:.7,
+
+                    ease:"easeInOut"
+
+                }}
+
+
+
+            >
+
+
+
+
+
+
+
+                <article
+
+    className={
+
+        compact
+
+        ?
+
+        `${styles.card} ${styles.compact}`
+
+        :
+
+        `${styles.card} ${styles.founder}`
+
+    }
+
+>
+
+
+
+
+                    <header className={styles.header}>
+
+
+                        <div className={styles.rankArea}>
+
+
+                            <Image
+
+                                src={rank.image}
+
+                                alt={rank.title}
+
+                                width={70}
+
+                                height={70}
+
+                                className={styles.rankImage}
+
+                            />
+
+
+                            <div className={styles.rankContent}>
+
+
+                                <h2 className={styles.rankTitle}>
+
+                                    {rank.title}
+
+                                </h2>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+
+                        <div className={styles.armyId}>
+
+                            {armyId}
+
+                        </div>
+
+
+
+                    </header>
+
+
+
+
+
+
+
+
+                    <div className={styles.avatarWrapper}>
+
+
+                        <Image
+
+                            src={avatar}
+
+                            alt={name}
+
+                            width={280}
+
+                            height={280}
+
+                            className={styles.avatar}
+
+                        />
 
 
                     </div>
 
 
+
+
+
+
+
+                    <div className={styles.identity}>
+
+
+                        <h1 className={styles.name}>
+
+                            {name}
+
+                        </h1>
+
+
+
+
+
+                        <div
+
+
+                            className={styles.badge}
+
+
+                            style={{
+
+                                background:theme.background,
+
+                                borderColor:theme.border,
+
+                                color:theme.text,
+
+                                boxShadow:
+
+                                    `0 0 25px ${theme.glow}`
+
+                            }}
+
+                        >
+
+
+                            <span className={styles.badgeTitle}>
+
+                                {displayTitle}
+
+                            </span>
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+                    <footer className={styles.footer}>
+
+
+                        <div className={styles.joined}>
+
+                            {joinedLabel}
+
+                        </div>
+
+
+
+
+
+                        <button
+
+                            type="button"
+
+                            className={styles.actionButton}
+
+                            onClick={()=>setFlipped(true)}
+
+                        >
+
+                            KARRIERE-STATISTIKEN ÖFFNEN
+
+
+                        </button>
+
+
+
+
+
+
+
+                        <Link
+
+                            href={`/community/service-record?id=${id}`}
+
+                            className={styles.actionButton}
+
+                        >
+
+                            SERVICE RECORD ÖFFNEN
+
+
+                        </Link>
+
+
+
+                    </footer>
+
+
+
+
+
+                </article>
+
+
+
+
+
+
+
+
+                <div className={styles.back}>
+
+
+                    <MemberCardBack
+
+
+                        name={name}
+
+                        armyId={armyId}
+
+                        stats={stats}
+
+                        profile={profile}
+
+                        onBack={()=>setFlipped(false)}
+
+                    />
+
+
+
                 </div>
 
 
 
-                <div className={styles.armyId}>
 
-                    {armyId}
 
-                </div>
 
+            </motion.div>
 
-            </header>
 
 
 
+        </div>
 
-
-            {/* AVATAR */}
-
-
-            <div className={styles.avatarWrapper}>
-
-
-                <Image
-
-                    src={avatar}
-
-                    alt={name}
-
-                    width={240}
-
-                    height={240}
-
-                    className={styles.avatar}
-
-                />
-
-
-            </div>
-
-
-
-
-
-            {/* NAME */}
-
-
-            <div className={styles.identity}>
-
-
-                <h1 className={styles.name}>
-
-                    {name}
-
-                </h1>
-
-
-
-
-
-                {/* STATUS BADGE */}
-
-
-                <div
-
-                    className={styles.badge}
-
-
-                    style={{
-
-
-                        background:
-
-                            theme.background,
-
-
-                        borderColor:
-
-                            theme.border,
-
-
-                        color:
-
-                            theme.text,
-
-
-                        boxShadow:
-
-                            `0 0 25px ${theme.glow}`,
-
-
-                    }}
-
-                >
-
-
-                    <span className={styles.badgeTitle}>
-
-                        {displayTitle}
-
-                    </span>
-
-
-                </div>
-
-
-
-            </div>
-
-
-
-
-
-            {/* FOOTER */}
-
-
-            <footer className={styles.footer}>
-
-
-                <div className={styles.joined}>
-
-                    {joinedLabel}
-
-                </div>
-
-
-
-
-                <Link
-
-                    href={`/community/service-record?id=${id}`}
-
-                    className={styles.button}
-
-                >
-
-                    PERSONALAKTE ÖFFNEN
-
-                </Link>
-
-
-            </footer>
-
-
-
-
-        </motion.article>
 
     );
+
 
 }

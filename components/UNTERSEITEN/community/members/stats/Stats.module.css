@@ -1,0 +1,246 @@
+.wrapper{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1.5rem;
+
+}
+
+
+
+
+
+.sectionTitle{
+
+    margin-top:1rem;
+
+
+    color:
+
+        var(--color-lime);
+
+
+
+    font-size:.7rem;
+
+
+
+    font-weight:900;
+
+
+
+    letter-spacing:.28em;
+
+
+
+    text-transform:uppercase;
+
+
+
+}
+
+
+
+
+
+.season{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:.8rem;
+
+
+
+}
+
+
+
+
+
+.seasonHeader{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+
+    align-items:center;
+
+
+
+    color:white;
+
+
+
+    font-size:.8rem;
+
+
+
+    letter-spacing:.18em;
+
+
+
+    text-transform:uppercase;
+
+
+
+}
+
+
+
+
+
+.seasonHeader span{
+
+
+    color:
+
+        var(--color-lime);
+
+
+}
+
+
+
+
+
+.table{
+
+
+    width:100%;
+
+
+
+    overflow:hidden;
+
+
+
+    border-radius:12px;
+
+
+
+    border:
+
+
+        1px solid rgba(255,255,255,.1);
+
+
+
+}
+
+
+
+
+
+.rowHeader,
+
+
+.row{
+
+
+    display:grid;
+
+
+
+    grid-template-columns:
+
+        40px
+
+        repeat(6,1fr);
+
+
+
+    text-align:center;
+
+
+
+}
+
+
+
+
+
+.rowHeader{
+
+
+    padding:.6rem;
+
+
+
+    background:
+
+        rgba(163,230,53,.12);
+
+
+
+    color:
+
+        var(--color-lime);
+
+
+
+    font-size:.65rem;
+
+
+
+    font-weight:900;
+
+
+
+    letter-spacing:.15em;
+
+
+
+}
+
+
+
+
+
+.row{
+
+
+    padding:.8rem .6rem;
+
+
+
+    background:
+
+        rgba(0,0,0,.25);
+
+
+
+    color:white;
+
+
+
+    font-weight:700;
+
+
+
+}
+
+
+
+
+
+.row span:not(:first-child){
+
+    border-left:
+
+
+        1px solid rgba(255,255,255,.08);
+
+
+
+}

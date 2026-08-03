@@ -1,108 +1,146 @@
+/* ================================= */
+/* TIMELINE LINE */
+/* ================================= */
+
+/*
+   Diese Komponente wird aktuell nicht mehr
+   aktiv für die Darstellung genutzt.
+
+   Die Timeline-Steuerung erfolgt über:
+
+   TimelineItem.tsx
+
+   mit:
+
+   .dot
+   .vertical
+
+   in:
+
+   TimelineItem.module.css
+*/
+
+
 .line {
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-    height: 100%;
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    align-items:center;
+
+
 
 }
+
+
+
+
 
 .dot {
 
-    position: relative;
 
-    width: 18px;
-    height: 18px;
+    width:18px;
 
-    border-radius: 50%;
 
-    background: var(--color-lime);
+    height:18px;
+
+
+
+    border-radius:50%;
+
+
+
+    background:
+
+
+        var(--color-lime);
+
+
 
     box-shadow:
-        0 0 18px rgba(163,230,53,.45),
+
+
+        0 0 22px rgba(163,230,53,.45),
+
+
         0 0 45px rgba(163,230,53,.18);
 
-    animation: pulse 5s ease-in-out infinite;
+
 
 }
+
+
+
+
 
 .dot::before {
 
-    content: "";
 
-    position: absolute;
+    content:"";
 
-    inset: -8px;
 
-    border-radius: 50%;
+    position:absolute;
 
-    border: 2px solid rgba(163,230,53,.25);
 
-    animation: ring 5s ease-out infinite;
+    inset:-8px;
+
+
+
+    border-radius:50%;
+
+
+
+    border:
+
+
+        2px solid
+
+
+        rgba(163,230,53,.25);
+
+
 
 }
+
+
+
+
 
 .vertical {
 
-    flex: 1;
 
-    width: 2px;
+    margin-top:1rem;
 
-    margin-top: 1rem;
 
-    background: linear-gradient(
-        to bottom,
-        rgba(163,230,53,.45),
-        rgba(163,230,53,.05)
-    );
 
-}
+    width:2px;
 
-@keyframes pulse {
 
-    0% {
 
-        transform: scale(1);
+    height:220px;
 
-    }
 
-    50% {
 
-        transform: scale(1.15);
+    background:
 
-    }
 
-    100% {
+        linear-gradient(
 
-        transform: scale(1);
+            to bottom,
 
-    }
+            rgba(163,230,53,.45),
 
-}
+            rgba(163,230,53,.05)
 
-@keyframes ring {
+        );
 
-    0% {
 
-        transform: scale(.8);
 
-        opacity: .75;
+    transform-origin:top;
 
-    }
-
-    70% {
-
-        transform: scale(1.4);
-
-        opacity: 0;
-
-    }
-
-    100% {
-
-        opacity: 0;
-
-    }
 
 }

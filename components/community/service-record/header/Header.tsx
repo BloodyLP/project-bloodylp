@@ -39,7 +39,7 @@ export default function Header({
 
                 <h2>{CARD_TITLE}</h2>
 
-                <small>PERSONALAKTE</small>
+                <small>MEMBER CARD</small>
 
             </div>
 

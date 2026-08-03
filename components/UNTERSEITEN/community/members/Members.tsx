@@ -12,7 +12,7 @@ import PersonnelArchive from "./archive/PersonnelArchive";
 
 
 
-export default function Members() {
+export default function Members(){
 
 
     return (
@@ -23,15 +23,9 @@ export default function Members() {
             <div className={styles.container}>
 
 
-                {/* HEADER */}
-
                 <MembersHeader />
 
 
-
-
-
-                {/* FOUNDER COMMAND PROFILE */}
 
                 <div className={styles.founderWrapper}>
 
@@ -43,9 +37,6 @@ export default function Members() {
 
 
 
-
-
-                {/* PERSONAL ARCHIVE */}
 
                 <div className={styles.archiveWrapper}>
 
