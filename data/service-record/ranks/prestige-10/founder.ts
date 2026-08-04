@@ -12,7 +12,6 @@
  * ============================================
  */
 
-
 import type {
 
     MilitaryRank
@@ -23,88 +22,57 @@ import type {
 
 
 
-
-
-
-
 export const founderRanks: MilitaryRank[] = [
 
-
-
     {
-
 
         /**
          * Eindeutige ID
          */
-        id:"generalOfTheArmy",
-
-
+        id: "general-of-the-army",
 
 
 
         /**
          * Anzeigename
          */
-        name:"General of the Army",
-
-
+        name: "General of the Army",
 
 
 
         /**
          * Kürzel
          */
-        abbreviation:"GA",
-
-
+        abbreviation: "GA",
 
 
 
         /**
          * Streitkraft
          */
-        branch:"bloodyArmy",
-
-
+        branch: "bloodyArmy",
 
 
 
         /**
          * Prestige
          */
-        prestige:10,
-
-
+        prestige: 10,
 
 
 
         /**
          * Kategorie
          */
-        category:"command",
-
-
+        category: "command",
 
 
 
         /**
          * Sortierung
          */
-        level:100,
-
-
-
-
-
-        /**
-         * Rangabzeichen
-         */
-        insignia:"/images/ranks/general-of-the-army.png"
-
-
+        level: 100
 
     }
-
 
 ];

@@ -33,6 +33,12 @@ import {
 
 } from "./members/dungeon";
 
+import {
+
+    o1l3r5
+
+} from "./members/o1l3r5";
+
 
 
 
@@ -44,8 +50,9 @@ export const MEMBERS:ServiceRecordMember[] = [
 
     bloodylp,
 
+    dungeon,
 
-    dungeon
+    o1l3r5
 
 
 ];

@@ -12,35 +12,21 @@
  * ============================================
  */
 
-
 import {
-
     ServiceRecord
-
 } from "@/lib/service-record";
 
+import {
+    getRankImage
+} from "@/lib/service-record/getRankImage";
 
 import type {
-
     ServiceRecordMember
-
 } from "@/types/service-record";
 
-
-
-
-
-
-
-
-
 function getBadgeTheme(
-
-    member:ServiceRecordMember
-
-){
-
-
+    member: ServiceRecordMember
+) {
 
     /*
     ============================================
@@ -48,29 +34,17 @@ function getBadgeTheme(
     ============================================
     */
 
-
-    if(member.prestige === 10){
-
+    if (member.prestige === 10) {
 
         return {
 
+            title: "FOUNDER",
 
-            title:"FOUNDER",
-
-
-            theme:"prestigeX"
-
+            theme: "prestigeX"
 
         };
 
-
     }
-
-
-
-
-
-
 
     /*
     ============================================
@@ -78,73 +52,41 @@ function getBadgeTheme(
     ============================================
     */
 
-
-    if(member.prestige === 3){
-
+    if (member.prestige === 3) {
 
         return {
 
+            title: "PRESTIGE III",
 
-            title:"PRESTIGE III",
-
-
-            theme:"prestigeIII"
-
+            theme: "prestigeIII"
 
         };
 
-
     }
 
-
-
-
-
-
-    if(member.prestige === 2){
-
+    if (member.prestige === 2) {
 
         return {
 
+            title: "PRESTIGE II",
 
-            title:"PRESTIGE II",
-
-
-            theme:"prestigeII"
-
+            theme: "prestigeII"
 
         };
 
-
     }
 
-
-
-
-
-
-    if(member.prestige === 1){
-
+    if (member.prestige === 1) {
 
         return {
 
+            title: "PRESTIGE I",
 
-            title:"PRESTIGE I",
-
-
-            theme:"prestigeI"
-
+            theme: "prestigeI"
 
         };
 
-
     }
-
-
-
-
-
-
 
     /*
     ============================================
@@ -152,195 +94,87 @@ function getBadgeTheme(
     ============================================
     */
 
-
     const rank = ServiceRecord.rank(
 
         member.rank
 
     );
 
-
-
-
-
-
-    if(!rank){
-
-
-        return {
-
-
-            title:"ZIVILIST",
-
-
-            theme:"zivilisten"
-
-
-        };
-
-
-    }
-
-
-
-
-
-
-
-    switch(rank.category){
-
-
+    switch (rank.category) {
 
         case "command":
 
-
             return {
 
+                title: "GENERAL",
 
-                title:"GENERAL",
-
-
-                theme:"generale"
-
+                theme: "generale"
 
             };
-
-
-
-
-
-
 
         case "offiziere":
 
-
             return {
 
+                title: "OFFIZIER",
 
-                title:"OFFIZIER",
-
-
-                theme:"offiziere"
-
+                theme: "offiziere"
 
             };
-
-
-
-
-
-
 
         case "feldwebel":
 
-
             return {
 
+                title: "UNTEROFFIZIER MIT PORTEPEE",
 
-                title:"UNTEROFFIZIER MIT PORTEPEE",
-
-
-                theme:"portepee"
-
+                theme: "portepee"
 
             };
-
-
-
-
-
-
 
         case "unteroffiziere":
 
-
             return {
 
+                title: "UNTEROFFIZIER",
 
-                title:"UNTEROFFIZIER",
-
-
-                theme:"unteroffiziere"
-
+                theme: "unteroffiziere"
 
             };
-
-
-
-
-
-
 
         case "mannschaften":
 
-
             return {
 
+                title: "MANNSCHAFT",
 
-                title:"MANNSCHAFT",
-
-
-                theme:"mannschaften"
-
+                theme: "mannschaften"
 
             };
-
-
-
-
-
-
 
         default:
 
-
             return {
 
+                title: "ZIVILIST",
 
-                title:"ZIVILIST",
-
-
-                theme:"zivilisten"
-
+                theme: "zivilisten"
 
             };
 
-
     }
-
-
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 export function mapMemberToCard(
-
-    member:ServiceRecordMember
-
-){
-
-
+    member: ServiceRecordMember
+) {
 
     const rank = ServiceRecord.rank(
 
         member.rank
 
     );
-
-
-
-
 
     const organization = ServiceRecord.organization(
 
@@ -348,19 +182,11 @@ export function mapMemberToCard(
 
     );
 
-
-
-
-
     const position = ServiceRecord.position(
 
         member.position
 
     );
-
-
-
-
 
     const badge = getBadgeTheme(
 
@@ -368,169 +194,65 @@ export function mapMemberToCard(
 
     );
 
-
-
-
-
-
-
     return {
 
+        id: member.id,
 
+        armyId: member.recordNumber,
 
-        id:member.id,
+        name: member.name,
 
-
-
-        armyId:member.recordNumber,
-
-
-
-        name:member.name,
-
-
-
-        avatar:member.avatar,
-
-
-
-
+        avatar: member.avatar,
 
         joinedLabel:
 
             `SEIT ${member.enlisted}`,
 
+        rank: {
 
+            title: rank.name,
 
+            image: getRankImage(
 
+                rank.id
 
-
-
-        rank:{
-
-
-
-            title:
-
-                rank?.name ??
-
-                "Zivilist",
-
-
-
-
-
-            image:
-
-                rank?.insignia ??
-
-                ""
+            )
 
         },
 
+        badge: {
 
+            title: badge.title,
 
-
-
-
-
-        badge:{
-
-
-
-            title:
-
-                badge.title,
-
-
-
-
-
-            theme:
-
-                badge.theme
-
-
+            theme: badge.theme
 
         },
 
+        prestige: {
 
+            level: member.prestige,
 
+            key: badge.theme,
 
-
-
-
-        prestige:{
-
-
-
-            level:
-
-                member.prestige,
-
-
-
-
-
-            key:
-
-                badge.theme,
-
-
-
-
-
-            title:
-
-                badge.title
-
-
+            title: badge.title
 
         },
-
-
-
-
-
-
 
         stats:
 
             member.stats,
 
-
-
-
-
-
-
-        profile:{
-
-
+        profile: {
 
             position:
 
-                position?.title ??
-
-                "",
-
-
-
-
+                position?.title ?? "",
 
             number:
 
                 member.recordNumber
 
-
-
         }
-
-
-
-
-
-
 
     };
 

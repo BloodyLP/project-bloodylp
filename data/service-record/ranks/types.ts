@@ -236,13 +236,4 @@ export interface MilitaryRank {
      */
     level:number;
 
-
-
-    /**
-     * Rangabzeichen
-     */
-    insignia?:string;
-
-
-
 }

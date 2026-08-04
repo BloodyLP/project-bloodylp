@@ -64,7 +64,7 @@ export const bloodylp: ServiceRecordMember = {
     /**
      * Dienstgrad
      */
-    rank: "generalOfTheArmy",
+    rank: "general-of-the-army",
 
 
 

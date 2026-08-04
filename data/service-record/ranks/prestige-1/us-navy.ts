@@ -12,7 +12,6 @@
  * ============================================
  */
 
-
 import type {
 
     MilitaryRank
@@ -23,90 +22,57 @@ import type {
 
 
 
-
-
-
-
 export const usNavyRanks: MilitaryRank[] = [
 
-
-
     {
-
-
 
         /**
          * Eindeutige ID
          */
-        id:"masterChiefPettyOfficerOfTheNavy",
-
-
+        id: "master-chief-petty-officer-of-the-navy",
 
 
 
         /**
          * Anzeigename
          */
-        name:"Master Chief Petty Officer of the Navy",
-
-
+        name: "Master Chief Petty Officer of the Navy",
 
 
 
         /**
          * Kürzel
          */
-        abbreviation:"MCPON",
-
-
+        abbreviation: "MCPON",
 
 
 
         /**
          * Streitkraft
          */
-        branch:"usNavy",
-
-
+        branch: "usNavy",
 
 
 
         /**
          * Prestige
          */
-        prestige:1,
-
-
+        prestige: 1,
 
 
 
         /**
          * Kategorie
          */
-        category:"warrant",
-
-
+        category: "warrant",
 
 
 
         /**
          * Sortierung
          */
-        level:100,
-
-
-
-
-
-        /**
-         * Dienstgradabzeichen
-         */
-        insignia:"/images/ranks/master-chief-petty-officer-of-the-navy.png"
-
-
+        level: 100
 
     }
-
-
 
 ];

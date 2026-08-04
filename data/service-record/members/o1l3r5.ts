@@ -7,10 +7,10 @@
  * BloodyArmy Website
  *
  * Data:
- * Dungeon_62
+ * O1L3R5
  *
  * Description:
- * Service Record Datensatz von Dungeon_62.
+ * Service Record Datensatz von O1L3R5.
  *
  * ============================================
  */
@@ -24,7 +24,8 @@ import type { ServiceRecordMember } from "@/types/service-record";
 
 
 
-export const dungeon: ServiceRecordMember = {
+
+export const o1l3r5: ServiceRecordMember = {
 
 
 
@@ -32,7 +33,7 @@ export const dungeon: ServiceRecordMember = {
     /**
      * Interne UUID
      */
-    id:"BA-002",
+    id:"BA-003",
 
 
 
@@ -41,7 +42,7 @@ export const dungeon: ServiceRecordMember = {
     /**
      * URL
      */
-    slug:"dungeon_62",
+    slug:"o1l3r5",
 
 
 
@@ -50,7 +51,7 @@ export const dungeon: ServiceRecordMember = {
     /**
      * Service Record Nummer
      */
-    recordNumber:"BA-002",
+    recordNumber:"BA-003",
 
 
 
@@ -59,7 +60,7 @@ export const dungeon: ServiceRecordMember = {
     /**
      * Anzeigename
      */
-    name:"Dungeon_62",
+    name:"O1L3R5",
 
 
 
@@ -68,16 +69,16 @@ export const dungeon: ServiceRecordMember = {
     /**
      * Avatar
      */
-    avatar:"/members/dungeon/avatar.png",
+    avatar:"/members/o1l3r5/avatar.png",
 
 
 
 
 
     /**
-     * Dienstgrad
-     */
-    rank: "master-chief-petty-officer-of-the-navy",
+ * Dienstgrad
+ */
+rank:"canadian-army-captain",
 
 
 
@@ -95,7 +96,7 @@ export const dungeon: ServiceRecordMember = {
     /**
      * Position
      */
-    position:"rightWing",
+    position:"goalie",
 
 
 
@@ -104,7 +105,7 @@ export const dungeon: ServiceRecordMember = {
     /**
      * Reihe
      */
-    line:2,
+    line:1,
 
 
 
@@ -113,7 +114,7 @@ export const dungeon: ServiceRecordMember = {
     /**
      * Eintrittsjahr
      */
-    enlisted:"2017",
+    enlisted:"2019",
 
 
 
@@ -122,7 +123,7 @@ export const dungeon: ServiceRecordMember = {
     /**
      * Prestige
      */
-    prestige:1,
+    prestige:2,
 
 
 
@@ -158,11 +159,7 @@ export const dungeon: ServiceRecordMember = {
     /**
      * Decorations
      */
-    decorations:[
-
-        "stanley-cup",
-
-    ],
+    decorations:[],
 
 
 
@@ -206,24 +203,31 @@ export const dungeon: ServiceRecordMember = {
 
 
 
+
+
     /**
      * Karriere Statistiken
      */
     stats:{
 
 
+
         seasons:[
 
 
 
+
             {
+
 
                 year:"2019",
 
+
                 team:"BloodyArmy",
 
 
-                games:0,
+
+                games:18,
 
                 goals:0,
 
@@ -233,10 +237,11 @@ export const dungeon: ServiceRecordMember = {
 
                 plusMinus:0,
 
-                penaltyMinutes:0,
+                penaltyMinutes:2,
 
 
-                playoffGames:0,
+
+                playoffGames:4,
 
                 playoffGoals:0,
 
@@ -249,7 +254,10 @@ export const dungeon: ServiceRecordMember = {
                 playoffPenaltyMinutes:0,
 
 
+
                 titles:[]
+
+
 
             },
 
@@ -257,14 +265,19 @@ export const dungeon: ServiceRecordMember = {
 
 
 
+
+
             {
+
 
                 year:"2020",
 
+
                 team:"BloodyArmy",
 
 
-                games:0,
+
+                games:32,
 
                 goals:0,
 
@@ -274,10 +287,11 @@ export const dungeon: ServiceRecordMember = {
 
                 plusMinus:0,
 
-                penaltyMinutes:0,
+                penaltyMinutes:4,
 
 
-                playoffGames:0,
+
+                playoffGames:8,
 
                 playoffGoals:0,
 
@@ -287,10 +301,13 @@ export const dungeon: ServiceRecordMember = {
 
                 playoffPlusMinus:0,
 
-                playoffPenaltyMinutes:0,
+                playoffPenaltyMinutes:2,
+
 
 
                 titles:[]
+
+
 
             },
 
@@ -298,14 +315,19 @@ export const dungeon: ServiceRecordMember = {
 
 
 
+
+
             {
+
 
                 year:"2021",
 
+
                 team:"BloodyArmy",
 
 
-                games:0,
+
+                games:41,
 
                 goals:0,
 
@@ -315,10 +337,11 @@ export const dungeon: ServiceRecordMember = {
 
                 plusMinus:0,
 
-                penaltyMinutes:0,
+                penaltyMinutes:6,
 
 
-                playoffGames:0,
+
+                playoffGames:12,
 
                 playoffGoals:0,
 
@@ -328,10 +351,13 @@ export const dungeon: ServiceRecordMember = {
 
                 playoffPlusMinus:0,
 
-                playoffPenaltyMinutes:0,
+                playoffPenaltyMinutes:2,
+
 
 
                 titles:[]
+
+
 
             },
 
@@ -339,14 +365,19 @@ export const dungeon: ServiceRecordMember = {
 
 
 
+
+
             {
+
 
                 year:"2022",
 
+
                 team:"BloodyArmy",
 
 
-                games:0,
+
+                games:46,
 
                 goals:0,
 
@@ -356,10 +387,11 @@ export const dungeon: ServiceRecordMember = {
 
                 plusMinus:0,
 
-                penaltyMinutes:0,
+                penaltyMinutes:8,
 
 
-                playoffGames:0,
+
+                playoffGames:14,
 
                 playoffGoals:0,
 
@@ -369,10 +401,13 @@ export const dungeon: ServiceRecordMember = {
 
                 playoffPlusMinus:0,
 
-                playoffPenaltyMinutes:0,
+                playoffPenaltyMinutes:2,
+
 
 
                 titles:[]
+
+
 
             },
 
@@ -380,14 +415,19 @@ export const dungeon: ServiceRecordMember = {
 
 
 
+
+
             {
+
 
                 year:"2023",
 
+
                 team:"BloodyArmy",
 
 
-                games:0,
+
+                games:52,
 
                 goals:0,
 
@@ -397,10 +437,11 @@ export const dungeon: ServiceRecordMember = {
 
                 plusMinus:0,
 
-                penaltyMinutes:0,
+                penaltyMinutes:6,
 
 
-                playoffGames:0,
+
+                playoffGames:16,
 
                 playoffGoals:0,
 
@@ -410,10 +451,13 @@ export const dungeon: ServiceRecordMember = {
 
                 playoffPlusMinus:0,
 
-                playoffPenaltyMinutes:0,
+                playoffPenaltyMinutes:4,
+
 
 
                 titles:[]
+
+
 
             },
 
@@ -421,27 +465,33 @@ export const dungeon: ServiceRecordMember = {
 
 
 
+
+
             {
+
 
                 year:"2024",
 
+
                 team:"BloodyArmy",
 
 
-                games:0,
+
+                games:58,
 
                 goals:0,
 
-                assists:0,
+                assists:1,
 
-                points:0,
+                points:1,
 
                 plusMinus:0,
 
-                penaltyMinutes:0,
+                penaltyMinutes:10,
 
 
-                playoffGames:0,
+
+                playoffGames:18,
 
                 playoffGoals:0,
 
@@ -451,10 +501,13 @@ export const dungeon: ServiceRecordMember = {
 
                 playoffPlusMinus:0,
 
-                playoffPenaltyMinutes:0,
+                playoffPenaltyMinutes:4,
+
 
 
                 titles:[]
+
+
 
             },
 
@@ -462,40 +515,49 @@ export const dungeon: ServiceRecordMember = {
 
 
 
+
+
             {
+
 
                 year:"2025",
 
+
                 team:"BloodyArmy",
 
 
-                games:0,
+
+                games:61,
 
                 goals:0,
 
-                assists:0,
+                assists:2,
 
-                points:0,
+                points:2,
 
                 plusMinus:0,
 
-                penaltyMinutes:0,
+                penaltyMinutes:8,
 
 
-                playoffGames:0,
+
+                playoffGames:20,
 
                 playoffGoals:0,
 
-                playoffAssists:0,
+                playoffAssists:1,
 
-                playoffPoints:0,
+                playoffPoints:1,
 
                 playoffPlusMinus:0,
 
-                playoffPenaltyMinutes:0,
+                playoffPenaltyMinutes:2,
+
 
 
                 titles:[]
+
+
 
             },
 
@@ -503,11 +565,16 @@ export const dungeon: ServiceRecordMember = {
 
 
 
+
+
             {
+
 
                 year:"2026",
 
+
                 team:"BloodyArmy",
+
 
 
                 games:0,
@@ -523,6 +590,7 @@ export const dungeon: ServiceRecordMember = {
                 penaltyMinutes:0,
 
 
+
                 playoffGames:0,
 
                 playoffGoals:0,
@@ -536,21 +604,35 @@ export const dungeon: ServiceRecordMember = {
                 playoffPenaltyMinutes:0,
 
 
+
                 titles:[]
 
+
+
             }
+
 
 
 
         ]
 
 
+
     },
+
+
+
+
+
+
+
+
 
     /**
      * Bemerkung
      */
-    remarks:"Mitglied der BloodyArmy.",
+    remarks:"Torhüter der BloodyArmy mit der Nummer 33.",
+
 
 
 
