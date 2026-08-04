@@ -358,8 +358,30 @@ export const bloodylp: ServiceRecordMember = {
 
                 titles:[]
 
-            }
+            },
 
+            {
+                year:"2026",
+
+    team:"BloodyArmy",
+                games:0,
+                goals:0,
+                assists:0,
+                points:0,
+                plusMinus:0,
+                penaltyMinutes:0,
+
+                playoffGames:0,
+                playoffGoals:0,
+                playoffAssists:0,
+                playoffPoints:0,
+                playoffPlusMinus:0,
+                playoffPenaltyMinutes:0,
+
+
+                titles:[]
+
+            }
 
 
         ]

@@ -7,118 +7,559 @@
  * BloodyArmy Website
  *
  * Data:
- * BloodyLP
+ * Dungeon_62
  *
  * Description:
- * Service Record Datensatz von BloodyLP.
+ * Service Record Datensatz von Dungeon_62.
  *
  * ============================================
  */
 
+
 import type { ServiceRecordMember } from "@/types/service-record";
 
+
+
+
+
+
+
 export const dungeon: ServiceRecordMember = {
+
+
+
 
     /**
      * Interne UUID
      */
-    id: "BA-002",
+    id:"BA-002",
+
+
+
+
 
     /**
      * URL
      */
-    slug: "dungeon_62",
+    slug:"dungeon_62",
+
+
+
+
 
     /**
      * Service Record Nummer
      */
-    recordNumber: "BA-002",
+    recordNumber:"BA-002",
+
+
+
+
 
     /**
      * Anzeigename
      */
-    name: "Dungeon_62",
+    name:"Dungeon_62",
+
+
+
+
 
     /**
      * Avatar
      */
-    avatar: "/members/dungeon/avatar.png",
+    avatar:"/members/dungeon/avatar.png",
+
+
+
+
 
     /**
      * Dienstgrad
      */
-    rank: "generalOfTheArmy",
+    rank:"generalOfTheArmy",
+
+
+
+
 
     /**
      * Organisation
      */
-    organization: "bloodyArmy",
+    organization:"bloodyArmy",
+
+
+
+
 
     /**
      * Position
      */
-    position: "rightWing",
+    position:"rightWing",
+
+
+
+
 
     /**
      * Reihe
      */
-    line: 2,
+    line:2,
+
+
+
+
 
     /**
      * Eintrittsjahr
      */
-    enlisted: "2017",
+    enlisted:"2017",
+
+
+
+
 
     /**
      * Prestige
      */
-    prestige: 1 ,
+    prestige:1,
+
+
+
+
 
     /**
      * Patreon
      */
-    patreon: 0,
+    patreon:0,
+
+
+
+
 
     /**
      * Aktiv
      */
-    active: true,
+    active:true,
+
+
+
+
 
     /**
      * Sichtbar
      */
-    visible: true,
+    visible:true,
+
+
+
+
 
     /**
      * Decorations
      */
-    decorations: [
+    decorations:[
+
         "stanley-cup",
+
     ],
+
+
+
+
 
     /**
      * Ribbon Rack
      */
-    ribbons: [],
+    ribbons:[],
+
+
+
+
 
     /**
      * Medaillen
      */
-    medals: [],
+    medals:[],
+
+
+
+
 
     /**
      * Abzeichen
      */
-    badges: [],
+    badges:[],
+
+
+
+
 
     /**
      * Achievements
      */
-    achievements: [],
+    achievements:[],
+
+
+
+
+
+
+
+    /**
+     * Karriere Statistiken
+     */
+    stats:{
+
+
+        seasons:[
+
+
+
+            {
+
+                year:"2019",
+
+                team:"BloodyArmy",
+
+
+                games:0,
+
+                goals:0,
+
+                assists:0,
+
+                points:0,
+
+                plusMinus:0,
+
+                penaltyMinutes:0,
+
+
+                playoffGames:0,
+
+                playoffGoals:0,
+
+                playoffAssists:0,
+
+                playoffPoints:0,
+
+                playoffPlusMinus:0,
+
+                playoffPenaltyMinutes:0,
+
+
+                titles:[]
+
+            },
+
+
+
+
+
+            {
+
+                year:"2020",
+
+                team:"BloodyArmy",
+
+
+                games:0,
+
+                goals:0,
+
+                assists:0,
+
+                points:0,
+
+                plusMinus:0,
+
+                penaltyMinutes:0,
+
+
+                playoffGames:0,
+
+                playoffGoals:0,
+
+                playoffAssists:0,
+
+                playoffPoints:0,
+
+                playoffPlusMinus:0,
+
+                playoffPenaltyMinutes:0,
+
+
+                titles:[]
+
+            },
+
+
+
+
+
+            {
+
+                year:"2021",
+
+                team:"BloodyArmy",
+
+
+                games:0,
+
+                goals:0,
+
+                assists:0,
+
+                points:0,
+
+                plusMinus:0,
+
+                penaltyMinutes:0,
+
+
+                playoffGames:0,
+
+                playoffGoals:0,
+
+                playoffAssists:0,
+
+                playoffPoints:0,
+
+                playoffPlusMinus:0,
+
+                playoffPenaltyMinutes:0,
+
+
+                titles:[]
+
+            },
+
+
+
+
+
+            {
+
+                year:"2022",
+
+                team:"BloodyArmy",
+
+
+                games:0,
+
+                goals:0,
+
+                assists:0,
+
+                points:0,
+
+                plusMinus:0,
+
+                penaltyMinutes:0,
+
+
+                playoffGames:0,
+
+                playoffGoals:0,
+
+                playoffAssists:0,
+
+                playoffPoints:0,
+
+                playoffPlusMinus:0,
+
+                playoffPenaltyMinutes:0,
+
+
+                titles:[]
+
+            },
+
+
+
+
+
+            {
+
+                year:"2023",
+
+                team:"BloodyArmy",
+
+
+                games:0,
+
+                goals:0,
+
+                assists:0,
+
+                points:0,
+
+                plusMinus:0,
+
+                penaltyMinutes:0,
+
+
+                playoffGames:0,
+
+                playoffGoals:0,
+
+                playoffAssists:0,
+
+                playoffPoints:0,
+
+                playoffPlusMinus:0,
+
+                playoffPenaltyMinutes:0,
+
+
+                titles:[]
+
+            },
+
+
+
+
+
+            {
+
+                year:"2024",
+
+                team:"BloodyArmy",
+
+
+                games:0,
+
+                goals:0,
+
+                assists:0,
+
+                points:0,
+
+                plusMinus:0,
+
+                penaltyMinutes:0,
+
+
+                playoffGames:0,
+
+                playoffGoals:0,
+
+                playoffAssists:0,
+
+                playoffPoints:0,
+
+                playoffPlusMinus:0,
+
+                playoffPenaltyMinutes:0,
+
+
+                titles:[]
+
+            },
+
+
+
+
+
+            {
+
+                year:"2025",
+
+                team:"BloodyArmy",
+
+
+                games:0,
+
+                goals:0,
+
+                assists:0,
+
+                points:0,
+
+                plusMinus:0,
+
+                penaltyMinutes:0,
+
+
+                playoffGames:0,
+
+                playoffGoals:0,
+
+                playoffAssists:0,
+
+                playoffPoints:0,
+
+                playoffPlusMinus:0,
+
+                playoffPenaltyMinutes:0,
+
+
+                titles:[]
+
+            },
+
+
+
+
+
+            {
+
+                year:"2026",
+
+                team:"BloodyArmy",
+
+
+                games:0,
+
+                goals:0,
+
+                assists:0,
+
+                points:0,
+
+                plusMinus:0,
+
+                penaltyMinutes:0,
+
+
+                playoffGames:0,
+
+                playoffGoals:0,
+
+                playoffAssists:0,
+
+                playoffPoints:0,
+
+                playoffPlusMinus:0,
+
+                playoffPenaltyMinutes:0,
+
+
+                titles:[]
+
+            }
+
+
+
+        ]
+
+
+    },
+
+
+
+
+
+
+
+
 
     /**
      * Bemerkung
      */
-    remarks: "Founder der BloodyArmy.",
+    remarks:"Mitglied der BloodyArmy.",
+
+
 
 };

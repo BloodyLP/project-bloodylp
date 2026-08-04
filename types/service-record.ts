@@ -16,18 +16,44 @@
  */
 
 
-import type { RankId } from "@/data/service-record/ranks";
 
-import type { OrganizationId } from "@/data/service-record/organizations";
+import type {
 
-import type { PositionId } from "@/data/service-record/positions";
+    RankId,
 
+    PrestigeLevel
 
-
-
-
+} from "@/data/service-record/ranks";
 
 
+
+import type {
+
+    OrganizationId
+
+} from "@/data/service-record/organizations";
+
+
+
+import type {
+
+    PositionId
+
+} from "@/data/service-record/positions";
+
+
+
+
+
+
+
+
+
+/*
+================================================
+TEAMS
+================================================
+*/
 
 
 export type TeamType =
@@ -46,18 +72,34 @@ export type TeamType =
 
 
 
+/*
+================================================
+CAREER STATISTICS
+================================================
+*/
+
+
 export type CareerSeasonStats = {
 
 
 
+    /**
+     * Anzeige Saison
+     */
     season?:string;
 
 
 
+    /**
+     * Jahr
+     */
     year:string;
 
 
 
+    /**
+     * Mannschaft
+     */
     team:TeamType;
 
 
@@ -130,7 +172,16 @@ export type CareerSeasonStats = {
 
 
 
+/*
+================================================
+SERVICE RECORD MEMBER
+================================================
+*/
+
+
 export interface ServiceRecordMember {
+
+
 
 
 
@@ -153,7 +204,7 @@ export interface ServiceRecordMember {
 
 
     /**
-     * BA-000001
+     * Service Record Nummer
      */
     recordNumber:string;
 
@@ -180,7 +231,9 @@ export interface ServiceRecordMember {
 
 
     /**
-     * Dienstgrad
+     * Dienstgrad ID
+     *
+     * Verbindung zur Rangdatenbank
      */
     rank:RankId;
 
@@ -198,7 +251,7 @@ export interface ServiceRecordMember {
 
 
     /**
-     * Position
+     * Position in Formation
      */
     position:PositionId;
 
@@ -216,7 +269,7 @@ export interface ServiceRecordMember {
 
 
     /**
-     * Eintritt
+     * Eintrittsjahr
      */
     enlisted:string;
 
@@ -227,7 +280,7 @@ export interface ServiceRecordMember {
     /**
      * Prestige-Level
      */
-    prestige:number;
+    prestige:PrestigeLevel;
 
 
 
