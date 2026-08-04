@@ -11,9 +11,7 @@
  * ============================================
  */
 
-
 import styles from "./Identity.module.css";
-
 
 import {
 
@@ -21,6 +19,11 @@ import {
 
 } from "@/lib/service-record";
 
+import {
+
+    getRankImage
+
+} from "@/lib/service-record/getRankImage";
 
 import type {
 
@@ -32,17 +35,11 @@ import type {
 
 
 
-
-
 interface IdentityProps {
 
-
-    rank:RankId;
-
+    rank: RankId;
 
 }
-
-
 
 
 
@@ -52,7 +49,7 @@ export default function Identity({
 
     rank,
 
-}:IdentityProps) {
+}: IdentityProps) {
 
 
 
@@ -64,61 +61,28 @@ export default function Identity({
 
     return (
 
-
-
         <section className={styles.identity}>
 
+            <img
 
+                src={getRankImage(rankData.id)}
 
+                alt={rankData.name}
 
-            {
+                className={styles.insignia}
 
-
-                rankData?.insignia && (
-
-
-                    <img
-
-
-                        src={rankData.insignia}
-
-
-                        alt={rankData.name}
-
-
-                        className={styles.insignia}
-
-
-                    />
-
-
-                )
-
-
-            }
-
-
-
+            />
 
 
 
             <div className={styles.rank}>
 
-
-                {rankData?.name}
-
-
+                {rankData.name}
 
             </div>
 
-
-
-
         </section>
 
-
-
     );
-
 
 }
