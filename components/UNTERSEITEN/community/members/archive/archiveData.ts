@@ -240,121 +240,151 @@ export function getArchiveGroups():ArchiveGroup[] {
 
 
         /*
-        ============================================
-        STABSOFFIZIERE
-        ============================================
-        */
+============================================
+STABSOFFIZIERE
+============================================
+*/
 
 
-        {
-
-            id:"stabsoffiziere",
-
-            title:"Stabsoffiziere",
-
-            theme:"stabsoffiziere",
+{
 
 
-            members:
+    id:"stabsoffiziere",
 
-                members.filter(
 
-                    member => {
+    title:"Stabsoffiziere",
+
+
+    theme:"stabsoffiziere",
 
 
 
-                        if(member.prestige > 0)
-
-                            return false;
+    members:
 
 
+        members.filter(
 
-                        const rank =
 
-                            ServiceRecord.rank(
-
-                                member.rank
-
-                            );
+            member => {
 
 
 
-                        return (
+                if(member.prestige > 0)
 
-                            rank?.category === "stabsoffiziere"
-
-                        );
-
-                    }
-
-                )
-
-        },
+                    return false;
 
 
 
 
 
+                const rank =
+
+                    ServiceRecord.rank(
+
+                        member.rank
+
+                    );
 
 
+
+
+
+                return (
+
+
+                    rank?.category === "offiziere"
+
+
+                    &&
+
+
+                    rank.level >= 80
+
+
+
+                );
+
+
+            }
+
+
+        )
+
+
+},
         /*
-        ============================================
-        OFFIZIERE
-        ============================================
-        */
+============================================
+OFFIZIERE
+============================================
+*/
 
 
-        {
-
-            id:"offiziere",
-
-            title:"Offiziere",
-
-            theme:"offiziere",
+{
 
 
-            members:
+    id:"offiziere",
 
-                members.filter(
 
-                    member => {
+    title:"Offiziere",
+
+
+    theme:"offiziere",
 
 
 
-                        if(member.prestige > 0)
-
-                            return false;
+    members:
 
 
+        members.filter(
 
-                        const rank =
 
-                            ServiceRecord.rank(
-
-                                member.rank
-
-                            );
+            member => {
 
 
 
-                        return (
+                if(member.prestige > 0)
 
-                            rank?.category === "offiziere"
-
-                        );
-
-                    }
-
-                )
-
-        },
+                    return false;
 
 
 
 
 
+                const rank =
+
+                    ServiceRecord.rank(
+
+                        member.rank
+
+                    );
 
 
+
+
+
+                return (
+
+
+                    rank?.category === "offiziere"
+
+
+                    &&
+
+
+                    rank.level < 80
+
+
+
+                );
+
+
+            }
+
+
+        )
+
+
+},
         /*
         ============================================
         UNTEROFFIZIERE MIT PORTEPEE
