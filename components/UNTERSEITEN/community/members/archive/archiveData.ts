@@ -1,182 +1,216 @@
-import { members } from "../data";
+/**
+ * ============================================
+ * BloodyArmy
+ * ============================================
+ *
+ * Project:
+ * BloodyArmy Website
+ *
+ * File:
+ * archiveData.ts
+ *
+ * Description:
+ * Archiv Gruppen für Service Records.
+ *
+ * ============================================
+ */
 
-import { archiveOrder } from "./archiveOrder";
+
+import {
+
+    members
+
+} from "../data";
 
 
 
-export type ArchiveGroup = {
+import type {
+
+    ServiceRecordMember
+
+} from "@/types/service-record";
+
+
+
+
+
+
+
+export interface ArchiveGroup {
+
 
     id:string;
 
+
     title:string;
+
 
     theme:string;
 
-    members:any[];
 
-};
+    members:ServiceRecordMember[];
 
 
+}
 
 
 
-const archiveTitles:Record<string,string> = {
 
 
-    prestigeX:"PRESTIGE X",
 
-    prestigeIX:"PRESTIGE IX",
 
-    prestigeVIII:"PRESTIGE VIII",
 
-    prestigeVII:"PRESTIGE VII",
 
-    prestigeVI:"PRESTIGE VI",
+export function getArchiveGroups():ArchiveGroup[] {
 
-    prestigeV:"PRESTIGE V",
 
-    prestigeIV:"PRESTIGE IV",
 
-    prestigeIII:"PRESTIGE III",
+    return [
 
-    prestigeII:"PRESTIGE II",
 
-    prestigeI:"PRESTIGE I",
+        {
 
 
-    generale:"GENERALE",
+            id:"founder",
 
-    stabsoffiziere:"STABSOFFIZIERE",
 
-    offiziere:"OFFIZIERE",
+            title:"Founder",
 
-    portepee:"PORTEPEE",
 
-    unteroffiziere:"UNTEROFFIZIERE",
-
-    mannschaften:"MANNSCHAFTEN",
-
-    zivilisten:"ZIVILISTEN",
-
-};
-
-
-
-
-
-export function getArchiveGroups():ArchiveGroup[]{
-
-
-    const groups:Record<string,any[]> = {};
-
-
-
-    members.forEach((member)=>{
-
-
-        /*
-            Founder nicht ins Archiv
-        */
-
-
-        if(
-
-            member.badge?.title === "FOUNDER"
-
-        ){
-
-            return;
-
-        }
-
-
-
-
-        let key:string;
-
-
-
-        /*
-            Prestige vor Dienstgrad
-        */
-
-
-        if(member.prestige?.key){
-
-
-            key = member.prestige.key;
-
-
-        }
-
-
-
-        else {
-
-
-            key = member.badge.theme;
-
-
-        }
-
-
-
-
-        if(!groups[key]){
-
-
-            groups[key]=[];
-
-        }
-
-
-
-
-        groups[key].push(member);
-
-
-    });
-
-
-
-
-
-    return archiveOrder
-
-
-        .filter(
-
-            key =>
-
-            groups[key]
-
-            &&
-
-            groups[key].length > 0
-
-        )
-
-
-        .map((key)=>({
-
-
-            id:key,
-
-
-            title:
-
-                archiveTitles[key],
-
-
-            theme:key,
+            theme:"founder",
 
 
             members:
 
-                groups[key],
+                members.filter(
+
+                    member =>
+
+                        member.prestige === 10
+
+                )
 
 
-        }));
+        },
 
+
+
+
+
+        {
+
+
+            id:"bloodyArmy",
+
+
+            title:"BloodyArmy",
+
+
+            theme:"bloodyArmy",
+
+
+            members:
+
+                members.filter(
+
+                    member =>
+
+                        member.prestige === 3
+
+                )
+
+
+        },
+
+
+
+
+
+        {
+
+
+            id:"canadianArmy",
+
+
+            title:"Canadian Army",
+
+
+            theme:"canadianArmy",
+
+
+            members:
+
+                members.filter(
+
+                    member =>
+
+                        member.prestige === 2
+
+                )
+
+
+        },
+
+
+
+
+
+        {
+
+
+            id:"unitedStates",
+
+
+            title:"United States Forces",
+
+
+            theme:"unitedStates",
+
+
+            members:
+
+                members.filter(
+
+                    member =>
+
+                        member.prestige === 1
+
+                )
+
+
+        },
+
+
+
+
+
+        {
+
+
+            id:"bundeswehr",
+
+
+            title:"Bundeswehr / Zivilisten",
+
+
+            theme:"bundeswehr",
+
+
+            members:
+
+                members.filter(
+
+                    member =>
+
+                        member.prestige === 0
+
+                )
+
+
+        }
+
+
+
+    ];
 
 }

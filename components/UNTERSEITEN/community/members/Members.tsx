@@ -6,16 +6,28 @@ import styles from "./Members.module.css";
 
 import MembersHeader from "./MembersHeader";
 
+
 import FounderCard from "./FounderCard";
 
+
+import MemberGroups from "./MemberGroups";
+
+
 import PersonnelArchive from "./archive/PersonnelArchive";
+
+
+
+
 
 
 
 export default function Members(){
 
 
+
     return (
+
+
 
         <section className={styles.section}>
 
@@ -27,6 +39,8 @@ export default function Members(){
 
 
 
+
+
                 <div className={styles.founderWrapper}>
 
 
@@ -34,6 +48,13 @@ export default function Members(){
 
 
                 </div>
+
+
+
+
+
+                <MemberGroups />
+
 
 
 
@@ -51,7 +72,10 @@ export default function Members(){
             </div>
 
 
+
         </section>
+
+
 
     );
 

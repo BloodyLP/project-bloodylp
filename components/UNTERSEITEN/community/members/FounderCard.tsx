@@ -1,11 +1,17 @@
 "use client";
 
 
-import MemberCard from "./MemberCard";
-
-import { members } from "./data";
-
 import styles from "./FounderCard.module.css";
+
+
+import {
+
+    members
+
+} from "./data";
+
+
+
 
 
 
@@ -13,11 +19,12 @@ import styles from "./FounderCard.module.css";
 export default function FounderCard(){
 
 
+
     const founder = members.find(
 
-        (member)=>
+        member =>
 
-            member.badge?.title === "FOUNDER"
+            member.prestige === 10
 
     );
 
@@ -25,24 +32,25 @@ export default function FounderCard(){
 
     if(!founder){
 
+
         return null;
 
+
     }
-
-
 
 
 
     return (
 
 
-        <section className={styles.wrapper}>
+        <div className={styles.card}>
 
 
-            <div className={styles.commandLabel}>
+
+            <div className={styles.header}>
 
 
-                COMMAND PROFILE
+                FOUNDER
 
 
             </div>
@@ -51,23 +59,55 @@ export default function FounderCard(){
 
 
 
-            <div className={styles.founderCard}>
+            <div className={styles.content}>
 
 
-                <MemberCard
+                <img
 
+                    src={founder.avatar}
 
-                    {...founder}
+                    alt={founder.name}
 
+                    className={styles.avatar}
 
                 />
 
 
+
+
+
+                <div className={styles.info}>
+
+
+                    <h2>
+
+
+                        {founder.name}
+
+
+                    </h2>
+
+
+
+
+                    <p>
+
+
+                        {founder.rank}
+
+
+                    </p>
+
+
+
+                </div>
+
+
             </div>
 
 
 
-        </section>
+        </div>
 
 
     );
