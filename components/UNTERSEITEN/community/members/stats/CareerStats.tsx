@@ -3,6 +3,7 @@
 
 import styles from "./CareerStats.module.css";
 
+
 import type {
 
     CareerStatsData,
@@ -10,6 +11,9 @@ import type {
     SeasonStats,
 
 } from "./types";
+
+
+import { teams } from "@/data/service-record/teams";
 
 
 
@@ -86,6 +90,13 @@ function StatsTable({
 
                     <span>
 
+                        TEAM
+
+                    </span>
+
+
+                    <span>
+
                         SP
 
                     </span>
@@ -136,15 +147,7 @@ function StatsTable({
 
                 {
 
-
-                    rows.length > 0
-
-
-                    ?
-
-
                     rows.map((season)=>(
-
 
 
                         <div
@@ -168,6 +171,54 @@ function StatsTable({
 
 
 
+
+
+
+
+                            <div className={styles.team}>
+
+
+                                {
+
+                                    season.team && teams[season.team]
+
+                                    ?
+
+                                    <img
+
+                                        src={
+
+                                            teams[season.team].logo
+
+                                        }
+
+                                        alt={
+
+                                            teams[season.team].name
+
+                                        }
+
+                                    />
+
+                                    :
+
+                                    <span>
+
+                                        -
+
+                                    </span>
+
+                                }
+
+
+                            </div>
+
+
+
+
+
+
+
                             <span>
 
                                 {
@@ -185,6 +236,10 @@ function StatsTable({
                                 }
 
                             </span>
+
+
+
+
 
 
 
@@ -208,6 +263,10 @@ function StatsTable({
 
 
 
+
+
+
+
                             <span>
 
                                 {
@@ -225,6 +284,10 @@ function StatsTable({
                                 }
 
                             </span>
+
+
+
+
 
 
 
@@ -248,7 +311,13 @@ function StatsTable({
 
                             </span>
 
-                                                        <span>
+
+
+
+
+
+
+                            <span>
 
 
                                 {
@@ -261,7 +330,6 @@ function StatsTable({
 
 
                                     (
-
 
                                         (season.playoffPlusMinus ?? 0) > 0
 
@@ -318,27 +386,19 @@ function StatsTable({
 
                             <span>
 
-
                                 {
-
 
                                     playoff
 
-
                                     ?
-
 
                                     season.playoffPenaltyMinutes ?? 0
 
-
                                     :
-
 
                                     season.penaltyMinutes
 
-
                                 }
-
 
                             </span>
 
@@ -351,22 +411,6 @@ function StatsTable({
 
 
                     ))
-
-
-
-                    :
-
-
-
-                    <div className={styles.emptyRow}>
-
-
-                        KEINE DATEN
-
-
-                    </div>
-
-
 
                 }
 
@@ -422,7 +466,6 @@ export default function CareerStats({
 
                 games:
 
-
                     acc.games
 
                     +
@@ -438,7 +481,6 @@ export default function CareerStats({
 
 
                 goals:
-
 
                     acc.goals
 
@@ -456,7 +498,6 @@ export default function CareerStats({
 
                 assists:
 
-
                     acc.assists
 
                     +
@@ -472,7 +513,6 @@ export default function CareerStats({
 
 
                 points:
-
 
                     acc.points
 
@@ -490,7 +530,6 @@ export default function CareerStats({
 
                 plusMinus:
 
-
                     acc.plusMinus
 
                     +
@@ -506,7 +545,6 @@ export default function CareerStats({
 
 
                 penaltyMinutes:
-
 
                     acc.penaltyMinutes
 
@@ -554,8 +592,14 @@ export default function CareerStats({
 
 
     );
-    
-        return (
+
+
+
+
+
+
+
+    return (
 
 
 
@@ -564,12 +608,9 @@ export default function CareerStats({
 
             <StatsTable
 
-
                 title="REGULAR SEASON"
 
-
                 rows={seasons}
-
 
             />
 
@@ -581,19 +622,13 @@ export default function CareerStats({
 
             <StatsTable
 
-
                 title="PLAYOFFS"
-
 
                 rows={seasons}
 
-
-                playoff={true}
-
+                playoff
 
             />
-
-
 
 
 
@@ -792,10 +827,7 @@ export default function CareerStats({
 
 
 
-
             </section>
-
-
 
 
 

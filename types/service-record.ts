@@ -26,25 +26,62 @@ import type { PositionId } from "@/data/service-record/positions";
 
 
 
-export interface CareerSeasonStats {
+
+
+
+
+export type TeamType =
+
+
+    | "BloodyArmy"
+
+
+    | "Young Army";
+
+
+
+
+
+
+
+
+
+export type CareerSeasonStats = {
+
+
+
+    season?:string;
+
 
 
     year:string;
 
 
+
+    team:TeamType;
+
+
+
+
+
     games:number;
+
 
 
     goals:number;
 
 
+
     assists:number;
+
 
 
     points:number;
 
 
+
     plusMinus:number;
+
 
 
     penaltyMinutes:number;
@@ -52,46 +89,38 @@ export interface CareerSeasonStats {
 
 
 
-    playoffGames:number;
 
-
-    playoffGoals:number;
-
-
-    playoffAssists:number;
-
-
-    playoffPoints:number;
-
-
-    playoffPlusMinus:number;
-
-
-    playoffPenaltyMinutes:number;
+    playoffGames?:number;
 
 
 
+    playoffGoals?:number;
 
-    titles:string[];
 
 
-}
+    playoffAssists?:number;
 
+
+
+    playoffPoints?:number;
+
+
+
+    playoffPlusMinus?:number;
+
+
+
+    playoffPenaltyMinutes?:number;
 
 
 
 
 
+    titles?:string[];
 
 
 
-export interface CareerStats {
-
-
-    seasons:CareerSeasonStats[];
-
-
-}
+};
 
 
 
@@ -103,155 +132,199 @@ export interface CareerStats {
 
 export interface ServiceRecordMember {
 
+
+
     /**
      * Interne UUID
      */
-    id: string;
+    id:string;
+
+
 
 
 
     /**
      * URL-Slug
      */
-    slug: string;
+    slug:string;
+
+
 
 
 
     /**
      * BA-000001
      */
-    recordNumber: string;
+    recordNumber:string;
+
+
 
 
 
     /**
      * Communityname
      */
-    name: string;
+    name:string;
+
+
 
 
 
     /**
      * Avatar
      */
-    avatar: string;
+    avatar:string;
+
+
 
 
 
     /**
      * Dienstgrad
      */
-    rank: RankId;
+    rank:RankId;
+
+
 
 
 
     /**
      * Organisation
      */
-    organization: OrganizationId;
+    organization:OrganizationId;
+
+
 
 
 
     /**
      * Position
      */
-    position: PositionId;
+    position:PositionId;
+
+
 
 
 
     /**
      * Reihe
      */
-    line: number;
+    line:number;
+
+
 
 
 
     /**
      * Eintritt
      */
-    enlisted: string;
+    enlisted:string;
+
+
 
 
 
     /**
      * Prestige-Level
-     *
-     * Werte:
-     * 1 - 10
      */
-    prestige: number;
+    prestige:number;
+
+
 
 
 
     /**
      * Patreon-Level
-     *
-     * 0 = kein Patreon
      */
-    patreon: number;
+    patreon:number;
+
+
 
 
 
     /**
      * Aktiv
      */
-    active: boolean;
+    active:boolean;
+
+
 
 
 
     /**
-     * Mitglied sichtbar
+     * Sichtbar
      */
-    visible: boolean;
+    visible:boolean;
+
+
 
 
 
     /**
      * Auszeichnungen
      */
-    decorations: string[];
+    decorations:string[];
+
+
 
 
 
     /**
      * Ordensbänder
      */
-    ribbons: string[];
+    ribbons:string[];
+
+
 
 
 
     /**
      * Medaillen
      */
-    medals: string[];
+    medals:string[];
+
+
 
 
 
     /**
      * Abzeichen
      */
-    badges: string[];
+    badges:string[];
+
+
 
 
 
     /**
      * Erfolge
      */
-    achievements: string[];
+    achievements:string[];
+
+
 
 
 
     /**
-     * Karriere Statistiken
+     * Karriere Statistik
      */
-    stats?: CareerStats;
+    stats?:{
+
+
+        seasons:CareerSeasonStats[];
+
+
+    };
+
+
 
 
 
     /**
      * Bemerkungen
      */
-    remarks?: string;
+    remarks?:string;
+
 
 
 }

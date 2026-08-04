@@ -178,14 +178,13 @@ export const bloodylp: ServiceRecordMember = {
             {
                 year:"2019",
 
-
+    team:"BloodyArmy",
                 games:82,
                 goals:46,
                 assists:32,
                 points:78,
                 plusMinus:48,
                 penaltyMinutes:21,
-
 
                 playoffGames:19,
                 playoffGoals:15,
@@ -206,98 +205,13 @@ export const bloodylp: ServiceRecordMember = {
             {
                 year:"2020",
 
-
+    team:"BloodyArmy",
                 games:82,
-                goals:60,
-                assists:31,
-                points:91,
-                plusMinus:73,
+                goals:37,
+                assists:30,
+                points:67,
+                plusMinus:26,
                 penaltyMinutes:23,
-
-
-                playoffGames:18,
-                playoffGoals:10,
-                playoffAssists:8,
-                playoffPoints:18,
-                playoffPlusMinus:14,
-                playoffPenaltyMinutes:0,
-
-
-                titles:[]
-
-            },
-
-
-
-
-
-            {
-                year:"2021",
-
-
-                games:82,
-                goals:52,
-                assists:19,
-                points:71,
-                plusMinus:42,
-                penaltyMinutes:29,
-
-
-                playoffGames:13,
-                playoffGoals:4,
-                playoffAssists:4,
-                playoffPoints:8,
-                playoffPlusMinus:1,
-                playoffPenaltyMinutes:4,
-
-
-                titles:[]
-
-            },
-
-
-
-
-
-            {
-                year:"2022",
-
-
-                games:82,
-                goals:34,
-                assists:28,
-                points:62,
-                plusMinus:30,
-                penaltyMinutes:31,
-
-
-                playoffGames:12,
-                playoffGoals:4,
-                playoffAssists:10,
-                playoffPoints:14,
-                playoffPlusMinus:3,
-                playoffPenaltyMinutes:2,
-
-
-                titles:[]
-
-            },
-
-
-
-
-
-            {
-                year:"2023",
-
-
-                games:82,
-                goals:26,
-                assists:25,
-                points:51,
-                plusMinus:17,
-                penaltyMinutes:40,
-
 
                 playoffGames:21,
                 playoffGoals:4,
@@ -316,16 +230,69 @@ export const bloodylp: ServiceRecordMember = {
 
 
             {
-                year:"2024",
+                year:"2021",
 
-
+    team:"BloodyArmy",
                 games:82,
-                goals:45,
+                goals:26,
                 assists:25,
-                points:70,
-                plusMinus:31,
-                penaltyMinutes:68,
+                points:51,
+                plusMinus:17,
+                penaltyMinutes:40,
 
+                playoffGames:12,
+                playoffGoals:4,
+                playoffAssists:10,
+                playoffPoints:14,
+                playoffPlusMinus:3,
+                playoffPenaltyMinutes:2,
+
+
+                titles:[]
+
+            },
+
+
+
+
+
+            {
+                year:"2022",
+
+    team:"BloodyArmy",
+                games:82,
+                goals:34,
+                assists:28,
+                points:62,
+                plusMinus:30,
+                penaltyMinutes:31,
+
+                playoffGames:24,
+                playoffGoals:12,
+                playoffAssists:5,
+                playoffPoints:17,
+                playoffPlusMinus:10,
+                playoffPenaltyMinutes:17,
+
+
+                titles:[]
+
+            },
+
+
+
+
+
+            {
+                year:"2023",
+
+    team:"BloodyArmy",
+                games:82,
+                goals:52,
+                assists:19,
+                points:71,
+                plusMinus:42,
+                penaltyMinutes:29,
 
                 playoffGames:13,
                 playoffGoals:4,
@@ -344,23 +311,49 @@ export const bloodylp: ServiceRecordMember = {
 
 
             {
+                year:"2024",
+
+    team:"BloodyArmy",
+                games:82,
+                goals:45,
+                assists:23,
+                points:68,
+                plusMinus:41,
+                penaltyMinutes:14,
+
+                playoffGames:19,
+                playoffGoals:12,
+                playoffAssists:8,
+                playoffPoints:20,
+                playoffPlusMinus:6,
+                playoffPenaltyMinutes:6,
+
+
+                titles:[]
+
+            },
+
+
+
+
+
+            {
                 year:"2025",
 
-
+    team:"BloodyArmy",
                 games:82,
-                goals:37,
-                assists:30,
-                points:67,
-                plusMinus:26,
+                goals:60,
+                assists:31,
+                points:91,
+                plusMinus:73,
                 penaltyMinutes:23,
 
-
-                playoffGames:24,
-                playoffGoals:12,
-                playoffAssists:5,
-                playoffPoints:17,
-                playoffPlusMinus:10,
-                playoffPenaltyMinutes:17,
+                playoffGames:18,
+                playoffGoals:10,
+                playoffAssists:8,
+                playoffPoints:18,
+                playoffPlusMinus:17,
+                playoffPenaltyMinutes:8,
 
 
                 titles:[]

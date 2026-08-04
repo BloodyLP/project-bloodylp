@@ -28,7 +28,7 @@ function calculateTotal(
         season:"GESAMT",
 
 
-
+team:"BloodyArmy",
 
 
         games:

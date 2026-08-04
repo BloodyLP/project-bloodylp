@@ -1,3 +1,81 @@
+export type TeamType =
+
+    | "BloodyArmy"
+
+    | "Young Army";
+
+
+
+
+
+
+
+
+
+export type CareerSeasonStats = {
+
+
+    season?:string;
+
+
+    year:string;
+
+
+    team:TeamType;
+
+
+
+    games:number;
+
+
+    goals:number;
+
+
+    assists:number;
+
+
+    points:number;
+
+
+    plusMinus:number;
+
+
+    penaltyMinutes:number;
+
+
+
+    playoffGames?:number;
+
+
+    playoffGoals?:number;
+
+
+    playoffAssists?:number;
+
+
+    playoffPoints?:number;
+
+
+    playoffPlusMinus?:number;
+
+
+    playoffPenaltyMinutes?:number;
+
+
+
+    titles?:string[];
+
+
+};
+
+
+
+
+
+
+
+
+
 export type SeasonStats = {
 
 
@@ -5,6 +83,9 @@ export type SeasonStats = {
 
 
     year?:string;
+
+
+    team:TeamType;
 
 
 
