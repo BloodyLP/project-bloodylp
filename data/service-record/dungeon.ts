@@ -77,7 +77,7 @@ export const dungeon: ServiceRecordMember = {
     /**
      * Dienstgrad
      */
-    rank:"generalOfTheArmy",
+    rank:"us-navy-master-chief-petty-officer",
 
 
 
@@ -546,14 +546,6 @@ export const dungeon: ServiceRecordMember = {
 
 
     },
-
-
-
-
-
-
-
-
 
     /**
      * Bemerkung

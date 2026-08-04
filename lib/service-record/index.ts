@@ -1,23 +1,85 @@
-import { RANKS } from "@/data/service-record/ranks";
-import { ORGANIZATIONS } from "@/data/service-record/organizations";
-import { POSITIONS } from "@/data/service-record/positions";
+/**
+ * ============================================
+ * BloodyArmy
+ * ============================================
+ *
+ * Service Record
+ *
+ * Central Data Export
+ *
+ * ============================================
+ */
 
-import type { RankId } from "@/data/service-record/ranks";
-import type { OrganizationId } from "@/data/service-record/organizations";
-import type { PositionId } from "@/data/service-record/positions";
 
-export const ServiceRecord = {
+import {
 
-    rank(id: RankId) {
-        return RANKS[id];
-    },
+    rankDatabase
 
-    organization(id: OrganizationId) {
-        return ORGANIZATIONS[id];
-    },
+} from "@/data/service-record/ranks";
 
-    position(id: PositionId) {
-        return POSITIONS[id];
-    }
+
+import {
+
+    ORGANIZATIONS
+
+} from "@/data/service-record/organizations";
+
+
+import {
+
+    POSITIONS
+
+} from "@/data/service-record/positions";
+
+
+
+
+
+
+
+/*
+================================================
+RANKS
+================================================
+*/
+
+
+export const RANKS = rankDatabase;
+
+
+
+
+
+
+
+/*
+================================================
+ORGANIZATIONS
+================================================
+*/
+
+
+export {
+
+    ORGANIZATIONS
+
+};
+
+
+
+
+
+
+
+/*
+================================================
+POSITIONS
+================================================
+*/
+
+
+export {
+
+    POSITIONS
 
 };
