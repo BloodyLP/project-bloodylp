@@ -36,6 +36,14 @@ import {
 
 
 
+import {
+
+    MEMBERS
+
+} from "@/data/service-record/members";
+
+
+
 import type {
 
     MilitaryRank,
@@ -66,15 +74,6 @@ import type {
 
 
 
-
-
-/*
-================================================
-RANKS
-================================================
-*/
-
-
 export const RANKS = rankDatabase;
 
 
@@ -83,13 +82,6 @@ export const RANKS = rankDatabase;
 
 
 
-
-
-/*
-================================================
-RANK LOOKUP
-================================================
-*/
 
 
 export function rank(
@@ -108,11 +100,9 @@ export function rank(
 
 
 
-    if(foundRank) {
-
+    if(foundRank){
 
         return foundRank;
-
 
     }
 
@@ -123,21 +113,15 @@ export function rank(
 
         id:"unknown",
 
-
         name:"Unknown",
-
 
         branch:"bloodyArmy",
 
-
         prestige:0,
-
 
         category:"command",
 
-
         level:0,
-
 
         insignia:""
 
@@ -155,21 +139,15 @@ export function rank(
 
 
 
-/*
-================================================
-ORGANIZATION LOOKUP
-================================================
-*/
-
-
 export function organization(
 
     id:OrganizationId
 
-) {
+){
 
 
     return ORGANIZATIONS[id];
+
 
 }
 
@@ -179,23 +157,17 @@ export function organization(
 
 
 
-
-
-/*
-================================================
-POSITION LOOKUP
-================================================
-*/
 
 
 export function position(
 
     id:PositionId
 
-) {
+){
 
 
     return POSITIONS[id];
+
 
 }
 
@@ -205,13 +177,6 @@ export function position(
 
 
 
-
-
-/*
-================================================
-LEGACY SERVICE RECORD OBJECT
-================================================
-*/
 
 
 export const ServiceRecord = {
@@ -224,6 +189,9 @@ export const ServiceRecord = {
 
 
     POSITIONS,
+
+
+    MEMBERS,
 
 
     rank,

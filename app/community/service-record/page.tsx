@@ -15,7 +15,7 @@
 
 import { ServiceRecord } from "@/components/community/service-record";
 
-import { bloodylp } from "@/data/service-record/bloodylp";
+import { bloodylp } from "@/data/service-record/members/bloodylp";
 
 
 

@@ -5,7 +5,7 @@ import {
 } from "./stats/data";
 
 
-import { bloodylp } from "@/data/service-record/bloodylp";
+import { bloodylp } from "@/data/service-record/members/bloodylp";
 
 
 
