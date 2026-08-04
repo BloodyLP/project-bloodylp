@@ -227,7 +227,7 @@ rank:"canadian-army-captain",
 
 
 
-                games:18,
+                games:0,
 
                 goals:0,
 
@@ -237,11 +237,11 @@ rank:"canadian-army-captain",
 
                 plusMinus:0,
 
-                penaltyMinutes:2,
+                penaltyMinutes:0,
 
 
 
-                playoffGames:4,
+                playoffGames:0,
 
                 playoffGoals:0,
 
@@ -277,7 +277,7 @@ rank:"canadian-army-captain",
 
 
 
-                games:32,
+                games:0,
 
                 goals:0,
 
@@ -287,11 +287,11 @@ rank:"canadian-army-captain",
 
                 plusMinus:0,
 
-                penaltyMinutes:4,
+                penaltyMinutes:0,
 
 
 
-                playoffGames:8,
+                playoffGames:0,
 
                 playoffGoals:0,
 
@@ -301,7 +301,7 @@ rank:"canadian-army-captain",
 
                 playoffPlusMinus:0,
 
-                playoffPenaltyMinutes:2,
+                playoffPenaltyMinutes:0,
 
 
 
@@ -327,7 +327,7 @@ rank:"canadian-army-captain",
 
 
 
-                games:41,
+                games:0,
 
                 goals:0,
 
@@ -337,11 +337,11 @@ rank:"canadian-army-captain",
 
                 plusMinus:0,
 
-                penaltyMinutes:6,
+                penaltyMinutes:0,
 
 
 
-                playoffGames:12,
+                playoffGames:0,
 
                 playoffGoals:0,
 
@@ -351,7 +351,7 @@ rank:"canadian-army-captain",
 
                 playoffPlusMinus:0,
 
-                playoffPenaltyMinutes:2,
+                playoffPenaltyMinutes:0,
 
 
 
@@ -377,7 +377,7 @@ rank:"canadian-army-captain",
 
 
 
-                games:46,
+                games:0,
 
                 goals:0,
 
@@ -391,7 +391,7 @@ rank:"canadian-army-captain",
 
 
 
-                playoffGames:14,
+                playoffGames:0,
 
                 playoffGoals:0,
 
@@ -401,7 +401,7 @@ rank:"canadian-army-captain",
 
                 playoffPlusMinus:0,
 
-                playoffPenaltyMinutes:2,
+                playoffPenaltyMinutes:0,
 
 
 
@@ -427,7 +427,7 @@ rank:"canadian-army-captain",
 
 
 
-                games:52,
+                games:0,
 
                 goals:0,
 
@@ -437,11 +437,11 @@ rank:"canadian-army-captain",
 
                 plusMinus:0,
 
-                penaltyMinutes:6,
+                penaltyMinutes:0,
 
 
 
-                playoffGames:16,
+                playoffGames:0,
 
                 playoffGoals:0,
 
@@ -451,7 +451,7 @@ rank:"canadian-army-captain",
 
                 playoffPlusMinus:0,
 
-                playoffPenaltyMinutes:4,
+                playoffPenaltyMinutes:0,
 
 
 
@@ -477,21 +477,21 @@ rank:"canadian-army-captain",
 
 
 
-                games:58,
+                games:0,
 
                 goals:0,
 
-                assists:1,
+                assists:0,
 
-                points:1,
+                points:0,
 
                 plusMinus:0,
 
-                penaltyMinutes:10,
+                penaltyMinutes:0,
 
 
 
-                playoffGames:18,
+                playoffGames:0,
 
                 playoffGoals:0,
 
@@ -501,7 +501,7 @@ rank:"canadian-army-captain",
 
                 playoffPlusMinus:0,
 
-                playoffPenaltyMinutes:4,
+                playoffPenaltyMinutes:0,
 
 
 
@@ -527,31 +527,31 @@ rank:"canadian-army-captain",
 
 
 
-                games:61,
+                games:0,
 
                 goals:0,
 
-                assists:2,
+                assists:0,
 
-                points:2,
+                points:0,
 
                 plusMinus:0,
 
-                penaltyMinutes:8,
+                penaltyMinutes:0,
 
 
 
-                playoffGames:20,
+                playoffGames:0,
 
                 playoffGoals:0,
 
-                playoffAssists:1,
+                playoffAssists:0,
 
-                playoffPoints:1,
+                playoffPoints:0,
 
                 playoffPlusMinus:0,
 
-                playoffPenaltyMinutes:2,
+                playoffPenaltyMinutes:0,
 
 
 

@@ -14,13 +14,11 @@
  * ============================================
  */
 
-
 import type {
 
     MilitaryRank
 
 } from "../types";
-
 
 
 
@@ -40,7 +38,7 @@ MANNSCHAFTEN
 
 {
 
-    id:"marine-matrose",
+    id:"bundeswehr-marine-matrose",
 
     name:"Matrose",
 
@@ -58,7 +56,7 @@ MANNSCHAFTEN
 
 {
 
-    id:"marine-gefreiter",
+    id:"bundeswehr-marine-gefreiter",
 
     name:"Gefreiter",
 
@@ -76,7 +74,7 @@ MANNSCHAFTEN
 
 {
 
-    id:"marine-obergfreiter",
+    id:"bundeswehr-marine-obergefreiter",
 
     name:"Obergefreiter",
 
@@ -94,7 +92,7 @@ MANNSCHAFTEN
 
 {
 
-    id:"marine-hauptgefreiter",
+    id:"bundeswehr-marine-hauptgefreiter",
 
     name:"Hauptgefreiter",
 
@@ -112,7 +110,7 @@ MANNSCHAFTEN
 
 {
 
-    id:"marine-stabsgefreiter",
+    id:"bundeswehr-marine-stabsgefreiter",
 
     name:"Stabsgefreiter",
 
@@ -130,7 +128,7 @@ MANNSCHAFTEN
 
 {
 
-    id:"marine-oberstabsgefreiter",
+    id:"bundeswehr-marine-oberstabsgefreiter",
 
     name:"Oberstabsgefreiter",
 
@@ -148,7 +146,7 @@ MANNSCHAFTEN
 
 {
 
-    id:"marine-korporal",
+    id:"bundeswehr-marine-korporal",
 
     name:"Korporal",
 
@@ -166,7 +164,7 @@ MANNSCHAFTEN
 
 {
 
-    id:"marine-stabskorporal",
+    id:"bundeswehr-marine-stabskorporal",
 
     name:"Stabskorporal",
 
@@ -194,7 +192,7 @@ UNTEROFFIZIERE OHNE PORTEPEE
 
 {
 
-    id:"marine-maat",
+    id:"bundeswehr-marine-maat",
 
     name:"Maat",
 
@@ -212,7 +210,7 @@ UNTEROFFIZIERE OHNE PORTEPEE
 
 {
 
-    id:"marine-obermaat",
+    id:"bundeswehr-marine-obermaat",
 
     name:"Obermaat",
 
@@ -240,7 +238,7 @@ UNTEROFFIZIERE MIT PORTEPEE
 
 {
 
-    id:"marine-bootsmann",
+    id:"bundeswehr-marine-bootsmann",
 
     name:"Bootsmann",
 
@@ -258,7 +256,7 @@ UNTEROFFIZIERE MIT PORTEPEE
 
 {
 
-    id:"marine-oberbootsmann",
+    id:"bundeswehr-marine-oberbootsmann",
 
     name:"Oberbootsmann",
 
@@ -276,7 +274,7 @@ UNTEROFFIZIERE MIT PORTEPEE
 
 {
 
-    id:"marine-hauptbootsmann",
+    id:"bundeswehr-marine-hauptbootsmann",
 
     name:"Hauptbootsmann",
 
@@ -294,7 +292,7 @@ UNTEROFFIZIERE MIT PORTEPEE
 
 {
 
-    id:"marine-stabsbootsmann",
+    id:"bundeswehr-marine-stabsbootsmann",
 
     name:"Stabsbootsmann",
 
@@ -312,7 +310,7 @@ UNTEROFFIZIERE MIT PORTEPEE
 
 {
 
-    id:"marine-oberstabsbootsmann",
+    id:"bundeswehr-marine-oberstabsbootsmann",
 
     name:"Oberstabsbootsmann",
 
@@ -340,7 +338,7 @@ OFFIZIERANWÄRTER
 
 {
 
-    id:"marine-seekadett",
+    id:"bundeswehr-marine-seekadett",
 
     name:"Seekadett",
 
@@ -358,7 +356,7 @@ OFFIZIERANWÄRTER
 
 {
 
-    id:"marine-faehnrich-zur-see",
+    id:"bundeswehr-marine-faehnrich-zur-see",
 
     name:"Fähnrich zur See",
 
@@ -376,7 +374,7 @@ OFFIZIERANWÄRTER
 
 {
 
-    id:"marine-oberfaehnrich-zur-see",
+    id:"bundeswehr-marine-oberfaehnrich-zur-see",
 
     name:"Oberfähnrich zur See",
 
@@ -404,7 +402,7 @@ MARINEOFFIZIERE
 
 {
 
-    id:"marine-leutnant-zur-see",
+    id:"bundeswehr-marine-leutnant-zur-see",
 
     name:"Leutnant zur See",
 
@@ -422,7 +420,7 @@ MARINEOFFIZIERE
 
 {
 
-    id:"marine-oberleutnant-zur-see",
+    id:"bundeswehr-marine-oberleutnant-zur-see",
 
     name:"Oberleutnant zur See",
 
@@ -440,7 +438,7 @@ MARINEOFFIZIERE
 
 {
 
-    id:"marine-kapitaenleutnant",
+    id:"bundeswehr-marine-kapitaenleutnant",
 
     name:"Kapitänleutnant",
 
@@ -458,7 +456,7 @@ MARINEOFFIZIERE
 
 {
 
-    id:"marine-stabskapitaenleutnant",
+    id:"bundeswehr-marine-stabskapitaenleutnant",
 
     name:"Stabskapitänleutnant",
 
@@ -472,21 +470,15 @@ MARINEOFFIZIERE
 
 },
 
-
-
-
-
-
 /*
 ================================================
 STABSOFFIZIERE
 ================================================
 */
 
-
 {
 
-    id:"marine-korvettenkapitaen",
+    id:"bundeswehr-marine-korvettenkapitaen",
 
     name:"Korvettenkapitän",
 
@@ -504,7 +496,7 @@ STABSOFFIZIERE
 
 {
 
-    id:"marine-fregattenkapitaen",
+    id:"bundeswehr-marine-fregattenkapitaen",
 
     name:"Fregattenkapitän",
 
@@ -522,7 +514,7 @@ STABSOFFIZIERE
 
 {
 
-    id:"marine-kapitaen-zur-see",
+    id:"bundeswehr-marine-kapitaen-zur-see",
 
     name:"Kapitän zur See",
 
@@ -547,10 +539,9 @@ ADMIRALE
 ================================================
 */
 
-
 {
 
-    id:"marine-flottillenadmiral",
+    id:"bundeswehr-marine-flottillenadmiral",
 
     name:"Flottillenadmiral",
 
@@ -568,7 +559,7 @@ ADMIRALE
 
 {
 
-    id:"marine-konteradmiral",
+    id:"bundeswehr-marine-konteradmiral",
 
     name:"Konteradmiral",
 
@@ -586,7 +577,7 @@ ADMIRALE
 
 {
 
-    id:"marine-vizeadmiral",
+    id:"bundeswehr-marine-vizeadmiral",
 
     name:"Vizeadmiral",
 
@@ -604,7 +595,7 @@ ADMIRALE
 
 {
 
-    id:"marine-admiral",
+    id:"bundeswehr-marine-admiral",
 
     name:"Admiral",
 
@@ -617,7 +608,5 @@ ADMIRALE
     level:29
 
 }
-
-
 
 ];

@@ -76,7 +76,7 @@ MANNSCHAFTEN
 
 {
 
-    id:"bundeswehr-obergfreiter",
+    id:"bundeswehr-obergefreiter",
 
     name:"Obergefreiter",
 
