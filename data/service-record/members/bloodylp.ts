@@ -79,6 +79,7 @@ export const bloodylp: ServiceRecordMember = {
      * Position
      */
     position: "leftWing",
+    playerNumber:"13",
 
 
 

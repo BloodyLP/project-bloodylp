@@ -97,6 +97,7 @@ rank:"canadian-army-captain",
      * Position
      */
     position:"goalie",
+    playerNumber:"33",
 
 
 
@@ -156,10 +157,17 @@ rank:"canadian-army-captain",
 
 
 
-    /**
+     /**
      * Decorations
      */
-    decorations:[],
+    decorations: [
+
+        "stanley-cup",
+
+    ],
+
+    
+    
 
 
 

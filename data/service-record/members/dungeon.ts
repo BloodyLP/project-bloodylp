@@ -96,6 +96,7 @@ export const dungeon: ServiceRecordMember = {
      * Position
      */
     position:"rightWing",
+    playerNumber:"62",
 
 
 

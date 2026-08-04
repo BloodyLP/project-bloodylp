@@ -614,43 +614,27 @@
 
 
 
-.totalGrid div {
-
+.totalCard {
 
     position:relative;
 
-
     overflow:hidden;
-
-
-
-    min-height:95px;
-
-
 
     display:flex;
 
-
     flex-direction:column;
-
 
     justify-content:center;
 
-
     align-items:center;
 
-
+    height:110px;
 
     padding:1rem;
 
-
-
     border-radius:18px;
 
-
-
     background:
-
 
         linear-gradient(
 
@@ -662,16 +646,11 @@
 
         );
 
-
-
     border:
-
 
         1px solid
 
         rgba(255,255,255,.12);
-
-
 
 }
 
@@ -681,34 +660,23 @@
 
 
 
-.totalGrid div::before {
-
+.totalCard::before {
 
     content:"";
 
-
     position:absolute;
-
 
     top:0;
 
-
     left:15%;
-
 
     right:15%;
 
-
     height:2px;
-
-
 
     background:#A3E635;
 
-
-
     opacity:.5;
-
 
 }
 
@@ -720,26 +688,29 @@
 
 .totalGrid span {
 
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:.4rem;
+
+    min-height:32px;
 
     color:#FFFFFF;
 
-
     opacity:.75;
-
-
 
     font-size:.75rem !important;
 
-
     font-weight:950;
-
 
     letter-spacing:.18em;
 
-
     text-transform:uppercase;
 
-
+    text-align:center;
 
 }
 
@@ -751,21 +722,25 @@
 
 .totalGrid strong {
 
+    display:flex;
 
-    margin-top:.35rem;
+    align-items:center;
 
+    justify-content:space-between;
 
+    gap:.4rem;
+
+    flex:1;
+
+    margin-top:.45rem;
 
     color:#FFFFFF;
 
-
-
     font-size:1.7rem !important;
-
 
     font-weight:950;
 
-
+    line-height:1;
 
 }
 
@@ -777,13 +752,7 @@
 
 .highlightTotal {
 
-
-    transform:translateY(-5px);
-
-
-
     background:
-
 
         linear-gradient(
 
@@ -795,23 +764,19 @@
 
         ) !important;
 
-
-
     border:
 
+        2px solid
 
-        1px solid
-
-        rgba(163,230,53,.65) !important;
-
-
+        rgba(163,230,53,.75) !important;
 
     box-shadow:
 
+        0 0 40px rgba(163,230,53,.35);
 
-        0 0 35px rgba(163,230,53,.25);
+    transform:scale(1.02);
 
-
+    z-index:2;
 
 }
 

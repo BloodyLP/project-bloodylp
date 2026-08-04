@@ -638,196 +638,168 @@ export default function CareerStats({
 
             <section className={styles.total}>
 
+    <h3>
 
-                <h3>
+        GESAMT KARRIERE
 
-                    GESAMT KARRIERE
+    </h3>
 
-                </h3>
 
 
+    <div className={styles.totalGrid}>
 
 
+        <div className={styles.totalCard}>
 
 
+            <span>
 
-                <div className={styles.totalGrid}>
+                SPIELE
 
+            </span>
 
-                    <div>
 
+            <strong>
 
-                        <span>
+                {total.games}
 
-                            SPIELE
+            </strong>
 
-                        </span>
 
+        </div>
 
-                        <strong>
 
-                            {total.games}
 
-                        </strong>
 
 
-                    </div>
+        <div className={styles.totalCard}>
 
 
+            <span>
 
+                TORE
 
+            </span>
 
 
+            <strong>
 
-                    <div>
+                {total.goals}
 
+            </strong>
 
-                        <span>
 
-                            TORE
+        </div>
 
-                        </span>
 
 
-                        <strong>
 
-                            {total.goals}
 
-                        </strong>
+        <div className={styles.totalCard}>
 
 
-                    </div>
+            <span>
 
+                ASSISTS
 
+            </span>
 
 
+            <strong>
 
+                {total.assists}
 
+            </strong>
 
-                    <div>
 
+        </div>
 
-                        <span>
 
-                            ASSISTS
 
-                        </span>
 
 
-                        <strong>
+        <div className={`${styles.totalCard} ${styles.highlightTotal}`}>
 
-                            {total.assists}
 
-                        </strong>
+            <span>
 
+                PUNKTE
 
-                    </div>
+            </span>
 
 
+            <strong>
 
+                {total.points}
 
+            </strong>
 
 
+        </div>
 
-                    <div className={styles.highlightTotal}>
 
 
-                        <span>
 
-                            PUNKTE
 
-                        </span>
+        <div className={styles.totalCard}>
 
 
-                        <strong>
+            <span>
 
-                            {total.points}
+                +/-
 
-                        </strong>
+            </span>
 
 
-                    </div>
+            <strong>
 
+                {
 
+                    total.plusMinus > 0
 
+                    ?
 
+                    `+${total.plusMinus}`
 
+                    :
 
+                    total.plusMinus
 
-                    <div>
+                }
 
+            </strong>
 
-                        <span>
 
-                            +/-
+        </div>
 
-                        </span>
 
 
-                        <strong>
 
 
-                            {
+        <div className={styles.totalCard}>
 
 
-                                total.plusMinus > 0
+            <span>
 
+                STRAFMINUTEN
 
-                                ?
+            </span>
 
 
-                                `+${total.plusMinus}`
+            <strong>
 
+                {total.penaltyMinutes}
 
-                                :
+            </strong>
 
 
-                                total.plusMinus
+        </div>
 
 
-                            }
+    </div>
 
 
-                        </strong>
-
-
-                    </div>
-
-
-
-
-
-
-
-                    <div>
-
-
-                        <span>
-
-                            STRAFMINUTEN
-
-                        </span>
-
-
-                        <strong>
-
-                            {total.penaltyMinutes}
-
-                        </strong>
-
-
-                    </div>
-
-
-
-
-
-                </div>
-
-
-
-
-            </section>
+</section>
 
 
 

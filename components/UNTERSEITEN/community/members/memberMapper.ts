@@ -242,17 +242,19 @@ export function mapMemberToCard(
 
             member.stats,
 
-        profile: {
+        profile:{
 
-            position:
+    position:
 
-                position?.title ?? "",
+        position?.title ??
 
-            number:
+        "",
 
-                member.recordNumber
+    number:
 
-        }
+        member.playerNumber
+
+}
 
     };
 

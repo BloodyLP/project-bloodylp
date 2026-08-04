@@ -258,6 +258,15 @@ export interface ServiceRecordMember {
 
 
 
+    
+    /**
+ * Trikotnummer
+ */
+playerNumber:string;
+
+
+
+
 
     /**
      * Reihe
