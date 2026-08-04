@@ -10,47 +10,133 @@
  * Identity
  *
  * Description:
- * Zeigt den Dienstgrad oberhalb
- * des Portraits.
- *
- * Version:
- * MK-IV
+ * Anzeige von Dienstgrad und Organisation.
  *
  * ============================================
  */
 
+
 import styles from "./Identity.module.css";
 
-import { ServiceRecord } from "@/lib/service-record";
 
-import type { RankId } from "@/data/service-record/ranks";
-import type { OrganizationId } from "@/data/service-record/organizations";
+
+import {
+
+    ServiceRecord
+
+} from "@/lib/service-record";
+
+
+
+import type {
+
+    RankId
+
+} from "@/data/service-record/ranks";
+
+
+
+import type {
+
+    OrganizationId
+
+} from "@/data/service-record/organizations";
+
+
+
+
+
+
 
 interface IdentityProps {
 
-    rank: RankId;
 
-    organization: OrganizationId;
+
+    rank:RankId;
+
+
+
+    organization:OrganizationId;
+
+
 
 }
+
+
+
+
+
+
 
 export default function Identity({
 
     rank,
 
-}: IdentityProps) {
+    organization,
+
+}:IdentityProps) {
+
+
 
     const rankData = ServiceRecord.rank(rank);
+
+
+
+    const organizationData = ServiceRecord.organization(
+
+        organization
+
+    );
+
+
 
     return (
 
         <section className={styles.identity}>
 
-            <img
-                src={rankData.insignia}
-                alt={rankData.title}
-                className={styles.insignia}
-            />
+
+
+            {
+                rankData.insignia && (
+
+                    <img
+
+                        src={rankData.insignia}
+
+                        alt={rankData.name}
+
+                        className={styles.insignia}
+
+                    />
+
+                )
+            }
+
+
+
+
+
+            <div className={styles.rank}>
+
+
+                {rankData.name}
+
+
+            </div>
+
+
+
+
+
+            <div className={styles.organization}>
+
+
+                {organizationData.title}
+
+
+            </div>
+
+
 
         </section>
 
