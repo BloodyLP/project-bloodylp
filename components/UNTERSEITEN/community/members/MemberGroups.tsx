@@ -14,122 +14,38 @@ import {
 } from "./data";
 
 
+import {
 
+    mapMemberToCard
 
+} from "./memberMapper";
 
 
+import {
 
+    ServiceRecord
 
+} from "@/lib/service-record";
 
-function getPrestigeTheme(
 
-    prestige:number
 
-){
 
 
 
-    switch(prestige){
 
+type Group = {
 
 
-        case 10:
+    title:string;
 
-            return {
 
-                title:"FOUNDER",
+    key:string;
 
-                theme:"prestigeX"
 
-            };
+    members:any[];
 
 
-
-
-
-        case 3:
-
-            return {
-
-                title:"PRESTIGE III",
-
-                theme:"prestigeIII"
-
-            };
-
-
-
-
-
-        case 2:
-
-            return {
-
-                title:"PRESTIGE II",
-
-                theme:"prestigeII"
-
-            };
-
-
-
-
-
-        case 1:
-
-            return {
-
-                title:"PRESTIGE I",
-
-                theme:"prestigeI"
-
-            };
-
-
-
-
-
-        default:
-
-            return {
-
-                title:"ZIVILIST",
-
-                theme:"zivilisten"
-
-            };
-
-
-
-    }
-
-}
-
-
-
-
-
-
-
-
-
-function getGroup(
-
-    prestige:number
-
-){
-
-
-    return members.filter(
-
-        member =>
-
-            member.prestige === prestige
-
-    );
-
-
-}
+};
 
 
 
@@ -143,59 +59,409 @@ export default function MemberGroups(){
 
 
 
-    const groups = [
+    const groups:Group[] = [
 
 
 
         {
 
-            title:"BloodyArmy",
 
-            prestige:3,
+            title:"PRESTIGE III",
 
-            members:getGroup(3)
+            key:"prestigeIII",
+
+            members:
+
+                members.filter(
+
+                    member =>
+
+                        member.prestige === 3
+
+                )
+
 
         },
 
 
 
+
+
         {
 
-            title:"Canadian Army",
 
-            prestige:2,
+            title:"PRESTIGE II",
 
-            members:getGroup(2)
+            key:"prestigeII",
+
+            members:
+
+                members.filter(
+
+                    member =>
+
+                        member.prestige === 2
+
+                )
+
 
         },
 
 
 
+
+
         {
 
-            title:"United States Forces",
 
-            prestige:1,
+            title:"PRESTIGE I",
 
-            members:getGroup(1)
+            key:"prestigeI",
+
+            members:
+
+                members.filter(
+
+                    member =>
+
+                        member.prestige === 1
+
+                )
+
 
         },
 
 
 
+
+
+
+
+
+
         {
 
-            title:"Bundeswehr / Zivilisten",
 
-            prestige:0,
+            title:"GENERALE",
 
-            members:getGroup(0)
+            key:"generale",
+
+            members:
+
+                members.filter(
+
+                    member => {
+
+
+                        const rank =
+
+                            ServiceRecord.rank(
+
+                                member.rank
+
+                            );
+
+
+                        return (
+
+                            rank?.category === "command"
+
+                        );
+
+
+                    }
+
+
+                )
+
+
+        },
+
+
+
+
+
+
+
+
+
+        {
+
+
+            title:"STABSOFFIZIERE",
+
+            key:"stabsoffiziere",
+
+            members:
+
+                members.filter(
+
+                    member => {
+
+
+                        const rank =
+
+                            ServiceRecord.rank(
+
+                                member.rank
+
+                            );
+
+
+                        return (
+
+                            rank?.category === "offiziere"
+
+                            &&
+
+                            rank.level >= 80
+
+                        );
+
+
+                    }
+
+
+                )
+
+
+        },
+
+
+
+
+
+
+
+
+
+        {
+
+
+            title:"OFFIZIERE",
+
+            key:"offiziere",
+
+            members:
+
+                members.filter(
+
+                    member => {
+
+
+                        const rank =
+
+                            ServiceRecord.rank(
+
+                                member.rank
+
+                            );
+
+
+                        return (
+
+                            rank?.category === "offiziere"
+
+                            &&
+
+                            rank.level < 80
+
+                        );
+
+
+                    }
+
+
+                )
+
+
+        },
+
+
+
+
+
+
+
+
+
+        {
+
+
+            title:"UNTEROFFIZIERE MIT PORTEPEE",
+
+            key:"portepee",
+
+            members:
+
+                members.filter(
+
+                    member => {
+
+
+                        const rank =
+
+                            ServiceRecord.rank(
+
+                                member.rank
+
+                            );
+
+
+                        return (
+
+                            rank?.category === "feldwebel"
+
+                        );
+
+
+                    }
+
+
+                )
+
+
+        },
+
+
+
+
+
+
+
+
+
+        {
+
+
+            title:"UNTEROFFIZIERE",
+
+            key:"unteroffiziere",
+
+            members:
+
+                members.filter(
+
+                    member => {
+
+
+                        const rank =
+
+                            ServiceRecord.rank(
+
+                                member.rank
+
+                            );
+
+
+                        return (
+
+                            rank?.category === "unteroffiziere"
+
+                        );
+
+
+                    }
+
+
+                )
+
+
+        },
+
+
+
+
+
+
+
+
+
+        {
+
+
+            title:"MANNSCHAFTEN",
+
+            key:"mannschaften",
+
+            members:
+
+                members.filter(
+
+                    member => {
+
+
+                        const rank =
+
+                            ServiceRecord.rank(
+
+                                member.rank
+
+                            );
+
+
+                        return (
+
+                            rank?.category === "mannschaften"
+
+                        );
+
+
+                    }
+
+
+                )
+
+
+        },
+
+
+
+
+
+
+
+
+
+        {
+
+
+            title:"ZIVILISTEN",
+
+            key:"zivilisten",
+
+            members:
+
+                members.filter(
+
+                    member => {
+
+
+                        const rank =
+
+                            ServiceRecord.rank(
+
+                                member.rank
+
+                            );
+
+
+                        return !rank;
+
+
+                    }
+
+
+                )
+
 
         }
 
 
 
     ];
+
+
 
 
 
@@ -210,7 +476,6 @@ export default function MemberGroups(){
         <div className={styles.groups}>
 
 
-
             {
 
 
@@ -220,168 +485,68 @@ export default function MemberGroups(){
 
 
 
-                        group.members.length > 0 && (
+                        <section
 
+                            key={group.key}
 
+                            className={styles.group}
 
-                            <section key={group.title}>
+                        >
 
 
-                                <h2>
 
 
-                                    {group.title}
+                            <h2>
 
+                                {group.title}
 
-                                </h2>
+                            </h2>
 
 
 
 
-                                <div className={styles.grid}>
 
+                            <div className={styles.grid}>
 
-                                    {
 
+                                {
 
-                                        group.members.map(
 
-                                            member => {
+                                    group.members.map(
 
+                                        member => (
 
 
-                                                const prestige = getPrestigeTheme(
 
-                                                    member.prestige
+                                            <MemberCard
 
-                                                );
 
+                                                key={member.id}
 
 
+                                                {...mapMemberToCard(member)}
 
-                                                return (
 
+                                            />
 
-                                                    <MemberCard
-
-
-
-                                                        key={member.id}
-
-
-
-                                                        id={member.slug}
-
-
-
-                                                        armyId={member.recordNumber}
-
-
-
-                                                        name={member.name}
-
-
-
-                                                        avatar={member.avatar}
-
-
-
-                                                        joinedLabel={
-
-                                                            `Seit ${member.enlisted}`
-
-                                                        }
-
-
-
-                                                        rank={{
-
-
-                                                            title:member.rank,
-
-
-                                                            image:"/ranks/default.png"
-
-
-
-                                                        }}
-
-
-
-                                                        badge={{
-
-
-                                                            title:prestige.title,
-
-
-                                                            theme:prestige.theme
-
-
-
-                                                        }}
-
-
-
-                                                        prestige={{
-
-
-                                                            level:member.prestige,
-
-
-                                                            key:prestige.theme,
-
-
-                                                            title:prestige.title
-
-
-
-                                                        }}
-
-
-
-                                                        stats={member.stats}
-
-
-
-                                                        profile={{
-
-
-                                                            position:member.position,
-
-
-                                                            number:member.recordNumber
-
-
-
-                                                        }}
-
-
-
-                                                    />
-
-
-                                                );
-
-
-                                            }
 
 
                                         )
 
 
-                                    }
+                                    )
+
+
+                                }
 
 
 
-                                </div>
+                            </div>
 
 
 
-                            </section>
+                        </section>
 
-
-
-                        )
 
 
                     )
@@ -399,5 +564,6 @@ export default function MemberGroups(){
 
 
     );
+
 
 }

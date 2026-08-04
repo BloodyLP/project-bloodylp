@@ -20,14 +20,6 @@ import styles from "./Portrait.module.css";
 
 
 
-import {
-
-    ServiceRecord
-
-} from "@/lib/service-record";
-
-
-
 import type {
 
     ServiceRecordMember
@@ -54,6 +46,7 @@ interface PortraitProps {
 
 
 
+
 export default function Portrait({
 
     member
@@ -62,28 +55,27 @@ export default function Portrait({
 
 
 
-    const rank = ServiceRecord.rank(
-
-        member.rank
-
-    );
-
-
-
     return (
+
+
 
         <section className={styles.portrait}>
 
 
-
-            <div className={styles.avatar}>
+            <div className={styles.avatarWrapper}>
 
 
                 <img
 
+
                     src={member.avatar}
 
+
                     alt={member.name}
+
+
+                    className={styles.avatar}
+
 
                 />
 
@@ -92,20 +84,11 @@ export default function Portrait({
 
 
 
-
-
-            <div className={styles.rank}>
-
-
-                {rank.name}
-
-
-            </div>
-
-
-
         </section>
 
+
+
     );
+
 
 }

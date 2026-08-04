@@ -50,9 +50,8 @@ export default function ServiceRecord({
             />
 
             <Identity
-                rank={member.rank}
-                organization={member.organization}
-            />
+    rank={member.rank}
+/>
 
             <Portrait
                 member={member}

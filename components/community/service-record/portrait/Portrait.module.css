@@ -1,212 +1,135 @@
 /**
  * ============================================
  * BloodyArmy
- * ============================================
- *
- * Project:
- * BloodyArmy Website
  *
  * Component:
  * Portrait
  *
- * Version:
- * MK-V Premium Portrait
+ * Description:
+ * Avatar Darstellung im Service Record.
  *
  * ============================================
  */
 
-.portrait{
+
+
+.portrait {
+
 
     display:flex;
+
 
     justify-content:center;
 
-    padding:8px 24px 12px;
-
-}
-
-.frame{
-
-    position:relative;
-
-    overflow:hidden;
-
-    width:100%;
-
-    max-width:250px;
-
-    border-radius:14px;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    background:#1f1f1f;
-
-    transition:
-        transform .25s ease,
-        border-color .25s ease,
-        box-shadow .25s ease;
-
-}
-
-.frame:hover{
-
-    transform:translateY(-2px);
-
-    border-color:rgba(158,255,46,.35);
-
-    box-shadow:
-        0 10px 24px rgba(0,0,0,.35),
-        0 0 18px rgba(158,255,46,.14);
-
-}
-
-/* ================================================= */
-
-.frame::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    height:3px;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            #9EFF2E 0%,
-            #7ED321 45%,
-            transparent 100%
-        );
-
-}
-
-/* ================================================= */
-
-.image{
-
-    display:block;
-
-    width:100%;
-
-    aspect-ratio:1/1;
-
-    object-fit:cover;
-
-}
-
-/* ================================================= */
-/* Neuer Effekt */
-/* ================================================= */
-
-.imageOverlay{
-
-    position:absolute;
-
-    left:0;
-
-    right:0;
-
-    bottom:62px;
-
-    height:120px;
-
-    pointer-events:none;
-
-    background:
-
-        radial-gradient(
-
-            circle at center,
-
-            rgba(158,255,46,.14) 0%,
-
-            rgba(158,255,46,.05) 35%,
-
-            transparent 70%
-
-        ),
-
-        linear-gradient(
-
-            to top,
-
-            rgba(0,0,0,.55),
-
-            transparent 60%
-
-        );
-
-}
-
-/* ================================================= */
-
-.footer{
-
-    position:relative;
-
-    display:flex;
-
-    flex-direction:column;
 
     align-items:center;
 
-    gap:0px;
 
-    padding:8px 12px;
 
-    backdrop-filter:blur(10px);
+    padding:
 
-    border-top:1px solid rgba(255,255,255,.08);
+        18px 0 22px;
 
-    background:
 
-        linear-gradient(
-            180deg,
-            rgba(18,18,18,.58),
-            rgba(18,18,18,.88)
-        );
 
 }
 
-/* ================================================= */
 
-.name{
 
-    font-size:1.10rem;
 
-    font-weight:800;
 
-    letter-spacing:.08em;
 
-    text-transform:uppercase;
 
-    color:#ffffff;
+.avatarWrapper {
 
-    text-shadow:
-        0 2px 6px rgba(0,0,0,.45);
+
+    position:relative;
+
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
 
 }
 
-.rank{
 
-    font-size:.75rem;
 
-    font-weight:700;
 
-    letter-spacing:.18em;
 
-    text-transform:uppercase;
 
-    color:#9EFF2E;
 
-    text-shadow:
-        0 0 8px rgba(158,255,46,.25);
+.avatar {
+
+
+    width:280px;
+
+
+    height:280px;
+
+
+
+    object-fit:cover;
+
+
+
+    border-radius:24px;
+
+
+
+    border:
+
+        2px solid rgba(163,230,53,.45);
+
+
+
+    box-shadow:
+
+
+        0 0 25px rgba(163,230,53,.18),
+
+
+        inset 0 0 20px rgba(0,0,0,.35);
+
+
+
+}
+
+
+
+
+
+
+
+/*
+============================================
+Mobile
+============================================
+*/
+
+
+@media(max-width:600px){
+
+
+
+    .avatar{
+
+
+        width:240px;
+
+
+        height:240px;
+
+
+
+    }
+
+
 
 }

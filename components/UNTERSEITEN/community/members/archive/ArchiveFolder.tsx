@@ -12,7 +12,18 @@ import MemberCard from "../MemberCard";
 import { badgeThemes } from "../badgeThemes";
 
 
+import {
+
+    mapMemberToCard
+
+} from "../memberMapper";
+
+
 import styles from "./PersonnelArchive.module.css";
+
+
+
+
 
 
 
@@ -27,6 +38,9 @@ type ArchiveFolderProps = {
 
 
 };
+
+
+
 
 
 
@@ -51,7 +65,9 @@ export default function ArchiveFolder({
 
 
 
+
     const color =
+
 
         badgeThemes[theme]?.border
 
@@ -63,12 +79,13 @@ export default function ArchiveFolder({
 
 
 
+
+
     return (
 
 
 
         <section
-
 
 
             className={styles.folder}
@@ -91,10 +108,6 @@ export default function ArchiveFolder({
 
 
 
-
-            {/* ================================= */}
-            {/* HEADER */}
-            {/* ================================= */}
 
 
 
@@ -123,7 +136,6 @@ export default function ArchiveFolder({
 
 
             >
-
 
 
 
@@ -161,9 +173,7 @@ export default function ArchiveFolder({
                     style={{
 
 
-
                         color:color
-
 
 
                     }}
@@ -192,6 +202,7 @@ export default function ArchiveFolder({
 
 
 
+
             </button>
 
 
@@ -199,12 +210,6 @@ export default function ArchiveFolder({
 
 
 
-
-
-
-            {/* ================================= */}
-            {/* CONTENT */}
-            {/* ================================= */}
 
 
 
@@ -216,9 +221,7 @@ export default function ArchiveFolder({
 
 
 
-
                     <motion.div
-
 
 
 
@@ -226,10 +229,7 @@ export default function ArchiveFolder({
 
 
 
-
-
                         initial={{
-
 
 
                             opacity:0,
@@ -242,11 +242,7 @@ export default function ArchiveFolder({
 
 
 
-
-
-
                         animate={{
-
 
 
                             opacity:1,
@@ -259,11 +255,7 @@ export default function ArchiveFolder({
 
 
 
-
-
-
                         exit={{
-
 
 
                             opacity:0,
@@ -276,11 +268,7 @@ export default function ArchiveFolder({
 
 
 
-
-
-
                         transition={{
-
 
 
                             duration:.35,
@@ -290,45 +278,48 @@ export default function ArchiveFolder({
 
 
 
-
-
                     >
 
 
 
 
 
-                        {members.map((member)=>(
+                        {
+
+
+                            members.map(
+
+                                member => (
 
 
 
-
-
-                            <MemberCard
-
-
-
-                                key={member.id}
+                                    <MemberCard
 
 
 
-                                compact
+                                        key={member.id}
 
 
 
-                                {...member}
+                                        compact
 
 
 
-
-
-                            />
-
+                                        {...mapMemberToCard(member)}
 
 
 
+                                    />
 
-                        ))}
+
+
+                                )
+
+
+                            )
+
+
+                        }
 
 
 
@@ -338,15 +329,11 @@ export default function ArchiveFolder({
 
 
 
-
                 )}
 
 
 
-
-
             </AnimatePresence>
-
 
 
 
@@ -357,5 +344,6 @@ export default function ArchiveFolder({
 
 
     );
+
 
 }

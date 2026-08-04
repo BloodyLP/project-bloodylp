@@ -4,11 +4,23 @@
 import styles from "./FounderCard.module.css";
 
 
+import MemberCard from "./MemberCard";
+
+
 import {
 
     members
 
 } from "./data";
+
+
+import {
+
+    mapMemberToCard
+
+} from "./memberMapper";
+
+
 
 
 
@@ -22,11 +34,15 @@ export default function FounderCard(){
 
     const founder = members.find(
 
+
         member =>
 
             member.prestige === 10
 
+
     );
+
+
 
 
 
@@ -40,14 +56,17 @@ export default function FounderCard(){
 
 
 
+
+
+
     return (
 
 
-        <div className={styles.card}>
+
+        <div className={styles.wrapper}>
 
 
-
-            <div className={styles.header}>
+            <div className={styles.commandLabel}>
 
 
                 FOUNDER
@@ -59,48 +78,22 @@ export default function FounderCard(){
 
 
 
-            <div className={styles.content}>
+            <div className={styles.founderCard}>
 
 
-                <img
+                <MemberCard
 
-                    src={founder.avatar}
 
-                    alt={founder.name}
 
-                    className={styles.avatar}
+                    {...mapMemberToCard(founder)}
+
+
+
+                    compact={false}
+
+
 
                 />
-
-
-
-
-
-                <div className={styles.info}>
-
-
-                    <h2>
-
-
-                        {founder.name}
-
-
-                    </h2>
-
-
-
-
-                    <p>
-
-
-                        {founder.rank}
-
-
-                    </p>
-
-
-
-                </div>
 
 
             </div>
@@ -108,6 +101,7 @@ export default function FounderCard(){
 
 
         </div>
+
 
 
     );

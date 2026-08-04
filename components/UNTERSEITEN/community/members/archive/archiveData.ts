@@ -24,11 +24,21 @@ import {
 
 
 
+import {
+
+    ServiceRecord
+
+} from "@/lib/service-record";
+
+
+
 import type {
 
     ServiceRecordMember
 
 } from "@/types/service-record";
+
+
 
 
 
@@ -68,45 +78,21 @@ export function getArchiveGroups():ArchiveGroup[] {
     return [
 
 
-        {
 
-
-            id:"founder",
-
-
-            title:"Founder",
-
-
-            theme:"founder",
-
-
-            members:
-
-                members.filter(
-
-                    member =>
-
-                        member.prestige === 10
-
-                )
-
-
-        },
-
-
-
+        /*
+        ============================================
+        PRESTIGE III
+        ============================================
+        */
 
 
         {
 
+            id:"prestigeIII",
 
-            id:"bloodyArmy",
+            title:"Prestige III",
 
-
-            title:"BloodyArmy",
-
-
-            theme:"bloodyArmy",
+            theme:"prestigeIII",
 
 
             members:
@@ -119,23 +105,28 @@ export function getArchiveGroups():ArchiveGroup[] {
 
                 )
 
-
         },
 
 
 
 
 
+
+
+        /*
+        ============================================
+        PRESTIGE II
+        ============================================
+        */
+
+
         {
 
+            id:"prestigeII",
 
-            id:"canadianArmy",
+            title:"Prestige II",
 
-
-            title:"Canadian Army",
-
-
-            theme:"canadianArmy",
+            theme:"prestigeII",
 
 
             members:
@@ -148,23 +139,28 @@ export function getArchiveGroups():ArchiveGroup[] {
 
                 )
 
-
         },
 
 
 
 
 
+
+
+        /*
+        ============================================
+        PRESTIGE I
+        ============================================
+        */
+
+
         {
 
+            id:"prestigeI",
 
-            id:"unitedStates",
+            title:"Prestige I",
 
-
-            title:"United States Forces",
-
-
-            theme:"unitedStates",
+            theme:"prestigeI",
 
 
             members:
@@ -177,6 +173,63 @@ export function getArchiveGroups():ArchiveGroup[] {
 
                 )
 
+        },
+
+
+
+
+
+
+
+        /*
+        ============================================
+        GENERALE
+        ============================================
+        */
+
+
+        {
+
+            id:"generale",
+
+            title:"Generale",
+
+            theme:"generale",
+
+
+            members:
+
+                members.filter(
+
+                    member => {
+
+
+
+                        if(member.prestige > 0)
+
+                            return false;
+
+
+
+                        const rank =
+
+                            ServiceRecord.rank(
+
+                                member.rank
+
+                            );
+
+
+
+                        return (
+
+                            rank?.category === "command"
+
+                        );
+
+                    }
+
+                )
 
         },
 
@@ -184,28 +237,343 @@ export function getArchiveGroups():ArchiveGroup[] {
 
 
 
+
+
+        /*
+        ============================================
+        STABSOFFIZIERE
+        ============================================
+        */
+
+
         {
 
+            id:"stabsoffiziere",
 
-            id:"bundeswehr",
+            title:"Stabsoffiziere",
 
-
-            title:"Bundeswehr / Zivilisten",
-
-
-            theme:"bundeswehr",
+            theme:"stabsoffiziere",
 
 
             members:
 
                 members.filter(
 
-                    member =>
+                    member => {
 
-                        member.prestige === 0
+
+
+                        if(member.prestige > 0)
+
+                            return false;
+
+
+
+                        const rank =
+
+                            ServiceRecord.rank(
+
+                                member.rank
+
+                            );
+
+
+
+                        return (
+
+                            rank?.category === "stabsoffiziere"
+
+                        );
+
+                    }
 
                 )
 
+        },
+
+
+
+
+
+
+
+        /*
+        ============================================
+        OFFIZIERE
+        ============================================
+        */
+
+
+        {
+
+            id:"offiziere",
+
+            title:"Offiziere",
+
+            theme:"offiziere",
+
+
+            members:
+
+                members.filter(
+
+                    member => {
+
+
+
+                        if(member.prestige > 0)
+
+                            return false;
+
+
+
+                        const rank =
+
+                            ServiceRecord.rank(
+
+                                member.rank
+
+                            );
+
+
+
+                        return (
+
+                            rank?.category === "offiziere"
+
+                        );
+
+                    }
+
+                )
+
+        },
+
+
+
+
+
+
+
+        /*
+        ============================================
+        UNTEROFFIZIERE MIT PORTEPEE
+        ============================================
+        */
+
+
+        {
+
+            id:"portepee",
+
+            title:"Unteroffiziere mit Portepee",
+
+            theme:"portepee",
+
+
+            members:
+
+                members.filter(
+
+                    member => {
+
+
+
+                        if(member.prestige > 0)
+
+                            return false;
+
+
+
+                        const rank =
+
+                            ServiceRecord.rank(
+
+                                member.rank
+
+                            );
+
+
+
+                        return (
+
+                            rank?.category === "feldwebel"
+
+                        );
+
+                    }
+
+                )
+
+        },
+
+
+
+
+
+
+
+        /*
+        ============================================
+        UNTEROFFIZIERE
+        ============================================
+        */
+
+
+        {
+
+            id:"unteroffiziere",
+
+            title:"Unteroffiziere",
+
+            theme:"unteroffiziere",
+
+
+            members:
+
+                members.filter(
+
+                    member => {
+
+
+
+                        if(member.prestige > 0)
+
+                            return false;
+
+
+
+                        const rank =
+
+                            ServiceRecord.rank(
+
+                                member.rank
+
+                            );
+
+
+
+                        return (
+
+                            rank?.category === "unteroffiziere"
+
+                        );
+
+                    }
+
+                )
+
+        },
+
+
+
+
+
+
+
+        /*
+        ============================================
+        MANNSCHAFTEN
+        ============================================
+        */
+
+
+        {
+
+            id:"mannschaften",
+
+            title:"Mannschafter",
+
+            theme:"mannschaften",
+
+
+            members:
+
+                members.filter(
+
+                    member => {
+
+
+
+                        if(member.prestige > 0)
+
+                            return false;
+
+
+
+                        const rank =
+
+                            ServiceRecord.rank(
+
+                                member.rank
+
+                            );
+
+
+
+                        return (
+
+                            rank?.category === "mannschaften"
+
+                        );
+
+                    }
+
+                )
+
+        },
+
+
+
+
+
+
+
+        /*
+        ============================================
+        ZIVILISTEN
+        ============================================
+        */
+
+
+        {
+
+            id:"zivilisten",
+
+            title:"Zivilisten",
+
+            theme:"zivilisten",
+
+
+            members:
+
+                members.filter(
+
+                    member => {
+
+
+
+                        if(member.prestige > 0)
+
+                            return false;
+
+
+
+                        const rank =
+
+                            ServiceRecord.rank(
+
+                                member.rank
+
+                            );
+
+
+
+                        return !rank;
+
+                    }
+
+                )
 
         }
 

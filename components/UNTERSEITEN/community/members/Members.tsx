@@ -50,15 +50,6 @@ export default function Members(){
                 </div>
 
 
-
-
-
-                <MemberGroups />
-
-
-
-
-
                 <div className={styles.archiveWrapper}>
 
 

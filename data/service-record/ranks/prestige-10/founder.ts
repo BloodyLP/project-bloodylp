@@ -3,9 +3,11 @@
  * BloodyArmy
  * ============================================
  *
- * Founder Rank
+ * Rank Database
  *
- * Exclusive Rank
+ * Prestige 10
+ *
+ * Founder Rank
  *
  * ============================================
  */
@@ -20,26 +22,89 @@ import type {
 
 
 
+
+
+
+
+
 export const founderRanks: MilitaryRank[] = [
 
 
 
-{
+    {
 
-    id:"generalOfTheArmy",
 
-    name:"General of the Army",
+        /**
+         * Eindeutige ID
+         */
+        id:"generalOfTheArmy",
 
-    branch:"bloodyArmy",
 
-    prestige:10,
 
-    category:"command",
 
-    level:1
 
-}
+        /**
+         * Anzeigename
+         */
+        name:"General of the Army",
 
+
+
+
+
+        /**
+         * Kürzel
+         */
+        abbreviation:"GA",
+
+
+
+
+
+        /**
+         * Streitkraft
+         */
+        branch:"bloodyArmy",
+
+
+
+
+
+        /**
+         * Prestige
+         */
+        prestige:10,
+
+
+
+
+
+        /**
+         * Kategorie
+         */
+        category:"command",
+
+
+
+
+
+        /**
+         * Sortierung
+         */
+        level:100,
+
+
+
+
+
+        /**
+         * Rangabzeichen
+         */
+        insignia:"/images/ranks/general-of-the-army.png"
+
+
+
+    }
 
 
 ];

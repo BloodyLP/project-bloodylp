@@ -1,16 +1,12 @@
 /**
  * ============================================
  * BloodyArmy
- * ============================================
- *
- * Project:
- * BloodyArmy Website
  *
  * Component:
  * Identity
  *
  * Description:
- * Anzeige von Dienstgrad und Organisation.
+ * Anzeige von Dienstgrad.
  *
  * ============================================
  */
@@ -19,13 +15,11 @@
 import styles from "./Identity.module.css";
 
 
-
 import {
 
     ServiceRecord
 
 } from "@/lib/service-record";
-
 
 
 import type {
@@ -36,14 +30,6 @@ import type {
 
 
 
-import type {
-
-    OrganizationId
-
-} from "@/data/service-record/organizations";
-
-
-
 
 
 
@@ -51,13 +37,7 @@ import type {
 interface IdentityProps {
 
 
-
     rank:RankId;
-
-
-
-    organization:OrganizationId;
-
 
 
 }
@@ -72,8 +52,6 @@ export default function Identity({
 
     rank,
 
-    organization,
-
 }:IdentityProps) {
 
 
@@ -82,35 +60,43 @@ export default function Identity({
 
 
 
-    const organizationData = ServiceRecord.organization(
-
-        organization
-
-    );
-
 
 
     return (
+
+
 
         <section className={styles.identity}>
 
 
 
+
             {
-                rankData.insignia && (
+
+
+                rankData?.insignia && (
+
 
                     <img
 
+
                         src={rankData.insignia}
+
 
                         alt={rankData.name}
 
+
                         className={styles.insignia}
+
 
                     />
 
+
                 )
+
+
             }
+
 
 
 
@@ -119,27 +105,20 @@ export default function Identity({
             <div className={styles.rank}>
 
 
-                {rankData.name}
+                {rankData?.name}
+
 
 
             </div>
 
-
-
-
-
-            <div className={styles.organization}>
-
-
-                {organizationData.title}
-
-
-            </div>
 
 
 
         </section>
 
+
+
     );
+
 
 }
