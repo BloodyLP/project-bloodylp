@@ -231,7 +231,7 @@ playerNumber:"27",
 
                        {
 
-                year:"20/21",
+                year:"19/20",
 
                 team:"BloodyArmy",
 
@@ -269,7 +269,7 @@ playerNumber:"27",
 
             {
 
-                year:"21/22",
+                year:"20/21",
 
                 team:"BloodyArmy",
 
@@ -307,7 +307,7 @@ playerNumber:"27",
 
                         {
 
-                year:"22/23",
+                year:"21/22",
 
                 team:"BloodyArmy",
 
@@ -345,7 +345,7 @@ playerNumber:"27",
 
             {
 
-                year:"23/24",
+                year:"22/23",
 
                 team:"BloodyArmy",
 
@@ -383,7 +383,7 @@ playerNumber:"27",
 
             {
 
-                year:"24/25",
+                year:"23/24",
 
                 team:"BloodyArmy",
 
@@ -421,7 +421,7 @@ playerNumber:"27",
 
                         {
 
-                year:"25/26",
+                year:"24/25",
 
                 team:"BloodyArmy",
 
@@ -459,7 +459,7 @@ playerNumber:"27",
 
             {
 
-                year:"26/27",
+                year:"25/26",
 
                 team:"BloodyArmy",
 
