@@ -233,28 +233,28 @@ playerNumber:"62",
                 team:"BloodyArmy",
 
 
-                games:0,
+                games:82,
 
-                goals:0,
+                goals:9,
 
-                assists:0,
+                assists:36,
 
-                points:0,
+                points:45,
 
-                plusMinus:0,
+                plusMinus:15,
 
-                penaltyMinutes:0,
+                penaltyMinutes:4,
 
 
-                playoffGames:0,
+                playoffGames:19,
 
-                playoffGoals:0,
+                playoffGoals:3,
 
-                playoffAssists:0,
+                playoffAssists:8,
 
-                playoffPoints:0,
+                playoffPoints:11,
 
-                playoffPlusMinus:0,
+                playoffPlusMinus:8,
 
                 playoffPenaltyMinutes:0,
 
@@ -274,31 +274,30 @@ playerNumber:"62",
                 team:"BloodyArmy",
 
 
-                games:0,
+                games:82,
 
-                goals:0,
+                goals:12,
 
-                assists:0,
+                assists:20,
 
-                points:0,
+                points:32,
 
-                plusMinus:0,
+                plusMinus:12,
 
-                penaltyMinutes:0,
+                penaltyMinutes:10,
 
 
-                playoffGames:0,
+                playoffGames:21,
 
-                playoffGoals:0,
+                playoffGoals:3,
 
-                playoffAssists:0,
+                playoffAssists:2,
 
-                playoffPoints:0,
+                playoffPoints:5,
 
-                playoffPlusMinus:0,
+                playoffPlusMinus:-1,
 
-                playoffPenaltyMinutes:0,
-
+                playoffPenaltyMinutes:4,
 
                 titles:[]
 
@@ -315,28 +314,28 @@ playerNumber:"62",
                 team:"BloodyArmy",
 
 
-                games:0,
+                games:82,
 
-                goals:0,
+                goals:10,
 
-                assists:0,
+                assists:18,
 
-                points:0,
+                points:28,
 
-                plusMinus:0,
+                plusMinus:17,
 
-                penaltyMinutes:0,
+                penaltyMinutes:6,
 
 
-                playoffGames:0,
+                playoffGames:12,
 
-                playoffGoals:0,
+                playoffGoals:3,
 
-                playoffAssists:0,
+                playoffAssists:3,
 
-                playoffPoints:0,
+                playoffPoints:6,
 
-                playoffPlusMinus:0,
+                playoffPlusMinus:7,
 
                 playoffPenaltyMinutes:0,
 
@@ -356,30 +355,30 @@ playerNumber:"62",
                 team:"BloodyArmy",
 
 
-                games:0,
+                games:82,
 
-                goals:0,
+                goals:6,
 
-                assists:0,
+                assists:8,
 
-                points:0,
+                points:14,
 
-                plusMinus:0,
+                plusMinus:-5,
 
-                penaltyMinutes:0,
+                penaltyMinutes:6,
 
 
-                playoffGames:0,
+                playoffGames:24,
 
-                playoffGoals:0,
+                playoffGoals:4,
 
-                playoffAssists:0,
+                playoffAssists:1,
 
-                playoffPoints:0,
+                playoffPoints:5,
 
-                playoffPlusMinus:0,
+                playoffPlusMinus:4,
 
-                playoffPenaltyMinutes:0,
+                playoffPenaltyMinutes:2,
 
 
                 titles:[]
@@ -397,28 +396,28 @@ playerNumber:"62",
                 team:"BloodyArmy",
 
 
-                games:0,
+                games:82,
 
-                goals:0,
+                goals:13,
 
-                assists:0,
+                assists:14,
 
-                points:0,
+                points:27,
 
-                plusMinus:0,
+                plusMinus:13,
 
-                penaltyMinutes:0,
+                penaltyMinutes:6,
 
 
-                playoffGames:0,
+                playoffGames:13,
 
-                playoffGoals:0,
+                playoffGoals:2,
 
-                playoffAssists:0,
+                playoffAssists:2,
 
-                playoffPoints:0,
+                playoffPoints:4,
 
-                playoffPlusMinus:0,
+                playoffPlusMinus:4,
 
                 playoffPenaltyMinutes:0,
 
@@ -438,30 +437,30 @@ playerNumber:"62",
                 team:"BloodyArmy",
 
 
-                games:0,
+                games:82,
 
-                goals:0,
+                goals:17,
 
-                assists:0,
+                assists:22,
 
-                points:0,
+                points:39,
 
-                plusMinus:0,
+                plusMinus:9,
 
-                penaltyMinutes:0,
+                penaltyMinutes:10,
 
 
-                playoffGames:0,
+                playoffGames:19,
 
-                playoffGoals:0,
+                playoffGoals:9,
 
-                playoffAssists:0,
+                playoffAssists:9,
 
-                playoffPoints:0,
+                playoffPoints:18,
 
                 playoffPlusMinus:0,
 
-                playoffPenaltyMinutes:0,
+                playoffPenaltyMinutes:6,
 
 
                 titles:[]
@@ -479,30 +478,30 @@ playerNumber:"62",
                 team:"BloodyArmy",
 
 
-                games:0,
+                games:82,
 
-                goals:0,
+                goals:31,
 
-                assists:0,
+                assists:40,
 
-                points:0,
+                points:71,
 
-                plusMinus:0,
+                plusMinus:70,
 
-                penaltyMinutes:0,
+                penaltyMinutes:10,
 
 
-                playoffGames:0,
+                playoffGames:18,
 
-                playoffGoals:0,
+                playoffGoals:9,
 
-                playoffAssists:0,
+                playoffAssists:11,
 
-                playoffPoints:0,
+                playoffPoints:20,
 
-                playoffPlusMinus:0,
+                playoffPlusMinus:12,
 
-                playoffPenaltyMinutes:0,
+                playoffPenaltyMinutes:2,
 
 
                 titles:[]

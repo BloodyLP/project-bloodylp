@@ -235,31 +235,31 @@ playerNumber:"33",
 
                 team:"BloodyArmy",
 
-                games:0,
+                games:42,
 
-                goalsAgainstAverage:0,
+                goalsAgainstAverage:2.33,
 
-                savePercentage:0,
+                savePercentage:87.5,
 
-                shutouts:0,
+                shutouts:4,
 
-                wins:0,
+                wins:30,
 
-                losses:0,
+                losses:10,
 
-                overtimeLosses:0,
+                overtimeLosses:2,
 
-                playoffGames:0,
+                playoffGames:14,
 
-                playoffGoalsAgainstAverage:0,
+                playoffGoalsAgainstAverage:1.58,
 
-                playoffSavePercentage:0,
+                playoffSavePercentage:91.6,
 
-                playoffShutouts:0,
+                playoffShutouts:2,
 
-                playoffWins:0,
+                playoffWins:10,
 
-                playoffLosses:0,
+                playoffLosses:4,
 
                 playoffOvertimeLosses:0,
 
@@ -273,33 +273,33 @@ playerNumber:"33",
 
                 team:"BloodyArmy",
 
-                games:0,
+                games:42,
 
-                goalsAgainstAverage:0,
+                goalsAgainstAverage:2.84,
 
-                savePercentage:0,
+                savePercentage:88.0,
 
-                shutouts:0,
+                shutouts:1,
 
-                wins:0,
+                wins:22,
 
-                losses:0,
+                losses:14,
 
-                overtimeLosses:0,
+                overtimeLosses:4,
 
-                playoffGames:0,
+                playoffGames:4,
 
-                playoffGoalsAgainstAverage:0,
+                playoffGoalsAgainstAverage:3.92,
 
-                playoffSavePercentage:0,
+                playoffSavePercentage:84.2,
 
                 playoffShutouts:0,
 
-                playoffWins:0,
+                playoffWins:1,
 
-                playoffLosses:0,
+                playoffLosses:2,
 
-                playoffOvertimeLosses:0,
+                playoffOvertimeLosses:1,
 
                 titles:[]
 
@@ -311,33 +311,33 @@ playerNumber:"33",
 
                 team:"BloodyArmy",
 
-                games:0,
+                games:41,
 
-                goalsAgainstAverage:0,
+                goalsAgainstAverage:2.87,
 
-                savePercentage:0,
+                savePercentage:84.8,
 
-                shutouts:0,
+                shutouts:1,
 
-                wins:0,
+                wins:22,
 
-                losses:0,
+                losses:10,
 
-                overtimeLosses:0,
+                overtimeLosses:7,
 
-                playoffGames:0,
+                playoffGames:12,
 
-                playoffGoalsAgainstAverage:0,
+                playoffGoalsAgainstAverage:2.57,
 
-                playoffSavePercentage:0,
+                playoffSavePercentage:85.0,
 
-                playoffShutouts:0,
+                playoffShutouts:2,
 
-                playoffWins:0,
+                playoffWins:8,
 
-                playoffLosses:0,
+                playoffLosses:3,
 
-                playoffOvertimeLosses:0,
+                playoffOvertimeLosses:1,
 
                 titles:[]
 
@@ -349,31 +349,31 @@ playerNumber:"33",
 
                 team:"BloodyArmy",
 
-                games:0,
+                games:48,
 
-                goalsAgainstAverage:0,
+                goalsAgainstAverage:2.00,
 
-                savePercentage:0,
+                savePercentage:85.8,
 
-                shutouts:0,
+                shutouts:8,
 
-                wins:0,
+                wins:31,
 
-                losses:0,
+                losses:13,
 
-                overtimeLosses:0,
+                overtimeLosses:2,
 
-                playoffGames:0,
+                playoffGames:7,
 
-                playoffGoalsAgainstAverage:0,
+                playoffGoalsAgainstAverage:2.58,
 
-                playoffSavePercentage:0,
+                playoffSavePercentage:80.4,
 
                 playoffShutouts:0,
 
-                playoffWins:0,
+                playoffWins:3,
 
-                playoffLosses:0,
+                playoffLosses:4,
 
                 playoffOvertimeLosses:0,
 
@@ -387,33 +387,33 @@ playerNumber:"33",
 
                 team:"BloodyArmy",
 
-                games:0,
+                games:49,
 
-                goalsAgainstAverage:0,
+                goalsAgainstAverage:3.08,
 
-                savePercentage:0,
+                savePercentage:85.7,
 
-                shutouts:0,
+                shutouts:1,
 
-                wins:0,
+                wins:30,
 
-                losses:0,
+                losses:17,
 
-                overtimeLosses:0,
+                overtimeLosses:2,
 
-                playoffGames:0,
+                playoffGames:9,
 
-                playoffGoalsAgainstAverage:0,
+                playoffGoalsAgainstAverage:2.53,
 
-                playoffSavePercentage:0,
+                playoffSavePercentage:84.5,
 
-                playoffShutouts:0,
+                playoffShutouts:1,
 
-                playoffWins:0,
+                playoffWins:4,
 
-                playoffLosses:0,
+                playoffLosses:3,
 
-                playoffOvertimeLosses:0,
+                playoffOvertimeLosses:1,
 
                 titles:[]
 
@@ -425,31 +425,31 @@ playerNumber:"33",
 
                 team:"BloodyArmy",
 
-                games:0,
+                games:46,
 
-                goalsAgainstAverage:0,
+                goalsAgainstAverage:1.66,
 
-                savePercentage:0,
+                savePercentage:89.3,
 
-                shutouts:0,
+                shutouts:8,
 
-                wins:0,
+                wins:39,
 
-                losses:0,
+                losses:5,
 
-                overtimeLosses:0,
+                overtimeLosses:2,
 
-                playoffGames:0,
+                playoffGames:14,
 
-                playoffGoalsAgainstAverage:0,
+                playoffGoalsAgainstAverage:1.77,
 
-                playoffSavePercentage:0,
+                playoffSavePercentage:87.7,
 
-                playoffShutouts:0,
+                playoffShutouts:2,
 
-                playoffWins:0,
+                playoffWins:12,
 
-                playoffLosses:0,
+                playoffLosses:2,
 
                 playoffOvertimeLosses:0,
 
