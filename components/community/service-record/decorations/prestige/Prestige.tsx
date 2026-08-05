@@ -5,7 +5,13 @@ import {
     type PrestigeKey,
 } from "./PrestigeLevels";
 
-import type { ServiceRecordMember } from "@/types/service-record";
+import {
+    ServiceRecord,
+} from "@/lib/service-record";
+
+import type {
+    ServiceRecordMember,
+} from "@/types/service-record";
 
 interface PrestigeProps {
     member: ServiceRecordMember;
@@ -14,6 +20,24 @@ interface PrestigeProps {
 export default function Prestige({
     member,
 }: PrestigeProps) {
+
+    const rank = ServiceRecord.rank(member.rank);
+
+    /*
+    ============================================
+    ZIVILISTEN HABEN KEIN PRESTIGE
+    ============================================
+    */
+
+    if (rank.category === "zivilisten") {
+        return null;
+    }
+
+    /*
+    ============================================
+    PRESTIGE LEVEL
+    ============================================
+    */
 
     const level = Math.min(
         Math.max(member.prestige, 1),
