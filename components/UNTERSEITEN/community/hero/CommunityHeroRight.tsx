@@ -96,6 +96,17 @@ const featuredMembers:Record<number, FeaturedMember> = {
 
     },
 
+    10:{
+
+
+        image:"/members/o1l3r5/avatar.png",
+
+
+        name:"O1L3R5",
+
+
+    },
+
 
 
 };
