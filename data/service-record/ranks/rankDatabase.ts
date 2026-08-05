@@ -38,7 +38,9 @@ import {
 
     bloodyArmyRanks,
 
-    founderRanks
+    founderRanks,
+
+    civilianRanks,
 
 
 } from "./index";
@@ -87,10 +89,10 @@ export const rankDatabase: MilitaryRank[] = [
 
 
 
-    ...founderRanks
+    ...founderRanks,
 
 
-
+    ...civilianRanks
 ];
 
 

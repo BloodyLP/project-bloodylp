@@ -22,8 +22,14 @@ TYPES
 export * from "./types";
 
 
+/*
+================================================
+PRESTIGE 0
+ZIVILISTEN
+================================================
+*/
 
-
+export { civilianRanks } from "./civilian/civilianRanks";
 
 
 

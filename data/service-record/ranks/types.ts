@@ -20,7 +20,6 @@ PRESTIGE LEVEL
 ================================================
 */
 
-
 export type PrestigeLevel =
 
     | 0
@@ -40,16 +39,13 @@ export type PrestigeLevel =
 
 
 
-
 /*
 ================================================
 RANK ID
 ================================================
 */
 
-
 export type RankId = string;
-
 
 
 
@@ -64,10 +60,7 @@ MILITARY BRANCHES
 ================================================
 */
 
-
 export type RankBranch =
-
-
 
     // Deutschland
 
@@ -95,8 +88,13 @@ export type RankBranch =
 
     // BloodyArmy
 
-    | "bloodyArmy";
+    | "bloodyArmy"
 
+
+
+    // Zivilisten
+
+    | "zivilisten";
 
 
 
@@ -111,10 +109,7 @@ RANK CATEGORIES
 ================================================
 */
 
-
 export type RankCategory =
-
-
 
     // Mannschaften
 
@@ -168,8 +163,13 @@ export type RankCategory =
 
     | "organisation"
 
-    | "auszeichnung";
+    | "auszeichnung"
 
+
+
+    // Zivilisten
+
+    | "zivilisten";
 
 
 
@@ -184,52 +184,37 @@ MILITARY RANK OBJECT
 ================================================
 */
 
-
 export interface MilitaryRank {
-
-
 
     /**
      * Eindeutige ID
      */
     id:RankId;
 
-
-
     /**
      * Anzeigename
      */
     name:string;
-
-
 
     /**
      * Kürzel
      */
     abbreviation?:string;
 
-
-
     /**
      * Organisation / Streitkraft
      */
     branch:RankBranch;
-
-
 
     /**
      * Prestige
      */
     prestige:PrestigeLevel;
 
-
-
     /**
      * Kategorie
      */
     category:RankCategory;
-
-
 
     /**
      * Sortierung

@@ -13,35 +13,25 @@
  */
 
 import { ServiceRecord } from "@/lib/service-record";
-
 import { getRankImage } from "@/lib/service-record/getRankImage";
 
 import type { ServiceRecordMember } from "@/types/service-record";
 
 import type {
-
     SkaterSeasonStats,
-
     GoalieSeasonStats,
-
 } from "@/types/career-stats";
 
 import {
-
     buildSkaterCareerStats,
-
 } from "./stats/calculateSkaterCareerStats";
 
 import {
-
     buildGoalieCareerStats,
-
 } from "./stats/calculateGoalieCareerStats";
 
 function getBadgeTheme(
-
     member:ServiceRecordMember
-
 ){
 
     /*
@@ -111,9 +101,7 @@ function getBadgeTheme(
     */
 
     const rank = ServiceRecord.rank(
-
         member.rank
-
     );
 
     switch(rank.category){
@@ -168,11 +156,21 @@ function getBadgeTheme(
 
             };
 
-        default:
+        case "zivilisten":
 
             return{
 
                 title:"ZIVILIST",
+
+                theme:"zivilisten",
+
+            };
+
+        default:
+
+            return{
+
+                title:"UNBEKANNT",
 
                 theme:"zivilisten",
 

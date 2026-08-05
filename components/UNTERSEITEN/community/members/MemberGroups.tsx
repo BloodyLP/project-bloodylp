@@ -1,11 +1,8 @@
 "use client";
 
-
 import styles from "./Members.module.css";
 
-
 import MemberCard from "./MemberCard";
-
 
 import {
 
@@ -13,13 +10,11 @@ import {
 
 } from "./data";
 
-
 import {
 
     mapMemberToCard
 
 } from "./memberMapper";
-
 
 import {
 
@@ -27,44 +22,21 @@ import {
 
 } from "@/lib/service-record";
 
-
-
-
-
-
-
 type Group = {
-
 
     title:string;
 
-
     key:string;
-
 
     members:any[];
 
-
 };
-
-
-
-
-
-
-
-
 
 export default function MemberGroups(){
 
-
-
     const groups:Group[] = [
 
-
-
         {
-
 
             title:"PRESTIGE III",
 
@@ -80,15 +52,9 @@ export default function MemberGroups(){
 
                 )
 
-
         },
 
-
-
-
-
         {
-
 
             title:"PRESTIGE II",
 
@@ -104,15 +70,9 @@ export default function MemberGroups(){
 
                 )
 
-
         },
 
-
-
-
-
         {
-
 
             title:"PRESTIGE I",
 
@@ -128,19 +88,9 @@ export default function MemberGroups(){
 
                 )
 
-
         },
 
-
-
-
-
-
-
-
-
         {
-
 
             title:"GENERALE",
 
@@ -152,7 +102,6 @@ export default function MemberGroups(){
 
                     member => {
 
-
                         const rank =
 
                             ServiceRecord.rank(
@@ -161,32 +110,19 @@ export default function MemberGroups(){
 
                             );
 
-
                         return (
 
                             rank?.category === "command"
 
                         );
 
-
                     }
-
 
                 )
 
-
         },
 
-
-
-
-
-
-
-
-
         {
-
 
             title:"STABSOFFIZIERE",
 
@@ -198,7 +134,6 @@ export default function MemberGroups(){
 
                     member => {
 
-
                         const rank =
 
                             ServiceRecord.rank(
@@ -206,7 +141,6 @@ export default function MemberGroups(){
                                 member.rank
 
                             );
-
 
                         return (
 
@@ -218,25 +152,13 @@ export default function MemberGroups(){
 
                         );
 
-
                     }
-
 
                 )
 
-
         },
 
-
-
-
-
-
-
-
-
         {
-
 
             title:"OFFIZIERE",
 
@@ -248,7 +170,6 @@ export default function MemberGroups(){
 
                     member => {
 
-
                         const rank =
 
                             ServiceRecord.rank(
@@ -256,7 +177,6 @@ export default function MemberGroups(){
                                 member.rank
 
                             );
-
 
                         return (
 
@@ -268,25 +188,13 @@ export default function MemberGroups(){
 
                         );
 
-
                     }
-
 
                 )
 
-
         },
 
-
-
-
-
-
-
-
-
         {
-
 
             title:"UNTEROFFIZIERE MIT PORTEPEE",
 
@@ -298,7 +206,6 @@ export default function MemberGroups(){
 
                     member => {
 
-
                         const rank =
 
                             ServiceRecord.rank(
@@ -307,32 +214,19 @@ export default function MemberGroups(){
 
                             );
 
-
                         return (
 
                             rank?.category === "feldwebel"
 
                         );
 
-
                     }
-
 
                 )
 
-
         },
 
-
-
-
-
-
-
-
-
         {
-
 
             title:"UNTEROFFIZIERE",
 
@@ -344,7 +238,6 @@ export default function MemberGroups(){
 
                     member => {
 
-
                         const rank =
 
                             ServiceRecord.rank(
@@ -353,32 +246,19 @@ export default function MemberGroups(){
 
                             );
 
-
                         return (
 
                             rank?.category === "unteroffiziere"
 
                         );
 
-
                     }
-
 
                 )
 
-
         },
 
-
-
-
-
-
-
-
-
         {
-
 
             title:"MANNSCHAFTEN",
 
@@ -390,7 +270,6 @@ export default function MemberGroups(){
 
                     member => {
 
-
                         const rank =
 
                             ServiceRecord.rank(
@@ -399,32 +278,19 @@ export default function MemberGroups(){
 
                             );
 
-
                         return (
 
                             rank?.category === "mannschaften"
 
                         );
 
-
                     }
-
 
                 )
 
-
         },
 
-
-
-
-
-
-
-
-
         {
-
 
             title:"ZIVILISTEN",
 
@@ -436,7 +302,6 @@ export default function MemberGroups(){
 
                     member => {
 
-
                         const rank =
 
                             ServiceRecord.rank(
@@ -445,45 +310,29 @@ export default function MemberGroups(){
 
                             );
 
+                        return (
 
-                        return !rank;
+                            rank?.category === "zivilisten"
 
+                        );
 
                     }
 
-
                 )
-
 
         }
 
-
-
     ];
 
-
-
-
-
-
-
-
-
-    return (
-
-
+    return(
 
         <div className={styles.groups}>
 
-
             {
-
 
                 groups.map(
 
                     group => (
-
-
 
                         <section
 
@@ -493,77 +342,46 @@ export default function MemberGroups(){
 
                         >
 
-
-
-
                             <h2>
 
                                 {group.title}
 
                             </h2>
 
-
-
-
-
                             <div className={styles.grid}>
 
-
                                 {
-
 
                                     group.members.map(
 
                                         member => (
 
-
-
                                             <MemberCard
-
 
                                                 key={member.id}
 
-
                                                 {...mapMemberToCard(member)}
-
 
                                             />
 
-
-
                                         )
-
 
                                     )
 
-
                                 }
-
-
 
                             </div>
 
-
-
                         </section>
-
-
 
                     )
 
-
                 )
-
 
             }
 
-
-
         </div>
 
-
-
     );
-
 
 }

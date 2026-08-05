@@ -73,6 +73,8 @@ export interface ArchiveGroup {
 
 export function getArchiveGroups():ArchiveGroup[] {
 
+    
+
 
 
     return [
@@ -567,45 +569,30 @@ OFFIZIERE
 
 
         {
+    id:"zivilisten",
 
-            id:"zivilisten",
+    title:"Zivilisten",
 
-            title:"Zivilisten",
+    theme:"zivilisten",
 
-            theme:"zivilisten",
+    members:
 
+        members.filter(member => {
 
-            members:
+            const rank = ServiceRecord.rank(member.rank);
 
-                members.filter(
+            console.log(
+                member.name,
+                member.rank,
+                rank
+            );
 
-                    member => {
+            
+            return rank?.category === "zivilisten";
 
+        })
 
-
-                        if(member.prestige > 0)
-
-                            return false;
-
-
-
-                        const rank =
-
-                            ServiceRecord.rank(
-
-                                member.rank
-
-                            );
-
-
-
-                        return !rank;
-
-                    }
-
-                )
-
-        }
+}
 
 
 

@@ -10,22 +10,17 @@
  * ============================================
  */
 
-
 import type {
 
     ServiceRecordMember
 
 } from "@/types/service-record";
 
-
-
 import {
 
     bloodylp
 
 } from "./members/bloodylp";
-
-
 
 import {
 
@@ -39,20 +34,20 @@ import {
 
 } from "./members/o1l3r5";
 
+import {
 
+    TheIlmfurter
 
+} from "./members/theilmfurter";
 
-
-
-
-export const MEMBERS:ServiceRecordMember[] = [
-
+export const MEMBERS: ServiceRecordMember[] = [
 
     bloodylp,
 
     dungeon,
 
-    o1l3r5
+    o1l3r5,
 
+    TheIlmfurter,
 
 ];
