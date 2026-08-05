@@ -123,7 +123,7 @@ playerNumber:"62",
     /**
      * Eintrittsjahr
      */
-    enlisted:"2017",
+    enlisted:"2019",
 
 
 
@@ -228,7 +228,7 @@ playerNumber:"62",
 
             {
 
-                year:"2019",
+                year:"19/20",
 
                 team:"BloodyArmy",
 
@@ -269,7 +269,7 @@ playerNumber:"62",
 
             {
 
-                year:"2020",
+                year:"20/21",
 
                 team:"BloodyArmy",
 
@@ -309,7 +309,7 @@ playerNumber:"62",
 
             {
 
-                year:"2021",
+                year:"21/22",
 
                 team:"BloodyArmy",
 
@@ -350,7 +350,7 @@ playerNumber:"62",
 
             {
 
-                year:"2022",
+                year:"22/23",
 
                 team:"BloodyArmy",
 
@@ -391,7 +391,7 @@ playerNumber:"62",
 
             {
 
-                year:"2023",
+                year:"23/24",
 
                 team:"BloodyArmy",
 
@@ -432,7 +432,7 @@ playerNumber:"62",
 
             {
 
-                year:"2024",
+                year:"24/25",
 
                 team:"BloodyArmy",
 
@@ -473,7 +473,7 @@ playerNumber:"62",
 
             {
 
-                year:"2025",
+                year:"25/26",
 
                 team:"BloodyArmy",
 
@@ -514,7 +514,7 @@ playerNumber:"62",
 
             {
 
-                year:"2026",
+                year:"26/27",
 
                 team:"BloodyArmy",
 
