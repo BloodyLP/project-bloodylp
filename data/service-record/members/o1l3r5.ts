@@ -106,7 +106,7 @@ playerType:"goalie",
 /**
  * Trikotnummer
  */
-playerNumber:"33",
+playerNumber:"27",
 
 
 
