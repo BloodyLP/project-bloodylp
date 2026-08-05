@@ -75,11 +75,20 @@ export const bloodylp: ServiceRecordMember = {
 
 
 
-    /**
-     * Position
-     */
-    position: "leftWing",
-    playerNumber:"13",
+  /**
+ * Position
+ */
+position:"leftWing",
+
+/**
+ * Spielertyp
+ */
+playerType:"skater",
+
+/**
+ * Trikotnummer
+ */
+playerNumber:"13",
 
 
 

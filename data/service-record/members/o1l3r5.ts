@@ -93,11 +93,20 @@ rank:"canadian-army-captain",
 
 
 
-    /**
-     * Position
-     */
-    position:"goalie",
-    playerNumber:"33",
+/**
+ * Position
+ */
+position:"goalie",
+
+/**
+ * Spielertyp
+ */
+playerType:"goalie",
+
+/**
+ * Trikotnummer
+ */
+playerNumber:"33",
 
 
 
@@ -115,7 +124,7 @@ rank:"canadian-army-captain",
     /**
      * Eintrittsjahr
      */
-    enlisted:"2019",
+    enlisted:"2020",
 
 
 
@@ -213,435 +222,286 @@ rank:"canadian-army-captain",
 
 
 
-    /**
+        /**
      * Karriere Statistiken
      */
     stats:{
 
-
-
         seasons:[
 
-
-
-
-            {
-
-
-                year:"2019",
-
-
-                team:"BloodyArmy",
-
-
-
-                games:0,
-
-                goals:0,
-
-                assists:0,
-
-                points:0,
-
-                plusMinus:0,
-
-                penaltyMinutes:0,
-
-
-
-                playoffGames:0,
-
-                playoffGoals:0,
-
-                playoffAssists:0,
-
-                playoffPoints:0,
-
-                playoffPlusMinus:0,
-
-                playoffPenaltyMinutes:0,
-
-
-
-                titles:[]
-
-
-
-            },
-
-
-
-
-
-
-
-            {
-
+                       {
 
                 year:"2020",
 
-
                 team:"BloodyArmy",
-
-
 
                 games:0,
 
-                goals:0,
+                goalsAgainstAverage:0,
 
-                assists:0,
+                savePercentage:0,
 
-                points:0,
+                shutouts:0,
 
-                plusMinus:0,
+                wins:0,
 
-                penaltyMinutes:0,
+                losses:0,
 
-
+                overtimeLosses:0,
 
                 playoffGames:0,
 
-                playoffGoals:0,
+                playoffGoalsAgainstAverage:0,
 
-                playoffAssists:0,
+                playoffSavePercentage:0,
 
-                playoffPoints:0,
+                playoffShutouts:0,
 
-                playoffPlusMinus:0,
+                playoffWins:0,
 
-                playoffPenaltyMinutes:0,
+                playoffLosses:0,
 
-
+                playoffOvertimeLosses:0,
 
                 titles:[]
 
-
-
             },
 
-
-
-
-
-
-
             {
-
 
                 year:"2021",
 
-
                 team:"BloodyArmy",
-
-
 
                 games:0,
 
-                goals:0,
+                goalsAgainstAverage:0,
 
-                assists:0,
+                savePercentage:0,
 
-                points:0,
+                shutouts:0,
 
-                plusMinus:0,
+                wins:0,
 
-                penaltyMinutes:0,
+                losses:0,
 
-
+                overtimeLosses:0,
 
                 playoffGames:0,
 
-                playoffGoals:0,
+                playoffGoalsAgainstAverage:0,
 
-                playoffAssists:0,
+                playoffSavePercentage:0,
 
-                playoffPoints:0,
+                playoffShutouts:0,
 
-                playoffPlusMinus:0,
+                playoffWins:0,
 
-                playoffPenaltyMinutes:0,
+                playoffLosses:0,
 
-
+                playoffOvertimeLosses:0,
 
                 titles:[]
 
-
-
             },
 
-
-
-
-
-
-
-            {
-
+                        {
 
                 year:"2022",
 
-
                 team:"BloodyArmy",
-
-
 
                 games:0,
 
-                goals:0,
+                goalsAgainstAverage:0,
 
-                assists:0,
+                savePercentage:0,
 
-                points:0,
+                shutouts:0,
 
-                plusMinus:0,
+                wins:0,
 
-                penaltyMinutes:8,
+                losses:0,
 
-
+                overtimeLosses:0,
 
                 playoffGames:0,
 
-                playoffGoals:0,
+                playoffGoalsAgainstAverage:0,
 
-                playoffAssists:0,
+                playoffSavePercentage:0,
 
-                playoffPoints:0,
+                playoffShutouts:0,
 
-                playoffPlusMinus:0,
+                playoffWins:0,
 
-                playoffPenaltyMinutes:0,
+                playoffLosses:0,
 
-
+                playoffOvertimeLosses:0,
 
                 titles:[]
 
-
-
             },
 
-
-
-
-
-
-
             {
-
 
                 year:"2023",
 
-
                 team:"BloodyArmy",
-
-
 
                 games:0,
 
-                goals:0,
+                goalsAgainstAverage:0,
 
-                assists:0,
+                savePercentage:0,
 
-                points:0,
+                shutouts:0,
 
-                plusMinus:0,
+                wins:0,
 
-                penaltyMinutes:0,
+                losses:0,
 
-
+                overtimeLosses:0,
 
                 playoffGames:0,
 
-                playoffGoals:0,
+                playoffGoalsAgainstAverage:0,
 
-                playoffAssists:0,
+                playoffSavePercentage:0,
 
-                playoffPoints:0,
+                playoffShutouts:0,
 
-                playoffPlusMinus:0,
+                playoffWins:0,
 
-                playoffPenaltyMinutes:0,
+                playoffLosses:0,
 
-
+                playoffOvertimeLosses:0,
 
                 titles:[]
 
-
-
             },
 
-
-
-
-
-
-
             {
-
 
                 year:"2024",
 
-
                 team:"BloodyArmy",
-
-
 
                 games:0,
 
-                goals:0,
+                goalsAgainstAverage:0,
 
-                assists:0,
+                savePercentage:0,
 
-                points:0,
+                shutouts:0,
 
-                plusMinus:0,
+                wins:0,
 
-                penaltyMinutes:0,
+                losses:0,
 
-
+                overtimeLosses:0,
 
                 playoffGames:0,
 
-                playoffGoals:0,
+                playoffGoalsAgainstAverage:0,
 
-                playoffAssists:0,
+                playoffSavePercentage:0,
 
-                playoffPoints:0,
+                playoffShutouts:0,
 
-                playoffPlusMinus:0,
+                playoffWins:0,
 
-                playoffPenaltyMinutes:0,
+                playoffLosses:0,
 
-
+                playoffOvertimeLosses:0,
 
                 titles:[]
 
-
-
             },
 
-
-
-
-
-
-
-            {
-
+                        {
 
                 year:"2025",
 
-
                 team:"BloodyArmy",
-
-
 
                 games:0,
 
-                goals:0,
+                goalsAgainstAverage:0,
 
-                assists:0,
+                savePercentage:0,
 
-                points:0,
+                shutouts:0,
 
-                plusMinus:0,
+                wins:0,
 
-                penaltyMinutes:0,
+                losses:0,
 
-
+                overtimeLosses:0,
 
                 playoffGames:0,
 
-                playoffGoals:0,
+                playoffGoalsAgainstAverage:0,
 
-                playoffAssists:0,
+                playoffSavePercentage:0,
 
-                playoffPoints:0,
+                playoffShutouts:0,
 
-                playoffPlusMinus:0,
+                playoffWins:0,
 
-                playoffPenaltyMinutes:0,
+                playoffLosses:0,
 
-
+                playoffOvertimeLosses:0,
 
                 titles:[]
-
-
 
             },
 
-
-
-
-
-
-
             {
-
 
                 year:"2026",
 
-
                 team:"BloodyArmy",
-
-
 
                 games:0,
 
-                goals:0,
+                goalsAgainstAverage:0,
 
-                assists:0,
+                savePercentage:0,
 
-                points:0,
+                shutouts:0,
 
-                plusMinus:0,
+                wins:0,
 
-                penaltyMinutes:0,
+                losses:0,
 
-
+                overtimeLosses:0,
 
                 playoffGames:0,
 
-                playoffGoals:0,
+                playoffGoalsAgainstAverage:0,
 
-                playoffAssists:0,
+                playoffSavePercentage:0,
 
-                playoffPoints:0,
+                playoffShutouts:0,
 
-                playoffPlusMinus:0,
+                playoffWins:0,
 
-                playoffPenaltyMinutes:0,
+                playoffLosses:0,
 
-
+                playoffOvertimeLosses:0,
 
                 titles:[]
 
-
-
             }
-
-
-
 
         ]
 
-
-
     },
-
-
-
-
-
-
-
-
 
     /**
      * Bemerkung
      */
     remarks:"Torhüter der BloodyArmy mit der Nummer 33.",
-
-
-
 
 };

@@ -1,75 +1,50 @@
 "use client";
 
-
 import CareerStats from "./CareerStats";
-
 
 import type {
 
-    CareerStatsData,
+    SkaterCareerStatsData,
+
+    GoalieCareerStatsData,
 
 } from "./types";
 
-
-import {
-
-    emptyCareerStats,
-
-} from "./data";
-
-
-
-
-
-
-
 type MemberCareerStatsProps = {
 
+    playerType:"skater" | "goalie";
 
-    stats?:CareerStatsData;
+    stats?:
 
+        | SkaterCareerStatsData
+
+        | GoalieCareerStatsData;
 
 };
 
-
-
-
-
-
-
-
-
 export default function MemberCareerStats({
 
+    playerType,
 
     stats,
 
-
 }:MemberCareerStatsProps){
 
+    if(!stats){
 
+        return null;
 
-    return (
+    }
 
-
+    return(
 
         <CareerStats
 
+            playerType={playerType}
 
-            stats={
-
-                stats
-
-                ??
-
-                emptyCareerStats
-
-            }
-
+            stats={stats}
 
         />
-
-
 
     );
 

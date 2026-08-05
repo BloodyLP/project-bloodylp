@@ -12,21 +12,37 @@
  * ============================================
  */
 
-import {
-    ServiceRecord
-} from "@/lib/service-record";
+import { ServiceRecord } from "@/lib/service-record";
 
-import {
-    getRankImage
-} from "@/lib/service-record/getRankImage";
+import { getRankImage } from "@/lib/service-record/getRankImage";
+
+import type { ServiceRecordMember } from "@/types/service-record";
 
 import type {
-    ServiceRecordMember
-} from "@/types/service-record";
+
+    SkaterSeasonStats,
+
+    GoalieSeasonStats,
+
+} from "@/types/career-stats";
+
+import {
+
+    buildSkaterCareerStats,
+
+} from "./stats/calculateSkaterCareerStats";
+
+import {
+
+    buildGoalieCareerStats,
+
+} from "./stats/calculateGoalieCareerStats";
 
 function getBadgeTheme(
-    member: ServiceRecordMember
-) {
+
+    member:ServiceRecordMember
+
+){
 
     /*
     ============================================
@@ -34,13 +50,13 @@ function getBadgeTheme(
     ============================================
     */
 
-    if (member.prestige === 10) {
+    if(member.prestige===10){
 
-        return {
+        return{
 
-            title: "FOUNDER",
+            title:"FOUNDER",
 
-            theme: "prestigeX"
+            theme:"prestigeX",
 
         };
 
@@ -52,37 +68,37 @@ function getBadgeTheme(
     ============================================
     */
 
-    if (member.prestige === 3) {
+    if(member.prestige===3){
 
-        return {
+        return{
 
-            title: "PRESTIGE III",
+            title:"PRESTIGE III",
 
-            theme: "prestigeIII"
-
-        };
-
-    }
-
-    if (member.prestige === 2) {
-
-        return {
-
-            title: "PRESTIGE II",
-
-            theme: "prestigeII"
+            theme:"prestigeIII",
 
         };
 
     }
 
-    if (member.prestige === 1) {
+    if(member.prestige===2){
 
-        return {
+        return{
 
-            title: "PRESTIGE I",
+            title:"PRESTIGE II",
 
-            theme: "prestigeI"
+            theme:"prestigeII",
+
+        };
+
+    }
+
+    if(member.prestige===1){
+
+        return{
+
+            title:"PRESTIGE I",
+
+            theme:"prestigeI",
 
         };
 
@@ -90,7 +106,7 @@ function getBadgeTheme(
 
     /*
     ============================================
-    RANG SYSTEM
+    RANGSYSTEM
     ============================================
     */
 
@@ -100,65 +116,65 @@ function getBadgeTheme(
 
     );
 
-    switch (rank.category) {
+    switch(rank.category){
 
         case "command":
 
-            return {
+            return{
 
-                title: "GENERAL",
+                title:"GENERAL",
 
-                theme: "generale"
+                theme:"generale",
 
             };
 
         case "offiziere":
 
-            return {
+            return{
 
-                title: "OFFIZIER",
+                title:"OFFIZIER",
 
-                theme: "offiziere"
+                theme:"offiziere",
 
             };
 
         case "feldwebel":
 
-            return {
+            return{
 
-                title: "UNTEROFFIZIER MIT PORTEPEE",
+                title:"UNTEROFFIZIER MIT PORTEPEE",
 
-                theme: "portepee"
+                theme:"portepee",
 
             };
 
         case "unteroffiziere":
 
-            return {
+            return{
 
-                title: "UNTEROFFIZIER",
+                title:"UNTEROFFIZIER",
 
-                theme: "unteroffiziere"
+                theme:"unteroffiziere",
 
             };
 
         case "mannschaften":
 
-            return {
+            return{
 
-                title: "MANNSCHAFT",
+                title:"MANNSCHAFT",
 
-                theme: "mannschaften"
+                theme:"mannschaften",
 
             };
 
         default:
 
-            return {
+            return{
 
-                title: "ZIVILIST",
+                title:"ZIVILIST",
 
-                theme: "zivilisten"
+                theme:"zivilisten",
 
             };
 
@@ -167,18 +183,14 @@ function getBadgeTheme(
 }
 
 export function mapMemberToCard(
-    member: ServiceRecordMember
-) {
+
+    member:ServiceRecordMember
+
+){
 
     const rank = ServiceRecord.rank(
 
         member.rank
-
-    );
-
-    const organization = ServiceRecord.organization(
-
-        member.organization
 
     );
 
@@ -194,67 +206,91 @@ export function mapMemberToCard(
 
     );
 
-    return {
+    return{
 
-        id: member.id,
+        id:member.id,
 
-        armyId: member.recordNumber,
+        armyId:member.recordNumber,
 
-        name: member.name,
+        name:member.name,
 
-        avatar: member.avatar,
+        avatar:member.avatar,
 
-        joinedLabel:
+        joinedLabel:`SEIT ${member.enlisted}`,
 
-            `SEIT ${member.enlisted}`,
+        rank:{
 
-        rank: {
+            title:rank.name,
 
-            title: rank.name,
-
-            image: getRankImage(
+            image:getRankImage(
 
                 rank.id
 
-            )
+            ),
 
         },
 
-        badge: {
+        badge:{
 
-            title: badge.title,
+            title:badge.title,
 
-            theme: badge.theme
+            theme:badge.theme,
 
         },
 
-        prestige: {
+        prestige:{
 
-            level: member.prestige,
+            level:member.prestige,
 
-            key: badge.theme,
+            key:badge.theme,
 
-            title: badge.title
+            title:badge.title,
 
         },
 
         stats:
 
-            member.stats,
+            member.stats
+
+                ?
+
+                member.playerType==="goalie"
+
+                    ?
+
+                    buildGoalieCareerStats(
+
+                        member.stats.seasons as GoalieSeasonStats[]
+
+                    )
+
+                    :
+
+                    buildSkaterCareerStats(
+
+                        member.stats.seasons as SkaterSeasonStats[]
+
+                    )
+
+                :
+
+                undefined,
+
+        playerType:member.playerType,
 
         profile:{
 
-    position:
+            position:
 
-        position?.title ??
+                position?.title
 
-        "",
+                ??
 
-    number:
+                "",
 
-        member.playerNumber
+            number:member.playerNumber,
 
-}
+        },
 
     };
 

@@ -1,180 +1,71 @@
-export type TeamType =
+/**
+ * ============================================
+ * BloodyArmy
+ * ============================================
+ *
+ * Project:
+ * BloodyArmy Website
+ *
+ * File:
+ * stats/types.ts
+ *
+ * Description:
+ * Typdefinitionen für die
+ * Karriere-Statistiken.
+ *
+ * ============================================
+ */
 
-    | "BloodyArmy"
+import type {
 
-    | "Young Army";
+    SkaterSeasonStats,
 
+    GoalieSeasonStats,
 
+} from "@/types/career-stats";
 
+/*
+================================================
+INPUT
+================================================
+*/
 
+export type CareerStatsInput<T> = {
 
+    regularSeason:T[];
 
-
-
-
-export type CareerSeasonStats = {
-
-
-    season?:string;
-
-
-    year:string;
-
-
-    team:TeamType;
-
-
-
-    games:number;
-
-
-    goals:number;
-
-
-    assists:number;
-
-
-    points:number;
-
-
-    plusMinus:number;
-
-
-    penaltyMinutes:number;
-
-
-
-    playoffGames?:number;
-
-
-    playoffGoals?:number;
-
-
-    playoffAssists?:number;
-
-
-    playoffPoints?:number;
-
-
-    playoffPlusMinus?:number;
-
-
-    playoffPenaltyMinutes?:number;
-
-
-
-    titles?:string[];
-
+    playoffs:T[];
 
 };
 
+/*
+================================================
+OUTPUT
+================================================
+*/
 
+export type CareerStatsData<T> = {
 
+    seasons:T[];
 
+    regularSeason:T[];
 
+    playoffs:T[];
 
-
-
-
-export type SeasonStats = {
-
-
-    season?:string;
-
-
-    year?:string;
-
-
-    team:TeamType;
-
-
-
-    games:number;
-
-
-    goals:number;
-
-
-    assists:number;
-
-
-    points:number;
-
-
-    plusMinus:number;
-
-
-    penaltyMinutes:number;
-
-
-
-    playoffGames?:number;
-
-
-    playoffGoals?:number;
-
-
-    playoffAssists?:number;
-
-
-    playoffPoints?:number;
-
-
-    playoffPlusMinus?:number;
-
-
-    playoffPenaltyMinutes?:number;
-
-
-
-    titles?:string[];
-
+    total:T;
 
 };
 
+/*
+================================================
+ALIASES
+================================================
+*/
 
+export type SkaterCareerStatsData =
 
+    CareerStatsData<SkaterSeasonStats>;
 
+export type GoalieCareerStatsData =
 
-
-
-
-
-export type CareerStatsInput = {
-
-
-    regularSeason:SeasonStats[];
-
-
-    playoffs:SeasonStats[];
-
-
-};
-
-
-
-
-
-
-
-
-
-export type CareerStatsData = {
-
-
-    seasons?:SeasonStats[];
-
-
-
-    regularSeason:SeasonStats[];
-
-
-
-    playoffs:SeasonStats[];
-
-
-
-    total:SeasonStats;
-
-
-};
+    CareerStatsData<GoalieSeasonStats>;

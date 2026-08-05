@@ -1,17 +1,19 @@
 export type {
 
-    CareerStatsData,
-
     CareerStatsInput,
 
-    SeasonStats,
+    CareerStatsData,
+
+    SkaterCareerStatsData,
+
+    GoalieCareerStatsData,
 
 } from "./types";
-
-
 
 export {
 
     emptyCareerStats,
+
+    founderStats,
 
 } from "./data";

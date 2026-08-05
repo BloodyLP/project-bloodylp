@@ -50,8 +50,8 @@ export default function ServiceRecord({
             />
 
             <Identity
-    rank={member.rank}
-/>
+                rank={member.rank}
+            />
 
             <Portrait
                 member={member}
@@ -101,6 +101,22 @@ export default function ServiceRecord({
                 </DecorationRow>
 
             </Decorations>
+
+            <div className={styles.backArea}>
+
+                <a
+
+                    href="/community"
+
+                    className={styles.backButton}
+
+                >
+
+                    ← ZURÜCK ZUR MITGLIEDERÜBERSICHT
+
+                </a>
+
+            </div>
 
             <Footer />
 

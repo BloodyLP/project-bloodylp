@@ -1,27 +1,23 @@
 "use client";
 
-
 import Image from "next/image";
-
 import Link from "next/link";
-
 import { useState } from "react";
-
 import { motion } from "framer-motion";
 
-
 import MemberCardBack from "./MemberCardBack";
-
 import styles from "./MemberCard.module.css";
-
-
 import { badgeThemes } from "./badgeThemes";
 
+import type {
 
+    SkaterCareerStatsData,
 
+    GoalieCareerStatsData,
+
+} from "./stats/types";
 
 type MemberCardProps = {
-
 
     id:string;
 
@@ -33,9 +29,7 @@ type MemberCardProps = {
 
     joinedLabel:string;
 
-
     compact?:boolean;
-
 
     rank:{
 
@@ -44,7 +38,6 @@ type MemberCardProps = {
         image:string;
 
     };
-
 
     badge:{
 
@@ -56,7 +49,6 @@ type MemberCardProps = {
 
     };
 
-
     prestige?:{
 
         level:number;
@@ -67,11 +59,15 @@ type MemberCardProps = {
 
     };
 
+    stats?:
 
-    stats?:any;
+        | SkaterCareerStatsData
 
+        | GoalieCareerStatsData;
 
-    profile?:{
+    playerType:"skater" | "goalie";
+
+    profile:{
 
         position:string;
 
@@ -79,17 +75,9 @@ type MemberCardProps = {
 
     };
 
-
 };
 
-
-
-
-
-
-
 export default function MemberCard({
-
 
     id,
 
@@ -109,32 +97,23 @@ export default function MemberCard({
 
     stats,
 
+    playerType,
+
     profile,
 
-    compact=false
-
+    compact=false,
 
 }:MemberCardProps){
 
-
-
     const [flipped,setFlipped]=useState(false);
 
+    let displayTitle=badge.title;
 
-
-
-
-    let displayTitle = badge.title;
-
-    let displayTheme = badge.theme;
-
-
-
-
+    let displayTheme=badge.theme;
 
     if(
 
-        badge.title !== "FOUNDER"
+        badge.title!=="FOUNDER"
 
         &&
 
@@ -142,7 +121,7 @@ export default function MemberCard({
 
         &&
 
-        prestige.level > 0
+        prestige.level>0
 
     ){
 
@@ -152,104 +131,61 @@ export default function MemberCard({
 
     }
 
-
-
-
-
-
     const theme=badgeThemes[displayTheme];
 
-
-
-
-
-
-    return (
-
-
+    return(
 
         <div
 
-    className={
+            className={
 
-        compact
+                compact
 
-        ?
+                    ? `${styles.flipContainer} ${styles.compactContainer}`
 
-        `${styles.flipContainer} ${styles.compactContainer}`
+                    : styles.flipContainer
 
-        :
+            }
 
-        styles.flipContainer
-
-    }
-
->
-
-
-
-
+        >
 
             <motion.div
 
-
-
                 className={styles.flipInner}
-
-
 
                 animate={{
 
-                    rotateY: flipped ? 180 : 0
+                    rotateY:flipped ? 180 : 0,
 
                 }}
-
-
 
                 transition={{
 
                     duration:.7,
 
-                    ease:"easeInOut"
+                    ease:"easeInOut",
 
                 }}
 
-
-
             >
-
-
-
-
-
-
 
                 <article
 
-    className={
+                    className={
 
-        compact
+                        compact
 
-        ?
+                            ? `${styles.card} ${styles.compact}`
 
-        `${styles.card} ${styles.compact}`
+                            : `${styles.card} ${styles.founder}`
 
-        :
+                    }
 
-        `${styles.card} ${styles.founder}`
-
-    }
-
->
-
-
-
+                >
 
                     <header className={styles.header}>
 
-
                         <div className={styles.rankArea}>
-
 
                             <Image
 
@@ -265,9 +201,7 @@ export default function MemberCard({
 
                             />
 
-
                             <div className={styles.rankContent}>
-
 
                                 <h2 className={styles.rankTitle}>
 
@@ -275,14 +209,9 @@ export default function MemberCard({
 
                                 </h2>
 
-
                             </div>
 
-
                         </div>
-
-
-
 
                         <div className={styles.armyId}>
 
@@ -290,19 +219,9 @@ export default function MemberCard({
 
                         </div>
 
-
-
                     </header>
 
-
-
-
-
-
-
-
                     <div className={styles.avatarWrapper}>
-
 
                         <Image
 
@@ -318,17 +237,9 @@ export default function MemberCard({
 
                         />
 
-
                     </div>
 
-
-
-
-
-
-
                     <div className={styles.identity}>
-
 
                         <h1 className={styles.name}>
 
@@ -336,15 +247,9 @@ export default function MemberCard({
 
                         </h1>
 
-
-
-
-
                         <div
 
-
                             className={styles.badge}
-
 
                             style={{
 
@@ -354,14 +259,11 @@ export default function MemberCard({
 
                                 color:theme.text,
 
-                                boxShadow:
-
-                                    `0 0 25px ${theme.glow}`
+                                boxShadow:`0 0 25px ${theme.glow}`,
 
                             }}
 
                         >
-
 
                             <span className={styles.badgeTitle}>
 
@@ -369,31 +271,17 @@ export default function MemberCard({
 
                             </span>
 
-
                         </div>
-
-
 
                     </div>
 
-
-
-
-
-
-
                     <footer className={styles.footer}>
-
 
                         <div className={styles.joined}>
 
                             {joinedLabel}
 
                         </div>
-
-
-
-
 
                         <button
 
@@ -407,14 +295,7 @@ export default function MemberCard({
 
                             KARRIERE-STATISTIKEN ÖFFNEN
 
-
                         </button>
-
-
-
-
-
-
 
                         <Link
 
@@ -422,35 +303,39 @@ export default function MemberCard({
 
                             className={styles.actionButton}
 
+                            onClick={()=>{
+
+                                sessionStorage.setItem(
+
+                                    "communityScroll",
+
+                                    String(window.scrollY)
+
+                                );
+
+                                sessionStorage.setItem(
+
+                                    "selectedMember",
+
+                                    id
+
+                                );
+
+                            }}
+
                         >
 
                             SERVICE RECORD ÖFFNEN
 
-
                         </Link>
-
-
 
                     </footer>
 
-
-
-
-
                 </article>
-
-
-
-
-
-
-
 
                 <div className={styles.back}>
 
-
                     <MemberCardBack
-
 
                         name={name}
 
@@ -458,30 +343,20 @@ export default function MemberCard({
 
                         stats={stats}
 
+                        playerType={playerType}
+
                         profile={profile}
 
                         onBack={()=>setFlipped(false)}
 
                     />
 
-
-
                 </div>
-
-
-
-
-
 
             </motion.div>
 
-
-
-
         </div>
 
-
     );
-
 
 }

@@ -92,11 +92,20 @@ export const dungeon: ServiceRecordMember = {
 
 
 
-    /**
-     * Position
-     */
-    position:"rightWing",
-    playerNumber:"62",
+  /**
+ * Position
+ */
+position:"rightWing",
+
+/**
+ * Spielertyp
+ */
+playerType:"skater",
+
+/**
+ * Trikotnummer
+ */
+playerNumber:"62",
 
 
 

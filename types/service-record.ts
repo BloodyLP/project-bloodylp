@@ -15,39 +15,31 @@
  * ============================================
  */
 
-
-
 import type {
 
     RankId,
 
-    PrestigeLevel
+    PrestigeLevel,
 
 } from "@/data/service-record/ranks";
 
-
-
 import type {
 
-    OrganizationId
+    OrganizationId,
 
 } from "@/data/service-record/organizations";
 
-
-
 import type {
 
-    PositionId
+    PositionId,
 
 } from "@/data/service-record/positions";
 
+import type {
 
+    CareerSeasonStats,
 
-
-
-
-
-
+} from "./career-stats";
 
 /*
 ================================================
@@ -55,122 +47,11 @@ TEAMS
 ================================================
 */
 
-
 export type TeamType =
-
 
     | "BloodyArmy"
 
-
     | "Young Army";
-
-
-
-
-
-
-
-
-
-/*
-================================================
-CAREER STATISTICS
-================================================
-*/
-
-
-export type CareerSeasonStats = {
-
-
-
-    /**
-     * Anzeige Saison
-     */
-    season?:string;
-
-
-
-    /**
-     * Jahr
-     */
-    year:string;
-
-
-
-    /**
-     * Mannschaft
-     */
-    team:TeamType;
-
-
-
-
-
-    games:number;
-
-
-
-    goals:number;
-
-
-
-    assists:number;
-
-
-
-    points:number;
-
-
-
-    plusMinus:number;
-
-
-
-    penaltyMinutes:number;
-
-
-
-
-
-    playoffGames?:number;
-
-
-
-    playoffGoals?:number;
-
-
-
-    playoffAssists?:number;
-
-
-
-    playoffPoints?:number;
-
-
-
-    playoffPlusMinus?:number;
-
-
-
-    playoffPenaltyMinutes?:number;
-
-
-
-
-
-    titles?:string[];
-
-
-
-};
-
-
-
-
-
-
-
-
 
 /*
 ================================================
@@ -178,215 +59,125 @@ SERVICE RECORD MEMBER
 ================================================
 */
 
-
 export interface ServiceRecordMember {
-
-
-
-
 
     /**
      * Interne UUID
      */
     id:string;
 
-
-
-
-
     /**
      * URL-Slug
      */
     slug:string;
-
-
-
-
 
     /**
      * Service Record Nummer
      */
     recordNumber:string;
 
-
-
-
-
     /**
      * Communityname
      */
     name:string;
-
-
-
-
 
     /**
      * Avatar
      */
     avatar:string;
 
-
-
-
-
     /**
-     * Dienstgrad ID
-     *
-     * Verbindung zur Rangdatenbank
+     * Dienstgrad
      */
     rank:RankId;
-
-
-
-
 
     /**
      * Organisation
      */
     organization:OrganizationId;
 
-
-
-
-
     /**
-     * Position in Formation
+     * Position
      */
     position:PositionId;
 
-
-
-
-    
     /**
- * Trikotnummer
- */
-playerNumber:string;
+     * Spielertyp
+     */
+    playerType:"skater" | "goalie";
 
-
-
-
+    /**
+     * Trikotnummer
+     */
+    playerNumber:string;
 
     /**
      * Reihe
      */
     line:number;
 
-
-
-
-
     /**
      * Eintrittsjahr
      */
     enlisted:string;
-
-
-
-
 
     /**
      * Prestige-Level
      */
     prestige:PrestigeLevel;
 
-
-
-
-
     /**
      * Patreon-Level
      */
     patreon:number;
-
-
-
-
 
     /**
      * Aktiv
      */
     active:boolean;
 
-
-
-
-
     /**
      * Sichtbar
      */
     visible:boolean;
 
-
-
-
-
     /**
-     * Auszeichnungen
+     * Decorations
      */
     decorations:string[];
 
-
-
-
-
     /**
-     * Ordensbänder
+     * Ribbon Racks
      */
     ribbons:string[];
-
-
-
-
 
     /**
      * Medaillen
      */
     medals:string[];
 
-
-
-
-
     /**
      * Abzeichen
      */
     badges:string[];
 
-
-
-
-
     /**
-     * Erfolge
+     * Achievements
      */
     achievements:string[];
 
-
-
-
-
     /**
-     * Karriere Statistik
+     * Karriere-Statistik
      */
     stats?:{
 
-
         seasons:CareerSeasonStats[];
 
-
     };
-
-
-
-
 
     /**
      * Bemerkungen
      */
     remarks?:string;
-
-
 
 }
