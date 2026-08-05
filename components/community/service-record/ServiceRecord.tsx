@@ -9,11 +9,10 @@
  * Component:
  * ServiceRecord
  *
- * Description:
- * Hauptkomponente des Service Records.
- *
  * ============================================
  */
+
+"use client";
 
 import styles from "./ServiceRecord.module.css";
 
@@ -27,11 +26,21 @@ import Prestige from "./decorations/prestige";
 import StanleyCup from "./decorations/stanley-cup";
 import Footer from "./footer";
 
-import type { ServiceRecordMember } from "@/types/service-record";
+import {
 
-interface ServiceRecordProps {
+    getTheme,
 
-    member: ServiceRecordMember;
+} from "@/lib/service-record/theme";
+
+import type {
+
+    ServiceRecordMember,
+
+} from "@/types/service-record";
+
+interface ServiceRecordProps{
+
+    member:ServiceRecordMember;
 
 }
 
@@ -39,26 +48,84 @@ export default function ServiceRecord({
 
     member,
 
-}: ServiceRecordProps) {
+}:ServiceRecordProps){
 
-    return (
+    const theme = getTheme(
 
-        <article className={styles.serviceRecord}>
+    member.organization
+
+);
+
+    return(
+
+        <article
+
+            className={styles.serviceRecord}
+
+            style={{
+
+                ["--accent" as any]:
+
+                    theme.accent,
+
+                ["--accent-light" as any]:
+
+                    theme.accentLight,
+
+                ["--accent-soft" as any]:
+
+                    theme.accentSoft,
+
+                ["--accent-soft-2" as any]:
+
+                    theme.accentSoft2,
+
+                ["--accent-border" as any]:
+
+                    theme.border,
+
+                ["--accent-glow" as any]:
+
+                    theme.glow,
+
+                ["--accent-glow-soft" as any]:
+
+                    theme.glowSoft,
+
+                ["--button-text" as any]:
+
+                    theme.buttonText,
+
+                ["--card" as any]:
+
+                    theme.card,
+
+            }}
+
+        >
 
             <Header
+
                 recordNumber={member.recordNumber}
+
             />
 
             <Identity
+
                 rank={member.rank}
+
             />
 
             <Portrait
+
                 member={member}
+
             />
 
             <Body
+
                 member={member}
+
             />
 
             <Decorations>
@@ -66,37 +133,16 @@ export default function ServiceRecord({
                 <DecorationRow>
 
                     <Prestige
+
                         member={member}
+
                     />
 
                     <StanleyCup
+
                         member={member}
+
                     />
-
-                    {/*
-                        Orders
-                        <Orders member={member} />
-                    */}
-
-                    {/*
-                        Medals
-                        <Medals member={member} />
-                    */}
-
-                    {/*
-                        Ribbon Racks
-                        <RibbonRacks member={member} />
-                    */}
-
-                    {/*
-                        Badges
-                        <Badges member={member} />
-                    */}
-
-                    {/*
-                        Achievements
-                        <Achievements member={member} />
-                    */}
 
                 </DecorationRow>
 

@@ -580,13 +580,6 @@ OFFIZIERE
         members.filter(member => {
 
             const rank = ServiceRecord.rank(member.rank);
-
-            console.log(
-                member.name,
-                member.rank,
-                rank
-            );
-
             
             return rank?.category === "zivilisten";
 

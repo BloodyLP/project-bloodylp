@@ -2,6 +2,15 @@
 
 import CareerStats from "./stats/CareerStats";
 
+import { getTheme } from "@/lib/service-record/theme";
+import { createThemeVariables } from "@/lib/service-record/theme";
+
+import type {
+
+    OrganizationId,
+
+} from "@/data/service-record/organizations";
+
 import type {
 
     SkaterCareerStatsData,
@@ -17,6 +26,8 @@ type MemberCardBackProps = {
     name:string;
 
     armyId:string;
+
+    organization:OrganizationId;
 
     stats?:
 
@@ -44,6 +55,8 @@ export default function MemberCardBack({
 
     armyId,
 
+    organization,
+
     stats,
 
     playerType,
@@ -54,9 +67,29 @@ export default function MemberCardBack({
 
 }:MemberCardBackProps){
 
+    const theme = getTheme(
+
+        organization
+
+    );
+
     return(
 
-        <article className={styles.backCard}>
+        <article
+
+            className={styles.backCard}
+
+            style={
+
+                createThemeVariables(
+
+                    theme
+
+                )
+
+            }
+
+        >
 
             <header className={styles.header}>
 

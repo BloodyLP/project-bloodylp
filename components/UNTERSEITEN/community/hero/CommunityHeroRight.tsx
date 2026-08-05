@@ -107,6 +107,17 @@ const featuredMembers:Record<number, FeaturedMember> = {
 
     },
 
+    15:{
+
+
+        image:"/members/theilmfurter/avatar.png",
+
+
+        name:"Theilmfurter",
+
+
+    },
+
 
 
 };

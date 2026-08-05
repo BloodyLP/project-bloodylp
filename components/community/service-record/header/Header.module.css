@@ -9,13 +9,12 @@
  * Component:
  * Header
  *
- * Version:
- * MK-II
+ * Theme Ready
  *
  * ============================================
  */
 
-.header {
+.header{
 
     display:flex;
 
@@ -35,7 +34,7 @@
 
     flex-direction:column;
 
-    gap:0px;
+    gap:0;
 
 }
 
@@ -49,7 +48,7 @@
 
     letter-spacing:.08em;
 
-    color:#ffffff;
+    color:#FFFFFF;
 
 }
 
@@ -69,7 +68,7 @@
 
 .titleBlock small{
 
-    margin-top:0px;
+    margin-top:0;
 
     font-size:.70rem;
 
@@ -79,7 +78,7 @@
 
     text-transform:uppercase;
 
-    color:#9EFF2E;
+    color:var(--accent);
 
 }
 
@@ -101,7 +100,7 @@
 
     border-radius:10px;
 
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid var(--accent-border);
 
     background:
 
@@ -109,11 +108,15 @@
 
             180deg,
 
-            rgba(255,255,255,.04),
+            var(--accent-soft),
 
-            rgba(255,255,255,.02)
+            var(--accent-soft-2)
 
         );
+
+    box-shadow:
+
+        0 0 16px var(--accent-glow-soft);
 
 }
 
@@ -127,7 +130,7 @@
 
     text-transform:uppercase;
 
-    color:#ffffff;
+    color:#FFFFFF;
 
 }
 
@@ -141,9 +144,10 @@
 
     letter-spacing:.10em;
 
-    color:#9EFF2E;
+    color:var(--accent);
 
     text-shadow:
-        0 0 6px rgba(158,255,46,.25);
+
+        0 0 8px var(--accent-glow);
 
 }

@@ -9,134 +9,149 @@
  * Component:
  * Body
  *
- * Version:
- * MK-IV
+ * Theme Ready
  *
  * ============================================
  */
 
-.body {
+.body{
 
-    display: flex;
-    flex-direction: column;
+    display:flex;
 
-    gap: 12px;
+    flex-direction:column;
 
-    padding: 14px 18px;
+    gap:12px;
 
-}
-
-.sectionTitle {
-
-    margin: 0;
-
-    font-size: .75rem;
-
-    font-weight: 800;
-
-    letter-spacing: .22em;
-
-    text-transform: uppercase;
-
-    color: #9EFF2E;
+    padding:14px 18px;
 
 }
 
-.grid {
+.sectionTitle{
 
-    display: grid;
+    margin:0;
 
-    grid-template-columns: repeat(2, 1fr);
+    font-size:.75rem;
 
-    gap: 12px;
+    font-weight:800;
+
+    letter-spacing:.22em;
+
+    text-transform:uppercase;
+
+    color:var(--accent);
 
 }
 
-.item {
+.grid{
 
-    position: relative;
+    display:grid;
 
-    display: flex;
+    grid-template-columns:repeat(2,1fr);
 
-    flex-direction: column;
+    gap:12px;
 
-    gap: 6px;
+}
 
-    padding: 14px;
+.item{
 
-    overflow: hidden;
+    position:relative;
 
-    border: 1px solid rgba(255,255,255,.08);
+    display:flex;
 
-    border-radius: 10px;
+    flex-direction:column;
+
+    gap:6px;
+
+    padding:14px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:10px;
 
     background:
+
         linear-gradient(
+
             180deg,
+
             rgba(255,255,255,.035),
+
             rgba(255,255,255,.015)
+
         );
 
     transition:
+
         border-color .25s ease,
+
         transform .25s ease,
+
         box-shadow .25s ease;
 
 }
 
-.item::before {
+.item::before{
 
-    content: "";
+    content:"";
 
-    position: absolute;
+    position:absolute;
 
-    top: 0;
-    left: 0;
+    top:0;
 
-    width: 100%;
-    height: 2px;
+    left:0;
+
+    width:100%;
+
+    height:2px;
 
     background:
+
         linear-gradient(
+
             90deg,
-            #9EFF2E 0%,
-            #7ED321 55%,
-            transparent 100%
+
+            var(--accent),
+
+            transparent
+
         );
 
 }
 
-.item:hover {
+.item:hover{
 
-    border-color: rgba(158,255,46,.35);
+    border-color:var(--accent-border);
 
     box-shadow:
-        0 0 12px rgba(158,255,46,.10);
+
+        0 0 12px var(--accent-glow-soft);
 
 }
 
-.label {
+.label{
 
-    font-size: .68rem;
+    font-size:.68rem;
 
-    font-weight: 700;
+    font-weight:700;
 
-    letter-spacing: .12em;
+    letter-spacing:.12em;
 
-    text-transform: uppercase;
+    text-transform:uppercase;
 
-    color: rgba(255,255,255,.60);
+    color:rgba(255,255,255,.60);
 
 }
 
-.value {
+.value{
 
-    font-size: .90rem;
+    font-size:.90rem;
 
-    font-weight: 700;
+    font-weight:700;
 
-    line-height: 1.2;
+    line-height:1.2;
 
-    color: #FFFFFF;
+    color:#FFFFFF;
 
 }

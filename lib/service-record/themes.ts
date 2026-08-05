@@ -167,3 +167,49 @@ export const GeneralTheme: ServiceRecordTheme = {
     card: "#1F1F1F",
 
 };
+
+/* ===================================================== */
+/* BloodyArmy */
+/* ===================================================== */
+
+export const BloodyArmyTheme: ServiceRecordTheme = {
+
+    name: "BloodyArmy",
+
+    accent: "#9EFF2E",
+
+    accentSoft: "rgba(158,255,46,.18)",
+
+    accentGlow: "rgba(158,255,46,.24)",
+
+    border: "rgba(158,255,46,.25)",
+
+    topBar:
+        "linear-gradient(90deg,#9EFF2E,transparent)",
+
+    card: "#1F1F1F",
+
+};
+
+/* ===================================================== */
+/* Young Army */
+/* ===================================================== */
+
+export const YoungArmyTheme: ServiceRecordTheme = {
+
+    name: "YoungArmy",
+
+    accent: "#FF4A4A",
+
+    accentSoft: "rgba(255,74,74,.18)",
+
+    accentGlow: "rgba(255,74,74,.25)",
+
+    border: "rgba(255,74,74,.25)",
+
+    topBar:
+        "linear-gradient(90deg,#FF4A4A,transparent)",
+
+    card: "#1F1F1F",
+
+};

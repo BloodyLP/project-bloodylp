@@ -14,10 +14,6 @@
 
 }
 
-
-
-
-
 /* ================================= */
 /* SECTION */
 /* ================================= */
@@ -44,10 +40,6 @@
 
 }
 
-
-
-
-
 /* ================================= */
 /* TABLE */
 /* ================================= */
@@ -72,10 +64,6 @@
 
 }
 
-
-
-
-
 /* ================================= */
 /* SKATER HEADER */
 /* ================================= */
@@ -87,19 +75,12 @@
     grid-template-columns:
 
         1.1fr
-
         1.5fr
-
         .7fr
-
         .7fr
-
         .7fr
-
         .8fr
-
         .8fr
-
         .8fr;
 
     align-items:center;
@@ -107,12 +88,17 @@
     padding:
 
         .85rem
-
         1rem;
 
     background:
 
-        rgba(163,230,53,.18);
+        var(--accent-soft);
+
+    border-bottom:
+
+        1px solid
+
+        var(--accent-border);
 
 }
 
@@ -144,10 +130,6 @@
 
 }
 
-
-
-
-
 /* ================================= */
 /* GOALIE HEADER */
 /* ================================= */
@@ -159,17 +141,11 @@
     grid-template-columns:
 
         58px
-
         42px
-
         38px
-
         42px
-
         42px
-
         38px
-
         92px;
 
     justify-content:space-between;
@@ -179,12 +155,17 @@
     padding:
 
         .85rem
-
         1rem;
 
     background:
 
-        rgba(163,230,53,.18);
+        var(--accent-soft);
+
+    border-bottom:
+
+        1px solid
+
+        var(--accent-border);
 
 }
 
@@ -227,19 +208,12 @@
     grid-template-columns:
 
         1.1fr
-
         1.5fr
-
         .7fr
-
         .7fr
-
         .7fr
-
         .8fr
-
         .8fr
-
         .8fr;
 
     align-items:center;
@@ -247,7 +221,6 @@
     padding:
 
         .85rem
-
         1rem;
 
     min-height:52px;
@@ -257,6 +230,18 @@
         1px solid
 
         rgba(255,255,255,.08);
+
+    transition:
+
+        background .25s ease;
+
+}
+
+.row:hover{
+
+    background:
+
+        var(--accent-soft);
 
 }
 
@@ -288,10 +273,6 @@
 
 }
 
-
-
-
-
 /* ================================= */
 /* GOALIE ROW */
 /* ================================= */
@@ -303,17 +284,11 @@
     grid-template-columns:
 
         58px
-
         42px
-
         38px
-
         42px
-
         42px
-
         38px
-
         92px;
 
     justify-content:space-between;
@@ -323,7 +298,6 @@
     padding:
 
         .85rem
-
         1rem;
 
     min-height:52px;
@@ -333,6 +307,18 @@
         1px solid
 
         rgba(255,255,255,.08);
+
+    transition:
+
+        background .25s ease;
+
+}
+
+.rowGoalie:hover{
+
+    background:
+
+        var(--accent-soft);
 
 }
 
@@ -366,10 +352,6 @@
 
 }
 
-
-
-
-
 /* ================================= */
 /* TEAM */
 /* ================================= */
@@ -382,7 +364,9 @@
 
     justify-content:center;
 
-    color:#A3E635;
+    color:var(--accent);
+
+    font-weight:900;
 
 }
 
@@ -408,7 +392,7 @@
 
             0 0 8px
 
-            rgba(163,230,53,.35)
+            var(--accent-glow)
 
         );
 
@@ -420,13 +404,13 @@
 
 .highlightHeader{
 
-    color:#A3E635 !important;
+    color:var(--accent) !important;
 
 }
 
 .highlightPoints{
 
-    color:#A3E635 !important;
+    color:var(--accent) !important;
 
     font-size:1.35rem !important;
 
@@ -434,13 +418,9 @@
 
     text-shadow:
 
-        0 0 15px rgba(163,230,53,.65);
+        0 0 15px var(--accent-glow);
 
 }
-
-
-
-
 
 /* ================================= */
 /* EMPTY */
@@ -460,10 +440,6 @@
 
 }
 
-
-
-
-
 /* ================================= */
 /* TOTAL CAREER */
 /* ================================= */
@@ -482,7 +458,7 @@
 
             180deg,
 
-            rgba(163,230,53,.14),
+            var(--accent-soft),
 
             rgba(255,255,255,.04)
 
@@ -492,19 +468,15 @@
 
         1px solid
 
-        rgba(163,230,53,.35);
+        var(--accent-border);
 
     box-shadow:
 
-        0 0 35px rgba(163,230,53,.12),
+        0 0 35px var(--accent-glow-soft),
 
         inset 0 0 25px rgba(0,0,0,.25);
 
 }
-
-
-
-
 
 .total h3{
 
@@ -512,7 +484,7 @@
 
     text-align:center;
 
-    color:#A3E635;
+    color:var(--accent);
 
     font-size:1.45rem !important;
 
@@ -523,10 +495,6 @@
     text-transform:uppercase;
 
 }
-
-
-
-
 
 .totalGrid{
 
@@ -540,13 +508,9 @@
 
 }
 
-
-
-
-
 .totalCard{
 
-white-space: nowrap;
+    white-space:nowrap;
 
     position:relative;
 
@@ -586,10 +550,6 @@ white-space: nowrap;
 
 }
 
-
-
-
-
 .totalCard::before{
 
     content:"";
@@ -604,9 +564,9 @@ white-space: nowrap;
 
     height:2px;
 
-    background:#A3E635;
+    background:var(--accent);
 
-    opacity:.5;
+    opacity:.6;
 
 }
 
@@ -640,10 +600,6 @@ white-space: nowrap;
 
 }
 
-
-
-
-
 .totalGrid strong{
 
     display:flex;
@@ -666,10 +622,6 @@ white-space: nowrap;
 
 }
 
-
-
-
-
 /* ================================= */
 /* HIGHLIGHT TOTAL */
 /* ================================= */
@@ -682,9 +634,9 @@ white-space: nowrap;
 
             180deg,
 
-            rgba(163,230,53,.22),
+            color-mix(in srgb, var(--accent) 22%, transparent),
 
-            rgba(163,230,53,.05)
+            color-mix(in srgb, var(--accent) 5%, transparent)
 
         ) !important;
 
@@ -692,11 +644,11 @@ white-space: nowrap;
 
         2px solid
 
-        rgba(163,230,53,.75) !important;
+        var(--accent-border) !important;
 
     box-shadow:
 
-        0 0 40px rgba(163,230,53,.35);
+        0 0 40px var(--accent-glow);
 
     transform:scale(1.02);
 
@@ -704,19 +656,15 @@ white-space: nowrap;
 
 }
 
-
-
-
-
 .highlightTotal strong{
 
-    color:#A3E635;
+    color:var(--accent);
 
     font-size:2.2rem !important;
 
     text-shadow:
 
-        0 0 25px rgba(163,230,53,.85);
+        0 0 25px var(--accent-glow);
 
 }
 
@@ -725,10 +673,6 @@ white-space: nowrap;
 /* ================================= */
 
 @media (max-width:700px){
-
-    /* ============================== */
-    /* SKATER */
-    /* ============================== */
 
     .rowHeader span{
 
@@ -743,10 +687,6 @@ white-space: nowrap;
         font-size:.82rem !important;
 
     }
-
-    /* ============================== */
-    /* GOALIE */
-    /* ============================== */
 
     .rowHeaderGoalie{
 
@@ -802,10 +742,6 @@ white-space: nowrap;
 
     }
 
-    /* ============================== */
-    /* TEAM */
-    /* ============================== */
-
     .team{
 
         font-size:.70rem !important;
@@ -822,19 +758,11 @@ white-space: nowrap;
 
     }
 
-    /* ============================== */
-    /* HIGHLIGHT */
-    /* ============================== */
-
     .highlightPoints{
 
         font-size:1.1rem !important;
 
     }
-
-    /* ============================== */
-    /* TOTAL */
-    /* ============================== */
 
     .total{
 

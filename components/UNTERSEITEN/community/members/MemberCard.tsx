@@ -8,6 +8,14 @@ import { motion } from "framer-motion";
 import MemberCardBack from "./MemberCardBack";
 import styles from "./MemberCard.module.css";
 import { badgeThemes } from "./badgeThemes";
+import { getTheme } from "@/lib/service-record/theme";
+import { createThemeVariables } from "@/lib/service-record/theme";
+
+import type {
+
+    OrganizationId,
+
+} from "@/data/service-record/organizations";
 
 import type {
 
@@ -22,6 +30,8 @@ type MemberCardProps = {
     id:string;
 
     armyId:string;
+
+    organization:OrganizationId;
 
     name:string;
 
@@ -83,6 +93,8 @@ export default function MemberCard({
 
     armyId,
 
+    organization,
+
     name,
 
     avatar,
@@ -133,6 +145,12 @@ export default function MemberCard({
 
     const theme=badgeThemes[displayTheme];
 
+    const organizationTheme = getTheme(
+
+    organization
+
+);
+
     return(
 
         <div
@@ -171,19 +189,29 @@ export default function MemberCard({
 
                 <article
 
-                    className={
+    className={
 
-                        compact
+        compact
 
-                            ? `${styles.card} ${styles.compact}`
+            ? `${styles.card} ${styles.compact}`
 
-                            : `${styles.card} ${styles.founder}`
+            : `${styles.card} ${styles.founder}`
 
-                    }
+    }
 
-                >
+    style={
 
-                    <header className={styles.header}>
+        createThemeVariables(
+
+            organizationTheme
+
+        )
+
+    }
+
+>
+
+                                        <header className={styles.header}>
 
                         <div className={styles.rankArea}>
 
@@ -333,7 +361,7 @@ export default function MemberCard({
 
                 </article>
 
-                <div className={styles.back}>
+                                <div className={styles.back}>
 
                     <MemberCardBack
 
@@ -341,13 +369,15 @@ export default function MemberCard({
 
                         armyId={armyId}
 
+                        organization={organization}
+
                         stats={stats}
 
                         playerType={playerType}
 
                         profile={profile}
 
-                        onBack={()=>setFlipped(false)}
+                        onBack={() => setFlipped(false)}
 
                     />
 

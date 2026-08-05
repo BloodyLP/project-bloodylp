@@ -9,105 +9,78 @@
  * Component:
  * Identity
  *
- * Version:
- * MK-IV
+ * Theme Ready
  *
  * ============================================
  */
 
 .identity{
 
-
     display:flex;
-
 
     flex-direction:column;
 
-
     align-items:center;
-
-
 
     justify-content:center;
 
-
-
     gap:8px;
 
-
-
-    padding:
-
-        16px 0 12px;
-
-
+    padding:16px 0 12px;
 
 }
 
-
-
-
-
 .insignia{
-
 
     width:52px;
 
-
     height:auto;
-
-
 
     object-fit:contain;
 
+    filter:
+        drop-shadow(
+            0 3px 10px rgba(0,0,0,.45)
+        );
 
+    transition:
+        transform .25s ease,
+        filter .25s ease;
+
+}
+
+.insignia:hover{
+
+    transform:scale(1.05);
 
     filter:
 
         drop-shadow(
-
-            0 3px 10px rgba(0,0,0,.45)
-
+            0 0 12px var(--accent-glow)
         );
 
-
-
 }
-
-
-
-
 
 .rank{
 
-
-    color:#ffffff;
-
-
+    color:#FFFFFF;
 
     font-size:1rem;
 
-
-
     font-weight:600;
-
-
 
 }
 
-
-
-
-
 .organization{
 
-
-    color:#ffffff;
-
-
+    color:var(--accent);
 
     font-size:.95rem;
 
+    font-weight:700;
 
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
 
 }
