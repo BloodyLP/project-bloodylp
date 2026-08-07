@@ -105,7 +105,7 @@ playerType:"skater",
 /**
  * Trikotnummer
  */
-playerNumber:"21",
+playerNumber:"74",
 
 
 
