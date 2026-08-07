@@ -7,7 +7,7 @@
  * BloodyArmy Website
  *
  * Data:
- * TheIlmfurter
+ * Adlermannheimfan
  *
  * Description:
  * Service Record Datensatz von TheIlmfurter.
@@ -17,37 +17,37 @@
 
 import type { ServiceRecordMember } from "@/types/service-record";
 
-export const TheIlmfurter: ServiceRecordMember = {
+export const Adlermannheimfan: ServiceRecordMember = {
 
     /**
      * Interne UUID
      */
-    id:"BA-004",
+    id:"BA-008",
 
     /**
      * URL
      */
-    slug:"theIlmfurter",
+    slug:"adlermannheimfan",
 
     /**
      * Service Record Nummer
      */
-    recordNumber:"BA-004",
+    recordNumber:"BA-008",
 
     /**
      * Anzeigename
      */
-    name:"TheIlmfurter",
+    name:"adlermannheimfan95",
 
     /**
      * Avatar
      */
-    avatar:"/members/theilmfurter/avatar.png",
+    avatar:"/members/adlermannheimfan/avatar.png",
 
     /**
      * Dienstgrad
      */
-    rank:"zivilist",
+    rank:"bundeswehr-soldat",
 
     /**
      * Organisation
@@ -57,7 +57,7 @@ export const TheIlmfurter: ServiceRecordMember = {
     /**
      * Position
      */
-    position:"center",
+    position:"leftDefense",
 
     /**
      * Spielertyp
@@ -67,17 +67,17 @@ export const TheIlmfurter: ServiceRecordMember = {
     /**
      * Trikotnummer
      */
-    playerNumber:"00",
+    playerNumber:"95",
 
     /**
      * Reihe
      */
-    line:5,
+    line:4,
 
     /**
      * Eintrittsjahr
      */
-    enlisted:"28. Juli 2026",
+    enlisted:"30. Dezember 2021",
 
     /**
      * Prestige
@@ -131,9 +131,111 @@ export const TheIlmfurter: ServiceRecordMember = {
 
         seasons:[
 
+{
+
+                year:"22/23",
+
+                team:"Young Army",
+
+                games:63,
+
+                goals:4,
+
+                assists:13,
+
+                points:17,
+
+                plusMinus:12,
+
+                penaltyMinutes:6,
+
+                playoffGames:20,
+
+                playoffGoals:0,
+
+                playoffAssists:3,
+
+                playoffPoints:3,
+
+                playoffPlusMinus:5,
+
+                playoffPenaltyMinutes:0,
+
+                titles:[]
+
+            },
+
+{
+
+                year:"23/24",
+
+                team:"Young Army",
+
+                games:72,
+
+                goals:6,
+
+                assists:8,
+
+                points:14,
+
+                plusMinus:16,
+
+                penaltyMinutes:0,
+
+                playoffGames:8,
+
+                playoffGoals:1,
+
+                playoffAssists:4,
+
+                playoffPoints:5,
+
+                playoffPlusMinus:5,
+
+                playoffPenaltyMinutes:2,
+
+                titles:[]
+
+            },
+
             {
 
-                year:"26/27",
+                year:"24/25",
+
+                team:"Young Army",
+
+                games:78,
+
+                goals:4,
+
+                assists:6,
+
+                points:10,
+
+                plusMinus:17,
+
+                penaltyMinutes:0,
+
+                playoffGames:22,
+
+                playoffGoals:1,
+
+                playoffAssists:4,
+
+                playoffPoints:5,
+
+                playoffPlusMinus:8,
+
+                playoffPenaltyMinutes:2,
+
+                titles:[]
+
+            },
+
+            {
+
+                year:"25/26",
 
                 team:"Young Army",
 

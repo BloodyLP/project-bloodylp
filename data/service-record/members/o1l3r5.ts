@@ -124,7 +124,7 @@ playerNumber:"27",
     /**
      * Eintrittsjahr
      */
-    enlisted:"2019",
+    enlisted:"29. November 2018",
 
 
 

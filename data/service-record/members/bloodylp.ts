@@ -102,7 +102,7 @@ playerNumber:"13",
     /**
      * Eintrittsjahr
      */
-    enlisted: "2016",
+    enlisted: "11. Dezember 2016",
 
 
 

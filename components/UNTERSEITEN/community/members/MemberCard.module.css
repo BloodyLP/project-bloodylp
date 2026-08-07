@@ -14,7 +14,7 @@
 
     min-height:580px;
 
-    margin:0 auto;
+    margin: 3px;
 
     display:flex;
 
@@ -60,25 +60,29 @@
 
 .flipContainer{
 
-    width:100%;
+    width:480px;
 
-    max-width:480px;
+    flex:0 0 480px;
 
-    margin:auto;
+    margin: 0.5em;;
 
     perspective:1400px;
 
 }
 
-.flipInner{
+.compactContainer{
 
-    position:relative;
+    width:330px;
 
-    width:100%;
+    flex:0 0 330px;
+
+}
+
+.compactContainer .flipInner{
+
+    width:330px;
 
     min-height:580px;
-
-    transform-style:preserve-3d;
 
 }
 
@@ -566,11 +570,11 @@
 
 .compact{
 
+    width:330px;
+
     max-width:330px;
 
     min-height:420px;
-
-    border-radius:22px;
 
 }
 
@@ -669,6 +673,8 @@
 .compactContainer .flipInner>.card,
 
 .compactContainer .flipInner>.back{
+
+    width:330px;
 
     height:580px;
 

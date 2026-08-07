@@ -137,6 +137,16 @@ const featuredMembers:Record<number, FeaturedMember> = {
 
 },
 
+19:{
+
+    image:"/members/adlermannheimfan/avatar.png",
+
+    name:"Adlermannheimfan95",
+
+    organization:"youngArmy",
+
+},
+
 
 
 };

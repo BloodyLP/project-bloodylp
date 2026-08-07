@@ -124,7 +124,7 @@ playerNumber:"37",
     /**
      * Eintrittsjahr
      */
-    enlisted:"2018",
+    enlisted:"08. Juli 2018",
 
 
 

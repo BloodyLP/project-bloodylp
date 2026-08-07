@@ -123,7 +123,7 @@ playerNumber:"62",
     /**
      * Eintrittsjahr
      */
-    enlisted:"2018",
+    enlisted:"19. Juli 2018",
 
 
 

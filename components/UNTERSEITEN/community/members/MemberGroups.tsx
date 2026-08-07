@@ -348,29 +348,26 @@ export default function MemberGroups(){
 
                             </h2>
 
-                            <div className={styles.grid}>
+                            <div className={styles.scrollArea}>
 
-                                {
+    <div className={styles.grid}>
 
-                                    group.members.map(
+        {
+            group.members.map(
+                member => (
 
-                                        member => (
+                    <MemberCard
+                        key={member.id}
+                        {...mapMemberToCard(member)}
+                    />
 
-                                            <MemberCard
+                )
+            )
+        }
 
-                                                key={member.id}
+    </div>
 
-                                                {...mapMemberToCard(member)}
-
-                                            />
-
-                                        )
-
-                                    )
-
-                                }
-
-                            </div>
+</div>
 
                         </section>
 

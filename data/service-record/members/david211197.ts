@@ -123,7 +123,7 @@ playerNumber:"74",
     /**
      * Eintrittsjahr
      */
-    enlisted:"2025",
+    enlisted:"12. Dezember 2024",
 
 
 

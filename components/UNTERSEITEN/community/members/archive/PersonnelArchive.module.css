@@ -185,37 +185,75 @@
 /* CARDS INSIDE */
 /* ================================= */
 
-
-.folderContent {
-
+.folderContent{
 
     display:flex;
 
-
-    flex-wrap:wrap;
-
+    flex-wrap:nowrap;
 
     align-items:flex-start;
 
+    overflow-x:auto;
 
-    gap:1.5rem;
+    overflow-y:hidden;
 
+    padding:1.5rem;
 
-    padding:
+    background:rgba(0,0,0,.18);
 
-        1.5rem;
+    border-top:1px solid rgba(255,255,255,.06);
 
+    scroll-behavior:smooth;
 
-    background:
+}
 
-        rgba(0,0,0,.18);
+/* Karten dürfen niemals schrumpfen */
 
+.folderContent > *{
 
-    border-top:
+    flex:0 0 auto;
 
-        1px solid
+}
 
-        rgba(255,255,255,.06);
+/* ================================= */
+/* SCROLLBAR */
+/* ================================= */
+
+.folderContent::-webkit-scrollbar{
+
+    height:10px;
+
+}
+
+.folderContent::-webkit-scrollbar-track{
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:999px;
+
+}
+
+.folderContent::-webkit-scrollbar-thumb{
+
+    background:#9EFF2E;
+
+    border-radius:999px;
+
+}
+
+.folderContent::-webkit-scrollbar-thumb:hover{
+
+    background:#C8FF70;
+
+}
+
+/* Firefox */
+
+.folderContent{
+
+    scrollbar-width:thin;
+
+    scrollbar-color:#9EFF2E rgba(255,255,255,.05);
 
 }
 
@@ -227,20 +265,6 @@
 /* ================================= */
 /* RESPONSIVE */
 /* ================================= */
-
-
-@media(max-width:900px){
-
-
-    .folderContent {
-
-        justify-content:center;
-
-    }
-
-
-}
-
 
 
 @media(max-width:700px){
