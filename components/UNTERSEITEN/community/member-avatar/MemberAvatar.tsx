@@ -1,34 +1,69 @@
 "use client";
 
 import Image from "next/image";
+
 import styles from "./MemberAvatar.module.css";
 
 type MemberAvatarProps = {
-    image: string;
-    name: string;
-    founder?: boolean;
+
+    image:string;
+
+    name:string;
+
+    organization:"bloodyArmy" | "youngArmy";
+
+    founder?:boolean;
+
 };
 
 export default function MemberAvatar({
+
     image,
+
     name,
-    founder = false,
-}: MemberAvatarProps) {
-    return (
+
+    organization,
+
+    founder=false,
+
+}:MemberAvatarProps){
+
+    return(
+
         <div
-            className={`${styles.avatar} ${
-                founder ? styles.founder : ""
-            }`}
+
+            className={`
+
+                ${styles.avatar}
+
+                ${founder ? styles.founder : ""}
+
+                ${organization==="bloodyArmy"
+
+                    ? styles.bloodyArmy
+
+                    : styles.youngArmy}
+
+            `}
+
         >
-            {founder && <span className={styles.pulse}></span>}
 
             <Image
+
                 src={image}
+
                 alt={name}
+
                 fill
+
                 sizes="120px"
+
                 className={styles.image}
+
             />
+
         </div>
+
     );
+
 }

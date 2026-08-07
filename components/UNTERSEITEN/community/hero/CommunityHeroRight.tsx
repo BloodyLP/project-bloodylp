@@ -14,15 +14,13 @@ import MemberAvatar from "../member-avatar";
 
 type FeaturedMember = {
 
-
     image:string;
-
 
     name:string;
 
+    organization:"bloodyArmy" | "youngArmy";
 
     founder?:boolean;
-
 
 };
 
@@ -69,54 +67,55 @@ const featuredMembers:Record<number, FeaturedMember> = {
 
     11:{
 
+    image:"/members/bloodylp/avatar.png",
 
-        image:"/members/bloodylp/avatar.png",
+    name:"BloodyLP",
 
+    organization:"bloodyArmy",
 
-        name:"BloodyLP",
+    founder:true,
 
+},
 
-        founder:true,
+12:{
 
+    image:"/members/dungeon/avatar.png",
 
-    },
+    name:"Dungeon_62",
 
+    organization:"bloodyArmy",
 
+},
 
+10:{
 
+    image:"/members/o1l3r5/avatar.png",
 
-    12:{
+    name:"O1L3R5",
 
+    organization:"bloodyArmy",
 
-        image:"/members/dungeon/avatar.png",
+},
 
+15:{
 
-        name:"Dungeon_62",
+    image:"/members/theilmfurter/avatar.png",
 
+    name:"Theilmfurter",
 
-    },
+    organization:"youngArmy",
 
-    10:{
+},
 
+16:{
 
-        image:"/members/o1l3r5/avatar.png",
+    image:"/members/ligoween/avatar.png",
 
+    name:"Ligoween",
 
-        name:"O1L3R5",
+    organization:"bloodyArmy",
 
-
-    },
-
-    15:{
-
-
-        image:"/members/theilmfurter/avatar.png",
-
-
-        name:"Theilmfurter",
-
-
-    },
+},
 
 
 
@@ -244,13 +243,25 @@ export default function CommunityHeroRight(){
 
                                                     filter:[
 
-                                                        "drop-shadow(0 0 0px rgba(163,230,53,.20))",
+    featured.organization==="bloodyArmy"
 
-                                                        "drop-shadow(0 0 18px rgba(163,230,53,.65))",
+        ? "drop-shadow(0 0 0px rgba(163,230,53,.20))"
 
-                                                        "drop-shadow(0 0 0px rgba(163,230,53,.20))",
+        : "drop-shadow(0 0 0px rgba(255,60,60,.20))",
 
-                                                    ]
+    featured.organization==="bloodyArmy"
+
+        ? "drop-shadow(0 0 18px rgba(163,230,53,.65))"
+
+        : "drop-shadow(0 0 18px rgba(255,60,60,.65))",
+
+    featured.organization==="bloodyArmy"
+
+        ? "drop-shadow(0 0 0px rgba(163,230,53,.20))"
+
+        : "drop-shadow(0 0 0px rgba(255,60,60,.20))",
+
+]
 
 
 
@@ -282,21 +293,15 @@ export default function CommunityHeroRight(){
 
                                                 <MemberAvatar
 
+    image={featured.image}
 
+    name={featured.name}
 
-                                                    image={featured.image}
+    organization={featured.organization}
 
+    founder={featured.founder}
 
-
-                                                    name={featured.name}
-
-
-
-                                                    founder={featured.founder}
-
-
-
-                                                />
+/>
 
 
 

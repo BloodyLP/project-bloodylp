@@ -40,6 +40,12 @@ import {
 
 } from "./members/theilmfurter";
 
+import {
+
+    ligoween
+
+} from "./members/ligoween";
+
 export const MEMBERS: ServiceRecordMember[] = [
 
     bloodylp,
@@ -49,5 +55,7 @@ export const MEMBERS: ServiceRecordMember[] = [
     o1l3r5,
 
     TheIlmfurter,
+
+    ligoween,
 
 ];

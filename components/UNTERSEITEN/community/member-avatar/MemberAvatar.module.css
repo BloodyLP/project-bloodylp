@@ -1,158 +1,173 @@
-.avatar {
+.avatar{
 
-    position: relative;
+    position:relative;
 
-    width: 92px;
-    height: 92px;
+    width:88px;
 
-    overflow: hidden;
+    height:88px;
 
-    border-radius: 50%;
+    border-radius:50%;
 
-    border: 2px solid rgba(255,255,255,.08);
+    overflow:hidden;
 
-    background: linear-gradient(
-        145deg,
-        rgba(255,255,255,.10),
-        rgba(255,255,255,.03)
-    );
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.10),
+            rgba(255,255,255,.03)
+        );
 
-    cursor: pointer;
+    border:2px solid transparent;
 
     transition:
+
         transform .35s ease,
+
         border-color .35s ease,
+
         box-shadow .35s ease;
 
-    animation: avatarFloat 6s ease-in-out infinite;
+}
+
+.image{
+
+    object-fit:cover;
 
 }
 
-.image {
-
-    object-fit: cover;
-
-}
-
-.avatar:hover {
+.avatar:hover{
 
     transform:
+
         translateY(-8px)
+
         scale(1.06);
 
-    border-color: rgba(163,230,53,.55);
+}
 
-    box-shadow:
-        0 0 20px rgba(163,230,53,.25),
-        0 0 45px rgba(163,230,53,.12);
+.founder:hover{
+
+    transform:
+
+        translateY(-10px)
+
+        scale(1.12);
 
 }
 
-.founder {
+/* ================================= */
+/* BLOODY ARMY */
+/* ================================= */
 
-    width: 128px;
-    height: 128px;
+.bloodyArmy{
 
-    border: 3px solid var(--color-lime);
+    border-color:rgba(163,230,53,.55);
 
     box-shadow:
-        0 0 18px rgba(163,230,53,.35),
-        0 0 45px rgba(163,230,53,.18);
+
+        0 0 20px rgba(163,230,53,.25);
+
+}
+
+.bloodyArmy:hover{
+
+    border-color:rgba(163,230,53,.85);
+
+    box-shadow:
+
+        0 0 35px rgba(163,230,53,.55);
+
+}
+
+/* ================================= */
+/* YOUNG ARMY */
+/* ================================= */
+
+.youngArmy{
+
+    border-color:rgba(255,60,60,.55);
+
+    box-shadow:
+
+        0 0 20px rgba(255,60,60,.25);
+
+}
+
+.youngArmy:hover{
+
+    border-color:rgba(255,60,60,.85);
+
+    box-shadow:
+
+        0 0 35px rgba(255,60,60,.55);
+
+}
+
+/* ================================= */
+/* FOUNDER */
+/* ================================= */
+
+.founder{
+
+    width:108px;
+
+    height:108px;
+
+    border-width:3px;
+
+    z-index:5;
 
     animation:
-        founderFloat 7s ease-in-out infinite;
 
-        z-index: 5;
-
-}
-
-.pulse {
-
-    position: absolute;
-
-    inset: -8px;
-
-    border-radius: 50%;
-
-    border: 2px solid rgba(163,230,53,.45);
-
-    animation: pulseRing 3s ease-out infinite;
-
-    pointer-events: none;
+        founderPulse 4s ease-in-out infinite;
 
 }
 
-@keyframes avatarFloat {
+.founder.bloodyArmy{
 
-    0% {
+    border-color:rgba(163,230,53,.95);
 
-        transform: translateY(0px);
+    box-shadow:
 
-    }
+        0 0 18px rgba(163,230,53,.65),
 
-    50% {
+        0 0 40px rgba(163,230,53,.45),
 
-        transform: translateY(-4px);
-
-    }
-
-    100% {
-
-        transform: translateY(0px);
-
-    }
+        0 0 70px rgba(163,230,53,.25);
 
 }
 
-@keyframes founderFloat {
+.founder.youngArmy{
 
-    0% {
+    border-color:rgba(255,60,60,.95);
 
-        transform:
-            translateY(0px)
-            scale(1);
+    box-shadow:
 
-    }
+        0 0 18px rgba(255,60,60,.65),
 
-    50% {
+        0 0 40px rgba(255,60,60,.45),
 
-        transform:
-            translateY(-7px)
-            scale(1.02);
-
-    }
-
-    100% {
-
-        transform:
-            translateY(0px)
-            scale(1);
-
-    }
+        0 0 70px rgba(255,60,60,.25);
 
 }
 
-@keyframes pulseRing {
+@keyframes founderPulse{
 
-    0% {
+    0%{
 
-        transform: scale(.95);
-
-        opacity: .75;
+        transform:scale(1);
 
     }
 
-    70% {
+    50%{
 
-        transform: scale(1.18);
-
-        opacity: 0;
+        transform:scale(1.08);
 
     }
 
-    100% {
+    100%{
 
-        opacity: 0;
+        transform:scale(1);
 
     }
 

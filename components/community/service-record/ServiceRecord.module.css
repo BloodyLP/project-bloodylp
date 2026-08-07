@@ -38,11 +38,13 @@
 
     max-width:480px;
 
-    aspect-ratio:8.5 / 16;
+    min-height:960px;
+
+height:auto;
 
     border-radius:20px;
 
-    overflow:hidden;
+    overflow:visible;
 
     background:#1b1b1b;
 

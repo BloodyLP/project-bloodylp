@@ -123,7 +123,7 @@ playerNumber:"62",
     /**
      * Eintrittsjahr
      */
-    enlisted:"2019",
+    enlisted:"2018",
 
 
 
@@ -169,15 +169,25 @@ playerNumber:"62",
      * Decorations
      */
     decorations:[
+"stanley-cup",
 
-        "stanley-cup",
+],
+
+stanleyCup:{
+
+    years:[
+
+        2019,
+
+        2020,
+
+        2022,
+
+        2025,
 
     ],
 
-
-
-
-
+},
     /**
      * Ribbon Rack
      */

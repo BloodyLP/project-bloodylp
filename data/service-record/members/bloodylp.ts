@@ -137,14 +137,26 @@ playerNumber:"13",
     /**
      * Decorations
      */
-    decorations: [
+    decorations:[
+"stanley-cup",
 
-        "stanley-cup",
+],
+
+stanleyCup:{
+
+    years:[
+
+        2019,
+
+        2020,
+
+        2022,
+
+        2025,
 
     ],
 
-
-
+},
     /**
      * Ribbon Rack
      */

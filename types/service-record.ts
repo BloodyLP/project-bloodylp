@@ -146,6 +146,12 @@ export interface ServiceRecordMember {
      */
     decorations:string[];
 
+stanleyCup?:{
+
+    years:number[];
+
+};
+
     /**
      * Ribbon Racks
      */

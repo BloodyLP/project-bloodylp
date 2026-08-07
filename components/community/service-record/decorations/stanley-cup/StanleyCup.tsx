@@ -50,17 +50,11 @@ export default function StanleyCup({
      * aus einer Datenbank.
      */
 
-    const years = [
+    const years =
 
-        2019,
+    member.stanleyCup?.years
 
-        2020,
-
-        2022,
-
-        2025,
-
-    ];
+    ?? [];
 
     return (
 

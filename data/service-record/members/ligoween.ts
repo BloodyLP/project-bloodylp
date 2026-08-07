@@ -7,7 +7,7 @@
  * BloodyArmy Website
  *
  * Data:
- * O1L3R5
+ * Ligoween
  *
  * Description:
  * Service Record Datensatz von O1L3R5.
@@ -25,7 +25,7 @@ import type { ServiceRecordMember } from "@/types/service-record";
 
 
 
-export const o1l3r5: ServiceRecordMember = {
+export const ligoween: ServiceRecordMember = {
 
 
 
@@ -33,7 +33,7 @@ export const o1l3r5: ServiceRecordMember = {
     /**
      * Interne UUID
      */
-    id:"BA-003",
+    id:"BA-005",
 
 
 
@@ -42,7 +42,7 @@ export const o1l3r5: ServiceRecordMember = {
     /**
      * URL
      */
-    slug:"o1l3r5",
+    slug:"ligoween",
 
 
 
@@ -51,7 +51,7 @@ export const o1l3r5: ServiceRecordMember = {
     /**
      * Service Record Nummer
      */
-    recordNumber:"BA-003",
+    recordNumber:"BA-005",
 
 
 
@@ -60,7 +60,7 @@ export const o1l3r5: ServiceRecordMember = {
     /**
      * Anzeigename
      */
-    name:"O1L3R5",
+    name:"Ligoween",
 
 
 
@@ -69,7 +69,7 @@ export const o1l3r5: ServiceRecordMember = {
     /**
      * Avatar
      */
-    avatar:"/members/o1l3r5/avatar.png",
+    avatar:"/members/ligoween/avatar.png",
 
 
 
@@ -78,7 +78,7 @@ export const o1l3r5: ServiceRecordMember = {
     /**
  * Dienstgrad
  */
-rank:"canadian-army-lieutenant-colonel",
+rank: "master-chief-petty-officer-of-the-navy",
 
 
 
@@ -115,7 +115,7 @@ playerNumber:"27",
     /**
      * Reihe
      */
-    line:1,
+    line:2,
 
 
 
@@ -124,7 +124,7 @@ playerNumber:"27",
     /**
      * Eintrittsjahr
      */
-    enlisted:"2019",
+    enlisted:"2018",
 
 
 
@@ -133,7 +133,7 @@ playerNumber:"27",
     /**
      * Prestige
      */
-    prestige:2,
+    prestige:1,
 
 
 
@@ -169,15 +169,17 @@ playerNumber:"27",
      /**
      * Decorations
      */
-    decorations:[
+    decorations: [
 
-    "stanley-cup",
+        "stanley-cup",
 
 ],
 
 stanleyCup:{
 
     years:[
+
+        2019,
 
         2020,
 
@@ -188,7 +190,7 @@ stanleyCup:{
     ],
 
 },
-    
+
 
     /**
      * Ribbon Rack
@@ -510,6 +512,6 @@ stanleyCup:{
     /**
      * Bemerkung
      */
-    remarks:"Torhüter der BloodyArmy mit der Nummer 33.",
+    remarks:"Torhüter der BloodyArmy mit der Nummer 50.",
 
 };
