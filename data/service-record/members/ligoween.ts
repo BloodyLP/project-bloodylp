@@ -241,33 +241,109 @@ stanleyCup:{
 
                        {
 
+                year:"18/19",
+
+                team:"BloodyArmy",
+
+                games:67,
+
+                goalsAgainstAverage:2.43,
+
+                savePercentage:86.0,
+
+                shutouts:2,
+
+                wins:41,
+
+                losses:20,
+
+                overtimeLosses:5,
+
+                playoffGames:19,
+
+                playoffGoalsAgainstAverage:2.69,
+
+                playoffSavePercentage:83.8,
+
+                playoffShutouts:2,
+
+                playoffWins:16,
+
+                playoffLosses:3,
+
+                playoffOvertimeLosses:0,
+
+                titles:[]
+
+            },
+
+            {
+
                 year:"19/20",
 
                 team:"BloodyArmy",
 
                 games:42,
 
-                goalsAgainstAverage:2.33,
+                goalsAgainstAverage:2.13,
 
-                savePercentage:87.5,
+                savePercentage:87.7,
 
-                shutouts:4,
+                shutouts:5,
 
-                wins:30,
+                wins:23,
 
-                losses:10,
+                losses:13,
+
+                overtimeLosses:4,
+
+                playoffGames:7,
+
+                playoffGoalsAgainstAverage:1.71,
+
+                playoffSavePercentage:90.6,
+
+                playoffShutouts:1,
+
+                playoffWins:6,
+
+                playoffLosses:1,
+
+                playoffOvertimeLosses:0,
+
+                titles:[]
+
+            },
+
+                        {
+
+                year:"20/21",
+
+                team:"BloodyArmy",
+
+                games:42,
+
+                goalsAgainstAverage:2.45,
+
+                savePercentage:88.4,
+
+                shutouts:3,
+
+                wins:27,
+
+                losses:13,
 
                 overtimeLosses:2,
 
-                playoffGames:14,
+                playoffGames:8,
 
-                playoffGoalsAgainstAverage:1.58,
+                playoffGoalsAgainstAverage:2.76,
 
-                playoffSavePercentage:91.6,
+                playoffSavePercentage:85.4,
 
-                playoffShutouts:2,
+                playoffShutouts:0,
 
-                playoffWins:10,
+                playoffWins:4,
 
                 playoffLosses:4,
 
@@ -279,69 +355,31 @@ stanleyCup:{
 
             {
 
-                year:"20/21",
-
-                team:"BloodyArmy",
-
-                games:42,
-
-                goalsAgainstAverage:2.84,
-
-                savePercentage:88.0,
-
-                shutouts:1,
-
-                wins:22,
-
-                losses:14,
-
-                overtimeLosses:4,
-
-                playoffGames:4,
-
-                playoffGoalsAgainstAverage:3.92,
-
-                playoffSavePercentage:84.2,
-
-                playoffShutouts:0,
-
-                playoffWins:1,
-
-                playoffLosses:2,
-
-                playoffOvertimeLosses:1,
-
-                titles:[]
-
-            },
-
-                        {
-
                 year:"21/22",
 
                 team:"BloodyArmy",
 
-                games:41,
+                games:47,
 
-                goalsAgainstAverage:2.87,
+                goalsAgainstAverage:3.61,
 
-                savePercentage:84.8,
+                savePercentage:81.5,
 
                 shutouts:1,
 
-                wins:22,
+                wins:27,
 
-                losses:10,
+                losses:12,
 
-                overtimeLosses:7,
+                overtimeLosses:4,
 
-                playoffGames:12,
+                playoffGames:13,
 
-                playoffGoalsAgainstAverage:2.57,
+                playoffGoalsAgainstAverage:2.56,
 
-                playoffSavePercentage:85.0,
+                playoffSavePercentage:86.6,
 
-                playoffShutouts:2,
+                playoffShutouts:0,
 
                 playoffWins:8,
 
@@ -359,29 +397,67 @@ stanleyCup:{
 
                 team:"BloodyArmy",
 
-                games:48,
+                games:37,
 
-                goalsAgainstAverage:2.00,
+                goalsAgainstAverage:2.21,
 
-                savePercentage:85.8,
+                savePercentage:82.7,
 
-                shutouts:8,
+                shutouts:5,
 
-                wins:31,
+                wins:25,
 
-                losses:13,
+                losses:9,
 
                 overtimeLosses:2,
 
-                playoffGames:7,
+                playoffGames:6,
 
-                playoffGoalsAgainstAverage:2.58,
+                playoffGoalsAgainstAverage:2.00,
 
-                playoffSavePercentage:80.4,
+                playoffSavePercentage:84.8,
 
                 playoffShutouts:0,
 
-                playoffWins:3,
+                playoffWins:4,
+
+                playoffLosses:2,
+
+                playoffOvertimeLosses:0,
+
+                titles:[]
+
+            },
+
+                        {
+
+                year:"23/24",
+
+                team:"BloodyArmy",
+
+                games:49,
+
+                goalsAgainstAverage:2.83,
+
+                savePercentage:86.6,
+
+                shutouts:0,
+
+                wins:20,
+
+                losses:10,
+
+                overtimeLosses:3,
+
+                playoffGames:11,
+
+                playoffGoalsAgainstAverage:3.61,
+
+                playoffSavePercentage:84.4,
+
+                playoffShutouts:0,
+
+                playoffWins:7,
 
                 playoffLosses:4,
 
@@ -393,109 +469,33 @@ stanleyCup:{
 
             {
 
-                year:"23/24",
-
-                team:"BloodyArmy",
-
-                games:49,
-
-                goalsAgainstAverage:3.08,
-
-                savePercentage:85.7,
-
-                shutouts:1,
-
-                wins:30,
-
-                losses:17,
-
-                overtimeLosses:2,
-
-                playoffGames:9,
-
-                playoffGoalsAgainstAverage:2.53,
-
-                playoffSavePercentage:84.5,
-
-                playoffShutouts:1,
-
-                playoffWins:4,
-
-                playoffLosses:3,
-
-                playoffOvertimeLosses:1,
-
-                titles:[]
-
-            },
-
-                        {
-
                 year:"24/25",
 
                 team:"BloodyArmy",
 
-                games:46,
+                games:36,
 
-                goalsAgainstAverage:1.66,
+                goalsAgainstAverage:2.37,
 
-                savePercentage:89.3,
+                savePercentage:85.3,
 
-                shutouts:8,
+                shutouts:3,
 
-                wins:39,
+                wins:25,
 
-                losses:5,
+                losses:10,
 
-                overtimeLosses:2,
+                overtimeLosses:1,
 
-                playoffGames:14,
+                playoffGames:4,
 
-                playoffGoalsAgainstAverage:1.77,
+                playoffGoalsAgainstAverage:1.96,
 
-                playoffSavePercentage:87.7,
-
-                playoffShutouts:2,
-
-                playoffWins:12,
-
-                playoffLosses:2,
-
-                playoffOvertimeLosses:0,
-
-                titles:[]
-
-            },
-
-            {
-
-                year:"25/26",
-
-                team:"BloodyArmy",
-
-                games:0,
-
-                goalsAgainstAverage:0,
-
-                savePercentage:0,
-
-                shutouts:0,
-
-                wins:0,
-
-                losses:0,
-
-                overtimeLosses:0,
-
-                playoffGames:0,
-
-                playoffGoalsAgainstAverage:0,
-
-                playoffSavePercentage:0,
+                playoffSavePercentage:89.2,
 
                 playoffShutouts:0,
 
-                playoffWins:0,
+                playoffWins:4,
 
                 playoffLosses:0,
 
