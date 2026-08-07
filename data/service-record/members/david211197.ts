@@ -95,7 +95,7 @@ export const david211197: ServiceRecordMember = {
   /**
  * Position
  */
-position:"rightWing",
+position:"leftWing",
 
 /**
  * Spielertyp
@@ -105,7 +105,7 @@ playerType:"skater",
 /**
  * Trikotnummer
  */
-playerNumber:"62",
+playerNumber:"21",
 
 
 
@@ -114,7 +114,7 @@ playerNumber:"62",
     /**
      * Reihe
      */
-    line:2,
+    line:3,
 
 
 
@@ -123,7 +123,7 @@ playerNumber:"62",
     /**
      * Eintrittsjahr
      */
-    enlisted:"2018",
+    enlisted:"2025",
 
 
 
