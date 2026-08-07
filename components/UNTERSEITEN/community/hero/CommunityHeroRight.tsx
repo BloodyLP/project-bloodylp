@@ -117,6 +117,16 @@ const featuredMembers:Record<number, FeaturedMember> = {
 
 },
 
+6:{
+
+    image:"/members/lolfury37/avatar.png",
+
+    name:"LOLFury37",
+
+    organization:"bloodyArmy",
+
+},
+
 
 
 };
