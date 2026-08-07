@@ -8,8 +8,6 @@ import MembersHeader from "./MembersHeader";
 
 import FounderCard from "./FounderCard";
 
-import MemberGroups from "./MemberGroups";
-
 import PersonnelArchive from "./archive/PersonnelArchive";
 
 export default function Members(){

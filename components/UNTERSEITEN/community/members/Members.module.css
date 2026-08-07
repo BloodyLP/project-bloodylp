@@ -28,48 +28,63 @@
 /* ================================= */
 
 
-.grid {
+.grid{
 
+    display:flex;
 
-    width:100%;
+    flex-wrap:nowrap;
 
+    gap:2rem;
 
-    max-width:1400px;
+    overflow-x:auto;
 
-
-    margin:0 auto;
-
-
-
-    display:grid;
-
-
-
-    grid-template-columns:
-
-
-        repeat(
-
-            auto-fit,
-
-            minmax(460px,1fr)
-
-        );
-
-
-
-    justify-content:center;
-
-
-
-    gap:3rem;
-
-
+    overflow-y:hidden;
 
     padding:
 
+        1rem
+
+        .5rem
 
         2rem;
+
+    scroll-behavior:smooth;
+
+}
+
+.grid > *{
+
+    flex:0 0 auto;
+
+}
+
+.grid::-webkit-scrollbar{
+
+    height:10px;
+
+}
+
+.grid::-webkit-scrollbar-track{
+
+    background:
+
+        rgba(255,255,255,.05);
+
+    border-radius:999px;
+
+}
+
+.grid::-webkit-scrollbar-thumb{
+
+    background:var(--accent);
+
+    border-radius:999px;
+
+}
+
+.grid::-webkit-scrollbar-thumb:hover{
+
+    background:var(--accent-light);
 
 }
 

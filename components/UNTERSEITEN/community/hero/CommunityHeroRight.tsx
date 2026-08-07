@@ -127,6 +127,16 @@ const featuredMembers:Record<number, FeaturedMember> = {
 
 },
 
+7:{
+
+    image:"/members/david211197/avatar.png",
+
+    name:"David211197",
+
+    organization:"bloodyArmy",
+
+},
+
 
 
 };
