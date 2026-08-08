@@ -361,7 +361,17 @@ export default function MemberCard({
 
                 </article>
 
-                                <div className={styles.back}>
+                                <div
+    className={
+
+        playerType === "goalie"
+
+            ? `${styles.back} ${styles.goalieBack}`
+
+            : styles.back
+
+    }
+>
 
                     <MemberCardBack
 

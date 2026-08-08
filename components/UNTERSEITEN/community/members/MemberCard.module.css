@@ -60,11 +60,11 @@
 
 .flipContainer{
 
-    width:480px;
+    width:450px;
 
-    flex:0 0 480px;
+    flex:0 0 450px;
 
-    margin: 0.5em;;
+    margin:0;
 
     perspective:1400px;
 
@@ -72,15 +72,27 @@
 
 .compactContainer{
 
-    width:330px;
+    width:450px;
 
-    flex:0 0 330px;
+    flex:0 0 450px;
+
+}
+
+.flipInner{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:580px;
+
+    transform-style:preserve-3d;
 
 }
 
 .compactContainer .flipInner{
 
-    width:330px;
+    width:450px;
 
     min-height:580px;
 
@@ -92,13 +104,19 @@
 
 }
 
-.flipInner>.card,
+/* ================================= */
+/* FRONT + BACK */
+/* ================================= */
 
-.flipInner>.back{
+.flipInner > .card,
+
+.flipInner > .back{
 
     position:absolute;
 
-    inset:0;
+    top:0;
+
+    left:0;
 
     width:100%;
 
@@ -110,17 +128,43 @@
 
     -webkit-backface-visibility:hidden;
 
+    transform-style:preserve-3d;
+
 }
 
-.flipInner>.card{
+/* ================================= */
+/* FRONT */
+/* ================================= */
+
+.flipInner > .card{
 
     transform:rotateY(0deg);
 
 }
 
-.flipInner>.back{
+/* ================================= */
+/* BACK */
+/* ================================= */
+
+.flipInner > .back{
 
     transform:rotateY(180deg);
+
+}
+
+/* ================================= */
+/* COMPACT FLIP */
+/* ================================= */
+
+.compactContainer .flipInner > .card,
+
+.compactContainer .flipInner > .back{
+
+    width:330px;
+
+    height:580px;
+
+    min-height:580px;
 
 }
 
@@ -570,11 +614,13 @@
 
 .compact{
 
-    width:330px;
+    width:450px;
 
-    max-width:330px;
+    max-width:450px;
 
     min-height:420px;
+
+    border-radius:22px;
 
 }
 
@@ -670,11 +716,11 @@
 
 }
 
-.compactContainer .flipInner>.card,
+.compactContainer .flipInner > .card,
 
-.compactContainer .flipInner>.back{
+.compactContainer .flipInner > .back{
 
-    width:330px;
+    width:450px;
 
     height:580px;
 
