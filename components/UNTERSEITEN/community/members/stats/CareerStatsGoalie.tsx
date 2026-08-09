@@ -3,38 +3,35 @@
 import styles from "./CareerStats.module.css";
 
 import type {
-
     GoalieCareerStatsData,
-
 } from "./types";
 
 import type {
-
     GoalieSeasonStats,
-
 } from "@/types/career-stats";
 
 import {
-
     teams,
-
 } from "@/data/service-record/teams";
+
 
 type CareerStatsGoalieProps = {
 
-    stats:GoalieCareerStatsData;
+    stats: GoalieCareerStatsData;
 
 };
+
 
 type StatsTableProps = {
 
-    title:string;
+    title: string;
 
-    rows:GoalieSeasonStats[];
+    rows: GoalieSeasonStats[];
 
-    playoff?:boolean;
+    playoff?: boolean;
 
 };
+
 
 function StatsTable({
 
@@ -42,35 +39,69 @@ function StatsTable({
 
     rows,
 
-    playoff=false,
+    playoff = false,
 
-}:StatsTableProps){
+}: StatsTableProps){
 
     return(
 
         <section className={styles.section}>
 
-            <h3>{title}</h3>
+            <h3>
+
+                {title}
+
+            </h3>
+
 
             <div className={styles.table}>
 
                 <div className={styles.rowHeaderGoalie}>
 
-                    <span>SAISON</span>
+                    <span>
 
-                    <span>TEAM</span>
+                        SAISON
 
-                    <span>SP</span>
+                    </span>
 
-                    <span>GTS</span>
+                    <span>
 
-                    <span>SV%</span>
+                        TEAM
 
-                    <span>SO</span>
+                    </span>
 
-                    <span>W-L-OT</span>
+                    <span>
+
+                        SP
+
+                    </span>
+
+                    <span>
+
+                        GTS
+
+                    </span>
+
+                    <span>
+
+                        SV%
+
+                    </span>
+
+                    <span>
+
+                        SO
+
+                    </span>
+
+                    <span>
+
+                        W-L-OT
+
+                    </span>
 
                 </div>
+
 
                 {
 
@@ -84,7 +115,12 @@ function StatsTable({
 
                         >
 
-                            <span>{season.year}</span>
+                            <span>
+
+                                {season.year}
+
+                            </span>
+
 
                             <div className={styles.team}>
 
@@ -98,19 +134,6 @@ function StatsTable({
 
                             </div>
 
-                            <span>
-
-                                {
-
-                                    playoff
-
-                                        ? season.playoffGames
-
-                                        : season.games
-
-                                }
-
-                            </span>
 
                             <span>
 
@@ -118,13 +141,18 @@ function StatsTable({
 
                                     playoff
 
-                                        ? season.playoffGoalsAgainstAverage.toFixed(2)
+                                        ?
 
-                                        : season.goalsAgainstAverage.toFixed(2)
+                                        season.playoffGames
+
+                                        :
+
+                                        season.games
 
                                 }
 
                             </span>
+
 
                             <span>
 
@@ -132,13 +160,18 @@ function StatsTable({
 
                                     playoff
 
-                                        ? season.playoffSavePercentage.toFixed(1)
+                                        ?
 
-                                        : season.savePercentage.toFixed(1)
+                                        season.playoffGoalsAgainstAverage.toFixed(2)
+
+                                        :
+
+                                        season.goalsAgainstAverage.toFixed(2)
 
                                 }
 
                             </span>
+
 
                             <span>
 
@@ -146,15 +179,43 @@ function StatsTable({
 
                                     playoff
 
-                                        ? season.playoffShutouts
+                                        ?
 
-                                        : season.shutouts
+                                        season.playoffSavePercentage.toFixed(1)
+
+                                        :
+
+                                        season.savePercentage.toFixed(1)
 
                                 }
 
                             </span>
 
+
                             <span>
+
+                                {
+
+                                    playoff
+
+                                        ?
+
+                                        season.playoffShutouts
+
+                                        :
+
+                                        season.shutouts
+
+                                }
+
+                            </span>
+
+
+                            {/* ================================= */}
+                            {/* W-L-OT */}
+                            {/* ================================= */}
+
+                            <span className={styles.goalieRecord}>
 
                                 {
 
@@ -186,81 +247,321 @@ function StatsTable({
 
 }
 
+
 export default function CareerStatsGoalie({
 
     stats,
 
-}:CareerStatsGoalieProps){
+}: CareerStatsGoalieProps){
+
 
     const seasons = stats.seasons;
 
-    const totalGames = seasons.reduce(
 
-        (sum,row)=>sum+row.games+row.playoffGames,
+    /* ================================= */
+    /* ORGANISATIONEN ERMITTELN */
+    /* ================================= */
+
+    const youngArmySeasons = seasons.filter(
+
+        season =>
+
+            season.team === "Young Army"
+
+    );
+
+
+    const bloodyArmySeasons = seasons.filter(
+
+        season =>
+
+            season.team === "BloodyArmy"
+
+    );
+
+
+    /* ================================= */
+    /* YOUNG ARMY */
+    /* ================================= */
+
+    const youngArmyGames = youngArmySeasons.reduce(
+
+        (sum,row)=>
+
+            sum +
+
+            row.games +
+
+            row.playoffGames,
 
         0
 
     );
 
-    const totalShutouts = seasons.reduce(
 
-        (sum,row)=>sum+row.shutouts+row.playoffShutouts,
+    const youngArmyShutouts = youngArmySeasons.reduce(
 
-        0
+        (sum,row)=>
 
-    );
+            sum +
 
-    const totalWins = seasons.reduce(
+            row.shutouts +
 
-        (sum,row)=>sum+row.wins+row.playoffWins,
-
-        0
-
-    );
-
-    const totalLosses = seasons.reduce(
-
-        (sum,row)=>sum+row.losses+row.playoffLosses,
+            row.playoffShutouts,
 
         0
 
     );
 
-    const totalOT = seasons.reduce(
 
-        (sum,row)=>sum+row.overtimeLosses+row.playoffOvertimeLosses,
+    const youngArmyWins = youngArmySeasons.reduce(
+
+        (sum,row)=>
+
+            sum +
+
+            row.wins +
+
+            row.playoffWins,
 
         0
 
     );
 
-    const averageGAA = (
 
-        seasons.reduce(
+    const youngArmyLosses = youngArmySeasons.reduce(
 
-            (sum,row)=>sum+row.goalsAgainstAverage,
+        (sum,row)=>
 
-            0
+            sum +
 
-        ) / seasons.length
+            row.losses +
 
-    ).toFixed(2);
+            row.playoffLosses,
 
-    const averageSV = (
+        0
 
-        seasons.reduce(
+    );
 
-            (sum,row)=>sum+row.savePercentage,
 
-            0
+    const youngArmyOT = youngArmySeasons.reduce(
 
-        ) / seasons.length
+        (sum,row)=>
 
-    ).toFixed(1);
+            sum +
+
+            row.overtimeLosses +
+
+            row.playoffOvertimeLosses,
+
+        0
+
+    );
+
+
+    const youngArmyGAA = youngArmySeasons.length
+
+        ?
+
+        (
+
+            youngArmySeasons.reduce(
+
+                (sum,row)=>
+
+                    sum +
+
+                    row.goalsAgainstAverage,
+
+                0
+
+            )
+
+            /
+
+            youngArmySeasons.length
+
+        ).toFixed(2)
+
+        :
+
+        "0.00";
+
+
+    const youngArmySV = youngArmySeasons.length
+
+        ?
+
+        (
+
+            youngArmySeasons.reduce(
+
+                (sum,row)=>
+
+                    sum +
+
+                    row.savePercentage,
+
+                0
+
+            )
+
+            /
+
+            youngArmySeasons.length
+
+        ).toFixed(1)
+
+        :
+
+        "0.0";
+
+
+    /* ================================= */
+    /* BLOODYARMY */
+    /* ================================= */
+
+    const bloodyArmyGames = bloodyArmySeasons.reduce(
+
+        (sum,row)=>
+
+            sum +
+
+            row.games +
+
+            row.playoffGames,
+
+        0
+
+    );
+
+
+    const bloodyArmyShutouts = bloodyArmySeasons.reduce(
+
+        (sum,row)=>
+
+            sum +
+
+            row.shutouts +
+
+            row.playoffShutouts,
+
+        0
+
+    );
+
+
+    const bloodyArmyWins = bloodyArmySeasons.reduce(
+
+        (sum,row)=>
+
+            sum +
+
+            row.wins +
+
+            row.playoffWins,
+
+        0
+
+    );
+
+
+    const bloodyArmyLosses = bloodyArmySeasons.reduce(
+
+        (sum,row)=>
+
+            sum +
+
+            row.losses +
+
+            row.playoffLosses,
+
+        0
+
+    );
+
+
+    const bloodyArmyOT = bloodyArmySeasons.reduce(
+
+        (sum,row)=>
+
+            sum +
+
+            row.overtimeLosses +
+
+            row.playoffOvertimeLosses,
+
+        0
+
+    );
+
+
+    const bloodyArmyGAA = bloodyArmySeasons.length
+
+        ?
+
+        (
+
+            bloodyArmySeasons.reduce(
+
+                (sum,row)=>
+
+                    sum +
+
+                    row.goalsAgainstAverage,
+
+                0
+
+            )
+
+            /
+
+            bloodyArmySeasons.length
+
+        ).toFixed(2)
+
+        :
+
+        "0.00";
+
+
+    const bloodyArmySV = bloodyArmySeasons.length
+
+        ?
+
+        (
+
+            bloodyArmySeasons.reduce(
+
+                (sum,row)=>
+
+                    sum +
+
+                    row.savePercentage,
+
+                0
+
+            )
+
+            /
+
+            bloodyArmySeasons.length
+
+        ).toFixed(1)
+
+        :
+
+        "0.0";
+
 
     return(
 
         <div className={styles.wrapper}>
+
+
+            {/* ================================= */}
+            {/* REGULAR SEASON */}
+            {/* ================================= */}
 
             <StatsTable
 
@@ -269,6 +570,11 @@ export default function CareerStatsGoalie({
                 rows={seasons}
 
             />
+
+
+            {/* ================================= */}
+            {/* PLAYOFFS */}
+            {/* ================================= */}
 
             <StatsTable
 
@@ -280,63 +586,290 @@ export default function CareerStatsGoalie({
 
             />
 
-            <section className={styles.total}>
 
-                <h3>
+            {/* ================================= */}
+            {/* YOUNG ARMY */}
+            {/* ================================= */}
 
-                    GESAMTKARRIERE
+            {
 
-                </h3>
+                youngArmySeasons.length > 0 && (
 
-                <div className={styles.totalGrid}>
+                    <section
 
-                    <div className={styles.totalCard}>
+                        className={
 
-                        <span>SPIELE</span>
+                            `${styles.total} ${styles.youngArmyTotal}`
 
-                        <strong>{totalGames}</strong>
+                        }
 
-                    </div>
+                    >
 
-                    <div className={styles.totalCard}>
+                        <h3>
 
-                        <span>GTS</span>
+                            GESAMTKARRIERE
 
-                        <strong>{averageGAA}</strong>
+                        </h3>
 
-                    </div>
 
-                    <div className={`${styles.totalCard} ${styles.highlightTotal}`}>
+                        <div className={styles.totalGrid}>
 
-                        <span>SV%</span>
 
-                        <strong>{averageSV}</strong>
+                            <div className={styles.totalCard}>
 
-                    </div>
+                                <span>
 
-                    <div className={styles.totalCard}>
+                                    SPIELE
 
-                        <span>SHUTOUTS</span>
+                                </span>
 
-                        <strong>{totalShutouts}</strong>
+                                <strong>
 
-                    </div>
+                                    {youngArmyGames}
 
-                    <div className={styles.totalCard}>
+                                </strong>
 
-                        <span>W-L-OT</span>
+                            </div>
 
-                        <strong>
 
-                            {`${totalWins}-${totalLosses}-${totalOT}`}
+                            <div className={styles.totalCard}>
 
-                        </strong>
+                                <span>
 
-                    </div>
+                                    GTS
 
-                </div>
+                                </span>
 
-            </section>
+                                <strong>
+
+                                    {youngArmyGAA}
+
+                                </strong>
+
+                            </div>
+
+
+                            <div
+
+                                className={
+
+                                    `${styles.totalCard} ${styles.highlightTotal}`
+
+                                }
+
+                            >
+
+                                <span>
+
+                                    SV%
+
+                                </span>
+
+                                <strong>
+
+                                    {youngArmySV}
+
+                                </strong>
+
+                            </div>
+
+
+                            <div className={styles.totalCard}>
+
+                                <span>
+
+                                    SHUTOUTS
+
+                                </span>
+
+                                <strong>
+
+                                    {youngArmyShutouts}
+
+                                </strong>
+
+                            </div>
+
+
+                            <div className={styles.totalCard}>
+
+                                <span>
+
+                                    W-L-OT
+
+                                </span>
+
+                                <strong
+
+                                    className={
+
+                                        styles.goalieRecordTotal
+
+                                    }
+
+                                >
+
+                                    {
+
+                                        `${youngArmyWins}-${youngArmyLosses}-${youngArmyOT}`
+
+                                    }
+
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+                    </section>
+
+                )
+
+            }
+
+
+            {/* ================================= */}
+            {/* BLOODYARMY */}
+            {/* ================================= */}
+
+            {
+
+                bloodyArmySeasons.length > 0 && (
+
+                    <section
+
+                        className={
+
+                            `${styles.total} ${styles.bloodyArmyTotal}`
+
+                        }
+
+                    >
+
+                        <h3>
+
+                            GESAMTKARRIERE
+
+                        </h3>
+
+
+                        <div className={styles.totalGrid}>
+
+
+                            <div className={styles.totalCard}>
+
+                                <span>
+
+                                    SPIELE
+
+                                </span>
+
+                                <strong>
+
+                                    {bloodyArmyGames}
+
+                                </strong>
+
+                            </div>
+
+
+                            <div className={styles.totalCard}>
+
+                                <span>
+
+                                    GTS
+
+                                </span>
+
+                                <strong>
+
+                                    {bloodyArmyGAA}
+
+                                </strong>
+
+                            </div>
+
+
+                            <div
+
+                                className={
+
+                                    `${styles.totalCard} ${styles.highlightTotal}`
+
+                                }
+
+                            >
+
+                                <span>
+
+                                    SV%
+
+                                </span>
+
+                                <strong>
+
+                                    {bloodyArmySV}
+
+                                </strong>
+
+                            </div>
+
+
+                            <div className={styles.totalCard}>
+
+                                <span>
+
+                                    SHUTOUTS
+
+                                </span>
+
+                                <strong>
+
+                                    {bloodyArmyShutouts}
+
+                                </strong>
+
+                            </div>
+
+
+                            <div className={styles.totalCard}>
+
+                                <span>
+
+                                    W-L-OT
+
+                                </span>
+
+                                <strong
+
+                                    className={
+
+                                        styles.goalieRecordTotal
+
+                                    }
+
+                                >
+
+                                    {
+
+                                        `${bloodyArmyWins}-${bloodyArmyLosses}-${bloodyArmyOT}`
+
+                                    }
+
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+                    </section>
+
+                )
+
+            }
+
 
         </div>
 

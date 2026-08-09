@@ -64,6 +64,17 @@ import {
 
 } from "./members/adlermannheimfan";
 
+import {
+
+    knecht
+
+} from "./members/knecht";
+
+import {
+
+    stevethebever
+
+} from "./members/stevethebever";
 
 export const MEMBERS: ServiceRecordMember[] = [
 
@@ -82,5 +93,9 @@ export const MEMBERS: ServiceRecordMember[] = [
     david211197,
 
     Adlermannheimfan,
+
+    knecht,
+
+    stevethebever,
 
 ];

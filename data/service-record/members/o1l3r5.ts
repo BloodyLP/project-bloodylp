@@ -185,6 +185,8 @@ stanleyCup:{
 
         2025,
 
+        2026,
+
     ],
 
 },
@@ -471,31 +473,31 @@ stanleyCup:{
 
                 team:"BloodyArmy",
 
-                games:0,
+                games:51,
 
-                goalsAgainstAverage:0,
+                goalsAgainstAverage:1.46,
 
-                savePercentage:0,
+                savePercentage:91.2,
 
-                shutouts:0,
+                shutouts:12,
 
-                wins:0,
+                wins:39,
 
-                losses:0,
+                losses:11,
 
-                overtimeLosses:0,
+                overtimeLosses:1,
 
-                playoffGames:0,
+                playoffGames:8,
 
-                playoffGoalsAgainstAverage:0,
+                playoffGoalsAgainstAverage:1.34,
 
-                playoffSavePercentage:0,
+                playoffSavePercentage:91.3,
 
                 playoffShutouts:0,
 
-                playoffWins:0,
+                playoffWins:7,
 
-                playoffLosses:0,
+                playoffLosses:1,
 
                 playoffOvertimeLosses:0,
 

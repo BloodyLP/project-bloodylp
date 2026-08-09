@@ -76,20 +76,17 @@ export default function MemberCardBack({
     return(
 
         <article
-
-            className={styles.backCard}
-
-            style={
-
-                createThemeVariables(
-
-                    theme
-
-                )
-
-            }
-
-        >
+    className={`${styles.backCard} ${
+        organization === "youngArmy"
+            ? styles.youngArmy
+            : styles.bloodyArmy
+    }`}
+    style={
+        createThemeVariables(
+            theme
+        )
+    }
+>
 
             <header className={styles.header}>
 

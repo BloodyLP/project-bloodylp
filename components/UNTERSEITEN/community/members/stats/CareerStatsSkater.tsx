@@ -3,38 +3,39 @@
 import styles from "./CareerStats.module.css";
 
 import type {
-
     SkaterCareerStatsData,
-
 } from "./types";
 
 import type {
-
     SkaterSeasonStats,
-
 } from "@/types/career-stats";
 
 import {
-
     teams,
-
 } from "@/data/service-record/teams";
+
 
 type CareerStatsSkaterProps = {
 
-    stats:SkaterCareerStatsData;
+    stats: SkaterCareerStatsData;
 
 };
+
 
 type StatsTableProps = {
 
-    title:string;
+    title: string;
 
-    rows:SkaterSeasonStats[];
+    rows: SkaterSeasonStats[];
 
-    playoff?:boolean;
+    playoff?: boolean;
 
 };
+
+
+/* ================================= */
+/* STATISTIK-TABELLE */
+/* ================================= */
 
 function StatsTable({
 
@@ -42,41 +43,79 @@ function StatsTable({
 
     rows,
 
-    playoff=false,
+    playoff = false,
 
-}:StatsTableProps){
+}: StatsTableProps) {
 
-    return(
+    return (
 
         <section className={styles.section}>
 
-            <h3>{title}</h3>
+            <h3>
+
+                {title}
+
+            </h3>
+
 
             <div className={styles.table}>
 
                 <div className={styles.rowHeader}>
 
-                    <span>SAISON</span>
+                    <span>
 
-                    <span>TEAM</span>
+                        SAISON
 
-                    <span>SP</span>
+                    </span>
 
-                    <span>T</span>
+                    <span>
 
-                    <span>A</span>
+                        TEAM
 
-                    <span className={styles.highlightHeader}>P</span>
+                    </span>
 
-                    <span>+/-</span>
+                    <span>
 
-                    <span>STM</span>
+                        SP
+
+                    </span>
+
+                    <span>
+
+                        T
+
+                    </span>
+
+                    <span>
+
+                        A
+
+                    </span>
+
+                    <span className={styles.highlightHeader}>
+
+                        P
+
+                    </span>
+
+                    <span>
+
+                        +/-
+
+                    </span>
+
+                    <span>
+
+                        STM
+
+                    </span>
 
                 </div>
 
+
                 {
 
-                    rows.map((season)=>(
+                    rows.map((season) => (
 
                         <div
 
@@ -86,7 +125,12 @@ function StatsTable({
 
                         >
 
-                            <span>{season.year}</span>
+                            <span>
+
+                                {season.year}
+
+                            </span>
+
 
                             <div className={styles.team}>
 
@@ -100,119 +144,25 @@ function StatsTable({
 
                             </div>
 
-                            <span>
-
-                                {
-
-                                    playoff
-
-                                    ?
-
-                                    season.playoffGames
-
-                                    :
-
-                                    season.games
-
-                                }
-
-                            </span>
 
                             <span>
 
                                 {
 
                                     playoff
-
-                                    ?
-
-                                    season.playoffGoals
-
-                                    :
-
-                                    season.goals
-
-                                }
-
-                            </span>
-
-                            <span>
-
-                                {
-
-                                    playoff
-
-                                    ?
-
-                                    season.playoffAssists
-
-                                    :
-
-                                    season.assists
-
-                                }
-
-                            </span>
-
-                            <span className={styles.highlightPoints}>
-
-                                {
-
-                                    playoff
-
-                                    ?
-
-                                    season.playoffPoints
-
-                                    :
-
-                                    season.points
-
-                                }
-
-                            </span>
-
-                            <span>
-
-                                {
-
-                                    playoff
-
-                                    ?
-
-                                    (
-
-                                        season.playoffPlusMinus>0
 
                                         ?
 
-                                        `+${season.playoffPlusMinus}`
+                                        season.playoffGames
 
                                         :
 
-                                        season.playoffPlusMinus
-
-                                    )
-
-                                    :
-
-                                    (
-
-                                        season.plusMinus>0
-
-                                        ?
-
-                                        `+${season.plusMinus}`
-
-                                        :
-
-                                        season.plusMinus
-
-                                    )
+                                        season.games
 
                                 }
 
                             </span>
+
 
                             <span>
 
@@ -220,13 +170,121 @@ function StatsTable({
 
                                     playoff
 
-                                    ?
+                                        ?
 
-                                    season.playoffPenaltyMinutes
+                                        season.playoffGoals
 
-                                    :
+                                        :
 
-                                    season.penaltyMinutes
+                                        season.goals
+
+                                }
+
+                            </span>
+
+
+                            <span>
+
+                                {
+
+                                    playoff
+
+                                        ?
+
+                                        season.playoffAssists
+
+                                        :
+
+                                        season.assists
+
+                                }
+
+                            </span>
+
+
+                            <span
+
+                                className={
+
+                                    styles.highlightPoints
+
+                                }
+
+                            >
+
+                                {
+
+                                    playoff
+
+                                        ?
+
+                                        season.playoffPoints
+
+                                        :
+
+                                        season.points
+
+                                }
+
+                            </span>
+
+
+                            <span>
+
+                                {
+
+                                    playoff
+
+                                        ?
+
+                                        (
+
+                                            season.playoffPlusMinus > 0
+
+                                                ?
+
+                                                `+${season.playoffPlusMinus}`
+
+                                                :
+
+                                                season.playoffPlusMinus
+
+                                        )
+
+                                        :
+
+                                        (
+
+                                            season.plusMinus > 0
+
+                                                ?
+
+                                                `+${season.plusMinus}`
+
+                                                :
+
+                                                season.plusMinus
+
+                                        )
+
+                                }
+
+                            </span>
+
+
+                            <span>
+
+                                {
+
+                                    playoff
+
+                                        ?
+
+                                        season.playoffPenaltyMinutes
+
+                                        :
+
+                                        season.penaltyMinutes
 
                                 }
 
@@ -246,17 +304,20 @@ function StatsTable({
 
 }
 
-export default function CareerStatsSkater({
 
-    stats,
+/* ================================= */
+/* GESAMTSTATISTIK BERECHNEN */
+/* ================================= */
 
-}:CareerStatsSkaterProps){
+function calculateTotal(
 
-    const seasons = stats.seasons;
+    rows: SkaterSeasonStats[]
 
-    const total = seasons.reduce(
+) {
 
-        (acc,row)=>({
+    return rows.reduce(
+
+        (acc, row) => ({
 
             games:
 
@@ -310,25 +371,90 @@ export default function CareerStatsSkater({
 
         {
 
-            games:0,
+            games: 0,
 
-            goals:0,
+            goals: 0,
 
-            assists:0,
+            assists: 0,
 
-            points:0,
+            points: 0,
 
-            plusMinus:0,
+            plusMinus: 0,
 
-            penaltyMinutes:0,
+            penaltyMinutes: 0,
 
         }
 
     );
 
-    return(
+}
+
+
+/* ================================= */
+/* COMPONENT */
+/* ================================= */
+
+export default function CareerStatsSkater({
+
+    stats,
+
+}: CareerStatsSkaterProps) {
+
+    const seasons = stats.seasons;
+
+
+    /* ================================= */
+    /* ORGANISATIONEN TRENNEN */
+    /* ================================= */
+
+    const youngArmySeasons = seasons.filter(
+
+        row =>
+
+            row.team === "Young Army"
+
+    );
+
+
+    const bloodyArmySeasons = seasons.filter(
+
+        row =>
+
+            row.team === "BloodyArmy"
+
+    );
+
+
+    /* ================================= */
+    /* GESAMTWERTE BERECHNEN */
+    /* ================================= */
+
+    const youngArmyTotal =
+
+        calculateTotal(
+
+            youngArmySeasons
+
+        );
+
+
+    const bloodyArmyTotal =
+
+        calculateTotal(
+
+            bloodyArmySeasons
+
+        );
+
+
+    return (
 
         <div className={styles.wrapper}>
+
+
+            {/* ================================= */}
+            {/* REGULAR SEASON */}
+            {/* ================================= */}
 
             <StatsTable
 
@@ -337,6 +463,11 @@ export default function CareerStatsSkater({
                 rows={seasons}
 
             />
+
+
+            {/* ================================= */}
+            {/* PLAYOFFS */}
+            {/* ================================= */}
 
             <StatsTable
 
@@ -348,83 +479,324 @@ export default function CareerStatsSkater({
 
             />
 
-            <section className={styles.total}>
 
-                <h3>
+            {/* ================================= */}
+            {/* GESAMTKARRIERE – YOUNG ARMY */}
+            {/* ================================= */}
 
-                    GESAMTKARRIERE
+            {
 
-                </h3>
+                youngArmySeasons.length > 0 && (
 
-                <div className={styles.totalGrid}>
+                    <section
 
-                    <div className={styles.totalCard}>
+                        className={
 
-                        <span>SPIELE</span>
+                            `${styles.total} ${styles.youngArmyTotal}`
 
-                        <strong>{total.games}</strong>
+                        }
 
-                    </div>
+                    >
 
-                    <div className={styles.totalCard}>
+                        <h3>
 
-                        <span>TORE</span>
+                            GESAMTKARRIERE
 
-                        <strong>{total.goals}</strong>
+                        </h3>
 
-                    </div>
 
-                    <div className={styles.totalCard}>
+                        <div className={styles.totalGrid}>
 
-                        <span>ASSISTS</span>
 
-                        <strong>{total.assists}</strong>
+                            <div className={styles.totalCard}>
 
-                    </div>
+                                <span>
 
-                    <div className={`${styles.totalCard} ${styles.highlightTotal}`}>
+                                    SPIELE
 
-                        <span>PUNKTE</span>
+                                </span>
 
-                        <strong>{total.points}</strong>
+                                <strong>
 
-                    </div>
+                                    {youngArmyTotal.games}
 
-                    <div className={styles.totalCard}>
+                                </strong>
 
-                        <span>+/-</span>
+                            </div>
 
-                        <strong>
 
-                            {
+                            <div className={styles.totalCard}>
 
-                                total.plusMinus>0
+                                <span>
 
-                                ?
+                                    TORE
 
-                                `+${total.plusMinus}`
+                                </span>
 
-                                :
+                                <strong>
 
-                                total.plusMinus
+                                    {youngArmyTotal.goals}
 
-                            }
+                                </strong>
 
-                        </strong>
+                            </div>
 
-                    </div>
 
-                    <div className={styles.totalCard}>
+                            <div className={styles.totalCard}>
 
-                        <span>STRAFMINUTEN</span>
+                                <span>
 
-                        <strong>{total.penaltyMinutes}</strong>
+                                    ASSISTS
 
-                    </div>
+                                </span>
 
-                </div>
+                                <strong>
 
-            </section>
+                                    {youngArmyTotal.assists}
+
+                                </strong>
+
+                            </div>
+
+
+                            <div
+
+                                className={
+
+                                    `${styles.totalCard} ${styles.highlightTotal}`
+
+                                }
+
+                            >
+
+                                <span>
+
+                                    PUNKTE
+
+                                </span>
+
+                                <strong>
+
+                                    {youngArmyTotal.points}
+
+                                </strong>
+
+                            </div>
+
+
+                            <div className={styles.totalCard}>
+
+                                <span>
+
+                                    +/-
+
+                                </span>
+
+                                <strong>
+
+                                    {
+
+                                        youngArmyTotal.plusMinus > 0
+
+                                            ?
+
+                                            `+${youngArmyTotal.plusMinus}`
+
+                                            :
+
+                                            youngArmyTotal.plusMinus
+
+                                    }
+
+                                </strong>
+
+                            </div>
+
+
+                            <div className={styles.totalCard}>
+
+                                <span>
+
+                                    STRAFMINUTEN
+
+                                </span>
+
+                                <strong>
+
+                                    {youngArmyTotal.penaltyMinutes}
+
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+                    </section>
+
+                )
+
+            }
+
+
+            {/* ================================= */}
+            {/* GESAMTKARRIERE – BLOODYARMY */}
+            {/* ================================= */}
+
+            {
+
+                bloodyArmySeasons.length > 0 && (
+
+                    <section
+
+                        className={
+
+                            `${styles.total} ${styles.bloodyArmyTotal}`
+
+                        }
+
+                    >
+
+                        <h3>
+
+                            GESAMTKARRIERE
+
+                        </h3>
+
+
+                        <div className={styles.totalGrid}>
+
+
+                            <div className={styles.totalCard}>
+
+                                <span>
+
+                                    SPIELE
+
+                                </span>
+
+                                <strong>
+
+                                    {bloodyArmyTotal.games}
+
+                                </strong>
+
+                            </div>
+
+
+                            <div className={styles.totalCard}>
+
+                                <span>
+
+                                    TORE
+
+                                </span>
+
+                                <strong>
+
+                                    {bloodyArmyTotal.goals}
+
+                                </strong>
+
+                            </div>
+
+
+                            <div className={styles.totalCard}>
+
+                                <span>
+
+                                    ASSISTS
+
+                                </span>
+
+                                <strong>
+
+                                    {bloodyArmyTotal.assists}
+
+                                </strong>
+
+                            </div>
+
+
+                            <div
+
+                                className={
+
+                                    `${styles.totalCard} ${styles.highlightTotal}`
+
+                                }
+
+                            >
+
+                                <span>
+
+                                    PUNKTE
+
+                                </span>
+
+                                <strong>
+
+                                    {bloodyArmyTotal.points}
+
+                                </strong>
+
+                            </div>
+
+
+                            <div className={styles.totalCard}>
+
+                                <span>
+
+                                    +/-
+
+                                </span>
+
+                                <strong>
+
+                                    {
+
+                                        bloodyArmyTotal.plusMinus > 0
+
+                                            ?
+
+                                            `+${bloodyArmyTotal.plusMinus}`
+
+                                            :
+
+                                            bloodyArmyTotal.plusMinus
+
+                                    }
+
+                                </strong>
+
+                            </div>
+
+
+                            <div className={styles.totalCard}>
+
+                                <span>
+
+                                    STRAFMINUTEN
+
+                                </span>
+
+                                <strong>
+
+                                    {bloodyArmyTotal.penaltyMinutes}
+
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+                    </section>
+
+                )
+
+            }
+
 
         </div>
 

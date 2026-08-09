@@ -106,7 +106,7 @@ playerType:"goalie",
 /**
  * Trikotnummer
  */
-playerNumber:"27",
+playerNumber:"50",
 
 
 
@@ -186,6 +186,8 @@ stanleyCup:{
         2022,
 
         2025,
+
+        2026,
 
     ],
 
@@ -498,6 +500,44 @@ stanleyCup:{
                 playoffWins:4,
 
                 playoffLosses:0,
+
+                playoffOvertimeLosses:0,
+
+                titles:[]
+
+            },
+
+            {
+
+                year:"25/26",
+
+                team:"BloodyArmy",
+
+                games:31,
+
+                goalsAgainstAverage:1.90,
+
+                savePercentage:87.7,
+
+                shutouts:3,
+
+                wins:23,
+
+                losses:4,
+
+                overtimeLosses:4,
+
+                playoffGames:11,
+
+                playoffGoalsAgainstAverage:1.61,
+
+                playoffSavePercentage:90.2,
+
+                playoffShutouts:2,
+
+                playoffWins:9,
+
+                playoffLosses:2,
 
                 playoffOvertimeLosses:0,
 

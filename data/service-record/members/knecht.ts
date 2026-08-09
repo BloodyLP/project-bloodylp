@@ -7,7 +7,7 @@
  * BloodyArmy Website
  *
  * Data:
- * David211197
+ * Kn3cht82
  *
  * Description:
  * Service Record Datensatz von David211197.
@@ -17,37 +17,37 @@
 
 import type { ServiceRecordMember } from "@/types/service-record";
 
-export const david211197: ServiceRecordMember = {
+export const knecht: ServiceRecordMember = {
 
     /**
      * Interne UUID
      */
-    id:"BA-007",
+    id:"BA-009",
 
     /**
      * URL
      */
-    slug:"david211197",
+    slug:"kn3cht82",
 
     /**
      * Service Record Nummer
      */
-    recordNumber:"BA-007",
+    recordNumber:"BA-009",
 
     /**
      * Anzeigename
      */
-    name:"David211197",
+    name:"Kn3cht82",
 
     /**
      * Avatar
      */
-    avatar:"/members/david211197/avatar.png",
+    avatar:"/members/knecht/avatar.png",
 
     /**
      * Dienstgrad
      */
-    rank:"us-army-cw3",
+    rank:"ba-reihenfuehrer",
 
     /**
      * Organisation
@@ -57,7 +57,7 @@ export const david211197: ServiceRecordMember = {
     /**
      * Position
      */
-    position:"leftWing",
+    position:"rightWing",
 
     /**
      * Spielertyp
@@ -67,22 +67,22 @@ export const david211197: ServiceRecordMember = {
     /**
      * Trikotnummer
      */
-    playerNumber:"74",
+    playerNumber:"14",
 
     /**
      * Reihe
      */
-    line:3,
+    line:1,
 
     /**
      * Eintrittsjahr
      */
-    enlisted:"12. Dezember 2024",
+    enlisted:"16. August 2025",
 
     /**
      * Prestige
      */
-    prestige:1,
+    prestige:3,
 
     /**
      * Patreon
@@ -144,67 +144,33 @@ export const david211197: ServiceRecordMember = {
 
             {
 
-                year:"24/25",
-
-                team:"Young Army",
-
-                games:81,
-
-                goals:29,
-
-                assists:15,
-
-                points:44,
-
-                plusMinus:11,
-
-                penaltyMinutes:7,
-
-                playoffGames:22,
-
-                playoffGoals:5,
-
-                playoffAssists:3,
-
-                playoffPoints:8,
-
-                playoffPlusMinus:4,
-
-                playoffPenaltyMinutes:0,
-
-                titles:[]
-
-            },
-
-            {
-
                 year:"25/26",
 
                 team:"BloodyArmy",
 
                 games:82,
 
-                goals:23,
+                goals:19,
 
-                assists:9,
+                assists:25,
 
-                points:32,
+                points:44,
 
-                plusMinus:15,
+                plusMinus:41,
 
-                penaltyMinutes:0,
+                penaltyMinutes:2,
 
                 playoffGames:19,
 
-                playoffGoals:6,
+                playoffGoals:3,
 
-                playoffAssists:5,
+                playoffAssists:4,
 
-                playoffPoints:11,
+                playoffPoints:7,
 
-                playoffPlusMinus:11,
+                playoffPlusMinus:9,
 
-                playoffPenaltyMinutes:0,
+                playoffPenaltyMinutes:2,
 
                 titles:[]
 

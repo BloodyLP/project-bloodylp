@@ -154,6 +154,7 @@ stanleyCup:{
 
         2025,
 
+        2026,
     ],
 
 },
@@ -386,19 +387,19 @@ stanleyCup:{
                 year:"25/26",
 
     team:"BloodyArmy",
-                games:0,
-                goals:0,
-                assists:0,
-                points:0,
-                plusMinus:0,
-                penaltyMinutes:0,
+                games:82,
+                goals:42,
+                assists:25,
+                points:67,
+                plusMinus:39,
+                penaltyMinutes:4,
 
-                playoffGames:0,
-                playoffGoals:0,
-                playoffAssists:0,
-                playoffPoints:0,
-                playoffPlusMinus:0,
-                playoffPenaltyMinutes:0,
+                playoffGames:19,
+                playoffGoals:11,
+                playoffAssists:6,
+                playoffPoints:17,
+                playoffPlusMinus:11,
+                playoffPenaltyMinutes:2,
 
 
                 titles:[]

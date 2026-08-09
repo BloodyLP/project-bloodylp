@@ -476,6 +476,17 @@
 /* SCROLLBAR */
 /* ================================= */
 
+.content{
+    scrollbar-width:thin;
+
+    scrollbar-color:
+        var(--accent)
+        rgba(255,255,255,.04);
+}
+
+
+/* Chrome / Edge / Safari */
+
 .content::-webkit-scrollbar{
 
     width:8px;
@@ -484,7 +495,8 @@
 
 .content::-webkit-scrollbar-track{
 
-    background:rgba(255,255,255,.04);
+    background:
+        rgba(255,255,255,.04);
 
     border-radius:999px;
 
@@ -492,15 +504,61 @@
 
 .content::-webkit-scrollbar-thumb{
 
-    background:var(--accent);
+    background:
+        var(--accent) !important;
 
     border-radius:999px;
+
+    box-shadow:
+        0 0 10px
+        var(--accent-glow);
 
 }
 
 .content::-webkit-scrollbar-thumb:hover{
 
-    background:var(--accent-light);
+    background:
+        var(--accent-light) !important;
+
+}
+
+
+/* ================================= */
+/* YOUNG ARMY */
+/* ================================= */
+
+.youngArmy .content::-webkit-scrollbar-thumb{
+
+    background:#FF4545 !important;
+
+    box-shadow:
+        0 0 10px
+        rgba(255,69,69,.65);
+
+}
+
+.youngArmy .content::-webkit-scrollbar-thumb:hover{
+
+    background:#FF7070 !important;
+
+}
+
+.youngArmy .content{
+
+    scrollbar-color:
+        #FF4545
+        rgba(255,255,255,.04);
+
+}
+
+
+/* ================================= */
+/* BLOODY ARMY */
+/* ================================= */
+
+.bloodyArmy .content::-webkit-scrollbar-thumb{
+
+    background:var(--accent) !important;
 
 }
 

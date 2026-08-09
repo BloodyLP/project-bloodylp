@@ -14,6 +14,7 @@
 
 }
 
+
 /* ================================= */
 /* SECTION */
 /* ================================= */
@@ -40,6 +41,7 @@
 
 }
 
+
 /* ================================= */
 /* TABLE */
 /* ================================= */
@@ -63,6 +65,7 @@
         rgba(255,255,255,.10);
 
 }
+
 
 /* ================================= */
 /* SKATER HEADER */
@@ -130,6 +133,7 @@
 
 }
 
+
 /* ================================= */
 /* GOALIE HEADER */
 /* ================================= */
@@ -196,6 +200,7 @@
     justify-content:flex-start;
 
 }
+
 
 /* ================================= */
 /* SKATER ROW */
@@ -272,6 +277,7 @@
     border-bottom:none;
 
 }
+
 
 /* ================================= */
 /* GOALIE ROW */
@@ -352,17 +358,32 @@
 
 }
 
+
 /* ================================= */
 /* GOALIE W-L-OT */
 /* ================================= */
 
-.rowGoalie span:nth-child(7){
+.rowGoalie span.goalieRecord{
 
-    font-size:.72rem !important;
+    font-size:.64rem !important;
 
-    letter-spacing:-.02em;
+    letter-spacing:-.03em;
+
+    white-space:nowrap;
 
 }
+
+
+.totalGrid strong.goalieRecordTotal{
+
+    font-size:1.5rem !important;
+
+    letter-spacing:-.04em;
+
+    white-space:nowrap;
+
+}
+
 
 /* ================================= */
 /* TEAM */
@@ -410,6 +431,7 @@
 
 }
 
+
 /* ================================= */
 /* HIGHLIGHT */
 /* ================================= */
@@ -434,6 +456,7 @@
 
 }
 
+
 /* ================================= */
 /* EMPTY */
 /* ================================= */
@@ -451,6 +474,7 @@
     font-weight:900;
 
 }
+
 
 /* ================================= */
 /* TOTAL CAREER */
@@ -582,6 +606,7 @@
 
 }
 
+
 /* ================================= */
 /* TOTAL TYPOGRAPHY */
 /* ================================= */
@@ -634,6 +659,7 @@
 
 }
 
+
 /* ================================= */
 /* HIGHLIGHT TOTAL */
 /* ================================= */
@@ -680,6 +706,54 @@
 
 }
 
+
+/* ================================= */
+/* YOUNG ARMY - HIGHLIGHT */
+/* ================================= */
+
+.youngArmyTotal .highlightTotal{
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(255,70,70,.22),
+
+            rgba(255,70,70,.05)
+
+        ) !important;
+
+    border:
+
+        2px solid
+
+        #FF4545 !important;
+
+    box-shadow:
+
+        0 0 40px
+
+        rgba(255,69,69,.45);
+
+}
+
+.youngArmyTotal .highlightTotal strong{
+
+    color:#FF4545 !important;
+
+    font-size:2.2rem !important;
+
+    text-shadow:
+
+        0 0 25px
+
+        rgba(255,69,69,.65);
+
+}
+
+
 /* ================================= */
 /* RESPONSIVE */
 /* ================================= */
@@ -704,13 +778,13 @@
 
         grid-template-columns:
 
-    58px
-    42px
-    38px
-    42px
-    42px
-    38px
-    110px;
+            58px
+            42px
+            38px
+            42px
+            42px
+            38px
+            110px;
 
     }
 
@@ -718,13 +792,13 @@
 
         grid-template-columns:
 
-    58px
-    42px
-    38px
-    42px
-    42px
-    38px
-    110px;
+            58px
+            42px
+            38px
+            42px
+            42px
+            38px
+            110px;
 
     }
 
@@ -809,5 +883,189 @@
         font-size:1.75rem !important;
 
     }
+
+}
+
+
+/* ================================= */
+/* ORGANISATIONS-FARBEN */
+/* GESAMTKARRIERE */
+/* ================================= */
+
+
+/* ================================= */
+/* YOUNG ARMY */
+/* ================================= */
+
+.youngArmyTotal{
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(255,69,69,.16),
+
+            rgba(255,255,255,.04)
+
+        ) !important;
+
+    border:
+
+        1px solid
+
+        rgba(255,69,69,.55) !important;
+
+    box-shadow:
+
+        0 0 35px
+
+        rgba(255,69,69,.20),
+
+        inset 0 0 25px
+
+        rgba(0,0,0,.25) !important;
+
+}
+
+.youngArmyTotal h3{
+
+    color:#FF4545 !important;
+
+}
+
+.youngArmyTotal .totalCard::before{
+
+    background:#FF4545 !important;
+
+}
+
+.youngArmyTotal .highlightTotal{
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(255,69,69,.22),
+
+            rgba(255,69,69,.05)
+
+        ) !important;
+
+    border:
+
+        2px solid
+
+        #FF4545 !important;
+
+    box-shadow:
+
+        0 0 40px
+
+        rgba(255,69,69,.50) !important;
+
+}
+
+.youngArmyTotal .highlightTotal strong{
+
+    color:#FF4545 !important;
+
+    text-shadow:
+
+        0 0 25px
+
+        rgba(255,69,69,.60) !important;
+
+}
+
+
+/* ================================= */
+/* BLOODYARMY */
+/* ================================= */
+
+.bloodyArmyTotal{
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(163,230,53,.16),
+
+            rgba(255,255,255,.04)
+
+        ) !important;
+
+    border:
+
+        1px solid
+
+        rgba(163,230,53,.55) !important;
+
+    box-shadow:
+
+        0 0 35px
+
+        rgba(163,230,53,.20),
+
+        inset 0 0 25px
+
+        rgba(0,0,0,.25) !important;
+
+}
+
+.bloodyArmyTotal h3{
+
+    color:#A3E635 !important;
+
+}
+
+.bloodyArmyTotal .totalCard::before{
+
+    background:#A3E635 !important;
+
+}
+
+.bloodyArmyTotal .highlightTotal{
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            rgba(163,230,53,.22),
+
+            rgba(163,230,53,.05)
+
+        ) !important;
+
+    border:
+
+        2px solid
+
+        #A3E635 !important;
+
+    box-shadow:
+
+        0 0 40px
+
+        rgba(163,230,53,.50) !important;
+
+}
+
+.bloodyArmyTotal .highlightTotal strong{
+
+    color:#A3E635 !important;
+
+    text-shadow:
+
+        0 0 25px
+
+        rgba(163,230,53,.60) !important;
 
 }
