@@ -76,6 +76,12 @@ import {
 
 } from "./members/stevethebever";
 
+import {
+
+    real121x
+
+} from "./members/real121x";
+
 export const MEMBERS: ServiceRecordMember[] = [
 
     bloodylp,
@@ -97,5 +103,7 @@ export const MEMBERS: ServiceRecordMember[] = [
     knecht,
 
     stevethebever,
+
+    real121x,
 
 ];

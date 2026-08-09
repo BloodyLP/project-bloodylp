@@ -58,7 +58,7 @@ export default function StatsSection() {
         />
 
         <StatCard
-          number="1000+"
+          number="1500+"
           title="Streams & Events"
           delay={0.45}
         />
