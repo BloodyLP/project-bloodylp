@@ -177,15 +177,17 @@ const featuredMembers:Record<number, FeaturedMember> = {
 
 },
 
+9:{
 
+    image:"/members/sackzefix/avatar.png",
+
+    name:"Sackzefix",
+
+    organization:"youngArmy",
+
+},
 
 };
-
-
-
-
-
-
 
 
 
