@@ -52,7 +52,7 @@ export default function StatsSection() {
         />
 
         <StatCard
-          number="7+"
+          number="8+"
           title="Jahre Kommentator"
           delay={0.30}
         />
