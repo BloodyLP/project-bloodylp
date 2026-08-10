@@ -1,0 +1,527 @@
+/* ================================= */
+/* SECTION */
+/* ================================= */
+
+.section {
+
+    position:relative;
+
+    width:100%;
+
+    padding:
+        3rem
+        2rem
+        8rem;
+
+    overflow:hidden;
+
+    background:#111214;
+
+}
+
+
+/* ================================= */
+/* GLOW */
+/* ================================= */
+
+.glow {
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-350px;
+
+    transform:translateX(-50%);
+
+    width:800px;
+
+    height:600px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(163,230,53,.08),
+            transparent 70%
+        );
+
+    filter:blur(70px);
+
+    pointer-events:none;
+
+}
+
+
+/* ================================= */
+/* CONTAINER */
+/* ================================= */
+
+.container {
+
+    position:relative;
+
+    z-index:1;
+
+    width:100%;
+
+    max-width:1050px;
+
+    margin:0 auto;
+
+}
+
+
+/* ================================= */
+/* CARD */
+/* ================================= */
+
+.card {
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:2.5rem;
+
+    padding:
+        3rem
+        3.2rem;
+
+    border-radius:28px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.065),
+            rgba(255,255,255,.025)
+        );
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.3);
+
+    overflow:hidden;
+
+}
+
+
+.card::before {
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #A3E635,
+            transparent
+        );
+
+    opacity:.7;
+
+}
+
+
+.card::after {
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+
+    height:400px;
+
+    right:-260px;
+
+    bottom:-300px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(163,230,53,.07),
+            transparent 70%
+        );
+
+    pointer-events:none;
+
+}
+
+
+/* ================================= */
+/* ICON */
+/* ================================= */
+
+.iconWrapper {
+
+    position:relative;
+
+    z-index:1;
+
+    flex:0 0 auto;
+
+    width:76px;
+
+    height:76px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:22px;
+
+    color:#111111;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ECFFC0,
+            #A3E635
+        );
+
+    box-shadow:
+        0 0 30px
+        rgba(163,230,53,.18);
+
+}
+
+
+/* ================================= */
+/* CONTENT */
+/* ================================= */
+
+.content {
+
+    position:relative;
+
+    z-index:1;
+
+    flex:1;
+
+}
+
+
+.overline {
+
+    display:block;
+
+    margin-bottom:.65rem;
+
+    color:var(--color-lime);
+
+    font-size:.68rem;
+
+    font-weight:950;
+
+    letter-spacing:.22em;
+
+    text-transform:uppercase;
+
+}
+
+
+.content h2 {
+
+    margin:0;
+
+    color:#ffffff;
+
+    font-size:
+        clamp(
+            2rem,
+            4vw,
+            3.5rem
+        );
+
+    line-height:1;
+
+    font-weight:950;
+
+    letter-spacing:-.045em;
+
+}
+
+
+.content h2 span {
+
+    background:
+        linear-gradient(
+            180deg,
+            #ECFFC0 0%,
+            #C8FF63 40%,
+            #A3E635 100%
+        );
+
+    background-clip:text;
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+
+.content p {
+
+    max-width:680px;
+
+    margin:
+        1rem
+        0
+        0;
+
+    color:var(--color-text-secondary);
+
+    font-size:.98rem;
+
+    line-height:1.8;
+
+}
+
+
+/* ================================= */
+/* EMAIL */
+/* ================================= */
+
+.email {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.65rem;
+
+    margin-top:1.35rem;
+
+    color:#ffffff;
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    letter-spacing:.04em;
+
+}
+
+
+.email svg {
+
+    color:var(--color-lime);
+
+    flex:0 0 auto;
+
+}
+
+
+/* ================================= */
+/* BUTTON */
+/* ================================= */
+
+.button {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:.65rem;
+
+    width:fit-content;
+
+    min-height:50px;
+
+    margin-top:1.4rem;
+
+    padding:
+        0
+        1.35rem;
+
+    border-radius:999px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ECFFC0,
+            #A3E635
+        );
+
+    color:#111111;
+
+    font-size:.72rem;
+
+    font-weight:950;
+
+    letter-spacing:.15em;
+
+    text-decoration:none;
+
+    text-transform:uppercase;
+
+    box-shadow:
+        0 10px 30px
+        rgba(163,230,53,.12);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        filter .25s ease;
+
+}
+
+
+.button:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(163,230,53,.28);
+
+    filter:
+        brightness(1.05);
+
+}
+
+
+.button svg {
+
+    transition:
+        transform .25s ease;
+
+}
+
+
+.button:hover svg {
+
+    transform:
+        translate(2px,-2px);
+
+}
+
+
+/* ================================= */
+/* MOBILE */
+/* ================================= */
+
+@media(max-width:700px){
+
+    .section {
+
+        padding:
+            2rem
+            1rem
+            5rem;
+
+    }
+
+
+    .card {
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:1.5rem;
+
+        padding:
+            2rem
+            1.4rem;
+
+        border-radius:22px;
+
+    }
+
+
+    .iconWrapper {
+
+        width:60px;
+
+        height:60px;
+
+        border-radius:18px;
+
+    }
+
+
+    .overline {
+
+        font-size:.56rem;
+
+        letter-spacing:.15em;
+
+        line-height:1.5;
+
+    }
+
+
+    .content h2 {
+
+        font-size:
+            clamp(
+                1.9rem,
+                9vw,
+                2.7rem
+            );
+
+        line-height:1.05;
+
+    }
+
+
+    .content p {
+
+        font-size:.88rem;
+
+        line-height:1.7;
+
+    }
+
+
+    .email {
+
+        font-size:.78rem;
+
+        word-break:break-word;
+
+    }
+
+
+    .button {
+
+        width:100%;
+
+        min-height:52px;
+
+        font-size:.65rem;
+
+    }
+
+}
