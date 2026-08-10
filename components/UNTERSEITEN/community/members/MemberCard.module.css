@@ -2,7 +2,7 @@
 /* CARD */
 /* ================================= */
 
-.card{
+.card {
 
     position:relative;
 
@@ -14,7 +14,7 @@
 
     min-height:580px;
 
-    margin: 3px;
+    margin:3px;
 
     display:flex;
 
@@ -39,26 +39,25 @@
     transition:
         transform .35s ease,
         box-shadow .35s ease;
-
 }
 
-.card:hover{
 
-    transform:translateY(-8px);
+.card:hover {
+
+    transform:
+        translateY(-8px);
 
     box-shadow:
-
         0 35px 90px rgba(0,0,0,.55),
-
         0 0 40px var(--accent-glow);
-
 }
 
+
 /* ================================= */
-/* FLIP */
+/* FLIP CONTAINER */
 /* ================================= */
 
-.flipContainer{
+.flipContainer {
 
     width:450px;
 
@@ -68,17 +67,23 @@
 
     perspective:1400px;
 
+    -webkit-perspective:1400px;
 }
 
-.compactContainer{
+
+.compactContainer {
 
     width:450px;
 
     flex:0 0 450px;
-
 }
 
-.flipInner{
+
+/* ================================= */
+/* FLIP INNER */
+/* ================================= */
+
+.flipInner {
 
     position:relative;
 
@@ -88,21 +93,15 @@
 
     transform-style:preserve-3d;
 
+    -webkit-transform-style:preserve-3d;
+
+    transform-origin:center center;
+
+    -webkit-transform-origin:center center;
+
+    will-change:transform;
 }
 
-.compactContainer .flipInner{
-
-    width:450px;
-
-    min-height:580px;
-
-}
-
-.flipInner.flipped{
-
-    transform:rotateY(180deg);
-
-}
 
 /* ================================= */
 /* FRONT + BACK */
@@ -110,7 +109,7 @@
 
 .flipInner > .card,
 
-.flipInner > .back{
+.flipInner > .back {
 
     position:absolute;
 
@@ -130,49 +129,39 @@
 
     transform-style:preserve-3d;
 
+    -webkit-transform-style:preserve-3d;
 }
+
 
 /* ================================= */
 /* FRONT */
 /* ================================= */
 
-.flipInner > .card{
+.flipInner > .card {
 
     transform:rotateY(0deg);
 
+    -webkit-transform:rotateY(0deg);
 }
+
 
 /* ================================= */
 /* BACK */
 /* ================================= */
 
-.flipInner > .back{
+.flipInner > .back {
 
     transform:rotateY(180deg);
 
+    -webkit-transform:rotateY(180deg);
 }
 
-/* ================================= */
-/* COMPACT FLIP */
-/* ================================= */
-
-.compactContainer .flipInner > .card,
-
-.compactContainer .flipInner > .back{
-
-    width:330px;
-
-    height:580px;
-
-    min-height:580px;
-
-}
 
 /* ================================= */
 /* HEADER */
 /* ================================= */
 
-.header{
+.header {
 
     position:relative;
 
@@ -187,20 +176,16 @@
     gap:1rem;
 
     padding:
-
         1.35rem
-
         1.4rem;
 
     border-bottom:
-
         1px solid
-
         rgba(255,255,255,.08);
-
 }
 
-.rankArea{
+
+.rankArea {
 
     display:flex;
 
@@ -209,10 +194,10 @@
     gap:.8rem;
 
     min-width:0;
-
 }
 
-.rankImage{
+
+.rankImage {
 
     width:60px;
 
@@ -221,16 +206,16 @@
     object-fit:contain;
 
     flex-shrink:0;
-
 }
 
-.rankContent{
+
+.rankContent {
 
     min-width:0;
-
 }
 
-.rankTitle{
+
+.rankTitle {
 
     margin:0;
 
@@ -247,17 +232,15 @@
     text-transform:uppercase;
 
     max-width:170px;
-
 }
 
-.armyId{
+
+.armyId {
 
     flex-shrink:0;
 
     padding:
-
         .55rem
-
         .85rem;
 
     min-width:72px;
@@ -267,21 +250,14 @@
     border-radius:12px;
 
     background:
-
         linear-gradient(
-
             180deg,
-
             rgba(255,255,255,.08),
-
             rgba(255,255,255,.02)
-
         );
 
     border:
-
         1px solid
-
         var(--accent-border);
 
     color:#FFFFFF;
@@ -293,16 +269,16 @@
     letter-spacing:.15em;
 
     box-shadow:
-
-        0 0 15px var(--accent-glow-soft);
-
+        0 0 15px
+        var(--accent-glow-soft);
 }
+
 
 /* ================================= */
 /* AVATAR */
 /* ================================= */
 
-.avatarWrapper{
+.avatarWrapper {
 
     position:relative;
 
@@ -313,16 +289,13 @@
     justify-content:center;
 
     padding:
-
         2rem
-
         2rem
-
         1rem;
-
 }
 
-.avatar{
+
+.avatar {
 
     width:240px;
 
@@ -333,46 +306,43 @@
     border-radius:26px;
 
     border:
-
         3px solid
-
         var(--accent-border);
 
     box-shadow:
+        0 0 30px
+        var(--accent-glow-soft),
 
-        0 0 30px var(--accent-glow-soft),
-
-        0 20px 45px rgba(0,0,0,.50);
+        0 20px 45px
+        rgba(0,0,0,.50);
 
     transition:
-
         border-color .25s ease,
-
         box-shadow .25s ease,
-
         transform .25s ease;
-
 }
 
-.avatar:hover{
+
+.avatar:hover {
 
     transform:scale(1.02);
 
     border-color:var(--accent);
 
     box-shadow:
+        0 0 40px
+        var(--accent-glow),
 
-        0 0 40px var(--accent-glow),
-
-        0 20px 45px rgba(0,0,0,.50);
-
+        0 20px 45px
+        rgba(0,0,0,.50);
 }
+
 
 /* ================================= */
 /* IDENTITY */
 /* ================================= */
 
-.identity{
+.identity {
 
     position:relative;
 
@@ -384,11 +354,12 @@
 
     align-items:center;
 
-    padding:0 1rem;
-
+    padding:
+        0 1rem;
 }
 
-.name{
+
+.name {
 
     width:100%;
 
@@ -411,16 +382,16 @@
     word-break:break-word;
 
     text-shadow:
-
-        0 0 12px rgba(0,0,0,.35);
-
+        0 0 12px
+        rgba(0,0,0,.35);
 }
+
 
 /* ================================= */
 /* BADGE */
 /* ================================= */
 
-.badge{
+.badge {
 
     position:relative;
 
@@ -439,18 +410,16 @@
     margin-top:.8rem;
 
     padding:
-
         .35rem
-
         1rem;
 
     border-radius:10px;
 
     border:2px solid;
-
 }
 
-.badgeTitle{
+
+.badgeTitle {
 
     position:relative;
 
@@ -463,14 +432,14 @@
     letter-spacing:.18em;
 
     text-transform:uppercase;
-
 }
+
 
 /* ================================= */
 /* FOOTER */
 /* ================================= */
 
-.footer{
+.footer {
 
     position:relative;
 
@@ -487,16 +456,13 @@
     gap:1.2rem;
 
     padding:
-
         1.5rem
-
         1.5rem
-
         1.8rem;
-
 }
 
-.joined{
+
+.joined {
 
     color:var(--accent);
 
@@ -509,16 +475,16 @@
     text-transform:uppercase;
 
     text-shadow:
-
-        0 0 8px var(--accent-glow-soft);
-
+        0 0 8px
+        var(--accent-glow-soft);
 }
+
 
 /* ================================= */
 /* BUTTON */
 /* ================================= */
 
-.actionButton{
+.actionButton {
 
     width:90%;
 
@@ -535,21 +501,14 @@
     border-radius:999px;
 
     background:
-
         linear-gradient(
-
             180deg,
-
             var(--accent-light),
-
             var(--accent)
-
         );
 
     border:
-
         1px solid
-
         var(--accent-border);
 
     color:var(--button-text);
@@ -569,50 +528,44 @@
     white-space:normal;
 
     transition:
-
         transform .25s ease,
-
         box-shadow .25s ease,
-
         border-color .25s ease;
-
 }
 
-.actionButton:hover{
+
+.actionButton:hover {
 
     cursor:pointer;
 
     transform:
-
         translateY(-4px)
-
         scale(1.03);
 
     border-color:var(--accent);
 
     box-shadow:
+        0 0 25px
+        var(--accent-glow),
 
-        0 0 25px var(--accent-glow),
-
-        0 10px 25px rgba(0,0,0,.35);
-
+        0 10px 25px
+        rgba(0,0,0,.35);
 }
 
-.actionButton:active{
+
+.actionButton:active {
 
     transform:
-
         translateY(-1px)
-
         scale(.99);
-
 }
 
+
 /* ================================= */
-/* COMPACT / PRESTIGE */
+/* COMPACT */
 /* ================================= */
 
-.compact{
+.compact {
 
     width:450px;
 
@@ -621,144 +574,146 @@
     min-height:420px;
 
     border-radius:22px;
-
 }
 
-.compact .header{
+
+.compact .header {
 
     padding:.8rem;
-
 }
 
-.compact .rankImage{
+
+.compact .rankImage {
 
     width:42px;
 
     height:42px;
-
 }
 
-.compact .rankTitle{
+
+.compact .rankTitle {
 
     font-size:.8rem;
 
     max-width:120px;
-
 }
 
-.compact .armyId{
+
+.compact .armyId {
 
     font-size:.8rem;
 
     min-width:55px;
-
 }
 
-.compact .avatarWrapper{
+
+.compact .avatarWrapper {
 
     padding:1rem;
-
 }
 
-.compact .avatar{
+
+.compact .avatar {
 
     width:220px;
 
     height:220px;
 
     border-radius:18px;
-
 }
 
-.compact .name{
+
+.compact .name {
 
     font-size:1.5rem;
-
 }
 
-.compact .badge{
+
+.compact .badge {
 
     min-width:120px;
 
     min-height:32px;
-
 }
 
-.compact .badgeTitle{
+
+.compact .badgeTitle {
 
     font-size:.65rem;
-
 }
 
-.compact .footer{
+
+.compact .footer {
 
     margin-top:auto;
 
     padding:1rem;
-
 }
 
-.compact .actionButton{
+
+.compact .actionButton {
 
     min-height:38px;
 
     font-size:.70rem;
-
 }
+
 
 /* ================================= */
 /* COMPACT FLIP HEIGHT */
 /* ================================= */
 
-.compactContainer .flipInner{
+.compactContainer .flipInner {
 
     min-height:580px;
-
 }
 
-.compactContainer .flipInner > .card,
 
-.compactContainer .flipInner > .back{
+.compactContainer
+.flipInner > .card,
+
+.compactContainer
+.flipInner > .back {
 
     width:450px;
 
     height:580px;
 
     min-height:580px;
-
 }
+
 
 /* ================================= */
-/* FOUNDER CARD */
+/* FOUNDER */
 /* ================================= */
 
-.founder{
+.founder {
 
     min-height:700px;
-
 }
 
-.flipInner:has(.founder){
+
+.flipInner:has(.founder) {
 
     min-height:700px;
-
 }
 
-.flipInner:has(.founder)>.founder,
 
-.flipInner:has(.founder)>.back{
+.flipInner:has(.founder) > .founder,
+
+.flipInner:has(.founder) > .back {
 
     height:700px;
 
     min-height:700px;
-
 }
 
+
 /* ================================= */
-/* OPTIONAL ORGANIZATION EFFECTS */
+/* CARD EFFECTS */
 /* ================================= */
 
-.card::before{
+.card::before {
 
     content:"";
 
@@ -771,22 +726,17 @@
     border-radius:inherit;
 
     background:
-
         radial-gradient(
-
             circle at top,
-
             var(--accent-glow-soft),
-
             transparent 55%
-
         );
 
     opacity:.55;
-
 }
 
-.card::after{
+
+.card::after {
 
     content:"";
 
@@ -798,66 +748,41 @@
 
     border-radius:inherit;
 
-    border:1px solid transparent;
+    border:
+        1px solid
+        transparent;
 
     box-shadow:
-
-        inset 0 0 0 1px rgba(255,255,255,.03);
-
+        inset 0 0 0 1px
+        rgba(255,255,255,.03);
 }
+
 
 /* ================================= */
 /* RESPONSIVE */
 /* ================================= */
 
-@media(max-width:700px){
+@media(max-width:700px) {
 
-    .avatar{
+    .avatar {
 
         width:210px;
 
         height:210px;
-
     }
 
-    .name{
+
+    .name {
 
         font-size:1.8rem;
-
     }
 
-    /* ================================= */
-/* FLIP FACE VISIBILITY */
-/* ================================= */
-
-.faceVisible{
-
-    opacity:1;
-
-    pointer-events:auto;
-
-}
-
-.faceHidden{
-
-    opacity:0;
-
-    pointer-events:none;
-
-}
-
-
-/* ================================= */
-/* MOBILE RESPONSIVE */
-/* ================================= */
-
-@media(max-width:700px){
 
     /* ================================= */
     /* FOUNDER CARD */
     /* ================================= */
 
-    .flipContainer:not(.compactContainer){
+    .flipContainer:not(.compactContainer) {
 
         width:
             calc(100vw - 32px);
@@ -869,16 +794,16 @@
         max-width:
             calc(100vw - 32px);
 
-        margin:
-            0 auto;
+        margin:0 auto;
 
-        perspective:
-            1200px;
+        perspective:1200px;
+
+        -webkit-perspective:1200px;
     }
 
 
     .flipContainer:not(.compactContainer)
-    .flipInner{
+    .flipInner {
 
         width:100%;
 
@@ -896,7 +821,7 @@
     /* COMPACT MEMBER CARDS */
     /* ================================= */
 
-    .compactContainer{
+    .compactContainer {
 
         width:280px;
 
@@ -907,12 +832,14 @@
 
         margin:0;
 
-        perspective:
-            1200px;
+        perspective:1200px;
+
+        -webkit-perspective:1200px;
     }
 
 
-    .compactContainer .flipInner{
+    .compactContainer
+    .flipInner {
 
         width:280px;
 
@@ -929,10 +856,10 @@
 
 
     .compactContainer
-    .flipInner>.card,
+    .flipInner > .card,
 
     .compactContainer
-    .flipInner>.back{
+    .flipInner > .back {
 
         width:280px;
 
@@ -955,27 +882,54 @@
 
 
     /* ================================= */
+    /* COMPACT FRONT */
+    /* ================================= */
+
+    .compactContainer
+    .flipInner > .card {
+
+        transform:
+            rotateY(0deg);
+
+        -webkit-transform:
+            rotateY(0deg);
+    }
+
+
+    /* ================================= */
+    /* COMPACT BACK */
+    /* ================================= */
+
+    .compactContainer
+    .flipInner > .back {
+
+        transform:
+            rotateY(180deg);
+
+        -webkit-transform:
+            rotateY(180deg);
+    }
+
+
+    /* ================================= */
     /* COMPACT HEADER */
     /* ================================= */
 
-    .compact .header{
+    .compact .header {
 
-        padding:
-            .65rem;
+        padding:.65rem;
 
-        gap:
-            .5rem;
+        gap:.5rem;
     }
 
 
-    .compact .rankArea{
+    .compact .rankArea {
 
-        gap:
-            .45rem;
+        gap:.45rem;
     }
 
 
-    .compact .rankImage{
+    .compact .rankImage {
 
         width:34px;
 
@@ -983,39 +937,31 @@
     }
 
 
-    .compact .rankTitle{
+    .compact .rankTitle {
 
-        font-size:
-            .62rem;
+        font-size:.62rem;
 
-        line-height:
-            1.15;
+        line-height:1.15;
 
-        max-width:
-            105px;
+        max-width:105px;
 
-        letter-spacing:
-            .06em;
+        letter-spacing:.06em;
     }
 
 
-    .compact .armyId{
+    .compact .armyId {
 
-        min-width:
-            48px;
+        min-width:48px;
 
         padding:
             .35rem
             .45rem;
 
-        font-size:
-            .62rem;
+        font-size:.62rem;
 
-        letter-spacing:
-            .08em;
+        letter-spacing:.08em;
 
-        border-radius:
-            9px;
+        border-radius:9px;
     }
 
 
@@ -1023,7 +969,7 @@
     /* COMPACT AVATAR */
     /* ================================= */
 
-    .compact .avatarWrapper{
+    .compact .avatarWrapper {
 
         padding:
             .65rem
@@ -1032,19 +978,15 @@
     }
 
 
-    .compact .avatar{
+    .compact .avatar {
 
-        width:
-            165px;
+        width:165px;
 
-        height:
-            165px;
+        height:165px;
 
-        border-radius:
-            15px;
+        border-radius:15px;
 
-        border-width:
-            2px;
+        border-width:2px;
     }
 
 
@@ -1052,7 +994,7 @@
     /* COMPACT IDENTITY */
     /* ================================= */
 
-    .compact .identity{
+    .compact .identity {
 
         padding:
             0
@@ -1060,49 +1002,39 @@
     }
 
 
-    .compact .name{
+    .compact .name {
 
-        font-size:
-            1.15rem;
+        font-size:1.15rem;
 
-        line-height:
-            1.05;
+        line-height:1.05;
 
-        letter-spacing:
-            .04em;
+        letter-spacing:.04em;
     }
 
 
-    .compact .badge{
+    .compact .badge {
 
-        min-width:
-            95px;
+        min-width:95px;
 
-        min-height:
-            27px;
+        min-height:27px;
 
-        margin-top:
-            .5rem;
+        margin-top:.5rem;
 
         padding:
             .2rem
             .65rem;
 
-        border-radius:
-            8px;
+        border-radius:8px;
 
-        border-width:
-            1px;
+        border-width:1px;
     }
 
 
-    .compact .badgeTitle{
+    .compact .badgeTitle {
 
-        font-size:
-            .55rem;
+        font-size:.55rem;
 
-        letter-spacing:
-            .10em;
+        letter-spacing:.10em;
     }
 
 
@@ -1110,96 +1042,43 @@
     /* COMPACT FOOTER */
     /* ================================= */
 
-    .compact .footer{
+    .compact .footer {
 
-        gap:
-            .65rem;
+        gap:.65rem;
 
-        padding:
-            .7rem;
+        padding:.7rem;
     }
 
 
-    .compact .joined{
+    .compact .joined {
 
-        font-size:
-            .62rem;
+        font-size:.62rem;
 
-        letter-spacing:
-            .12em;
+        letter-spacing:.12em;
 
         text-align:center;
     }
 
 
-    .compact .actionButton{
+    .compact .actionButton {
 
-        width:
-            94%;
+        width:94%;
 
-        min-height:
-            34px;
+        min-height:34px;
 
         padding:
             .55rem
             .4rem;
 
-        font-size:
-            .55rem;
+        font-size:.55rem;
 
-        line-height:
-            1.2;
+        line-height:1.2;
 
-        letter-spacing:
-            .08em;
+        letter-spacing:.08em;
 
-        white-space:
-            normal;
+        white-space:normal;
 
-        overflow-wrap:
-            anywhere;
-    }
-
-
-    /* ================================= */
-    /* FLIP FACES */
-    /* ================================= */
-
-    .flipInner>.card,
-
-    .flipInner>.back{
-
-        backface-visibility:
-            hidden !important;
-
-        -webkit-backface-visibility:
-            hidden !important;
-
-        transform-style:
-            preserve-3d;
-
-        -webkit-transform-style:
-            preserve-3d;
-    }
-
-
-    /* ================================= */
-    /* FACE VISIBILITY */
-    /* ================================= */
-
-    .faceVisible{
-
-        opacity:1;
-
-        pointer-events:auto;
-    }
-
-
-    .faceHidden{
-
-        opacity:0;
-
-        pointer-events:none;
+        overflow-wrap:anywhere;
     }
 
 
@@ -1208,7 +1087,7 @@
     /* ================================= */
 
     .flipContainer:not(.compactContainer)
-    .name{
+    .name {
 
         font-size:
             clamp(
@@ -1226,13 +1105,19 @@
     /* ================================= */
 
     .flipContainer:not(.compactContainer)
-    .avatar{
+    .avatar {
 
         width:
-            min(240px,68vw);
+            min(
+                240px,
+                68vw
+            );
 
         height:
-            min(240px,68vw);
+            min(
+                240px,
+                68vw
+            );
     }
 
 
@@ -1240,34 +1125,29 @@
     /* GENERAL HEADER */
     /* ================================= */
 
-    .header{
+    .header {
 
-        padding:
-            1rem;
+        padding:1rem;
     }
 
 
-    .rankTitle{
+    .rankTitle {
 
-        font-size:
-            .82rem;
+        font-size:.82rem;
 
-        max-width:
-            145px;
+        max-width:145px;
     }
 
 
-    .armyId{
+    .armyId {
 
-        min-width:
-            60px;
+        min-width:60px;
 
         padding:
             .5rem
             .65rem;
 
-        font-size:
-            .7rem;
+        font-size:.7rem;
     }
 
 
@@ -1275,20 +1155,15 @@
     /* GENERAL BUTTONS */
     /* ================================= */
 
-    .actionButton{
+    .actionButton {
 
         max-width:100%;
 
-        white-space:
-            normal;
+        white-space:normal;
 
-        overflow-wrap:
-            anywhere;
+        overflow-wrap:anywhere;
 
-        word-break:
-            normal;
+        word-break:normal;
     }
-
-}
 
 }
