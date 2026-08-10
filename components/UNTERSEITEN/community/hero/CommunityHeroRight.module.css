@@ -1,68 +1,47 @@
+/* ================================= */
+/* COMMUNITY HERO RIGHT */
+/* ================================= */
+
 .right {
 
     position:relative;
 
-
     display:flex;
-
 
     justify-content:center;
 
-
     align-items:center;
-
 
     min-height:620px;
 
-
     overflow:visible;
-
 
 }
 
 
-
-
-
-
-
-/* Hintergrund-Glow */
-
+/* ================================= */
+/* HINTERGRUND-GLOW */
+/* ================================= */
 
 .right::before {
 
-
     content:"";
-
 
     position:absolute;
 
-
-
     left:46%;
-
 
     top:48%;
 
-
-
     transform:translate(-50%,-50%);
-
-
 
     width:650px;
 
-
     height:650px;
-
-
 
     border-radius:50%;
 
-
-
     background:
-
 
         radial-gradient(
 
@@ -78,505 +57,469 @@
 
         );
 
-
-
     filter:blur(60px);
-
-
 
     pointer-events:none;
 
-
-
     z-index:0;
-
-
 
     animation:glowPulse 14s ease-in-out infinite;
 
-
-
 }
 
 
-
-
-
-
+/* ================================= */
+/* FORMATION */
+/* ================================= */
 
 .formation {
 
-
     position:relative;
-
-
 
     z-index:1;
 
-
-
     display:flex;
-
-
 
     flex-direction:column;
 
-
-
     gap:16px;
-
-
 
     animation:formationFloat 10s ease-in-out infinite;
 
-
-
 }
 
 
-
-
-
-
+/* ================================= */
+/* ROWS */
+/* ================================= */
 
 .row {
 
-
     display:flex;
-
-
 
     justify-content:center;
 
-
-
     gap:16px;
-
-
 
 }
 
 
-
-
-
-
+/* ================================= */
+/* LEERE AVATAR-PLÄTZE */
+/* ================================= */
 
 .avatar {
 
-
     width:88px;
-
 
     height:88px;
 
-
+    flex:0 0 88px;
 
     border-radius:50%;
 
+    background:
 
+        linear-gradient(
 
-    background:linear-gradient(
+            145deg,
 
-        145deg,
+            rgba(255,255,255,.10),
 
-        rgba(255,255,255,.10),
+            rgba(255,255,255,.03)
 
-        rgba(255,255,255,.03)
+        );
 
-    );
+    border:
 
+        1px solid
 
-
-    border:1px solid rgba(255,255,255,.06);
-
-
+        rgba(255,255,255,.06);
 
     transition:
 
-
         transform .35s ease,
-
 
         border-color .35s ease,
 
-
         box-shadow .35s ease;
 
+    animation:
 
+        avatarFloat
 
-    animation:avatarFloat 6s ease-in-out infinite;
+        6s
 
+        ease-in-out
 
+        infinite;
 
 }
 
 
-
-
-
-
+/* ================================= */
+/* AVATAR ANIMATION DELAYS */
+/* ================================= */
 
 .avatar:nth-child(2) {
 
-
     animation-delay:.8s;
 
-
 }
-
-
-
-
-
-
 
 .avatar:nth-child(3) {
 
-
     animation-delay:1.6s;
 
-
 }
-
-
-
-
-
-
 
 .avatar:nth-child(4) {
 
-
     animation-delay:2.4s;
 
-
 }
-
-
-
-
-
-
 
 .avatar:nth-child(5) {
 
-
     animation-delay:3.2s;
-
 
 }
 
 
-
-
-
-
+/* ================================= */
+/* AVATAR HOVER */
+/* ================================= */
 
 .avatar:hover {
 
+    transform:
 
-    transform:translateY(-8px) scale(1.06);
+        translateY(-8px)
 
+        scale(1.06);
 
+    border-color:
 
-    border-color:rgba(163,230,53,.55);
-
-
+        rgba(163,230,53,.55);
 
     box-shadow:
 
+        0 0 25px
 
-        0 0 25px rgba(163,230,53,.20);
-
-
+        rgba(163,230,53,.20);
 
 }
 
 
-
-
-
-
-
-/* ---------------------------- */
-/* Animationen */
-/* ---------------------------- */
-
+/* ================================= */
+/* ANIMATIONEN */
+/* ================================= */
 
 @keyframes formationFloat {
 
-
     0% {
 
-
-        transform:translateY(0px);
-
+        transform:translateY(0);
 
     }
-
-
 
     50% {
 
-
         transform:translateY(-8px);
 
-
     }
-
-
 
     100% {
 
-
-        transform:translateY(0px);
-
+        transform:translateY(0);
 
     }
 
-
-
 }
-
-
-
-
-
 
 
 @keyframes avatarFloat {
 
-
     0% {
 
-
-        transform:translateY(0px);
-
+        transform:translateY(0);
 
     }
-
-
 
     50% {
 
-
         transform:translateY(-5px);
 
-
     }
-
-
 
     100% {
 
-
-        transform:translateY(0px);
-
+        transform:translateY(0);
 
     }
 
-
-
 }
-
-
-
-
-
 
 
 @keyframes glowPulse {
 
-
     0% {
 
+        transform:
 
-        transform:translate(-50%,-50%) scale(1);
+            translate(-50%,-50%)
 
-
+            scale(1);
 
         opacity:.55;
 
-
     }
-
-
 
     25% {
 
+        transform:
 
-        transform:translate(-50%,calc(-50% - 3px)) scale(1.03);
+            translate(
 
+                -50%,
 
+                calc(-50% - 3px)
+
+            )
+
+            scale(1.03);
 
         opacity:.70;
 
-
     }
-
-
 
     50% {
 
+        transform:
 
-        transform:translate(-50%,-50%) scale(1.06);
+            translate(-50%,-50%)
 
-
+            scale(1.06);
 
         opacity:.90;
 
-
     }
-
-
 
     75% {
 
+        transform:
 
-        transform:translate(-50%,calc(-50% + 3px)) scale(1.03);
+            translate(
 
+                -50%,
 
+                calc(-50% + 3px)
+
+            )
+
+            scale(1.03);
 
         opacity:.70;
 
-
     }
-
-
 
     100% {
 
+        transform:
 
-        transform:translate(-50%,-50%) scale(1);
+            translate(-50%,-50%)
 
-
+            scale(1);
 
         opacity:.55;
 
-
     }
-
-
 
 }
 
 
-
-
-
-
-
 /* ================================= */
-/* RESPONSIVE */
+/* TABLET */
 /* ================================= */
-
 
 @media(max-width:1100px){
 
-
     .right {
-
 
         min-height:520px;
 
-
     }
-
-
 
 }
 
 
-
-
-
-
+/* ================================= */
+/* MOBILE */
+/* ================================= */
 
 @media(max-width:600px){
 
-
-
     .right {
 
+        position:relative;
 
-        min-height:360px;
+        width:100%;
 
+        min-width:0;
 
+        height:440px;
 
-        transform:scale(.75);
+        min-height:440px;
 
+        margin-top:2.5rem;
 
+        padding:0;
 
-        margin-top:-2rem;
+        display:flex;
 
+        justify-content:center;
 
+        align-items:flex-start;
+
+        overflow:hidden;
 
     }
 
 
-
-
-
+    /* --------------------------------- */
+    /* MOBILE GLOW */
+    /* --------------------------------- */
 
     .right::before {
 
+        left:50%;
 
-        width:350px;
+        top:48%;
 
+        width:320px;
 
-        height:350px;
-
-
+        height:320px;
 
         filter:blur(40px);
 
-
-
     }
 
 
-
-
-
+    /* --------------------------------- */
+    /* MOBILE FORMATION */
+    /* --------------------------------- */
 
     .formation {
 
+        position:absolute;
 
-        gap:10px;
+        top:1.5rem;
 
+        left:50%;
+
+        width:max-content;
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:8px;
+
+        transform:
+
+            translateX(-50%)
+
+            scale(.55);
+
+        transform-origin:
+
+            top center;
+
+        animation:
+
+            formationFloatMobile
+
+            10s
+
+            ease-in-out
+
+            infinite;
 
     }
 
 
-
-
-
+    /* --------------------------------- */
+    /* MOBILE ROWS */
+/* --------------------------------- */
 
     .row {
 
+        display:flex;
 
-        gap:10px;
+        justify-content:center;
 
+        gap:8px;
 
     }
 
 
-
-
-
+    /* --------------------------------- */
+    /* MOBILE AVATARE */
+/* --------------------------------- */
 
     .avatar {
 
+        width:88px;
 
-        width:55px;
+        height:88px;
 
-
-        height:55px;
-
+        flex:0 0 88px;
 
     }
 
 
+    /* --------------------------------- */
+    /* MOBILE FORMATION ANIMATION */
+/* --------------------------------- */
+
+    @keyframes formationFloatMobile {
+
+        0% {
+
+            transform:
+
+                translateX(-50%)
+
+                translateY(0)
+
+                scale(.55);
+
+        }
+
+        50% {
+
+            transform:
+
+                translateX(-50%)
+
+                translateY(-5px)
+
+                scale(.55);
+
+        }
+
+        100% {
+
+            transform:
+
+                translateX(-50%)
+
+                translateY(0)
+
+                scale(.55);
+
+        }
+
+    }
 
 }

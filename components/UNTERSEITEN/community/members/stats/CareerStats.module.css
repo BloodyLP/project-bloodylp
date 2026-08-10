@@ -360,32 +360,6 @@
 
 
 /* ================================= */
-/* GOALIE W-L-OT */
-/* ================================= */
-
-.rowGoalie span.goalieRecord{
-
-    font-size:.64rem !important;
-
-    letter-spacing:-.03em;
-
-    white-space:nowrap;
-
-}
-
-
-.totalGrid strong.goalieRecordTotal{
-
-    font-size:1.5rem !important;
-
-    letter-spacing:-.04em;
-
-    white-space:nowrap;
-
-}
-
-
-/* ================================= */
 /* TEAM */
 /* ================================= */
 
@@ -672,9 +646,25 @@
 
             180deg,
 
-            color-mix(in srgb, var(--accent) 22%, transparent),
+            color-mix(
 
-            color-mix(in srgb, var(--accent) 5%, transparent)
+                in srgb,
+
+                var(--accent) 22%,
+
+                transparent
+
+            ),
+
+            color-mix(
+
+                in srgb,
+
+                var(--accent) 5%,
+
+                transparent
+
+            )
 
         ) !important;
 
@@ -708,135 +698,331 @@
 
 
 /* ================================= */
-/* YOUNG ARMY - HIGHLIGHT */
-/* ================================= */
-
-.youngArmyTotal .highlightTotal{
-
-    background:
-
-        linear-gradient(
-
-            180deg,
-
-            rgba(255,70,70,.22),
-
-            rgba(255,70,70,.05)
-
-        ) !important;
-
-    border:
-
-        2px solid
-
-        #FF4545 !important;
-
-    box-shadow:
-
-        0 0 40px
-
-        rgba(255,69,69,.45);
-
-}
-
-.youngArmyTotal .highlightTotal strong{
-
-    color:#FF4545 !important;
-
-    font-size:2.2rem !important;
-
-    text-shadow:
-
-        0 0 25px
-
-        rgba(255,69,69,.65);
-
-}
-
-
-/* ================================= */
 /* RESPONSIVE */
 /* ================================= */
 
 @media (max-width:700px){
 
+    /* ================================= */
+    /* SKATER HEADER */
+    /* ================================= */
+
+    .rowHeader{
+
+        display:grid;
+
+        grid-template-columns:
+
+            42px
+            32px
+            30px
+            30px
+            30px
+            34px
+            34px
+            34px;
+
+        width:100%;
+
+        padding:
+
+            .65rem
+            .45rem;
+
+        gap:0;
+
+    }
+
     .rowHeader span{
 
-        font-size:.70rem !important;
+        min-width:0;
 
-        letter-spacing:.05em;
+        overflow:hidden;
+
+        font-size:.58rem !important;
+
+        letter-spacing:.01em;
+
+        white-space:nowrap;
+
+    }
+
+    .rowHeader span:first-child{
+
+        justify-content:flex-start;
+
+    }
+
+
+    /* ================================= */
+    /* SKATER ROW */
+    /* ================================= */
+
+    .row{
+
+        display:grid;
+
+        grid-template-columns:
+
+            42px
+            32px
+            30px
+            30px
+            30px
+            34px
+            34px
+            34px;
+
+        width:100%;
+
+        padding:
+
+            .65rem
+            .45rem;
+
+        gap:0;
 
     }
 
     .row span{
 
-        font-size:.82rem !important;
+        min-width:0;
+
+        overflow:hidden;
+
+        font-size:.68rem !important;
+
+        white-space:nowrap;
 
     }
+
+
+    /* ================================= */
+    /* GOALIE HEADER */
+/* ================================= */
 
     .rowHeaderGoalie{
 
-        grid-template-columns:
-
-            58px
-            42px
-            38px
-            42px
-            42px
-            38px
-            110px;
-
-    }
-
-    .rowGoalie{
+        display:grid;
 
         grid-template-columns:
 
-            58px
-            42px
             38px
-            42px
-            42px
-            38px
-            110px;
+            27px
+            27px
+            32px
+            34px
+            27px
+            56px;
+
+        width:100%;
+
+        padding:
+
+            .50rem
+            .30rem;
+
+        gap:0;
+
+        align-items:center;
 
     }
 
     .rowHeaderGoalie span{
 
-        font-size:.60rem !important;
+        min-width:0;
 
-        letter-spacing:0;
+        width:100%;
+
+        overflow:hidden;
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        font-size:.48rem !important;
+
+        font-weight:950;
+
+        letter-spacing:-.02em;
+
+        white-space:nowrap;
+
+    }
+
+    .rowHeaderGoalie span:first-child{
+
+        justify-content:flex-start;
+
+    }
+
+
+    /* ================================= */
+    /* GOALIE SAISONZEILEN */
+/* ================================= */
+
+    .rowGoalie{
+
+        display:grid;
+
+        grid-template-columns:
+
+            38px
+            27px
+            27px
+            32px
+            34px
+            27px
+            56px;
+
+        width:100%;
+
+        padding:
+
+            .50rem
+            .30rem;
+
+        gap:0;
+
+        min-height:42px;
+
+        align-items:center;
 
     }
 
     .rowGoalie span{
 
-        font-size:.75rem !important;
+        min-width:0;
+
+        width:100%;
+
+        overflow:hidden;
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        font-size:.58rem !important;
+
+        font-weight:850;
+
+        line-height:1;
+
+        white-space:nowrap;
 
     }
 
+    .rowGoalie span:first-child{
+
+        justify-content:flex-start;
+
+    }
+
+
+    /* ================================= */
+    /* W-L-OT */
+/* ================================= */
+
+    .rowGoalie span:last-child{
+
+        min-width:0;
+
+        width:100%;
+
+        overflow:hidden;
+
+        font-size:.46rem !important;
+
+        font-weight:850;
+
+        letter-spacing:-.07em;
+
+        white-space:nowrap;
+
+    }
+
+
+    /* ================================= */
+    /* TEAM */
+/* ================================= */
+
     .team{
 
-        font-size:.70rem !important;
+        min-width:0;
+
+        width:100%;
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        overflow:hidden;
 
     }
 
     .team img{
 
-        width:20px;
+        width:17px;
 
-        height:20px;
+        height:17px;
 
-        padding:2px;
+        min-width:17px;
+
+        min-height:17px;
+
+        padding:1px;
 
     }
+
+
+    /* ================================= */
+    /* HIGHLIGHT */
+/* ================================= */
 
     .highlightPoints{
 
-        font-size:1.1rem !important;
+        font-size:.85rem !important;
 
     }
+
+
+    /* ================================= */
+    /* TABLE */
+/* ================================= */
+
+    .table{
+
+        width:100%;
+
+        min-width:0;
+
+        overflow:hidden;
+
+    }
+
+
+    /* ================================= */
+    /* SECTION HEADINGS */
+/* ================================= */
+
+    .section h3{
+
+        font-size:1.15rem !important;
+
+        margin-bottom:.8rem;
+
+    }
+
+
+    /* ================================= */
+    /* TOTAL */
+/* ================================= */
 
     .total{
 
@@ -883,189 +1069,5 @@
         font-size:1.75rem !important;
 
     }
-
-}
-
-
-/* ================================= */
-/* ORGANISATIONS-FARBEN */
-/* GESAMTKARRIERE */
-/* ================================= */
-
-
-/* ================================= */
-/* YOUNG ARMY */
-/* ================================= */
-
-.youngArmyTotal{
-
-    background:
-
-        linear-gradient(
-
-            180deg,
-
-            rgba(255,69,69,.16),
-
-            rgba(255,255,255,.04)
-
-        ) !important;
-
-    border:
-
-        1px solid
-
-        rgba(255,69,69,.55) !important;
-
-    box-shadow:
-
-        0 0 35px
-
-        rgba(255,69,69,.20),
-
-        inset 0 0 25px
-
-        rgba(0,0,0,.25) !important;
-
-}
-
-.youngArmyTotal h3{
-
-    color:#FF4545 !important;
-
-}
-
-.youngArmyTotal .totalCard::before{
-
-    background:#FF4545 !important;
-
-}
-
-.youngArmyTotal .highlightTotal{
-
-    background:
-
-        linear-gradient(
-
-            180deg,
-
-            rgba(255,69,69,.22),
-
-            rgba(255,69,69,.05)
-
-        ) !important;
-
-    border:
-
-        2px solid
-
-        #FF4545 !important;
-
-    box-shadow:
-
-        0 0 40px
-
-        rgba(255,69,69,.50) !important;
-
-}
-
-.youngArmyTotal .highlightTotal strong{
-
-    color:#FF4545 !important;
-
-    text-shadow:
-
-        0 0 25px
-
-        rgba(255,69,69,.60) !important;
-
-}
-
-
-/* ================================= */
-/* BLOODYARMY */
-/* ================================= */
-
-.bloodyArmyTotal{
-
-    background:
-
-        linear-gradient(
-
-            180deg,
-
-            rgba(163,230,53,.16),
-
-            rgba(255,255,255,.04)
-
-        ) !important;
-
-    border:
-
-        1px solid
-
-        rgba(163,230,53,.55) !important;
-
-    box-shadow:
-
-        0 0 35px
-
-        rgba(163,230,53,.20),
-
-        inset 0 0 25px
-
-        rgba(0,0,0,.25) !important;
-
-}
-
-.bloodyArmyTotal h3{
-
-    color:#A3E635 !important;
-
-}
-
-.bloodyArmyTotal .totalCard::before{
-
-    background:#A3E635 !important;
-
-}
-
-.bloodyArmyTotal .highlightTotal{
-
-    background:
-
-        linear-gradient(
-
-            180deg,
-
-            rgba(163,230,53,.22),
-
-            rgba(163,230,53,.05)
-
-        ) !important;
-
-    border:
-
-        2px solid
-
-        #A3E635 !important;
-
-    box-shadow:
-
-        0 0 40px
-
-        rgba(163,230,53,.50) !important;
-
-}
-
-.bloodyArmyTotal .highlightTotal strong{
-
-    color:#A3E635 !important;
-
-    text-shadow:
-
-        0 0 25px
-
-        rgba(163,230,53,.60) !important;
 
 }

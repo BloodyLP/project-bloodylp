@@ -1,3 +1,7 @@
+/* ================================= */
+/* COMMUNITY HERO */
+/* ================================= */
+
 .hero {
 
     width:100%;
@@ -7,7 +11,6 @@
     display:flex;
 
     align-items:center;
-
 
     padding:
 
@@ -20,67 +23,44 @@
 }
 
 
-
-
-
-
+/* ================================= */
+/* CONTAINER */
+/* ================================= */
 
 .container {
 
-
     width:100%;
-
-
 
     max-width:1450px;
 
-
-
     margin:0 auto;
-
-
 
     display:grid;
 
-
-
     grid-template-columns:
-
 
         1.08fr
 
         .92fr;
 
-
-
     gap:2.5rem;
 
-
-
     align-items:center;
-
 
 }
 
 
-
-
-
-
+/* ================================= */
+/* TABLET */
+/* ================================= */
 
 @media(max-width:1100px){
 
-
-
     .hero {
-
 
         min-height:auto;
 
-
-
         padding:
-
 
             7rem
 
@@ -88,68 +68,53 @@
 
             4rem;
 
-
     }
-
-
-
-
 
 
     .container {
 
-
         grid-template-columns:1fr;
-
-
 
         gap:4rem;
 
-
     }
-
-
 
 }
 
 
-
-
-
-
+/* ================================= */
+/* MOBILE */
+/* ================================= */
 
 @media(max-width:600px){
 
-
-
     .hero {
 
+        width:100%;
+
+        min-height:auto;
 
         padding:
 
-
             6rem
 
-            1.2rem
+            1rem
 
-            3rem;
-
+            2rem;
 
     }
-
-
-
-
 
 
     .container {
 
+        width:100%;
 
-        gap:3rem;
+        max-width:100%;
 
+        grid-template-columns:1fr;
+
+        gap:.5rem;
 
     }
-
-
 
 }

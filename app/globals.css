@@ -1523,4 +1523,35 @@ translate(0px,0px);
 
     opacity:.45;
 
+    /* =====================================================
+   MOBILE VIEWPORT / HORIZONTAL OVERFLOW FIX
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    html {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    /*
+     * Fixed Header:
+     * Verhindert, dass inset-x-0 im mobilen
+     * Chrome-Viewport breiter als der sichtbare Bereich wird.
+     */
+    .fixed.inset-x-0 {
+        width: 100dvw;
+        max-width: 100dvw;
+        left: 0;
+        right: auto;
+    }
+}
+
 }

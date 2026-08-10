@@ -271,30 +271,56 @@
 
 @media(max-width:700px){
 
+    .folderContent{
 
-    .folderHeader {
+        display:flex;
+
+        flex-wrap:nowrap;
+
+        overflow-x:auto;
+
+        overflow-y:hidden;
+
+        justify-content:flex-start;
+
+        align-items:flex-start;
+
+        gap:1rem;
 
         padding:
 
             1rem;
 
-    }
-
-
-    .folderTitle {
-
-        font-size:.8rem;
-
-        letter-spacing:.15em;
+        -webkit-overflow-scrolling:touch;
 
     }
 
+    .folderContent > *{
 
-    .folderCount {
+        flex:
 
-        font-size:.65rem;
+            0 0 auto;
 
     }
 
+    /* ================================= */
+/* MOBILE ORDNER BREITE */
+/* ================================= */
+
+@media(max-width:700px){
+
+    .archive{
+
+        width:calc(100% - 20px);
+
+        max-width:calc(100% - 20px);
+
+        margin-left:auto;
+
+        margin-right:auto;
+
+    }
+
+}
 
 }

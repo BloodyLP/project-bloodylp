@@ -826,5 +826,469 @@
 
     }
 
+    /* ================================= */
+/* FLIP FACE VISIBILITY */
+/* ================================= */
+
+.faceVisible{
+
+    opacity:1;
+
+    pointer-events:auto;
+
 }
 
+.faceHidden{
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+
+/* ================================= */
+/* MOBILE RESPONSIVE */
+/* ================================= */
+
+@media(max-width:700px){
+
+    /* ================================= */
+    /* FOUNDER CARD */
+    /* ================================= */
+
+    .flipContainer:not(.compactContainer){
+
+        width:
+            calc(100vw - 32px);
+
+        flex:
+            0 0
+            calc(100vw - 32px);
+
+        max-width:
+            calc(100vw - 32px);
+
+        margin:
+            0 auto;
+
+        perspective:
+            1200px;
+    }
+
+
+    .flipContainer:not(.compactContainer)
+    .flipInner{
+
+        width:100%;
+
+        min-height:700px;
+
+        transform-style:
+            preserve-3d;
+
+        -webkit-transform-style:
+            preserve-3d;
+    }
+
+
+    /* ================================= */
+    /* COMPACT MEMBER CARDS */
+    /* ================================= */
+
+    .compactContainer{
+
+        width:280px;
+
+        flex:
+            0 0 280px;
+
+        max-width:280px;
+
+        margin:0;
+
+        perspective:
+            1200px;
+    }
+
+
+    .compactContainer .flipInner{
+
+        width:280px;
+
+        min-height:480px;
+
+        max-width:280px;
+
+        transform-style:
+            preserve-3d;
+
+        -webkit-transform-style:
+            preserve-3d;
+    }
+
+
+    .compactContainer
+    .flipInner>.card,
+
+    .compactContainer
+    .flipInner>.back{
+
+        width:280px;
+
+        height:480px;
+
+        min-height:480px;
+
+        backface-visibility:
+            hidden !important;
+
+        -webkit-backface-visibility:
+            hidden !important;
+
+        transform-style:
+            preserve-3d;
+
+        -webkit-transform-style:
+            preserve-3d;
+    }
+
+
+    /* ================================= */
+    /* COMPACT HEADER */
+    /* ================================= */
+
+    .compact .header{
+
+        padding:
+            .65rem;
+
+        gap:
+            .5rem;
+    }
+
+
+    .compact .rankArea{
+
+        gap:
+            .45rem;
+    }
+
+
+    .compact .rankImage{
+
+        width:34px;
+
+        height:34px;
+    }
+
+
+    .compact .rankTitle{
+
+        font-size:
+            .62rem;
+
+        line-height:
+            1.15;
+
+        max-width:
+            105px;
+
+        letter-spacing:
+            .06em;
+    }
+
+
+    .compact .armyId{
+
+        min-width:
+            48px;
+
+        padding:
+            .35rem
+            .45rem;
+
+        font-size:
+            .62rem;
+
+        letter-spacing:
+            .08em;
+
+        border-radius:
+            9px;
+    }
+
+
+    /* ================================= */
+    /* COMPACT AVATAR */
+    /* ================================= */
+
+    .compact .avatarWrapper{
+
+        padding:
+            .65rem
+            .65rem
+            .4rem;
+    }
+
+
+    .compact .avatar{
+
+        width:
+            165px;
+
+        height:
+            165px;
+
+        border-radius:
+            15px;
+
+        border-width:
+            2px;
+    }
+
+
+    /* ================================= */
+    /* COMPACT IDENTITY */
+    /* ================================= */
+
+    .compact .identity{
+
+        padding:
+            0
+            .5rem;
+    }
+
+
+    .compact .name{
+
+        font-size:
+            1.15rem;
+
+        line-height:
+            1.05;
+
+        letter-spacing:
+            .04em;
+    }
+
+
+    .compact .badge{
+
+        min-width:
+            95px;
+
+        min-height:
+            27px;
+
+        margin-top:
+            .5rem;
+
+        padding:
+            .2rem
+            .65rem;
+
+        border-radius:
+            8px;
+
+        border-width:
+            1px;
+    }
+
+
+    .compact .badgeTitle{
+
+        font-size:
+            .55rem;
+
+        letter-spacing:
+            .10em;
+    }
+
+
+    /* ================================= */
+    /* COMPACT FOOTER */
+    /* ================================= */
+
+    .compact .footer{
+
+        gap:
+            .65rem;
+
+        padding:
+            .7rem;
+    }
+
+
+    .compact .joined{
+
+        font-size:
+            .62rem;
+
+        letter-spacing:
+            .12em;
+
+        text-align:center;
+    }
+
+
+    .compact .actionButton{
+
+        width:
+            94%;
+
+        min-height:
+            34px;
+
+        padding:
+            .55rem
+            .4rem;
+
+        font-size:
+            .55rem;
+
+        line-height:
+            1.2;
+
+        letter-spacing:
+            .08em;
+
+        white-space:
+            normal;
+
+        overflow-wrap:
+            anywhere;
+    }
+
+
+    /* ================================= */
+    /* FLIP FACES */
+    /* ================================= */
+
+    .flipInner>.card,
+
+    .flipInner>.back{
+
+        backface-visibility:
+            hidden !important;
+
+        -webkit-backface-visibility:
+            hidden !important;
+
+        transform-style:
+            preserve-3d;
+
+        -webkit-transform-style:
+            preserve-3d;
+    }
+
+
+    /* ================================= */
+    /* FACE VISIBILITY */
+    /* ================================= */
+
+    .faceVisible{
+
+        opacity:1;
+
+        pointer-events:auto;
+    }
+
+
+    .faceHidden{
+
+        opacity:0;
+
+        pointer-events:none;
+    }
+
+
+    /* ================================= */
+    /* FOUNDER NAME */
+    /* ================================= */
+
+    .flipContainer:not(.compactContainer)
+    .name{
+
+        font-size:
+            clamp(
+                1.5rem,
+                7vw,
+                2.2rem
+            );
+
+        max-width:100%;
+    }
+
+
+    /* ================================= */
+    /* FOUNDER AVATAR */
+    /* ================================= */
+
+    .flipContainer:not(.compactContainer)
+    .avatar{
+
+        width:
+            min(240px,68vw);
+
+        height:
+            min(240px,68vw);
+    }
+
+
+    /* ================================= */
+    /* GENERAL HEADER */
+    /* ================================= */
+
+    .header{
+
+        padding:
+            1rem;
+    }
+
+
+    .rankTitle{
+
+        font-size:
+            .82rem;
+
+        max-width:
+            145px;
+    }
+
+
+    .armyId{
+
+        min-width:
+            60px;
+
+        padding:
+            .5rem
+            .65rem;
+
+        font-size:
+            .7rem;
+    }
+
+
+    /* ================================= */
+    /* GENERAL BUTTONS */
+    /* ================================= */
+
+    .actionButton{
+
+        max-width:100%;
+
+        white-space:
+            normal;
+
+        overflow-wrap:
+            anywhere;
+
+        word-break:
+            normal;
+    }
+
+}
+
+}

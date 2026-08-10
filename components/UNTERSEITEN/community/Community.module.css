@@ -9,3 +9,89 @@
     padding-top:6rem;
 
 }
+
+/* ================================= */
+/* MOBILE RESPONSIVE */
+/* ================================= */
+
+@media(max-width:700px){
+
+    .section{
+
+        width:100%;
+
+        max-width:100%;
+
+        overflow-x:clip;
+
+        box-sizing:border-box;
+
+    }
+
+
+    .container{
+
+        width:100%;
+
+        max-width:100%;
+
+        box-sizing:border-box;
+
+        padding-left:1rem;
+
+        padding-right:1rem;
+
+    }
+
+
+    /* --------------------------------- */
+    /* TEXT */
+    /* --------------------------------- */
+
+    .container h1,
+
+    .container h2,
+
+    .container h3,
+
+    .container p{
+
+        max-width:100%;
+
+        overflow-wrap:break-word;
+
+        word-wrap:break-word;
+
+    }
+
+
+    /* --------------------------------- */
+    /* LINKS / BUTTONS */
+    /* --------------------------------- */
+
+    .container a,
+
+    .container button{
+
+        max-width:100%;
+
+        box-sizing:border-box;
+
+        white-space:normal;
+
+        overflow-wrap:anywhere;
+
+    }
+
+
+    /* --------------------------------- */
+    /* IMAGES */
+    /* --------------------------------- */
+
+    .container img{
+
+        max-width:100%;
+
+    }
+
+}

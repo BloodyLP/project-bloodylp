@@ -1,4 +1,12 @@
+/* ================================= */
+/* LEFT */
+/* ================================= */
+
 .left {
+
+    width:100%;
+
+    min-width:0;
 
     display:flex;
 
@@ -7,467 +15,294 @@
 }
 
 
-
-
-
-
+/* ================================= */
+/* OVERLINE */
+/* ================================= */
 
 .overline {
 
-
     display:inline-block;
-
-
 
     color:var(--color-lime);
 
-
-
     text-transform:uppercase;
-
-
 
     font-size:1.1rem;
 
-
-
     font-weight:900;
-
-
 
     letter-spacing:.5em;
 
-
-
     margin-bottom:.4rem;
 
-
-
     text-shadow:
-
-
         0 0 12px rgba(163,230,53,.30);
-
-
 
 }
 
 
-
-
-
-
+/* ================================= */
+/* TITLE */
+/* ================================= */
 
 .title {
 
-
     margin:0;
 
-
+    max-width:100%;
 
     font-size:clamp(
-
         2.4rem,
-
         5vw,
-
         5.6rem
-
     );
-
-
 
     line-height:.96;
 
-
-
     font-weight:900;
-
-
 
     color:#ffffff;
 
-
-
     letter-spacing:-.04em;
 
-
+    overflow-wrap:break-word;
 
 }
 
 
-
-
-
-
+/* ================================= */
+/* TITLE HIGHLIGHT */
+/* ================================= */
 
 .title span {
 
-
     position:relative;
-
-
 
     display:inline-flex;
 
-
-
     align-items:flex-end;
-
-
 
     vertical-align:baseline;
 
-
-
     background:linear-gradient(
-
         180deg,
-
         #ECFFC0 0%,
-
         #C8FF63 35%,
-
         #A3E635 70%,
-
         #6FAF14 100%
-
     );
-
-
 
     background-clip:text;
 
     -webkit-background-clip:text;
 
-
-
     color:transparent;
 
     -webkit-text-fill-color:transparent;
 
-
-
     text-shadow:
-
-
         0 0 20px rgba(163,230,53,.15);
-
-
 
     overflow:hidden;
 
-
-
 }
-
-
-
-
-
 
 
 .title span::after {
 
-
     content:"";
-
-
 
     position:absolute;
 
-
-
     top:-25%;
-
-
 
     left:-160%;
 
-
-
     width:80%;
-
-
 
     height:150%;
 
-
-
     background:linear-gradient(
-
         110deg,
-
         transparent 0%,
-
         rgba(255,255,255,.0) 35%,
-
         rgba(255,255,255,.95) 50%,
-
         rgba(255,255,255,.0) 65%,
-
         transparent 100%
-
     );
-
-
 
     transform:skewX(-22deg);
 
-
-
     mix-blend-mode:screen;
-
-
 
     animation:shine 9s ease-in-out infinite;
 
-
-
     pointer-events:none;
-
-
 
 }
 
 
-
-
-
-
+/* ================================= */
+/* BADGE */
+/* ================================= */
 
 .badge {
 
-
     display:inline-flex;
-
-
 
     align-items:center;
 
-
-
     width:fit-content;
 
-
+    max-width:100%;
 
     margin-top:1.4rem;
 
-
-
     margin-bottom:1.4rem;
 
-
-
     transition:
-
-
         transform .35s ease,
-
-
         box-shadow .35s ease;
 
-
-
 }
-
-
-
-
-
 
 
 .badge:hover {
 
-
     transform:translateY(-3px);
 
-
-
     box-shadow:
-
-
         0 0 30px rgba(163,230,53,.18);
-
-
 
 }
 
 
-
-
-
-
+/* ================================= */
+/* DESCRIPTION */
+/* ================================= */
 
 .description {
 
+    width:100%;
 
     max-width:700px;
 
-
-
     margin-top:1.5rem;
-
-
 
     color:var(--color-text-secondary);
 
-
-
     font-size:1.15rem;
-
-
 
     line-height:1.95;
 
-
-
 }
-
-
-
-
-
 
 
 .description span {
 
-
     background:linear-gradient(
-
         180deg,
-
         #E6FFB3 0%,
-
         #C8FF63 35%,
-
         #A3E635 70%,
-
         #7DBF1A 100%
-
     );
-
-
 
     background-clip:text;
 
-
-
     -webkit-background-clip:text;
-
-
 
     color:transparent;
 
-
-
     -webkit-text-fill-color:transparent;
 
-
-
     font-weight:700;
-
-
 
 }
 
 
-
-
-
-
+/* ================================= */
+/* SHINE */
+/* ================================= */
 
 @keyframes shine {
 
-
     0% {
-
 
         left:-160%;
 
         opacity:0;
 
-
     }
-
 
 
     8% {
 
-
         opacity:1;
-
 
     }
 
 
-
     18% {
-
 
         left:160%;
 
         opacity:.95;
 
-
     }
-
 
 
     22% {
 
-
         opacity:0;
-
 
     }
 
 
-
     100% {
-
 
         left:160%;
 
         opacity:0;
 
-
     }
-
-
 
 }
 
 
+/* ================================= */
+/* TABLET */
+/* ================================= */
+
+@media(max-width:1100px){
+
+    .left {
+
+        width:100%;
+
+        align-items:flex-start;
+
+    }
+
+}
 
 
-
-
+/* ================================= */
+/* MOBILE */
+/* ================================= */
 
 @media(max-width:600px){
 
-
-
     .overline {
-
 
         font-size:.8rem;
 
-
-
         letter-spacing:.35em;
-
-
 
     }
 
 
-
-
-
-
     .title {
-
 
         font-size:clamp(
 
@@ -479,32 +314,92 @@
 
         );
 
-
-
     }
-
-
-
-
 
 
     .description {
 
-
         margin-top:1rem;
-
-
 
         font-size:1rem;
 
-
-
         line-height:1.7;
-
-
 
     }
 
 
+    /* --------------------------------- */
+    /* SHINE MOBILE */
+    /* --------------------------------- */
+
+    .title span {
+
+        overflow:hidden;
+
+        isolation:isolate;
+
+    }
+
+
+    .title span::after {
+
+        left:-80%;
+
+        width:45%;
+
+        height:130%;
+
+        animation:
+
+            shineMobile
+
+            9s
+
+            ease-in-out
+
+            infinite;
+
+    }
+
+
+    @keyframes shineMobile {
+
+        0% {
+
+            left:-80%;
+
+            opacity:0;
+
+        }
+
+        8% {
+
+            opacity:1;
+
+        }
+
+        18% {
+
+            left:140%;
+
+            opacity:.9;
+
+        }
+
+        22% {
+
+            opacity:0;
+
+        }
+
+        100% {
+
+            left:140%;
+
+            opacity:0;
+
+        }
+
+    }
 
 }

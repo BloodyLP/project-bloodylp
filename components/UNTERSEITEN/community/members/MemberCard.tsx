@@ -193,9 +193,17 @@ export default function MemberCard({
 
         compact
 
-            ? `${styles.card} ${styles.compact}`
+            ? `${styles.card} ${styles.compact} ${
+                flipped
+                    ? styles.faceHidden
+                    : styles.faceVisible
+            }`
 
-            : `${styles.card} ${styles.founder}`
+            : `${styles.card} ${styles.founder} ${
+                flipped
+                    ? styles.faceHidden
+                    : styles.faceVisible
+            }`
 
     }
 
@@ -208,7 +216,6 @@ export default function MemberCard({
         )
 
     }
-
 >
 
                                         <header className={styles.header}>
@@ -375,19 +382,19 @@ export default function MemberCard({
 
                     <MemberCardBack
 
-                        name={name}
+        name={name}
 
-                        armyId={armyId}
+        armyId={armyId}
 
-                        organization={organization}
+        organization={organization}
 
-                        stats={stats}
+        stats={stats}
 
-                        playerType={playerType}
+        playerType={playerType}
 
-                        profile={profile}
+        profile={profile}
 
-                        onBack={() => setFlipped(false)}
+        onBack={() => setFlipped(false)}
 
                     />
 
