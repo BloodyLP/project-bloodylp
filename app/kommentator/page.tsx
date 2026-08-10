@@ -1,6 +1,8 @@
 import CommentatorHero from "@/components/commentator/CommentatorHero";
 import CommentatorStations from "@/components/commentator/CommentatorStations";
 import CommentatorContact from "@/components/commentator/CommentatorContact";
+import CommentatorPhilosophy from "@/components/commentator/CommentatorPhilosophy";
+import CommentatorSkills from "@/components/commentator/CommentatorSkills";
 
 export default function CommentatorPage() {
 
@@ -14,6 +16,17 @@ export default function CommentatorPage() {
 
             <CommentatorHero />
 
+             {/* ================================= */}
+            {/* PHILOSOPHIE */}
+            {/* ================================= */}
+
+            <CommentatorPhilosophy />
+
+{/* ================================= */}
+            {/* SKILLS */}
+            {/* ================================= */}
+
+            <CommentatorSkills />
 
             {/* ================================= */}
             {/* STATIONEN */}
