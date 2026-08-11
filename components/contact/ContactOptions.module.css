@@ -1,0 +1,888 @@
+/* =========================================
+   SECTION
+========================================= */
+
+.section {
+
+    position: relative;
+
+    width: 100%;
+
+    padding:
+        7rem
+        1.5rem
+        8rem;
+
+    overflow: hidden;
+
+    background:
+        #111214;
+
+}
+
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.backgroundGlow {
+
+    position: absolute;
+
+    left: 50%;
+    top: 45%;
+
+    width: 850px;
+    height: 600px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(163,230,53,.055),
+            transparent 70%
+        );
+
+    filter:
+        blur(75px);
+
+    pointer-events:
+        none;
+
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    max-width:
+        1250px;
+
+    margin:
+        0 auto;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+
+    max-width:
+        800px;
+
+    margin:
+        0 auto
+        4rem;
+
+    text-align:
+        center;
+
+}
+
+
+/* =========================================
+   OVERLINE
+========================================= */
+
+.overline {
+
+    display:
+        block;
+
+    margin-bottom:
+        .8rem;
+
+    color:
+        #A3E635;
+
+    font-size:
+        .7rem;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        .34em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.title {
+
+    margin:
+        0;
+
+    color:
+        #FFFFFF;
+
+    font-size:
+        clamp(
+            2.5rem,
+            5vw,
+            4.5rem
+        );
+
+    line-height:
+        .95;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        -.045em;
+
+}
+
+.title span {
+
+    color:
+        #A3E635;
+
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+
+    max-width:
+        700px;
+
+    margin:
+        1.5rem auto
+        0;
+
+    color:
+        rgba(255,255,255,.62);
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap:
+        1.5rem;
+
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    min-height:
+        340px;
+
+    padding:
+        2rem;
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    border-radius:
+        26px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.018)
+        );
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.25);
+
+    overflow:
+        hidden;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        background .3s ease;
+
+}
+
+.card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        100%;
+
+    height:
+        2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(163,230,53,.7),
+            transparent
+        );
+
+    opacity:
+        .55;
+
+}
+
+.card::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        300px;
+
+    height:
+        300px;
+
+    right:
+        -190px;
+
+    bottom:
+        -210px;
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(163,230,53,.065),
+            transparent 70%
+        );
+
+    pointer-events:
+        none;
+
+}
+
+.card:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(163,230,53,.25);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(163,230,53,.055),
+            rgba(255,255,255,.018)
+        );
+
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.cardTop {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    justify-content:
+        space-between;
+
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.icon {
+
+    width:
+        56px;
+
+    height:
+        56px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        17px;
+
+    color:
+        #111111;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ECFFC0,
+            #A3E635
+        );
+
+    box-shadow:
+        0 0 28px
+        rgba(163,230,53,.12);
+
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.number {
+
+    color:
+        rgba(163,230,53,.22);
+
+    font-size:
+        2.8rem;
+
+    line-height:
+        1;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        -.05em;
+
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.cardContent {
+
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    flex:
+        1;
+
+    margin-top:
+        2.5rem;
+
+}
+
+.cardContent h3 {
+
+    margin:
+        0;
+
+    color:
+        #FFFFFF;
+
+    font-size:
+        clamp(
+            1.55rem,
+            3vw,
+            2.25rem
+        );
+
+    line-height:
+        .98;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        -.035em;
+
+}
+
+.cardContent h3 span {
+
+    color:
+        #A3E635;
+
+}
+
+.cardContent p {
+
+    max-width:
+        560px;
+
+    margin:
+        1.2rem
+        0
+        0;
+
+    color:
+        rgba(255,255,255,.58);
+
+    font-size:
+        .92rem;
+
+    line-height:
+        1.75;
+
+}
+
+
+/* =========================================
+   CARD FOOTER
+========================================= */
+
+.cardFooter {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        1rem;
+
+    margin-top:
+        2rem;
+
+    padding-top:
+        1.2rem;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.07);
+
+}
+
+.cardFooter > span {
+
+    color:
+        rgba(255,255,255,.38);
+
+    font-size:
+        .6rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .17em;
+
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.arrow {
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid
+        rgba(163,230,53,.25);
+
+    border-radius:
+        50%;
+
+    color:
+        #A3E635;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+
+}
+
+.card:hover .arrow {
+
+    transform:
+        translate(
+            2px,
+            -2px
+        );
+
+    background:
+        rgba(163,230,53,.08);
+
+}
+
+
+/* =========================================
+   SIGNATURE
+========================================= */
+
+.signature {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        1.5rem;
+
+    margin-top:
+        3.5rem;
+
+}
+
+.signature span {
+
+    width:
+        90px;
+
+    height:
+        1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(163,230,53,.35)
+        );
+
+}
+
+.signature span:last-child {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(163,230,53,.35),
+            transparent
+        );
+
+}
+
+.signature p {
+
+    margin:
+        0;
+
+    color:
+        rgba(255,255,255,.42);
+
+    font-size:
+        .68rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .14em;
+
+    text-align:
+        center;
+
+    text-transform:
+        uppercase;
+
+}
+
+.signature strong {
+
+    margin-left:
+        .4rem;
+
+    color:
+        #A3E635;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .section {
+
+        padding:
+            6rem
+            1.25rem
+            7rem;
+
+    }
+
+    .grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .section {
+
+        padding:
+            5rem
+            1rem
+            6rem;
+
+    }
+
+    .header {
+
+        margin-bottom:
+            3rem;
+
+    }
+
+    .overline {
+
+        font-size:
+            .6rem;
+
+        letter-spacing:
+            .25em;
+
+    }
+
+    .title {
+
+        font-size:
+            clamp(
+                2.2rem,
+                11vw,
+                3.4rem
+            );
+
+    }
+
+    .intro {
+
+        font-size:
+            .9rem;
+
+        line-height:
+            1.7;
+
+    }
+
+    .card {
+
+        min-height:
+            320px;
+
+        padding:
+            1.5rem;
+
+        border-radius:
+            22px;
+
+    }
+
+    .icon {
+
+        width:
+            50px;
+
+        height:
+            50px;
+
+        border-radius:
+            15px;
+
+    }
+
+    .number {
+
+        font-size:
+            2.3rem;
+
+    }
+
+    .cardContent {
+
+        margin-top:
+            2rem;
+
+    }
+
+    .cardContent h3 {
+
+        font-size:
+            1.65rem;
+
+    }
+
+    .cardContent p {
+
+        font-size:
+            .86rem;
+
+        line-height:
+            1.7;
+
+    }
+
+    .cardFooter {
+
+        margin-top:
+            1.5rem;
+
+    }
+
+    .cardFooter > span {
+
+        font-size:
+            .52rem;
+
+        letter-spacing:
+            .13em;
+
+    }
+
+    .signature {
+
+        gap:
+            .75rem;
+
+        margin-top:
+            2.5rem;
+
+    }
+
+    .signature span {
+
+        width:
+            35px;
+
+    }
+
+    .signature p {
+
+        font-size:
+            .58rem;
+
+        line-height:
+            1.6;
+
+    }
+
+    .signature strong {
+
+        display:
+            block;
+
+        margin:
+            .15rem
+            0
+            0;
+
+    }
+
+}
