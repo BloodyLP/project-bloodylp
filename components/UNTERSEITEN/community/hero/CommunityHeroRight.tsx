@@ -187,6 +187,26 @@ const featuredMembers:Record<number, FeaturedMember> = {
 
 },
 
+13:{
+
+    image:"/members/condor/avatar.png",
+
+    name:"Condor",
+
+    organization:"bloodyArmy",
+
+},
+
+14:{
+
+    image:"/members/annihilatorlp/avatar.png",
+
+    name:"AnnihilatorLP97",
+
+    organization:"youngArmy",
+
+},
+
 };
 
 

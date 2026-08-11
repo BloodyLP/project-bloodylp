@@ -88,6 +88,18 @@ import {
 
 } from "./members/sackzefix";
 
+import {
+
+    condor
+
+} from "./members/condor";
+
+import {
+
+    annihilatorlp
+
+} from "./members/annihilatorlp";
+
 export const MEMBERS: ServiceRecordMember[] = [
 
     bloodylp,
@@ -113,5 +125,9 @@ export const MEMBERS: ServiceRecordMember[] = [
     real121x,
 
     sackzefix,
+
+    condor,
+
+    annihilatorlp,
 
 ];
