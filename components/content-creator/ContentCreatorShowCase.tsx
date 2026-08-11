@@ -9,7 +9,7 @@ import {
     Crosshair,
 } from "lucide-react";
 
-import styles from "./ContentCreatorShowcase.module.css";
+import styles from "./ContentCreatorShowCase.module.css";
 
 const projects = [
     {
