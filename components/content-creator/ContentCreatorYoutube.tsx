@@ -7,7 +7,7 @@ import {
     Play,
 } from "lucide-react";
 
-import styles from "./ContentCreatorYouTube.module.css";
+import styles from "./ContentCreatorYoutube.module.css";
 
 const channels = [
     {
