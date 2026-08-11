@@ -1,0 +1,1126 @@
+/* =========================================================
+   CONTENT CREATOR WORLD
+   PREMIUM GAMING CATEGORIES
+   ========================================================= */
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.section {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    padding:
+        8rem
+        1.5rem
+        9rem;
+
+    overflow:
+        hidden;
+
+    background:
+        #0d0e0f;
+
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+.backgroundGlow {
+
+    position:
+        absolute;
+
+    width:
+        900px;
+
+    height:
+        600px;
+
+    left:
+        50%;
+
+    top:
+        20%;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:
+        50%;
+
+    background:
+
+        radial-gradient(
+            ellipse,
+            rgba(163,230,53,.045),
+            transparent 70%
+        );
+
+    filter:
+        blur(80px);
+
+    pointer-events:
+        none;
+
+}
+
+
+/* =========================================================
+   GRID BACKGROUND
+   ========================================================= */
+
+.gridBackground {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    opacity:
+        .018;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.5) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.5) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        80px 80px;
+
+    mask-image:
+
+        linear-gradient(
+            180deg,
+            transparent,
+            black 20%,
+            black 80%,
+            transparent
+        );
+
+    -webkit-mask-image:
+
+        linear-gradient(
+            180deg,
+            transparent,
+            black 20%,
+            black 80%,
+            transparent
+        );
+
+    pointer-events:
+        none;
+
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        100%;
+
+    max-width:
+        1200px;
+
+    margin:
+        0 auto;
+
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+
+    max-width:
+        800px;
+
+    margin:
+        0 auto
+        5.5rem;
+
+    text-align:
+        center;
+
+}
+
+
+/* =========================================================
+   OVERLINE
+   ========================================================= */
+
+.overline {
+
+    display:
+        block;
+
+    margin-bottom:
+        1.1rem;
+
+    color:
+        #A3E635;
+
+    font-size:
+        .72rem;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        .38em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.title {
+
+    margin:
+        0;
+
+    color:
+        #FFFFFF;
+
+    font-size:
+
+        clamp(
+            2.7rem,
+            5vw,
+            4.8rem
+        );
+
+    line-height:
+        .95;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        -.05em;
+
+}
+
+
+/* =========================================================
+   TITLE HIGHLIGHT
+   ========================================================= */
+
+.title span {
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #ECFFC0 0%,
+            #C8FF63 40%,
+            #A3E635 100%
+        );
+
+    background-clip:
+        text;
+
+    -webkit-background-clip:
+        text;
+
+    color:
+        transparent;
+
+    -webkit-text-fill-color:
+        transparent;
+
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.intro {
+
+    max-width:
+        720px;
+
+    margin:
+        1.7rem auto
+        0;
+
+    color:
+        rgba(255,255,255,.62);
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.85;
+
+}
+
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0,1fr)
+        );
+
+    gap:
+        1.25rem;
+
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.card {
+
+    position:
+        relative;
+
+    min-height:
+        330px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    padding:
+        2rem;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        26px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.018)
+        );
+
+    backdrop-filter:
+        blur(18px);
+
+    box-shadow:
+
+        0 25px 65px
+        rgba(0,0,0,.28);
+
+    transition:
+
+        transform .4s cubic-bezier(.22,1,.36,1),
+        border-color .4s ease,
+        box-shadow .4s ease;
+
+}
+
+
+/* =========================================================
+   TOP ACCENT
+   ========================================================= */
+
+.card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        100%;
+
+    height:
+        3px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            #A3E635,
+            transparent
+        );
+
+    opacity:
+        .55;
+
+}
+
+
+/* =========================================================
+   CARD LIGHT
+   ========================================================= */
+
+.card::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        280px;
+
+    height:
+        280px;
+
+    right:
+        -180px;
+
+    bottom:
+        -180px;
+
+    border-radius:
+        50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(163,230,53,.075),
+            transparent 70%
+        );
+
+    pointer-events:
+        none;
+
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.card:hover {
+
+    transform:
+        translateY(-9px);
+
+    border-color:
+        rgba(163,230,53,.30);
+
+    box-shadow:
+
+        0 38px 85px
+        rgba(0,0,0,.42),
+
+        0 0 40px
+        rgba(163,230,53,.055);
+
+}
+
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.number {
+
+    position:
+        absolute;
+
+    top:
+        1.4rem;
+
+    right:
+        1.6rem;
+
+    color:
+        rgba(163,230,53,.13);
+
+    font-size:
+        4.5rem;
+
+    line-height:
+        1;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        -.08em;
+
+    transition:
+        color .35s ease,
+        transform .35s ease;
+
+}
+
+
+/* =========================================================
+   NUMBER HOVER
+   ========================================================= */
+
+.card:hover .number {
+
+    color:
+        rgba(163,230,53,.20);
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.icon {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        56px;
+
+    height:
+        56px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin-bottom:
+        2rem;
+
+    border-radius:
+        16px;
+
+    color:
+        #A3E635;
+
+    background:
+        rgba(163,230,53,.07);
+
+    border:
+        1px solid
+        rgba(163,230,53,.17);
+
+    box-shadow:
+
+        0 0 25px
+        rgba(163,230,53,.055);
+
+    transition:
+
+        transform .35s ease,
+        background .35s ease,
+        box-shadow .35s ease;
+
+}
+
+
+/* =========================================================
+   ICON HOVER
+   ========================================================= */
+
+.card:hover .icon {
+
+    transform:
+        translateY(-4px);
+
+    background:
+        rgba(163,230,53,.12);
+
+    box-shadow:
+
+        0 0 35px
+        rgba(163,230,53,.10);
+
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.cardContent {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    flex:
+        1;
+
+}
+
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+.cardContent h3 {
+
+    margin:
+        0;
+
+    color:
+        #FFFFFF;
+
+    font-size:
+
+        clamp(
+            1.7rem,
+            3vw,
+            2.4rem
+        );
+
+    line-height:
+        .98;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        -.04em;
+
+}
+
+
+/* =========================================================
+   TITLE HIGHLIGHT
+   ========================================================= */
+
+.cardContent h3 span {
+
+    color:
+        #A3E635;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.cardContent p {
+
+    max-width:
+        470px;
+
+    margin:
+        1rem
+        0
+        0;
+
+    color:
+        rgba(255,255,255,.55);
+
+    font-size:
+        .90rem;
+
+    line-height:
+        1.75;
+
+}
+
+
+/* =========================================================
+   TAGS
+   ========================================================= */
+
+.tags {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        .45rem;
+
+    margin-top:
+        1.5rem;
+
+}
+
+
+/* =========================================================
+   TAG
+   ========================================================= */
+
+.tags span {
+
+    padding:
+        .38rem
+        .62rem;
+
+    border-radius:
+        999px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.075);
+
+    background:
+        rgba(255,255,255,.035);
+
+    color:
+        rgba(255,255,255,.48);
+
+    font-size:
+        .52rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .12em;
+
+    text-transform:
+        uppercase;
+
+    transition:
+
+        border-color .3s ease,
+        color .3s ease,
+        background .3s ease;
+
+}
+
+
+/* =========================================================
+   TAG HOVER
+   ========================================================= */
+
+.card:hover .tags span {
+
+    border-color:
+        rgba(163,230,53,.14);
+
+    color:
+        rgba(255,255,255,.62);
+
+    background:
+        rgba(163,230,53,.035);
+
+}
+
+
+/* =========================================================
+   SIGNATURE
+   ========================================================= */
+
+.signature {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        1.4rem;
+
+    margin-top:
+        4.8rem;
+
+}
+
+
+/* =========================================================
+   SIGNATURE LINES
+   ========================================================= */
+
+.signature span {
+
+    width:
+        85px;
+
+    height:
+        1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(163,230,53,.35)
+        );
+
+}
+
+
+.signature span:last-child {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(163,230,53,.35),
+            transparent
+        );
+
+}
+
+
+/* =========================================================
+   SIGNATURE TEXT
+   ========================================================= */
+
+.signature p {
+
+    margin:
+        0;
+
+    color:
+        rgba(255,255,255,.42);
+
+    font-size:
+        .76rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .07em;
+
+    text-align:
+        center;
+
+}
+
+
+/* =========================================================
+   SIGNATURE HIGHLIGHT
+   ========================================================= */
+
+.signature strong {
+
+    margin-left:
+        .35rem;
+
+    color:
+        #A3E635;
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .section {
+
+        padding:
+            6rem
+            1.25rem
+            7rem;
+
+    }
+
+
+    .header {
+
+        margin-bottom:
+            4rem;
+
+    }
+
+
+    .grid {
+
+        gap:
+            1rem;
+
+    }
+
+
+    .card {
+
+        min-height:
+            300px;
+
+        padding:
+            1.5rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .section {
+
+        padding:
+            5rem
+            1rem
+            6rem;
+
+    }
+
+
+    .header {
+
+        margin-bottom:
+            3rem;
+
+    }
+
+
+    .overline {
+
+        font-size:
+            .62rem;
+
+        letter-spacing:
+            .27em;
+
+    }
+
+
+    .title {
+
+        font-size:
+
+            clamp(
+                2.25rem,
+                11vw,
+                3.4rem
+            );
+
+    }
+
+
+    .intro {
+
+        font-size:
+            .88rem;
+
+        line-height:
+            1.72;
+
+    }
+
+
+    .grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            .9rem;
+
+    }
+
+
+    .card {
+
+        min-height:
+            280px;
+
+        padding:
+            1.3rem;
+
+        border-radius:
+            21px;
+
+    }
+
+
+    .number {
+
+        top:
+            1.2rem;
+
+        right:
+            1.2rem;
+
+        font-size:
+            3.5rem;
+
+    }
+
+
+    .icon {
+
+        width:
+            48px;
+
+        height:
+            48px;
+
+        margin-bottom:
+            1.5rem;
+
+        border-radius:
+            14px;
+
+    }
+
+
+    .cardContent h3 {
+
+        font-size:
+            1.55rem;
+
+    }
+
+
+    .cardContent p {
+
+        margin-top:
+            .75rem;
+
+        font-size:
+            .82rem;
+
+        line-height:
+            1.68;
+
+    }
+
+
+    .tags {
+
+        margin-top:
+            1.2rem;
+
+    }
+
+
+    .tags span {
+
+        padding:
+            .32rem
+            .5rem;
+
+        font-size:
+            .46rem;
+
+    }
+
+
+    .signature {
+
+        gap:
+            .7rem;
+
+        margin-top:
+            3rem;
+
+    }
+
+
+    .signature span {
+
+        width:
+            32px;
+
+    }
+
+
+    .signature p {
+
+        font-size:
+            .64rem;
+
+        line-height:
+            1.5;
+
+    }
+
+
+    .signature strong {
+
+        display:
+            block;
+
+        margin:
+            .15rem
+            0
+            0;
+
+    }
+
+}

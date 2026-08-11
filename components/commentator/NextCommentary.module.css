@@ -1,0 +1,363 @@
+/* =========================================
+   SECTION
+========================================= */
+
+.section {
+    position: relative;
+
+    width: 100%;
+
+    padding:
+        7rem
+        1.5rem
+        8rem;
+
+    overflow: hidden;
+
+    background:
+        #0d0e0f;
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.background {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(163,230,53,.055),
+            transparent 48%
+        );
+}
+
+
+/* =========================================
+   GLOW
+========================================= */
+
+.glow {
+    position: absolute;
+
+    left: 50%;
+    top: 35%;
+
+    width: 800px;
+    height: 500px;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(163,230,53,.07),
+            transparent 70%
+        );
+
+    filter: blur(70px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    max-width: 800px;
+
+    margin:
+        0 auto
+        4rem;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   OVERLINE
+========================================= */
+
+.overline {
+    display: block;
+
+    margin-bottom: .8rem;
+
+    color: #A3E635;
+
+    font-size: .7rem;
+
+    font-weight: 950;
+
+    letter-spacing: .35em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.title {
+    margin: 0;
+
+    color: #FFFFFF;
+
+    font-size:
+        clamp(
+            2.5rem,
+            5vw,
+            4.5rem
+        );
+
+    line-height: .95;
+
+    font-weight: 950;
+
+    letter-spacing: -.045em;
+}
+
+
+.title span {
+    color: #A3E635;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+    max-width: 700px;
+
+    margin:
+        1.5rem auto
+        0;
+
+    color:
+        rgba(255,255,255,.62);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(0, .9fr);
+
+    gap: 1.5rem;
+
+    align-items: stretch;
+}
+
+
+/* =========================================
+   PANEL WRAPPER
+========================================= */
+
+.panel {
+    position: relative;
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   FOOTER / SIGNATURE
+========================================= */
+
+.signature {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1.5rem;
+
+    margin-top: 3.5rem;
+}
+
+
+.signature span {
+    width: 90px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(163,230,53,.35)
+        );
+}
+
+
+.signature span:last-child {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(163,230,53,.35),
+            transparent
+        );
+}
+
+
+.signature p {
+    margin: 0;
+
+    color:
+        rgba(255,255,255,.45);
+
+    font-size: .7rem;
+
+    font-weight: 800;
+
+    letter-spacing: .14em;
+
+    text-align: center;
+
+    text-transform: uppercase;
+}
+
+
+.signature strong {
+    margin-left: .4rem;
+
+    color: #A3E635;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .section {
+        padding:
+            6rem
+            1.25rem
+            7rem;
+    }
+
+
+    .grid {
+        grid-template-columns: 1fr;
+
+        gap: 1.25rem;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .section {
+        padding:
+            5rem
+            1rem
+            6rem;
+    }
+
+
+    .header {
+        margin-bottom: 3rem;
+    }
+
+
+    .overline {
+        font-size: .6rem;
+
+        letter-spacing: .25em;
+    }
+
+
+    .title {
+        font-size:
+            clamp(
+                2.2rem,
+                11vw,
+                3.4rem
+            );
+    }
+
+
+    .intro {
+        font-size: .9rem;
+
+        line-height: 1.7;
+    }
+
+
+    .signature {
+        gap: .75rem;
+
+        margin-top: 2.5rem;
+    }
+
+
+    .signature span {
+        width: 35px;
+    }
+
+
+    .signature p {
+        font-size: .6rem;
+
+        line-height: 1.6;
+    }
+
+
+    .signature strong {
+        display: block;
+
+        margin:
+            .15rem
+            0
+            0;
+    }
+
+}

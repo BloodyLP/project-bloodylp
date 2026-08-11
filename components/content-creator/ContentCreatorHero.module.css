@@ -1,0 +1,1129 @@
+/* =========================================================
+   CONTENT CREATOR HERO
+   PREMIUM GAMING EDITION
+   ========================================================= */
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    min-height:
+        760px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    overflow:
+        hidden;
+
+    background:
+        #090a0b;
+
+}
+
+
+/* =========================================================
+   IMAGE AREA
+   ========================================================= */
+
+.imageArea {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    z-index:
+        0;
+
+    pointer-events:
+        none;
+
+}
+
+
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
+
+.heroImage {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background-image:
+        url("/content-creator/images/content-creator-hero.png");
+
+    background-size:
+        cover;
+
+    background-position:
+        center;
+
+    background-repeat:
+        no-repeat;
+
+    filter:
+        brightness(.40)
+        saturate(.82);
+
+    transform:
+        scale(1.015);
+
+    will-change:
+        transform;
+
+}
+
+
+/* =========================================================
+   LEFT FADE
+   ========================================================= */
+
+.imageLeftFade {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #090a0b 0%,
+            rgba(9,10,11,.97) 18%,
+            rgba(9,10,11,.82) 36%,
+            rgba(9,10,11,.35) 62%,
+            transparent 100%
+        );
+
+}
+
+
+/* =========================================================
+   BOTTOM FADE
+   ========================================================= */
+
+.imageBottomFade {
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    bottom:
+        0;
+
+    height:
+        45%;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            transparent 0%,
+            rgba(9,10,11,.35) 35%,
+            #090a0b 100%
+        );
+
+}
+
+
+/* =========================================================
+   TOP FADE
+   ========================================================= */
+
+.imageTopFade {
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    top:
+        0;
+
+    height:
+        22%;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(9,10,11,.65),
+            transparent
+        );
+
+}
+
+
+/* =========================================================
+   GLOBAL VIGNETTE
+   ========================================================= */
+
+.vignette {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    z-index:
+        1;
+
+    pointer-events:
+        none;
+
+    background:
+
+        radial-gradient(
+            ellipse at 72% 45%,
+            transparent 15%,
+            rgba(0,0,0,.12) 48%,
+            rgba(0,0,0,.58) 100%
+        );
+
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.container {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    width:
+        100%;
+
+    max-width:
+        1250px;
+
+    margin:
+        0 auto;
+
+    padding:
+        10rem
+        2rem
+        4rem;
+
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.content {
+
+    position:
+        relative;
+
+    max-width:
+        690px;
+
+    z-index:
+        1;
+
+}
+
+
+/* =========================================================
+   KICKER
+   ========================================================= */
+
+.kicker {
+
+    display:
+        block;
+
+    margin-bottom:
+        1.25rem;
+
+    color:
+        #A3E635;
+
+    font-size:
+        .72rem;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        .35em;
+
+    line-height:
+        1.5;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.title {
+
+    margin:
+        0;
+
+    color:
+        #FFFFFF;
+
+    font-size:
+
+        clamp(
+            3.4rem,
+            6vw,
+            6.3rem
+        );
+
+    line-height:
+        .90;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        -.06em;
+
+}
+
+
+/* =========================================================
+   TITLE HIGHLIGHT
+   ========================================================= */
+
+.title span {
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #ECFFC0 0%,
+            #C8FF63 38%,
+            #A3E635 100%
+        );
+
+    background-clip:
+        text;
+
+    -webkit-background-clip:
+        text;
+
+    color:
+        transparent;
+
+    -webkit-text-fill-color:
+        transparent;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.description {
+
+    max-width:
+        620px;
+
+    margin:
+        1.65rem
+        0
+        0;
+
+    color:
+        rgba(255,255,255,.68);
+
+    font-size:
+        1rem;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   META
+   ========================================================= */
+
+.meta {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        1.4rem;
+
+    margin-top:
+        2rem;
+
+}
+
+
+/* =========================================================
+   META ITEM
+   ========================================================= */
+
+.metaItem {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        .65rem;
+
+}
+
+
+/* =========================================================
+   META VALUE
+   ========================================================= */
+
+.metaItem strong {
+
+    color:
+        #FFFFFF;
+
+    font-size:
+        1.25rem;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        -.03em;
+
+}
+
+
+/* =========================================================
+   META LABEL
+   ========================================================= */
+
+.metaItem span {
+
+    color:
+        rgba(255,255,255,.38);
+
+    font-size:
+        .50rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .13em;
+
+    line-height:
+        1.4;
+
+}
+
+
+/* =========================================================
+   META DIVIDER
+   ========================================================= */
+
+.metaDivider {
+
+    width:
+        1px;
+
+    height:
+        35px;
+
+    background:
+        rgba(255,255,255,.12);
+
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.actions {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        .8rem;
+
+    margin-top:
+        2.25rem;
+
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   ========================================================= */
+
+.primaryButton {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        .65rem;
+
+    min-height:
+        52px;
+
+    padding:
+        0
+        1.45rem;
+
+    border-radius:
+        999px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #ECFFC0,
+            #A3E635
+        );
+
+    color:
+        #111111;
+
+    font-size:
+        .70rem;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        .15em;
+
+    text-decoration:
+        none;
+
+    text-transform:
+        uppercase;
+
+    box-shadow:
+        0 12px 35px
+        rgba(163,230,53,.14);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        filter .25s ease;
+
+}
+
+
+.primaryButton:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 18px 45px
+        rgba(163,230,53,.28);
+
+    filter:
+        brightness(1.05);
+
+}
+
+
+.primaryButton span {
+
+    font-size:
+        1rem;
+
+    transition:
+        transform .25s ease;
+
+}
+
+
+.primaryButton:hover span {
+
+    transform:
+        translateX(3px);
+
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+   ========================================================= */
+
+.secondaryButton {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        .55rem;
+
+    min-height:
+        52px;
+
+    padding:
+        0
+        1.35rem;
+
+    border-radius:
+        999px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.18);
+
+    background:
+        rgba(255,255,255,.035);
+
+    color:
+        #FFFFFF;
+
+    font-size:
+        .70rem;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        .14em;
+
+    text-decoration:
+        none;
+
+    text-transform:
+        uppercase;
+
+    backdrop-filter:
+        blur(10px);
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        background .25s ease,
+        color .25s ease;
+
+}
+
+
+.secondaryButton:hover {
+
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(163,230,53,.45);
+
+    background:
+        rgba(163,230,53,.07);
+
+    color:
+        #A3E635;
+
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+   ========================================================= */
+
+.scrollIndicator {
+
+    position:
+        absolute;
+
+    z-index:
+        4;
+
+    left:
+        50%;
+
+    bottom:
+        1.8rem;
+
+    transform:
+        translateX(-50%);
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    gap:
+        .5rem;
+
+}
+
+
+/* =========================================================
+   SCROLL LINE
+   ========================================================= */
+
+.scrollIndicator span {
+
+    width:
+        1px;
+
+    height:
+        34px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #A3E635,
+            transparent
+        );
+
+    animation:
+        scrollPulse 2s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   SCROLL TEXT
+   ========================================================= */
+
+.scrollIndicator p {
+
+    margin:
+        0;
+
+    color:
+        rgba(255,255,255,.35);
+
+    font-size:
+        .48rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .25em;
+
+}
+
+
+/* =========================================================
+   SCROLL ANIMATION
+   ========================================================= */
+
+@keyframes scrollPulse {
+
+    0%,
+    100% {
+
+        opacity:
+            .35;
+
+        transform:
+            scaleY(.7);
+
+        transform-origin:
+            top;
+
+    }
+
+    50% {
+
+        opacity:
+            1;
+
+        transform:
+            scaleY(1);
+
+        transform-origin:
+            top;
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+
+        min-height:
+            700px;
+
+    }
+
+
+    .container {
+
+        padding:
+            6rem
+            1.5rem
+            5rem;
+
+    }
+
+
+    .heroImage {
+
+        background-position:
+            62% center;
+
+    }
+
+
+    .imageLeftFade {
+
+        background:
+
+            linear-gradient(
+                90deg,
+                #090a0b 0%,
+                rgba(9,10,11,.96) 20%,
+                rgba(9,10,11,.68) 52%,
+                rgba(9,10,11,.18) 78%,
+                transparent 100%
+            );
+
+    }
+
+
+    .content {
+
+        max-width:
+            620px;
+
+    }
+
+
+    .meta {
+
+        gap:
+            1rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+
+        min-height:
+            760px;
+
+        align-items:
+            flex-end;
+
+    }
+
+
+    .container {
+
+        padding:
+            7rem
+            1rem
+            6rem;
+
+    }
+
+
+    .content {
+
+        max-width:
+            none;
+
+    }
+
+
+    .heroImage {
+
+        background-position:
+            62% center;
+
+        filter:
+            brightness(.34)
+            saturate(.78);
+
+    }
+
+
+    .imageLeftFade {
+
+        background:
+
+            linear-gradient(
+                90deg,
+                rgba(9,10,11,.94),
+                rgba(9,10,11,.52)
+            );
+
+    }
+
+
+    .imageBottomFade {
+
+        height:
+            58%;
+
+        background:
+
+            linear-gradient(
+                180deg,
+                transparent 0%,
+                rgba(9,10,11,.55) 35%,
+                #090a0b 100%
+            );
+
+    }
+
+
+    .imageTopFade {
+
+        height:
+            18%;
+
+    }
+
+
+    .kicker {
+
+        font-size:
+            .58rem;
+
+        letter-spacing:
+            .24em;
+
+    }
+
+
+    .title {
+
+        font-size:
+
+            clamp(
+                2.8rem,
+                13vw,
+                4.2rem
+            );
+
+        line-height:
+            .92;
+
+    }
+
+
+    .description {
+
+        font-size:
+            .88rem;
+
+        line-height:
+            1.7;
+
+    }
+
+
+    .meta {
+
+        gap:
+            .75rem;
+
+        margin-top:
+            1.6rem;
+
+    }
+
+
+    .metaItem {
+
+        gap:
+            .4rem;
+
+    }
+
+
+    .metaItem strong {
+
+        font-size:
+            .95rem;
+
+    }
+
+
+    .metaItem span {
+
+        font-size:
+            .42rem;
+
+        letter-spacing:
+            .08em;
+
+    }
+
+
+    .metaDivider {
+
+        height:
+            28px;
+
+    }
+
+
+    .actions {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        margin-top:
+            1.8rem;
+
+    }
+
+
+    .primaryButton,
+    .secondaryButton {
+
+        width:
+            100%;
+
+        min-height:
+            50px;
+
+    }
+
+
+    .scrollIndicator {
+
+        display:
+            none;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .hero {
+
+        min-height:
+            780px;
+
+    }
+
+
+    .container {
+
+        padding:
+            6rem
+            .85rem
+            4rem;
+
+    }
+
+
+    .meta {
+
+        gap:
+            .5rem;
+
+    }
+
+
+    .metaItem strong {
+
+        font-size:
+            .85rem;
+
+    }
+
+
+    .metaItem span {
+
+        font-size:
+            .38rem;
+
+    }
+
+}

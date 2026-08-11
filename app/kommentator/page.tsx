@@ -4,6 +4,7 @@ import CommentatorContact from "@/components/commentator/CommentatorContact";
 import CommentatorSkills from "@/components/commentator/CommentatorSkills";
 import CommentatorShowcase from "@/components/commentator/CommentatorShowcase";
 import CommentatorIdentity from "@/components/commentator/CommentatorIdentity";
+import NextCommentary from "@/components/commentator/NextCommentary";
 
 
 export default function CommentatorPage() {
@@ -49,6 +50,12 @@ export default function CommentatorPage() {
             {/* ================================= */}
 
             <CommentatorShowcase />
+
+            {/* ================================= */}
+            {/* NEXT COMMENTARY */}
+            {/* ================================= */}
+
+                <NextCommentary />
 
 
             {/* ================================= */}
