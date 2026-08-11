@@ -1,19 +1,25 @@
-/* ================================= */
+/* =========================================================
+   COMMENTATOR STATIONS
+   PREMIUM BROADCAST EDITION
+   ========================================================= */
+
+
+/* ========================================================= */
 /* SECTION */
-/* ================================= */
+/* ========================================================= */
 
 .section {
 
-    position:relative;
+    position: relative;
 
-    width:100%;
+    width: 100%;
 
     padding:
         8rem
         2rem
-        8rem;
+        9rem;
 
-    overflow:hidden;
+    overflow: hidden;
 
     background:
         #111214;
@@ -21,121 +27,187 @@
 }
 
 
-/* ================================= */
-/* BACKGROUND */
-/* ================================= */
+/* ========================================================= */
+/* BACKGROUND GLOW */
+/* ========================================================= */
 
 .section::before {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    width:700px;
+    width: 800px;
 
-    height:700px;
+    height: 800px;
 
-    left:-350px;
+    left: -400px;
 
-    top:20%;
+    top: 18%;
 
-    border-radius:50%;
+    border-radius: 50%;
 
     background:
+
         radial-gradient(
             circle,
             rgba(163,230,53,.045),
             transparent 70%
         );
 
-    filter:blur(70px);
+    filter:
+        blur(80px);
 
-    pointer-events:none;
+    pointer-events: none;
 
 }
 
 
-/* ================================= */
+/* ========================================================= */
+/* SECONDARY GLOW */
+/* ========================================================= */
+
+.section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+
+    height: 600px;
+
+    right: -350px;
+
+    bottom: 5%;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(163,230,53,.025),
+            transparent 70%
+        );
+
+    filter:
+        blur(80px);
+
+    pointer-events: none;
+
+}
+
+
+/* ========================================================= */
 /* CONTAINER */
-/* ================================= */
+/* ========================================================= */
 
 .container {
 
-    position:relative;
+    position: relative;
 
-    z-index:1;
+    z-index: 2;
 
-    width:100%;
+    width: 100%;
 
-    max-width:1100px;
+    max-width: 1150px;
 
-    margin:0 auto;
+    margin: 0 auto;
 
 }
 
 
-/* ================================= */
+/* ========================================================= */
 /* HEADER */
-/* ================================= */
+/* ========================================================= */
 
 .header {
 
-    max-width:760px;
+    max-width: 780px;
 
     margin:
         0
         auto
         5rem;
 
-    text-align:center;
+    text-align: center;
 
 }
 
+
+/* ========================================================= */
+/* OVERLINE */
+/* ========================================================= */
 
 .overline {
 
-    display:block;
+    display: block;
 
-    margin-bottom:.65rem;
+    margin-bottom:
+        .7rem;
 
-    color:var(--color-lime);
+    color:
+        #A3E635;
 
-    font-size:.82rem;
+    font-size:
+        .72rem;
 
-    font-weight:950;
+    font-weight:
+        950;
 
-    letter-spacing:.42em;
+    letter-spacing:
+        .40em;
 
-    text-transform:uppercase;
+    line-height:
+        1.5;
+
+    text-transform:
+        uppercase;
 
 }
 
 
+/* ========================================================= */
+/* TITLE */
+/* ========================================================= */
+
 .title {
 
-    margin:0;
+    margin:
+        0;
 
-    color:#ffffff;
+    color:
+        #FFFFFF;
 
     font-size:
+
         clamp(
             2.7rem,
             5vw,
             4.8rem
         );
 
-    line-height:.95;
+    line-height:
+        .94;
 
-    font-weight:950;
+    font-weight:
+        950;
 
-    letter-spacing:-.045em;
+    letter-spacing:
+        -.05em;
 
 }
 
 
+/* ========================================================= */
+/* TITLE HIGHLIGHT */
+/* ========================================================= */
+
 .title span {
 
     background:
+
         linear-gradient(
             180deg,
             #ECFFC0 0%,
@@ -143,156 +215,250 @@
             #A3E635 100%
         );
 
-    background-clip:text;
+    background-clip:
+        text;
 
-    -webkit-background-clip:text;
+    -webkit-background-clip:
+        text;
 
-    color:transparent;
+    color:
+        transparent;
 
-    -webkit-text-fill-color:transparent;
+    -webkit-text-fill-color:
+        transparent;
 
 }
 
 
+/* ========================================================= */
+/* INTRO */
+/* ========================================================= */
+
 .intro {
 
-    max-width:690px;
+    max-width:
+        700px;
 
     margin:
         1.5rem
         auto
         0;
 
-    color:var(--color-text-secondary);
+    color:
+        rgba(255,255,255,.58);
 
-    font-size:1rem;
+    font-size:
+        1rem;
 
-    line-height:1.85;
+    line-height:
+        1.85;
 
 }
 
 
-/* ================================= */
+/* ========================================================= */
 /* TIMELINE */
-/* ================================= */
+/* ========================================================= */
 
 .timeline {
 
-    position:relative;
+    position:
+        relative;
 
-    display:flex;
+    display:
+        flex;
 
-    flex-direction:column;
+    flex-direction:
+        column;
 
-    gap:1.6rem;
+    gap:
+        1.8rem;
 
 }
 
 
+/* ========================================================= */
+/* TIMELINE LINE */
+/* ========================================================= */
+
 .line {
 
-    position:absolute;
+    position:
+        absolute;
 
-    top:0;
+    top:
+        0;
 
-    bottom:0;
+    bottom:
+        0;
 
-    left:110px;
+    left:
+        112px;
 
-    width:1px;
+    width:
+        1px;
 
     background:
+
         linear-gradient(
             180deg,
-            transparent,
-            rgba(163,230,53,.35) 8%,
-            rgba(163,230,53,.2) 92%,
-            transparent
+            transparent 0%,
+            rgba(163,230,53,.25) 7%,
+            rgba(163,230,53,.12) 50%,
+            rgba(163,230,53,.25) 93%,
+            transparent 100%
         );
 
 }
 
 
-/* ================================= */
+/* ========================================================= */
+/* TIMELINE GLOW */
+/* ========================================================= */
+
+.line::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        -1px;
+
+    width:
+        3px;
+
+    height:
+        160px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(163,230,53,.45),
+            transparent
+        );
+
+    filter:
+        blur(2px);
+
+}
+
+
+/* ========================================================= */
 /* STATION */
-/* ================================= */
+/* ========================================================= */
 
 .station {
 
-    position:relative;
+    position:
+        relative;
 
-    display:grid;
+    display:
+        grid;
 
     grid-template-columns:
         80px
-        60px
+        64px
         minmax(0,1fr);
 
-    align-items:center;
+    align-items:
+        center;
 
-    min-height:210px;
+    min-height:
+        220px;
 
 }
 
+
+/* ========================================================= */
+/* FEATURED STATION */
+/* ========================================================= */
 
 .featuredStation {
 
-    min-height:330px;
+    min-height:
+        350px;
 
 }
 
 
-/* ================================= */
+/* ========================================================= */
 /* YEAR */
-/* ================================= */
+/* ========================================================= */
 
 .year {
 
     color:
-        rgba(255,255,255,.45);
+        rgba(255,255,255,.42);
 
-    font-size:.65rem;
+    font-size:
+        .65rem;
 
-    font-weight:950;
+    font-weight:
+        950;
 
-    letter-spacing:.12em;
+    letter-spacing:
+        .13em;
 
-    text-align:right;
+    line-height:
+        1.3;
 
-    text-transform:uppercase;
+    text-align:
+        right;
+
+    text-transform:
+        uppercase;
 
 }
 
 
-/* ================================= */
+/* ========================================================= */
 /* DOT */
-/* ================================= */
+/* ========================================================= */
 
 .dot {
 
-    position:relative;
+    position:
+        relative;
 
-    z-index:2;
+    z-index:
+        4;
 
-    width:44px;
+    width:
+        46px;
 
-    height:44px;
+    height:
+        46px;
 
-    display:flex;
+    display:
+        flex;
 
-    align-items:center;
+    align-items:
+        center;
 
-    justify-content:center;
+    justify-content:
+        center;
 
-    margin-left:8px;
+    margin-left:
+        8px;
 
-    border-radius:50%;
+    border-radius:
+        50%;
 
-    color:#111111;
+    color:
+        #111111;
 
     background:
+
         linear-gradient(
-            180deg,
+            145deg,
             #ECFFC0,
             #A3E635
         );
@@ -302,349 +468,543 @@
         #111214;
 
     box-shadow:
+
         0 0 0 1px
         rgba(163,230,53,.35),
+
         0 0 25px
-        rgba(163,230,53,.15);
+        rgba(163,230,53,.13);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
 
 }
 
 
-/* ================================= */
+/* ========================================================= */
+/* DOT HOVER */
+/* ========================================================= */
+
+.station:hover .dot {
+
+    transform:
+        scale(1.08);
+
+    box-shadow:
+
+        0 0 0 1px
+        rgba(163,230,53,.55),
+
+        0 0 35px
+        rgba(163,230,53,.25);
+
+}
+
+
+/* ========================================================= */
 /* CARD */
-/* ================================= */
+/* ========================================================= */
 
 .card {
 
-    position:relative;
+    position:
+        relative;
 
-    overflow:hidden;
+    overflow:
+        hidden;
 
-    min-height:190px;
+    min-height:
+        200px;
 
-    display:grid;
+    display:
+        grid;
 
     grid-template-columns:
-        210px
+        220px
         minmax(0,1fr);
 
-    gap:1.5rem;
+    gap:
+        1.7rem;
 
-    align-items:center;
+    align-items:
+        center;
 
     padding:
-        1.35rem
-        1.5rem;
+        1.5rem
+        1.6rem;
 
-    border-radius:24px;
+    border-radius:
+        26px;
 
     border:
         1px solid
-        rgba(255,255,255,.08);
+        rgba(255,255,255,.075);
 
     background:
+
         linear-gradient(
             145deg,
             rgba(255,255,255,.065),
-            rgba(255,255,255,.025)
+            rgba(255,255,255,.018)
         );
 
-    backdrop-filter:blur(18px);
+    backdrop-filter:
+        blur(20px);
 
     box-shadow:
-        0 20px 55px
-        rgba(0,0,0,.25);
+
+        0 20px 60px
+        rgba(0,0,0,.27),
+
+        inset 0 1px 0
+        rgba(255,255,255,.025);
 
     transition:
-        transform .35s ease,
+
+        transform .4s cubic-bezier(.22,1,.36,1),
         border-color .35s ease,
         box-shadow .35s ease;
 
 }
 
 
-/* ================================= */
-/* HOVER */
-/* ================================= */
+/* ========================================================= */
+/* CARD TOP ACCENT */
+/* ========================================================= */
+
+.card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        100%;
+
+    height:
+        2px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(163,230,53,.75) 50%,
+            transparent 100%
+        );
+
+    opacity:
+        .45;
+
+    transition:
+        opacity .35s ease;
+
+}
+
+
+/* ========================================================= */
+/* CARD INNER LIGHT */
+/* ========================================================= */
+
+.card::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        300px;
+
+    height:
+        300px;
+
+    right:
+        -180px;
+
+    bottom:
+        -190px;
+
+    border-radius:
+        50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(163,230,53,.085),
+            transparent 70%
+        );
+
+    pointer-events:
+        none;
+
+}
+
+
+/* ========================================================= */
+/* CARD HOVER */
+/* ========================================================= */
 
 .card:hover {
 
     transform:
-        translateX(5px);
+        translateX(7px);
 
     border-color:
-        rgba(163,230,53,.3);
+        rgba(163,230,53,.28);
 
     box-shadow:
-        0 25px 65px
-        rgba(0,0,0,.35),
-        0 0 25px
-        rgba(163,230,53,.05);
+
+        0 30px 80px
+        rgba(0,0,0,.38),
+
+        0 0 35px
+        rgba(163,230,53,.055);
 
 }
 
 
-/* ================================= */
-/* CARD TOP LINE */
-/* ================================= */
+/* ========================================================= */
+/* CARD HOVER ACCENT */
+/* ========================================================= */
 
-.card::before {
+.card:hover::before {
 
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    top:0;
-
-    width:100%;
-
-    height:3px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            #A3E635,
-            transparent
-        );
-
-    opacity:.5;
+    opacity:
+        .9;
 
 }
 
 
-/* ================================= */
-/* CARD GLOW */
-/* ================================= */
-
-.card::after {
-
-    content:"";
-
-    position:absolute;
-
-    width:260px;
-
-    height:260px;
-
-    right:-150px;
-
-    bottom:-150px;
-
-    border-radius:50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(163,230,53,.09),
-            transparent 70%
-        );
-
-    pointer-events:none;
-
-}
-
-
-/* ================================= */
+/* ========================================================= */
 /* LOGO AREA */
-/* ================================= */
+/* ========================================================= */
 
 .logoArea {
 
-    position:relative;
+    position:
+        relative;
 
-    z-index:1;
+    z-index:
+        2;
 
-    width:100%;
+    width:
+        100%;
 
-    min-height:130px;
+    min-height:
+        145px;
 
-    display:flex;
+    display:
+        flex;
 
-    align-items:center;
+    align-items:
+        center;
 
-    justify-content:center;
+    justify-content:
+        center;
 
-    padding:1rem;
+    padding:
+        1rem;
 
-    border-radius:18px;
+    border-radius:
+        20px;
 
     background:
-        rgba(0,0,0,.22);
+
+        linear-gradient(
+            145deg,
+            rgba(0,0,0,.28),
+            rgba(0,0,0,.16)
+        );
 
     border:
         1px solid
-        rgba(255,255,255,.06);
+        rgba(255,255,255,.055);
+
+    box-shadow:
+
+        inset 0 1px 0
+        rgba(255,255,255,.025);
+
+    transition:
+        border-color .35s ease,
+        background .35s ease;
 
 }
 
 
-/* ================================= */
+/* ========================================================= */
+/* LOGO AREA HOVER */
+/* ========================================================= */
+
+.card:hover .logoArea {
+
+    border-color:
+        rgba(163,230,53,.14);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(0,0,0,.34),
+            rgba(0,0,0,.18)
+        );
+
+}
+
+
+/* ========================================================= */
 /* LOGO WRAPPER */
-/* ================================= */
+/* ========================================================= */
 
 .logoWrapper {
 
-    position:relative;
+    position:
+        relative;
 
-    width:100%;
+    width:
+        100%;
 
-    height:100px;
+    height:
+        105px;
 
 }
 
 
-/* ================================= */
+/* ========================================================= */
 /* LOGO */
-/* ================================= */
+/* ========================================================= */
 
 .logo {
 
-    object-fit:contain;
+    object-fit:
+        contain;
 
-    object-position:center;
+    object-position:
+        center;
 
-    padding:.35rem;
+    padding:
+        .3rem;
 
     filter:
+
         drop-shadow(
-            0 8px 20px
-            rgba(0,0,0,.3)
+            0 10px 24px
+            rgba(0,0,0,.35)
         );
 
     transition:
-        transform .35s ease,
+
+        transform .45s
+        cubic-bezier(.22,1,.36,1),
+
         filter .35s ease;
 
 }
 
 
+/* ========================================================= */
+/* LOGO HOVER */
+/* ========================================================= */
+
 .card:hover .logo {
 
     transform:
-        scale(1.05);
+        scale(1.055);
 
     filter:
+
         drop-shadow(
-            0 0 18px
+            0 0 20px
             rgba(163,230,53,.12)
+        )
+
+        drop-shadow(
+            0 10px 24px
+            rgba(0,0,0,.35)
         );
 
 }
 
 
-/* ================================= */
+/* ========================================================= */
 /* CONTENT */
-/* ================================= */
+/* ========================================================= */
 
 .cardContent {
 
-    position:relative;
+    position:
+        relative;
 
-    z-index:1;
+    z-index:
+        2;
 
 }
 
+
+/* ========================================================= */
+/* SUBTITLE */
+/* ========================================================= */
 
 .subtitle {
 
-    display:block;
+    display:
+        block;
 
-    margin-bottom:.4rem;
+    margin-bottom:
+        .5rem;
 
-    color:var(--color-lime);
+    color:
+        #A3E635;
 
-    font-size:.58rem;
+    font-size:
+        .58rem;
 
-    font-weight:950;
+    font-weight:
+        950;
 
-    letter-spacing:.17em;
+    letter-spacing:
+        .18em;
 
-    text-transform:uppercase;
+    line-height:
+        1.4;
+
+    text-transform:
+        uppercase;
 
 }
 
+
+/* ========================================================= */
+/* TITLE */
+/* ========================================================= */
 
 .cardContent h3 {
 
-    margin:0;
+    margin:
+        0;
 
-    color:#ffffff;
+    color:
+        #FFFFFF;
 
-    font-size:1.65rem;
+    font-size:
+        1.7rem;
 
-    font-weight:950;
+    font-weight:
+        950;
 
-    letter-spacing:.06em;
+    letter-spacing:
+        .055em;
 
-    line-height:1.05;
+    line-height:
+        1.05;
 
 }
 
+
+/* ========================================================= */
+/* DESCRIPTION */
+/* ========================================================= */
 
 .cardContent p {
 
-    max-width:560px;
+    max-width:
+        600px;
 
     margin:
-        .85rem
+        .9rem
         0
         0;
 
-    color:var(--color-text-secondary);
+    color:
+        rgba(255,255,255,.56);
 
-    font-size:.9rem;
+    font-size:
+        .91rem;
 
-    line-height:1.75;
+    line-height:
+        1.78;
 
 }
 
 
-/* ================================= */
-/* eSPORTS REFERENZEN */
-/* ================================= */
+/* ========================================================= */
+/* eSPORTS REFERENCES */
+/* ========================================================= */
 
 .highlights {
 
-    position:relative;
+    position:
+        relative;
 
-    margin-top:1.5rem;
+    margin-top:
+        1.5rem;
 
-    padding-top:1.15rem;
+    padding-top:
+        1.2rem;
 
     border-top:
         1px solid
-        rgba(255,255,255,.10);
+        rgba(255,255,255,.09);
 
 }
 
+
+/* ========================================================= */
+/* HIGHLIGHTS HEADER */
+/* ========================================================= */
 
 .highlightsHeader {
 
-    display:flex;
+    display:
+        flex;
 
-    align-items:center;
+    align-items:
+        center;
 
-    gap:.5rem;
+    gap:
+        .55rem;
 
-    margin-bottom:.9rem;
+    margin-bottom:
+        .9rem;
 
-    color:var(--color-lime);
+    color:
+        #A3E635;
 
-    font-size:.72rem;
+    font-size:
+        .68rem;
 
-    font-weight:950;
+    font-weight:
+        950;
 
-    letter-spacing:.16em;
+    letter-spacing:
+        .18em;
+
+    line-height:
+        1.4;
 
 }
 
 
+/* ========================================================= */
+/* HIGHLIGHT GRID */
+/* ========================================================= */
+
 .highlightGrid {
 
-    display:grid;
+    display:
+        grid;
 
     grid-template-columns:
         repeat(
@@ -652,134 +1012,346 @@
             minmax(0,1fr)
         );
 
-    gap:.7rem;
+    gap:
+        .65rem;
 
 }
 
 
+/* ========================================================= */
+/* HIGHLIGHT */
+/* ========================================================= */
+
 .highlight {
 
-    display:flex;
+    position:
+        relative;
 
-    flex-direction:column;
+    display:
+        flex;
 
-    gap:.3rem;
+    flex-direction:
+        column;
+
+    gap:
+        .35rem;
+
+    min-height:
+        76px;
 
     padding:
         .8rem
         .85rem;
 
-    border-radius:14px;
+    border-radius:
+        15px;
 
     background:
-        rgba(255,255,255,.045);
+
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.025)
+        );
 
     border:
         1px solid
-        rgba(255,255,255,.08);
+        rgba(255,255,255,.075);
 
     transition:
-        background .25s ease,
-        border-color .25s ease,
-        transform .25s ease;
+
+        background .3s ease,
+        border-color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
 
 }
 
+
+/* ========================================================= */
+/* HIGHLIGHT ACCENT */
+/* ========================================================= */
+
+.highlight::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        12px;
+
+    bottom:
+        12px;
+
+    width:
+        2px;
+
+    border-radius:
+        999px;
+
+    background:
+        #A3E635;
+
+    opacity:
+        .35;
+
+}
+
+
+/* ========================================================= */
+/* HIGHLIGHT HOVER */
+/* ========================================================= */
 
 .highlight:hover {
 
-    background:
-        rgba(255,255,255,.06);
+    transform:
+        translateY(-3px);
 
     border-color:
-        rgba(163,230,53,.20);
+        rgba(163,230,53,.22);
 
-    transform:
-        translateY(-2px);
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(163,230,53,.075),
+            rgba(255,255,255,.025)
+        );
+
+    box-shadow:
+
+        0 10px 25px
+        rgba(0,0,0,.20);
 
 }
 
+
+/* ========================================================= */
+/* HIGHLIGHT TITLE */
+/* ========================================================= */
 
 .highlight strong {
 
-    color:#ffffff;
+    color:
+        #FFFFFF;
 
-    font-size:.78rem;
+    font-size:
+        .77rem;
 
-    font-weight:950;
+    font-weight:
+        950;
 
-    letter-spacing:.08em;
+    letter-spacing:
+        .075em;
 
-    line-height:1.25;
+    line-height:
+        1.25;
 
 }
 
+
+/* ========================================================= */
+/* HIGHLIGHT DESCRIPTION */
+/* ========================================================= */
 
 .highlight span {
 
     color:
-        rgba(255,255,255,.62);
+        rgba(255,255,255,.60);
 
-    font-size:.72rem;
+    font-size:
+        .70rem;
 
-    font-weight:500;
+    font-weight:
+        500;
 
-    line-height:1.55;
+    line-height:
+        1.55;
 
 }
 
 
-/* ================================= */
+/* ========================================================= */
 /* TAGS */
-/* ================================= */
+/* ========================================================= */
 
 .tags {
 
-    display:flex;
+    position:
+        relative;
 
-    flex-wrap:wrap;
+    z-index:
+        2;
 
-    gap:.45rem;
+    display:
+        flex;
 
-    margin-top:1rem;
+    flex-wrap:
+        wrap;
+
+    gap:
+        .45rem;
+
+    margin-top:
+        1rem;
 
 }
 
+
+/* ========================================================= */
+/* TAG */
+/* ========================================================= */
 
 .tags span {
 
     padding:
-        .35rem
-        .55rem;
+        .36rem
+        .56rem;
 
-    border-radius:999px;
+    border-radius:
+        999px;
 
     background:
         rgba(255,255,255,.04);
 
     border:
         1px solid
-        rgba(255,255,255,.08);
+        rgba(255,255,255,.075);
 
     color:
         rgba(255,255,255,.58);
 
-    font-size:.5rem;
+    font-size:
+        .49rem;
 
-    font-weight:900;
+    font-weight:
+        900;
 
-    letter-spacing:.1em;
+    letter-spacing:
+        .10em;
 
-    text-transform:uppercase;
+    line-height:
+        1.2;
+
+    text-transform:
+        uppercase;
 
 }
 
 
-/* ================================= */
-/* TABLET */
-/* ================================= */
+/* ========================================================= */
+/* FEATURED STATION */
+/* ========================================================= */
 
-@media(max-width:900px){
+.featuredStation .card {
+
+    border-color:
+        rgba(163,230,53,.16);
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(163,230,53,.055),
+            rgba(255,255,255,.025)
+        );
+
+    box-shadow:
+
+        0 25px 75px
+        rgba(0,0,0,.32),
+
+        0 0 45px
+        rgba(163,230,53,.035);
+
+}
+
+
+/* ========================================================= */
+/* FEATURED TOP LINE */
+/* ========================================================= */
+
+.featuredStation .card::before {
+
+    height:
+        3px;
+
+    opacity:
+        .85;
+
+}
+
+
+/* ========================================================= */
+/* FEATURED LOGO AREA */
+/* ========================================================= */
+
+.featuredStation .logoArea {
+
+    min-height:
+        165px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(0,0,0,.34),
+            rgba(163,230,53,.025)
+        );
+
+    border-color:
+        rgba(163,230,53,.12);
+
+}
+
+
+/* ========================================================= */
+/* FEATURED LOGO */
+/* ========================================================= */
+
+.featuredStation .logoWrapper {
+
+    height:
+        120px;
+
+}
+
+
+/* ========================================================= */
+/* FEATURED TITLE */
+/* ========================================================= */
+
+.featuredStation .cardContent h3 {
+
+    font-size:
+        1.85rem;
+
+}
+
+
+/* ========================================================= */
+/* FEATURED HIGHLIGHT HEADER */
+/* ========================================================= */
+
+.featuredStation .highlightsHeader {
+
+    font-size:
+        .72rem;
+
+}
+
+
+/* ========================================================= */
+/* TABLET */
+/* ========================================================= */
+
+@media (max-width: 900px) {
 
     .section {
 
@@ -793,14 +1365,16 @@
 
     .timeline {
 
-        gap:1.2rem;
+        gap:
+            1.3rem;
 
     }
 
 
     .line {
 
-        left:72px;
+        left:
+            72px;
 
     }
 
@@ -817,18 +1391,22 @@
 
     .featuredStation {
 
-        min-height:0;
+        min-height:
+            0;
 
     }
 
 
     .dot {
 
-        width:38px;
+        width:
+            38px;
 
-        height:38px;
+        height:
+            38px;
 
-        margin-left:3px;
+        margin-left:
+            3px;
 
     }
 
@@ -836,53 +1414,87 @@
     .card {
 
         grid-template-columns:
-            150px
+            155px
             minmax(0,1fr);
 
-        gap:1rem;
+        gap:
+            1rem;
 
-        min-height:180px;
+        min-height:
+            190px;
 
-        padding:1rem;
+        padding:
+            1rem;
+
+        border-radius:
+            22px;
 
     }
 
 
     .logoArea {
 
-        min-height:110px;
+        min-height:
+            115px;
 
     }
 
 
     .logoWrapper {
 
-        height:80px;
+        height:
+            82px;
 
     }
 
 
     .cardContent h3 {
 
-        font-size:1.35rem;
+        font-size:
+            1.4rem;
+
+    }
+
+
+    .featuredStation .logoArea {
+
+        min-height:
+            130px;
+
+    }
+
+
+    .featuredStation .logoWrapper {
+
+        height:
+            92px;
+
+    }
+
+
+    .featuredStation .cardContent h3 {
+
+        font-size:
+            1.5rem;
 
     }
 
 
     .highlightGrid {
 
-        grid-template-columns:1fr;
+        grid-template-columns:
+            1fr;
 
     }
 
 }
 
 
-/* ================================= */
+/* ========================================================= */
 /* MOBILE */
-/* ================================= */
+/* ========================================================= */
 
-@media(max-width:600px){
+@media (max-width: 600px) {
 
     .section {
 
@@ -896,16 +1508,19 @@
 
     .header {
 
-        margin-bottom:3.5rem;
+        margin-bottom:
+            3.5rem;
 
     }
 
 
     .overline {
 
-        font-size:.66rem;
+        font-size:
+            .64rem;
 
-        letter-spacing:.28em;
+        letter-spacing:
+            .28em;
 
     }
 
@@ -913,6 +1528,7 @@
     .title {
 
         font-size:
+
             clamp(
                 2.3rem,
                 11vw,
@@ -924,55 +1540,71 @@
 
     .intro {
 
-        font-size:.9rem;
+        font-size:
+            .88rem;
 
-        line-height:1.7;
+        line-height:
+            1.72;
 
     }
 
 
-    /* ================================= */
+    /* ========================================= */
     /* TIMELINE */
-    /* ================================= */
+    /* ========================================= */
 
     .line {
 
-        left:20px;
+        left:
+            20px;
 
     }
 
 
     .station {
 
-        display:grid;
+        display:
+            grid;
 
         grid-template-columns:
             40px
             minmax(0,1fr);
 
-        align-items:start;
+        align-items:
+            start;
 
     }
 
 
+    /* ========================================= */
+    /* YEAR */
+    /* ========================================= */
+
     .year {
 
-        grid-column:1;
+        grid-column:
+            1;
 
-        grid-row:1;
+        grid-row:
+            1;
 
-        width:40px;
+        width:
+            40px;
 
-        padding-top:.75rem;
+        padding-top:
+            .75rem;
 
         color:
-            rgba(255,255,255,.3);
+            rgba(255,255,255,.28);
 
-        font-size:.45rem;
+        font-size:
+            .43rem;
 
-        line-height:1.2;
+        line-height:
+            1.2;
 
-        text-align:center;
+        text-align:
+            center;
 
         transform:
             rotate(-90deg);
@@ -983,152 +1615,217 @@
     }
 
 
+    /* ========================================= */
+    /* DOT */
+    /* ========================================= */
+
     .dot {
 
-        grid-column:1;
+        grid-column:
+            1;
 
-        grid-row:1;
+        grid-row:
+            1;
 
-        width:40px;
+        width:
+            40px;
 
-        height:40px;
+        height:
+            40px;
 
         margin:
             .65rem
             0
             0;
 
-        font-size:.8rem;
-
     }
 
 
-    /* ================================= */
+    /* ========================================= */
     /* CARD */
-/* ================================= */
+    /* ========================================= */
 
     .card {
 
-        grid-column:2;
+        grid-column:
+            2;
 
-        grid-row:1;
+        grid-row:
+            1;
 
-        display:flex;
+        display:
+            flex;
 
-        flex-direction:column;
+        flex-direction:
+            column;
 
-        align-items:stretch;
+        align-items:
+            stretch;
 
-        gap:1rem;
+        gap:
+            1rem;
 
-        min-height:0;
+        min-height:
+            0;
 
-        padding:1rem;
+        padding:
+            1rem;
 
-        border-radius:20px;
+        border-radius:
+            20px;
 
     }
 
 
-    /* ================================= */
-    /* LOGO */
-/* ================================= */
+    /* ========================================= */
+    /* LOGO AREA */
+    /* ========================================= */
 
     .logoArea {
 
-        width:100%;
+        width:
+            100%;
 
-        min-height:105px;
+        min-height:
+            115px;
 
-        padding:.8rem;
+        padding:
+            .8rem;
 
-        border-radius:15px;
+        border-radius:
+            15px;
 
     }
 
 
     .logoWrapper {
 
-        height:65px;
+        height:
+            70px;
 
     }
 
 
     .logo {
 
-        padding:.25rem;
+        padding:
+            .2rem;
 
     }
 
 
-    /* ================================= */
+    /* ========================================= */
     /* CONTENT */
-/* ================================= */
-
-    .cardContent h3 {
-
-        font-size:1.1rem;
-
-    }
-
+    /* ========================================= */
 
     .subtitle {
 
-        font-size:.5rem;
+        font-size:
+            .49rem;
 
-        letter-spacing:.11em;
+        letter-spacing:
+            .12em;
+
+    }
+
+
+    .cardContent h3 {
+
+        font-size:
+            1.15rem;
 
     }
 
 
     .cardContent p {
 
-        margin-top:.65rem;
+        margin-top:
+            .65rem;
 
-        font-size:.8rem;
+        font-size:
+            .80rem;
 
-        line-height:1.65;
+        line-height:
+            1.68;
 
     }
 
 
-    /* ================================= */
-    /* eSPORTS REFERENZEN */
-/* ================================= */
+    /* ========================================= */
+    /* FEATURED */
+    /* ========================================= */
+
+    .featuredStation .logoArea {
+
+        min-height:
+            125px;
+
+    }
+
+
+    .featuredStation .logoWrapper {
+
+        height:
+            78px;
+
+    }
+
+
+    .featuredStation .cardContent h3 {
+
+        font-size:
+            1.2rem;
+
+    }
+
+
+    /* ========================================= */
+    /* HIGHLIGHTS */
+    /* ========================================= */
 
     .highlights {
 
-        margin-top:1.1rem;
+        margin-top:
+            1.1rem;
 
-        padding-top:.9rem;
+        padding-top:
+            .9rem;
 
     }
 
 
     .highlightsHeader {
 
-        font-size:.62rem;
+        font-size:
+            .61rem;
 
-        letter-spacing:.12em;
+        letter-spacing:
+            .12em;
 
-        margin-bottom:.7rem;
+        margin-bottom:
+            .7rem;
 
     }
 
 
     .highlightGrid {
 
-        grid-template-columns:1fr;
+        grid-template-columns:
+            1fr;
 
-        gap:.55rem;
+        gap:
+            .55rem;
 
     }
 
 
     .highlight {
 
+        min-height:
+            0;
+
         padding:
-            .7rem
+            .72rem
             .75rem;
 
     }
@@ -1136,31 +1833,37 @@
 
     .highlight strong {
 
-        font-size:.7rem;
+        font-size:
+            .71rem;
 
-        letter-spacing:.07em;
+        letter-spacing:
+            .07em;
 
     }
 
 
     .highlight span {
 
-        font-size:.66rem;
+        font-size:
+            .66rem;
 
-        line-height:1.5;
+        line-height:
+            1.52;
 
     }
 
 
-    /* ================================= */
+    /* ========================================= */
     /* TAGS */
-/* ================================= */
+    /* ========================================= */
 
     .tags {
 
-        margin-top:.8rem;
+        margin-top:
+            .8rem;
 
-        gap:.3rem;
+        gap:
+            .3rem;
 
     }
 
@@ -1168,10 +1871,89 @@
     .tags span {
 
         padding:
-            .3rem
+            .30rem
             .45rem;
 
-        font-size:.45rem;
+        font-size:
+            .44rem;
+
+    }
+
+}
+
+
+/* ========================================================= */
+/* SMALL MOBILE */
+/* ========================================================= */
+
+@media (max-width: 400px) {
+
+    .section {
+
+        padding:
+            4.5rem
+            .8rem
+            5rem;
+
+    }
+
+
+    .station {
+
+        grid-template-columns:
+            36px
+            minmax(0,1fr);
+
+    }
+
+
+    .line {
+
+        left:
+            18px;
+
+    }
+
+
+    .dot {
+
+        width:
+            36px;
+
+        height:
+            36px;
+
+    }
+
+
+    .year {
+
+        width:
+            36px;
+
+    }
+
+
+    .card {
+
+        padding:
+            .85rem;
+
+    }
+
+
+    .logoArea {
+
+        min-height:
+            105px;
+
+    }
+
+
+    .logoWrapper {
+
+        height:
+            62px;
 
     }
 

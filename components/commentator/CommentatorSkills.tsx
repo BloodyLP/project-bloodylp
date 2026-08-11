@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+
 import {
     Mic2,
     Gamepad2,
@@ -11,6 +12,10 @@ import {
 import styles from "./CommentatorSkills.module.css";
 
 
+/* ========================================================= */
+/* SKILLS DATA */
+/* ========================================================= */
+
 const skills = [
 
     {
@@ -18,10 +23,12 @@ const skills = [
 
         number: "01",
 
+        eyebrow: "PLAY-BY-PLAY",
+
         title: "LIVE-KOMMENTAR",
 
         description:
-            "Das Spiel live erleben, die entscheidenden Momente einordnen und Emotionen genau dort entstehen lassen, wo sie hingehören: mitten im Spiel.",
+            "Das Spiel live erleben, die entscheidenden Momente erkennen und genau dann die richtige Stimme finden, wenn es darauf ankommt.",
 
         tags: [
             "DEL2",
@@ -34,6 +41,8 @@ const skills = [
         icon: Gamepad2,
 
         number: "02",
+
+        eyebrow: "VIRTUAL HOCKEY",
 
         title: "eSPORTS",
 
@@ -52,10 +61,12 @@ const skills = [
 
         number: "03",
 
+        eyebrow: "ON AIR",
+
         title: "MODERATION",
 
         description:
-            "Ob Spieltag, eSports-Event oder Special: Moderation bedeutet für mich, Menschen durch ein Event zu führen und dabei den richtigen Ton zu treffen.",
+            "Ob Spieltag, eSports-Event oder Special: Moderation bedeutet, Menschen durch ein Event zu führen und dabei den richtigen Ton zu treffen.",
 
         tags: [
             "HOST",
@@ -69,10 +80,12 @@ const skills = [
 
         number: "04",
 
+        eyebrow: "GAME INSIGHT",
+
         title: "ANALYSE",
 
         description:
-            "Hinter jedem Spiel stecken Entscheidungen, Systeme und Geschichten. Fachwissen hilft dabei, auch die Details sichtbar zu machen.",
+            "Hinter jedem Spiel stecken Entscheidungen, Systeme und Geschichten. Fachwissen macht auch die Details sichtbar, die sonst verborgen bleiben.",
 
         tags: [
             "TAKTIK",
@@ -84,59 +97,95 @@ const skills = [
 ];
 
 
+/* ========================================================= */
+/* COMPONENT */
+/* ========================================================= */
+
 export default function CommentatorSkills() {
 
     return (
 
         <section className={styles.section}>
 
+            {/* ================================================= */}
+            {/* BACKGROUND */}
+            {/* ================================================= */}
+
+            <div className={styles.backgroundGlow} />
+
+            <div className={styles.backgroundGrid} />
+
+
+            {/* ================================================= */}
+            {/* CONTAINER */}
+            {/* ================================================= */}
+
             <div className={styles.container}>
 
-                {/* ================================= */}
+
+                {/* ================================================= */}
                 {/* HEADER */}
-                {/* ================================= */}
+                {/* ================================================= */}
 
                 <motion.div
+
                     className={styles.header}
+
                     initial={{
                         opacity: 0,
                         y: 30,
                     }}
+
                     whileInView={{
                         opacity: 1,
                         y: 0,
                     }}
+
                     viewport={{
                         once: true,
                         amount: 0.25,
                     }}
+
                     transition={{
                         duration: 0.7,
+                        ease: "easeOut",
                     }}
+
                 >
 
                     <span className={styles.overline}>
+
                         MEINE KOMPETENZEN
+
                     </span>
 
+
                     <h2 className={styles.title}>
+
                         KOMMENTAR MIT{" "}
-                        <span>LEIDENSCHAFT.</span>
+
+                        <span>
+                            LEIDENSCHAFT.
+                        </span>
+
                     </h2>
 
+
                     <p className={styles.intro}>
+
                         Ein gutes Mikrofon allein macht noch keine
                         gute Übertragung. Entscheidend sind
                         Erfahrung, Vorbereitung, Timing und die
                         Fähigkeit, den Moment zu fühlen.
+
                     </p>
 
                 </motion.div>
 
 
-                {/* ================================= */}
-                {/* GRID */}
-                {/* ================================= */}
+                {/* ================================================= */}
+                {/* SKILLS GRID */}
+                {/* ================================================= */}
 
                 <div className={styles.grid}>
 
@@ -147,66 +196,124 @@ export default function CommentatorSkills() {
                         return (
 
                             <motion.article
+
                                 key={skill.number}
+
                                 className={styles.card}
+
                                 initial={{
                                     opacity: 0,
                                     y: 35,
                                 }}
+
                                 whileInView={{
                                     opacity: 1,
                                     y: 0,
                                 }}
+
                                 viewport={{
                                     once: true,
                                     amount: 0.2,
                                 }}
+
                                 transition={{
                                     duration: 0.6,
                                     delay: index * 0.08,
+                                    ease: "easeOut",
                                 }}
+
                             >
+
+                                {/* ================================= */}
+                                {/* CARD HEADER */}
+                                {/* ================================= */}
 
                                 <div className={styles.cardTop}>
 
                                     <span className={styles.number}>
+
                                         {skill.number}
+
                                     </span>
 
-                                    <div className={styles.icon}>
 
-                                        <Icon
-                                            size={24}
-                                            strokeWidth={2}
-                                        />
+                                    <span className={styles.eyebrow}>
 
-                                    </div>
+                                        {skill.eyebrow}
+
+                                    </span>
 
                                 </div>
 
+
+                                {/* ================================= */}
+                                {/* ICON */}
+                                {/* ================================= */}
+
+                                <div className={styles.icon}>
+
+                                    <Icon
+                                        size={24}
+                                        strokeWidth={1.8}
+                                    />
+
+                                </div>
+
+
+                                {/* ================================= */}
+                                {/* CONTENT */}
+                                {/* ================================= */}
 
                                 <div className={styles.cardContent}>
 
                                     <h3>
+
                                         {skill.title}
+
                                     </h3>
 
+
                                     <p>
+
                                         {skill.description}
+
                                     </p>
 
                                 </div>
 
+
+                                {/* ================================= */}
+                                {/* TAGS */}
+                                {/* ================================= */}
 
                                 <div className={styles.tags}>
 
                                     {skill.tags.map((tag) => (
 
                                         <span key={tag}>
+
                                             {tag}
+
                                         </span>
 
                                     ))}
+
+                                </div>
+
+
+                                {/* ================================= */}
+                                {/* CARD FOOTER */}
+                                {/* ================================= */}
+
+                                <div className={styles.cardFooter}>
+
+                                    <span />
+
+                                    <span>
+
+                                        BLOODYLP
+
+                                    </span>
 
                                 </div>
 
@@ -217,6 +324,53 @@ export default function CommentatorSkills() {
                     })}
 
                 </div>
+
+
+                {/* ================================================= */}
+                {/* BOTTOM STATEMENT */}
+                {/* ================================================= */}
+
+                <motion.div
+
+                    className={styles.bottomStatement}
+
+                    initial={{
+                        opacity: 0,
+                        y: 15,
+                    }}
+
+                    whileInView={{
+                        opacity: 1,
+                        y: 0,
+                    }}
+
+                    viewport={{
+                        once: true,
+                        amount: 0.3,
+                    }}
+
+                    transition={{
+                        duration: 0.7,
+                        delay: 0.15,
+                    }}
+
+                >
+
+                    <span />
+
+                    <p>
+
+                        Nicht nur hören.
+
+                        <strong>
+                            Mitten im Spiel sein.
+                        </strong>
+
+                    </p>
+
+                    <span />
+
+                </motion.div>
 
             </div>
 

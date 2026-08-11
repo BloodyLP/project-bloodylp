@@ -5,6 +5,7 @@ import CommentatorSkills from "@/components/commentator/CommentatorSkills";
 import CommentatorShowcase from "@/components/commentator/CommentatorShowcase";
 import CommentatorIdentity from "@/components/commentator/CommentatorIdentity";
 
+
 export default function CommentatorPage() {
 
     return (
@@ -17,23 +18,31 @@ export default function CommentatorPage() {
 
             <CommentatorHero />
 
+
             {/* ================================= */}
             {/* IDENTITY */}
             {/* ================================= */}
 
             <CommentatorIdentity />
 
-{/* ================================= */}
+
+            {/* ================================= */}
             {/* SKILLS */}
             {/* ================================= */}
 
             <CommentatorSkills />
 
+
             {/* ================================= */}
             {/* STATIONEN */}
             {/* ================================= */}
 
-            <CommentatorStations />
+            <section id="stationen">
+
+                <CommentatorStations />
+
+            </section>
+
 
             {/* ================================= */}
             {/* SHOWCASE */}
@@ -46,7 +55,11 @@ export default function CommentatorPage() {
             {/* KONTAKT */}
             {/* ================================= */}
 
-            <CommentatorContact />
+            <section id="kontakt">
+
+                <CommentatorContact />
+
+            </section>
 
         </main>
 

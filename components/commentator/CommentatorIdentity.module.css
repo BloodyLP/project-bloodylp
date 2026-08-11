@@ -1,138 +1,233 @@
-/* ========================================= */
+/* =========================================================
+   COMMENTATOR IDENTITY
+   ========================================================= */
+
+
+/* ========================================================= */
 /* SECTION */
-/* ========================================= */
+/* ========================================================= */
 
 .section {
 
-    position:relative;
+    position: relative;
 
-    width:100%;
+    width: 100%;
 
     padding:
         8rem
         1.5rem
         8rem;
 
-    overflow:hidden;
+    overflow: hidden;
+
+    background:
+        #08090a;
 
 }
 
 
-/* ========================================= */
+/* ========================================================= */
 /* BACKGROUND GLOW */
-/* ========================================= */
+/* ========================================================= */
 
 .backgroundGlow {
 
-    position:absolute;
+    position: absolute;
 
-    left:50%;
+    left: 50%;
 
-    top:30%;
+    top: 30%;
 
     transform:
-        translate(-50%,-50%);
+        translate(-50%, -50%);
 
-    width:800px;
+    width: 900px;
 
-    height:500px;
+    height: 600px;
 
-    border-radius:50%;
+    border-radius: 50%;
 
     background:
+
         radial-gradient(
             ellipse,
             rgba(163,230,53,.055),
             transparent 70%
         );
 
-    filter:blur(70px);
+    filter:
+        blur(80px);
 
-    pointer-events:none;
+    pointer-events: none;
 
 }
 
 
-/* ========================================= */
+/* ========================================================= */
+/* BACKGROUND GRID */
+/* ========================================================= */
+
+.backgroundGrid {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: .035;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.5) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.5) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        70px 70px;
+
+    mask-image:
+
+        linear-gradient(
+            180deg,
+            transparent 0%,
+            black 20%,
+            black 80%,
+            transparent 100%
+        );
+
+    -webkit-mask-image:
+
+        linear-gradient(
+            180deg,
+            transparent 0%,
+            black 20%,
+            black 80%,
+            transparent 100%
+        );
+
+}
+
+
+/* ========================================================= */
 /* CONTAINER */
-/* ========================================= */
+/* ========================================================= */
 
 .container {
 
-    position:relative;
+    position: relative;
 
-    z-index:1;
+    z-index: 2;
 
-    width:100%;
+    width: 100%;
 
-    max-width:1200px;
+    max-width: 1250px;
 
-    margin:0 auto;
+    margin: 0 auto;
 
 }
 
 
-/* ========================================= */
+/* ========================================================= */
 /* INTRO */
-/* ========================================= */
+/* ========================================================= */
 
 .intro {
 
-    max-width:850px;
+    max-width: 850px;
 
     margin:
         0 auto
         5rem;
 
-    text-align:center;
+    text-align: center;
 
 }
 
+
+/* ========================================================= */
+/* KICKER */
+/* ========================================================= */
 
 .kicker {
 
-    display:block;
+    display: block;
 
-    margin-bottom:1.15rem;
+    margin-bottom:
+        1.15rem;
 
-    color:#A3E635;
+    color:
+        #A3E635;
 
-    font-size:.72rem;
+    font-size:
+        .72rem;
 
-    font-weight:950;
+    font-weight:
+        950;
 
-    letter-spacing:.35em;
+    letter-spacing:
+        .35em;
 
-    text-transform:uppercase;
+    line-height:
+        1.5;
+
+    text-transform:
+        uppercase;
 
 }
 
 
+/* ========================================================= */
+/* TITLE */
+/* ========================================================= */
+
 .title {
 
-    margin:0;
+    margin: 0;
 
-    color:#FFFFFF;
+    color:
+        #FFFFFF;
 
     font-size:
+
         clamp(
             2.6rem,
             5vw,
             4.7rem
         );
 
-    line-height:.96;
+    line-height:
+        .96;
 
-    font-weight:950;
+    font-weight:
+        950;
 
-    letter-spacing:-.045em;
+    letter-spacing:
+        -.045em;
 
 }
 
 
+/* ========================================================= */
+/* TITLE HIGHLIGHT */
+/* ========================================================= */
+
 .title span {
 
+    display: block;
+
+    margin-top:
+        .12em;
+
     background:
+
         linear-gradient(
             180deg,
             #ECFFC0 0%,
@@ -140,76 +235,103 @@
             #A3E635 100%
         );
 
-    background-clip:text;
+    background-clip:
+        text;
 
-    -webkit-background-clip:text;
+    -webkit-background-clip:
+        text;
 
-    color:transparent;
+    color:
+        transparent;
 
-    -webkit-text-fill-color:transparent;
+    -webkit-text-fill-color:
+        transparent;
 
 }
 
+
+/* ========================================================= */
+/* DESCRIPTION */
+/* ========================================================= */
 
 .description {
 
-    max-width:760px;
+    max-width:
+        760px;
 
     margin:
-        1.8rem auto
-        0;
+        1.5rem auto 0;
 
     color:
-        rgba(255,255,255,.65);
+        rgba(255,255,255,.62);
 
-    font-size:1.03rem;
+    font-size:
+        1.02rem;
 
-    line-height:1.85;
+    line-height:
+        1.85;
 
 }
 
 
-/* ========================================= */
+/* ========================================================= */
+/* SECOND DESCRIPTION */
+/* ========================================================= */
+
+.description + .description {
+
+    margin-top:
+        .75rem;
+
+}
+
+
+/* ========================================================= */
 /* STATS GRID */
-/* ========================================= */
+/* ========================================================= */
 
 .stats {
 
-    display:grid;
+    display: grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+        repeat(3, 1fr);
 
-    gap:1.5rem;
+    gap:
+        1.5rem;
 
 }
 
 
-/* ========================================= */
+/* ========================================================= */
 /* CARD */
-/* ========================================= */
+/* ========================================================= */
 
 .card {
 
-    position:relative;
+    position: relative;
 
-    min-height:340px;
+    min-height:
+        350px;
 
-    display:flex;
+    display: flex;
 
-    flex-direction:column;
+    flex-direction: column;
 
-    padding:2rem;
+    padding:
+        2rem;
 
-    overflow:hidden;
+    overflow: hidden;
 
-    border-radius:26px;
+    border-radius:
+        26px;
 
     border:
         1px solid
         rgba(255,255,255,.08);
 
     background:
+
         linear-gradient(
             145deg,
             rgba(255,255,255,.055),
@@ -217,10 +339,12 @@
         );
 
     box-shadow:
+
         0 20px 60px
         rgba(0,0,0,.25);
 
     transition:
+
         transform .35s ease,
         border-color .35s ease,
         box-shadow .35s ease;
@@ -228,21 +352,25 @@
 }
 
 
+/* ========================================================= */
+/* CARD TOP LINE */
+/* ========================================================= */
+
 .card::before {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    top:0;
+    top: 0;
+    left: 0;
 
-    left:0;
+    width: 100%;
 
-    width:100%;
-
-    height:3px;
+    height: 2px;
 
     background:
+
         linear-gradient(
             90deg,
             transparent,
@@ -250,109 +378,154 @@
             transparent
         );
 
-    opacity:.55;
+    opacity:
+        .55;
 
 }
 
+
+/* ========================================================= */
+/* CARD GLOW */
+/* ========================================================= */
 
 .card::after {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    width:220px;
+    width:
+        260px;
 
-    height:220px;
+    height:
+        260px;
 
-    right:-150px;
+    right:
+        -170px;
 
-    bottom:-150px;
+    bottom:
+        -170px;
 
-    border-radius:50%;
+    border-radius:
+        50%;
 
     background:
+
         radial-gradient(
             circle,
-            rgba(163,230,53,.08),
+            rgba(163,230,53,.09),
             transparent 70%
         );
 
-    pointer-events:none;
+    pointer-events:
+        none;
 
 }
 
+
+/* ========================================================= */
+/* CARD HOVER */
+/* ========================================================= */
 
 .card:hover {
 
     transform:
-        translateY(-7px);
+        translateY(-8px);
 
     border-color:
         rgba(163,230,53,.28);
 
     box-shadow:
-        0 28px 70px
-        rgba(0,0,0,.35),
-        0 0 35px
+
+        0 30px 80px
+        rgba(0,0,0,.38),
+
+        0 0 40px
         rgba(163,230,53,.06);
 
 }
 
 
-/* ========================================= */
+/* ========================================================= */
 /* NUMBER */
-/* ========================================= */
+/* ========================================================= */
 
 .number {
 
-    position:absolute;
+    position: absolute;
 
-    top:1.5rem;
+    top:
+        1.25rem;
 
-    right:1.7rem;
+    right:
+        1.5rem;
 
     color:
-        rgba(163,230,53,.18);
+        rgba(163,230,53,.14);
 
-    font-size:4rem;
+    font-size:
+        4.5rem;
 
-    line-height:1;
+    line-height:
+        1;
 
-    font-weight:950;
+    font-weight:
+        950;
 
-    letter-spacing:-.08em;
+    letter-spacing:
+        -.08em;
+
+    user-select:
+        none;
 
 }
 
 
-/* ========================================= */
+/* ========================================================= */
+/* CARD TOP */
+/* ========================================================= */
+
+.cardTop {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+/* ========================================================= */
 /* ICON */
-/* ========================================= */
+/* ========================================================= */
 
 .iconWrapper {
 
-    position:relative;
+    width:
+        54px;
 
-    z-index:1;
+    height:
+        54px;
 
-    width:54px;
+    display: flex;
 
-    height:54px;
+    align-items: center;
 
-    display:flex;
+    justify-content: center;
 
-    align-items:center;
+    border-radius:
+        16px;
 
-    justify-content:center;
-
-    margin-bottom:2rem;
-
-    border-radius:16px;
-
-    color:#111111;
+    color:
+        #111111;
 
     background:
+
         linear-gradient(
             145deg,
             #ECFFC0,
@@ -360,73 +533,124 @@
         );
 
     box-shadow:
+
         0 0 25px
         rgba(163,230,53,.12);
 
 }
 
 
-/* ========================================= */
-/* CARD CONTENT */
-/* ========================================= */
+/* ========================================================= */
+/* EYEBROW */
+/* ========================================================= */
 
-.cardContent {
+.eyebrow {
 
-    position:relative;
+    color:
+        rgba(255,255,255,.32);
 
-    z-index:1;
+    font-size:
+        .55rem;
 
-    margin-top:auto;
+    font-weight:
+        950;
+
+    letter-spacing:
+        .24em;
+
+    text-transform:
+        uppercase;
 
 }
 
 
+/* ========================================================= */
+/* CARD CONTENT */
+/* ========================================================= */
+
+.cardContent {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-top:
+        auto;
+
+}
+
+
+/* ========================================================= */
+/* MAIN VALUE */
+/* ========================================================= */
+
 .cardContent strong {
 
-    display:block;
+    display: block;
 
-    margin-bottom:.55rem;
+    margin-bottom:
+        .55rem;
 
-    color:#FFFFFF;
+    color:
+        #FFFFFF;
 
     font-size:
+
         clamp(
             2.4rem,
             4vw,
             3.5rem
         );
 
-    line-height:.95;
+    line-height:
+        .95;
 
-    font-weight:950;
+    font-weight:
+        950;
 
-    letter-spacing:-.04em;
+    letter-spacing:
+        -.045em;
 
 }
 
+
+/* ========================================================= */
+/* CARD TITLE */
+/* ========================================================= */
 
 .cardTitle {
 
-    display:block;
+    display: block;
 
-    color:#A3E635;
+    color:
+        #A3E635;
 
-    font-size:.68rem;
+    font-size:
+        .68rem;
 
-    font-weight:950;
+    font-weight:
+        950;
 
-    letter-spacing:.19em;
+    letter-spacing:
+        .19em;
 
-    line-height:1.5;
+    line-height:
+        1.5;
 
-    text-transform:uppercase;
+    text-transform:
+        uppercase;
 
 }
 
 
+/* ========================================================= */
+/* CARD DESCRIPTION */
+/* ========================================================= */
+
 .cardContent p {
 
-    max-width:300px;
+    max-width:
+        310px;
 
     margin:
         .9rem
@@ -436,39 +660,116 @@
     color:
         rgba(255,255,255,.55);
 
-    font-size:.86rem;
+    font-size:
+        .86rem;
 
-    line-height:1.7;
+    line-height:
+        1.7;
 
 }
 
 
-/* ========================================= */
+/* ========================================================= */
+/* CARD FOOTER */
+/* ========================================================= */
+
+.cardFooter {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top:
+        1.5rem;
+
+}
+
+
+/* ========================================================= */
+/* FOOTER LINE */
+/* ========================================================= */
+
+.cardFooter span:first-child {
+
+    width:
+        42px;
+
+    height:
+        1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #A3E635,
+            transparent
+        );
+
+}
+
+
+/* ========================================================= */
+/* FOOTER NUMBER */
+/* ========================================================= */
+
+.cardFooter span:last-child {
+
+    color:
+        rgba(255,255,255,.22);
+
+    font-size:
+        .55rem;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        .18em;
+
+}
+
+
+/* ========================================================= */
 /* SIGNATURE */
-/* ========================================= */
+/* ========================================================= */
 
 .signature {
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    justify-content:center;
+    justify-content: center;
 
-    gap:1.5rem;
+    gap:
+        1.5rem;
 
-    margin-top:4.5rem;
+    margin-top:
+        4.5rem;
 
 }
 
 
+/* ========================================================= */
+/* SIGNATURE LINES */
+/* ========================================================= */
+
 .signature span {
 
-    width:90px;
+    width:
+        90px;
 
-    height:1px;
+    height:
+        1px;
 
     background:
+
         linear-gradient(
             90deg,
             transparent,
@@ -481,6 +782,7 @@
 .signature span:last-child {
 
     background:
+
         linear-gradient(
             90deg,
             rgba(163,230,53,.4),
@@ -490,38 +792,56 @@
 }
 
 
+/* ========================================================= */
+/* SIGNATURE TEXT */
+/* ========================================================= */
+
 .signature p {
 
-    margin:0;
+    margin:
+        0;
 
     color:
         rgba(255,255,255,.55);
 
-    font-size:.82rem;
+    font-size:
+        .82rem;
 
-    font-weight:700;
+    font-weight:
+        700;
 
-    letter-spacing:.08em;
+    line-height:
+        1.6;
 
-    text-align:center;
+    letter-spacing:
+        .08em;
+
+    text-align:
+        center;
 
 }
 
+
+/* ========================================================= */
+/* SIGNATURE HIGHLIGHT */
+/* ========================================================= */
 
 .signature strong {
 
-    margin-left:.4rem;
+    margin-left:
+        .4rem;
 
-    color:#A3E635;
+    color:
+        #A3E635;
 
 }
 
 
-/* ========================================= */
+/* ========================================================= */
 /* TABLET */
-/* ========================================= */
+/* ========================================================= */
 
-@media(max-width:900px){
+@media (max-width: 900px) {
 
     .section {
 
@@ -538,27 +858,30 @@
         grid-template-columns:
             1fr;
 
-        max-width:650px;
+        max-width:
+            650px;
 
-        margin:0 auto;
+        margin:
+            0 auto;
 
     }
 
 
     .card {
 
-        min-height:260px;
+        min-height:
+            280px;
 
     }
 
 }
 
 
-/* ========================================= */
+/* ========================================================= */
 /* MOBILE */
-/* ========================================= */
+/* ========================================================= */
 
-@media(max-width:700px){
+@media (max-width: 700px) {
 
     .section {
 
@@ -572,16 +895,19 @@
 
     .intro {
 
-        margin-bottom:3rem;
+        margin-bottom:
+            3rem;
 
     }
 
 
     .kicker {
 
-        font-size:.62rem;
+        font-size:
+            .60rem;
 
-        letter-spacing:.25em;
+        letter-spacing:
+            .25em;
 
     }
 
@@ -589,6 +915,7 @@
     .title {
 
         font-size:
+
             clamp(
                 2.25rem,
                 11vw,
@@ -600,44 +927,61 @@
 
     .description {
 
-        font-size:.9rem;
+        font-size:
+            .9rem;
 
-        line-height:1.75;
+        line-height:
+            1.75;
 
     }
 
 
     .card {
 
-        min-height:260px;
+        min-height:
+            280px;
 
-        padding:1.5rem;
+        padding:
+            1.5rem;
 
-        border-radius:22px;
+        border-radius:
+            22px;
 
     }
 
 
     .number {
 
-        top:1.2rem;
+        top:
+            1.2rem;
 
-        right:1.3rem;
+        right:
+            1.3rem;
 
-        font-size:3.2rem;
+        font-size:
+            3.2rem;
 
     }
 
 
     .iconWrapper {
 
-        width:48px;
+        width:
+            48px;
 
-        height:48px;
+        height:
+            48px;
 
-        margin-bottom:1.5rem;
+        border-radius:
+            14px;
 
-        border-radius:14px;
+    }
+
+
+    .eyebrow {
+
+        font-size:
+            .48rem;
 
     }
 
@@ -645,6 +989,7 @@
     .cardContent strong {
 
         font-size:
+
             clamp(
                 2.3rem,
                 12vw,
@@ -656,51 +1001,101 @@
 
     .cardTitle {
 
-        font-size:.6rem;
+        font-size:
+            .60rem;
 
     }
 
 
     .cardContent p {
 
-        font-size:.82rem;
+        font-size:
+            .82rem;
 
     }
 
 
     .signature {
 
-        gap:.8rem;
+        gap:
+            .8rem;
 
-        margin-top:3rem;
+        margin-top:
+            3rem;
 
     }
 
 
     .signature span {
 
-        width:35px;
+        width:
+            35px;
 
     }
 
 
     .signature p {
 
-        font-size:.68rem;
+        font-size:
+            .68rem;
 
-        line-height:1.6;
+        line-height:
+            1.6;
 
     }
 
 
     .signature strong {
 
-        display:block;
+        display:
+            block;
 
         margin:
             .15rem
             0
             0;
+
+    }
+
+}
+
+
+/* ========================================================= */
+/* SMALL MOBILE */
+/* ========================================================= */
+
+@media (max-width: 420px) {
+
+    .section {
+
+        padding:
+            4.5rem
+            .9rem
+            5rem;
+
+    }
+
+
+    .title {
+
+        font-size:
+            2.2rem;
+
+    }
+
+
+    .description {
+
+        font-size:
+            .84rem;
+
+    }
+
+
+    .card {
+
+        min-height:
+            270px;
 
     }
 
