@@ -42,8 +42,8 @@ export const liveData = {
 
 
                {
-        day: "DI",
-        date: "11 AUG",
+        day: "MI",
+        date: "12 AUG",
         time: "19:30 Uhr",
         title: "HALO: Campaign Evolved",
       },
