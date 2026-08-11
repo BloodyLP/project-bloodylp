@@ -85,7 +85,7 @@ export default function CommentatorShowcase() {
                     >
 
                         <Image
-                            src="/commentator/images/sport-europe-mikrofone.png"
+                            src="/commentator/images/sport-europe-mikrofon.png"
                             alt="SportEurope.TV Kommentatoren-Mikrofone"
                             fill
                             sizes="(max-width: 900px) 100vw, 65vw"
