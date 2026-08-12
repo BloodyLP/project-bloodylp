@@ -138,22 +138,13 @@
 /* ================================= */
 
 .flipInner > .card {
-
-    transform:rotateY(0deg);
-
-    -webkit-transform:rotateY(0deg);
+    transform: none;
+    -webkit-transform: none;
 }
 
-
-/* ================================= */
-/* BACK */
-/* ================================= */
-
 .flipInner > .back {
-
-    transform:rotateY(180deg);
-
-    -webkit-transform:rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 
@@ -846,32 +837,6 @@
         min-height:480px;
 
         max-width:280px;
-
-        transform-style:
-            preserve-3d;
-
-        -webkit-transform-style:
-            preserve-3d;
-    }
-
-
-    .compactContainer
-    .flipInner > .card,
-
-    .compactContainer
-    .flipInner > .back {
-
-        width:280px;
-
-        height:480px;
-
-        min-height:480px;
-
-        backface-visibility:
-            hidden !important;
-
-        -webkit-backface-visibility:
-            hidden !important;
 
         transform-style:
             preserve-3d;

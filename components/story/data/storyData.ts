@@ -21,7 +21,7 @@ export const storyData = [
 
     button: "Zur Content-Welt",
 
-    href: "/gaming",
+    href: "/content-creator",
   },
 
   {
