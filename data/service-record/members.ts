@@ -100,6 +100,12 @@ import {
 
 } from "./members/annihilatorlp";
 
+import {
+
+    surstroemingtyp
+
+} from "./members/surstroemingtyp";
+
 export const MEMBERS: ServiceRecordMember[] = [
 
     bloodylp,
@@ -129,5 +135,7 @@ export const MEMBERS: ServiceRecordMember[] = [
     condor,
 
     annihilatorlp,
+
+    surstroemingtyp,
 
 ];

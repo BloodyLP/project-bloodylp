@@ -107,7 +107,7 @@ const featuredMembers:Record<number, FeaturedMember> = {
 
 },
 
-16:{
+9:{
 
     image:"/members/ligoween/avatar.png",
 
@@ -177,7 +177,7 @@ const featuredMembers:Record<number, FeaturedMember> = {
 
 },
 
-9:{
+16:{
 
     image:"/members/sackzefix/avatar.png",
 
@@ -204,6 +204,16 @@ const featuredMembers:Record<number, FeaturedMember> = {
     name:"AnnihilatorLP97",
 
     organization:"youngArmy",
+
+},
+
+2:{
+
+    image:"/members/surstroemingtyp/avatar.png",
+
+    name:"surstroemingtyp123",
+
+    organization:"bloodyArmy",
 
 },
 
