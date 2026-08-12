@@ -26,7 +26,7 @@ const stats = [
         icon: FileBadge,
     },
     {
-        value: "2019",
+        value: "2018",
         label: "Gegründet",
         icon: Shield,
     },
