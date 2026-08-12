@@ -8,7 +8,7 @@ export type HistoryEntry = {
 
 export const historyEntries: HistoryEntry[] = [
     {
-        year: "2019",
+        year: "2018",
         chapter: "Der Anfang",
         label: "BLOODYARMY",
         title: "Die Gründung der BloodyArmy",

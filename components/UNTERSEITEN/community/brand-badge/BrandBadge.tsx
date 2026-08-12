@@ -20,7 +20,7 @@ export default function BrandBadge() {
                 </span>
 
                 <span className={styles.est}>
-                    EST. 2019
+                    EST. 2018
                 </span>
             </div>
         </div>
