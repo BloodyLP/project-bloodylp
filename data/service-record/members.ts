@@ -106,6 +106,12 @@ import {
 
 } from "./members/surstroemingtyp";
 
+import {
+
+    MaylatheBloodylinchen
+
+} from "./members/mayla";
+
 export const MEMBERS: ServiceRecordMember[] = [
 
     bloodylp,
@@ -137,5 +143,7 @@ export const MEMBERS: ServiceRecordMember[] = [
     annihilatorlp,
 
     surstroemingtyp,
+
+    MaylatheBloodylinchen,
 
 ];

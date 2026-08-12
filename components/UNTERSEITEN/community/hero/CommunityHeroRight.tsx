@@ -217,6 +217,16 @@ const featuredMembers:Record<number, FeaturedMember> = {
 
 },
 
+17:{
+
+    image:"/members/mayla/avatar.png",
+
+    name:"MaylatheBloodylinchen",
+
+    organization:"youngArmy",
+
+},
+
 };
 
 

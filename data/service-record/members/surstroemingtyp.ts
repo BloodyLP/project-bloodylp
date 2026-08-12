@@ -238,24 +238,24 @@ stanleyCup:{
 
                 games:82,
 
-                goals:36,
+                goals:22,
 
-                assists:15,
+                assists:27,
 
-                points:51,
+                points:49,
 
-                plusMinus:47,
+                plusMinus:37,
 
-                penaltyMinutes:2,
+                penaltyMinutes:13,
 
 
                 playoffGames:19,
 
-                playoffGoals:5,
+                playoffGoals:8,
 
-                playoffAssists:3,
+                playoffAssists:6,
 
-                playoffPoints:8,
+                playoffPoints:14,
 
                 playoffPlusMinus:2,
 
