@@ -14,7 +14,7 @@
 
     min-height:580px;
 
-    margin:3px;
+    margin:0;
 
     display:flex;
 
@@ -39,6 +39,7 @@
     transition:
         transform .35s ease,
         box-shadow .35s ease;
+
 }
 
 
@@ -50,6 +51,7 @@
     box-shadow:
         0 35px 90px rgba(0,0,0,.55),
         0 0 40px var(--accent-glow);
+
 }
 
 
@@ -68,6 +70,7 @@
     perspective:1400px;
 
     -webkit-perspective:1400px;
+
 }
 
 
@@ -76,6 +79,15 @@
     width:450px;
 
     flex:0 0 450px;
+
+    /*
+     * Definierter Abstand zwischen den Karten.
+     * Verhindert, dass die Karten direkt
+     * aneinanderkleben.
+     */
+
+    margin-right:16px;
+
 }
 
 
@@ -99,7 +111,6 @@
 
     -webkit-transform-origin:center center;
 
-    will-change:transform;
 }
 
 
@@ -108,7 +119,6 @@
 /* ================================= */
 
 .flipInner > .card,
-
 .flipInner > .back {
 
     position:absolute;
@@ -127,9 +137,6 @@
 
     -webkit-backface-visibility:hidden;
 
-    transform-style:preserve-3d;
-
-    -webkit-transform-style:preserve-3d;
 }
 
 
@@ -138,13 +145,55 @@
 /* ================================= */
 
 .flipInner > .card {
-    transform: none;
-    -webkit-transform: none;
+
+    transform:none;
+
+    -webkit-transform:none;
+
+    z-index:2;
+
 }
 
+
+/* ================================= */
+/* BACK */
+/* ================================= */
+
 .flipInner > .back {
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
+
+    transform:rotateY(180deg);
+
+    -webkit-transform:rotateY(180deg);
+
+    z-index:1;
+
+}
+
+
+/* ================================= */
+/* SAFARI / WEBKIT FLIP STATE */
+/* ================================= */
+
+/*
+ * Safari/WebKit kann bei verschachtelten
+ * preserve-3d Ebenen die Z-Reihenfolge
+ * fehlerhaft darstellen.
+ *
+ * Die Kartenflächen selbst bleiben deshalb
+ * flach. Nur flipInner bildet den 3D-Kontext.
+ */
+
+.flipInner.isFlipped > .card {
+
+    z-index:1;
+
+}
+
+
+.flipInner.isFlipped > .back {
+
+    z-index:2;
+
 }
 
 
@@ -173,6 +222,7 @@
     border-bottom:
         1px solid
         rgba(255,255,255,.08);
+
 }
 
 
@@ -185,6 +235,7 @@
     gap:.8rem;
 
     min-width:0;
+
 }
 
 
@@ -197,12 +248,14 @@
     object-fit:contain;
 
     flex-shrink:0;
+
 }
 
 
 .rankContent {
 
     min-width:0;
+
 }
 
 
@@ -223,6 +276,7 @@
     text-transform:uppercase;
 
     max-width:170px;
+
 }
 
 
@@ -262,6 +316,7 @@
     box-shadow:
         0 0 15px
         var(--accent-glow-soft);
+
 }
 
 
@@ -283,6 +338,7 @@
         2rem
         2rem
         1rem;
+
 }
 
 
@@ -301,6 +357,7 @@
         var(--accent-border);
 
     box-shadow:
+
         0 0 30px
         var(--accent-glow-soft),
 
@@ -308,9 +365,11 @@
         rgba(0,0,0,.50);
 
     transition:
+
         border-color .25s ease,
         box-shadow .25s ease,
         transform .25s ease;
+
 }
 
 
@@ -321,11 +380,13 @@
     border-color:var(--accent);
 
     box-shadow:
+
         0 0 40px
         var(--accent-glow),
 
         0 20px 45px
         rgba(0,0,0,.50);
+
 }
 
 
@@ -347,6 +408,7 @@
 
     padding:
         0 1rem;
+
 }
 
 
@@ -375,6 +437,7 @@
     text-shadow:
         0 0 12px
         rgba(0,0,0,.35);
+
 }
 
 
@@ -407,6 +470,7 @@
     border-radius:10px;
 
     border:2px solid;
+
 }
 
 
@@ -423,6 +487,7 @@
     letter-spacing:.18em;
 
     text-transform:uppercase;
+
 }
 
 
@@ -450,6 +515,7 @@
         1.5rem
         1.5rem
         1.8rem;
+
 }
 
 
@@ -468,6 +534,7 @@
     text-shadow:
         0 0 8px
         var(--accent-glow-soft);
+
 }
 
 
@@ -519,9 +586,11 @@
     white-space:normal;
 
     transition:
+
         transform .25s ease,
         box-shadow .25s ease,
         border-color .25s ease;
+
 }
 
 
@@ -536,11 +605,13 @@
     border-color:var(--accent);
 
     box-shadow:
+
         0 0 25px
         var(--accent-glow),
 
         0 10px 25px
         rgba(0,0,0,.35);
+
 }
 
 
@@ -549,6 +620,7 @@
     transform:
         translateY(-1px)
         scale(.99);
+
 }
 
 
@@ -565,12 +637,14 @@
     min-height:420px;
 
     border-radius:22px;
+
 }
 
 
 .compact .header {
 
     padding:.8rem;
+
 }
 
 
@@ -579,6 +653,7 @@
     width:42px;
 
     height:42px;
+
 }
 
 
@@ -587,6 +662,7 @@
     font-size:.8rem;
 
     max-width:120px;
+
 }
 
 
@@ -595,12 +671,14 @@
     font-size:.8rem;
 
     min-width:55px;
+
 }
 
 
 .compact .avatarWrapper {
 
     padding:1rem;
+
 }
 
 
@@ -611,12 +689,14 @@
     height:220px;
 
     border-radius:18px;
+
 }
 
 
 .compact .name {
 
     font-size:1.5rem;
+
 }
 
 
@@ -625,12 +705,14 @@
     min-width:120px;
 
     min-height:32px;
+
 }
 
 
 .compact .badgeTitle {
 
     font-size:.65rem;
+
 }
 
 
@@ -639,6 +721,7 @@
     margin-top:auto;
 
     padding:1rem;
+
 }
 
 
@@ -647,6 +730,7 @@
     min-height:38px;
 
     font-size:.70rem;
+
 }
 
 
@@ -657,12 +741,12 @@
 .compactContainer .flipInner {
 
     min-height:580px;
+
 }
 
 
 .compactContainer
 .flipInner > .card,
-
 .compactContainer
 .flipInner > .back {
 
@@ -671,6 +755,7 @@
     height:580px;
 
     min-height:580px;
+
 }
 
 
@@ -681,22 +766,26 @@
 .founder {
 
     min-height:700px;
+
 }
 
 
 .flipInner:has(.founder) {
 
     min-height:700px;
+
 }
 
 
-.flipInner:has(.founder) > .founder,
-
-.flipInner:has(.founder) > .back {
+.flipInner:has(.founder)
+> .founder,
+.flipInner:has(.founder)
+> .back {
 
     height:700px;
 
     min-height:700px;
+
 }
 
 
@@ -717,6 +806,7 @@
     border-radius:inherit;
 
     background:
+
         radial-gradient(
             circle at top,
             var(--accent-glow-soft),
@@ -724,6 +814,7 @@
         );
 
     opacity:.55;
+
 }
 
 
@@ -744,8 +835,10 @@
         transparent;
 
     box-shadow:
+
         inset 0 0 0 1px
         rgba(255,255,255,.03);
+
 }
 
 
@@ -755,17 +848,20 @@
 
 @media(max-width:700px) {
 
+
     .avatar {
 
         width:210px;
 
         height:210px;
+
     }
 
 
     .name {
 
         font-size:1.8rem;
+
     }
 
 
@@ -790,6 +886,7 @@
         perspective:1200px;
 
         -webkit-perspective:1200px;
+
     }
 
 
@@ -805,6 +902,7 @@
 
         -webkit-transform-style:
             preserve-3d;
+
     }
 
 
@@ -814,35 +912,34 @@
 
     .compactContainer {
 
-        width:280px;
+        width:340px;
 
         flex:
-            0 0 280px;
+            0 0 320px;
 
-        max-width:280px;
+        max-width:350px;
 
-        margin:0;
+        margin:
+            0 16px 0 0;
 
         perspective:1200px;
 
         -webkit-perspective:1200px;
+
     }
 
 
     .compactContainer
     .flipInner {
 
-        width:280px;
+        width:340px;
+
+        height: 480px;
 
         min-height:480px;
 
-        max-width:280px;
+        max-width:340px;
 
-        transform-style:
-            preserve-3d;
-
-        -webkit-transform-style:
-            preserve-3d;
     }
 
 
@@ -853,11 +950,20 @@
     .compactContainer
     .flipInner > .card {
 
+        width:340px;
+
+        max-width:340px;
+
+        height:480px;
+
+        min-height:480px;
+
         transform:
             rotateY(0deg);
 
         -webkit-transform:
             rotateY(0deg);
+
     }
 
 
@@ -868,11 +974,20 @@
     .compactContainer
     .flipInner > .back {
 
+        width:340px;
+
+        max-width:340px;
+
+        height:480px;
+
+        min-height:480px;
+
         transform:
             rotateY(180deg);
 
         -webkit-transform:
             rotateY(180deg);
+
     }
 
 
@@ -885,12 +1000,14 @@
         padding:.65rem;
 
         gap:.5rem;
+
     }
 
 
     .compact .rankArea {
 
         gap:.45rem;
+
     }
 
 
@@ -899,6 +1016,7 @@
         width:34px;
 
         height:34px;
+
     }
 
 
@@ -911,6 +1029,7 @@
         max-width:105px;
 
         letter-spacing:.06em;
+
     }
 
 
@@ -927,6 +1046,7 @@
         letter-spacing:.08em;
 
         border-radius:9px;
+
     }
 
 
@@ -940,18 +1060,20 @@
             .65rem
             .65rem
             .4rem;
+
     }
 
 
     .compact .avatar {
 
-        width:165px;
+        width:185px;
 
-        height:165px;
+        height:185px;
 
         border-radius:15px;
 
         border-width:2px;
+
     }
 
 
@@ -964,16 +1086,22 @@
         padding:
             0
             .5rem;
+
     }
 
 
     .compact .name {
 
-        font-size:1.15rem;
+        padding:
+            0.45rem
+            .5rem;
+
+        font-size:1.50rem;
 
         line-height:1.05;
 
         letter-spacing:.04em;
+
     }
 
 
@@ -992,6 +1120,7 @@
         border-radius:8px;
 
         border-width:1px;
+
     }
 
 
@@ -1000,6 +1129,7 @@
         font-size:.55rem;
 
         letter-spacing:.10em;
+
     }
 
 
@@ -1009,19 +1139,21 @@
 
     .compact .footer {
 
-        gap:.65rem;
+        gap:.7rem;
 
-        padding:.7rem;
+        padding:0.7rem;
+
     }
 
 
     .compact .joined {
 
-        font-size:.62rem;
+        font-size:1.0rem;
 
-        letter-spacing:.12em;
+        letter-spacing:.10em;
 
         text-align:center;
+
     }
 
 
@@ -1035,7 +1167,7 @@
             .55rem
             .4rem;
 
-        font-size:.55rem;
+        font-size:.75rem;
 
         line-height:1.2;
 
@@ -1044,6 +1176,7 @@
         white-space:normal;
 
         overflow-wrap:anywhere;
+
     }
 
 
@@ -1062,6 +1195,7 @@
             );
 
         max-width:100%;
+
     }
 
 
@@ -1083,6 +1217,7 @@
                 240px,
                 68vw
             );
+
     }
 
 
@@ -1093,6 +1228,7 @@
     .header {
 
         padding:1rem;
+
     }
 
 
@@ -1101,6 +1237,7 @@
         font-size:.82rem;
 
         max-width:145px;
+
     }
 
 
@@ -1113,6 +1250,7 @@
             .65rem;
 
         font-size:.7rem;
+
     }
 
 
@@ -1129,6 +1267,7 @@
         overflow-wrap:anywhere;
 
         word-break:normal;
+
     }
 
 }

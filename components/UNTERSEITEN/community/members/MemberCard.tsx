@@ -41,31 +41,20 @@ type MemberCardProps = {
     compact?: boolean;
 
     rank: {
-
         title: string;
-
         image: string;
-
     };
 
     badge: {
-
         title: string;
-
         subtitle?: string;
-
         theme: string;
-
     };
 
     prestige?: {
-
         level: number;
-
         key: string | null;
-
         title: string | null;
-
     };
 
     stats?:
@@ -75,11 +64,8 @@ type MemberCardProps = {
     playerType: "skater" | "goalie";
 
     profile: {
-
         position: string;
-
         number: string;
-
     };
 
 };
@@ -129,17 +115,11 @@ export default function MemberCard({
 
 
     if (
-
         badge.title !== "FOUNDER"
-
         &&
-
         prestige?.level
-
         &&
-
         prestige.level > 0
-
     ) {
 
         displayTitle =
@@ -166,40 +146,33 @@ export default function MemberCard({
     return (
 
         <div
-
             className={
-
                 compact
-
                     ? `${styles.flipContainer} ${styles.compactContainer}`
-
                     : styles.flipContainer
-
             }
-
         >
 
             <motion.div
 
-                className={styles.flipInner}
+                className={
+                    flipped
+                        ? `${styles.flipInner} ${styles.isFlipped}`
+                        : styles.flipInner
+                }
 
                 initial={false}
 
                 animate={{
-
                     rotateY:
                         flipped
                             ? 180
                             : 0,
-
                 }}
 
                 transition={{
-
                     duration: 0.7,
-
                     ease: "easeInOut",
-
                 }}
 
             >
@@ -211,21 +184,15 @@ export default function MemberCard({
                 <article
 
                     className={
-
                         compact
-
                             ? `${styles.card} ${styles.compact}`
-
                             : `${styles.card} ${styles.founder}`
-
                     }
 
                     style={
-
                         createThemeVariables(
                             organizationTheme
                         )
-
                     }
 
                 >
@@ -249,7 +216,6 @@ export default function MemberCard({
                                 alt={rank.title}
 
                                 width={70}
-
                                 height={70}
 
                                 className={
@@ -309,7 +275,6 @@ export default function MemberCard({
                             alt={name}
 
                             width={280}
-
                             height={280}
 
                             className={
@@ -434,21 +399,15 @@ export default function MemberCard({
                             onClick={() => {
 
                                 sessionStorage.setItem(
-
                                     "communityScroll",
-
                                     String(
                                         window.scrollY
                                     )
-
                                 );
 
                                 sessionStorage.setItem(
-
                                     "selectedMember",
-
                                     id
-
                                 );
 
                             }}
