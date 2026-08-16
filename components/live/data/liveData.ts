@@ -40,28 +40,28 @@ export const liveData = {
     events: [
 
 {
-        day: "SO",
-        date: "16. AUG",
+        day: "MO",
+        date: "17. AUG",
         time: "19:30 Uhr",
         title: "Assassins Creed Black Flag Resynced",
       },      
 
       {
-        day: "MO",
-        date: "17. AUG",
+        day: "MI",
+        date: "19. AUG",
         time: "19:30 Uhr",
         title: "HALO: Campaign Evolved",
       }, 
 
             {
-        day: "MI",
-        date: "19. AUG",
+        day: "DO",
+        date: "20. AUG",
         time: "19:30 Uhr",
         title: "WARHOUNDS - FIRST LOOK",
       }, 
 
                   {
-        day: "FR",
+        day: "SA",
         date: "21. AUG",
         time: "19:30 Uhr",
         title: "Assassins Creed Black Flag Resynced",
