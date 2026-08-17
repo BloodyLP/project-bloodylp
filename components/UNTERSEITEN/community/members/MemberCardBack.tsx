@@ -32,51 +32,17 @@ type MemberCardBackProps = {
 
     organization: OrganizationId;
 
-
-    /*
-    ============================================
-    STATISTIKEN
-    ============================================
-    */
-
     stats?:
-
         | SkaterCareerStatsData
-
         | GoalieCareerStatsData
-
         | DualCareerStatsData;
 
-
-    /*
-    ============================================
-    SPIELERTYP
-    ============================================
-    */
-
     playerType:
-
         | "skater"
-
         | "goalie"
-
         | "dual";
 
-
-    /*
-    ============================================
-    DUAL ROLE
-    ============================================
-    */
-
     dualRole?: boolean;
-
-
-    /*
-    ============================================
-    PROFIL
-    ============================================
-    */
 
     profile?: {
 
@@ -85,13 +51,6 @@ type MemberCardBackProps = {
         number: string;
 
     };
-
-
-    /*
-    ============================================
-    ZURÜCK
-    ============================================
-    */
 
     onBack: () => void;
 
@@ -123,6 +82,10 @@ export default function MemberCardBack({
 }: MemberCardBackProps) {
 
 
+    /* ========================================= */
+    /* ORGANISATION THEME */
+    /* ========================================= */
+
     const theme = getTheme(
 
         organization
@@ -130,35 +93,30 @@ export default function MemberCardBack({
     );
 
 
+    /* ========================================= */
+    /* THEME VARIABLES */
+    /* ========================================= */
+
+    const themeVariables =
+
+        createThemeVariables(
+
+            theme
+
+        );
+
+
+    /* ========================================= */
+    /* CARD */
+    /* ========================================= */
+
     return (
 
         <article
 
-            className={
+            className={styles.backCard}
 
-                `${styles.backCard} ` +
-
-                (
-
-                    organization === "youngArmy"
-
-                        ? styles.youngArmy
-
-                        : styles.bloodyArmy
-
-                )
-
-            }
-
-            style={
-
-                createThemeVariables(
-
-                    theme
-
-                )
-
-            }
+            style={themeVariables}
 
         >
 
@@ -168,21 +126,13 @@ export default function MemberCardBack({
 
             <header
 
-                className={
-
-                    styles.header
-
-                }
+                className={styles.header}
 
             >
 
                 <span
 
-                    className={
-
-                        styles.title
-
-                    }
+                    className={styles.title}
 
                 >
 
@@ -193,15 +143,15 @@ export default function MemberCardBack({
 
                 <span
 
-                    className={
-
-                        styles.member
-
-                    }
+                    className={styles.member}
 
                 >
 
-                    {armyId} • {name}
+                    {armyId}
+
+                    {" • "}
+
+                    {name}
 
                 </span>
 
@@ -214,21 +164,17 @@ export default function MemberCardBack({
 
             <section
 
-                className={
-
-                    styles.playerProfile
-
-                }
+                className={styles.playerProfile}
 
             >
 
+                {/* ================================= */}
+                {/* PLAYER */}
+                {/* ================================= */}
+
                 <div
 
-                    className={
-
-                        styles.playerIdentity
-
-                    }
+                    className={styles.playerIdentity}
 
                 >
 
@@ -248,13 +194,13 @@ export default function MemberCardBack({
                 </div>
 
 
+                {/* ================================= */}
+                {/* POSITION / NUMBER */}
+                {/* ================================= */}
+
                 <div
 
-                    className={
-
-                        styles.playerData
-
-                    }
+                    className={styles.playerData}
 
                 >
 
@@ -315,16 +261,12 @@ export default function MemberCardBack({
 
 
             {/* ================================= */}
-            {/* CONTENT */}
+            {/* STATISTICS */}
             {/* ================================= */}
 
             <div
 
-                className={
-
-                    styles.content
-
-                }
+                className={styles.content}
 
             >
 
@@ -354,11 +296,7 @@ export default function MemberCardBack({
 
                     <div
 
-                        className={
-
-                            styles.empty
-
-                        }
+                        className={styles.empty}
 
                     >
 
@@ -377,11 +315,7 @@ export default function MemberCardBack({
 
             <footer
 
-                className={
-
-                    styles.footer
-
-                }
+                className={styles.footer}
 
             >
 
@@ -389,11 +323,7 @@ export default function MemberCardBack({
 
                     type="button"
 
-                    className={
-
-                        styles.backButton
-
-                    }
+                    className={styles.backButton}
 
                     onClick={(event) => {
 

@@ -26,8 +26,8 @@
     background:
         linear-gradient(
             180deg,
-            #242424 0%,
-            #161616 100%
+            rgba(35,35,35,.98),
+            rgba(18,18,18,.98)
         );
 
     border:
@@ -40,25 +40,40 @@
         0 30px 70px
         rgba(0,0,0,.45);
 
-}
 
+    /*
+    ============================================
+    ORGANISATIONSFARBE
+    ============================================
 
-/* ========================================= */
-/* ORGANISATION THEMES */
-/* ========================================= */
+    Die Werte kommen direkt aus:
 
-.bloodyArmy {
+        getTheme(organization)
+
+    und
+
+        createThemeVariables(theme)
+
+    Dadurch:
+
+        BloodyArmy  = Grün
+        YoungArmy   = Rot
+        Founder     = Grün
+
+    Es gibt hier KEINE Sonderfarbe.
+    */
 
     --back-accent:
-        #a3e635;
+        var(--accent);
 
-}
+    --back-accent-light:
+        var(--accent-light);
 
+    --back-accent-border:
+        var(--accent-border);
 
-.youngArmy {
-
-    --back-accent:
-        #facc15;
+    --back-accent-glow:
+        var(--accent-glow);
 
 }
 
@@ -99,7 +114,7 @@
 
 
 /* ========================================= */
-/* HEADER TITLE */
+/* TITLE */
 /* ========================================= */
 
 .title {
@@ -124,6 +139,10 @@
 
 }
 
+
+/* ========================================= */
+/* MEMBER */
+/* ========================================= */
 
 .member {
 
@@ -318,6 +337,16 @@
 /* CONTENT */
 /* ========================================= */
 
+/*
+   NUR DIESER BEREICH SCROLLT.
+
+   Header
+   Player Profile
+   Footer
+
+   bleiben fest stehen.
+*/
+
 .content {
 
     position:relative;
@@ -349,16 +378,6 @@
     overscroll-behavior:
         contain;
 
-    /*
-    =========================================
-    GANZ WICHTIG
-    =========================================
-
-    Der Content ist der einzige Bereich,
-    der vertikal scrollen darf.
-
-    */
-
     touch-action:
         pan-y pan-x;
 
@@ -366,7 +385,9 @@
         thin;
 
     scrollbar-color:
+
         var(--back-accent)
+
         rgba(255,255,255,.04);
 
 }
@@ -408,7 +429,7 @@
 
     box-shadow:
         0 0 10px
-        rgba(163,230,53,.35);
+        var(--back-accent-glow);
 
 }
 
@@ -416,7 +437,7 @@
 .content::-webkit-scrollbar-thumb:hover {
 
     background:
-        #bef264;
+        var(--back-accent-light);
 
 }
 
@@ -477,6 +498,8 @@
 
     justify-content:center;
 
+    width:100%;
+
     padding:
         .8rem
         1rem;
@@ -497,8 +520,7 @@
 
 .backButton {
 
-    width:
-        100%;
+    width:100%;
 
     min-height:
         42px;
@@ -521,7 +543,7 @@
         999px;
 
     background:
-        rgba(0,0,0,.2);
+        rgba(0,0,0,.22);
 
     color:
         var(--back-accent);
@@ -541,13 +563,23 @@
     cursor:pointer;
 
     transition:
+
         background .2s ease,
+
         color .2s ease,
+
+        border-color .2s ease,
+
         box-shadow .2s ease,
+
         transform .2s ease;
 
 }
 
+
+/* ========================================= */
+/* BUTTON HOVER */
+/* ========================================= */
 
 .backButton:hover {
 
@@ -557,15 +589,22 @@
     color:
         #111111;
 
+    border-color:
+        var(--back-accent-light);
+
     box-shadow:
         0 0 20px
-        rgba(163,230,53,.35);
+        var(--back-accent-glow);
 
     transform:
         translateY(-2px);
 
 }
 
+
+/* ========================================= */
+/* BUTTON ACTIVE */
+/* ========================================= */
 
 .backButton:active {
 
@@ -596,8 +635,7 @@
 
         max-height:none;
 
-        border-radius:
-            24px;
+        border-radius:24px;
 
         overflow:hidden;
 
@@ -703,7 +741,7 @@
 
 
     /* ===================================== */
-    /* CONTENT */
+    /* STATISTICS SCROLL */
     /* ===================================== */
 
     .content {
@@ -745,9 +783,6 @@
         touch-action:
             pan-y pan-x;
 
-        scrollbar-width:
-            thin;
-
     }
 
 
@@ -765,10 +800,12 @@
 
 
     /* ===================================== */
-    /* BACK BUTTON */
+    /* BUTTON */
     /* ===================================== */
 
     .backButton {
+
+        width:100%;
 
         min-height:
             38px;
