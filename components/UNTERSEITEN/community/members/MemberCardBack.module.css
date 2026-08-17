@@ -10,6 +10,8 @@
 
     height:100%;
 
+    min-height:0;
+
     display:flex;
 
     flex-direction:column;
@@ -314,6 +316,8 @@
 
     min-width:0;
 
+    min-height:0;
+
     padding:
         0
         1rem
@@ -475,7 +479,9 @@
 }
 
 
+/* ================================= */
 /* Chrome / Edge / Safari */
+/* ================================= */
 
 .content::-webkit-scrollbar{
 
@@ -580,6 +586,8 @@
         height:100%;
 
         min-width:0;
+
+        min-height:0;
 
         overflow:hidden;
 
@@ -692,11 +700,13 @@
 
     /* ================================= */
     /* CONTENT / STATS SCROLL */
-/* ================================= */
+    /* ================================= */
 
     .content{
 
         min-width:0;
+
+        min-height:0;
 
         width:100%;
 
@@ -704,13 +714,6 @@
             0
             .65rem
             .65rem;
-
-        /*
-         * Die Karte bleibt schmal.
-         * Die Statistik darf innerhalb
-         * dieses Bereichs horizontal
-         * gescrollt werden.
-         */
 
         overflow-x:auto;
 
