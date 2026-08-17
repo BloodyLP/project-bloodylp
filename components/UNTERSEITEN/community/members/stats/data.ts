@@ -1,172 +1,197 @@
+/**
+ * ============================================
+ * BloodyArmy
+ * ============================================
+ *
+ * File:
+ * stats/data.ts
+ *
+ * Description:
+ * Statische Karriere-Statistikdaten.
+ *
+ * ============================================
+ */
+
 import type {
-
     SkaterCareerStatsData,
-
 } from "./types";
 
-export const emptyCareerStats:SkaterCareerStatsData = {
 
-    seasons:[],
+/* ========================================= */
+/* LEERE KARRIERE-STATISTIK */
+/* ========================================= */
 
-    regularSeason:[],
+export const emptyCareerStats: SkaterCareerStatsData = {
 
-    playoffs:[],
+    seasons: [],
 
-    total:{
+    regularSeason: [],
 
-        season:"GESAMT",
+    playoffs: [],
 
-        year:"GESAMT",
+    total: {
 
-        team:"BloodyArmy",
+        year: "GESAMT",
 
-        games:0,
+        team: "BloodyArmy",
 
-        goals:0,
+        games: 0,
 
-        assists:0,
+        goals: 0,
 
-        points:0,
+        assists: 0,
 
-        plusMinus:0,
+        points: 0,
 
-        penaltyMinutes:0,
+        plusMinus: 0,
 
-        playoffGames:0,
+        penaltyMinutes: 0,
 
-        playoffGoals:0,
 
-        playoffAssists:0,
+        playoffGames: 0,
 
-        playoffPoints:0,
+        playoffGoals: 0,
 
-        playoffPlusMinus:0,
+        playoffAssists: 0,
 
-        playoffPenaltyMinutes:0,
+        playoffPoints: 0,
 
-        titles:[],
+        playoffPlusMinus: 0,
+
+        playoffPenaltyMinutes: 0,
+
+
+        titles: [],
 
     },
 
 };
 
-export const founderStats:SkaterCareerStatsData = {
 
-    seasons:[
+/* ========================================= */
+/* FOUNDER STATISTIK */
+/* ========================================= */
+
+export const founderStats: SkaterCareerStatsData = {
+
+    seasons: [
 
         {
 
-            season:"2019/20",
+            year: "2019/20",
 
-            year:"2019/20",
+            team: "BloodyArmy",
 
-            team:"BloodyArmy",
+            games: 0,
 
-            games:0,
+            goals: 0,
 
-            goals:0,
+            assists: 0,
 
-            assists:0,
+            points: 0,
 
-            points:0,
+            plusMinus: 0,
 
-            plusMinus:0,
+            penaltyMinutes: 0,
 
-            penaltyMinutes:0,
 
-            playoffGames:0,
+            playoffGames: 0,
 
-            playoffGoals:0,
+            playoffGoals: 0,
 
-            playoffAssists:0,
+            playoffAssists: 0,
 
-            playoffPoints:0,
+            playoffPoints: 0,
 
-            playoffPlusMinus:0,
+            playoffPlusMinus: 0,
 
-            playoffPenaltyMinutes:0,
+            playoffPenaltyMinutes: 0,
 
-            titles:[],
+
+            titles: [],
 
         },
 
     ],
 
-    regularSeason:[
+
+    regularSeason: [
 
         {
 
-            season:"2019/20",
+            year: "2019/20",
 
-            year:"2019/20",
+            team: "BloodyArmy",
 
-            team:"BloodyArmy",
+            games: 0,
 
-            games:0,
+            goals: 0,
 
-            goals:0,
+            assists: 0,
 
-            assists:0,
+            points: 0,
 
-            points:0,
+            plusMinus: 0,
 
-            plusMinus:0,
+            penaltyMinutes: 0,
 
-            penaltyMinutes:0,
 
-            playoffGames:0,
+            playoffGames: 0,
 
-            playoffGoals:0,
+            playoffGoals: 0,
 
-            playoffAssists:0,
+            playoffAssists: 0,
 
-            playoffPoints:0,
+            playoffPoints: 0,
 
-            playoffPlusMinus:0,
+            playoffPlusMinus: 0,
 
-            playoffPenaltyMinutes:0,
+            playoffPenaltyMinutes: 0,
 
-            titles:[],
+
+            titles: [],
 
         },
 
     ],
 
-    playoffs:[],
 
-    total:{
+    playoffs: [],
 
-        season:"GESAMT",
 
-        year:"GESAMT",
+    total: {
 
-        team:"BloodyArmy",
+        year: "GESAMT",
 
-        games:0,
+        team: "BloodyArmy",
 
-        goals:0,
+        games: 0,
 
-        assists:0,
+        goals: 0,
 
-        points:0,
+        assists: 0,
 
-        plusMinus:0,
+        points: 0,
 
-        penaltyMinutes:0,
+        plusMinus: 0,
 
-        playoffGames:0,
+        penaltyMinutes: 0,
 
-        playoffGoals:0,
 
-        playoffAssists:0,
+        playoffGames: 0,
 
-        playoffPoints:0,
+        playoffGoals: 0,
 
-        playoffPlusMinus:0,
+        playoffAssists: 0,
 
-        playoffPenaltyMinutes:0,
+        playoffPoints: 0,
 
-        titles:[],
+        playoffPlusMinus: 0,
+
+        playoffPenaltyMinutes: 0,
+
+
+        titles: [],
 
     },
 

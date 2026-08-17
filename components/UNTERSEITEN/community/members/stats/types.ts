@@ -3,22 +3,18 @@
  * BloodyArmy
  * ============================================
  *
- * Project:
- * BloodyArmy Website
- *
  * File:
  * stats/types.ts
- *
- * Description:
- * Typdefinitionen für die
- * Karriere-Statistiken.
  *
  * ============================================
  */
 
 import type {
-    SkaterSeasonStats,
-    GoalieSeasonStats,
+
+    CareerSeasonStats,
+
+    CareerGoalieSeasonStats,
+
 } from "@/types/career-stats";
 
 
@@ -58,16 +54,24 @@ export type CareerStatsData<T> = {
 
 /*
 ================================================
-ALIASES
+SKATER
 ================================================
 */
 
 export type SkaterCareerStatsData =
-    CareerStatsData<SkaterSeasonStats>;
 
+    CareerStatsData<CareerSeasonStats>;
+
+
+/*
+================================================
+GOALIE
+================================================
+*/
 
 export type GoalieCareerStatsData =
-    CareerStatsData<GoalieSeasonStats>;
+
+    CareerStatsData<CareerGoalieSeasonStats>;
 
 
 /*
@@ -76,19 +80,10 @@ DUAL ROLE
 ================================================
 */
 
-/**
- * Karriere eines Spielers,
- * der sowohl als Skater als auch
- * als Goalie eingesetzt wurde.
- *
- * Beide Karrieren bleiben vollständig
- * voneinander getrennt.
- */
-
 export type DualCareerStatsData = {
 
-    skater: SkaterCareerStatsData;
+    skater?: SkaterCareerStatsData;
 
-    goalie: GoalieCareerStatsData;
+    goalie?: GoalieCareerStatsData;
 
 };

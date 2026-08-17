@@ -25,6 +25,10 @@ import type {
 } from "./stats/types";
 
 
+/* ========================================= */
+/* PROPS */
+/* ========================================= */
+
 type MemberCardProps = {
 
     id: string;
@@ -70,24 +74,49 @@ type MemberCardProps = {
     };
 
     stats?:
+
         | SkaterCareerStatsData
+
         | GoalieCareerStatsData
+
         | DualCareerStatsData;
 
-    playerType: "skater" | "goalie";
+
+    /*
+    ============================================
+    SPIELERTYP
+    ============================================
+
+    skater = normaler Feldspieler
+
+    goalie = normaler Torhüter
+
+    dual   = Skater + Goalie
+    */
+
+    playerType:
+
+        | "skater"
+
+        | "goalie"
+
+        | "dual";
+
 
     /*
     ============================================
     DUAL ROLE
     ============================================
-
-    Optional, damit alle bisherigen
-    Member weiterhin funktionieren.
-
-    true = Spieler war sowohl Skater
-    als auch Goalie.
     */
+
     dualRole?: boolean;
+
+
+    /*
+    ============================================
+    PROFIL
+    ============================================
+    */
 
     profile: {
 
@@ -99,6 +128,10 @@ type MemberCardProps = {
 
 };
 
+
+/* ========================================= */
+/* COMPONENT */
+/* ========================================= */
 
 export default function MemberCard({
 
@@ -136,9 +169,9 @@ export default function MemberCard({
     const [flipped, setFlipped] = useState(false);
 
 
-    /* ================================= */
+    /* ========================================= */
     /* BADGE / PRESTIGE */
-    /* ================================= */
+    /* ========================================= */
 
     let displayTitle = badge.title;
 
@@ -176,9 +209,9 @@ export default function MemberCard({
         getTheme(organization);
 
 
-    /* ================================= */
+    /* ========================================= */
     /* CARD */
-    /* ================================= */
+    /* ========================================= */
 
     return (
 
@@ -289,7 +322,6 @@ export default function MemberCard({
                                 }
 
                             />
-
 
                             <div
 

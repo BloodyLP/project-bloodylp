@@ -20,11 +20,9 @@ import type {
 import styles from "./MemberCardBack.module.css";
 
 
-/*
-================================================
-PROPS
-================================================
-*/
+/* ========================================= */
+/* PROPS */
+/* ========================================= */
 
 type MemberCardBackProps = {
 
@@ -34,24 +32,51 @@ type MemberCardBackProps = {
 
     organization: OrganizationId;
 
+
+    /*
+    ============================================
+    STATISTIKEN
+    ============================================
+    */
+
     stats?:
+
         | SkaterCareerStatsData
+
         | GoalieCareerStatsData
+
         | DualCareerStatsData;
 
-    /*
-     * Der Kartentyp bleibt weiterhin
-     * nur Skater oder Goalie.
-     */
-    playerType: "skater" | "goalie";
 
     /*
-     * Sonderfall:
-     *
-     * Spieler war sowohl Skater
-     * als auch Goalie.
-     */
+    ============================================
+    SPIELERTYP
+    ============================================
+    */
+
+    playerType:
+
+        | "skater"
+
+        | "goalie"
+
+        | "dual";
+
+
+    /*
+    ============================================
+    DUAL ROLE
+    ============================================
+    */
+
     dualRole?: boolean;
+
+
+    /*
+    ============================================
+    PROFIL
+    ============================================
+    */
 
     profile?: {
 
@@ -61,16 +86,21 @@ type MemberCardBackProps = {
 
     };
 
+
+    /*
+    ============================================
+    ZURÜCK
+    ============================================
+    */
+
     onBack: () => void;
 
 };
 
 
-/*
-================================================
-COMPONENT
-================================================
-*/
+/* ========================================= */
+/* COMPONENT */
+/* ========================================= */
 
 export default function MemberCardBack({
 
@@ -93,66 +123,67 @@ export default function MemberCardBack({
 }: MemberCardBackProps) {
 
 
-    /*
-    ============================================
-    THEME
-    ============================================
-    */
-
     const theme = getTheme(
+
         organization
+
     );
 
-
-    /*
-    ============================================
-    CAREER TYPE
-    ============================================
-    */
-
-    const careerPlayerType =
-        dualRole
-            ? "dual"
-            : playerType;
-
-
-    /*
-    ============================================
-    RENDER
-    ============================================
-    */
 
     return (
 
         <article
 
-            className={`
-                ${styles.backCard}
-                ${
+            className={
+
+                `${styles.backCard} ` +
+
+                (
+
                     organization === "youngArmy"
+
                         ? styles.youngArmy
+
                         : styles.bloodyArmy
-                }
-            `}
+
+                )
+
+            }
 
             style={
+
                 createThemeVariables(
+
                     theme
+
                 )
+
             }
 
         >
 
-            {/* =================================
-                HEADER
-            ================================= */}
+            {/* ================================= */}
+            {/* HEADER */}
+            {/* ================================= */}
 
             <header
-                className={styles.header}
+
+                className={
+
+                    styles.header
+
+                }
+
             >
 
                 <span
-                    className={styles.title}
+
+                    className={
+
+                        styles.title
+
+                    }
+
                 >
 
                     BLOODYARMY CAREER PROFILE
@@ -161,7 +192,13 @@ export default function MemberCardBack({
 
 
                 <span
-                    className={styles.member}
+
+                    className={
+
+                        styles.member
+
+                    }
+
                 >
 
                     {armyId} • {name}
@@ -171,16 +208,28 @@ export default function MemberCardBack({
             </header>
 
 
-            {/* =================================
-                PLAYER PROFILE
-            ================================= */}
+            {/* ================================= */}
+            {/* PLAYER PROFILE */}
+            {/* ================================= */}
 
             <section
-                className={styles.playerProfile}
+
+                className={
+
+                    styles.playerProfile
+
+                }
+
             >
 
                 <div
-                    className={styles.playerIdentity}
+
+                    className={
+
+                        styles.playerIdentity
+
+                    }
+
                 >
 
                     <span>
@@ -200,7 +249,13 @@ export default function MemberCardBack({
 
 
                 <div
-                    className={styles.playerData}
+
+                    className={
+
+                        styles.playerData
+
+                    }
+
                 >
 
                     <div>
@@ -215,9 +270,13 @@ export default function MemberCardBack({
                         <strong>
 
                             {
+
                                 profile?.position
+
                                 ??
+
                                 "Keine Angabe"
+
                             }
 
                         </strong>
@@ -237,9 +296,13 @@ export default function MemberCardBack({
                         <strong>
 
                             {
+
                                 profile?.number
+
                                 ??
+
                                 "#00"
+
                             }
 
                         </strong>
@@ -251,12 +314,18 @@ export default function MemberCardBack({
             </section>
 
 
-            {/* =================================
-                CAREER STATS
-            ================================= */}
+            {/* ================================= */}
+            {/* CONTENT */}
+            {/* ================================= */}
 
             <div
-                className={styles.content}
+
+                className={
+
+                    styles.content
+
+                }
+
             >
 
                 {
@@ -268,11 +337,15 @@ export default function MemberCardBack({
                     <CareerStats
 
                         playerType={
-                            careerPlayerType
+
+                            playerType
+
                         }
 
                         stats={
+
                             stats
+
                         }
 
                     />
@@ -280,11 +353,16 @@ export default function MemberCardBack({
                     :
 
                     <div
-                        className={styles.empty}
+
+                        className={
+
+                            styles.empty
+
+                        }
+
                     >
 
-                        KEINE KARRIERE-DATEN
-                        VORHANDEN
+                        KEINE KARRIERE-DATEN VORHANDEN
 
                     </div>
 
@@ -293,12 +371,18 @@ export default function MemberCardBack({
             </div>
 
 
-            {/* =================================
-                FOOTER
-            ================================= */}
+            {/* ================================= */}
+            {/* FOOTER */}
+            {/* ================================= */}
 
             <footer
-                className={styles.footer}
+
+                className={
+
+                    styles.footer
+
+                }
+
             >
 
                 <button
@@ -306,7 +390,9 @@ export default function MemberCardBack({
                     type="button"
 
                     className={
+
                         styles.backButton
+
                     }
 
                     onClick={(event) => {

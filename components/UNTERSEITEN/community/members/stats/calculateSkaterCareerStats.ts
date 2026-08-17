@@ -3,162 +3,356 @@
  * BloodyArmy
  * ============================================
  *
- * Project:
- * BloodyArmy Website
- *
  * File:
  * calculateSkaterCareerStats.ts
  *
  * Description:
- * Berechnet die Karriere-Statistik
- * eines Feldspielers.
+ * Berechnet die Karriere-Statistiken
+ * eines Skaters.
  *
  * ============================================
  */
 
 import type {
-
-    SkaterSeasonStats,
-
+    CareerSeasonStats,
 } from "@/types/career-stats";
 
 import type {
-
     SkaterCareerStatsData,
-
 } from "./types";
+
+
+/* ========================================= */
+/* TOTAL BERECHNEN */
+/* ========================================= */
 
 function calculateTotal(
 
-    seasons:SkaterSeasonStats[]
+    seasons: CareerSeasonStats[]
 
-):SkaterSeasonStats{
+): CareerSeasonStats {
 
-    return{
 
-        season:"GESAMT",
+    /*
+    ============================================
+    LEERE KARRIERE
+    ============================================
+    */
 
-        year:"GESAMT",
+    if(seasons.length === 0){
+
+        return {
+
+            year:"TOTAL",
+
+            team:"BloodyArmy",
+
+            games:0,
+
+            goals:0,
+
+            assists:0,
+
+            points:0,
+
+            plusMinus:0,
+
+            penaltyMinutes:0,
+
+
+            /*
+            ====================================
+            PLAYOFFS
+            ====================================
+            */
+
+            playoffGames:0,
+
+            playoffGoals:0,
+
+            playoffAssists:0,
+
+            playoffPoints:0,
+
+            playoffPlusMinus:0,
+
+            playoffPenaltyMinutes:0,
+
+
+            titles:[],
+
+        };
+
+    }
+
+
+    /*
+    ============================================
+    REGULAR SEASON
+    ============================================
+    */
+
+    const games = seasons.reduce(
+
+        (sum,row) =>
+
+            sum + row.games,
+
+        0
+
+    );
+
+
+    const goals = seasons.reduce(
+
+        (sum,row) =>
+
+            sum + row.goals,
+
+        0
+
+    );
+
+
+    const assists = seasons.reduce(
+
+        (sum,row) =>
+
+            sum + row.assists,
+
+        0
+
+    );
+
+
+    const points = seasons.reduce(
+
+        (sum,row) =>
+
+            sum + row.points,
+
+        0
+
+    );
+
+
+    const plusMinus = seasons.reduce(
+
+        (sum,row) =>
+
+            sum + row.plusMinus,
+
+        0
+
+    );
+
+
+    const penaltyMinutes = seasons.reduce(
+
+        (sum,row) =>
+
+            sum + row.penaltyMinutes,
+
+        0
+
+    );
+
+
+    /*
+    ============================================
+    PLAYOFFS
+    ============================================
+    */
+
+    const playoffGames = seasons.reduce(
+
+        (sum,row) =>
+
+            sum + row.playoffGames,
+
+        0
+
+    );
+
+
+    const playoffGoals = seasons.reduce(
+
+        (sum,row) =>
+
+            sum + row.playoffGoals,
+
+        0
+
+    );
+
+
+    const playoffAssists = seasons.reduce(
+
+        (sum,row) =>
+
+            sum + row.playoffAssists,
+
+        0
+
+    );
+
+
+    const playoffPoints = seasons.reduce(
+
+        (sum,row) =>
+
+            sum + row.playoffPoints,
+
+        0
+
+    );
+
+
+    const playoffPlusMinus = seasons.reduce(
+
+        (sum,row) =>
+
+            sum + row.playoffPlusMinus,
+
+        0
+
+    );
+
+
+    const playoffPenaltyMinutes = seasons.reduce(
+
+        (sum,row) =>
+
+            sum + row.playoffPenaltyMinutes,
+
+        0
+
+    );
+
+
+    /*
+    ============================================
+    TITEL
+    ============================================
+    */
+
+    const titles = [
+
+        ...new Set(
+
+            seasons.flatMap(
+
+                row => row.titles
+
+            )
+
+        ),
+
+    ];
+
+
+    /*
+    ============================================
+    TOTAL
+    ============================================
+    */
+
+    return {
+
+        year:"TOTAL",
 
         team:"BloodyArmy",
 
-        games:seasons.reduce(
+        games,
 
-            (sum,row)=>sum+row.games,
+        goals,
 
-            0
+        assists,
 
-        ),
+        points,
 
-        goals:seasons.reduce(
+        plusMinus,
 
-            (sum,row)=>sum+row.goals,
+        penaltyMinutes,
 
-            0
 
-        ),
+        playoffGames,
 
-        assists:seasons.reduce(
+        playoffGoals,
 
-            (sum,row)=>sum+row.assists,
+        playoffAssists,
 
-            0
+        playoffPoints,
 
-        ),
+        playoffPlusMinus,
 
-        points:seasons.reduce(
+        playoffPenaltyMinutes,
 
-            (sum,row)=>sum+row.points,
 
-            0
-
-        ),
-
-        plusMinus:seasons.reduce(
-
-            (sum,row)=>sum+row.plusMinus,
-
-            0
-
-        ),
-
-        penaltyMinutes:seasons.reduce(
-
-            (sum,row)=>sum+row.penaltyMinutes,
-
-            0
-
-        ),
-
-        playoffGames:seasons.reduce(
-
-            (sum,row)=>sum+row.playoffGames,
-
-            0
-
-        ),
-
-        playoffGoals:seasons.reduce(
-
-            (sum,row)=>sum+row.playoffGoals,
-
-            0
-
-        ),
-
-        playoffAssists:seasons.reduce(
-
-            (sum,row)=>sum+row.playoffAssists,
-
-            0
-
-        ),
-
-        playoffPoints:seasons.reduce(
-
-            (sum,row)=>sum+row.playoffPoints,
-
-            0
-
-        ),
-
-        playoffPlusMinus:seasons.reduce(
-
-            (sum,row)=>sum+row.playoffPlusMinus,
-
-            0
-
-        ),
-
-        playoffPenaltyMinutes:seasons.reduce(
-
-            (sum,row)=>sum+row.playoffPenaltyMinutes,
-
-            0
-
-        ),
-
-        titles:[],
+        titles,
 
     };
 
 }
 
+
+/* ========================================= */
+/* BUILDER */
+/* ========================================= */
+
 export function buildSkaterCareerStats(
 
-    seasons:SkaterSeasonStats[]
+    seasons: CareerSeasonStats[]
 
-):SkaterCareerStatsData{
+): SkaterCareerStatsData {
 
-    return{
+
+    /*
+    ============================================
+    REGULAR SEASON
+    ============================================
+    */
+
+    const regularSeason = seasons;
+
+
+    /*
+    ============================================
+    PLAYOFFS
+    ============================================
+    */
+
+    const playoffs = seasons;
+
+
+    /*
+    ============================================
+    TOTAL
+    ============================================
+    */
+
+    const total = calculateTotal(
+
+        seasons
+
+    );
+
+
+    /*
+    ============================================
+    ERGEBNIS
+    ============================================
+    */
+
+    return {
 
         seasons,
 
-        regularSeason:seasons,
+        regularSeason,
 
-        playoffs:[],
+        playoffs,
 
-        total:calculateTotal(seasons),
+        total,
 
     };
 

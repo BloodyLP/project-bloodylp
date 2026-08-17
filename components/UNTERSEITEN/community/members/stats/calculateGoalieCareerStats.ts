@@ -3,120 +3,486 @@
  * BloodyArmy
  * ============================================
  *
- * Project:
- * BloodyArmy Website
- *
  * File:
  * calculateGoalieCareerStats.ts
  *
  * Description:
- * Berechnet die Karriere-Statistik
+ * Berechnet die Karriere-Statistiken
  * eines Torhüters.
  *
  * ============================================
  */
 
 import type {
-
-    GoalieSeasonStats,
-
+    CareerGoalieSeasonStats,
 } from "@/types/career-stats";
 
 import type {
-
     GoalieCareerStatsData,
-
 } from "./types";
+
+
+/* ========================================= */
+/* TOTAL BERECHNEN */
+/* ========================================= */
 
 function calculateTotal(
 
-    seasons:GoalieSeasonStats[]
+    seasons: CareerGoalieSeasonStats[]
 
-):GoalieSeasonStats{
+): CareerGoalieSeasonStats {
+
+
+    /*
+    ============================================
+    LEERE KARRIERE
+    ============================================
+    */
+
+    if(seasons.length === 0){
+
+        return {
+
+            year:"TOTAL",
+
+            team:"BloodyArmy",
+
+            games:0,
+
+            wins:0,
+
+            losses:0,
+
+            overtimeLosses:0,
+
+            ties:0,
+
+            shutouts:0,
+
+            goalsAgainst:0,
+
+            saves:0,
+
+            shotsAgainst:0,
+
+            savePercentage:0,
+
+            goalsAgainstAverage:0,
+
+
+            /*
+            ====================================
+            PLAYOFFS
+            ====================================
+            */
+
+            playoffGames:0,
+
+            playoffWins:0,
+
+            playoffLosses:0,
+
+            playoffOvertimeLosses:0,
+
+            playoffShutouts:0,
+
+            playoffGoalsAgainst:0,
+
+            playoffSaves:0,
+
+            playoffShotsAgainst:0,
+
+            playoffSavePercentage:0,
+
+            playoffGoalsAgainstAverage:0,
+
+
+            titles:[],
+
+        };
+
+    }
+
+
+    /*
+    ============================================
+    GRUNDWERTE
+    ============================================
+    */
 
     const games = seasons.reduce(
 
-        (sum,row)=>sum+row.games,
+        (sum,row) =>
+
+            sum + row.games,
 
         0
 
     );
+
 
     const wins = seasons.reduce(
 
-        (sum,row)=>sum+row.wins,
+        (sum,row) =>
+
+            sum + row.wins,
 
         0
 
     );
+
 
     const losses = seasons.reduce(
 
-        (sum,row)=>sum+row.losses,
+        (sum,row) =>
+
+            sum + row.losses,
 
         0
 
     );
+
 
     const overtimeLosses = seasons.reduce(
 
-        (sum,row)=>sum+row.overtimeLosses,
+        (sum,row) =>
+
+            sum +
+
+            (row.overtimeLosses ?? 0),
 
         0
 
     );
+
+
+    const ties = seasons.reduce(
+
+        (sum,row) =>
+
+            sum +
+
+            (row.ties ?? 0),
+
+        0
+
+    );
+
 
     const shutouts = seasons.reduce(
 
-        (sum,row)=>sum+row.shutouts,
+        (sum,row) =>
+
+            sum + row.shutouts,
 
         0
 
     );
 
-    const goalsAgainstAverage =
 
-        seasons.length > 0
+    /*
+    ============================================
+    TOR-GEGEN
+    ============================================
+    */
 
-            ? seasons.reduce(
+    const goalsAgainst = seasons.reduce(
 
-                (sum,row)=>sum+row.goalsAgainstAverage,
+        (sum,row) =>
 
-                0
+            sum +
 
-            ) / seasons.length
+            (row.goalsAgainst ?? 0),
 
-            : 0;
+        0
+
+    );
+
+
+    /*
+    ============================================
+    SAVES
+    ============================================
+    */
+
+    const saves = seasons.reduce(
+
+        (sum,row) =>
+
+            sum +
+
+            (row.saves ?? 0),
+
+        0
+
+    );
+
+
+    /*
+    ============================================
+    SCHÜSSE GEGEN
+    ============================================
+    */
+
+    const shotsAgainst = seasons.reduce(
+
+        (sum,row) =>
+
+            sum +
+
+            (row.shotsAgainst ?? 0),
+
+        0
+
+    );
+
+
+    /*
+    ============================================
+    SAVE PERCENTAGE
+    ============================================
+    */
 
     const savePercentage =
 
-        seasons.length > 0
+        shotsAgainst > 0
 
-            ? seasons.reduce(
+            ?
 
-                (sum,row)=>sum+row.savePercentage,
+            (
 
-                0
+                saves /
 
-            ) / seasons.length
+                shotsAgainst
 
-            : 0;
+            ) * 100
 
-    return{
+            :
 
-        season:"GESAMT",
+            0;
 
-        year:"GESAMT",
+
+    /*
+    ============================================
+    GOALS AGAINST AVERAGE
+    ============================================
+    */
+
+    const goalsAgainstAverage =
+
+        games > 0
+
+            ?
+
+            goalsAgainst /
+
+            games
+
+            :
+
+            0;
+
+
+    /*
+    ============================================
+    PLAYOFFS
+    ============================================
+    */
+
+    const playoffGames = seasons.reduce(
+
+        (sum,row) =>
+
+            sum + row.playoffGames,
+
+        0
+
+    );
+
+
+    const playoffWins = seasons.reduce(
+
+        (sum,row) =>
+
+            sum + row.playoffWins,
+
+        0
+
+    );
+
+
+    const playoffLosses = seasons.reduce(
+
+        (sum,row) =>
+
+            sum + row.playoffLosses,
+
+        0
+
+    );
+
+
+    const playoffOvertimeLosses = seasons.reduce(
+
+        (sum,row) =>
+
+            sum +
+
+            (row.playoffOvertimeLosses ?? 0),
+
+        0
+
+    );
+
+
+    const playoffShutouts = seasons.reduce(
+
+        (sum,row) =>
+
+            sum + row.playoffShutouts,
+
+        0
+
+    );
+
+
+    /*
+    ============================================
+    PLAYOFF TOR-GEGEN
+    ============================================
+    */
+
+    const playoffGoalsAgainst = seasons.reduce(
+
+        (sum,row) =>
+
+            sum +
+
+            (row.playoffGoalsAgainst ?? 0),
+
+        0
+
+    );
+
+
+    /*
+    ============================================
+    PLAYOFF SAVES
+    ============================================
+    */
+
+    const playoffSaves = seasons.reduce(
+
+        (sum,row) =>
+
+            sum +
+
+            (row.playoffSaves ?? 0),
+
+        0
+
+    );
+
+
+    /*
+    ============================================
+    PLAYOFF SCHÜSSE GEGEN
+    ============================================
+    */
+
+    const playoffShotsAgainst = seasons.reduce(
+
+        (sum,row) =>
+
+            sum +
+
+            (row.playoffShotsAgainst ?? 0),
+
+        0
+
+    );
+
+
+    /*
+    ============================================
+    PLAYOFF SAVE PERCENTAGE
+    ============================================
+    */
+
+    const playoffSavePercentage =
+
+        playoffShotsAgainst > 0
+
+            ?
+
+            (
+
+                playoffSaves /
+
+                playoffShotsAgainst
+
+            ) * 100
+
+            :
+
+            0;
+
+
+    /*
+    ============================================
+    PLAYOFF GAA
+    ============================================
+    */
+
+    const playoffGoalsAgainstAverage =
+
+        playoffGames > 0
+
+            ?
+
+            playoffGoalsAgainst /
+
+            playoffGames
+
+            :
+
+            0;
+
+
+    /*
+    ============================================
+    TITEL
+    ============================================
+    */
+
+    const titles = [
+
+        ...new Set(
+
+            seasons.flatMap(
+
+                row => row.titles
+
+            )
+
+        ),
+
+    ];
+
+
+    /*
+    ============================================
+    TOTAL
+    ============================================
+    */
+
+    return {
+
+        year:"TOTAL",
 
         team:"BloodyArmy",
 
         games,
-
-        goalsAgainstAverage,
-
-        savePercentage,
-
-        shutouts,
 
         wins,
 
@@ -124,71 +490,106 @@ function calculateTotal(
 
         overtimeLosses,
 
-        playoffGames:seasons.reduce(
+        ties,
 
-            (sum,row)=>sum+row.playoffGames,
+        shutouts,
 
-            0
+        goalsAgainst,
 
-        ),
+        saves,
 
-        playoffGoalsAgainstAverage:0,
+        shotsAgainst,
 
-        playoffSavePercentage:0,
+        savePercentage,
 
-        playoffShutouts:seasons.reduce(
+        goalsAgainstAverage,
 
-            (sum,row)=>sum+row.playoffShutouts,
 
-            0
+        playoffGames,
 
-        ),
+        playoffWins,
 
-        playoffWins:seasons.reduce(
+        playoffLosses,
 
-            (sum,row)=>sum+row.playoffWins,
+        playoffOvertimeLosses,
 
-            0
+        playoffShutouts,
 
-        ),
+        playoffGoalsAgainst,
 
-        playoffLosses:seasons.reduce(
+        playoffSaves,
 
-            (sum,row)=>sum+row.playoffLosses,
+        playoffShotsAgainst,
 
-            0
+        playoffSavePercentage,
 
-        ),
+        playoffGoalsAgainstAverage,
 
-        playoffOvertimeLosses:seasons.reduce(
 
-            (sum,row)=>sum+row.playoffOvertimeLosses,
-
-            0
-
-        ),
-
-        titles:[],
+        titles,
 
     };
 
 }
 
+
+/* ========================================= */
+/* BUILDER */
+/* ========================================= */
+
 export function buildGoalieCareerStats(
 
-    seasons:GoalieSeasonStats[]
+    seasons: CareerGoalieSeasonStats[]
 
-):GoalieCareerStatsData{
+): GoalieCareerStatsData {
 
-    return{
+
+    /*
+    ============================================
+    REGULAR SEASON
+    ============================================
+    */
+
+    const regularSeason = seasons;
+
+
+    /*
+    ============================================
+    PLAYOFFS
+    ============================================
+    */
+
+    const playoffs = seasons;
+
+
+    /*
+    ============================================
+    TOTAL
+    ============================================
+    */
+
+    const total = calculateTotal(
+
+        seasons
+
+    );
+
+
+    /*
+    ============================================
+    ERGEBNIS
+    ============================================
+    */
+
+    return {
 
         seasons,
 
-        regularSeason:seasons,
+        regularSeason,
 
-        playoffs:[],
+        playoffs,
 
-        total:calculateTotal(seasons),
+        total,
 
     };
 

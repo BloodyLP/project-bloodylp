@@ -4,38 +4,45 @@ import CareerStatsSkater from "./CareerStatsSkater";
 import CareerStatsGoalie from "./CareerStatsGoalie";
 
 import type {
+
     SkaterCareerStatsData,
+
     GoalieCareerStatsData,
+
     DualCareerStatsData,
+
 } from "./types";
 
 
-/*
-================================================
-PROPS
-================================================
-*/
+/* ========================================= */
+/* PROPS */
+/* ========================================= */
 
 type CareerStatsProps = {
 
     playerType:
+
         | "skater"
+
         | "goalie"
+
         | "dual";
 
+
     stats:
+
         | SkaterCareerStatsData
+
         | GoalieCareerStatsData
+
         | DualCareerStatsData;
 
 };
 
 
-/*
-================================================
-COMPONENT
-================================================
-*/
+/* ========================================= */
+/* COMPONENT */
+/* ========================================= */
 
 export default function CareerStats({
 
@@ -46,15 +53,18 @@ export default function CareerStats({
 }: CareerStatsProps) {
 
 
-    /*
-    ================================================
-    DUAL ROLE
-    ================================================
-    */
+    /* ========================================= */
+    /* DUAL ROLE */
+    /* ========================================= */
 
-    if (playerType === "dual") {
+    if(
+
+        playerType === "dual"
+
+    ){
 
         const dualStats =
+
             stats as DualCareerStatsData;
 
 
@@ -62,22 +72,52 @@ export default function CareerStats({
 
             <div>
 
-                {/* =================================
-                   SKATER
-                ================================= */}
 
-                <CareerStatsSkater
-                    stats={dualStats.skater}
-                />
+                {/* ================================= */}
+                {/* SKATER */}
+                {/* ================================= */}
+
+                {
+
+                    dualStats.skater
+
+                    &&
+
+                    <CareerStatsSkater
+
+                        stats={
+
+                            dualStats.skater
+
+                        }
+
+                    />
+
+                }
 
 
-                {/* =================================
-                   GOALIE
-                ================================= */}
+                {/* ================================= */}
+                {/* GOALIE */}
+                {/* ================================= */}
 
-                <CareerStatsGoalie
-                    stats={dualStats.goalie}
-                />
+                {
+
+                    dualStats.goalie
+
+                    &&
+
+                    <CareerStatsGoalie
+
+                        stats={
+
+                            dualStats.goalie
+
+                        }
+
+                    />
+
+                }
+
 
             </div>
 
@@ -86,22 +126,31 @@ export default function CareerStats({
     }
 
 
-    /*
-    ================================================
-    GOALIE
-    ================================================
-    */
+    /* ========================================= */
+    /* GOALIE */
+    /* ========================================= */
 
-    if (playerType === "goalie") {
+    if(
+
+        playerType === "goalie"
+
+    ){
 
         const goalieStats =
+
             stats as GoalieCareerStatsData;
 
 
         return (
 
             <CareerStatsGoalie
-                stats={goalieStats}
+
+                stats={
+
+                    goalieStats
+
+                }
+
             />
 
         );
@@ -109,20 +158,25 @@ export default function CareerStats({
     }
 
 
-    /*
-    ================================================
-    SKATER
-    ================================================
-    */
+    /* ========================================= */
+    /* SKATER */
+    /* ========================================= */
 
     const skaterStats =
+
         stats as SkaterCareerStatsData;
 
 
     return (
 
         <CareerStatsSkater
-            stats={skaterStats}
+
+            stats={
+
+                skaterStats
+
+            }
+
         />
 
     );

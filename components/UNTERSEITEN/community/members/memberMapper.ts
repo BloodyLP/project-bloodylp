@@ -20,8 +20,8 @@ import type {
 } from "@/types/service-record";
 
 import type {
-    SkaterSeasonStats,
-    GoalieSeasonStats,
+    CareerSeasonStats,
+    CareerGoalieSeasonStats,
 } from "@/types/career-stats";
 
 import {
@@ -41,9 +41,15 @@ function getBadgeTheme(
     member: ServiceRecordMember
 ){
 
+    /*
+    ============================================
+    FOUNDER
+    ============================================
+    */
+
     if(member.prestige === 10){
 
-        return{
+        return {
 
             title:"FOUNDER",
 
@@ -54,9 +60,15 @@ function getBadgeTheme(
     }
 
 
+    /*
+    ============================================
+    PRESTIGE III
+    ============================================
+    */
+
     if(member.prestige === 3){
 
-        return{
+        return {
 
             title:"PRESTIGE III",
 
@@ -67,9 +79,15 @@ function getBadgeTheme(
     }
 
 
+    /*
+    ============================================
+    PRESTIGE II
+    ============================================
+    */
+
     if(member.prestige === 2){
 
-        return{
+        return {
 
             title:"PRESTIGE II",
 
@@ -80,9 +98,15 @@ function getBadgeTheme(
     }
 
 
+    /*
+    ============================================
+    PRESTIGE I
+    ============================================
+    */
+
     if(member.prestige === 1){
 
-        return{
+        return {
 
             title:"PRESTIGE I",
 
@@ -93,6 +117,12 @@ function getBadgeTheme(
     }
 
 
+    /*
+    ============================================
+    RANGSYSTEM
+    ============================================
+    */
+
     const rank = ServiceRecord.rank(
         member.rank
     );
@@ -102,7 +132,7 @@ function getBadgeTheme(
 
         case "command":
 
-            return{
+            return {
 
                 title:"GENERAL",
 
@@ -113,7 +143,7 @@ function getBadgeTheme(
 
         case "offiziere":
 
-            return{
+            return {
 
                 title:"OFFIZIER",
 
@@ -124,7 +154,7 @@ function getBadgeTheme(
 
         case "feldwebel":
 
-            return{
+            return {
 
                 title:"UNTEROFFIZIER MIT PORTEPEE",
 
@@ -135,7 +165,7 @@ function getBadgeTheme(
 
         case "unteroffiziere":
 
-            return{
+            return {
 
                 title:"UNTEROFFIZIER",
 
@@ -146,7 +176,7 @@ function getBadgeTheme(
 
         case "mannschaften":
 
-            return{
+            return {
 
                 title:"MANNSCHAFT",
 
@@ -157,7 +187,7 @@ function getBadgeTheme(
 
         case "zivilisten":
 
-            return{
+            return {
 
                 title:"ZIVILIST",
 
@@ -168,7 +198,7 @@ function getBadgeTheme(
 
         default:
 
-            return{
+            return {
 
                 title:"UNBEKANNT",
 
@@ -185,28 +215,53 @@ function getBadgeTheme(
 /* STATISTIK-TYPEN */
 /* ========================================= */
 
+/**
+ * Alte Struktur:
+ *
+ * stats:{
+ *
+ *     seasons:[...]
+ *
+ * }
+ */
+
 type LegacyStats = {
 
-    seasons:
-        (
-            | SkaterSeasonStats
-            | GoalieSeasonStats
-        )[];
+    seasons: (
+        | CareerSeasonStats
+        | CareerGoalieSeasonStats
+    )[];
 
 };
 
+
+/**
+ * Neue Dual-Role-Struktur:
+ *
+ * stats:{
+ *
+ *     skater:{
+ *         seasons:[...]
+ *     },
+ *
+ *     goalie:{
+ *         seasons:[...]
+ *     }
+ *
+ * }
+ */
 
 type DualRoleStats = {
 
     skater?: {
 
-        seasons: SkaterSeasonStats[];
+        seasons: CareerSeasonStats[];
 
     };
 
     goalie?: {
 
-        seasons: GoalieSeasonStats[];
+        seasons: CareerGoalieSeasonStats[];
 
     };
 
@@ -214,13 +269,11 @@ type DualRoleStats = {
 
 
 /* ========================================= */
-/* STATS LESEN */
+/* STATS AUSLESEN */
 /* ========================================= */
 
 function getStatsData(
-
     member: ServiceRecordMember
-
 ){
 
     if(!member.stats){
@@ -241,10 +294,8 @@ function getStatsData(
 /* ========================================= */
 
 function getSkaterSeasons(
-
     member: ServiceRecordMember
-
-): SkaterSeasonStats[] {
+): CareerSeasonStats[] {
 
     const stats = getStatsData(
         member
@@ -270,17 +321,17 @@ function getSkaterSeasons(
         Array.isArray(stats.seasons)
     ){
 
-        const seasons =
-            stats.seasons;
+        const seasons: CareerSeasonStats[] =
+            stats.seasons as CareerSeasonStats[];
 
-        return seasons as SkaterSeasonStats[];
+        return seasons;
 
     }
 
 
     /*
     ============================================
-    DUAL ROLE
+    NEUE STRUKTUR
     ============================================
     */
 
@@ -309,10 +360,8 @@ function getSkaterSeasons(
 /* ========================================= */
 
 function getGoalieSeasons(
-
     member: ServiceRecordMember
-
-): GoalieSeasonStats[] {
+): CareerGoalieSeasonStats[] {
 
     const stats = getStatsData(
         member
@@ -338,17 +387,17 @@ function getGoalieSeasons(
         Array.isArray(stats.seasons)
     ){
 
-        const seasons =
-            stats.seasons;
+        const seasons: CareerGoalieSeasonStats[] =
+            stats.seasons as CareerGoalieSeasonStats[];
 
-        return seasons as GoalieSeasonStats[];
+        return seasons;
 
     }
 
 
     /*
     ============================================
-    DUAL ROLE
+    NEUE STRUKTUR
     ============================================
     */
 
@@ -373,13 +422,192 @@ function getGoalieSeasons(
 
 
 /* ========================================= */
+/* DUAL ROLE */
+/* ========================================= */
+
+/**
+ * Erstellt die beiden getrennten
+ * Karriere-Statistiken.
+ */
+
+function buildDualRoleStats(
+    member: ServiceRecordMember
+){
+
+    if(!member.stats){
+
+        return undefined;
+
+    }
+
+
+    const stats = getStatsData(
+        member
+    );
+
+
+    if(!stats){
+
+        return undefined;
+
+    }
+
+
+    /*
+    ============================================
+    DUAL ROLE MUSS DIE NEUE STRUKTUR HABEN
+    ============================================
+    */
+
+    if(
+        !("skater" in stats)
+        &&
+        !("goalie" in stats)
+    ){
+
+        return undefined;
+
+    }
+
+
+    /*
+    ============================================
+    SKATER
+    ============================================
+    */
+
+    const skaterSeasons: CareerSeasonStats[] =
+
+        "skater" in stats
+
+        &&
+
+        stats.skater
+
+        &&
+
+        Array.isArray(
+            stats.skater.seasons
+        )
+
+            ?
+
+            stats.skater.seasons
+
+            :
+
+            [];
+
+
+    /*
+    ============================================
+    GOALIE
+    ============================================
+    */
+
+    const goalieSeasons: CareerGoalieSeasonStats[] =
+
+        "goalie" in stats
+
+        &&
+
+        stats.goalie
+
+        &&
+
+        Array.isArray(
+            stats.goalie.seasons
+        )
+
+            ?
+
+            stats.goalie.seasons
+
+            :
+
+            [];
+
+
+    /*
+    ============================================
+    KEINE DATEN
+    ============================================
+    */
+
+    if(
+
+        skaterSeasons.length === 0
+
+        &&
+
+        goalieSeasons.length === 0
+
+    ){
+
+        return undefined;
+
+    }
+
+
+    /*
+    ============================================
+    STATISTIK BERECHNEN
+    ============================================
+    */
+
+    const skaterStats =
+
+        skaterSeasons.length > 0
+
+            ?
+
+            buildSkaterCareerStats(
+                skaterSeasons
+            )
+
+            :
+
+            undefined;
+
+
+    const goalieStats =
+
+        goalieSeasons.length > 0
+
+            ?
+
+            buildGoalieCareerStats(
+                goalieSeasons
+            )
+
+            :
+
+            undefined;
+
+
+    /*
+    ============================================
+    ERGEBNIS
+    ============================================
+    */
+
+    return {
+
+        skater: skaterStats,
+
+        goalie: goalieStats,
+
+    };
+
+}
+
+
+/* ========================================= */
 /* MAPPER */
 /* ========================================= */
 
 export function mapMemberToCard(
-
     member: ServiceRecordMember
-
 ){
 
     /*
@@ -421,7 +649,36 @@ export function mapMemberToCard(
     ============================================
     */
 
-    let stats;
+    let stats:
+
+
+        |
+
+        ReturnType<
+            typeof buildSkaterCareerStats
+        >
+
+
+        |
+
+
+        ReturnType<
+            typeof buildGoalieCareerStats
+        >
+
+
+        |
+
+
+        ReturnType<
+            typeof buildDualRoleStats
+        >
+
+
+        |
+
+
+        undefined;
 
 
     /*
@@ -430,61 +687,11 @@ export function mapMemberToCard(
     ============================================
     */
 
-    if(
-        member.dualRole === true
-        &&
-        member.stats
-    ){
+    if(member.dualRole === true){
 
-        const skaterSeasons =
-            getSkaterSeasons(
-                member
-            );
-
-
-        const goalieSeasons =
-            getGoalieSeasons(
-                member
-            );
-
-
-        const skaterStats =
-
-            skaterSeasons.length > 0
-
-                ?
-
-                buildSkaterCareerStats(
-                    skaterSeasons
-                )
-
-                :
-
-                undefined;
-
-
-        const goalieStats =
-
-            goalieSeasons.length > 0
-
-                ?
-
-                buildGoalieCareerStats(
-                    goalieSeasons
-                )
-
-                :
-
-                undefined;
-
-
-        stats = {
-
-            skater: skaterStats,
-
-            goalie: goalieStats,
-
-        };
+        stats = buildDualRoleStats(
+            member
+        );
 
     }
 
@@ -497,70 +704,76 @@ export function mapMemberToCard(
 
     else if(member.stats){
 
+        /*
+        ========================================
+        GOALIE
+        ========================================
+        */
+
         if(
             member.playerType === "goalie"
         ){
 
-            const goalieSeasons =
-                getGoalieSeasons(
-                    member
-                );
+            const goalieSeasons: CareerGoalieSeasonStats[] =
+                getGoalieSeasons(member);
 
 
-            stats =
-
+            if(
                 goalieSeasons.length > 0
+            ){
 
-                    ?
-
+                stats =
                     buildGoalieCareerStats(
                         goalieSeasons
-                    )
+                    );
 
-                    :
-
-                    undefined;
+            }
 
         }
+
+
+        /*
+        ========================================
+        SKATER
+        ========================================
+        */
 
         else{
 
-            const skaterSeasons =
-                getSkaterSeasons(
-                    member
-                );
+            const skaterSeasons: CareerSeasonStats[] =
+                getSkaterSeasons(member);
 
 
-            stats =
-
+            if(
                 skaterSeasons.length > 0
+            ){
 
-                    ?
-
+                stats =
                     buildSkaterCareerStats(
                         skaterSeasons
-                    )
+                    );
 
-                    :
-
-                    undefined;
+            }
 
         }
 
     }
 
 
-    /*
+       /*
     ============================================
-    KEINE STATISTIK
+    CARD PLAYER TYPE
     ============================================
     */
 
-    else{
+    const cardPlayerType:
+        "skater" | "goalie" | "dual" =
 
-        stats = undefined;
+        member.dualRole === true
 
-    }
+            ? "dual"
+
+            : member.playerType;
 
 
     /*
@@ -591,6 +804,12 @@ export function mapMemberToCard(
             `SEIT ${member.enlisted}`,
 
 
+        /*
+        ========================================
+        RANG
+        ========================================
+        */
+
         rank: {
 
             title: rank.name,
@@ -602,6 +821,12 @@ export function mapMemberToCard(
         },
 
 
+        /*
+        ========================================
+        BADGE
+        ========================================
+        */
+
         badge: {
 
             title: badge.title,
@@ -610,6 +835,12 @@ export function mapMemberToCard(
 
         },
 
+
+        /*
+        ========================================
+        PRESTIGE
+        ========================================
+        */
 
         prestige: {
 
@@ -622,30 +853,57 @@ export function mapMemberToCard(
         },
 
 
+        /*
+        ========================================
+        STATISTIKEN
+        ========================================
+        */
+
         stats,
 
 
-        playerType:
-            member.playerType,
+        /*
+        ========================================
+        SPIELERTYP
+        ========================================
+        */
 
+        playerType: cardPlayerType,
+
+
+        /*
+        ========================================
+        DUAL ROLE
+        ========================================
+        */
 
         dualRole:
             member.dualRole ?? false,
 
 
+        /*
+        ========================================
+        PROFIL
+        ========================================
+        */
+
         profile: {
 
             position:
+
                 position?.title
+
                 ??
+
                 "",
 
 
             number:
+
                 member.playerNumber,
 
         },
 
     };
 
-}
+    }

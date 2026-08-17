@@ -3,6 +3,9 @@
  * BloodyArmy
  * ============================================
  *
+ * Project:
+ * BloodyArmy Website
+ *
  * File:
  * service-record.ts
  *
@@ -13,21 +16,34 @@
  */
 
 import type {
+
     RankId,
+
     PrestigeLevel,
+
 } from "@/data/service-record/ranks";
 
+
 import type {
+
     OrganizationId,
+
 } from "@/data/service-record/organizations";
 
-import type {
-    PositionId,
-} from "@/data/service-record/positions";
 
 import type {
+
+    PositionId,
+
+} from "@/data/service-record/positions";
+
+
+import type {
+
     CareerSeasonStats,
+
     CareerGoalieSeasonStats,
+
 } from "./career-stats";
 
 
@@ -36,8 +52,42 @@ import type {
 /* ========================================= */
 
 export type TeamType =
+
     | "BloodyArmy"
+
     | "Young Army";
+
+
+/* ========================================= */
+/* STANDARD STATS */
+/* ========================================= */
+
+export type StandardServiceRecordStats = {
+
+    seasons: CareerSeasonStats[];
+
+};
+
+
+/* ========================================= */
+/* DUAL ROLE STATS */
+/* ========================================= */
+
+export type DualRoleServiceRecordStats = {
+
+    skater?: {
+
+        seasons: CareerSeasonStats[];
+
+    };
+
+    goalie?: {
+
+        seasons: CareerGoalieSeasonStats[];
+
+    };
+
+};
 
 
 /* ========================================= */
@@ -45,6 +95,7 @@ export type TeamType =
 /* ========================================= */
 
 export interface ServiceRecordMember {
+
 
     /**
      * Interne UUID
@@ -65,7 +116,7 @@ export interface ServiceRecordMember {
 
 
     /**
-     * Communityname
+     * Anzeigename
      */
     name: string;
 
@@ -97,12 +148,30 @@ export interface ServiceRecordMember {
     /**
      * Spielertyp
      *
-     * BLEIBT WIE BISHER.
+     * Bestimmt grundsätzlich den
+     * primären Spielertyp der Karte.
      *
-     * Die MemberCard wird dadurch
-     * NICHT verändert.
+     * Bei einem Dual-Role-Spieler kann
+     * hier weiterhin "skater" stehen.
      */
-    playerType: "skater" | "goalie";
+    playerType:
+        | "skater"
+        | "goalie";
+
+
+    /**
+     * Dual Role
+     *
+     * true:
+     *
+     * Der Spieler war sowohl
+     * Skater als auch Goalie.
+     *
+     * false / undefined:
+     *
+     * Normaler Spieler.
+     */
+    dualRole?: boolean;
 
 
     /**
@@ -189,26 +258,32 @@ export interface ServiceRecordMember {
 
     /**
      * Karriere-Statistik
+     *
+     * Standard:
+     *
+     * stats:{
+     *     seasons:[...]
+     * }
+     *
+     * Dual Role:
+     *
+     * stats:{
+     *
+     *     skater:{
+     *         seasons:[...]
+     *     },
+     *
+     *     goalie:{
+     *         seasons:[...]
+     *     }
+     *
+     * }
      */
-    stats?: {
+    stats?:
 
-        /**
-         * Bisherige Skater-Statistiken
-         *
-         * BLEIBT BESTEHEN.
-         */
-        seasons: CareerSeasonStats[];
+        | StandardServiceRecordStats
 
-
-        /**
-         * Zusätzliche Goalie-Statistiken
-         *
-         * Nur Spieler besitzen dieses Feld,
-         * die auch als Torhüter eingesetzt wurden.
-         */
-        goalieSeasons?: CareerGoalieSeasonStats[];
-
-    };
+        | DualRoleServiceRecordStats;
 
 
     /**

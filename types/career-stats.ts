@@ -19,9 +19,22 @@
 
 export interface CareerSeasonStats {
 
+    /*
+    ============================================
+    GRUNDINFORMATIONEN
+    ============================================
+    */
+
     year: string;
 
     team: string;
+
+
+    /*
+    ============================================
+    REGULAR SEASON
+    ============================================
+    */
 
     games: number;
 
@@ -36,9 +49,11 @@ export interface CareerSeasonStats {
     penaltyMinutes: number;
 
 
-    /* ========================================= */
-    /* PLAYOFFS */
-    /* ========================================= */
+    /*
+    ============================================
+    PLAYOFFS
+    ============================================
+    */
 
     playoffGames: number;
 
@@ -53,9 +68,11 @@ export interface CareerSeasonStats {
     playoffPenaltyMinutes: number;
 
 
-    /* ========================================= */
-    /* TITEL */
-    /* ========================================= */
+    /*
+    ============================================
+    TITEL
+    ============================================
+    */
 
     titles: string[];
 
@@ -68,9 +85,22 @@ export interface CareerSeasonStats {
 
 export interface CareerGoalieSeasonStats {
 
+    /*
+    ============================================
+    GRUNDINFORMATIONEN
+    ============================================
+    */
+
     year: string;
 
     team: string;
+
+
+    /*
+    ============================================
+    REGULAR SEASON
+    ============================================
+    */
 
     games: number;
 
@@ -78,34 +108,41 @@ export interface CareerGoalieSeasonStats {
 
     losses: number;
 
-    /*
-     * Overtime-Niederlagen
-     */
-    overtimeLosses?: number;
-
-    /*
-     * Optional für ältere Datensätze,
-     * die stattdessen Unentschieden
-     * verwenden.
-     */
     ties?: number;
+
+    overtimeLosses?: number;
 
     shutouts: number;
 
-    goalsAgainst: number;
 
-    saves: number;
+    /*
+    ============================================
+    TORHÜTER-WERTE
+    ============================================
+    */
 
-    shotsAgainst: number;
+    /*
+    Diese Werte sind optional, weil ältere
+    Service-Record-Datensätze teilweise nur
+    GAA und SV% enthalten.
+    */
+
+    goalsAgainst?: number;
+
+    saves?: number;
+
+    shotsAgainst?: number;
 
     savePercentage: number;
 
     goalsAgainstAverage: number;
 
 
-    /* ========================================= */
-    /* PLAYOFFS */
-    /* ========================================= */
+    /*
+    ============================================
+    PLAYOFFS
+    ============================================
+    */
 
     playoffGames: number;
 
@@ -117,21 +154,47 @@ export interface CareerGoalieSeasonStats {
 
     playoffShutouts: number;
 
-    playoffGoalsAgainst: number;
 
-    playoffSaves: number;
+    /*
+    Diese Werte sind ebenfalls optional,
+    wenn sie im historischen Datensatz
+    nicht vorhanden sind.
+    */
 
-    playoffShotsAgainst: number;
+    playoffGoalsAgainst?: number;
+
+    playoffSaves?: number;
+
+    playoffShotsAgainst?: number;
 
     playoffSavePercentage: number;
 
     playoffGoalsAgainstAverage: number;
 
 
-    /* ========================================= */
-    /* TITEL */
-    /* ========================================= */
+    /*
+    ============================================
+    TITEL
+    ============================================
+    */
 
     titles: string[];
 
 }
+
+
+/* ========================================= */
+/* ALIASES */
+/* ========================================= */
+
+/*
+ * Die folgenden Aliase sorgen dafür,
+ * dass bestehender Code weiterhin
+ * verständlich und kompatibel bleibt.
+ */
+
+export type SkaterSeasonStats =
+    CareerSeasonStats;
+
+export type GoalieSeasonStats =
+    CareerGoalieSeasonStats;

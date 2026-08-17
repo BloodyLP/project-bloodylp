@@ -15,28 +15,17 @@
  * ============================================
  */
 
-
-import type { ServiceRecordMember } from "@/types/service-record";
-
-
-
-
-
-
+import type {
+    ServiceRecordMember,
+} from "@/types/service-record";
 
 
 export const o1l3r5: ServiceRecordMember = {
-
-
-
 
     /**
      * Interne UUID
      */
     id:"BA-003",
-
-
-
 
 
     /**
@@ -45,16 +34,10 @@ export const o1l3r5: ServiceRecordMember = {
     slug:"o1l3r5",
 
 
-
-
-
     /**
      * Service Record Nummer
      */
     recordNumber:"BA-003",
-
-
-
 
 
     /**
@@ -63,25 +46,16 @@ export const o1l3r5: ServiceRecordMember = {
     name:"O1L3R5",
 
 
-
-
-
     /**
      * Avatar
      */
     avatar:"/members/o1l3r5/avatar.png",
 
 
-
-
-
     /**
- * Dienstgrad
- */
-rank:"canadian-army-lieutenant-colonel",
-
-
-
+     * Dienstgrad
+     */
+    rank:"canadian-army-lieutenant-colonel",
 
 
     /**
@@ -90,26 +64,22 @@ rank:"canadian-army-lieutenant-colonel",
     organization:"bloodyArmy",
 
 
+    /**
+     * Position
+     */
+    position:"goalie",
 
 
-
-/**
- * Position
- */
-position:"goalie",
-
-/**
- * Spielertyp
- */
-playerType:"goalie",
-
-/**
- * Trikotnummer
- */
-playerNumber:"27",
+    /**
+     * Spielertyp
+     */
+    playerType:"goalie",
 
 
-
+    /**
+     * Trikotnummer
+     */
+    playerNumber:"27",
 
 
     /**
@@ -118,16 +88,10 @@ playerNumber:"27",
     line:1,
 
 
-
-
-
     /**
      * Eintrittsjahr
      */
     enlisted:"29. November 2018",
-
-
-
 
 
     /**
@@ -136,16 +100,10 @@ playerNumber:"27",
     prestige:2,
 
 
-
-
-
     /**
      * Patreon
      */
     patreon:0,
-
-
-
 
 
     /**
@@ -154,51 +112,44 @@ playerNumber:"27",
     active:true,
 
 
-
-
-
     /**
      * Sichtbar
      */
     visible:true,
 
 
-
-
-
-     /**
+    /**
      * Decorations
      */
     decorations:[
-
-    "stanley-cup",
-
-],
-
-stanleyCup:{
-
-    years:[
-
-        2020,
-
-        2022,
-
-        2025,
-
-        2026,
-
+        "stanley-cup",
     ],
 
-},
-    
+
+    /**
+     * Stanley Cup
+     */
+    stanleyCup:{
+
+        years:[
+
+            2020,
+
+            2022,
+
+            2025,
+
+            2026,
+
+        ],
+
+    },
+
 
     /**
      * Ribbon Rack
      */
     ribbons:[],
-
-
-
 
 
     /**
@@ -207,16 +158,10 @@ stanleyCup:{
     medals:[],
 
 
-
-
-
     /**
      * Abzeichen
      */
     badges:[],
-
-
-
 
 
     /**
@@ -225,293 +170,336 @@ stanleyCup:{
     achievements:[],
 
 
-
-
-
-
-
-
-
-        /**
-     * Karriere Statistiken
+    /**
+     * ========================================
+     * KARRIERE STATISTIKEN
+     * ========================================
+     *
+     * O1L3R5 ist ausschließlich Torhüter.
+     *
+     * Deshalb liegen die Daten unter:
+     *
+     * stats.goalie.seasons
+     *
+     * ========================================
      */
+
     stats:{
 
-        seasons:[
+        goalie:{
 
-                       {
+            seasons:[
 
-                year:"19/20",
+                /* ================================= */
+                /* 19/20 */
+                /* ================================= */
 
-                team:"BloodyArmy",
+                {
 
-                games:42,
+                    year:"19/20",
 
-                goalsAgainstAverage:2.33,
+                    team:"BloodyArmy",
 
-                savePercentage:87.5,
+                    games:42,
 
-                shutouts:4,
+                    goalsAgainstAverage:2.33,
 
-                wins:30,
+                    savePercentage:87.5,
 
-                losses:10,
+                    shutouts:4,
 
-                overtimeLosses:2,
+                    wins:30,
 
-                playoffGames:14,
+                    losses:10,
 
-                playoffGoalsAgainstAverage:1.58,
+                    overtimeLosses:2,
 
-                playoffSavePercentage:91.6,
+                    playoffGames:14,
 
-                playoffShutouts:2,
+                    playoffGoalsAgainstAverage:1.58,
 
-                playoffWins:10,
+                    playoffSavePercentage:91.6,
 
-                playoffLosses:4,
+                    playoffShutouts:2,
 
-                playoffOvertimeLosses:0,
+                    playoffWins:10,
 
-                titles:[]
+                    playoffLosses:4,
 
-            },
+                    playoffOvertimeLosses:0,
 
-            {
+                    titles:[],
 
-                year:"20/21",
+                },
 
-                team:"BloodyArmy",
 
-                games:42,
+                /* ================================= */
+                /* 20/21 */
+                /* ================================= */
 
-                goalsAgainstAverage:2.84,
+                {
 
-                savePercentage:88.0,
+                    year:"20/21",
 
-                shutouts:1,
+                    team:"BloodyArmy",
 
-                wins:22,
+                    games:42,
 
-                losses:14,
+                    goalsAgainstAverage:2.84,
 
-                overtimeLosses:4,
+                    savePercentage:88.0,
 
-                playoffGames:4,
+                    shutouts:1,
 
-                playoffGoalsAgainstAverage:3.92,
+                    wins:22,
 
-                playoffSavePercentage:84.2,
+                    losses:14,
 
-                playoffShutouts:0,
+                    overtimeLosses:4,
 
-                playoffWins:1,
+                    playoffGames:4,
 
-                playoffLosses:2,
+                    playoffGoalsAgainstAverage:3.92,
 
-                playoffOvertimeLosses:1,
+                    playoffSavePercentage:84.2,
 
-                titles:[]
+                    playoffShutouts:0,
 
-            },
+                    playoffWins:1,
 
-                        {
+                    playoffLosses:2,
 
-                year:"21/22",
+                    playoffOvertimeLosses:1,
 
-                team:"BloodyArmy",
+                    titles:[],
 
-                games:41,
+                },
 
-                goalsAgainstAverage:2.87,
 
-                savePercentage:84.8,
+                /* ================================= */
+                /* 21/22 */
+                /* ================================= */
 
-                shutouts:1,
+                {
 
-                wins:22,
+                    year:"21/22",
 
-                losses:10,
+                    team:"BloodyArmy",
 
-                overtimeLosses:7,
+                    games:41,
 
-                playoffGames:12,
+                    goalsAgainstAverage:2.87,
 
-                playoffGoalsAgainstAverage:2.57,
+                    savePercentage:84.8,
 
-                playoffSavePercentage:85.0,
+                    shutouts:1,
 
-                playoffShutouts:2,
+                    wins:22,
 
-                playoffWins:8,
+                    losses:10,
 
-                playoffLosses:3,
+                    overtimeLosses:7,
 
-                playoffOvertimeLosses:1,
+                    playoffGames:12,
 
-                titles:[]
+                    playoffGoalsAgainstAverage:2.57,
 
-            },
+                    playoffSavePercentage:85.0,
 
-            {
+                    playoffShutouts:2,
 
-                year:"22/23",
+                    playoffWins:8,
 
-                team:"BloodyArmy",
+                    playoffLosses:3,
 
-                games:48,
+                    playoffOvertimeLosses:1,
 
-                goalsAgainstAverage:2.00,
+                    titles:[],
 
-                savePercentage:85.8,
+                },
 
-                shutouts:8,
 
-                wins:31,
+                /* ================================= */
+                /* 22/23 */
+                /* ================================= */
 
-                losses:13,
+                {
 
-                overtimeLosses:2,
+                    year:"22/23",
 
-                playoffGames:7,
+                    team:"BloodyArmy",
 
-                playoffGoalsAgainstAverage:2.58,
+                    games:48,
 
-                playoffSavePercentage:80.4,
+                    goalsAgainstAverage:2.00,
 
-                playoffShutouts:0,
+                    savePercentage:85.8,
 
-                playoffWins:3,
+                    shutouts:8,
 
-                playoffLosses:4,
+                    wins:31,
 
-                playoffOvertimeLosses:0,
+                    losses:13,
 
-                titles:[]
+                    overtimeLosses:2,
 
-            },
+                    playoffGames:7,
 
-            {
+                    playoffGoalsAgainstAverage:2.58,
 
-                year:"23/24",
+                    playoffSavePercentage:80.4,
 
-                team:"BloodyArmy",
+                    playoffShutouts:0,
 
-                games:49,
+                    playoffWins:3,
 
-                goalsAgainstAverage:3.08,
+                    playoffLosses:4,
 
-                savePercentage:85.7,
+                    playoffOvertimeLosses:0,
 
-                shutouts:1,
+                    titles:[],
 
-                wins:30,
+                },
 
-                losses:17,
 
-                overtimeLosses:2,
+                /* ================================= */
+                /* 23/24 */
+                /* ================================= */
 
-                playoffGames:9,
+                {
 
-                playoffGoalsAgainstAverage:2.53,
+                    year:"23/24",
 
-                playoffSavePercentage:84.5,
+                    team:"BloodyArmy",
 
-                playoffShutouts:1,
+                    games:49,
 
-                playoffWins:4,
+                    goalsAgainstAverage:3.08,
 
-                playoffLosses:3,
+                    savePercentage:85.7,
 
-                playoffOvertimeLosses:1,
+                    shutouts:1,
 
-                titles:[]
+                    wins:30,
 
-            },
+                    losses:17,
 
-                        {
+                    overtimeLosses:2,
 
-                year:"24/25",
+                    playoffGames:9,
 
-                team:"BloodyArmy",
+                    playoffGoalsAgainstAverage:2.53,
 
-                games:46,
+                    playoffSavePercentage:84.5,
 
-                goalsAgainstAverage:1.66,
+                    playoffShutouts:1,
 
-                savePercentage:89.3,
+                    playoffWins:4,
 
-                shutouts:8,
+                    playoffLosses:3,
 
-                wins:39,
+                    playoffOvertimeLosses:1,
 
-                losses:5,
+                    titles:[],
 
-                overtimeLosses:2,
+                },
 
-                playoffGames:14,
 
-                playoffGoalsAgainstAverage:1.77,
+                /* ================================= */
+                /* 24/25 */
+                /* ================================= */
 
-                playoffSavePercentage:87.7,
+                {
 
-                playoffShutouts:2,
+                    year:"24/25",
 
-                playoffWins:12,
+                    team:"BloodyArmy",
 
-                playoffLosses:2,
+                    games:46,
 
-                playoffOvertimeLosses:0,
+                    goalsAgainstAverage:1.66,
 
-                titles:[]
+                    savePercentage:89.3,
 
-            },
+                    shutouts:8,
 
-            {
+                    wins:39,
 
-                year:"25/26",
+                    losses:5,
 
-                team:"BloodyArmy",
+                    overtimeLosses:2,
 
-                games:51,
+                    playoffGames:14,
 
-                goalsAgainstAverage:1.46,
+                    playoffGoalsAgainstAverage:1.77,
 
-                savePercentage:91.2,
+                    playoffSavePercentage:87.7,
 
-                shutouts:12,
+                    playoffShutouts:2,
 
-                wins:39,
+                    playoffWins:12,
 
-                losses:11,
+                    playoffLosses:2,
 
-                overtimeLosses:1,
+                    playoffOvertimeLosses:0,
 
-                playoffGames:8,
+                    titles:[],
 
-                playoffGoalsAgainstAverage:1.34,
+                },
 
-                playoffSavePercentage:91.3,
 
-                playoffShutouts:0,
+                /* ================================= */
+                /* 25/26 */
+                /* ================================= */
 
-                playoffWins:7,
+                {
 
-                playoffLosses:1,
+                    year:"25/26",
 
-                playoffOvertimeLosses:0,
+                    team:"BloodyArmy",
 
-                titles:[]
+                    games:51,
 
-            }
+                    goalsAgainstAverage:1.46,
 
-        ]
+                    savePercentage:91.2,
+
+                    shutouts:12,
+
+                    wins:39,
+
+                    losses:11,
+
+                    overtimeLosses:1,
+
+                    playoffGames:8,
+
+                    playoffGoalsAgainstAverage:1.34,
+
+                    playoffSavePercentage:91.3,
+
+                    playoffShutouts:0,
+
+                    playoffWins:7,
+
+                    playoffLosses:1,
+
+                    playoffOvertimeLosses:0,
+
+                    titles:[],
+
+                },
+
+            ],
+
+        },
 
     },
+
 
     /**
      * Bemerkung
      */
-    remarks:"Torhüter der BloodyArmy mit der Nummer 33.",
+    remarks:"Torhüter der BloodyArmy mit der Nummer 27.",
 
 };
