@@ -3,138 +3,135 @@
  * BloodyArmy
  * ============================================
  *
- * Project:
- * BloodyArmy Website
- *
  * File:
  * career-stats.ts
  *
  * Description:
- * Typdefinitionen für alle Karriere-
- * Statistiken.
+ * Typdefinitionen für Karriere-Statistiken.
  *
  * ============================================
  */
 
-import type {
 
-    TeamType,
+/* ========================================= */
+/* SKATER */
+/* ========================================= */
 
-} from "./service-record";
+export interface CareerSeasonStats {
 
-/*
-================================================
-BASIS
-================================================
-*/
+    year: string;
 
-export interface CareerSeasonBase {
+    team: string;
 
-    /**
-     * Anzeige Saison
-     */
-    season?:string;
+    games: number;
 
-    /**
-     * Jahr
-     */
-    year:string;
+    goals: number;
 
-    /**
-     * Team
-     */
-    team:TeamType;
+    assists: number;
 
-    /**
-     * Spiele
-     */
-    games:number;
+    points: number;
 
-    /**
-     * Gewonnene Titel
-     */
-    titles:string[];
+    plusMinus: number;
 
-}
+    penaltyMinutes: number;
 
-/*
-================================================
-SKATER
-================================================
-*/
 
-export interface SkaterSeasonStats
-extends CareerSeasonBase{
+    /* ========================================= */
+    /* PLAYOFFS */
+    /* ========================================= */
 
-    goals:number;
+    playoffGames: number;
 
-    assists:number;
+    playoffGoals: number;
 
-    points:number;
+    playoffAssists: number;
 
-    plusMinus:number;
+    playoffPoints: number;
 
-    penaltyMinutes:number;
+    playoffPlusMinus: number;
 
-    playoffGames:number;
+    playoffPenaltyMinutes: number;
 
-    playoffGoals:number;
 
-    playoffAssists:number;
+    /* ========================================= */
+    /* TITEL */
+    /* ========================================= */
 
-    playoffPoints:number;
-
-    playoffPlusMinus:number;
-
-    playoffPenaltyMinutes:number;
+    titles: string[];
 
 }
 
-/*
-================================================
-GOALIE
-================================================
-*/
 
-export interface GoalieSeasonStats
-extends CareerSeasonBase{
+/* ========================================= */
+/* GOALIE */
+/* ========================================= */
 
-    goalsAgainstAverage:number;
+export interface CareerGoalieSeasonStats {
 
-    savePercentage:number;
+    year: string;
 
-    shutouts:number;
+    team: string;
 
-    wins:number;
+    games: number;
 
-    losses:number;
+    wins: number;
 
-    overtimeLosses:number;
+    losses: number;
 
-    playoffGames:number;
+    /*
+     * Overtime-Niederlagen
+     */
+    overtimeLosses?: number;
 
-    playoffGoalsAgainstAverage:number;
+    /*
+     * Optional für ältere Datensätze,
+     * die stattdessen Unentschieden
+     * verwenden.
+     */
+    ties?: number;
 
-    playoffSavePercentage:number;
+    shutouts: number;
 
-    playoffShutouts:number;
+    goalsAgainst: number;
 
-    playoffWins:number;
+    saves: number;
 
-    playoffLosses:number;
+    shotsAgainst: number;
 
-    playoffOvertimeLosses:number;
+    savePercentage: number;
+
+    goalsAgainstAverage: number;
+
+
+    /* ========================================= */
+    /* PLAYOFFS */
+    /* ========================================= */
+
+    playoffGames: number;
+
+    playoffWins: number;
+
+    playoffLosses: number;
+
+    playoffOvertimeLosses?: number;
+
+    playoffShutouts: number;
+
+    playoffGoalsAgainst: number;
+
+    playoffSaves: number;
+
+    playoffShotsAgainst: number;
+
+    playoffSavePercentage: number;
+
+    playoffGoalsAgainstAverage: number;
+
+
+    /* ========================================= */
+    /* TITEL */
+    /* ========================================= */
+
+    titles: string[];
 
 }
-
-/*
-================================================
-UNION
-================================================
-*/
-
-export type CareerSeasonStats =
-
-    | SkaterSeasonStats
-
-    | GoalieSeasonStats;

@@ -120,6 +120,8 @@ import {
 
 import { nursoeindoggie } from "./members/nursoeindoggie";
 
+import { tonska } from "./members/tonska";
+
 export const MEMBERS: ServiceRecordMember[] = [
 
     bloodylp,
@@ -157,5 +159,7 @@ export const MEMBERS: ServiceRecordMember[] = [
     maeusefinger,
 
     nursoeindoggie,
+
+    tonska,
 
 ];

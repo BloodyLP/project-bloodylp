@@ -247,6 +247,16 @@ const featuredMembers:Record<number, FeaturedMember> = {
 
 },
 
+20:{
+
+    image:"/members/tonska/avatar.png",
+
+    name:"tonska",
+
+    organization:"youngArmy",
+
+},
+
 };
 
 

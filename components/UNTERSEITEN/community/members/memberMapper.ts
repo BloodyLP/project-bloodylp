@@ -16,44 +16,32 @@ import { ServiceRecord } from "@/lib/service-record";
 import { getRankImage } from "@/lib/service-record/getRankImage";
 
 import type {
-
     ServiceRecordMember,
-
 } from "@/types/service-record";
 
 import type {
-
     SkaterSeasonStats,
-
     GoalieSeasonStats,
-
 } from "@/types/career-stats";
 
 import {
-
     buildSkaterCareerStats,
-
 } from "./stats/calculateSkaterCareerStats";
 
 import {
-
     buildGoalieCareerStats,
-
 } from "./stats/calculateGoalieCareerStats";
 
+
+/* ========================================= */
+/* BADGE THEME */
+/* ========================================= */
+
 function getBadgeTheme(
-
-    member:ServiceRecordMember
-
+    member: ServiceRecordMember
 ){
 
-    /*
-    ============================================
-    FOUNDER
-    ============================================
-    */
-
-    if(member.prestige===10){
+    if(member.prestige === 10){
 
         return{
 
@@ -65,13 +53,8 @@ function getBadgeTheme(
 
     }
 
-    /*
-    ============================================
-    PRESTIGE
-    ============================================
-    */
 
-    if(member.prestige===3){
+    if(member.prestige === 3){
 
         return{
 
@@ -83,7 +66,8 @@ function getBadgeTheme(
 
     }
 
-    if(member.prestige===2){
+
+    if(member.prestige === 2){
 
         return{
 
@@ -95,7 +79,8 @@ function getBadgeTheme(
 
     }
 
-    if(member.prestige===1){
+
+    if(member.prestige === 1){
 
         return{
 
@@ -107,17 +92,11 @@ function getBadgeTheme(
 
     }
 
-    /*
-    ============================================
-    RANGSYSTEM
-    ============================================
-    */
 
     const rank = ServiceRecord.rank(
-
         member.rank
-
     );
+
 
     switch(rank.category){
 
@@ -131,6 +110,7 @@ function getBadgeTheme(
 
             };
 
+
         case "offiziere":
 
             return{
@@ -140,6 +120,7 @@ function getBadgeTheme(
                 theme:"offiziere",
 
             };
+
 
         case "feldwebel":
 
@@ -151,6 +132,7 @@ function getBadgeTheme(
 
             };
 
+
         case "unteroffiziere":
 
             return{
@@ -160,6 +142,7 @@ function getBadgeTheme(
                 theme:"unteroffiziere",
 
             };
+
 
         case "mannschaften":
 
@@ -171,6 +154,7 @@ function getBadgeTheme(
 
             };
 
+
         case "zivilisten":
 
             return{
@@ -180,6 +164,7 @@ function getBadgeTheme(
                 theme:"zivilisten",
 
             };
+
 
         default:
 
@@ -195,115 +180,469 @@ function getBadgeTheme(
 
 }
 
-export function mapMemberToCard(
 
-    member:ServiceRecordMember
+/* ========================================= */
+/* STATISTIK-TYPEN */
+/* ========================================= */
+
+type LegacyStats = {
+
+    seasons:
+        (
+            | SkaterSeasonStats
+            | GoalieSeasonStats
+        )[];
+
+};
+
+
+type DualRoleStats = {
+
+    skater?: {
+
+        seasons: SkaterSeasonStats[];
+
+    };
+
+    goalie?: {
+
+        seasons: GoalieSeasonStats[];
+
+    };
+
+};
+
+
+/* ========================================= */
+/* STATS LESEN */
+/* ========================================= */
+
+function getStatsData(
+
+    member: ServiceRecordMember
 
 ){
 
-    const rank = ServiceRecord.rank(
+    if(!member.stats){
 
-        member.rank
+        return undefined;
 
+    }
+
+
+    return member.stats as unknown as
+        LegacyStats | DualRoleStats;
+
+}
+
+
+/* ========================================= */
+/* SKATER SEASONS */
+/* ========================================= */
+
+function getSkaterSeasons(
+
+    member: ServiceRecordMember
+
+): SkaterSeasonStats[] {
+
+    const stats = getStatsData(
+        member
     );
+
+
+    if(!stats){
+
+        return [];
+
+    }
+
+
+    /*
+    ============================================
+    ALTE STRUKTUR
+    ============================================
+    */
+
+    if(
+        "seasons" in stats
+        &&
+        Array.isArray(stats.seasons)
+    ){
+
+        const seasons =
+            stats.seasons;
+
+        return seasons as SkaterSeasonStats[];
+
+    }
+
+
+    /*
+    ============================================
+    DUAL ROLE
+    ============================================
+    */
+
+    if(
+        "skater" in stats
+        &&
+        stats.skater
+        &&
+        Array.isArray(
+            stats.skater.seasons
+        )
+    ){
+
+        return stats.skater.seasons;
+
+    }
+
+
+    return [];
+
+}
+
+
+/* ========================================= */
+/* GOALIE SEASONS */
+/* ========================================= */
+
+function getGoalieSeasons(
+
+    member: ServiceRecordMember
+
+): GoalieSeasonStats[] {
+
+    const stats = getStatsData(
+        member
+    );
+
+
+    if(!stats){
+
+        return [];
+
+    }
+
+
+    /*
+    ============================================
+    ALTE STRUKTUR
+    ============================================
+    */
+
+    if(
+        "seasons" in stats
+        &&
+        Array.isArray(stats.seasons)
+    ){
+
+        const seasons =
+            stats.seasons;
+
+        return seasons as GoalieSeasonStats[];
+
+    }
+
+
+    /*
+    ============================================
+    DUAL ROLE
+    ============================================
+    */
+
+    if(
+        "goalie" in stats
+        &&
+        stats.goalie
+        &&
+        Array.isArray(
+            stats.goalie.seasons
+        )
+    ){
+
+        return stats.goalie.seasons;
+
+    }
+
+
+    return [];
+
+}
+
+
+/* ========================================= */
+/* MAPPER */
+/* ========================================= */
+
+export function mapMemberToCard(
+
+    member: ServiceRecordMember
+
+){
+
+    /*
+    ============================================
+    RANG
+    ============================================
+    */
+
+    const rank = ServiceRecord.rank(
+        member.rank
+    );
+
+
+    /*
+    ============================================
+    POSITION
+    ============================================
+    */
 
     const position = ServiceRecord.position(
-
         member.position
-
     );
+
+
+    /*
+    ============================================
+    BADGE
+    ============================================
+    */
 
     const badge = getBadgeTheme(
-
         member
-
     );
 
-    return{
 
-        id:member.id,
+    /*
+    ============================================
+    STATISTIKEN
+    ============================================
+    */
 
-        armyId:member.recordNumber,
+    let stats;
 
-        organization:member.organization,
 
-        name:member.name,
+    /*
+    ============================================
+    DUAL ROLE
+    ============================================
+    */
 
-        avatar:member.avatar,
+    if(
+        member.dualRole === true
+        &&
+        member.stats
+    ){
 
-        joinedLabel:`SEIT ${member.enlisted}`,
+        const skaterSeasons =
+            getSkaterSeasons(
+                member
+            );
 
-        rank:{
 
-            title:rank.name,
+        const goalieSeasons =
+            getGoalieSeasons(
+                member
+            );
 
-            image:getRankImage(
 
-                rank.id
+        const skaterStats =
 
-            ),
-
-        },
-
-        badge:{
-
-            title:badge.title,
-
-            theme:badge.theme,
-
-        },
-
-        prestige:{
-
-            level:member.prestige,
-
-            key:badge.theme,
-
-            title:badge.title,
-
-        },
-
-        stats:
-
-            member.stats
+            skaterSeasons.length > 0
 
                 ?
 
-                member.playerType==="goalie"
+                buildSkaterCareerStats(
+                    skaterSeasons
+                )
+
+                :
+
+                undefined;
+
+
+        const goalieStats =
+
+            goalieSeasons.length > 0
+
+                ?
+
+                buildGoalieCareerStats(
+                    goalieSeasons
+                )
+
+                :
+
+                undefined;
+
+
+        stats = {
+
+            skater: skaterStats,
+
+            goalie: goalieStats,
+
+        };
+
+    }
+
+
+    /*
+    ============================================
+    NORMALE SPIELER
+    ============================================
+    */
+
+    else if(member.stats){
+
+        if(
+            member.playerType === "goalie"
+        ){
+
+            const goalieSeasons =
+                getGoalieSeasons(
+                    member
+                );
+
+
+            stats =
+
+                goalieSeasons.length > 0
 
                     ?
 
                     buildGoalieCareerStats(
-
-                        member.stats.seasons as GoalieSeasonStats[]
-
+                        goalieSeasons
                     )
 
                     :
 
+                    undefined;
+
+        }
+
+        else{
+
+            const skaterSeasons =
+                getSkaterSeasons(
+                    member
+                );
+
+
+            stats =
+
+                skaterSeasons.length > 0
+
+                    ?
+
                     buildSkaterCareerStats(
-
-                        member.stats.seasons as SkaterSeasonStats[]
-
+                        skaterSeasons
                     )
 
-                :
+                    :
 
-                undefined,
+                    undefined;
 
-        playerType:member.playerType,
+        }
 
-        profile:{
+    }
+
+
+    /*
+    ============================================
+    KEINE STATISTIK
+    ============================================
+    */
+
+    else{
+
+        stats = undefined;
+
+    }
+
+
+    /*
+    ============================================
+    CARD
+    ============================================
+    */
+
+    return {
+
+        id: member.id,
+
+
+        armyId: member.recordNumber,
+
+
+        organization:
+            member.organization,
+
+
+        name: member.name,
+
+
+        avatar: member.avatar,
+
+
+        joinedLabel:
+            `SEIT ${member.enlisted}`,
+
+
+        rank: {
+
+            title: rank.name,
+
+            image: getRankImage(
+                rank.id
+            ),
+
+        },
+
+
+        badge: {
+
+            title: badge.title,
+
+            theme: badge.theme,
+
+        },
+
+
+        prestige: {
+
+            level: member.prestige,
+
+            key: badge.theme,
+
+            title: badge.title,
+
+        },
+
+
+        stats,
+
+
+        playerType:
+            member.playerType,
+
+
+        dualRole:
+            member.dualRole ?? false,
+
+
+        profile: {
 
             position:
-
                 position?.title
-
                 ??
-
                 "",
 
-            number:member.playerNumber,
+
+            number:
+                member.playerNumber,
 
         },
 

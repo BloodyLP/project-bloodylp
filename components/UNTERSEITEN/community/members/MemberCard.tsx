@@ -21,6 +21,7 @@ import type {
 import type {
     SkaterCareerStatsData,
     GoalieCareerStatsData,
+    DualCareerStatsData,
 } from "./stats/types";
 
 
@@ -41,31 +42,59 @@ type MemberCardProps = {
     compact?: boolean;
 
     rank: {
+
         title: string;
+
         image: string;
+
     };
 
     badge: {
+
         title: string;
+
         subtitle?: string;
+
         theme: string;
+
     };
 
     prestige?: {
+
         level: number;
+
         key: string | null;
+
         title: string | null;
+
     };
 
     stats?:
         | SkaterCareerStatsData
-        | GoalieCareerStatsData;
+        | GoalieCareerStatsData
+        | DualCareerStatsData;
 
     playerType: "skater" | "goalie";
 
+    /*
+    ============================================
+    DUAL ROLE
+    ============================================
+
+    Optional, damit alle bisherigen
+    Member weiterhin funktionieren.
+
+    true = Spieler war sowohl Skater
+    als auch Goalie.
+    */
+    dualRole?: boolean;
+
     profile: {
+
         position: string;
+
         number: string;
+
     };
 
 };
@@ -95,6 +124,8 @@ export default function MemberCard({
 
     playerType,
 
+    dualRole = false,
+
     profile,
 
     compact = false,
@@ -115,11 +146,17 @@ export default function MemberCard({
 
 
     if (
+
         badge.title !== "FOUNDER"
+
         &&
+
         prestige?.level
+
         &&
+
         prestige.level > 0
+
     ) {
 
         displayTitle =
@@ -146,33 +183,43 @@ export default function MemberCard({
     return (
 
         <div
+
             className={
+
                 compact
+
                     ? `${styles.flipContainer} ${styles.compactContainer}`
+
                     : styles.flipContainer
+
             }
+
         >
 
             <motion.div
 
-                className={
-                    flipped
-                        ? `${styles.flipInner} ${styles.isFlipped}`
-                        : styles.flipInner
-                }
+                className={styles.flipInner}
 
                 initial={false}
 
                 animate={{
+
                     rotateY:
+
                         flipped
+
                             ? 180
+
                             : 0,
+
                 }}
 
                 transition={{
+
                     duration: 0.7,
+
                     ease: "easeInOut",
+
                 }}
 
             >
@@ -184,29 +231,45 @@ export default function MemberCard({
                 <article
 
                     className={
+
                         compact
+
                             ? `${styles.card} ${styles.compact}`
+
                             : `${styles.card} ${styles.founder}`
+
                     }
 
                     style={
+
                         createThemeVariables(
+
                             organizationTheme
+
                         )
+
                     }
 
                 >
 
                     <header
+
                         className={
+
                             styles.header
+
                         }
+
                     >
 
                         <div
+
                             className={
+
                                 styles.rankArea
+
                             }
+
                         >
 
                             <Image
@@ -216,24 +279,36 @@ export default function MemberCard({
                                 alt={rank.title}
 
                                 width={70}
+
                                 height={70}
 
                                 className={
+
                                     styles.rankImage
+
                                 }
 
                             />
 
+
                             <div
+
                                 className={
+
                                     styles.rankContent
+
                                 }
+
                             >
 
                                 <h2
+
                                     className={
+
                                         styles.rankTitle
+
                                     }
+
                                 >
 
                                     {rank.title}
@@ -246,9 +321,13 @@ export default function MemberCard({
 
 
                         <div
+
                             className={
+
                                 styles.armyId
+
                             }
+
                         >
 
                             {armyId}
@@ -263,9 +342,13 @@ export default function MemberCard({
                     {/* ================================= */}
 
                     <div
+
                         className={
+
                             styles.avatarWrapper
+
                         }
+
                     >
 
                         <Image
@@ -275,10 +358,13 @@ export default function MemberCard({
                             alt={name}
 
                             width={280}
+
                             height={280}
 
                             className={
+
                                 styles.avatar
+
                             }
 
                         />
@@ -291,15 +377,23 @@ export default function MemberCard({
                     {/* ================================= */}
 
                     <div
+
                         className={
+
                             styles.identity
+
                         }
+
                     >
 
                         <h1
+
                             className={
+
                                 styles.name
+
                             }
+
                         >
 
                             {name}
@@ -310,7 +404,9 @@ export default function MemberCard({
                         <div
 
                             className={
+
                                 styles.badge
+
                             }
 
                             style={{
@@ -332,9 +428,13 @@ export default function MemberCard({
                         >
 
                             <span
+
                                 className={
+
                                     styles.badgeTitle
+
                                 }
+
                             >
 
                                 {displayTitle}
@@ -351,15 +451,23 @@ export default function MemberCard({
                     {/* ================================= */}
 
                     <footer
+
                         className={
+
                             styles.footer
+
                         }
+
                     >
 
                         <div
+
                             className={
+
                                 styles.joined
+
                             }
+
                         >
 
                             {joinedLabel}
@@ -372,11 +480,15 @@ export default function MemberCard({
                             type="button"
 
                             className={
+
                                 styles.actionButton
+
                             }
 
                             onClick={() =>
+
                                 setFlipped(true)
+
                             }
 
                         >
@@ -389,25 +501,38 @@ export default function MemberCard({
                         <Link
 
                             href={
+
                                 `/community/service-record?id=${id}`
+
                             }
 
                             className={
+
                                 styles.actionButton
+
                             }
 
                             onClick={() => {
 
                                 sessionStorage.setItem(
+
                                     "communityScroll",
+
                                     String(
+
                                         window.scrollY
+
                                     )
+
                                 );
 
+
                                 sessionStorage.setItem(
+
                                     "selectedMember",
+
                                     id
+
                                 );
 
                             }}
@@ -453,10 +578,14 @@ export default function MemberCard({
 
                         playerType={playerType}
 
+                        dualRole={dualRole}
+
                         profile={profile}
 
                         onBack={() =>
+
                             setFlipped(false)
+
                         }
 
                     />

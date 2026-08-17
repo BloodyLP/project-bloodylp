@@ -3,9 +3,6 @@
  * BloodyArmy
  * ============================================
  *
- * Project:
- * BloodyArmy Website
- *
  * File:
  * service-record.ts
  *
@@ -16,174 +13,207 @@
  */
 
 import type {
-
     RankId,
-
     PrestigeLevel,
-
 } from "@/data/service-record/ranks";
 
 import type {
-
     OrganizationId,
-
 } from "@/data/service-record/organizations";
 
 import type {
-
     PositionId,
-
 } from "@/data/service-record/positions";
 
 import type {
-
     CareerSeasonStats,
-
+    CareerGoalieSeasonStats,
 } from "./career-stats";
 
-/*
-================================================
-TEAMS
-================================================
-*/
+
+/* ========================================= */
+/* TEAMS */
+/* ========================================= */
 
 export type TeamType =
-
     | "BloodyArmy"
-
     | "Young Army";
 
-/*
-================================================
-SERVICE RECORD MEMBER
-================================================
-*/
+
+/* ========================================= */
+/* SERVICE RECORD MEMBER */
+/* ========================================= */
 
 export interface ServiceRecordMember {
 
     /**
      * Interne UUID
      */
-    id:string;
+    id: string;
+
 
     /**
      * URL-Slug
      */
-    slug:string;
+    slug: string;
+
 
     /**
      * Service Record Nummer
      */
-    recordNumber:string;
+    recordNumber: string;
+
 
     /**
      * Communityname
      */
-    name:string;
+    name: string;
+
 
     /**
      * Avatar
      */
-    avatar:string;
+    avatar: string;
+
 
     /**
      * Dienstgrad
      */
-    rank:RankId;
+    rank: RankId;
+
 
     /**
      * Organisation
      */
-    organization:OrganizationId;
+    organization: OrganizationId;
+
 
     /**
      * Position
      */
-    position:PositionId;
+    position: PositionId;
+
 
     /**
      * Spielertyp
+     *
+     * BLEIBT WIE BISHER.
+     *
+     * Die MemberCard wird dadurch
+     * NICHT verändert.
      */
-    playerType:"skater" | "goalie";
+    playerType: "skater" | "goalie";
+
 
     /**
      * Trikotnummer
      */
-    playerNumber:string;
+    playerNumber: string;
+
 
     /**
      * Reihe
      */
-    line:number;
+    line: number;
+
 
     /**
      * Eintrittsjahr
      */
-    enlisted:string;
+    enlisted: string;
+
 
     /**
      * Prestige-Level
      */
-    prestige:PrestigeLevel;
+    prestige: PrestigeLevel;
+
 
     /**
      * Patreon-Level
      */
-    patreon:number;
+    patreon: number;
+
 
     /**
      * Aktiv
      */
-    active:boolean;
+    active: boolean;
+
 
     /**
      * Sichtbar
      */
-    visible:boolean;
+    visible: boolean;
+
 
     /**
      * Decorations
      */
-    decorations:string[];
+    decorations: string[];
 
-stanleyCup?:{
-
-    years:number[];
-
-};
 
     /**
-     * Ribbon Racks
+     * Stanley Cup
      */
-    ribbons:string[];
+    stanleyCup?: {
+
+        years: number[];
+
+    };
+
+
+    /**
+     * Ribbon Rack
+     */
+    ribbons: string[];
+
 
     /**
      * Medaillen
      */
-    medals:string[];
+    medals: string[];
+
 
     /**
      * Abzeichen
      */
-    badges:string[];
+    badges: string[];
+
 
     /**
      * Achievements
      */
-    achievements:string[];
+    achievements: string[];
+
 
     /**
      * Karriere-Statistik
      */
-    stats?:{
+    stats?: {
 
-        seasons:CareerSeasonStats[];
+        /**
+         * Bisherige Skater-Statistiken
+         *
+         * BLEIBT BESTEHEN.
+         */
+        seasons: CareerSeasonStats[];
+
+
+        /**
+         * Zusätzliche Goalie-Statistiken
+         *
+         * Nur Spieler besitzen dieses Feld,
+         * die auch als Torhüter eingesetzt wurden.
+         */
+        goalieSeasons?: CareerGoalieSeasonStats[];
 
     };
+
 
     /**
      * Bemerkungen
      */
-    remarks?:string;
+    remarks?: string;
 
 }

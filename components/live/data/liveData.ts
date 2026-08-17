@@ -37,14 +37,7 @@ export const liveData = {
 
     title: "Als Nächstes",
 
-    events: [
-
-{
-        day: "MO",
-        date: "17. AUG",
-        time: "19:30 Uhr",
-        title: "Assassins Creed Black Flag Resynced",
-      },      
+    events: [  
 
       {
         day: "MI",
@@ -62,7 +55,14 @@ export const liveData = {
 
                   {
         day: "SA",
-        date: "21. AUG",
+        date: "22. AUG",
+        time: "19:30 Uhr",
+        title: "Assassins Creed Black Flag Resynced",
+      }, 
+
+                        {
+        day: "SA",
+        date: "29. AUG",
         time: "19:30 Uhr",
         title: "Assassins Creed Black Flag Resynced",
       }, 

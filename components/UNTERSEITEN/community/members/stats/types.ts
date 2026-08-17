@@ -17,12 +17,10 @@
  */
 
 import type {
-
     SkaterSeasonStats,
-
     GoalieSeasonStats,
-
 } from "@/types/career-stats";
+
 
 /*
 ================================================
@@ -32,11 +30,12 @@ INPUT
 
 export type CareerStatsInput<T> = {
 
-    regularSeason:T[];
+    regularSeason: T[];
 
-    playoffs:T[];
+    playoffs: T[];
 
 };
+
 
 /*
 ================================================
@@ -46,15 +45,16 @@ OUTPUT
 
 export type CareerStatsData<T> = {
 
-    seasons:T[];
+    seasons: T[];
 
-    regularSeason:T[];
+    regularSeason: T[];
 
-    playoffs:T[];
+    playoffs: T[];
 
-    total:T;
+    total: T;
 
 };
+
 
 /*
 ================================================
@@ -63,9 +63,32 @@ ALIASES
 */
 
 export type SkaterCareerStatsData =
-
     CareerStatsData<SkaterSeasonStats>;
 
-export type GoalieCareerStatsData =
 
+export type GoalieCareerStatsData =
     CareerStatsData<GoalieSeasonStats>;
+
+
+/*
+================================================
+DUAL ROLE
+================================================
+*/
+
+/**
+ * Karriere eines Spielers,
+ * der sowohl als Skater als auch
+ * als Goalie eingesetzt wurde.
+ *
+ * Beide Karrieren bleiben vollständig
+ * voneinander getrennt.
+ */
+
+export type DualCareerStatsData = {
+
+    skater: SkaterCareerStatsData;
+
+    goalie: GoalieCareerStatsData;
+
+};
