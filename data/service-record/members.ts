@@ -112,6 +112,12 @@ import {
 
 } from "./members/mayla";
 
+import {
+
+    maeusefinger
+
+} from "./members/maeusefinger";
+
 export const MEMBERS: ServiceRecordMember[] = [
 
     bloodylp,
@@ -145,5 +151,7 @@ export const MEMBERS: ServiceRecordMember[] = [
     surstroemingtyp,
 
     MaylatheBloodylinchen,
+
+    maeusefinger,
 
 ];
