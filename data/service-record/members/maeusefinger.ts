@@ -131,34 +131,198 @@ export const maeusefinger: ServiceRecordMember = {
 
         seasons:[
 
+             {
 
+                year:"19/20",
+
+                team:"Young Army",
+
+                games:68,
+
+                goals:20,
+
+                assists:24,
+
+                points:44,
+
+                plusMinus:18,
+
+                penaltyMinutes:20,
+
+                playoffGames:24,
+
+                playoffGoals:5,
+
+                playoffAssists:4,
+
+                playoffPoints:9,
+
+                playoffPlusMinus:6,
+
+                playoffPenaltyMinutes:4,
+
+                titles:[]
+
+            },
+             {
+
+                year:"20/21",
+
+                team:"Young Army",
+
+                games:68,
+
+                goals:21,
+
+                assists:11,
+
+                points:32,
+
+                plusMinus:20,
+
+                penaltyMinutes:18,
+
+                playoffGames:20,
+
+                playoffGoals:2,
+
+                playoffAssists:5,
+
+                playoffPoints:7,
+
+                playoffPlusMinus:1,
+
+                playoffPenaltyMinutes:10,
+
+                titles:[]
+
+            },
+             {
+
+                year:"21/22",
+
+                team:"Young Army",
+
+                games:82,
+
+                goals:14,
+
+                assists:13,
+
+                points:27,
+
+                plusMinus:6,
+
+                penaltyMinutes:12,
+
+                playoffGames:0,
+
+                playoffGoals:0,
+
+                playoffAssists:0,
+
+                playoffPoints:0,
+
+                playoffPlusMinus:0,
+
+                playoffPenaltyMinutes:0,
+
+                titles:[]
+
+            },
+             {
+
+                year:"22/23",
+
+                team:"Young Army",
+
+                games:0,
+
+                goals:0,
+
+                assists:0,
+
+                points:0,
+
+                plusMinus:0,
+
+                penaltyMinutes:0,
+
+                playoffGames:0,
+
+                playoffGoals:0,
+
+                playoffAssists:0,
+
+                playoffPoints:0,
+
+                playoffPlusMinus:0,
+
+                playoffPenaltyMinutes:0,
+
+                titles:[]
+
+            },
+ {
+
+                year:"23/24",
+
+                team:"Young Army",
+
+                games:0,
+
+                goals:0,
+
+                assists:0,
+
+                points:0,
+
+                plusMinus:0,
+
+                penaltyMinutes:0,
+
+                playoffGames:0,
+
+                playoffGoals:0,
+
+                playoffAssists:0,
+
+                playoffPoints:0,
+
+                playoffPlusMinus:0,
+
+                playoffPenaltyMinutes:0,
+
+                titles:[]
+
+            },
             {
 
                 year:"24/25",
 
                 team:"Young Army",
 
-                games:59,
+                games:40,
 
-                goals:5,
+                goals:2,
 
-                assists:4,
+                assists:2,
 
-                points:9,
+                points:4,
 
-                plusMinus:2,
+                plusMinus:-3,
 
                 penaltyMinutes:0,
 
-                playoffGames:22,
+                playoffGames:19,
 
-                playoffGoals:3,
+                playoffGoals:1,
 
-                playoffAssists:6,
+                playoffAssists:1,
 
-                playoffPoints:9,
+                playoffPoints:2,
 
-                playoffPlusMinus:6,
+                playoffPlusMinus:2,
 
                 playoffPenaltyMinutes:0,
 
@@ -172,27 +336,27 @@ export const maeusefinger: ServiceRecordMember = {
 
                 team:"Young Army",
 
-                games:37,
+                games:13,
 
-                goals:4,
+                goals:0,
 
-                assists:1,
+                assists:2,
 
-                points:5,
+                points:2,
 
-                plusMinus:0,
+                plusMinus:1,
 
-                penaltyMinutes:0,
+                penaltyMinutes:2,
 
-                playoffGames:11,
+                playoffGames:5,
 
                 playoffGoals:2,
 
-                playoffAssists:2,
+                playoffAssists:1,
 
-                playoffPoints:4,
+                playoffPoints:3,
 
-                playoffPlusMinus:0,
+                playoffPlusMinus:3,
 
                 playoffPenaltyMinutes:0,
 
