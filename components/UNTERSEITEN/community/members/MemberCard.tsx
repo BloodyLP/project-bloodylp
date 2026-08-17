@@ -74,11 +74,8 @@ type MemberCardProps = {
     };
 
     stats?:
-
         | SkaterCareerStatsData
-
         | GoalieCareerStatsData
-
         | DualCareerStatsData;
 
 
@@ -95,11 +92,8 @@ type MemberCardProps = {
     */
 
     playerType:
-
         | "skater"
-
         | "goalie"
-
         | "dual";
 
 
@@ -249,9 +243,21 @@ export default function MemberCard({
 
                 transition={{
 
-                    duration: 0.7,
+                    duration:0.7,
 
-                    ease: "easeInOut",
+                    ease:"easeInOut",
+
+                }}
+
+                /*
+                ============================================
+                MOBILE TOUCH SCROLL
+                ============================================
+                */
+
+                style={{
+
+                    touchAction:"pan-y",
 
                 }}
 
@@ -517,11 +523,13 @@ export default function MemberCard({
 
                             }
 
-                            onClick={() =>
+                            onClick={(event) => {
 
-                                setFlipped(true)
+                                event.stopPropagation();
 
-                            }
+                                setFlipped(true);
+
+                            }}
 
                         >
 
