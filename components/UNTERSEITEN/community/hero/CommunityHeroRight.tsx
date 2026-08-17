@@ -257,6 +257,24 @@ const featuredMembers:Record<number, FeaturedMember> = {
 
 },
 
+5:{
+
+    image:"/members/hightowersl/avatar.png",
+
+    name:"hightowersl",
+
+    organization:"bloodyArmy",
+
+},
+8:{
+
+    image:"/members/bobbele/avatar2.png",
+
+    name:"bobbele",
+
+    organization:"bloodyArmy",
+
+},
 };
 
 

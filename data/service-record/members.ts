@@ -122,6 +122,10 @@ import { nursoeindoggie } from "./members/nursoeindoggie";
 
 import { tonska } from "./members/tonska";
 
+import { hightowersl } from "./members/hightowersl";
+
+import { bobbele } from "./members/bobbele";
+
 export const MEMBERS: ServiceRecordMember[] = [
 
     bloodylp,
@@ -161,5 +165,8 @@ export const MEMBERS: ServiceRecordMember[] = [
     nursoeindoggie,
 
     tonska,
+    
+    hightowersl,
 
+    bobbele,
 ];
