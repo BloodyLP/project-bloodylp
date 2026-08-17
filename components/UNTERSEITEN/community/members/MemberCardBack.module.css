@@ -1,87 +1,95 @@
-/* ================================= */
+/* ========================================= */
 /* MEMBER CARD BACK */
-/* ================================= */
+/* ========================================= */
 
-.backCard{
+
+/* ========================================= */
+/* BACK CARD */
+/* ========================================= */
+
+.backCard {
 
     position:relative;
+
+    display:flex;
+
+    flex-direction:column;
 
     width:100%;
 
     height:100%;
 
-    min-width:0;
-
     min-height:0;
 
-    display:flex;
-
-    flex-direction:column;
+    overflow:hidden;
 
     background:
         linear-gradient(
             180deg,
-            #292929,
-            #181818
+            #242424 0%,
+            #161616 100%
         );
 
     border:
         1px solid
-        var(--accent-border);
+        rgba(255,255,255,.12);
 
     border-radius:30px;
 
     box-shadow:
-        0 30px 70px rgba(0,0,0,.45);
-
-    overflow:hidden;
-
-}
-
-
-/* ================================= */
-/* BACKGROUND EFFECT */
-/* ================================= */
-
-.backCard::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-        radial-gradient(
-            circle at top,
-            var(--accent-glow-soft),
-            transparent 45%
-        );
-
-    pointer-events:none;
+        0 30px 70px
+        rgba(0,0,0,.45);
 
 }
 
 
-/* ================================= */
+/* ========================================= */
+/* ORGANISATION THEMES */
+/* ========================================= */
+
+.bloodyArmy {
+
+    --back-accent:
+        #a3e635;
+
+}
+
+
+.youngArmy {
+
+    --back-accent:
+        #facc15;
+
+}
+
+
+/* ========================================= */
 /* HEADER */
-/* ================================= */
+/* ========================================= */
 
-.header{
+.header {
 
     position:relative;
 
-    z-index:2;
+    z-index:20;
+
+    flex:
+        0 0 auto;
 
     display:flex;
 
-    flex-direction:column;
+    align-items:center;
 
-    gap:.6rem;
+    justify-content:space-between;
+
+    gap:1rem;
 
     padding:
-        1.35rem
-        1.4rem;
+        1rem
+        1.2rem;
+
+    background:
+        rgba(0,0,0,.18);
 
     border-bottom:
         1px solid
@@ -90,317 +98,391 @@
 }
 
 
-.title{
+/* ========================================= */
+/* HEADER TITLE */
+/* ========================================= */
 
-    color:#FFFFFF;
+.title {
 
-    font-size:.9rem;
+    color:
+        var(--back-accent);
 
-    font-weight:950;
+    font-size:
+        .78rem;
 
-    letter-spacing:.18em;
+    font-weight:
+        950;
 
-    text-transform:uppercase;
+    letter-spacing:
+        .12em;
 
-}
+    line-height:
+        1.2;
 
-
-.member{
-
-    color:var(--accent);
-
-    font-size:.75rem;
-
-    font-weight:900;
-
-    letter-spacing:.15em;
-
-    text-transform:uppercase;
-
-    text-shadow:
-        0 0 10px
-        var(--accent-glow-soft);
+    text-transform:
+        uppercase;
 
 }
 
 
-/* ================================= */
+.member {
+
+    flex-shrink:0;
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size:
+        .72rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .08em;
+
+    text-align:right;
+
+    white-space:
+        nowrap;
+
+}
+
+
+/* ========================================= */
 /* PLAYER PROFILE */
-/* ================================= */
+/* ========================================= */
 
-.playerProfile{
+.playerProfile {
 
     position:relative;
 
-    z-index:2;
+    z-index:10;
+
+    flex:
+        0 0 auto;
 
     display:flex;
 
-    flex-direction:column;
+    align-items:center;
+
+    justify-content:space-between;
 
     gap:1rem;
 
     padding:
-        1rem
+        .9rem
         1.2rem;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.06);
 
 }
 
 
-.playerIdentity{
+/* ========================================= */
+/* PLAYER IDENTITY */
+/* ========================================= */
+
+.playerIdentity {
+
+    min-width:0;
 
     display:flex;
 
     flex-direction:column;
 
-    align-items:center;
-
-    padding:1rem;
-
-    border-radius:16px;
-
-    background:
-        rgba(255,255,255,.045);
-
-    border:
-        1px solid
-        rgba(255,255,255,.08);
+    gap:.15rem;
 
 }
 
 
-.playerIdentity span{
+.playerIdentity span {
 
     color:
-        rgba(255,255,255,.55);
+        rgba(255,255,255,.45);
 
-    font-size:.6rem;
+    font-size:
+        .58rem;
 
-    font-weight:900;
+    font-weight:
+        900;
 
-    letter-spacing:.2em;
+    letter-spacing:
+        .16em;
 
-    text-transform:uppercase;
-
-}
-
-
-.playerIdentity strong{
-
-    margin-top:.4rem;
-
-    color:#FFFFFF;
-
-    font-size:1.5rem;
-
-    font-weight:950;
-
-    letter-spacing:.08em;
-
-    text-transform:uppercase;
+    text-transform:
+        uppercase;
 
 }
 
 
-/* ================================= */
+.playerIdentity strong {
+
+    color:
+        #FFFFFF;
+
+    font-size:
+        1rem;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        .05em;
+
+    text-transform:
+        uppercase;
+
+    overflow:
+        hidden;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+
+}
+
+
+/* ========================================= */
 /* PLAYER DATA */
-/* ================================= */
+/* ========================================= */
 
-.playerData{
+.playerData {
 
-    display:grid;
+    display:flex;
 
-    grid-template-columns:
-        1fr
-        120px;
+    align-items:center;
 
     gap:1rem;
 
+    flex-shrink:0;
+
 }
 
 
-.playerData div{
+.playerData > div {
 
     display:flex;
 
     flex-direction:column;
 
-    align-items:center;
+    align-items:flex-end;
 
-    justify-content:center;
-
-    min-height:70px;
-
-    border-radius:16px;
-
-    background:
-        var(--accent-soft);
-
-    border:
-        1px solid
-        var(--accent-border);
-
-    box-shadow:
-        0 0 12px
-        var(--accent-glow-soft);
-
-    transition:
-        border-color .25s ease,
-        box-shadow .25s ease,
-        transform .25s ease;
+    gap:.15rem;
 
 }
 
 
-.playerData div:hover{
-
-    transform:
-        translateY(-2px);
-
-    border-color:
-        var(--accent);
-
-    box-shadow:
-        0 0 20px
-        var(--accent-glow);
-
-}
-
-
-.playerData span{
+.playerData span {
 
     color:
-        rgba(255,255,255,.55);
+        rgba(255,255,255,.4);
 
-    font-size:.58rem;
+    font-size:
+        .55rem;
 
-    font-weight:900;
+    font-weight:
+        900;
 
-    letter-spacing:.18em;
-
-    text-transform:uppercase;
-
-}
-
-
-.playerData strong{
-
-    margin-top:.3rem;
-
-    color:var(--accent);
-
-    font-size:1.1rem;
-
-    font-weight:950;
-
-    letter-spacing:.08em;
-
-    text-transform:uppercase;
-
-    text-shadow:
-        0 0 8px
-        var(--accent-glow-soft);
+    letter-spacing:
+        .14em;
 
 }
 
 
-/* ================================= */
+.playerData strong {
+
+    color:
+        var(--back-accent);
+
+    font-size:
+        .78rem;
+
+    font-weight:
+        950;
+
+    letter-spacing:
+        .08em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* ========================================= */
 /* CONTENT */
-/* ================================= */
+/* ========================================= */
 
-.content{
+.content {
 
     position:relative;
 
-    z-index:2;
-
-    /*
-    ============================================
-    WICHTIG:
-    FLEX + SCROLL
-    ============================================
-    */
+    z-index:5;
 
     flex:
         1 1 0;
-
-    height:0;
 
     min-width:0;
 
     min-height:0;
 
-    padding:
-        0
-        1rem
-        1rem;
+    width:100%;
 
-    /*
-    ============================================
-    SCROLL
-    ============================================
-    */
+    max-width:100%;
+
+    padding:
+        .8rem
+        1rem;
 
     overflow-x:auto;
 
     overflow-y:auto;
 
-    -webkit-overflow-scrolling:touch;
+    -webkit-overflow-scrolling:
+        touch;
 
     overscroll-behavior:
         contain;
 
+    /*
+    =========================================
+    GANZ WICHTIG
+    =========================================
+
+    Der Content ist der einzige Bereich,
+    der vertikal scrollen darf.
+
+    */
+
     touch-action:
-        pan-y;
+        pan-y pan-x;
+
+    scrollbar-width:
+        thin;
+
+    scrollbar-color:
+        var(--back-accent)
+        rgba(255,255,255,.04);
 
 }
 
 
-/* ================================= */
-/* EMPTY */
-/* ================================= */
+/* ========================================= */
+/* WEBKIT SCROLLBAR */
+/* ========================================= */
 
-.empty{
+.content::-webkit-scrollbar {
+
+    width:
+        8px;
+
+    height:
+        8px;
+
+}
+
+
+.content::-webkit-scrollbar-track {
+
+    background:
+        rgba(255,255,255,.04);
+
+    border-radius:
+        999px;
+
+}
+
+
+.content::-webkit-scrollbar-thumb {
+
+    background:
+        var(--back-accent);
+
+    border-radius:
+        999px;
+
+    box-shadow:
+        0 0 10px
+        rgba(163,230,53,.35);
+
+}
+
+
+.content::-webkit-scrollbar-thumb:hover {
+
+    background:
+        #bef264;
+
+}
+
+
+/* ========================================= */
+/* EMPTY */
+/* ========================================= */
+
+.empty {
+
+    width:100%;
+
+    min-height:
+        180px;
 
     display:flex;
-
-    justify-content:center;
 
     align-items:center;
 
-    height:100%;
+    justify-content:center;
+
+    padding:
+        2rem;
 
     color:
-        rgba(255,255,255,.55);
+        rgba(255,255,255,.45);
 
-    font-size:.9rem;
+    font-size:
+        .75rem;
 
-    font-weight:700;
+    font-weight:
+        900;
 
-    letter-spacing:.12em;
+    letter-spacing:
+        .12em;
 
     text-align:center;
-
-    text-transform:uppercase;
 
 }
 
 
-/* ================================= */
+/* ========================================= */
 /* FOOTER */
-/* ================================= */
+/* ========================================= */
 
-.footer{
+.footer {
 
     position:relative;
 
-    z-index:2;
+    z-index:20;
+
+    flex:
+        0 0 auto;
 
     display:flex;
 
+    align-items:center;
+
     justify-content:center;
 
-    padding:1rem;
+    padding:
+        .8rem
+        1rem;
+
+    background:
+        rgba(0,0,0,.22);
 
     border-top:
         1px solid
@@ -409,15 +491,17 @@
 }
 
 
-/* ================================= */
+/* ========================================= */
 /* BACK BUTTON */
-/* ================================= */
+/* ========================================= */
 
-.backButton{
+.backButton {
 
-    width:90%;
+    width:
+        100%;
 
-    min-height:52px;
+    min-height:
+        42px;
 
     display:flex;
 
@@ -425,426 +509,362 @@
 
     justify-content:center;
 
-    border:none;
-
-    border-radius:999px;
-
-    cursor:pointer;
-
-    background:
-        linear-gradient(
-            180deg,
-            var(--accent-light),
-            var(--accent)
-        );
+    padding:
+        .7rem
+        1rem;
 
     border:
         1px solid
-        var(--accent-border);
+        var(--back-accent);
 
-    color:var(--button-text);
+    border-radius:
+        999px;
 
-    font-size:1rem;
+    background:
+        rgba(0,0,0,.2);
 
-    font-weight:950;
+    color:
+        var(--back-accent);
 
-    letter-spacing:.18em;
+    font-size:
+        .72rem;
 
-    text-transform:uppercase;
+    font-weight:
+        950;
+
+    letter-spacing:
+        .12em;
+
+    text-transform:
+        uppercase;
+
+    cursor:pointer;
 
     transition:
-        transform .25s ease,
-        box-shadow .25s ease,
-        border-color .25s ease;
+        background .2s ease,
+        color .2s ease,
+        box-shadow .2s ease,
+        transform .2s ease;
 
 }
 
 
-.backButton:hover{
+.backButton:hover {
+
+    background:
+        var(--back-accent);
+
+    color:
+        #111111;
+
+    box-shadow:
+        0 0 20px
+        rgba(163,230,53,.35);
 
     transform:
-        translateY(-3px)
-        scale(1.02);
-
-    border-color:
-        var(--accent);
-
-    box-shadow:
-        0 0 25px
-        var(--accent-glow),
-
-        0 10px 25px
-        rgba(0,0,0,.35);
+        translateY(-2px);
 
 }
 
 
-.backButton:active{
+.backButton:active {
 
     transform:
-        translateY(-1px)
-        scale(.99);
+        translateY(0);
 
 }
 
 
-/* ================================= */
-/* SCROLLBAR */
-/* ================================= */
+/* ========================================= */
+/* MOBILE */
+/* ========================================= */
 
-.content{
-
-    scrollbar-width:thin;
-
-    scrollbar-color:
-        var(--accent)
-        rgba(255,255,255,.04);
-
-}
+@media(max-width:700px) {
 
 
-/* ================================= */
-/* CHROME / EDGE / SAFARI */
-/* ================================= */
-
-.content::-webkit-scrollbar{
-
-    width:8px;
-
-    height:8px;
-
-}
-
-
-.content::-webkit-scrollbar-track{
-
-    background:
-        rgba(255,255,255,.04);
-
-    border-radius:999px;
-
-}
-
-
-.content::-webkit-scrollbar-thumb{
-
-    background:
-        var(--accent) !important;
-
-    border-radius:999px;
-
-    box-shadow:
-        0 0 10px
-        var(--accent-glow);
-
-}
-
-
-.content::-webkit-scrollbar-thumb:hover{
-
-    background:
-        var(--accent-light) !important;
-
-}
-
-
-/* ================================= */
-/* YOUNG ARMY */
-/* ================================= */
-
-.youngArmy .content::-webkit-scrollbar-thumb{
-
-    background:
-        #FF4545 !important;
-
-    box-shadow:
-        0 0 10px
-        rgba(255,69,69,.65);
-
-}
-
-
-.youngArmy .content::-webkit-scrollbar-thumb:hover{
-
-    background:
-        #FF7070 !important;
-
-}
-
-
-.youngArmy .content{
-
-    scrollbar-color:
-        #FF4545
-        rgba(255,255,255,.04);
-
-}
-
-
-/* ================================= */
-/* BLOODY ARMY */
-/* ================================= */
-
-.bloodyArmy .content::-webkit-scrollbar-thumb{
-
-    background:
-        var(--accent) !important;
-
-}
-
-
-/* ================================= */
-/* RESPONSIVE */
-/* ================================= */
-
-@media(max-width:700px){
-
-
-    /* ================================= */
+    /* ===================================== */
     /* BACK CARD */
-    /* ================================= */
+    /* ===================================== */
 
-    .backCard{
+    .backCard {
 
         width:100%;
 
         height:100%;
 
-        min-width:0;
-
         min-height:0;
+
+        max-height:none;
+
+        border-radius:
+            24px;
 
         overflow:hidden;
 
     }
 
 
-    /* ================================= */
+    /* ===================================== */
     /* HEADER */
-    /* ================================= */
+    /* ===================================== */
 
-    .header{
+    .header {
 
         padding:
-            1rem;
+            .75rem
+            .85rem;
 
-        gap:.45rem;
-
-    }
-
-
-    .title{
-
-        font-size:.72rem;
-
-        letter-spacing:.12em;
+        gap:.5rem;
 
     }
 
 
-    .member{
+    .title {
 
-        font-size:.65rem;
+        font-size:
+            .62rem;
 
-        letter-spacing:.10em;
-
-        overflow-wrap:anywhere;
+        letter-spacing:
+            .09em;
 
     }
 
 
-    /* ================================= */
+    .member {
+
+        font-size:
+            .58rem;
+
+        letter-spacing:
+            .04em;
+
+    }
+
+
+    /* ===================================== */
     /* PLAYER PROFILE */
-    /* ================================= */
+    /* ===================================== */
 
-    .playerProfile{
-
-        padding:.8rem;
-
-        gap:.8rem;
-
-    }
-
-
-    .playerIdentity{
-
-        padding:.8rem;
-
-    }
-
-
-    .playerIdentity strong{
-
-        font-size:1.15rem;
-
-        max-width:100%;
-
-        overflow-wrap:anywhere;
-
-        text-align:center;
-
-    }
-
-
-    /* ================================= */
-    /* PLAYER DATA */
-    /* ================================= */
-
-    .playerData{
-
-        grid-template-columns:
-            minmax(0,1fr)
-            90px;
-
-        gap:.65rem;
-
-    }
-
-
-    .playerData div{
-
-        min-width:0;
-
-        min-height:64px;
-
-    }
-
-
-    .playerData strong{
-
-        font-size:.9rem;
-
-        max-width:100%;
-
-        text-align:center;
-
-        overflow-wrap:anywhere;
-
-    }
-
-
-    /* ================================= */
-    /* CONTENT / STATS SCROLL */
-    /* ================================= */
-
-    .content{
-
-        min-width:0;
-
-        width:100%;
+    .playerProfile {
 
         padding:
-            0
             .65rem
+            .85rem;
+
+        gap:.6rem;
+
+    }
+
+
+    .playerIdentity span {
+
+        font-size:
+            .5rem;
+
+    }
+
+
+    .playerIdentity strong {
+
+        font-size:
+            .78rem;
+
+    }
+
+
+    .playerData {
+
+        gap:.7rem;
+
+    }
+
+
+    .playerData > div {
+
+        gap:.1rem;
+
+    }
+
+
+    .playerData span {
+
+        font-size:
+            .48rem;
+
+    }
+
+
+    .playerData strong {
+
+        font-size:
             .65rem;
 
-        /*
-        ========================================
-        DIE KARTE BLEIBT SCHMAL.
-        DIE STATISTIK DARF INNERHALB
-        DIESES BEREICHS SCROLLEN.
-        ========================================
-        */
+    }
+
+
+    /* ===================================== */
+    /* CONTENT */
+    /* ===================================== */
+
+    .content {
 
         flex:
             1 1 0;
 
-        height:0;
+        min-height:
+            0;
 
-        min-height:0;
+        height:
+            auto;
 
-        overflow-x:auto;
+        max-height:
+            none;
 
-        overflow-y:auto;
+        width:
+            100%;
 
-        -webkit-overflow-scrolling:touch;
+        max-width:
+            100%;
+
+        padding:
+            .6rem
+            .55rem;
+
+        overflow-x:
+            auto;
+
+        overflow-y:
+            auto;
+
+        -webkit-overflow-scrolling:
+            touch;
 
         overscroll-behavior:
             contain;
 
         touch-action:
-            pan-y;
+            pan-y pan-x;
 
-        scrollbar-width:thin;
-
-        scrollbar-color:
-            var(--accent)
-            rgba(255,255,255,.04);
+        scrollbar-width:
+            thin;
 
     }
 
 
-    .content::-webkit-scrollbar{
+    /* ===================================== */
+    /* FOOTER */
+    /* ===================================== */
 
-        width:8px;
-
-        height:8px;
-
-    }
-
-
-    .content::-webkit-scrollbar-track{
-
-        background:
-            rgba(255,255,255,.04);
-
-        border-radius:999px;
-
-    }
-
-
-    .content::-webkit-scrollbar-thumb{
-
-        background:
-            var(--accent) !important;
-
-        border-radius:999px;
-
-        box-shadow:
-            0 0 10px
-            var(--accent-glow);
-
-    }
-
-
-    .content::-webkit-scrollbar-thumb:hover{
-
-        background:
-            var(--accent-light) !important;
-
-    }
-
-
-    /* ================================= */
-    /* BACK BUTTON */
-    /* ================================= */
-
-    .backButton{
-
-        width:
-            calc(100% - .5rem);
-
-        min-height:
-            48px;
+    .footer {
 
         padding:
-            .75rem
-            .6rem;
+            .6rem
+            .7rem;
+
+    }
+
+
+    /* ===================================== */
+    /* BACK BUTTON */
+    /* ===================================== */
+
+    .backButton {
+
+        min-height:
+            38px;
+
+        padding:
+            .55rem
+            .7rem;
 
         font-size:
-            .70rem;
-
-        line-height:
-            1.25;
+            .62rem;
 
         letter-spacing:
-            .10em;
+            .08em;
 
-        white-space:
-            normal;
+    }
 
-        overflow-wrap:
-            anywhere;
+}
+
+
+/* ========================================= */
+/* VERY SMALL PHONES */
+/* ========================================= */
+
+@media(max-width:380px) {
+
+
+    .header {
+
+        padding:
+            .65rem
+            .7rem;
+
+    }
+
+
+    .title {
+
+        font-size:
+            .55rem;
+
+    }
+
+
+    .member {
+
+        font-size:
+            .52rem;
+
+    }
+
+
+    .playerProfile {
+
+        padding:
+            .55rem
+            .7rem;
+
+    }
+
+
+    .playerIdentity strong {
+
+        font-size:
+            .7rem;
+
+    }
+
+
+    .playerData {
+
+        gap:.5rem;
+
+    }
+
+
+    .playerData strong {
+
+        font-size:
+            .58rem;
+
+    }
+
+
+    .content {
+
+        padding:
+            .5rem
+            .4rem;
+
+    }
+
+
+    .backButton {
+
+        font-size:
+            .56rem;
 
     }
 
