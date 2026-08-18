@@ -11,51 +11,98 @@
  */
 
 import type {
-
     OrganizationTheme,
-
 } from "./types";
 
-export const BloodyArmyTheme:OrganizationTheme={
 
-    accent:"#9EFF2E",
+/* ===================================================== */
+/* BLOODY ARMY */
+/* ===================================================== */
 
-    accentLight:"#ECFFC0",
+export const BloodyArmyTheme: OrganizationTheme = {
 
-    accentSoft:"rgba(158,255,46,.15)",
+    accent: "#9EFF2E",
 
-    accentSoft2:"rgba(158,255,46,.06)",
+    accentLight: "#ECFFC0",
 
-    border:"rgba(158,255,46,.35)",
+    accentSoft: "rgba(158,255,46,.15)",
 
-    glow:"rgba(158,255,46,.35)",
+    accentSoft2: "rgba(158,255,46,.06)",
 
-    glowSoft:"rgba(158,255,46,.15)",
+    border: "rgba(158,255,46,.35)",
 
-    buttonText:"#111111",
+    glow: "rgba(158,255,46,.35)",
 
-    card:"#1F1F1F",
+    glowSoft: "rgba(158,255,46,.15)",
+
+    buttonText: "#111111",
+
+    card: "#1F1F1F",
 
 };
 
-export const YoungArmyTheme:OrganizationTheme={
 
-    accent:"#E53935",
+/* ===================================================== */
+/* YOUNG ARMY */
+/* ===================================================== */
 
-    accentLight:"#FFC0C0",
+export const YoungArmyTheme: OrganizationTheme = {
 
-    accentSoft:"rgba(229,57,53,.15)",
+    accent: "#E53935",
 
-    accentSoft2:"rgba(229,57,53,.06)",
+    accentLight: "#FFC0C0",
 
-    border:"rgba(229,57,53,.35)",
+    accentSoft: "rgba(229,57,53,.15)",
 
-    glow:"rgba(229,57,53,.35)",
+    accentSoft2: "rgba(229,57,53,.06)",
 
-    glowSoft:"rgba(229,57,53,.15)",
+    border: "rgba(229,57,53,.35)",
 
-    buttonText:"#FFFFFF",
+    glow: "rgba(229,57,53,.35)",
 
-    card:"#1F1F1F",
+    glowSoft: "rgba(229,57,53,.15)",
+
+    buttonText: "#FFFFFF",
+
+    card: "#1F1F1F",
+
+};
+
+
+/* ===================================================== */
+/* UNVERGESSEN / MEMORIAL */
+/* ===================================================== */
+
+/*
+ * Diese Farbe ist bewusst NICHT:
+ *
+ * - BloodyArmy Grün
+ * - YoungArmy Rot
+ * - Prestige Grün
+ * - General Gold
+ *
+ * Das Memorial Theme soll ruhig, würdevoll
+ * und eigenständig wirken.
+ */
+
+export const MemorialTheme: OrganizationTheme = {
+
+    accent: "#B8A06A",
+
+    accentLight: "#E8DDBB",
+
+    accentSoft: "rgba(184,160,106,.16)",
+
+    accentSoft2: "rgba(184,160,106,.06)",
+
+    border: "rgba(184,160,106,.28)",
+
+    glow: "rgba(184,160,106,.24)",
+
+    glowSoft: "rgba(184,160,106,.10)",
+
+    buttonText: "#111111",
+
+    card: "#202020",
 
 };

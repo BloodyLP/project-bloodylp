@@ -2,7 +2,6 @@
 /* ARCHIVE */
 /* ================================= */
 
-
 .archive {
 
     width:100%;
@@ -11,24 +10,18 @@
 
     margin:0 auto;
 
-
     display:flex;
 
     flex-direction:column;
-
 
     gap:1.2rem;
 
 }
 
 
-
-
-
 /* ================================= */
 /* FOLDER */
 /* ================================= */
-
 
 .folder {
 
@@ -36,156 +29,121 @@
 
     overflow:hidden;
 
-
     border-radius:22px;
 
-
     border:
-
         1px solid
-
         rgba(255,255,255,.12);
 
-
     background:
-
         rgba(255,255,255,.035);
 
-
     backdrop-filter:
-
         blur(18px);
-
 
 }
 
 
-
-
+/* ================================= */
+/* FOLDER HEADER */
+/* ================================= */
 
 .folderHeader {
 
     width:100%;
 
-
     display:flex;
-
 
     align-items:center;
 
-
     gap:1rem;
 
-
     padding:
-
         1.1rem
-
         1.35rem;
-
 
     cursor:pointer;
 
-
     border:none;
 
-
     background:
-
         linear-gradient(
-
             180deg,
-
             rgba(255,255,255,.08),
-
             rgba(255,255,255,.03)
-
         );
-
 
     color:#FFFFFF;
 
 }
 
 
-
 .folderHeader:hover {
 
     background:
-
         rgba(163,230,53,.08);
 
 }
 
 
-
-
+/* ================================= */
+/* ARROW */
+/* ================================= */
 
 .arrow {
 
     width:25px;
 
-
     color:#A3E635;
-
 
     font-weight:900;
 
 }
 
 
-
-
+/* ================================= */
+/* FOLDER TITLE */
+/* ================================= */
 
 .folderTitle {
 
     flex:1;
 
-
     color:#FFFFFF;
-
 
     font-size:.95rem;
 
-
     font-weight:950;
 
-
     letter-spacing:.25em;
-
 
     text-transform:uppercase;
 
 }
 
 
-
-
+/* ================================= */
+/* FOLDER COUNT */
+/* ================================= */
 
 .folderCount {
 
     font-size:.78rem;
 
-
     font-weight:950;
 
-
     letter-spacing:.18em;
-
 
     text-transform:uppercase;
 
 }
-
-
-
 
 
 /* ================================= */
 /* CARDS INSIDE */
 /* ================================= */
 
-.folderContent{
+.folderContent {
 
     display:flex;
 
@@ -201,41 +159,51 @@
 
     padding:1.5rem;
 
-    background:rgba(0,0,0,.18);
+    background:
+        rgba(0,0,0,.18);
 
-    border-top:1px solid rgba(255,255,255,.06);
+    border-top:
+        1px solid
+        rgba(255,255,255,.06);
 
     scroll-behavior:smooth;
 
 }
 
-/* Karten dürfen niemals schrumpfen */
 
-.folderContent > *{
+/* ================================= */
+/* KARTEN DÜRFEN NICHT SCHRUMPFEN */
+/* ================================= */
+
+.folderContent > * {
 
     flex:0 0 auto;
 
 }
 
+
 /* ================================= */
 /* SCROLLBAR */
 /* ================================= */
 
-.folderContent::-webkit-scrollbar{
+.folderContent::-webkit-scrollbar {
 
     height:10px;
 
 }
 
-.folderContent::-webkit-scrollbar-track{
 
-    background:rgba(255,255,255,.05);
+.folderContent::-webkit-scrollbar-track {
+
+    background:
+        rgba(255,255,255,.05);
 
     border-radius:999px;
 
 }
 
-.folderContent::-webkit-scrollbar-thumb{
+
+.folderContent::-webkit-scrollbar-thumb {
 
     background:#9EFF2E;
 
@@ -243,35 +211,291 @@
 
 }
 
-.folderContent::-webkit-scrollbar-thumb:hover{
+
+.folderContent::-webkit-scrollbar-thumb:hover {
 
     background:#C8FF70;
 
 }
 
-/* Firefox */
 
-.folderContent{
+/* ================================= */
+/* FIREFOX */
+/* ================================= */
+
+.folderContent {
 
     scrollbar-width:thin;
 
-    scrollbar-color:#9EFF2E rgba(255,255,255,.05);
+    scrollbar-color:
+        #9EFF2E
+        rgba(255,255,255,.05);
 
 }
 
 
+/* ================================= */
+/* UNVERGESSEN */
+/* ================================= */
+
+.memorial {
+
+    width:100%;
+
+    margin-top:1rem;
+
+    padding:
+        1.5rem
+        0
+        .5rem;
+
+}
 
 
+/* ================================= */
+/* MEMORIAL HEADER */
+/* ================================= */
+
+.memorialHeader {
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1.25rem;
+
+    margin-bottom:1.25rem;
+
+}
+
+
+/* ================================= */
+/* MEMORIAL LINES */
+/* ================================= */
+
+.memorialLine {
+
+    flex:1;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.18)
+        );
+
+}
+
+
+.memorialLine:last-child {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.18),
+            transparent
+        );
+
+}
+
+
+/* ================================= */
+/* MEMORIAL TITLE */
+/* ================================= */
+
+.memorialTitle {
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    white-space:nowrap;
+
+}
+
+
+/* ================================= */
+/* MEMORIAL TITLE */
+/* ================================= */
+
+.memorialTitle span {
+
+    color:#FFFFFF;
+
+    font-size:.95rem;
+
+    font-weight:950;
+
+    letter-spacing:.35em;
+
+    text-transform:uppercase;
+
+}
+
+
+/* ================================= */
+/* MEMORIAL SUBTITLE */
+/* ================================= */
+
+.memorialTitle small {
+
+    margin-top:.35rem;
+
+    color:
+        rgba(255,255,255,.45);
+
+    font-size:.62rem;
+
+    font-weight:800;
+
+    letter-spacing:.28em;
+
+    text-transform:uppercase;
+
+}
+
+
+/* ================================= */
+/* MEMORIAL CARDS */
+/* ================================= */
+
+.memorialCards {
+
+    display:flex;
+
+    flex-wrap:nowrap;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    padding:
+        1.5rem;
+
+    background:
+        rgba(0,0,0,.14);
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+
+    border-radius:20px;
+
+    scroll-behavior:smooth;
+
+}
+
+
+/* ================================= */
+/* MEMORIAL KARTEN NICHT SCHRUMPFEN */
+/* ================================= */
+
+.memorialCards > * {
+
+    flex:0 0 auto;
+
+}
+
+
+/* ================================= */
+/* MEMORIAL SCROLLBAR */
+/* ================================= */
+
+.memorialCards::-webkit-scrollbar {
+
+    height:10px;
+
+}
+
+
+.memorialCards::-webkit-scrollbar-track {
+
+    background:
+        rgba(255,255,255,.05);
+
+    border-radius:999px;
+
+}
+
+
+.memorialCards::-webkit-scrollbar-thumb {
+
+    background:
+        rgba(255,255,255,.35);
+
+    border-radius:999px;
+
+}
+
+
+.memorialCards::-webkit-scrollbar-thumb:hover {
+
+    background:
+        rgba(255,255,255,.55);
+
+}
+
+
+/* ================================= */
+/* MEMORIAL FIREFOX */
+/* ================================= */
+
+.memorialCards {
+
+    scrollbar-width:thin;
+
+    scrollbar-color:
+        rgba(255,255,255,.35)
+        rgba(255,255,255,.05);
+
+}
 
 
 /* ================================= */
 /* RESPONSIVE */
 /* ================================= */
 
+@media(max-width:700px) {
 
-@media(max-width:700px){
 
-    .folderContent{
+    /* ================================= */
+    /* ARCHIVE BREITE */
+    /* ================================= */
+
+    .archive {
+
+        width:
+            calc(100% - 20px);
+
+        max-width:
+            calc(100% - 20px);
+
+        margin-left:auto;
+
+        margin-right:auto;
+
+    }
+
+
+    /* ================================= */
+    /* ORDNER CONTENT */
+    /* ================================= */
+
+    .folderContent {
 
         display:flex;
 
@@ -287,40 +511,102 @@
 
         gap:1rem;
 
-        padding:
-
-            1rem;
+        padding:1rem;
 
         -webkit-overflow-scrolling:touch;
 
     }
 
-    .folderContent > *{
+
+    .folderContent > * {
 
         flex:
-
             0 0 auto;
 
     }
 
+
     /* ================================= */
-/* MOBILE ORDNER BREITE */
-/* ================================= */
+    /* MEMORIAL */
+    /* ================================= */
 
-@media(max-width:700px){
+    .memorial {
 
-    .archive{
+        width:100%;
 
-        width:calc(100% - 20px);
+        margin-top:.5rem;
 
-        max-width:calc(100% - 20px);
-
-        margin-left:auto;
-
-        margin-right:auto;
+        padding:
+            1rem
+            0
+            .25rem;
 
     }
 
-}
+
+    /* ================================= */
+    /* MEMORIAL HEADER */
+    /* ================================= */
+
+    .memorialHeader {
+
+        gap:.7rem;
+
+        margin-bottom:1rem;
+
+    }
+
+
+    .memorialTitle span {
+
+        font-size:.78rem;
+
+        letter-spacing:.25em;
+
+    }
+
+
+    .memorialTitle small {
+
+        font-size:.52rem;
+
+        letter-spacing:.18em;
+
+    }
+
+
+    /* ================================= */
+    /* MEMORIAL CARDS */
+    /* ================================= */
+
+    .memorialCards {
+
+        display:flex;
+
+        flex-wrap:nowrap;
+
+        overflow-x:auto;
+
+        overflow-y:hidden;
+
+        justify-content:flex-start;
+
+        align-items:flex-start;
+
+        gap:1rem;
+
+        padding:1rem;
+
+        -webkit-overflow-scrolling:touch;
+
+    }
+
+
+    .memorialCards > * {
+
+        flex:
+            0 0 auto;
+
+    }
 
 }

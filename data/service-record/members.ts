@@ -130,6 +130,8 @@ import { derpolarstern } from "./members/derpolarstern";
 
 import { schmiedli } from "./members/schmiedli";
 
+import { blackhawk } from "./members/blackhawk";
+
 export const MEMBERS: ServiceRecordMember[] = [
 
     bloodylp,
@@ -177,4 +179,6 @@ export const MEMBERS: ServiceRecordMember[] = [
     derpolarstern,
 
     schmiedli,
+
+    blackhawk,
 ];

@@ -175,6 +175,25 @@ export interface ServiceRecordMember {
 
 
     /**
+     * Verstorben
+     *
+     * true:
+     *
+     * Das Mitglied wird unter
+     * "UNVERGESSEN" geführt.
+     *
+     * false / undefined:
+     *
+     * Normales aktives Archivmitglied.
+     *
+     * Verstorbene Mitglieder werden
+     * nicht zusätzlich in ihrem normalen
+     * Dienstgrad-Ordner angezeigt.
+     */
+    deceased?: boolean;
+    memorialText?: string;
+
+    /**
      * Trikotnummer
      */
     playerNumber: string;

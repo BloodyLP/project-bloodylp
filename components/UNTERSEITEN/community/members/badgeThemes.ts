@@ -29,7 +29,6 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
     prestigeX: {
 
-
         background:"#111111",
 
         border:"#A3E635",
@@ -38,10 +37,7 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
         glow:"rgba(163,230,53,.55)",
 
-
     },
-
-
 
 
 
@@ -55,7 +51,6 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
     prestigeIII:{
 
-
         background:"#303030",
 
         border:"#C0C0C0",
@@ -64,10 +59,7 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
         glow:"rgba(192,192,192,.45)",
 
-
     },
-
-
 
 
 
@@ -81,7 +73,6 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
     prestigeII:{
 
-
         background:"#3D2A18",
 
         border:"#CD7F32",
@@ -90,10 +81,7 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
         glow:"rgba(205,127,50,.35)",
 
-
     },
-
-
 
 
 
@@ -107,7 +95,6 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
     prestigeI:{
 
-
         background:"#252525",
 
         border:"#9CA3AF",
@@ -116,10 +103,7 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
         glow:"rgba(156,163,175,.35)",
 
-
     },
-
-
 
 
 
@@ -133,7 +117,6 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
     generale:{
 
-
         background:"#3A2A00",
 
         border:"#EAB308",
@@ -142,10 +125,7 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
         glow:"rgba(234,179,8,.45)",
 
-
     },
-
-
 
 
 
@@ -159,7 +139,6 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
     stabsoffiziere:{
 
-
         background:"#351313",
 
         border:"#DC2626",
@@ -168,10 +147,7 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
         glow:"rgba(220,38,38,.35)",
 
-
     },
-
-
 
 
 
@@ -185,7 +161,6 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
     offiziere:{
 
-
         background:"#2C313A",
 
         border:"#E5E7EB",
@@ -194,10 +169,7 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
         glow:"rgba(229,231,235,.35)",
 
-
     },
-
-
 
 
 
@@ -211,7 +183,6 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
     portepee:{
 
-
         background:"#3A3212",
 
         border:"#EAB308",
@@ -220,10 +191,7 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
         glow:"rgba(234,179,8,.35)",
 
-
     },
-
-
 
 
 
@@ -237,7 +205,6 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
     unteroffiziere:{
 
-
         background:"#3D2A18",
 
         border:"#CD7F32",
@@ -246,10 +213,7 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
         glow:"rgba(205,127,50,.35)",
 
-
     },
-
-
 
 
 
@@ -263,7 +227,6 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
     mannschaften:{
 
-
         background:"#242424",
 
         border:"#6B7280",
@@ -272,13 +235,24 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
         glow:"rgba(107,114,128,.35)",
 
-
     },
 
 
+/* ================================= */
+/* UNVERGESSEN */
+/* ================================= */
 
+memorial: {
 
+    background:"#3A3425",
 
+    border:"#B8A06A",
+
+    text:"#F3E7C2",
+
+    glow:"rgba(184,160,106,.45)",
+
+},
 
 
     /*
@@ -289,7 +263,6 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
     zivilisten:{
 
-
         background:"#202020",
 
         border:"#9CA3AF",
@@ -298,8 +271,8 @@ export const badgeThemes:Record<string,BadgeTheme> = {
 
         glow:"rgba(156,163,175,.35)",
 
-
     },
+
 
 
 };

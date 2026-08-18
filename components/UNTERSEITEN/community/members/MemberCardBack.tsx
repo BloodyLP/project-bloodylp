@@ -32,17 +32,63 @@ type MemberCardBackProps = {
 
     organization: OrganizationId;
 
+
+    /*
+    ============================================
+    VERSTORBEN
+    ============================================
+    */
+
+    deceased?: boolean;
+
+
+    /*
+    ============================================
+    INDIVIDUELLER GEDENKTEXT
+    ============================================
+    */
+
+    memorialText?: string;
+
+
+    /*
+    ============================================
+    KARRIERE STATISTIKEN
+    ============================================
+    */
+
     stats?:
         | SkaterCareerStatsData
         | GoalieCareerStatsData
         | DualCareerStatsData;
+
+
+    /*
+    ============================================
+    SPIELERTYP
+    ============================================
+    */
 
     playerType:
         | "skater"
         | "goalie"
         | "dual";
 
+
+    /*
+    ============================================
+    DUAL ROLE
+    ============================================
+    */
+
     dualRole?: boolean;
+
+
+    /*
+    ============================================
+    PROFIL
+    ============================================
+    */
 
     profile?: {
 
@@ -51,6 +97,13 @@ type MemberCardBackProps = {
         number: string;
 
     };
+
+
+    /*
+    ============================================
+    ZURÜCK
+    ============================================
+    */
 
     onBack: () => void;
 
@@ -69,6 +122,10 @@ export default function MemberCardBack({
 
     organization,
 
+    deceased = false,
+
+    memorialText,
+
     stats,
 
     playerType,
@@ -83,18 +140,20 @@ export default function MemberCardBack({
 
 
     /* ========================================= */
-    /* ORGANISATION THEME */
+    /* THEME */
     /* ========================================= */
 
     const theme = getTheme(
 
-        organization
+        organization,
+
+        deceased
 
     );
 
 
     /* ========================================= */
-    /* THEME VARIABLES */
+    /* CSS VARIABLES */
     /* ========================================= */
 
     const themeVariables =
@@ -119,6 +178,7 @@ export default function MemberCardBack({
             style={themeVariables}
 
         >
+
 
             {/* ================================= */}
             {/* HEADER */}
@@ -159,6 +219,96 @@ export default function MemberCardBack({
 
 
             {/* ================================= */}
+            {/* MEMORIAL */}
+            {/* ================================= */}
+
+            {deceased && (
+
+                <section
+
+                    className={
+
+                        styles.memorialSection
+
+                    }
+
+                >
+
+                    <div
+
+                        className={
+
+                            styles.memorialHeading
+
+                        }
+
+                    >
+
+                        <span
+
+                            className={
+
+                                styles.memorialSymbol
+
+                            }
+
+                            aria-hidden="true"
+
+                        >
+
+                            †
+
+                        </span>
+
+
+                        <span>
+
+                            UNVERGESSEN
+
+                        </span>
+
+                    </div>
+
+
+                    <div
+
+                        className={
+
+                            styles.memorialSubheading
+
+                        }
+
+                    >
+
+                        IN EHRENDEM GEDENKEN
+
+                    </div>
+
+
+                    {memorialText && (
+
+                        <p
+
+                            className={
+
+                                styles.memorialText
+
+                            }
+
+                        >
+
+                            {memorialText}
+
+                        </p>
+
+                    )}
+
+                </section>
+
+            )}
+
+
+            {/* ================================= */}
             {/* PLAYER PROFILE */}
             {/* ================================= */}
 
@@ -167,6 +317,7 @@ export default function MemberCardBack({
                 className={styles.playerProfile}
 
             >
+
 
                 {/* ================================= */}
                 {/* PLAYER */}
@@ -203,6 +354,7 @@ export default function MemberCardBack({
                     className={styles.playerData}
 
                 >
+
 
                     <div>
 
@@ -255,7 +407,9 @@ export default function MemberCardBack({
 
                     </div>
 
+
                 </div>
+
 
             </section>
 
@@ -340,6 +494,7 @@ export default function MemberCardBack({
                 </button>
 
             </footer>
+
 
         </article>
 

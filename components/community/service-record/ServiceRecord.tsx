@@ -14,17 +14,28 @@
 
 "use client";
 
+
 import styles from "./ServiceRecord.module.css";
 
+
 import Header from "./header";
+
 import Identity from "./identity";
+
 import Portrait from "./portrait";
+
 import Body from "./body";
+
 import Decorations from "./decorations";
+
 import DecorationRow from "./decorations/DecorationRow";
+
 import Prestige from "./decorations/prestige";
+
 import StanleyCup from "./decorations/stanley-cup";
+
 import Footer from "./footer";
+
 
 import {
 
@@ -32,31 +43,71 @@ import {
 
 } from "@/lib/service-record/theme";
 
+
 import type {
 
     ServiceRecordMember,
 
 } from "@/types/service-record";
 
-interface ServiceRecordProps{
 
-    member:ServiceRecordMember;
+interface ServiceRecordProps {
+
+    member: ServiceRecordMember;
 
 }
+
 
 export default function ServiceRecord({
 
     member,
 
-}:ServiceRecordProps){
+}: ServiceRecordProps) {
+
+
+    /* ========================================= */
+    /* THEME */
+    /* ========================================= */
+
+    /*
+    ============================================
+    NORMALES MITGLIED
+
+    BloodyArmy
+        ↓
+    BloodyArmyTheme
+
+    YoungArmy
+        ↓
+    YoungArmyTheme
+
+
+    VERSTORBEN
+
+    deceased === true
+        ↓
+    MemorialTheme
+
+
+    Das Memorial-Theme überschreibt dabei
+    bewusst die ehemalige Organisation.
+    ============================================
+    */
 
     const theme = getTheme(
 
-    member.organization
+        member.organization,
 
-);
+        member.deceased === true
 
-    return(
+    );
+
+
+    /* ========================================= */
+    /* SERVICE RECORD */
+    /* ========================================= */
+
+    return (
 
         <article
 
@@ -68,33 +119,41 @@ export default function ServiceRecord({
 
                     theme.accent,
 
+
                 ["--accent-light" as any]:
 
                     theme.accentLight,
+
 
                 ["--accent-soft" as any]:
 
                     theme.accentSoft,
 
+
                 ["--accent-soft-2" as any]:
 
                     theme.accentSoft2,
+
 
                 ["--accent-border" as any]:
 
                     theme.border,
 
+
                 ["--accent-glow" as any]:
 
                     theme.glow,
+
 
                 ["--accent-glow-soft" as any]:
 
                     theme.glowSoft,
 
+
                 ["--button-text" as any]:
 
                     theme.buttonText,
+
 
                 ["--card" as any]:
 
@@ -104,67 +163,185 @@ export default function ServiceRecord({
 
         >
 
+
+            {/* ================================= */}
+            {/* HEADER */}
+            {/* ================================= */}
+
             <Header
 
-                recordNumber={member.recordNumber}
+                recordNumber={
+
+                    member.recordNumber
+
+                }
 
             />
+
+
+            {/* ================================= */}
+            {/* IDENTITY */}
+            {/* ================================= */}
 
             <Identity
 
-                rank={member.rank}
+                rank={
+
+                    member.rank
+
+                }
 
             />
+
+
+            {/* ================================= */}
+            {/* PORTRAIT */}
+            {/* ================================= */}
 
             <Portrait
 
-                member={member}
+                member={
+
+                    member
+
+                }
 
             />
+
+
+            {/* ================================= */}
+            {/* BODY */}
+            {/* ================================= */}
 
             <Body
 
-                member={member}
+                member={
+
+                    member
+
+                }
 
             />
 
+
+            {/* ================================= */}
+            {/* DECORATIONS */}
+            {/* ================================= */}
+
             <Decorations>
+
 
                 <DecorationRow>
 
+
                     <Prestige
 
-                        member={member}
+                        member={
+
+                            member
+
+                        }
 
                     />
+
 
                     <StanleyCup
 
-                        member={member}
+                        member={
+
+                            member
+
+                        }
 
                     />
 
+
                 </DecorationRow>
+
 
             </Decorations>
 
-            <div className={styles.backArea}>
+
+            {/* ================================= */}
+            {/* MEMORIAL LABEL */}
+            {/* ================================= */}
+
+            {member.deceased && (
+
+                <div
+
+                    style={{
+
+                        textAlign: "center",
+
+                        color:
+
+                            "var(--accent)",
+
+                        fontSize: ".8rem",
+
+                        fontWeight: 900,
+
+                        letterSpacing: ".3em",
+
+                        textTransform: "uppercase",
+
+                        padding:
+
+                            "1rem 1.5rem",
+
+                    }}
+
+                >
+
+                    🕯 UNVERGESSEN
+
+                </div>
+
+            )}
+
+
+            {/* ================================= */}
+            {/* BACK */}
+            {/* ================================= */}
+
+            <div
+
+                className={
+
+                    styles.backArea
+
+                }
+
+            >
 
                 <a
 
                     href="/community"
 
-                    className={styles.backButton}
+                    className={
+
+                        styles.backButton
+
+                    }
 
                 >
 
-                    ← ZURÜCK ZUR MITGLIEDERÜBERSICHT
+                    ← ZURÜCK ZUR
+
+                    MITGLIEDERÜBERSICHT
 
                 </a>
 
             </div>
 
+
+            {/* ================================= */}
+            {/* FOOTER */}
+            {/* ================================= */}
+
             <Footer />
+
 
         </article>
 

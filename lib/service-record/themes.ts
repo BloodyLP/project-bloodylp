@@ -3,213 +3,147 @@
  * BloodyArmy
  * ============================================
  *
- * Project:
- * BloodyArmy Website
+ * Theme System
  *
- * Module:
- * Service Record Themes
+ * Themes
  *
  * ============================================
  */
 
-export interface ServiceRecordTheme {
 
-    name: string;
+/* ===================================================== */
+/* THEME TYPE */
+/* ===================================================== */
+
+export interface OrganizationTheme {
 
     accent: string;
 
+    accentLight: string;
+
     accentSoft: string;
 
-    accentGlow: string;
+    accentSoft2: string;
 
     border: string;
 
-    topBar: string;
+    glow: string;
+
+    glowSoft: string;
+
+    buttonText: string;
 
     card: string;
 
 }
 
-/* ===================================================== */
-/* Mannschaften */
-/* ===================================================== */
-
-export const EnlistedTheme: ServiceRecordTheme = {
-
-    name: "Enlisted",
-
-    accent: "#D5D5D5",
-
-    accentSoft: "rgba(213,213,213,.18)",
-
-    accentGlow: "rgba(213,213,213,.22)",
-
-    border: "rgba(255,255,255,.10)",
-
-    topBar:
-        "linear-gradient(90deg,#D5D5D5,transparent)",
-
-    card: "#1E1E1E",
-
-};
 
 /* ===================================================== */
-/* Unteroffiziere */
+/* BLOODYARMY */
 /* ===================================================== */
 
-export const NCOTheme: ServiceRecordTheme = {
-
-    name: "NCO",
-
-    accent: "#C88B43",
-
-    accentSoft: "rgba(200,139,67,.18)",
-
-    accentGlow: "rgba(200,139,67,.25)",
-
-    border: "rgba(200,139,67,.25)",
-
-    topBar:
-        "linear-gradient(90deg,#C88B43,transparent)",
-
-    card: "#1E1E1E",
-
-};
-
-/* ===================================================== */
-/* Portepee */
-/* ===================================================== */
-
-export const PortepeeTheme: ServiceRecordTheme = {
-
-    name: "Portepee",
-
-    accent: "#D8B652",
-
-    accentSoft: "rgba(216,182,82,.18)",
-
-    accentGlow: "rgba(216,182,82,.25)",
-
-    border: "rgba(216,182,82,.28)",
-
-    topBar:
-        "linear-gradient(90deg,#D8B652,transparent)",
-
-    card: "#1E1E1E",
-
-};
-
-/* ===================================================== */
-/* Offiziere */
-/* ===================================================== */
-
-export const OfficerTheme: ServiceRecordTheme = {
-
-    name: "Officer",
-
-    accent: "#C9D7E8",
-
-    accentSoft: "rgba(201,215,232,.18)",
-
-    accentGlow: "rgba(201,215,232,.22)",
-
-    border: "rgba(201,215,232,.28)",
-
-    topBar:
-        "linear-gradient(90deg,#C9D7E8,transparent)",
-
-    card: "#1E1E1E",
-
-};
-
-/* ===================================================== */
-/* Stabsoffiziere */
-/* ===================================================== */
-
-export const StaffOfficerTheme: ServiceRecordTheme = {
-
-    name: "Staff",
-
-    accent: "#D95555",
-
-    accentSoft: "rgba(217,85,85,.18)",
-
-    accentGlow: "rgba(217,85,85,.25)",
-
-    border: "rgba(217,85,85,.25)",
-
-    topBar:
-        "linear-gradient(90deg,#D95555,transparent)",
-
-    card: "#1E1E1E",
-
-};
-
-/* ===================================================== */
-/* Generale */
-/* ===================================================== */
-
-export const GeneralTheme: ServiceRecordTheme = {
-
-    name: "General",
+export const BloodyArmyTheme: OrganizationTheme = {
 
     accent: "#9EFF2E",
 
-    accentSoft: "rgba(158,255,46,.18)",
+    accentLight: "#ECFFC0",
 
-    accentGlow: "rgba(158,255,46,.24)",
+    accentSoft:
+        "rgba(158,255,46,.15)",
 
-    border: "rgba(158,255,46,.25)",
+    accentSoft2:
+        "rgba(158,255,46,.06)",
 
-    topBar:
-        "linear-gradient(90deg,#9EFF2E,transparent)",
+    border:
+        "rgba(158,255,46,.35)",
 
-    card: "#1F1F1F",
+    glow:
+        "rgba(158,255,46,.35)",
 
-};
+    glowSoft:
+        "rgba(158,255,46,.15)",
 
-/* ===================================================== */
-/* BloodyArmy */
-/* ===================================================== */
+    buttonText:
+        "#111111",
 
-export const BloodyArmyTheme: ServiceRecordTheme = {
-
-    name: "BloodyArmy",
-
-    accent: "#9EFF2E",
-
-    accentSoft: "rgba(158,255,46,.18)",
-
-    accentGlow: "rgba(158,255,46,.24)",
-
-    border: "rgba(158,255,46,.25)",
-
-    topBar:
-        "linear-gradient(90deg,#9EFF2E,transparent)",
-
-    card: "#1F1F1F",
+    card:
+        "#1F1F1F",
 
 };
 
+
 /* ===================================================== */
-/* Young Army */
+/* YOUNG ARMY */
 /* ===================================================== */
 
-export const YoungArmyTheme: ServiceRecordTheme = {
+export const YoungArmyTheme: OrganizationTheme = {
 
-    name: "YoungArmy",
+    accent: "#E53935",
 
-    accent: "#FF4A4A",
+    accentLight: "#FFC0C0",
 
-    accentSoft: "rgba(255,74,74,.18)",
+    accentSoft:
+        "rgba(229,57,53,.15)",
 
-    accentGlow: "rgba(255,74,74,.25)",
+    accentSoft2:
+        "rgba(229,57,53,.06)",
 
-    border: "rgba(255,74,74,.25)",
+    border:
+        "rgba(229,57,53,.35)",
 
-    topBar:
-        "linear-gradient(90deg,#FF4A4A,transparent)",
+    glow:
+        "rgba(229,57,53,.35)",
 
-    card: "#1F1F1F",
+    glowSoft:
+        "rgba(229,57,53,.15)",
+
+    buttonText:
+        "#FFFFFF",
+
+    card:
+        "#1F1F1F",
+
+};
+
+
+/* ===================================================== */
+/* MEMORIAL / UNVERGESSEN */
+/* ===================================================== */
+
+export const MemorialTheme: OrganizationTheme = {
+
+    /*
+    Ruhiges Memorial-Design.
+
+    Kein BloodyArmy-Grün.
+    Kein YoungArmy-Rot.
+
+    Silber / Anthrazit.
+    */
+
+    accent: "#D4D4D8",
+
+    accentLight: "#F4F4F5",
+
+    accentSoft:
+        "rgba(212,212,216,.16)",
+
+    accentSoft2:
+        "rgba(212,212,216,.06)",
+
+    border:
+        "rgba(212,212,216,.28)",
+
+    glow:
+        "rgba(212,212,216,.30)",
+
+    glowSoft:
+        "rgba(212,212,216,.12)",
+
+    buttonText:
+        "#111111",
+
+    card:
+        "#242424",
 
 };

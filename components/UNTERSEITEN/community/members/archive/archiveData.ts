@@ -19,9 +19,11 @@ import {
     members
 } from "../data";
 
+
 import {
     ServiceRecord
 } from "@/lib/service-record";
+
 
 import type {
     ServiceRecordMember
@@ -41,6 +43,58 @@ export interface ArchiveGroup {
     theme:string;
 
     members:ServiceRecordMember[];
+
+}
+
+
+/* ========================================= */
+/* MEMORIAL MEMBERS */
+/* ========================================= */
+
+/**
+ * Liefert alle verstorbenen Mitglieder.
+ *
+ * Diese Mitglieder werden nicht in den normalen
+ * Dienstgrad-Ordnern angezeigt.
+ *
+ * Sie werden später direkt unterhalb der
+ * Zivilisten-Sektion als "UNVERGESSEN" dargestellt.
+ */
+
+export function getMemorialMembers():ServiceRecordMember[] {
+
+    return members.filter(
+
+        member =>
+
+            member.deceased === true
+
+    );
+
+}
+
+
+/* ========================================= */
+/* NORMALE ARCHIV-MITGLIEDER */
+/* ========================================= */
+
+/**
+ * Mitglieder für die normalen Archiv-Ordner.
+ *
+ * Verstorbene Mitglieder werden hier bewusst
+ * ausgeschlossen, damit sie nicht doppelt
+ * angezeigt werden.
+ */
+
+function isNormalArchiveMember(
+    member:ServiceRecordMember
+):boolean {
+
+    return (
+
+        member.deceased !== true
+
+    );
 
 }
 
@@ -73,6 +127,10 @@ export function getArchiveGroups():ArchiveGroup[] {
 
                     member =>
 
+                        isNormalArchiveMember(member)
+
+                        &&
+
                         member.prestige === 3
 
                 )
@@ -100,6 +158,10 @@ export function getArchiveGroups():ArchiveGroup[] {
 
                     member =>
 
+                        isNormalArchiveMember(member)
+
+                        &&
+
                         member.prestige === 2
 
                 )
@@ -126,6 +188,10 @@ export function getArchiveGroups():ArchiveGroup[] {
                 members.filter(
 
                     member =>
+
+                        isNormalArchiveMember(member)
+
+                        &&
 
                         member.prestige === 1
 
@@ -156,6 +222,21 @@ export function getArchiveGroups():ArchiveGroup[] {
 
                         /*
                         --------------------------------
+                        VERSTORBENE NICHT HIER
+                        --------------------------------
+                        */
+
+                        if(
+
+                            !isNormalArchiveMember(member)
+
+                        )
+
+                            return false;
+
+
+                        /*
+                        --------------------------------
                         PRESTIGE-MITGLIEDER NICHT HIER
                         --------------------------------
                         */
@@ -176,7 +257,7 @@ export function getArchiveGroups():ArchiveGroup[] {
 
                         /*
                         --------------------------------
-                        COMMAND
+                        COMMAND / GENERALE
                         --------------------------------
                         */
 
@@ -215,6 +296,21 @@ export function getArchiveGroups():ArchiveGroup[] {
 
                         /*
                         --------------------------------
+                        VERSTORBENE NICHT HIER
+                        --------------------------------
+                        */
+
+                        if(
+
+                            !isNormalArchiveMember(member)
+
+                        )
+
+                            return false;
+
+
+                        /*
+                        --------------------------------
                         PRESTIGE-MITGLIEDER NICHT HIER
                         --------------------------------
                         */
@@ -235,7 +331,7 @@ export function getArchiveGroups():ArchiveGroup[] {
 
                         /*
                         --------------------------------
-                        DIREKTE KATEGORIE
+                        STABSOFFIZIERE
                         --------------------------------
                         */
 
@@ -274,6 +370,21 @@ export function getArchiveGroups():ArchiveGroup[] {
 
                         /*
                         --------------------------------
+                        VERSTORBENE NICHT HIER
+                        --------------------------------
+                        */
+
+                        if(
+
+                            !isNormalArchiveMember(member)
+
+                        )
+
+                            return false;
+
+
+                        /*
+                        --------------------------------
                         PRESTIGE-MITGLIEDER NICHT HIER
                         --------------------------------
                         */
@@ -294,7 +405,7 @@ export function getArchiveGroups():ArchiveGroup[] {
 
                         /*
                         --------------------------------
-                        NORMALE OFFIZIERE
+                        OFFIZIERE
                         --------------------------------
                         */
 
@@ -330,6 +441,21 @@ export function getArchiveGroups():ArchiveGroup[] {
                 members.filter(
 
                     member => {
+
+                        /*
+                        --------------------------------
+                        VERSTORBENE NICHT HIER
+                        --------------------------------
+                        */
+
+                        if(
+
+                            !isNormalArchiveMember(member)
+
+                        )
+
+                            return false;
+
 
                         /*
                         --------------------------------
@@ -386,6 +512,21 @@ export function getArchiveGroups():ArchiveGroup[] {
 
                         /*
                         --------------------------------
+                        VERSTORBENE NICHT HIER
+                        --------------------------------
+                        */
+
+                        if(
+
+                            !isNormalArchiveMember(member)
+
+                        )
+
+                            return false;
+
+
+                        /*
+                        --------------------------------
                         PRESTIGE-MITGLIEDER NICHT HIER
                         --------------------------------
                         */
@@ -439,6 +580,21 @@ export function getArchiveGroups():ArchiveGroup[] {
 
                         /*
                         --------------------------------
+                        VERSTORBENE NICHT HIER
+                        --------------------------------
+                        */
+
+                        if(
+
+                            !isNormalArchiveMember(member)
+
+                        )
+
+                            return false;
+
+
+                        /*
+                        --------------------------------
                         PRESTIGE-MITGLIEDER NICHT HIER
                         --------------------------------
                         */
@@ -489,6 +645,21 @@ export function getArchiveGroups():ArchiveGroup[] {
                 members.filter(
 
                     member => {
+
+                        /*
+                        --------------------------------
+                        VERSTORBENE NICHT HIER
+                        --------------------------------
+                        */
+
+                        if(
+
+                            !isNormalArchiveMember(member)
+
+                        )
+
+                            return false;
+
 
                         const rank =
 
