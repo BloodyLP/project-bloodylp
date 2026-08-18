@@ -259,9 +259,9 @@ const featuredMembers:Record<number, FeaturedMember> = {
 
 5:{
 
-    image:"/members/hightowersl/avatar.png",
+    image:"/members/derpolarstern/avatar.png",
 
-    name:"hightowersl",
+    name:"derpolarstern",
 
     organization:"bloodyArmy",
 

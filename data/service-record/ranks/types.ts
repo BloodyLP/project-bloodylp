@@ -11,9 +11,6 @@
  */
 
 
-
-
-
 /*
 ================================================
 PRESTIGE LEVEL
@@ -33,12 +30,6 @@ export type PrestigeLevel =
     | 10;
 
 
-
-
-
-
-
-
 /*
 ================================================
 RANK ID
@@ -46,12 +37,6 @@ RANK ID
 */
 
 export type RankId = string;
-
-
-
-
-
-
 
 
 /*
@@ -71,7 +56,6 @@ export type RankBranch =
     | "bundeswehrSanitaet"
 
 
-
     // Vereinigte Staaten
 
     | "usArmy"
@@ -79,11 +63,9 @@ export type RankBranch =
     | "usNavy"
 
 
-
     // Kanada
 
     | "canadianArmy"
-
 
 
     // BloodyArmy
@@ -91,16 +73,9 @@ export type RankBranch =
     | "bloodyArmy"
 
 
-
     // Zivilisten
 
     | "zivilisten";
-
-
-
-
-
-
 
 
 /*
@@ -116,11 +91,9 @@ export type RankCategory =
     | "mannschaften"
 
 
-
     // Unteroffiziere
 
     | "unteroffiziere"
-
 
 
     // Portepee / Feldwebel
@@ -128,11 +101,9 @@ export type RankCategory =
     | "feldwebel"
 
 
-
     // Warrant Officers
 
     | "warrant"
-
 
 
     // Offiziere
@@ -140,17 +111,19 @@ export type RankCategory =
     | "offiziere"
 
 
+    // Stabsoffiziere
+
+    | "stabsoffiziere"
+
 
     // Sanität
 
     | "sanitaet"
 
 
-
-    // Führung
+    // Führung / Generale
 
     | "command"
-
 
 
     // BloodyArmy
@@ -166,16 +139,9 @@ export type RankCategory =
     | "auszeichnung"
 
 
-
     // Zivilisten
 
     | "zivilisten";
-
-
-
-
-
-
 
 
 /*
@@ -191,30 +157,36 @@ export interface MilitaryRank {
      */
     id:RankId;
 
+
     /**
      * Anzeigename
      */
     name:string;
+
 
     /**
      * Kürzel
      */
     abbreviation?:string;
 
+
     /**
      * Organisation / Streitkraft
      */
     branch:RankBranch;
+
 
     /**
      * Prestige
      */
     prestige:PrestigeLevel;
 
+
     /**
      * Kategorie
      */
     category:RankCategory;
+
 
     /**
      * Sortierung

@@ -15,78 +15,49 @@
  * ============================================
  */
 
-
 import {
-
     members
-
 } from "../data";
 
-
-
 import {
-
     ServiceRecord
-
 } from "@/lib/service-record";
 
-
-
 import type {
-
     ServiceRecordMember
-
 } from "@/types/service-record";
 
 
-
-
-
-
-
-
+/* ========================================= */
+/* ARCHIVE GROUP */
+/* ========================================= */
 
 export interface ArchiveGroup {
 
-
     id:string;
-
 
     title:string;
 
-
     theme:string;
 
-
     members:ServiceRecordMember[];
-
 
 }
 
 
-
-
-
-
-
-
+/* ========================================= */
+/* ARCHIVE GROUPS */
+/* ========================================= */
 
 export function getArchiveGroups():ArchiveGroup[] {
 
-    
-
-
-
     return [
-
-
 
         /*
         ============================================
         PRESTIGE III
         ============================================
         */
-
 
         {
 
@@ -95,7 +66,6 @@ export function getArchiveGroups():ArchiveGroup[] {
             title:"Prestige III",
 
             theme:"prestigeIII",
-
 
             members:
 
@@ -110,17 +80,11 @@ export function getArchiveGroups():ArchiveGroup[] {
         },
 
 
-
-
-
-
-
         /*
         ============================================
         PRESTIGE II
         ============================================
         */
-
 
         {
 
@@ -129,7 +93,6 @@ export function getArchiveGroups():ArchiveGroup[] {
             title:"Prestige II",
 
             theme:"prestigeII",
-
 
             members:
 
@@ -144,17 +107,11 @@ export function getArchiveGroups():ArchiveGroup[] {
         },
 
 
-
-
-
-
-
         /*
         ============================================
         PRESTIGE I
         ============================================
         */
-
 
         {
 
@@ -163,7 +120,6 @@ export function getArchiveGroups():ArchiveGroup[] {
             title:"Prestige I",
 
             theme:"prestigeI",
-
 
             members:
 
@@ -178,17 +134,11 @@ export function getArchiveGroups():ArchiveGroup[] {
         },
 
 
-
-
-
-
-
         /*
         ============================================
         GENERALE
         ============================================
         */
-
 
         {
 
@@ -198,19 +148,21 @@ export function getArchiveGroups():ArchiveGroup[] {
 
             theme:"generale",
 
-
             members:
 
                 members.filter(
 
                     member => {
 
-
+                        /*
+                        --------------------------------
+                        PRESTIGE-MITGLIEDER NICHT HIER
+                        --------------------------------
+                        */
 
                         if(member.prestige > 0)
 
                             return false;
-
 
 
                         const rank =
@@ -222,10 +174,15 @@ export function getArchiveGroups():ArchiveGroup[] {
                             );
 
 
+                        /*
+                        --------------------------------
+                        COMMAND
+                        --------------------------------
+                        */
 
                         return (
 
-                            rank?.category === "command"
+                            rank.category === "command"
 
                         );
 
@@ -236,163 +193,129 @@ export function getArchiveGroups():ArchiveGroup[] {
         },
 
 
+        /*
+        ============================================
+        STABSOFFIZIERE
+        ============================================
+        */
+
+        {
+
+            id:"stabsoffiziere",
+
+            title:"Stabsoffiziere",
+
+            theme:"stabsoffiziere",
+
+            members:
+
+                members.filter(
+
+                    member => {
+
+                        /*
+                        --------------------------------
+                        PRESTIGE-MITGLIEDER NICHT HIER
+                        --------------------------------
+                        */
+
+                        if(member.prestige > 0)
+
+                            return false;
 
 
+                        const rank =
 
+                            ServiceRecord.rank(
+
+                                member.rank
+
+                            );
+
+
+                        /*
+                        --------------------------------
+                        DIREKTE KATEGORIE
+                        --------------------------------
+                        */
+
+                        return (
+
+                            rank.category === "stabsoffiziere"
+
+                        );
+
+                    }
+
+                )
+
+        },
 
 
         /*
-============================================
-STABSOFFIZIERE
-============================================
-*/
+        ============================================
+        OFFIZIERE
+        ============================================
+        */
 
+        {
 
-{
+            id:"offiziere",
 
+            title:"Offiziere",
 
-    id:"stabsoffiziere",
+            theme:"offiziere",
 
+            members:
 
-    title:"Stabsoffiziere",
+                members.filter(
 
+                    member => {
 
-    theme:"stabsoffiziere",
+                        /*
+                        --------------------------------
+                        PRESTIGE-MITGLIEDER NICHT HIER
+                        --------------------------------
+                        */
 
+                        if(member.prestige > 0)
 
+                            return false;
 
-    members:
 
+                        const rank =
 
-        members.filter(
+                            ServiceRecord.rank(
 
+                                member.rank
 
-            member => {
+                            );
 
 
+                        /*
+                        --------------------------------
+                        NORMALE OFFIZIERE
+                        --------------------------------
+                        */
 
-                if(member.prestige > 0)
+                        return (
 
-                    return false;
+                            rank.category === "offiziere"
 
+                        );
 
+                    }
 
+                )
 
+        },
 
-                const rank =
 
-                    ServiceRecord.rank(
-
-                        member.rank
-
-                    );
-
-
-
-
-
-                return (
-
-
-                    rank?.category === "offiziere"
-
-
-                    &&
-
-
-                    rank.level >= 80
-
-
-
-                );
-
-
-            }
-
-
-        )
-
-
-},
-        /*
-============================================
-OFFIZIERE
-============================================
-*/
-
-
-{
-
-
-    id:"offiziere",
-
-
-    title:"Offiziere",
-
-
-    theme:"offiziere",
-
-
-
-    members:
-
-
-        members.filter(
-
-
-            member => {
-
-
-
-                if(member.prestige > 0)
-
-                    return false;
-
-
-
-
-
-                const rank =
-
-                    ServiceRecord.rank(
-
-                        member.rank
-
-                    );
-
-
-
-
-
-                return (
-
-
-                    rank?.category === "offiziere"
-
-
-                    &&
-
-
-                    rank.level < 80
-
-
-
-                );
-
-
-            }
-
-
-        )
-
-
-},
         /*
         ============================================
         UNTEROFFIZIERE MIT PORTEPEE
         ============================================
         */
-
 
         {
 
@@ -402,19 +325,21 @@ OFFIZIERE
 
             theme:"portepee",
 
-
             members:
 
                 members.filter(
 
                     member => {
 
-
+                        /*
+                        --------------------------------
+                        PRESTIGE-MITGLIEDER NICHT HIER
+                        --------------------------------
+                        */
 
                         if(member.prestige > 0)
 
                             return false;
-
 
 
                         const rank =
@@ -426,10 +351,9 @@ OFFIZIERE
                             );
 
 
-
                         return (
 
-                            rank?.category === "feldwebel"
+                            rank.category === "feldwebel"
 
                         );
 
@@ -440,17 +364,11 @@ OFFIZIERE
         },
 
 
-
-
-
-
-
         /*
         ============================================
         UNTEROFFIZIERE
         ============================================
         */
-
 
         {
 
@@ -460,19 +378,21 @@ OFFIZIERE
 
             theme:"unteroffiziere",
 
-
             members:
 
                 members.filter(
 
                     member => {
 
-
+                        /*
+                        --------------------------------
+                        PRESTIGE-MITGLIEDER NICHT HIER
+                        --------------------------------
+                        */
 
                         if(member.prestige > 0)
 
                             return false;
-
 
 
                         const rank =
@@ -484,10 +404,9 @@ OFFIZIERE
                             );
 
 
-
                         return (
 
-                            rank?.category === "unteroffiziere"
+                            rank.category === "unteroffiziere"
 
                         );
 
@@ -498,17 +417,11 @@ OFFIZIERE
         },
 
 
-
-
-
-
-
         /*
         ============================================
         MANNSCHAFTEN
         ============================================
         */
-
 
         {
 
@@ -518,19 +431,21 @@ OFFIZIERE
 
             theme:"mannschaften",
 
-
             members:
 
                 members.filter(
 
                     member => {
 
-
+                        /*
+                        --------------------------------
+                        PRESTIGE-MITGLIEDER NICHT HIER
+                        --------------------------------
+                        */
 
                         if(member.prestige > 0)
 
                             return false;
-
 
 
                         const rank =
@@ -542,10 +457,9 @@ OFFIZIERE
                             );
 
 
-
                         return (
 
-                            rank?.category === "mannschaften"
+                            rank.category === "mannschaften"
 
                         );
 
@@ -556,38 +470,46 @@ OFFIZIERE
         },
 
 
-
-
-
-
-
         /*
         ============================================
         ZIVILISTEN
         ============================================
         */
 
-
         {
-    id:"zivilisten",
 
-    title:"Zivilisten",
+            id:"zivilisten",
 
-    theme:"zivilisten",
+            title:"Zivilisten",
 
-    members:
+            theme:"zivilisten",
 
-        members.filter(member => {
+            members:
 
-            const rank = ServiceRecord.rank(member.rank);
-            
-            return rank?.category === "zivilisten";
+                members.filter(
 
-        })
+                    member => {
 
-}
+                        const rank =
+
+                            ServiceRecord.rank(
+
+                                member.rank
+
+                            );
 
 
+                        return (
+
+                            rank.category === "zivilisten"
+
+                        );
+
+                    }
+
+                )
+
+        }
 
     ];
 

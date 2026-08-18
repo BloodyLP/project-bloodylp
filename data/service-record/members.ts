@@ -126,6 +126,10 @@ import { hightowersl } from "./members/hightowersl";
 
 import { bobbele } from "./members/bobbele";
 
+import { derpolarstern } from "./members/derpolarstern";
+
+import { schmiedli } from "./members/schmiedli";
+
 export const MEMBERS: ServiceRecordMember[] = [
 
     bloodylp,
@@ -169,4 +173,8 @@ export const MEMBERS: ServiceRecordMember[] = [
     hightowersl,
 
     bobbele,
+
+    derpolarstern,
+
+    schmiedli,
 ];
