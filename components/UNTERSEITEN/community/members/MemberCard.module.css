@@ -1645,3 +1645,151 @@
     }
 
 }
+
+/* ================================= */
+/* MEMORIAL */
+/* ================================= */
+
+/*
+    NUR VERSTORBENE MITGLIEDER
+
+    Die normalen MemberCards bleiben
+    vollständig unverändert.
+
+    Memorial-Karten bekommen etwas
+    zusätzliche Höhe, damit der
+    Gedenktext sauber Platz hat.
+*/
+
+.memorialCard {
+
+    min-height:660px;
+
+}
+
+
+/*
+    Der Flip-Container wird nur für
+    Memorial-Mitglieder länger.
+*/
+
+.memorialContainer {
+
+    min-height:660px;
+
+}
+
+
+/*
+    Rückseite und Vorderseite des
+    Memorial-Flips bekommen ebenfalls
+    die zusätzliche Höhe.
+
+    Die normale Karte bleibt bei 580px.
+*/
+
+.memorialContainer .flipInner {
+
+    min-height:660px;
+
+}
+
+
+.memorialContainer .flipInner > .card,
+
+.memorialContainer .flipInner > .back {
+
+    height:660px;
+
+    min-height:660px;
+
+}
+
+
+/*
+    Memorial-Schrift auf der Vorderseite.
+*/
+
+.memorialText {
+
+    margin-top:.15rem;
+
+    color:#B8A06A;
+
+    font-size:.78rem;
+
+    font-weight:900;
+
+    letter-spacing:.20em;
+
+    text-align:center;
+
+    text-transform:uppercase;
+
+}
+
+
+/*
+    Memorial-Avatar bekommt ebenfalls
+    keinen Army-Grün-Glow.
+*/
+
+.memorialCard .avatar {
+
+    border-color:
+
+        rgba(184,160,106,.40);
+
+    box-shadow:
+
+        0 0 30px
+
+        rgba(184,160,106,.16),
+
+        0 20px 45px
+
+        rgba(0,0,0,.50);
+
+}
+
+
+/*
+    Memorial-Hover darf ebenfalls
+    nicht grün werden.
+*/
+
+.memorialCard:hover {
+
+    box-shadow:
+
+        0 35px 90px
+
+        rgba(0,0,0,.55),
+
+        0 0 40px
+
+        rgba(184,160,106,.18);
+
+}
+
+
+/*
+    Memorial-Buttons behalten ihre
+    bisherige Gestaltung.
+*/
+
+.memorialCard .actionButton {
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            #F0E3BC,
+
+            #D4B96F
+
+        );
+
+}

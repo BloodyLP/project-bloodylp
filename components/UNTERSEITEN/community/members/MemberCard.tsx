@@ -47,29 +47,13 @@ type MemberCardProps = {
 
     compact?: boolean;
 
-
     /*
     ============================================
     VERSTORBEN
     ============================================
-
-    true:
-    Mitglied gehört zu "UNVERGESSEN".
-
-    Das Memorial-Theme wird automatisch
-    verwendet.
-
-    Verstorbene Mitglieder bleiben unabhängig
-    von ihrem früheren Prestige im Memorial-
-    System.
     */
 
     deceased?: boolean;
-
-    /**
-     * Individueller Gedenktext
-     */
-    memorialText?: string;
 
 
     /*
@@ -123,7 +107,7 @@ type MemberCardProps = {
 
     /*
     ============================================
-    KARRIERE STATISTIKEN
+    KARRIERE
     ============================================
     */
 
@@ -140,11 +124,8 @@ type MemberCardProps = {
     */
 
     playerType:
-
         | "skater"
-
         | "goalie"
-
         | "dual";
 
 
@@ -195,8 +176,6 @@ export default function MemberCard({
     compact = false,
 
     deceased = false,
-
-    memorialText,
 
     rank,
 
@@ -302,29 +281,22 @@ export default function MemberCard({
 
     /*
     ============================================
-    PRESTIGE
-
-    Memorial wird hier NICHT verändert.
-
-    Dadurch bleibt ein verstorbenes Mitglied
-    unabhängig von seinem früheren Prestige
-    im Memorial-System.
+    NORMALES MITGLIED
     ============================================
+
+    Prestige darf nur bei normalen
+    Mitgliedern die Anzeige überschreiben.
+
+    Memorial bleibt immer Memorial.
     */
 
     if (
 
-        !deceased
+        !deceased &&
 
-        &&
+        badge.title !== "FOUNDER" &&
 
-        badge.title !== "FOUNDER"
-
-        &&
-
-        prestige?.level
-
-        &&
+        prestige?.level &&
 
         prestige.level > 0
 
@@ -350,7 +322,7 @@ export default function MemberCard({
     /* BADGE THEME */
     /* ========================================= */
 
-    const theme =
+    const badgeTheme =
 
         badgeThemes[displayTheme]
 
@@ -362,23 +334,6 @@ export default function MemberCard({
     /* ========================================= */
     /* ORGANISATION / MEMORIAL THEME */
     /* ========================================= */
-
-    /*
-    ============================================
-    NORMAL
-
-    BloodyArmy:
-        → BloodyArmyTheme
-
-    YoungArmy:
-        → YoungArmyTheme
-
-    VERSTORBEN
-
-    deceased === true:
-        → MemorialTheme
-    ============================================
-    */
 
     const organizationTheme =
 
@@ -405,6 +360,19 @@ export default function MemberCard({
 
 
     /* ========================================= */
+    /* MEMORIAL NAME */
+    /* ========================================= */
+
+    const displayName =
+
+        deceased
+
+            ? `†${name}`
+
+            : name;
+
+
+    /* ========================================= */
     /* FRONT CARD */
     /* ========================================= */
 
@@ -414,15 +382,27 @@ export default function MemberCard({
 
             className={
 
-                compact
+                [
 
-                ?
+                    styles.card,
 
-                `${styles.card} ${styles.compact}`
+                    compact
 
-                :
+                        ? styles.compact
 
-                `${styles.card} ${styles.founder}`
+                        : styles.founder,
+
+                    deceased
+
+                        ? styles.memorialCard
+
+                        : "",
+
+                ]
+
+                    .filter(Boolean)
+
+                    .join(" ")
 
             }
 
@@ -437,25 +417,15 @@ export default function MemberCard({
 
             <header
 
-                className={
-
-                    styles.header
-
-                }
+                className={styles.header}
 
             >
 
-
                 <div
 
-                    className={
-
-                        styles.rankArea
-
-                    }
+                    className={styles.rankArea}
 
                 >
-
 
                     <Image
 
@@ -486,7 +456,6 @@ export default function MemberCard({
 
                     >
 
-
                         <h2
 
                             className={
@@ -501,27 +470,20 @@ export default function MemberCard({
 
                         </h2>
 
-
                     </div>
-
 
                 </div>
 
 
                 <div
 
-                    className={
-
-                        styles.armyId
-
-                    }
+                    className={styles.armyId}
 
                 >
 
                     {armyId}
 
                 </div>
-
 
             </header>
 
@@ -540,7 +502,6 @@ export default function MemberCard({
 
             >
 
-
                 <Image
 
                     src={avatar}
@@ -551,14 +512,9 @@ export default function MemberCard({
 
                     height={280}
 
-                    className={
-
-                        styles.avatar
-
-                    }
+                    className={styles.avatar}
 
                 />
-
 
             </div>
 
@@ -569,71 +525,62 @@ export default function MemberCard({
 
             <div
 
-                className={
-
-                    styles.identity
-
-                }
+                className={styles.identity}
 
             >
 
-
                 <h1
-    className={
-        styles.name
-    }
->
 
-    {deceased && (
+                    className={styles.name}
 
-        <span
-            className={
-                styles.memorialCross
-            }
-            aria-hidden="true"
-        >
+                >
 
-            †
+                    {displayName}
 
-        </span>
-
-    )}
-
-    {name}
-
-</h1>
+                </h1>
 
 
                 <div
 
-                    className={
-
-                        styles.badge
-
-                    }
+                    className={styles.badge}
 
                     style={{
 
                         background:
 
-                            theme.background,
+                            deceased
+
+                                ? "rgba(184,160,106,.10)"
+
+                                : badgeTheme.background,
 
                         borderColor:
 
-                            theme.border,
+                            deceased
+
+                                ? "#B8A06A"
+
+                                : badgeTheme.border,
 
                         color:
 
-                            theme.text,
+                            deceased
+
+                                ? "#E8D9AE"
+
+                                : badgeTheme.text,
 
                         boxShadow:
 
-                            `0 0 25px ${theme.glow}`,
+                            deceased
+
+                                ? "0 0 25px rgba(184,160,106,.22)"
+
+                                : `0 0 25px ${badgeTheme.glow}`,
 
                     }}
 
                 >
-
 
                     <span
 
@@ -645,13 +592,17 @@ export default function MemberCard({
 
                     >
 
-                        {displayTitle}
+                        {deceased
+
+                            ? "UNVERGESSEN"
+
+                            : displayTitle
+
+                        }
 
                     </span>
 
-
                 </div>
-
 
             </div>
 
@@ -662,23 +613,13 @@ export default function MemberCard({
 
             <footer
 
-                className={
-
-                    styles.footer
-
-                }
-
+                className={styles.footer}
 
             >
 
-
                 <div
 
-                    className={
-
-                        styles.joined
-
-                    }
+                    className={styles.joined}
 
                 >
 
@@ -686,19 +627,24 @@ export default function MemberCard({
 
                 </div>
 
+
                 {deceased && (
 
-    <div
-        className={
-            styles.memorialSubline
-        }
-    >
+                    <div
 
-        IN EHRENDEM GEDENKEN
+                        className={
 
-    </div>
+                            styles.memorialText
 
-)}
+                        }
+
+                    >
+
+                        IN EHRENDEM GEDENKEN
+
+                    </div>
+
+                )}
 
 
                 {/* ================================= */}
@@ -777,9 +723,7 @@ export default function MemberCard({
 
                 </Link>
 
-
             </footer>
-
 
         </article>
 
@@ -798,18 +742,13 @@ export default function MemberCard({
 
                 playerType === "goalie"
 
-                ?
+                    ? `${styles.back} ${styles.goalieBack}`
 
-                `${styles.back} ${styles.goalieBack}`
-
-                :
-
-                styles.back
+                    : styles.back
 
             }
 
         >
-
 
             <MemberCardBack
 
@@ -819,17 +758,15 @@ export default function MemberCard({
 
                 organization={organization}
 
-                deceased={deceased}
-
                 stats={stats}
-
-                    memorialText={memorialText}
 
                 playerType={playerType}
 
                 dualRole={dualRole}
 
                 profile={profile}
+
+                deceased={deceased}
 
                 onBack={() =>
 
@@ -838,7 +775,6 @@ export default function MemberCard({
                 }
 
             />
-
 
         </div>
 
@@ -857,33 +793,41 @@ export default function MemberCard({
 
                 className={
 
-                    compact
+                    [
 
-                    ?
+                        styles.flipContainer,
 
-                    `${styles.flipContainer} ${styles.compactContainer} ${styles.mobileCard}`
+                        compact
 
-                    :
+                            ? styles.compactContainer
 
-                    `${styles.flipContainer} ${styles.mobileCard}`
+                            : "",
+
+                        deceased
+
+                            ? styles.memorialContainer
+
+                            : "",
+
+                        styles.mobileCard,
+
+                    ]
+
+                        .filter(Boolean)
+
+                        .join(" ")
 
                 }
 
             >
 
-
                 {!flipped
 
-                    ?
+                    ? frontCard
 
-                    frontCard
-
-                    :
-
-                    backCard
+                    : backCard
 
                 }
-
 
             </div>
 
@@ -902,20 +846,31 @@ export default function MemberCard({
 
             className={
 
-                compact
+                [
 
-                ?
+                    styles.flipContainer,
 
-                `${styles.flipContainer} ${styles.compactContainer}`
+                    compact
 
-                :
+                        ? styles.compactContainer
 
-                styles.flipContainer
+                        : "",
+
+                    deceased
+
+                        ? styles.memorialContainer
+
+                        : "",
+
+                ]
+
+                    .filter(Boolean)
+
+                    .join(" ")
 
             }
 
         >
-
 
             <motion.div
 
@@ -933,21 +888,17 @@ export default function MemberCard({
 
                         flipped
 
-                        ?
+                            ? 180
 
-                        180
-
-                        :
-
-                        0,
+                            : 0,
 
                 }}
 
                 transition={{
 
-                    duration: 0.7,
+                    duration:.7,
 
-                    ease: "easeInOut",
+                    ease:"easeInOut",
 
                 }}
 
@@ -955,12 +906,9 @@ export default function MemberCard({
 
                 {frontCard}
 
-
                 {backCard}
 
-
             </motion.div>
-
 
         </div>
 
