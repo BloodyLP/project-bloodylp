@@ -7,10 +7,10 @@
  * BloodyArmy Website
  *
  * Data:
- * blackhawk
+ * xxhobixx
  *
  * Description:
- * Service Record Datensatz von blackhawk.
+ * Service Record Datensatz von xxhobixx.
  *
  * ============================================
  */
@@ -18,37 +18,37 @@
 import type { ServiceRecordMember } from "@/types/service-record";
 
 
-export const blackhawk: ServiceRecordMember = {
+export const xxhobixx: ServiceRecordMember = {
 
     /**
      * Interne UUID
      */
-    id:"BA-000",
+    id:"BA-999",
 
     /**
      * URL
      */
-    slug:"blackhawk",
+    slug:"xxhobixx",
 
     /**
      * Service Record Nummer
      */
-    recordNumber:"BA-000",
+    recordNumber:"BA-999",
 
     /**
      * Anzeigename
      */
-    name:"Blackhawk211187",
+    name:"xxHobixx",
 
     /**
      * Avatar
      */
-    avatar:"/members/blackhawk/avatar.png",
+    avatar:"/members/xxhobixx/avatar.png",
 
     /**
      * Dienstgrad
      */
-    rank:"us-army-sergeant-major-of-the-army",
+    rank:"bundeswehr-hauptmann",
 
     /**
      * Organisation
@@ -68,22 +68,22 @@ export const blackhawk: ServiceRecordMember = {
     /**
      * Trikotnummer
      */
-    playerNumber:"87",
+    playerNumber:"69",
 
     /**
      * Reihe
      */
-    line:2,
+    line:4,
 
     /**
      * Eintrittsjahr
      */
-    enlisted:"20. März 2018",
+    enlisted:"28. Dezember 2017",
 
     /**
      * Prestige
      */
-    prestige:1,
+    prestige:0,
 
     /**
      * Patreon
@@ -170,29 +170,29 @@ export const blackhawk: ServiceRecordMember = {
 
                 team:"BloodyArmy",
 
-                games:82,
+                games:77,
 
-                goals:28,
+                goals:21,
 
-                assists:26,
+                assists:20,
 
-                points:54,
+                points:41,
 
-                plusMinus:42,
+                plusMinus:14,
 
-                penaltyMinutes:54,
+                penaltyMinutes:32,
 
                 playoffGames:19,
 
-                playoffGoals:11,
+                playoffGoals:3,
 
-                playoffAssists:3,
+                playoffAssists:9,
 
-                playoffPoints:14,
+                playoffPoints:12,
 
-                playoffPlusMinus:10,
+                playoffPlusMinus:9,
 
-                playoffPenaltyMinutes:15,
+                playoffPenaltyMinutes:0,
 
                 titles:[]
 
@@ -206,27 +206,27 @@ export const blackhawk: ServiceRecordMember = {
 
                 games:82,
 
-                goals:26,
+                goals:23,
 
-                assists:23,
+                assists:21,
 
-                points:49,
+                points:44,
 
-                plusMinus:40,
+                plusMinus:23,
 
-                penaltyMinutes:25,
+                penaltyMinutes:18,
 
                 playoffGames:21,
 
-                playoffGoals:7,
+                playoffGoals:2,
 
-                playoffAssists:7,
+                playoffAssists:5,
 
-                playoffPoints:14,
+                playoffPoints:7,
 
-                playoffPlusMinus:14,
+                playoffPlusMinus:3,
 
-                playoffPenaltyMinutes:17,
+                playoffPenaltyMinutes:2,
 
                 titles:[]
 
@@ -240,27 +240,27 @@ export const blackhawk: ServiceRecordMember = {
 
                 games:82,
 
-                goals:27,
+                goals:20,
 
-                assists:32,
+                assists:19,
 
-                points:59,
+                points:39,
 
-                plusMinus:10,
+                plusMinus:14,
 
-                penaltyMinutes:20,
+                penaltyMinutes:17,
 
                 playoffGames:12,
 
-                playoffGoals:3,
+                playoffGoals:1,
 
                 playoffAssists:4,
 
-                playoffPoints:7,
+                playoffPoints:5,
 
-                playoffPlusMinus:0,
+                playoffPlusMinus:-1,
 
-                playoffPenaltyMinutes:6,
+                playoffPenaltyMinutes:0,
 
                 titles:[]
 
@@ -274,27 +274,27 @@ export const blackhawk: ServiceRecordMember = {
 
                 games:82,
 
-                goals:37,
+                goals:20,
 
-                assists:18,
+                assists:23,
 
-                points:55,
+                points:43,
 
-                plusMinus:25,
+                plusMinus:21,
 
-                penaltyMinutes:20,
+                penaltyMinutes:13,
 
                 playoffGames:24,
 
-                playoffGoals:5,
+                playoffGoals:4,
 
-                playoffAssists:10,
+                playoffAssists:3,
 
-                playoffPoints:15,
+                playoffPoints:7,
 
-                playoffPlusMinus:10,
+                playoffPlusMinus:6,
 
-                playoffPenaltyMinutes:8,
+                playoffPenaltyMinutes:4,
 
                 titles:[]
 
@@ -308,23 +308,23 @@ export const blackhawk: ServiceRecordMember = {
 
                 games:82,
 
-                goals:28,
+                goals:5,
 
-                assists:31,
+                assists:5,
 
-                points:59,
+                points:10,
 
-                plusMinus:41,
+                plusMinus:18,
 
-                penaltyMinutes:6,
+                penaltyMinutes:4,
 
                 playoffGames:13,
 
-                playoffGoals:4,
+                playoffGoals:1,
 
-                playoffAssists:6,
+                playoffAssists:1,
 
-                playoffPoints:10,
+                playoffPoints:2,
 
                 playoffPlusMinus:2,
 
@@ -342,25 +342,25 @@ export const blackhawk: ServiceRecordMember = {
 
                 games:82,
 
-                goals:33,
+                goals:6,
 
-                assists:41,
+                assists:14,
 
-                points:74,
+                points:20,
 
-                plusMinus:38,
+                plusMinus:-10,
 
-                penaltyMinutes:22,
+                penaltyMinutes:2,
 
                 playoffGames:19,
 
-                playoffGoals:9,
+                playoffGoals:0,
 
-                playoffAssists:12,
+                playoffAssists:4,
 
-                playoffPoints:21,
+                playoffPoints:4,
 
-                playoffPlusMinus:6,
+                playoffPlusMinus:-2,
 
                 playoffPenaltyMinutes:4,
 
@@ -376,27 +376,27 @@ export const blackhawk: ServiceRecordMember = {
 
                 games:82,
 
-                goals:20,
+                goals:8,
 
-                assists:21,
+                assists:4,
 
-                points:41,
+                points:12,
 
-                plusMinus:41,
+                plusMinus:9,
 
-                penaltyMinutes:8,
+                penaltyMinutes:2,
 
                 playoffGames:18,
 
-                playoffGoals:3,
+                playoffGoals:1,
 
-                playoffAssists:15,
+                playoffAssists:2,
 
-                playoffPoints:18,
+                playoffPoints:3,
 
-                playoffPlusMinus:20,
+                playoffPlusMinus:4,
 
-                playoffPenaltyMinutes:0,
+                playoffPenaltyMinutes:2,
 
                 titles:[]
 
