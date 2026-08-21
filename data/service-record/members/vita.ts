@@ -38,7 +38,7 @@ export const vita: ServiceRecordMember = {
     /**
      * Anzeigename
      */
-    name:"vita46",
+    name:"VitaDieGuteSeele",
 
     /**
      * Avatar
