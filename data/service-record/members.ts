@@ -136,6 +136,8 @@ import { xxhobixx } from "./members/xxhobixx";
 
 import { helmut } from "./members/helmut";
 
+import { vita } from "./members/vita";
+
 
 
 export const MEMBERS: ServiceRecordMember[] = [
@@ -191,4 +193,6 @@ export const MEMBERS: ServiceRecordMember[] = [
     xxhobixx,
 
     helmut,
+
+    vita,
 ];
