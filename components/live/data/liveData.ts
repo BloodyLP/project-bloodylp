@@ -43,7 +43,7 @@ export const liveData = {
         day: "SA",
         date: "29. AUG",
         time: "19:30 Uhr",
-        title: "WARHOUNDS",
+        title: "Star Wars: Zero Company",
       }, 
 
                               {
@@ -54,8 +54,8 @@ export const liveData = {
       }, 
 
                                     {
-        day: "MI",
-        date: "02. SEP",
+        day: "DO",
+        date: "03. SEP",
         time: "19:30 Uhr",
         title: "Assassins Creed Black Flag Resynced",
       }, 

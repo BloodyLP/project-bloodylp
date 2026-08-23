@@ -2,18 +2,18 @@ export const nextCommentary = {
   platform: "SportEurope.TV",
 
   league: "DEL2",
-  matchday: "Vorbereitung",
+  matchday: "1. Spieltag",
 
-  date: "23.08.2026",
-  time: "18:30 Uhr",
+  date: "18.09.2026",
+  time: "19:30 Uhr",
 
   role: "Kommentator",
 
   homeTeam: "EHC Freiburg",
-  awayTeam: "Bietigheim Steelers",
+  awayTeam: "EC Bad Nauheim",
 
   homeLogo: "/teams/del2/ehc_freiburg.png",
-  awayLogo: "/teams/del2/bietigheim_steelers.png",
+  awayLogo: "/teams/del2/ec_bad_nauheim.png",
 
-  streamUrl: "https://sporteurope.tv/ehc-freiburg/del2-testspiel-ehc-freiburg-vs-bietigheim-steelers-1",
+  streamUrl: "https://sporteurope.tv/ehc-freiburg",
 };
