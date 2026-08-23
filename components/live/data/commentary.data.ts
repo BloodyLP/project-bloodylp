@@ -15,5 +15,5 @@ export const nextCommentary = {
   homeLogo: "/teams/del2/ehc_freiburg.png",
   awayLogo: "/teams/del2/bietigheim_steelers.png",
 
-  streamUrl: "https://sporteurope.tv/ehc-freiburg",
+  streamUrl: "https://sporteurope.tv/ehc-freiburg/del2-testspiel-ehc-freiburg-vs-bietigheim-steelers-1",
 };
