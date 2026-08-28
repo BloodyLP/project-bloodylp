@@ -138,6 +138,8 @@ import { helmut } from "./members/helmut";
 
 import { vita } from "./members/vita";
 
+import { dannyice } from "./members/dannyice";
+
 
 
 export const MEMBERS: ServiceRecordMember[] = [
@@ -195,4 +197,6 @@ export const MEMBERS: ServiceRecordMember[] = [
     helmut,
 
     vita,
+
+    dannyice,
 ];

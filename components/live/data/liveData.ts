@@ -43,7 +43,7 @@ export const liveData = {
         day: "SA",
         date: "29. AUG",
         time: "19:30 Uhr",
-        title: "Star Wars: Zero Company",
+        title: "Star Wars: Zero Company + Super Blood Hockey Rogue Manager",
       }, 
 
                               {
