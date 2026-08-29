@@ -60,7 +60,7 @@ export const schmiedli: ServiceRecordMember = {
     /**
      * Anzeigename
      */
-    name:"Schmniedli_68",
+    name:"Schmiedli_68",
 
 
 
