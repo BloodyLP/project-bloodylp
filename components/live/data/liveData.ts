@@ -39,13 +39,6 @@ export const liveData = {
 
     events: [  
 
-                        {
-        day: "SA",
-        date: "29. AUG",
-        time: "19:30 Uhr",
-        title: "Star Wars: Zero Company + Super Blood Hockey Rogue Manager",
-      }, 
-
                               {
         day: "MO",
         date: "31. AUG",
@@ -64,6 +57,12 @@ export const liveData = {
         day: "FR",
         date: "04. SEP",
         time: "15:00 Uhr",
+        title: "NHL 27",
+      }, 
+                                                {
+        day: "SO",
+        date: "06. SEP",
+        time: "19:30 Uhr",
         title: "NHL 27",
       }, 
       
