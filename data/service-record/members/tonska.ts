@@ -158,6 +158,25 @@ export const tonska: ServiceRecordMember = {
      */
     achievements: [],
 
+        /**
+     * Calder Cup
+     */
+    calderCup:{
+
+        years:[
+
+            2019,
+
+            2021,
+
+            2025,
+
+            2026,
+
+        ],
+
+    },
+
 
     /**
      * Karriere Statistiken

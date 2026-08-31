@@ -124,6 +124,23 @@ export const maeusefinger: ServiceRecordMember = {
      */
     achievements:[],
 
+        /**
+     * Calder Cup
+     */
+    calderCup:{
+
+        years:[
+
+            2021,
+
+            2025,
+
+            2026,
+
+        ],
+
+    },
+
     /**
      * Karriere Statistiken
      */

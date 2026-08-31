@@ -161,6 +161,21 @@ playerNumber:"97",
      */
     decorations:[],
 
+        /**
+     * Calder Cup
+     */
+    calderCup:{
+
+        years:[
+
+            2025,
+
+            2026,
+
+        ],
+
+    },
+
     /**
      * Ribbon Rack
      */

@@ -124,6 +124,21 @@ export const MaylatheBloodylinchen: ServiceRecordMember = {
      */
     achievements:[],
 
+        /**
+     * Calder Cup
+     */
+    calderCup:{
+
+        years:[
+
+            2025,
+
+            2026,
+
+        ],
+
+    },
+
     /**
      * Karriere Statistiken
      */

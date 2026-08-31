@@ -104,6 +104,21 @@ export const Adlermannheimfan: ServiceRecordMember = {
      */
     decorations:[],
 
+        /**
+     * Calder Cup
+     */
+    calderCup:{
+
+        years:[
+
+            2025,
+
+            2026,
+
+        ],
+
+    },
+
     /**
      * Ribbon Rack
      */

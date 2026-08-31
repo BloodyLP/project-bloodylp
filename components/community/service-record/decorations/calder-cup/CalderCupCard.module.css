@@ -26,23 +26,39 @@
     flex-direction: column;
 
     width: 160px;
+
+    min-width: 160px;
+
+    max-width: 160px;
+
     height: 225px;
+
+    min-height: 225px;
+
+    max-height: 225px;
 
     overflow: hidden;
 
     box-sizing: border-box;
 
+    flex: 0 0 160px;
+
     background:
 
         linear-gradient(
+
             180deg,
+
             #251b1d 0%,
+
             #18191b 100%
+
         );
 
     border:
 
         2px solid
+
         rgba(255, 85, 85, .22);
 
     border-radius: 14px;
@@ -50,15 +66,18 @@
     transition:
 
         border-color .25s ease,
+
         box-shadow .25s ease,
+
         background .25s ease,
+
         transform .25s ease;
 
 }
 
 
 /* ========================================= */
-/* HOVER                                     */
+/* HOVER                                      */
 /* ========================================= */
 
 .card:hover {
@@ -74,27 +93,34 @@
     background:
 
         linear-gradient(
+
             180deg,
+
             #2a1d20 0%,
+
             #1b191b 100%
+
         );
 
     box-shadow:
 
         0 0 0 1px
+
         rgba(255, 85, 85, .40),
 
         0 0 18px
+
         rgba(255, 85, 85, .22),
 
         0 10px 24px
+
         rgba(0, 0, 0, .45);
 
 }
 
 
 /* ========================================= */
-/* HEADER                                    */
+/* HEADER                                     */
 /* ========================================= */
 
 .header {
@@ -117,13 +143,26 @@
 
         36px;
 
+    min-height:
+
+        36px;
+
+    max-height:
+
+        36px;
+
     padding:
 
         0 12px;
 
+    box-sizing:
+
+        border-box;
+
     border-bottom:
 
         1px solid
+
         rgba(255, 255, 255, .06);
 
     background:
@@ -134,7 +173,7 @@
 
 
 /* ========================================= */
-/* TITLE                                     */
+/* TITLE                                      */
 /* ========================================= */
 
 .title {
@@ -159,14 +198,30 @@
 
         #ff7777;
 
+    white-space:
+
+        nowrap;
+
+    overflow:
+
+        hidden;
+
+    text-overflow:
+
+        ellipsis;
+
 }
 
 
 /* ========================================= */
-/* CODE                                      */
+/* CODE                                       */
 /* ========================================= */
 
 .code {
+
+    flex-shrink:
+
+        0;
 
     font-size:
 
@@ -192,7 +247,7 @@
 
 
 /* ========================================= */
-/* TROPHY AREA                               */
+/* TROPHY AREA                                */
 /* ========================================= */
 
 .badge {
@@ -202,6 +257,14 @@
         relative;
 
     height:
+
+        128px;
+
+    min-height:
+
+        128px;
+
+    max-height:
 
         128px;
 
@@ -221,9 +284,14 @@
 
         0;
 
+    overflow:
+
+        hidden;
+
     border-bottom:
 
         1px solid
+
         rgba(255, 255, 255, .06);
 
     background:
@@ -242,7 +310,7 @@
 
 
 /* ========================================= */
-/* TROPHY IMAGE                              */
+/* TROPHY IMAGE                               */
 /* ========================================= */
 
 .image {
@@ -258,18 +326,25 @@
     transition:
 
         transform .25s ease,
+
         filter .25s ease;
 
     filter:
 
         drop-shadow(
+
             0 10px 18px
+
             rgba(0, 0, 0, .45)
+
         )
 
         drop-shadow(
+
             0 0 10px
+
             rgba(255, 70, 70, .20)
+
         );
 
 }
@@ -284,20 +359,26 @@
     filter:
 
         drop-shadow(
+
             0 10px 18px
+
             rgba(0, 0, 0, .45)
+
         )
 
         drop-shadow(
+
             0 0 14px
+
             rgba(255, 70, 70, .38)
+
         );
 
 }
 
 
 /* ========================================= */
-/* FOOTER                                    */
+/* FOOTER                                     */
 /* ========================================= */
 
 .footer {
@@ -320,19 +401,31 @@
 
     flex:
 
-        1;
+        1 1 auto;
 
     min-height:
 
         0;
 
+    max-height:
+
+        57px;
+
+    overflow:
+
+        hidden;
+
     gap:
 
-        7px;
+        5px;
 
     padding:
 
-        10px;
+        7px 10px;
+
+    box-sizing:
+
+        border-box;
 
     background:
 
@@ -342,10 +435,14 @@
 
 
 /* ========================================= */
-/* FOOTER TITLE                              */
+/* FOOTER TITLE                               */
 /* ========================================= */
 
 .footerTitle {
+
+    flex-shrink:
+
+        0;
 
     margin:
 
@@ -383,7 +480,7 @@
 
 
 /* ========================================= */
-/* YEARS                                     */
+/* YEARS                                      */
 /* ========================================= */
 
 .years {
@@ -406,24 +503,36 @@
 
     gap:
 
-        6px;
+        4px;
+
+    width:
+
+        100%;
+
+    max-height:
+
+        32px;
+
+    overflow:
+
+        hidden;
 
 }
 
 
 /* ========================================= */
-/* YEAR                                      */
+/* YEAR                                       */
 /* ========================================= */
 
 .year {
 
     min-width:
 
-        48px;
+        0;
 
     padding:
 
-        3px 8px;
+        2px 6px;
 
     border-radius:
 
@@ -432,6 +541,7 @@
     border:
 
         1px solid
+
         rgba(255, 85, 85, .60);
 
     background:
@@ -448,7 +558,11 @@
 
     font-size:
 
-        .58rem;
+        .54rem;
+
+    line-height:
+
+        1.1;
 
     font-weight:
 
@@ -456,22 +570,29 @@
 
     letter-spacing:
 
-        .04em;
+        .03em;
+
+    white-space:
+
+        nowrap;
 
     box-shadow:
 
         0 0 8px
+
         rgba(255, 70, 70, .10);
 
 }
 
 
 /* ========================================= */
-/* MOBILE                                    */
+/* MOBILE                                     */
 /* ========================================= */
 
 @media (
+
     max-width: 700px
+
 ) {
 
     .card {
@@ -480,9 +601,29 @@
 
             160px;
 
+        min-width:
+
+            160px;
+
+        max-width:
+
+            160px;
+
         height:
 
             225px;
+
+        min-height:
+
+            225px;
+
+        max-height:
+
+            225px;
+
+        flex:
+
+            0 0 160px;
 
     }
 

@@ -135,6 +135,8 @@ export const schmiedli: ServiceRecordMember = {
 
             2025,
 
+            2026,
+
         ],
 
     },

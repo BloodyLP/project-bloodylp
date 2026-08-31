@@ -115,6 +115,19 @@ export const david211197: ServiceRecordMember = {
         ],
     },
 
+        /**
+     * Calder Cup
+     */
+    calderCup:{
+
+        years:[
+
+            2025,
+
+        ],
+
+    },
+
     /**
      * Ribbon Rack
      */
