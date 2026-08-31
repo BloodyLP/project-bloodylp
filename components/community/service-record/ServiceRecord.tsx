@@ -34,6 +34,8 @@ import Prestige from "./decorations/prestige";
 
 import StanleyCup from "./decorations/stanley-cup";
 
+import CalderCup from "./decorations/calder-cup";
+
 import Footer from "./footer";
 
 
@@ -51,12 +53,20 @@ import type {
 } from "@/types/service-record";
 
 
+/* ========================================= */
+/* PROPS */
+/* ========================================= */
+
 interface ServiceRecordProps {
 
     member: ServiceRecordMember;
 
 }
 
+
+/* ========================================= */
+/* COMPONENT */
+/* ========================================= */
 
 export default function ServiceRecord({
 
@@ -68,31 +78,6 @@ export default function ServiceRecord({
     /* ========================================= */
     /* THEME */
     /* ========================================= */
-
-    /*
-    ============================================
-    NORMALES MITGLIED
-
-    BloodyArmy
-        ↓
-    BloodyArmyTheme
-
-    YoungArmy
-        ↓
-    YoungArmyTheme
-
-
-    VERSTORBEN
-
-    deceased === true
-        ↓
-    MemorialTheme
-
-
-    Das Memorial-Theme überschreibt dabei
-    bewusst die ehemalige Organisation.
-    ============================================
-    */
 
     const theme = getTheme(
 
@@ -116,47 +101,38 @@ export default function ServiceRecord({
             style={{
 
                 ["--accent" as any]:
-
                     theme.accent,
 
 
                 ["--accent-light" as any]:
-
                     theme.accentLight,
 
 
                 ["--accent-soft" as any]:
-
                     theme.accentSoft,
 
 
                 ["--accent-soft-2" as any]:
-
                     theme.accentSoft2,
 
 
                 ["--accent-border" as any]:
-
                     theme.border,
 
 
                 ["--accent-glow" as any]:
-
                     theme.glow,
 
 
                 ["--accent-glow-soft" as any]:
-
                     theme.glowSoft,
 
 
                 ["--button-text" as any]:
-
                     theme.buttonText,
 
 
                 ["--card" as any]:
-
                     theme.card,
 
             }}
@@ -234,6 +210,8 @@ export default function ServiceRecord({
                 <DecorationRow>
 
 
+                    {/* PRESTIGE */}
+
                     <Prestige
 
                         member={
@@ -245,7 +223,22 @@ export default function ServiceRecord({
                     />
 
 
+                    {/* STANLEY CUP */}
+
                     <StanleyCup
+
+                        member={
+
+                            member
+
+                        }
+
+                    />
+
+
+                    {/* CALDER CUP */}
+
+                    <CalderCup
 
                         member={
 
@@ -266,39 +259,63 @@ export default function ServiceRecord({
             {/* MEMORIAL LABEL */}
             {/* ================================= */}
 
-            {member.deceased && (
+            {
 
-                <div
+                member.deceased === true
 
-                    style={{
+                &&
 
-                        textAlign: "center",
+                (
 
-                        color:
+                    <div
 
-                            "var(--accent)",
+                        style={{
 
-                        fontSize: ".8rem",
+                            textAlign:
 
-                        fontWeight: 900,
+                                "center",
 
-                        letterSpacing: ".3em",
 
-                        textTransform: "uppercase",
+                            color:
 
-                        padding:
+                                "var(--accent)",
 
-                            "1rem 1.5rem",
 
-                    }}
+                            fontSize:
 
-                >
+                                ".8rem",
 
-                    🕯 UNVERGESSEN
 
-                </div>
+                            fontWeight:
 
-            )}
+                                900,
+
+
+                            letterSpacing:
+
+                                ".3em",
+
+
+                            textTransform:
+
+                                "uppercase",
+
+
+                            padding:
+
+                                "1rem 1.5rem",
+
+                        }}
+
+                    >
+
+                        🕯 UNVERGESSEN
+
+                    </div>
+
+                )
+
+            }
 
 
             {/* ================================= */}
@@ -327,9 +344,7 @@ export default function ServiceRecord({
 
                 >
 
-                    ← ZURÜCK ZUR
-
-                    MITGLIEDERÜBERSICHT
+                    ← ZURÜCK ZUR MITGLIEDERÜBERSICHT
 
                 </a>
 

@@ -155,7 +155,9 @@ export interface ServiceRecordMember {
      * hier weiterhin "skater" stehen.
      */
     playerType:
+
         | "skater"
+
         | "goalie";
 
 
@@ -184,14 +186,23 @@ export interface ServiceRecordMember {
      *
      * false / undefined:
      *
-     * Normales aktives Archivmitglied.
+     * Normales Archivmitglied.
      *
      * Verstorbene Mitglieder werden
      * nicht zusätzlich in ihrem normalen
-     * Dienstgrad-Ordner angezeigt.
+     * Dienstgrad-Bereich angezeigt.
      */
     deceased?: boolean;
+
+
+    /**
+     * Individueller Gedenktext
+     *
+     * Optionaler Text für die
+     * UNVERGESSEN-/Memorial-Darstellung.
+     */
     memorialText?: string;
+
 
     /**
      * Trikotnummer
@@ -206,7 +217,7 @@ export interface ServiceRecordMember {
 
 
     /**
-     * Eintrittsjahr
+     * Eintrittsdatum
      */
     enlisted: string;
 
@@ -237,14 +248,33 @@ export interface ServiceRecordMember {
 
     /**
      * Decorations
+     *
+     * Beispiele:
+     *
+     * "stanley-cup"
+     * "calder-cup"
      */
     decorations: string[];
 
 
     /**
      * Stanley Cup
+     *
+     * Für NHL-Spieler.
      */
     stanleyCup?: {
+
+        years: number[];
+
+    };
+
+
+    /**
+     * Calder Cup
+     *
+     * Für AHL-Spieler.
+     */
+    calderCup?: {
 
         years: number[];
 
@@ -280,20 +310,27 @@ export interface ServiceRecordMember {
      *
      * Standard:
      *
-     * stats:{
-     *     seasons:[...]
+     * stats: {
+     *
+     *     seasons: [...]
+     *
      * }
+     *
      *
      * Dual Role:
      *
-     * stats:{
+     * stats: {
      *
-     *     skater:{
-     *         seasons:[...]
+     *     skater: {
+     *
+     *         seasons: [...]
+     *
      *     },
      *
-     *     goalie:{
-     *         seasons:[...]
+     *     goalie: {
+     *
+     *         seasons: [...]
+     *
      *     }
      *
      * }
