@@ -39,14 +39,7 @@ export const liveData = {
 
     events: [  
 
-                              {
-        day: "MO",
-        date: "31. AUG",
-        time: "19:30 Uhr",
-        title: "HALO: Campaign Evolved",
-      }, 
-
-                                    {
+      {
         day: "DO",
         date: "03. SEP",
         time: "19:30 Uhr",
@@ -62,6 +55,13 @@ export const liveData = {
                                                 {
         day: "SO",
         date: "06. SEP",
+        time: "19:30 Uhr",
+        title: "NHL 27",
+      }, 
+
+            {
+        day: "DI",
+        date: "08. SEP",
         time: "19:30 Uhr",
         title: "NHL 27",
       }, 
