@@ -7,10 +7,10 @@
  * BloodyArmy Website
  *
  * Data:
- * krabson
+ * krebser
  *
  * Description:
- * Service Record Datensatz von krabson.
+ * Service Record Datensatz von krebser.
  *
  * ============================================
  */
@@ -24,7 +24,7 @@ import type { ServiceRecordMember } from "@/types/service-record";
 
 
 
-export const krabson: ServiceRecordMember = {
+export const krebser: ServiceRecordMember = {
 
 
 
@@ -32,7 +32,7 @@ export const krabson: ServiceRecordMember = {
     /**
      * Interne UUID
      */
-    id:"BA-030",
+    id:"BA-031",
 
 
 
@@ -40,7 +40,7 @@ export const krabson: ServiceRecordMember = {
     /**
      * URL
      */
-    slug:"krabson",
+    slug:"krebser",
 
 
 
@@ -48,7 +48,7 @@ export const krabson: ServiceRecordMember = {
     /**
      * Service Record Nummer
      */
-    recordNumber:"BA-030",
+    recordNumber:"BA-031",
 
 
 
@@ -57,7 +57,7 @@ export const krabson: ServiceRecordMember = {
     /**
      * Anzeigename
      */
-    name:"Krabson83",
+    name:"Krebser94",
 
 
 
@@ -66,7 +66,7 @@ export const krabson: ServiceRecordMember = {
     /**
      * Avatar
      */
-    avatar:"/members/krabson/avatar2.png",
+    avatar:"/members/krebser/avatar.png",
 
 
 
@@ -75,7 +75,7 @@ export const krabson: ServiceRecordMember = {
     /**
      * Dienstgrad
      */
-    rank: "us-army-specialist",
+    rank: "bundeswehr-generalleutnant",
 
 
 
@@ -93,7 +93,7 @@ export const krabson: ServiceRecordMember = {
   /**
  * Position
  */
-position:"leftWing",
+position:"leftDefense",
 
 /**
  * Spielertyp
@@ -103,7 +103,7 @@ playerType:"skater",
 /**
  * Trikotnummer
  */
-playerNumber:"83",
+playerNumber:"94",
 
 
 
@@ -112,7 +112,7 @@ playerNumber:"83",
     /**
      * Reihe
      */
-    line:4,
+    line:1,
 
 
 
@@ -121,7 +121,7 @@ playerNumber:"83",
     /**
      * Eintrittsjahr
      */
-    enlisted:"04. September 2018",
+    enlisted:"15. April 2018",
 
 
 
@@ -130,7 +130,7 @@ playerNumber:"83",
     /**
      * Prestige
      */
-    prestige:1,
+    prestige:0,
 
 
 
@@ -176,6 +176,8 @@ stanleyCup:{
     years:[
 
         2019,
+
+        2020,
 
         2022,
 
@@ -241,28 +243,28 @@ stanleyCup:{
                 team:"BloodyArmy",
 
 
-                games:81,
+                games:82,
 
-                goals:5,
+                goals:17,
 
-                assists:3,
+                assists:45,
 
-                points:8,
+                points:62,
 
-                plusMinus:3,
+                plusMinus:64,
 
-                penaltyMinutes:4,
+                penaltyMinutes:8,
 
 
                 playoffGames:19,
 
-                playoffGoals:1,
+                playoffGoals:2,
 
-                playoffAssists:2,
+                playoffAssists:14,
 
-                playoffPoints:3,
+                playoffPoints:16,
 
-                playoffPlusMinus:1,
+                playoffPlusMinus:8,
 
                 playoffPenaltyMinutes:2,
 
@@ -282,30 +284,30 @@ stanleyCup:{
                 team:"BloodyArmy",
 
 
-                games:0,
+                games:82,
 
-                goals:0,
+                goals:8,
 
-                assists:0,
+                assists:13,
 
-                points:0,
+                points:21,
 
-                plusMinus:0,
+                plusMinus:23,
 
-                penaltyMinutes:0,
+                penaltyMinutes:14,
 
 
-                playoffGames:0,
+                playoffGames:21,
 
                 playoffGoals:0,
 
-                playoffAssists:0,
+                playoffAssists:2,
 
-                playoffPoints:0,
+                playoffPoints:2,
 
-                playoffPlusMinus:0,
+                playoffPlusMinus:3,
 
-                playoffPenaltyMinutes:0,
+                playoffPenaltyMinutes:6,
 
                 titles:[]
 
@@ -324,28 +326,28 @@ stanleyCup:{
 
                 games:82,
 
-                goals:9,
+                goals:2,
 
-                assists:1,
+                assists:28,
 
-                points:20,
+                points:30,
 
-                plusMinus:6,
+                plusMinus:33,
 
-                penaltyMinutes:8,
+                penaltyMinutes:24,
 
 
                 playoffGames:12,
 
-                playoffGoals:0,
+                playoffGoals:1,
 
-                playoffAssists:3,
+                playoffAssists:5,
 
-                playoffPoints:3,
+                playoffPoints:6,
 
-                playoffPlusMinus:2,
+                playoffPlusMinus:11,
 
-                playoffPenaltyMinutes:2,
+                playoffPenaltyMinutes:0,
 
 
                 titles:[]
@@ -365,28 +367,28 @@ stanleyCup:{
 
                 games:82,
 
-                goals:23,
+                goals:10,
 
-                assists:14,
+                assists:34,
 
-                points:37,
+                points:44,
 
-                plusMinus:30,
+                plusMinus:31,
 
-                penaltyMinutes:6,
+                penaltyMinutes:16,
 
 
                 playoffGames:24,
 
-                playoffGoals:5,
+                playoffGoals:2,
 
-                playoffAssists:2,
+                playoffAssists:7,
 
-                playoffPoints:7,
+                playoffPoints:9,
 
-                playoffPlusMinus:2,
+                playoffPlusMinus:15,
 
-                playoffPenaltyMinutes:4,
+                playoffPenaltyMinutes:2,
 
 
                 titles:[]
@@ -406,26 +408,26 @@ stanleyCup:{
 
                 games:82,
 
-                goals:19,
+                goals:6,
 
-                assists:14,
+                assists:26,
 
-                points:33,
+                points:32,
 
-                plusMinus:3,
+                plusMinus:40,
 
-                penaltyMinutes:13,
+                penaltyMinutes:4,
 
 
                 playoffGames:13,
 
-                playoffGoals:1,
+                playoffGoals:0,
 
-                playoffAssists:1,
+                playoffAssists:3,
 
-                playoffPoints:2,
+                playoffPoints:3,
 
-                playoffPlusMinus:3,
+                playoffPlusMinus:4,
 
                 playoffPenaltyMinutes:2,
 
@@ -447,28 +449,28 @@ stanleyCup:{
 
                 games:82,
 
-                goals:19,
+                goals:7,
 
-                assists:14,
+                assists:25,
 
-                points:33,
+                points:32,
 
-                plusMinus:-18,
+                plusMinus:25,
 
-                penaltyMinutes:2,
+                penaltyMinutes:4,
 
 
                 playoffGames:19,
 
-                playoffGoals:4,
+                playoffGoals:1,
 
-                playoffAssists:2,
+                playoffAssists:5,
 
                 playoffPoints:6,
 
-                playoffPlusMinus:1,
+                playoffPlusMinus:-2,
 
-                playoffPenaltyMinutes:2,
+                playoffPenaltyMinutes:0,
 
 
                 titles:[]
@@ -488,28 +490,28 @@ stanleyCup:{
 
                 games:82,
 
-                goals:14,
+                goals:4,
 
-                assists:9,
+                assists:52,
 
-                points:23,
+                points:56,
 
-                plusMinus:15,
+                plusMinus:59,
 
-                penaltyMinutes:4,
+                penaltyMinutes:6,
 
 
                 playoffGames:18,
 
-                playoffGoals:3,
+                playoffGoals:1,
 
-                playoffAssists:4,
+                playoffAssists:11,
 
-                playoffPoints:7,
+                playoffPoints:12,
 
-                playoffPlusMinus:2,
+                playoffPlusMinus:17,
 
-                playoffPenaltyMinutes:0,
+                playoffPenaltyMinutes:2,
 
 
                 titles:[]
@@ -529,13 +531,13 @@ stanleyCup:{
 
                 games:82,
 
-                goals:5,
+                goals:7,
 
-                assists:2,
+                assists:33,
 
-                points:7,
+                points:40,
 
-                plusMinus:3,
+                plusMinus:47,
 
                 penaltyMinutes:4,
 
@@ -544,11 +546,11 @@ stanleyCup:{
 
                 playoffGoals:1,
 
-                playoffAssists:0,
+                playoffAssists:10,
 
-                playoffPoints:1,
+                playoffPoints:11,
 
-                playoffPlusMinus:2,
+                playoffPlusMinus:12,
 
                 playoffPenaltyMinutes:0,
 
