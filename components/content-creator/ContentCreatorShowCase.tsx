@@ -33,19 +33,7 @@ const projects = [
             "Große Geschichten, offene Welten und Abenteuer, die aus einer Gaming-Session eine eigene Reise machen.",
         image: "/content-creator/images/assassins-creed-showcase.jpg",
         icon: Crosshair,
-        featured: false,
-    },
-
-    {
-        number: "03",
-        type: "ACTION • CAMPAIGN",
-        title: "HALO",
-        highlight: "CAMPAIGN EVOLVED",
-        description:
-            "Action, Atmosphäre und eine Kampagne, die nicht einfach nur gespielt, sondern erlebt wird.",
-        image: "/content-creator/images/halo-showcase.jpg",
-        icon: Gamepad2,
-        featured: false,
+        featured: true,
     },
 
     {
