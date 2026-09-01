@@ -505,7 +505,7 @@ return (
                     >
 
                         <Link
-                            href="/community/statistics"
+                            href="/community/teams/young-army/statistik"
                             className={
                                 styles.teamActionButton
                             }
@@ -516,7 +516,7 @@ return (
                         </Link>
 
                         <Link
-                            href="/community/teams/young-army/statistik"
+                            href="/community/teams/young-army"
                             className={
                                 styles.teamActionButton
                             }
