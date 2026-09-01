@@ -263,7 +263,7 @@
 
     color: #ffffff;
 
-    font-size: 1rem;
+    font-size: 1.15rem;
 
     font-weight: 950;
 
@@ -348,7 +348,7 @@
 
     margin-bottom: .65rem;
 
-    font-size: 1.35rem;
+    font-size: 1.5rem;
 
 }
 
@@ -356,7 +356,7 @@
 
     color: rgba(255, 255, 255, .5);
 
-    font-size: .58rem;
+    font-size: .68rem;
 
     font-weight: 900;
 
@@ -372,7 +372,7 @@
 
     color: #9eff43;
 
-    font-size: 1.7rem;
+    font-size: 2rem;
 
     font-weight: 950;
 
@@ -413,7 +413,7 @@
 
     color: #9eff43;
 
-    font-size: .72rem;
+    font-size: .85rem;
 
     font-weight: 950;
 
@@ -457,7 +457,7 @@
 
     color: rgba(255, 255, 255, .6);
 
-    font-size: .82rem;
+    font-size: .95rem;
 
     font-weight: 900;
 
@@ -467,7 +467,7 @@
 
     color: rgba(255, 255, 255, .92);
 
-    font-size: .88rem;
+    font-size: 1rem;
 
     font-weight: 850;
 
@@ -477,7 +477,7 @@
 
     color: #9eff43;
 
-    font-size: .88rem;
+    font-size: 1rem;
 
     font-weight: 950;
 
@@ -524,11 +524,31 @@
 
 .trophyIcon {
 
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 110px;
+
     margin-bottom: .8rem;
 
-    font-size: 2rem;
+}
 
-    text-align: center;
+.trophyImage {
+
+    display: block;
+
+    max-width: 100px;
+
+    max-height: 100px;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
 
 }
 
@@ -538,7 +558,7 @@
 
     color: #9eff43;
 
-    font-size: .82rem;
+    font-size: .95rem;
 
     font-weight: 950;
 
@@ -554,7 +574,7 @@
 
     color: rgba(255, 255, 255, .55);
 
-    font-size: .82rem;
+    font-size: .95rem;
 
     font-weight: 750;
 
@@ -594,7 +614,7 @@
 
     color: rgba(255, 255, 255, .65);
 
-    font-size: .82rem;
+    font-size: .95rem;
 
     font-weight: 900;
 
@@ -604,7 +624,7 @@
 
     color: rgba(255, 255, 255, .88);
 
-    font-size: .88rem;
+    font-size: 1rem;
 
     font-weight: 850;
 
@@ -614,7 +634,7 @@
 
     color: #9eff43;
 
-    font-size: .88rem;
+    font-size: 1rem;
 
     font-weight: 950;
 
@@ -683,7 +703,7 @@
 
     color: #9eff43;
 
-    font-size: .95rem;
+    font-size: 1.05rem;
 
     font-weight: 950;
 
@@ -691,13 +711,31 @@
 
 .historyResult {
 
+    display: flex;
+
+    align-items: center;
+
+    gap: .6rem;
+
     color: rgba(255, 255, 255, .88);
 
-    font-size: .92rem;
+    font-size: 1.02rem;
 
     font-weight: 800;
 
     line-height: 1.45;
+
+}
+
+.historyTrophy {
+
+    flex-shrink: 0;
+
+    width: 28px;
+
+    height: 28px;
+
+    object-fit: contain;
 
 }
 
@@ -902,7 +940,7 @@
 
     .sectionTitle {
 
-        font-size: .82rem;
+        font-size: .95rem;
 
     }
 

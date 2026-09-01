@@ -309,11 +309,16 @@ export default function BloodyArmyStatisticsPage() {
     const renderTrophy = (
         title: string,
         description: string,
+        image: string,
         records: TrophyRecord[],
     ) => (
         <div className={styles.trophyCard}>
             <div className={styles.trophyIcon}>
-                🏆
+                <img
+                    src={image}
+                    alt={title}
+                    className={styles.trophyImage}
+                />
             </div>
 
             <h3 className={styles.trophyTitle}>
@@ -514,20 +519,11 @@ export default function BloodyArmyStatisticsPage() {
 
                 <div className={styles.recordsGrid}>
 
-                    {renderRecords(
-                        "TOPSCORER",
-                        regularSeasonScoring,
-                    )}
+                    {renderRecords("TOPSCORER", regularSeasonScoring)}
 
-                    {renderRecords(
-                        "MEISTE TORE",
-                        regularSeasonGoals,
-                    )}
+                    {renderRecords("MEISTE TORE", regularSeasonGoals)}
 
-                    {renderRecords(
-                        "MEISTE ASSISTS",
-                        regularSeasonAssists,
-                    )}
+                    {renderRecords("MEISTE ASSISTS", regularSeasonAssists)}
 
                     {renderRecords(
                         "MEISTE STRAFMINUTEN",
@@ -551,20 +547,11 @@ export default function BloodyArmyStatisticsPage() {
 
                 <div className={styles.recordsGrid}>
 
-                    {renderRecords(
-                        "TOPSCORER",
-                        playoffScoring,
-                    )}
+                    {renderRecords("TOPSCORER", playoffScoring)}
 
-                    {renderRecords(
-                        "MEISTE TORE",
-                        playoffGoals,
-                    )}
+                    {renderRecords("MEISTE TORE", playoffGoals)}
 
-                    {renderRecords(
-                        "MEISTE ASSISTS",
-                        playoffAssists,
-                    )}
+                    {renderRecords("MEISTE ASSISTS", playoffAssists)}
 
                     {renderRecords(
                         "MEISTE STRAFMINUTEN",
@@ -591,24 +578,28 @@ export default function BloodyArmyStatisticsPage() {
                     {renderTrophy(
                         "STANLEY CUP",
                         "Sieger des Stanley Cups",
+                        "/images/stats/stanley-cup.gif",
                         stanleyCup,
                     )}
 
                     {renderTrophy(
                         "PRESIDENTS TROPHY",
                         "Team mit den meisten Punkten der Hauptrunde",
+                        "/images/stats/presidents-trophy.png",
                         presidentsTrophy,
                     )}
 
                     {renderTrophy(
                         "CLARENCE S. CAMPBELL TROPHY",
                         "Sieger der Western Conference",
+                        "/images/stats/clarence-s-campbell-trophy.png",
                         campbellTrophy,
                     )}
 
                     {renderTrophy(
                         "PRINCE OF WALES TROPHY",
                         "Sieger der Eastern Conference",
+                        "/images/stats/prince-of-wales-trophy.png",
                         walesTrophy,
                     )}
 
@@ -639,8 +630,17 @@ export default function BloodyArmyStatisticsPage() {
                             </span>
 
                             <span className={styles.historyResult}>
-                                {season.champion && "🏆 "}
+
+                                {season.champion && (
+                                    <img
+                                        src="/images/stats/stanley-cup.gif"
+                                        alt="Stanley Cup"
+                                        className={styles.historyTrophy}
+                                    />
+                                )}
+
                                 {season.result}
+
                             </span>
 
                         </div>

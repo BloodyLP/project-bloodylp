@@ -3,15 +3,10 @@
 /* ============================================ */
 
 .page {
-
     position: relative;
-
     width: 100%;
-
     min-height: 100vh;
-
     padding: calc(4rem + 80px) 2rem 6rem;
-
 }
 
 
@@ -20,75 +15,43 @@
 /* ============================================ */
 
 .header {
-
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     width: 100%;
-
     margin-bottom: 4rem;
-
     text-align: center;
-
 }
 
 .eyebrow {
-
     margin-bottom: .8rem;
-
-    color: rgba(239, 68, 68, .8);
-
+    color: rgba(255, 75, 75, .75);
     font-size: .7rem;
-
     font-weight: 950;
-
     letter-spacing: .35em;
-
     text-transform: uppercase;
-
 }
 
 .title {
-
     margin: 0;
-
-    color: #ef4444;
-
+    color: #ff4b4b;
     font-size: clamp(2.5rem, 6vw, 5rem);
-
     font-weight: 950;
-
     letter-spacing: .08em;
-
     line-height: 1;
-
     text-shadow:
-
-        0 0 20px rgba(239, 68, 68, .55),
-
-        0 0 60px rgba(239, 68, 68, .25);
-
+        0 0 20px rgba(255, 75, 75, .5),
+        0 0 60px rgba(255, 75, 75, .2);
     text-transform: uppercase;
-
 }
 
 .subtitle {
-
     margin: 1rem 0 0;
-
     color: rgba(255, 255, 255, .55);
-
     font-size: .75rem;
-
     font-weight: 850;
-
     letter-spacing: .2em;
-
     text-transform: uppercase;
-
 }
 
 
@@ -97,121 +60,66 @@
 /* ============================================ */
 
 .statisticsStatus {
-
     position: relative;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     gap: 1rem;
-
     margin-top: 1.5rem;
-
     padding: .9rem 1.6rem;
-
     overflow: hidden;
-
-    border: 1px solid rgba(239, 68, 68, .45);
-
+    border: 1px solid rgba(255, 75, 75, .45);
     border-radius: 12px;
-
     background:
-
         linear-gradient(
-
             135deg,
-
-            rgba(239, 68, 68, .10),
-
+            rgba(255, 75, 75, .10),
             rgba(0, 0, 0, .30)
-
         );
-
     box-shadow:
-
-        0 0 12px rgba(239, 68, 68, .12),
-
-        0 0 30px rgba(239, 68, 68, .08),
-
-        inset 0 0 20px rgba(239, 68, 68, .04);
-
+        0 0 12px rgba(255, 75, 75, .12),
+        0 0 30px rgba(255, 75, 75, .08),
+        inset 0 0 20px rgba(255, 75, 75, .04);
 }
 
 .statisticsStatus::before {
-
     content: "";
-
     position: absolute;
-
     top: 50%;
-
     left: 50%;
-
     width: 80%;
-
     height: 100%;
-
     transform: translate(-50%, -50%);
-
     background:
-
         radial-gradient(
-
             ellipse,
-
-            rgba(239, 68, 68, .16) 0%,
-
-            rgba(239, 68, 68, .05) 40%,
-
+            rgba(255, 75, 75, .16) 0%,
+            rgba(255, 75, 75, .05) 40%,
             transparent 75%
-
         );
-
     filter: blur(12px);
-
     pointer-events: none;
-
 }
 
 .statisticsStatusLabel {
-
     position: relative;
-
     z-index: 1;
-
     color: rgba(255, 255, 255, .65);
-
     font-size: .62rem;
-
     font-weight: 950;
-
     letter-spacing: .18em;
-
     text-transform: uppercase;
-
 }
 
 .statisticsStatusDate {
-
     position: relative;
-
     z-index: 1;
-
-    color: #ef4444;
-
+    color: #ff4b4b;
     font-size: .78rem;
-
     font-weight: 950;
-
     letter-spacing: .1em;
-
     text-shadow:
-
-        0 0 10px rgba(239, 68, 68, .55);
-
+        0 0 10px rgba(255, 75, 75, .55);
 }
 
 
@@ -220,59 +128,33 @@
 /* ============================================ */
 
 .overviewSection,
-
 .recordsSection,
-
 .trophiesSection,
-
 .playoffHistorySection {
-
     width: 100%;
-
     max-width: 1200px;
-
     margin: 0 auto 3rem;
-
     padding: 2rem;
-
-    border: 1px solid rgba(239, 68, 68, .22);
-
+    border: 1px solid rgba(255, 75, 75, .18);
     border-radius: 20px;
-
     background:
-
         linear-gradient(
-
             135deg,
-
-            rgba(239, 68, 68, .06),
-
+            rgba(255, 75, 75, .05),
             rgba(0, 0, 0, .2)
-
         );
-
     box-shadow:
-
         0 20px 60px rgba(0, 0, 0, .3);
-
 }
 
 .sectionTitle {
-
     margin: 0 0 2rem;
-
     color: #ffffff;
-
-    font-size: 1rem;
-
+    font-size: 1.15rem;
     font-weight: 950;
-
     letter-spacing: .18em;
-
     text-align: center;
-
     text-transform: uppercase;
-
 }
 
 
@@ -281,103 +163,59 @@
 /* ============================================ */
 
 .overviewGrid {
-
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
-
     gap: 1rem;
-
 }
 
 .statCard {
-
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: center;
-
     min-height: 145px;
-
     padding: 1.25rem;
-
-    border: 1px solid rgba(239, 68, 68, .22);
-
+    border: 1px solid rgba(255, 75, 75, .18);
     border-radius: 14px;
-
     background:
-
         linear-gradient(
-
             145deg,
-
-            rgba(239, 68, 68, .10),
-
+            rgba(255, 75, 75, .08),
             rgba(0, 0, 0, .25)
-
         );
-
     text-align: center;
-
     transition:
-
         transform .2s ease,
-
         border-color .2s ease,
-
         box-shadow .2s ease;
-
 }
 
 .statCard:hover {
-
-    border-color: rgba(239, 68, 68, .75);
-
+    border-color: rgba(255, 75, 75, .6);
     box-shadow:
-
-        0 0 25px rgba(239, 68, 68, .22);
-
+        0 0 25px rgba(255, 75, 75, .15);
     transform: translateY(-4px);
-
 }
 
 .statIcon {
-
     margin-bottom: .65rem;
-
-    font-size: 1.35rem;
-
+    font-size: 1.5rem;
 }
 
 .statLabel {
-
     color: rgba(255, 255, 255, .5);
-
-    font-size: .58rem;
-
+    font-size: .68rem;
     font-weight: 900;
-
     letter-spacing: .13em;
-
     text-transform: uppercase;
-
 }
 
 .statValue {
-
     margin-top: .55rem;
-
-    color: #ef4444;
-
-    font-size: 1.7rem;
-
+    color: #ff4b4b;
+    font-size: 2rem;
     font-weight: 950;
-
     letter-spacing: .04em;
-
 }
 
 
@@ -386,103 +224,61 @@
 /* ============================================ */
 
 .recordsGrid {
-
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
     gap: 1rem;
-
 }
 
 .recordCard {
-
-    padding: 1.5rem;
-
+    padding: 1.25rem;
     border: 1px solid rgba(255, 255, 255, .07);
-
     border-radius: 14px;
-
     background: rgba(0, 0, 0, .2);
-
 }
 
 .recordTitle {
-
-    margin: 0 0 1.25rem;
-
-    color: #ef4444;
-
-    font-size: .95rem;
-
+    margin: 0 0 1rem;
+    color: #ff4b4b;
+    font-size: .85rem;
     font-weight: 950;
-
     letter-spacing: .15em;
-
     text-align: center;
-
     text-transform: uppercase;
-
 }
 
 .recordList {
-
     display: flex;
-
     flex-direction: column;
-
-    gap: .55rem;
-
+    gap: .45rem;
 }
 
 .recordRow {
-
     display: grid;
-
     grid-template-columns: 70px 1fr auto;
-
-    gap: .9rem;
-
+    gap: .75rem;
     align-items: center;
-
     padding: .85rem;
-
     border-radius: 8px;
-
     background: rgba(255, 255, 255, .025);
-
 }
 
 .recordYear {
-
-    color: rgba(255, 255, 255, .5);
-
-    font-size: .82rem;
-
+    color: rgba(255, 255, 255, .6);
+    font-size: .95rem;
     font-weight: 900;
-
 }
 
 .recordPlayer {
-
-    color: rgba(255, 255, 255, .88);
-
-    font-size: .9rem;
-
+    color: rgba(255, 255, 255, .92);
+    font-size: 1rem;
     font-weight: 850;
-
 }
 
 .recordValue {
-
-    color: #ef4444;
-
-    font-size: .9rem;
-
+    color: #ff4b4b;
+    font-size: 1rem;
     font-weight: 950;
-
     text-align: right;
-
 }
 
 
@@ -491,131 +287,88 @@
 /* ============================================ */
 
 .trophiesGrid {
-
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
     gap: 1rem;
-
 }
 
 .trophyCard {
-
-    padding: 1.75rem;
-
-    border: 1px solid rgba(239, 68, 68, .22);
-
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 75, 75, .18);
     border-radius: 14px;
-
     background:
-
         linear-gradient(
-
             145deg,
-
-            rgba(239, 68, 68, .08),
-
+            rgba(255, 75, 75, .06),
             rgba(0, 0, 0, .25)
-
         );
-
 }
 
-.trophyIcon {
+.trophyImageWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    margin-bottom: .8rem;
+}
 
-    margin-bottom: .9rem;
-
-    font-size: 2.4rem;
-
-    text-align: center;
-
+.trophyImage {
+    width: auto;
+    height: 115px;
+    max-width: 150px;
+    object-fit: contain;
 }
 
 .trophyTitle {
-
     margin: 0;
-
-    color: #ef4444;
-
-    font-size: 1rem;
-
+    color: #ff4b4b;
+    font-size: .95rem;
     font-weight: 950;
-
     letter-spacing: .12em;
-
     text-align: center;
-
+    text-transform: uppercase;
 }
 
 .trophyDescription {
-
-    margin: .8rem 0 1.5rem;
-
-    color: rgba(255, 255, 255, .5);
-
-    font-size: .8rem;
-
-    font-weight: 700;
-
+    margin: .7rem 0 1.25rem;
+    color: rgba(255, 255, 255, .55);
+    font-size: .95rem;
+    font-weight: 750;
+    line-height: 1.5;
     text-align: center;
-
 }
 
 .trophyList {
-
     display: flex;
-
     flex-direction: column;
-
     gap: .55rem;
-
 }
 
 .trophyRow {
-
     display: grid;
-
     grid-template-columns: 70px 1fr;
-
-    gap: .9rem;
-
-    padding: .85rem;
-
+    gap: .85rem;
+    padding: .8rem;
     border-radius: 8px;
-
     background: rgba(255, 255, 255, .025);
-
 }
 
 .trophyYear {
-
-    color: rgba(255, 255, 255, .5);
-
-    font-size: .82rem;
-
+    color: rgba(255, 255, 255, .65);
+    font-size: .95rem;
     font-weight: 900;
-
 }
 
 .trophyWinner {
-
-    color: rgba(255, 255, 255, .82);
-
-    font-size: .9rem;
-
+    color: rgba(255, 255, 255, .88);
+    font-size: 1rem;
     font-weight: 850;
-
 }
 
 .youngArmyWinner {
-
-    color: #ef4444;
-
-    font-size: .9rem;
-
+    color: #ff4b4b;
+    font-size: 1rem;
     font-weight: 950;
-
 }
 
 
@@ -624,77 +377,57 @@
 /* ============================================ */
 
 .historyList {
-
     display: flex;
-
     flex-direction: column;
-
-    gap: .8rem;
-
+    gap: .85rem;
 }
 
 .historyRow,
-
 .historyRowChampion {
-
     display: grid;
-
     grid-template-columns: 90px 1fr;
-
-    gap: 1.25rem;
-
+    gap: 1rem;
     align-items: center;
-
-    padding: 1.25rem;
-
+    padding: 1.15rem;
     border-radius: 10px;
-
 }
 
 .historyRow {
-
     border: 1px solid rgba(255, 255, 255, .06);
-
     background: rgba(0, 0, 0, .2);
-
 }
 
 .historyRowChampion {
-
-    border: 1px solid rgba(239, 68, 68, .45);
-
+    border: 1px solid rgba(255, 75, 75, .35);
     background:
-
         linear-gradient(
-
             90deg,
-
-            rgba(239, 68, 68, .15),
-
+            rgba(255, 75, 75, .12),
             rgba(0, 0, 0, .2)
-
         );
-
 }
 
 .historyYear {
-
-    color: #ef4444;
-
-    font-size: 1rem;
-
+    color: #ff4b4b;
+    font-size: 1.05rem;
     font-weight: 950;
-
 }
 
 .historyResult {
-
+    display: flex;
+    align-items: center;
+    gap: .65rem;
     color: rgba(255, 255, 255, .88);
+    font-size: 1.02rem;
+    font-weight: 800;
+    line-height: 1.45;
+}
 
-    font-size: .95rem;
-
-    font-weight: 850;
-
+.historyTrophyImage {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    object-fit: contain;
 }
 
 
@@ -703,67 +436,38 @@
 /* ============================================ */
 
 .backButtonWrapper {
-
     display: flex;
-
     justify-content: center;
-
     width: 100%;
-
     margin-top: 1rem;
-
 }
 
 .backButton {
-
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
-
     padding: .9rem 1.4rem;
-
-    border: 1px solid rgba(239, 68, 68, .35);
-
+    border: 1px solid rgba(255, 75, 75, .35);
     border-radius: 10px;
-
-    background: rgba(239, 68, 68, .07);
-
+    background: rgba(255, 75, 75, .07);
     color: rgba(255, 255, 255, .8);
-
     font-size: .72rem;
-
     font-weight: 900;
-
     letter-spacing: .18em;
-
     text-decoration: none;
-
     text-transform: uppercase;
-
     transition:
-
         color .2s ease,
-
         transform .2s ease,
-
         border-color .2s ease,
-
         background .2s ease;
-
 }
 
 .backButton:hover {
-
-    border-color: rgba(239, 68, 68, .75);
-
-    background: rgba(239, 68, 68, .14);
-
+    border-color: rgba(255, 75, 75, .75);
+    background: rgba(255, 75, 75, .14);
     color: #ffffff;
-
     transform: translateY(-2px);
-
 }
 
 
@@ -772,152 +476,88 @@
 /* ============================================ */
 
 @media (max-width: 1000px) {
-
     .overviewGrid {
-
         grid-template-columns: repeat(3, 1fr);
-
     }
-
 }
 
-
 @media (max-width: 800px) {
-
     .page {
-
         padding: calc(2rem + 80px) 1rem 4rem;
-
     }
 
     .header {
-
         margin-bottom: 2.5rem;
-
     }
 
     .overviewSection,
-
     .recordsSection,
-
     .trophiesSection,
-
     .playoffHistorySection {
-
         padding: 1.25rem;
-
         border-radius: 16px;
-
     }
 
     .overviewGrid,
-
     .recordsGrid,
-
     .trophiesGrid {
-
         grid-template-columns: 1fr;
-
     }
-
 }
 
-
 @media (max-width: 520px) {
-
     .overviewGrid {
-
         grid-template-columns: repeat(2, 1fr);
-
     }
 
     .statisticsStatus {
-
         flex-direction: column;
-
         gap: .35rem;
-
         width: 100%;
-
         max-width: 300px;
-
         padding: .9rem 1rem;
-
     }
 
     .recordRow {
-
         grid-template-columns: 60px 1fr;
-
     }
 
     .recordValue {
-
         grid-column: 2;
-
         text-align: left;
-
     }
 
     .historyRow,
-
     .historyRowChampion {
-
         grid-template-columns: 1fr;
-
-        gap: .5rem;
-
+        gap: .4rem;
     }
 
+    .historyResult {
+        align-items: flex-start;
+    }
 }
 
-
 @media (max-width: 420px) {
-
     .title {
-
         font-size: 2.3rem;
-
     }
 
     .eyebrow {
-
         font-size: .6rem;
-
         letter-spacing: .25em;
-
     }
 
     .subtitle {
-
         font-size: .58rem;
-
         letter-spacing: .12em;
-
     }
 
     .sectionTitle {
-
-        font-size: .82rem;
-
+        font-size: .95rem;
     }
 
     .overviewGrid {
-
         grid-template-columns: 1fr;
-
     }
-
-    .recordPlayer,
-
-    .recordValue,
-
-    .trophyWinner,
-
-    .youngArmyWinner {
-
-        font-size: .82rem;
-
-    }
-
 }

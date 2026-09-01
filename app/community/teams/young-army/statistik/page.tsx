@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 
@@ -178,7 +179,7 @@ const playoffRecords = [
 
 const trophies = [
     {
-        icon: "🏆",
+        image: "/images/stats/calder-cup.png",
         title: "Calder Cup",
         description: "Sieger der American Hockey League",
         winners: [
@@ -193,7 +194,7 @@ const trophies = [
         ],
     },
     {
-        icon: "⭐",
+        image: "/images/stats/macgregor-kilpatrick-trophy2.png",
         title: "Macgregor Kilpatrick Trophy",
         description: "Punktbeste Mannschaft der Saison",
         winners: [
@@ -208,9 +209,9 @@ const trophies = [
         ],
     },
     {
-        icon: "🏆",
+        image: "/images/stats/richard-f-canning-trophy.png",
         title: "Richard F. Canning Trophy",
-        description: "Gewinner der Eastern Conference",
+        description: "Sieger der Eastern Conference",
         winners: [
             { year: "2019", winner: "Ontario Young Army", youngArmy: true },
             { year: "2020", winner: "Binghamton Devils" },
@@ -222,9 +223,9 @@ const trophies = [
         ],
     },
     {
-        icon: "🏆",
+        image: "/images/stats/robert-w-clarke-trophy2.png",
         title: "Robert W. Clarke Trophy",
-        description: "Gewinner der Western Conference",
+        description: "Sieger der Western Conference",
         winners: [
             { year: "2019", winner: "San Diego Gulls" },
             { year: "2020", winner: "Ontario Young Army", youngArmy: true },
@@ -316,19 +317,27 @@ function RecordCard({
 }
 
 function TrophyCard({
-    icon,
+    image,
     title,
     description,
     winners,
 }: {
-    icon: string;
+    image: string;
     title: string;
     description: string;
     winners: TrophyEntry[];
 }) {
     return (
         <div className={styles.trophyCard}>
-            <div className={styles.trophyIcon}>{icon}</div>
+            <div className={styles.trophyImageWrapper}>
+                <Image
+                    src={image}
+                    alt={title}
+                    width={120}
+                    height={120}
+                    className={styles.trophyImage}
+                />
+            </div>
 
             <h3 className={styles.trophyTitle}>{title}</h3>
 
@@ -367,20 +376,20 @@ export default function YoungArmyStatistikPage() {
         <main className={styles.page}>
             <header className={styles.header}>
                 <span className={styles.eyebrow}>
-                    YOUNG ARMY
+                    Young Army
                 </span>
 
                 <h1 className={styles.title}>
-                    STATISTIK
+                    Statistik
                 </h1>
 
                 <p className={styles.subtitle}>
-                    DIE GESCHICHTE DER YOUNG ARMY IN ZAHLEN
+                    Die Geschichte der Young Army in Zahlen
                 </p>
 
                 <div className={styles.statisticsStatus}>
                     <span className={styles.statisticsStatusLabel}>
-                        STATISTIKSTAND
+                        Statistikstand
                     </span>
 
                     <span className={styles.statisticsStatusDate}>
@@ -391,7 +400,7 @@ export default function YoungArmyStatistikPage() {
 
             <section className={styles.overviewSection}>
                 <h2 className={styles.sectionTitle}>
-                    HAUPTRUNDE
+                    Hauptrunde
                 </h2>
 
                 <div className={styles.overviewGrid}>
@@ -418,7 +427,7 @@ export default function YoungArmyStatistikPage() {
 
             <section className={styles.overviewSection}>
                 <h2 className={styles.sectionTitle}>
-                    PLAYOFFS
+                    Playoffs
                 </h2>
 
                 <div className={styles.overviewGrid}>
@@ -445,7 +454,7 @@ export default function YoungArmyStatistikPage() {
 
             <section className={styles.recordsSection}>
                 <h2 className={styles.sectionTitle}>
-                    HAUPTRUNDE – JAHRESREKORDE
+                    Hauptrunden - Jahresrekorde
                 </h2>
 
                 <div className={styles.recordsGrid}>
@@ -461,7 +470,7 @@ export default function YoungArmyStatistikPage() {
 
             <section className={styles.recordsSection}>
                 <h2 className={styles.sectionTitle}>
-                    PLAYOFFS – JAHRESREKORDE
+                    Playoffs-Jahresrekorde
                 </h2>
 
                 <div className={styles.recordsGrid}>
@@ -477,14 +486,14 @@ export default function YoungArmyStatistikPage() {
 
             <section className={styles.trophiesSection}>
                 <h2 className={styles.sectionTitle}>
-                    TROPHÄEN & ERFOLGE
+                    Trophäen und Erfolge
                 </h2>
 
                 <div className={styles.trophiesGrid}>
                     {trophies.map((trophy) => (
                         <TrophyCard
                             key={trophy.title}
-                            icon={trophy.icon}
+                            image={trophy.image}
                             title={trophy.title}
                             description={trophy.description}
                             winners={trophy.winners}
@@ -495,7 +504,7 @@ export default function YoungArmyStatistikPage() {
 
             <section className={styles.playoffHistorySection}>
                 <h2 className={styles.sectionTitle}>
-                    CALDER CUP HISTORIE
+                    Calder Cup Historie
                 </h2>
 
                 <div className={styles.historyList}>
@@ -513,9 +522,17 @@ export default function YoungArmyStatistikPage() {
                             </span>
 
                             <span className={styles.historyResult}>
-                                {entry.champion
-                                    ? `🏆 ${entry.result}`
-                                    : entry.result}
+                                {entry.champion && (
+                                    <Image
+                                        src="/images/stats/calder-cup.png"
+                                        alt="Calder Cup"
+                                        width={28}
+                                        height={28}
+                                        className={styles.historyTrophyImage}
+                                    />
+                                )}
+
+                                {entry.result}
                             </span>
                         </div>
                     ))}
@@ -524,10 +541,10 @@ export default function YoungArmyStatistikPage() {
 
             <div className={styles.backButtonWrapper}>
                 <Link
-                    href="/community"
+                    href="/community/"
                     className={styles.backButton}
                 >
-                    ← ZURÜCK ZUR COMMUNITY
+                    Zurück zur Community
                 </Link>
             </div>
         </main>
