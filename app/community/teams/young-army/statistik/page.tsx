@@ -509,10 +509,10 @@ Young Army
 
         <div className={styles.backButtonWrapper}>
             <Link
-                href="/community/teams/youngarmy"
+                href="/community/"
                 className={styles.backButton}
             >
-                Zurück zur Young Army
+                Zurück zur Community
             </Link>
         </div>
     </main>

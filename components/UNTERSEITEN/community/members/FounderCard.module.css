@@ -1,420 +1,729 @@
 .wrapper {
+
 position: relative;
+
 display: flex;
+
 flex-direction: column;
+
 align-items: center;
+
 width: 100%;
+
 padding-top: 4rem;
+
 margin: 3rem auto 5rem;
+
 }
 
 .commandLabel {
+
 margin-bottom: 1.25rem;
+
 color: #A3E635;
+
 font-size: .85rem;
+
 font-weight: 950;
+
 letter-spacing: .45em;
+
 text-transform: uppercase;
+
 text-shadow:
+
 0 0 20px
+
 rgba(163, 230, 53, .45);
+
 }
 
 .commandRow {
+
 display: flex;
+
 align-items: center;
+
 justify-content: center;
+
 gap: 30px;
+
 width: 100%;
+
 }
 
 .teamCard {
+
 position: relative;
+
 display: flex;
+
 align-items: center;
+
 width: 300px;
+
 min-width: 300px;
+
 height: 620px;
+
 overflow: hidden;
+
 border: 1px solid rgba(255, 255, 255, .12);
+
 border-radius: 18px;
+
 background:
+
 linear-gradient(
+
 180deg,
+
 #18191b 0%,
+
 #101112 100%
+
 );
+
 box-shadow:
+
 0 25px 60px
+
 rgba(0, 0, 0, .45);
+
 transition:
+
 transform .25s ease,
+
 box-shadow .25s ease;
+
 }
 
 .teamCard::before {
+
 content: "";
+
 position: absolute;
+
 top: 0;
+
 left: 0;
+
 width: 100%;
+
 height: 4px;
+
 opacity: .9;
+
 }
 
 .teamCard:hover {
+
 transform: translateY(-8px);
+
 }
 
 .teamContent {
+
 position: relative;
+
 z-index: 2;
+
 display: flex;
+
 flex-direction: column;
+
 align-items: center;
+
 width: 100%;
+
 height: 100%;
+
 padding: 2rem 1.5rem;
+
 text-align: center;
+
 }
 
 .teamGlow {
+
 position: absolute;
+
 top: -100px;
+
 left: 50%;
+
 width: 300px;
+
 height: 300px;
+
 transform: translateX(-50%);
+
 opacity: .18;
+
 filter: blur(40px);
+
 border-radius: 50%;
+
 }
 
 .teamEyebrow {
+
 font-size: .62rem;
+
 font-weight: 900;
+
 letter-spacing: .35em;
+
 color: rgba(255, 255, 255, .45);
+
 text-transform: uppercase;
+
 }
 
 .teamLogo {
+
 position: relative;
+
 display: flex;
+
 align-items: center;
+
 justify-content: center;
+
 width: 180px;
+
 height: 180px;
+
 margin: .75rem 0;
+
 }
 
 .teamLogo img {
+
 width: 100%;
+
 height: 100%;
+
 object-fit: contain;
+
 }
 
 .teamTitle {
+
 margin: 0;
+
 font-size: 1.75rem;
+
 font-weight: 950;
+
 letter-spacing: .08em;
+
 line-height: 1;
+
 text-transform: uppercase;
+
 }
 
 .teamDivider {
+
 width: 70px;
+
 height: 2px;
+
 margin: .8rem 0;
+
 }
 
 .teamDescription {
+
 font-size: .68rem;
+
 font-weight: 800;
+
 letter-spacing: .15em;
+
 color: rgba(255, 255, 255, .6);
+
 text-transform: uppercase;
+
 }
 
 .teamStats {
+
 display: flex;
+
 justify-content: center;
+
 gap: 2rem;
+
 width: 100%;
+
 margin-top: 1rem;
+
 padding: .8rem 0;
+
 border-top:
+
 1px solid
+
 rgba(255, 255, 255, .08);
+
 border-bottom:
+
 1px solid
+
 rgba(255, 255, 255, .08);
+
 }
 
 .teamStat {
+
 display: flex;
+
 flex-direction: column;
+
 align-items: center;
+
 gap: .35rem;
+
 }
 
 .statValue {
+
 font-size: 1.2rem;
+
 font-weight: 950;
+
 letter-spacing: .04em;
+
 color: #ffffff;
+
 }
 
 .statLabel {
+
 color: rgba(255, 255, 255, .4);
+
 font-size: .55rem;
+
 font-weight: 900;
+
 letter-spacing: .14em;
+
 text-transform: uppercase;
+
 }
 
 .commandInfo {
+
 display: flex;
+
 flex-direction: column;
+
 align-items: center;
+
 width: 100%;
+
 margin-top: .8rem;
+
 }
 
 .commandInfoLabel {
+
 margin-bottom: .5rem;
+
 color: rgba(255, 255, 255, .45);
+
 font-size: .55rem;
+
 font-weight: 950;
+
 letter-spacing: .18em;
+
 text-transform: uppercase;
+
 }
 
 .teamLeaders {
+
 display: flex;
+
 align-items: flex-start;
+
 justify-content: center;
+
 gap: .75rem;
+
 width: 100%;
+
 }
 
 .teamLeader {
+
 display: flex;
+
 flex-direction: column;
+
 align-items: center;
+
 width: 70px;
+
 }
 
 .captainRole {
+
 display: flex;
+
 align-items: center;
+
 justify-content: center;
+
 height: 18px;
+
 margin-bottom: .35rem;
+
 font-size: .7rem;
+
 font-weight: 950;
+
 }
 
 .captainAvatar {
+
 display: flex;
+
 align-items: center;
+
 justify-content: center;
+
 width: 58px;
+
 height: 58px;
+
 overflow: hidden;
+
 border: 2px solid;
+
 border-radius: 50%;
+
 background: rgba(255, 255, 255, .04);
+
 transition:
+
 transform .2s ease,
+
 box-shadow .2s ease;
+
 }
 
 .captainAvatar:hover {
+
 transform: scale(1.08);
+
 }
 
 .captainAvatar img {
+
 width: 100%;
+
 height: 100%;
+
 object-fit: cover;
+
 }
 
 .leaderPlaceholder {
+
 width: 58px;
+
 height: 58px;
+
 border: 2px dashed rgba(255, 255, 255, .12);
+
 border-radius: 50%;
+
 }
 
 .leaderName {
+
 width: 100%;
+
 margin-top: .35rem;
+
 overflow: hidden;
+
 color: rgba(255, 255, 255, .8);
+
 font-size: .5rem;
+
 font-weight: 900;
+
 text-align: center;
+
 text-overflow: ellipsis;
+
 white-space: nowrap;
+
 }
 
 .teamActions {
+
 display: grid;
+
 grid-template-columns: repeat(2, 1fr);
+
 gap: .6rem;
+
 width: 100%;
+
 margin-top: auto;
+
 padding-top: 10px;
+
 }
 
 .teamActionButton {
+
 display: flex;
+
 align-items: center;
+
 justify-content: center;
+
 min-height: 42px;
+
 padding: .65rem .5rem;
+
 border: 1px solid;
+
 border-radius: 999px;
+
 font-size: .58rem;
+
 font-weight: 950;
+
 letter-spacing: .12em;
+
 text-decoration: none;
+
 text-transform: uppercase;
+
 transition:
+
 transform .2s ease,
+
 box-shadow .2s ease,
+
 background .2s ease;
+
 }
 
 .teamActionButton:hover {
+
 transform: translateY(-3px);
+
 }
 
 .bloodyArmy {
+
 border-color: rgba(158, 255, 67, .45);
+
 }
 
 .bloodyArmy::before {
+
 background: #9eff43;
+
 }
 
 .bloodyArmy .teamGlow {
+
 background: #9eff43;
+
 }
 
 .bloodyArmy .teamTitle {
+
 color: #9eff43;
+
 }
 
 .bloodyArmy .teamDivider {
+
 background: #9eff43;
+
 }
 
 .bloodyArmy .teamActionButton {
+
 color: #c7ff98;
+
 border-color: rgba(158, 255, 67, .55);
+
 background: rgba(158, 255, 67, .12);
+
 }
 
 .bloodyArmy .teamActionButton:hover {
+
 background: rgba(158, 255, 67, .22);
+
 box-shadow:
+
 0 0 18px
+
 rgba(158, 255, 67, .25);
+
 }
 
 .bloodyArmy .captainRole,
+
 .bloodyArmy .captainAvatar {
+
 color: #9eff43;
+
 border-color: rgba(158, 255, 67, .75);
+
 }
 
 .youngArmy {
+
 border-color: rgba(255, 85, 85, .45);
+
 }
 
 .youngArmy::before {
+
 background: #ff5555;
+
 }
 
 .youngArmy .teamGlow {
+
 background: #ff5555;
+
 }
 
 .youngArmy .teamTitle {
+
 color: #ff5555;
+
 }
 
 .youngArmy .teamDivider {
+
 background: #ff5555;
+
 }
 
 .youngArmy .teamActionButton {
+
 color: #ffb0b0;
+
 border-color: rgba(255, 85, 85, .55);
+
 background: rgba(255, 85, 85, .12);
+
 }
 
 .youngArmy .teamActionButton:hover {
+
 background: rgba(255, 85, 85, .22);
+
 box-shadow:
+
 0 0 18px
+
 rgba(255, 85, 85, .25);
+
 }
 
 .youngArmy .captainRole,
+
 .youngArmy .captainAvatar {
+
 color: #ff5555;
+
 border-color: rgba(255, 85, 85, .75);
+
 }
 
 .founderCard {
+
 position: relative;
+
 display: flex;
+
 justify-content: center;
+
 flex: 0 0 430px;
+
 width: 430px;
+
 min-width: 430px;
+
 }
 
 .founderCard :global(.card) {
+
 width: 100%;
+
 max-width: 430px;
+
 min-height: 680px;
+
 }
 
 .founderCard :global(.avatar) {
+
 width: 240px;
+
 height: 240px;
+
 }
 
 .founderCard :global(.actionButton) {
+
 width: 90%;
+
 position: relative;
+
 z-index: 50;
+
 visibility: visible;
+
 opacity: 1;
+
 }
 
 .founderCard :global(.flipInner) {
+
 position: relative;
+
 min-height: 680px;
+
 }
 
 .founderCard :global(.flipInner > .card),
+
 .founderCard :global(.flipInner > .back) {
+
 position: relative;
+
 width: 100%;
+
 height: 680px;
+
 min-height: 680px;
+
 }
 
 @media (max-width: 1100px) {
 
 .commandRow {
-    flex-wrap: wrap;
+
+flex-wrap: wrap;
+
 }
 
 }
@@ -422,56 +731,199 @@ min-height: 680px;
 @media (max-width: 700px) {
 
 .wrapper {
-    padding-top: 2rem;
-    margin: 2rem auto 3rem;
+
+padding-top: 2rem;
+
+margin: 2rem auto 3rem;
+
 }
 
 .commandRow {
-    flex-direction: column;
-    gap: 1.5rem;
+
+flex-direction: column;
+
+gap: 1.5rem;
+
 }
 
 .teamCard {
-    width: 100%;
-    max-width: 430px;
-    min-width: 0;
+
+width: calc(100% - 2rem);
+
+max-width: 340px;
+
+min-width: 0;
+
+height: 780px;
+
+min-height: 780px;
+
+border-radius: 24px;
+
+}
+
+.teamContent {
+
+padding: 2rem 1.25rem;
+
+}
+
+.teamLogo {
+
+width: 200px;
+
+height: 200px;
+
+margin: 1rem 0;
+
+}
+
+.teamTitle {
+
+font-size: 1.9rem;
+
+}
+
+.teamDescription {
+
+font-size: .7rem;
+
+}
+
+.teamStats {
+
+margin-top: 1.4rem;
+
+padding: 1rem 0;
+
+}
+
+.commandInfo {
+
+margin-top: 1.2rem;
+
+}
+
+.teamLeaders {
+
+gap: .85rem;
+
+}
+
+.teamActions {
+
+margin-top: auto;
+
+padding-top: 1.5rem;
+
+}
+
+.teamActionButton {
+
+min-height: 48px;
+
 }
 
 .founderCard {
-    width: 100%;
-    min-width: 0;
-    flex: none;
+
+width: 100%;
+
+min-width: 0;
+
+flex: none;
+
 }
 
 .founderCard :global(.card) {
-    width: 100%;
-    max-width: 430px;
-    min-height: 760px;
-    height: 760px;
+
+width: 100%;
+
+max-width: 430px;
+
+min-height: 760px;
+
+height: 760px;
+
 }
 
 .founderCard :global(.flipInner) {
-    min-height: 760px;
-    height: 760px;
+
+min-height: 760px;
+
+height: 760px;
+
 }
 
 .founderCard :global(.flipInner > .card),
+
 .founderCard :global(.flipInner > .back) {
-    height: 760px;
-    min-height: 760px;
+
+height: 760px;
+
+min-height: 760px;
+
 }
 
 .founderCard :global(.avatar) {
-    width: 200px;
-    height: 200px;
+
+width: 200px;
+
+height: 200px;
+
 }
 
 }
 
 @media (max-width: 420px) {
 
+.teamCard {
+
+width: calc(100% - 1.5rem);
+
+max-width: 330px;
+
+height: 800px;
+
+min-height: 800px;
+
+}
+
+.teamLogo {
+
+width: 190px;
+
+height: 190px;
+
+}
+
+.teamTitle {
+
+font-size: 1.65rem;
+
+}
+
+.teamLeaders {
+
+gap: .45rem;
+
+}
+
+.teamLeader {
+
+width: 65px;
+
+}
+
 .teamActions {
-    grid-template-columns: 1fr;
+
+grid-template-columns: 1fr;
+
+}
+
+.teamActionButton {
+
+min-height: 48px;
+
 }
 
 }
