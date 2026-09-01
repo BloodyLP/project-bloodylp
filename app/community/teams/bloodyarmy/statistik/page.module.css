@@ -1,0 +1,731 @@
+.page {
+
+position: relative;
+
+width: 100%;
+
+min-height: 100vh;
+
+padding: calc(4rem + 80px) 2rem 6rem;
+
+}
+
+.header {
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+width: 100%;
+
+margin-bottom: 4rem;
+
+text-align: center;
+
+}
+
+.eyebrow {
+
+margin-bottom: .8rem;
+
+color: rgba(158, 255, 67, .75);
+
+font-size: .7rem;
+
+font-weight: 950;
+
+letter-spacing: .35em;
+
+text-transform: uppercase;
+
+}
+
+.title {
+
+margin: 0;
+
+color: #9eff43;
+
+font-size: clamp(2.5rem, 6vw, 5rem);
+
+font-weight: 950;
+
+letter-spacing: .08em;
+
+line-height: 1;
+
+text-shadow:
+
+0 0 20px rgba(158, 255, 67, .5),
+
+0 0 60px rgba(158, 255, 67, .2);
+
+text-transform: uppercase;
+
+}
+
+.subtitle {
+
+margin: 1rem 0 0;
+
+color: rgba(255, 255, 255, .55);
+
+font-size: .75rem;
+
+font-weight: 850;
+
+letter-spacing: .2em;
+
+text-transform: uppercase;
+
+}
+
+.overviewSection,
+
+.recordsSection,
+
+.trophiesSection,
+
+.playoffHistorySection {
+
+width: 100%;
+
+max-width: 1200px;
+
+margin: 0 auto 3rem;
+
+padding: 2rem;
+
+border: 1px solid rgba(158, 255, 67, .18);
+
+border-radius: 20px;
+
+background:
+
+linear-gradient(
+
+135deg,
+
+rgba(158, 255, 67, .05),
+
+rgba(0, 0, 0, .2)
+
+);
+
+box-shadow:
+
+0 20px 60px rgba(0, 0, 0, .3);
+
+}
+
+.sectionTitle {
+
+margin: 0 0 2rem;
+
+color: #ffffff;
+
+font-size: 1rem;
+
+font-weight: 950;
+
+letter-spacing: .18em;
+
+text-align: center;
+
+text-transform: uppercase;
+
+}
+
+.overviewGrid {
+
+display: grid;
+
+grid-template-columns: repeat(4, 1fr);
+
+gap: 1rem;
+
+}
+
+.statCard {
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+justify-content: center;
+
+min-height: 145px;
+
+padding: 1.25rem;
+
+border: 1px solid rgba(158, 255, 67, .18);
+
+border-radius: 14px;
+
+background:
+
+linear-gradient(
+
+145deg,
+
+rgba(158, 255, 67, .08),
+
+rgba(0, 0, 0, .25)
+
+);
+
+text-align: center;
+
+transition:
+
+transform .2s ease,
+
+border-color .2s ease,
+
+box-shadow .2s ease;
+
+}
+
+.statCard:hover {
+
+border-color: rgba(158, 255, 67, .6);
+
+box-shadow:
+
+0 0 25px rgba(158, 255, 67, .15);
+
+transform: translateY(-4px);
+
+}
+
+.statIcon {
+
+margin-bottom: .65rem;
+
+font-size: 1.35rem;
+
+}
+
+.statLabel {
+
+color: rgba(255, 255, 255, .5);
+
+font-size: .58rem;
+
+font-weight: 900;
+
+letter-spacing: .13em;
+
+text-transform: uppercase;
+
+}
+
+.statValue {
+
+margin-top: .55rem;
+
+color: #9eff43;
+
+font-size: 1.7rem;
+
+font-weight: 950;
+
+letter-spacing: .04em;
+
+}
+
+.recordsGrid {
+
+display: grid;
+
+grid-template-columns: repeat(2, 1fr);
+
+gap: 1rem;
+
+}
+
+.recordCard {
+
+padding: 1.25rem;
+
+border: 1px solid rgba(255, 255, 255, .07);
+
+border-radius: 14px;
+
+background: rgba(0, 0, 0, .2);
+
+}
+
+.recordTitle {
+
+margin: 0 0 1rem;
+
+color: #9eff43;
+
+font-size: .72rem;
+
+font-weight: 950;
+
+letter-spacing: .15em;
+
+text-align: center;
+
+text-transform: uppercase;
+
+}
+
+.recordList {
+
+display: flex;
+
+flex-direction: column;
+
+gap: .45rem;
+
+}
+
+.recordRow {
+
+display: grid;
+
+grid-template-columns: 70px 1fr auto;
+
+gap: .75rem;
+
+align-items: center;
+
+padding: .85rem;
+
+border-radius: 8px;
+
+background: rgba(255, 255, 255, .025);
+
+}
+
+.recordYear {
+
+color: rgba(255, 255, 255, .6);
+
+font-size: .82rem;
+
+font-weight: 900;
+
+}
+
+.recordPlayer {
+
+color: rgba(255, 255, 255, .92);
+
+font-size: .88rem;
+
+font-weight: 850;
+
+}
+
+.recordValue {
+
+color: #9eff43;
+
+font-size: .88rem;
+
+font-weight: 950;
+
+text-align: right;
+
+}
+
+.trophiesGrid {
+
+display: grid;
+
+grid-template-columns: repeat(2, 1fr);
+
+gap: 1rem;
+
+}
+
+.trophyCard {
+
+padding: 1.5rem;
+
+border: 1px solid rgba(158, 255, 67, .18);
+
+border-radius: 14px;
+
+background:
+
+linear-gradient(
+
+145deg,
+
+rgba(158, 255, 67, .06),
+
+rgba(0, 0, 0, .25)
+
+);
+
+}
+
+.trophyIcon {
+
+margin-bottom: .8rem;
+
+font-size: 2rem;
+
+text-align: center;
+
+}
+
+.trophyTitle {
+
+margin: 0;
+
+color: #9eff43;
+
+font-size: .82rem;
+
+font-weight: 950;
+
+letter-spacing: .12em;
+
+text-align: center;
+
+}
+
+.trophyDescription {
+
+margin: .7rem 0 1.25rem;
+
+color: rgba(255, 255, 255, .55);
+
+font-size: .82rem;
+
+font-weight: 750;
+
+line-height: 1.5;
+
+text-align: center;
+
+}
+
+.trophyList {
+
+display: flex;
+
+flex-direction: column;
+
+gap: .55rem;
+
+}
+
+.trophyRow {
+
+display: grid;
+
+grid-template-columns: 70px 1fr;
+
+gap: .85rem;
+
+padding: .8rem;
+
+border-radius: 8px;
+
+background: rgba(255, 255, 255, .025);
+
+}
+
+.trophyYear {
+
+color: rgba(255, 255, 255, .65);
+
+font-size: .82rem;
+
+font-weight: 900;
+
+}
+
+.trophyWinner {
+
+color: rgba(255, 255, 255, .88);
+
+font-size: .88rem;
+
+font-weight: 850;
+
+}
+
+.bloodyArmyWinner {
+
+color: #9eff43;
+
+font-size: .88rem;
+
+font-weight: 950;
+
+}
+
+.historyList {
+
+display: flex;
+
+flex-direction: column;
+
+gap: .85rem;
+
+}
+
+.historyRow,
+
+.historyRowChampion {
+
+display: grid;
+
+grid-template-columns: 90px 1fr;
+
+gap: 1rem;
+
+align-items: center;
+
+padding: 1.15rem;
+
+border-radius: 10px;
+
+}
+
+.historyRow {
+
+border: 1px solid rgba(255, 255, 255, .06);
+
+background: rgba(0, 0, 0, .2);
+
+}
+
+.historyRowChampion {
+
+border: 1px solid rgba(158, 255, 67, .35);
+
+background:
+
+linear-gradient(
+
+90deg,
+
+rgba(158, 255, 67, .12),
+
+rgba(0, 0, 0, .2)
+
+);
+
+}
+
+.historyYear {
+
+color: #9eff43;
+
+font-size: .95rem;
+
+font-weight: 950;
+
+}
+
+.historyResult {
+
+color: rgba(255, 255, 255, .88);
+
+font-size: .92rem;
+
+font-weight: 800;
+
+line-height: 1.45;
+
+}
+
+.backButtonWrapper {
+
+display: flex;
+
+justify-content: center;
+
+width: 100%;
+
+margin-top: 1rem;
+
+}
+
+.backButton {
+
+display: inline-flex;
+
+align-items: center;
+
+justify-content: center;
+
+padding: .9rem 1.4rem;
+
+border: 1px solid rgba(158, 255, 67, .35);
+
+border-radius: 10px;
+
+background: rgba(158, 255, 67, .07);
+
+color: rgba(255, 255, 255, .8);
+
+font-size: .72rem;
+
+font-weight: 900;
+
+letter-spacing: .18em;
+
+text-decoration: none;
+
+text-transform: uppercase;
+
+transition:
+
+color .2s ease,
+
+transform .2s ease,
+
+border-color .2s ease,
+
+background .2s ease;
+
+}
+
+.backButton:hover {
+
+border-color: rgba(158, 255, 67, .75);
+
+background: rgba(158, 255, 67, .14);
+
+color: #ffffff;
+
+transform: translateY(-2px);
+
+}
+
+@media (max-width: 1000px) {
+
+.overviewGrid {
+
+grid-template-columns: repeat(3, 1fr);
+
+}
+
+}
+
+@media (max-width: 800px) {
+
+.page {
+
+padding: calc(2rem + 80px) 1rem 4rem;
+
+}
+
+.header {
+
+margin-bottom: 2.5rem;
+
+}
+
+.overviewSection,
+
+.recordsSection,
+
+.trophiesSection,
+
+.playoffHistorySection {
+
+padding: 1.25rem;
+
+border-radius: 16px;
+
+}
+
+.overviewGrid,
+
+.recordsGrid,
+
+.trophiesGrid {
+
+grid-template-columns: 1fr;
+
+}
+
+}
+
+@media (max-width: 520px) {
+
+.overviewGrid {
+
+grid-template-columns: repeat(2, 1fr);
+
+}
+
+.recordRow {
+
+grid-template-columns: 60px 1fr;
+
+}
+
+.recordValue {
+
+grid-column: 2;
+
+text-align: left;
+
+}
+
+.historyRow,
+
+.historyRowChampion {
+
+grid-template-columns: 1fr;
+
+gap: .4rem;
+
+}
+
+}
+
+@media (max-width: 420px) {
+
+.title {
+
+font-size: 2.3rem;
+
+}
+
+.eyebrow {
+
+font-size: .6rem;
+
+letter-spacing: .25em;
+
+}
+
+.subtitle {
+
+font-size: .58rem;
+
+letter-spacing: .12em;
+
+}
+
+.sectionTitle {
+
+font-size: .82rem;
+
+}
+
+.overviewGrid {
+
+grid-template-columns: 1fr;
+
+}
+
+}
