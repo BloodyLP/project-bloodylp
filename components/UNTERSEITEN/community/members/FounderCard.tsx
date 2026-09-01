@@ -24,30 +24,30 @@ export default function FounderCard() {
 
 const bloodyArmyLeaders: TeamLeader[] = [
     {
-        name: "ASSISTANT LINKS",
+        name: "Dungeon_62",
         role: "A",
     },
     {
-        name: "CAPTAIN",
+        name: "BloodyLP",
         role: "C",
     },
     {
-        name: "ASSISTANT RECHTS",
+        name: "HightowerSL",
         role: "A",
     },
 ];
 
 const youngArmyLeaders: TeamLeader[] = [
     {
-        name: "ASSISTANT LINKS",
+        name: "MadDog2912",
         role: "A",
     },
     {
-        name: "CAPTAIN",
+        name: "Maeusefinger",
         role: "C",
     },
     {
-        name: "ASSISTANT RECHTS",
+        name: "Adlermannheimfan95",
         role: "A",
     },
 ];
