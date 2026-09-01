@@ -174,7 +174,7 @@ icon: "🏆",
 title: "Calder Cup",
 description: "Sieger der American Hockey League",
 winners: [
-{ year: "2019", winner: "Charlotte Checkers" },
+{ year: "2019", winner: "Ontario Young Army" , youngArmy: true },
 { year: "2020", winner: "Binghamton Devils" },
 { year: "2021", winner: "Ontario Young Army", youngArmy: true },
 { year: "2022", winner: "Grand Rapids Griffins" },
