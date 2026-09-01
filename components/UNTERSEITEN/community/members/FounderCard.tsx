@@ -516,7 +516,7 @@ return (
                         </Link>
 
                         <Link
-                            href="/community/teams/youngarmy/statistik"
+                            href="/community/teams/young-army/statistik"
                             className={
                                 styles.teamActionButton
                             }
