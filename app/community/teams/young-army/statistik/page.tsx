@@ -395,7 +395,7 @@ Young Army
 </span>
 
             <h1 className={styles.title}>
-                Young Army Statistik
+                Statistik
             </h1>
 
             <p className={styles.subtitle}>

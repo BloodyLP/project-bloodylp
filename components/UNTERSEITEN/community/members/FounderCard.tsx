@@ -347,7 +347,7 @@ return (
                         </Link>
 
                         <Link
-                            href="/community/teams/bloodyarmy"
+                            href="/community/teams/bloodyarmy/statistik"
                             className={
                                 styles.teamActionButton
                             }
@@ -516,7 +516,7 @@ return (
                         </Link>
 
                         <Link
-                            href="/community/teams/young-army"
+                            href="/community/teams/young-army/statistik"
                             className={
                                 styles.teamActionButton
                             }
