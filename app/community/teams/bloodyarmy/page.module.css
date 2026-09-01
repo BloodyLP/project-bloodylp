@@ -719,3 +719,115 @@ font-size: .72rem;
 }
 
 }
+
+/* ============================================ */
+/* STATISTICS STATUS */
+/* ============================================ */
+
+.statisticsStatus {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: .8rem;
+
+    margin-top: 1.5rem;
+
+    padding: .85rem 1.5rem;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(158, 255, 67, .38);
+
+    border-radius: 12px;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            rgba(158, 255, 67, .12),
+
+            rgba(0, 0, 0, .28)
+
+        );
+
+    box-shadow:
+
+        0 0 20px rgba(158, 255, 67, .12),
+
+        inset 0 0 18px rgba(158, 255, 67, .04);
+
+}
+
+.statisticsStatus::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -60px;
+
+    left: 50%;
+
+    width: 180px;
+
+    height: 100px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: rgba(158, 255, 67, .18);
+
+    filter: blur(35px);
+
+    pointer-events: none;
+
+}
+
+.statisticsStatusLabel {
+
+    position: relative;
+
+    z-index: 1;
+
+    color: rgba(255, 255, 255, .58);
+
+    font-size: .62rem;
+
+    font-weight: 950;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+
+}
+
+.statisticsStatusDate {
+
+    position: relative;
+
+    z-index: 1;
+
+    color: #9eff43;
+
+    font-size: .78rem;
+
+    font-weight: 950;
+
+    letter-spacing: .08em;
+
+    text-shadow:
+
+        0 0 12px rgba(158, 255, 67, .45);
+
+}
+
+

@@ -296,7 +296,7 @@ export default function Footer() {
                                         text-white
                                     "
                                 >
-                                    August 2026
+                                    September 2026
                                 </p>
                             </div>
                         </div>
