@@ -1,8 +1,7 @@
 /* ============================================ /
 / BloodyArmy /
-/ ============================================ */
-
-/**
+/ ============================================ /
+/*
 
 Team Lineups
 Hier werden alle Mannschaftsaufstellungen
@@ -18,42 +17,76 @@ als "" stehen bleiben.
 / ============================================ */
 
 export type ForwardLine = {
+
 lw: string;
+
 c: string;
+
 rw: string;
+
 };
 
 export type DefensePair = {
+
 ld: string;
+
 rd: string;
+
 };
 
 export type TeamLeadership = {
+
 captain: string;
+
 assistantLeft: string;
+
 assistantRight: string;
+
+};
+
+export type ReservePlayer = {
+
+memberId: string;
+
+position: string;
+
 };
 
 export type TeamLineup = {
+
 forwards: {
-line1: ForwardLine;
-line2: ForwardLine;
-line3: ForwardLine;
-line4: ForwardLine;
+
+    line1: ForwardLine;
+
+    line2: ForwardLine;
+
+    line3: ForwardLine;
+
+    line4: ForwardLine;
+
 };
 
 defense: {
+
     pair1: DefensePair;
+
     pair2: DefensePair;
+
     pair3: DefensePair;
+
 };
 
 goalies: {
+
     starter: string;
+
     backup: string;
+
 };
 
 leadership: TeamLeadership;
+
+reserves: ReservePlayer[];
 
 };
 
@@ -153,6 +186,8 @@ goalies: {
 
 },
 
+reserves: [],
+
 };
 
 /* ============================================ /
@@ -185,7 +220,7 @@ forwards: {
 
     line2: {
 
-        lw: "",
+        lw: "BA-029",
 
         c: "",
 
@@ -195,7 +230,7 @@ forwards: {
 
     line3: {
 
-        lw: "",
+        lw: "BA-019",
 
         c: "",
 
@@ -205,11 +240,11 @@ forwards: {
 
     line4: {
 
-        lw: "",
+        lw: "BA-017",
 
         c: "",
 
-        rw: "",
+        rw: "BA-016",
 
     },
 
@@ -221,13 +256,13 @@ defense: {
 
         ld: "",
 
-        rd: "",
+        rd: "BA-024",
 
     },
 
     pair2: {
 
-        ld: "",
+        ld: "BA-012",
 
         rd: "",
 
@@ -250,5 +285,32 @@ goalies: {
     backup: "",
 
 },
+
+reserves: [
+
+
+    {
+        memberId: "BA-008",
+        position: "LD",
+    },
+
+       {
+        memberId: "BA-004",
+        position: "",
+    },
+
+       {
+        memberId: "BA-011",
+        position: "",
+    },
+
+       {
+        memberId: "BA-026",
+        position: "",
+    },
+
+  
+
+],
 
 };
