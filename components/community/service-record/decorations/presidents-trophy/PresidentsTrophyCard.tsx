@@ -11,17 +11,17 @@
  *
  * Component:
  *
- * StanleyCupCard
+ * PresidentsTrophyCard
  *
  * ============================================
  */
 
 import Image from "next/image";
 
-import styles from "./StanleyCupCard.module.css";
+import styles from "./PresidentsTrophyCard.module.css";
 
 
-interface StanleyCupCardProps {
+interface PresidentsTrophyCardProps {
 
     title: string;
 
@@ -32,7 +32,7 @@ interface StanleyCupCardProps {
 }
 
 
-export default function StanleyCupCard({
+export default function PresidentsTrophyCard({
 
     title,
 
@@ -40,7 +40,7 @@ export default function StanleyCupCard({
 
     years,
 
-}: StanleyCupCardProps) {
+}: PresidentsTrophyCardProps) {
 
     return (
 
@@ -87,7 +87,7 @@ export default function StanleyCupCard({
 
                 <h3 className={styles.footerTitle}>
 
-                    STANLEY-CUP SIEGE
+                    PRESIDENT'S TROPHY
 
                 </h3>
 

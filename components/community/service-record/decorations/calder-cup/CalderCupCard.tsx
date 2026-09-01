@@ -1,12 +1,16 @@
 /**
  * ============================================
+ *
  * BloodyArmy
+ *
  * ============================================
  *
  * Project:
+ *
  * BloodyArmy Website
  *
  * Component:
+ *
  * CalderCupCard
  *
  * ============================================
@@ -19,8 +23,6 @@ import styles from "./CalderCupCard.module.css";
 
 interface CalderCupCardProps {
 
-    code: string;
-
     title: string;
 
     image: string;
@@ -32,8 +34,6 @@ interface CalderCupCardProps {
 
 export default function CalderCupCard({
 
-    code,
-
     title,
 
     image,
@@ -41,7 +41,6 @@ export default function CalderCupCard({
     years,
 
 }: CalderCupCardProps) {
-
 
     return (
 
@@ -54,20 +53,11 @@ export default function CalderCupCard({
 
             <header className={styles.header}>
 
-
                 <span className={styles.title}>
 
                     {title}
 
                 </span>
-
-
-                <span className={styles.code}>
-
-                    {code}
-
-                </span>
-
 
             </header>
 
@@ -78,21 +68,13 @@ export default function CalderCupCard({
 
             <div className={styles.badge}>
 
-
                 <Image
-
                     src={image}
-
                     alt={title}
-
                     fill
-
                     className={styles.image}
-
                     sizes="160px"
-
                 />
-
 
             </div>
 
@@ -103,7 +85,6 @@ export default function CalderCupCard({
 
             <footer className={styles.footer}>
 
-
                 <h3 className={styles.footerTitle}>
 
                     CALDER-CUP SIEGE
@@ -113,15 +94,11 @@ export default function CalderCupCard({
 
                 <div className={styles.years}>
 
-
                     {years.map((year) => (
 
                         <span
-
                             key={year}
-
                             className={styles.year}
-
                         >
 
                             {year}
@@ -130,9 +107,7 @@ export default function CalderCupCard({
 
                     ))}
 
-
                 </div>
-
 
             </footer>
 

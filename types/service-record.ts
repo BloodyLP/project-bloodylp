@@ -280,6 +280,17 @@ export interface ServiceRecordMember {
 
     };
 
+        /**
+     * =========================================
+     * PRESIDENT'S TROPHY
+     * =========================================
+     *
+     * Für den Gewinn der Presidents' Trophy.
+     */
+    presidentsTrophy?: {
+        years: number[];
+    };
+
 
     /**
      * Ribbon Rack

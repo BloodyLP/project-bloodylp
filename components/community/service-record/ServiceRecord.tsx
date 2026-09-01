@@ -14,47 +14,34 @@
 
 "use client";
 
-
 import styles from "./ServiceRecord.module.css";
 
-
 import Header from "./header";
-
 import Identity from "./identity";
-
 import Portrait from "./portrait";
-
 import Body from "./body";
 
 import Decorations from "./decorations";
-
 import DecorationRow from "./decorations/DecorationRow";
 
 import Prestige from "./decorations/prestige";
-
 import StanleyCup from "./decorations/stanley-cup";
-
+import PresidentsTrophy from "./decorations/presidents-trophy/PresidentsTrophy";
 import CalderCup from "./decorations/calder-cup";
 
 import Footer from "./footer";
 
-
 import {
-
     getTheme,
-
 } from "@/lib/service-record/theme";
 
-
 import type {
-
     ServiceRecordMember,
-
 } from "@/types/service-record";
 
 
 /* ========================================= */
-/* PROPS */
+/* PROPS                                     */
 /* ========================================= */
 
 interface ServiceRecordProps {
@@ -65,7 +52,7 @@ interface ServiceRecordProps {
 
 
 /* ========================================= */
-/* COMPONENT */
+/* COMPONENT                                 */
 /* ========================================= */
 
 export default function ServiceRecord({
@@ -76,7 +63,7 @@ export default function ServiceRecord({
 
 
     /* ========================================= */
-    /* THEME */
+    /* THEME                                     */
     /* ========================================= */
 
     const theme = getTheme(
@@ -89,7 +76,7 @@ export default function ServiceRecord({
 
 
     /* ========================================= */
-    /* SERVICE RECORD */
+    /* SERVICE RECORD                            */
     /* ========================================= */
 
     return (
@@ -103,34 +90,26 @@ export default function ServiceRecord({
                 ["--accent" as any]:
                     theme.accent,
 
-
                 ["--accent-light" as any]:
                     theme.accentLight,
-
 
                 ["--accent-soft" as any]:
                     theme.accentSoft,
 
-
                 ["--accent-soft-2" as any]:
                     theme.accentSoft2,
-
 
                 ["--accent-border" as any]:
                     theme.border,
 
-
                 ["--accent-glow" as any]:
                     theme.glow,
-
 
                 ["--accent-glow-soft" as any]:
                     theme.glowSoft,
 
-
                 ["--button-text" as any]:
                     theme.buttonText,
-
 
                 ["--card" as any]:
                     theme.card,
@@ -141,67 +120,59 @@ export default function ServiceRecord({
 
 
             {/* ================================= */}
-            {/* HEADER */}
+            {/* HEADER                            */}
             {/* ================================= */}
 
             <Header
 
                 recordNumber={
-
                     member.recordNumber
-
                 }
 
             />
 
 
             {/* ================================= */}
-            {/* IDENTITY */}
+            {/* IDENTITY                          */}
             {/* ================================= */}
 
             <Identity
 
                 rank={
-
                     member.rank
-
                 }
 
             />
 
 
             {/* ================================= */}
-            {/* PORTRAIT */}
+            {/* PORTRAIT                          */}
             {/* ================================= */}
 
             <Portrait
 
                 member={
-
                     member
-
                 }
 
             />
 
 
             {/* ================================= */}
-            {/* BODY */}
+            {/* BODY                              */}
             {/* ================================= */}
 
             <Body
 
                 member={
-
                     member
-
                 }
 
             />
 
 
             {/* ================================= */}
-            {/* DECORATIONS */}
+            {/* DECORATIONS                       */}
             {/* ================================= */}
 
             <Decorations>
@@ -215,9 +186,7 @@ export default function ServiceRecord({
                     <Prestige
 
                         member={
-
                             member
-
                         }
 
                     />
@@ -228,9 +197,18 @@ export default function ServiceRecord({
                     <StanleyCup
 
                         member={
-
                             member
+                        }
 
+                    />
+
+
+                    {/* PRESIDENT'S TROPHY */}
+
+                    <PresidentsTrophy
+
+                        member={
+                            member
                         }
 
                     />
@@ -241,9 +219,7 @@ export default function ServiceRecord({
                     <CalderCup
 
                         member={
-
                             member
-
                         }
 
                     />
@@ -256,7 +232,7 @@ export default function ServiceRecord({
 
 
             {/* ================================= */}
-            {/* MEMORIAL LABEL */}
+            {/* MEMORIAL LABEL                    */}
             {/* ================================= */}
 
             {
@@ -272,37 +248,24 @@ export default function ServiceRecord({
                         style={{
 
                             textAlign:
-
                                 "center",
 
-
                             color:
-
                                 "var(--accent)",
 
-
                             fontSize:
-
                                 ".8rem",
 
-
                             fontWeight:
-
                                 900,
 
-
                             letterSpacing:
-
                                 ".3em",
 
-
                             textTransform:
-
                                 "uppercase",
 
-
                             padding:
-
                                 "1rem 1.5rem",
 
                         }}
@@ -319,15 +282,13 @@ export default function ServiceRecord({
 
 
             {/* ================================= */}
-            {/* BACK */}
+            {/* BACK                              */}
             {/* ================================= */}
 
             <div
 
                 className={
-
                     styles.backArea
-
                 }
 
             >
@@ -337,9 +298,7 @@ export default function ServiceRecord({
                     href="/community"
 
                     className={
-
                         styles.backButton
-
                     }
 
                 >
@@ -352,7 +311,7 @@ export default function ServiceRecord({
 
 
             {/* ================================= */}
-            {/* FOOTER */}
+            {/* FOOTER                            */}
             {/* ================================= */}
 
             <Footer />

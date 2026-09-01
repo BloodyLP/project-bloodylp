@@ -11,43 +11,50 @@
  *
  * Component:
  *
- * StanleyCup
+ * PresidentsTrophy
  *
  * Description:
  *
- * Stanley-Cup-Auszeichnung
+ * President's-Trophy
  *
  * ============================================
  */
 
-import StanleyCupCard from "./StanleyCupCard";
+import PresidentsTrophyCard from "./PresidentsTrophyCard";
 
-import { stanleyCup } from "./StanleyCupLevels";
+import {
+    presidentsTrophy,
+} from "./PresidentsTrophyLevels";
 
 import type {
     ServiceRecordMember,
 } from "@/types/service-record";
 
 
-interface StanleyCupProps {
+interface PresidentsTrophyProps {
 
     member: ServiceRecordMember;
 
 }
 
 
-export default function StanleyCup({
+export default function PresidentsTrophy({
 
     member,
 
-}: StanleyCupProps) {
+}: PresidentsTrophyProps) {
+
+
+    const years =
+
+        member.presidentsTrophy?.years
+        ??
+        [];
 
 
     if (
 
-        !member.decorations.includes(
-            "stanley-cup"
-        )
+        years.length === 0
 
     ) {
 
@@ -56,22 +63,16 @@ export default function StanleyCup({
     }
 
 
-    const years =
-
-        member.stanleyCup?.years
-        ?? [];
-
-
     return (
 
-        <StanleyCupCard
+        <PresidentsTrophyCard
 
             title={
-                stanleyCup.title
+                presidentsTrophy.title
             }
 
             image={
-                stanleyCup.image
+                presidentsTrophy.image
             }
 
             years={

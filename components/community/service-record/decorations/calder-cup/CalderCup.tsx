@@ -1,15 +1,20 @@
 /**
  * ============================================
+ *
  * BloodyArmy
+ *
  * ============================================
  *
  * Project:
+ *
  * BloodyArmy Website
  *
  * Component:
+ *
  * CalderCup
  *
  * Description:
+ *
  * Calder-Cup-Auszeichnung
  *
  * ============================================
@@ -18,15 +23,11 @@
 import CalderCupCard from "./CalderCupCard";
 
 import {
-
     calderCup,
-
 } from "./CalderCupLevels";
 
 import type {
-
     ServiceRecordMember,
-
 } from "@/types/service-record";
 
 
@@ -59,9 +60,7 @@ export default function CalderCup({
     const years =
 
         member.calderCup?.years
-
         ??
-
         [];
 
 
@@ -88,28 +87,16 @@ export default function CalderCup({
 
         <CalderCupCard
 
-            code={
-
-                calderCup.code
-
-            }
-
             title={
-
                 calderCup.title
-
             }
 
             image={
-
                 calderCup.image
-
             }
 
             years={
-
                 years
-
             }
 
         />
