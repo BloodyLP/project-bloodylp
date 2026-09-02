@@ -13,24 +13,25 @@
  *
  * Component:
  *
- * AHL Meiste Assists Card
+ * NhlPoMeisteAssistsCard
  *
  * ============================================
- *
  */
 
 import Image from "next/image";
 
-import styles from "./AhlMeisteAssistsCard.module.css";
+import styles from "./NhlPoMeisteAssistsCard.module.css";
 
 
 /* ========================================= */
-/* PROPS                                      */
+/* PROPS                                     */
 /* ========================================= */
 
-interface AhlMeisteAssistsCardProps {
+interface NhlPoMeisteAssistsCardProps {
 
     title: string;
+
+    subtitle: string;
 
     image: string;
 
@@ -40,30 +41,27 @@ interface AhlMeisteAssistsCardProps {
 
 
 /* ========================================= */
-/* COMPONENT                                  */
+/* COMPONENT                                 */
 /* ========================================= */
 
-export default function AhlMeisteAssistsCard({
+export default function NhlPoMeisteAssistsCard({
 
     title,
+
+    subtitle,
 
     image,
 
     years,
 
-}: AhlMeisteAssistsCardProps) {
-
+}: NhlPoMeisteAssistsCardProps) {
 
     return (
 
         <article
-
             className={
-
                 styles.card
-
             }
-
         >
 
 
@@ -72,23 +70,15 @@ export default function AhlMeisteAssistsCard({
             {/* ================================= */}
 
             <header
-
                 className={
-
                     styles.header
-
                 }
-
             >
 
                 <span
-
                     className={
-
                         styles.title
-
                     }
-
                 >
 
                     {title}
@@ -103,35 +93,25 @@ export default function AhlMeisteAssistsCard({
             {/* ================================= */}
 
             <div
-
                 className={
-
                     styles.badge
-
                 }
-
             >
 
                 <Image
 
                     src={
-
                         image
-
                     }
 
                     alt={
-
                         title
-
                     }
 
                     fill
 
                     className={
-
                         styles.image
-
                     }
 
                     sizes="160px"
@@ -146,38 +126,26 @@ export default function AhlMeisteAssistsCard({
             {/* ================================= */}
 
             <footer
-
                 className={
-
                     styles.footer
-
                 }
-
             >
 
                 <h3
-
                     className={
-
                         styles.footerTitle
-
                     }
-
                 >
 
-                    AUSZEICHNUNGEN
+                    {subtitle}
 
                 </h3>
 
 
                 <div
-
                     className={
-
                         styles.years
-
                     }
-
                 >
 
                     {
@@ -189,15 +157,11 @@ export default function AhlMeisteAssistsCard({
                                 <span
 
                                     key={
-
                                         year
-
                                     }
 
                                     className={
-
                                         styles.year
-
                                     }
 
                                 >
