@@ -1,10 +1,12 @@
 import styles from "./DecorationRow.module.css";
 
+
 interface DecorationRowProps {
 
     children: React.ReactNode;
 
 }
+
 
 export default function DecorationRow({
 
@@ -14,7 +16,13 @@ export default function DecorationRow({
 
     return (
 
-        <div className={styles.row}>
+        <div
+
+            className={
+                styles.row
+            }
+
+        >
 
             {children}
 

@@ -114,6 +114,10 @@ export const bloodylp: ServiceRecordMember = {
 
         "presidents-trophy",
 
+        "clarence-s-campbell-trophy",
+
+        "prince-of-wales-trophy",
+
     ],
 
     /**
@@ -152,6 +156,36 @@ export const bloodylp: ServiceRecordMember = {
         ],
 
     },
+
+     /**
+     * Clarence S. Campbell Trophy
+     */
+    clarenceSCampbellTrophy: {
+
+    years: [
+
+        2020,
+        2022,
+        2025,
+        2026,
+
+    ],
+
+},
+
+  /**
+     * Prince of Wales Trophy
+     */
+princeOfWalesTrophy: {
+
+    years: [
+
+        2019,
+
+    ],
+
+},
+    
 
     /**
      * Ribbon Rack

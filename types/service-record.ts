@@ -280,6 +280,18 @@ export interface ServiceRecordMember {
 
     };
 
+    /**
+ * Clarence S. Campbell Trophy
+ *
+ * Für NHL-Spieler.
+ */
+
+clarenceSCampbellTrophy?: {
+
+    years: number[];
+
+};
+
         /**
      * =========================================
      * PRESIDENT'S TROPHY
@@ -290,6 +302,18 @@ export interface ServiceRecordMember {
     presidentsTrophy?: {
         years: number[];
     };
+
+    /**
+ * Prince of Wales Trophy
+ *
+ * Für NHL-Spieler.
+ */
+
+princeOfWalesTrophy?: {
+
+    years: number[];
+
+};
 
 
     /**

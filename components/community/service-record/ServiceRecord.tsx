@@ -28,6 +28,8 @@ import Prestige from "./decorations/prestige";
 import StanleyCup from "./decorations/stanley-cup";
 import PresidentsTrophy from "./decorations/presidents-trophy/PresidentsTrophy";
 import CalderCup from "./decorations/calder-cup";
+import ClarenceSCampbellTrophy from "./decorations/clarence-s-campbell-trophy/ClarenceSCampbellTrophy";
+import PrinceOfWalesTrophy from "./decorations/prince-of-wales-trophy/PrinceOfWalesTrophy";
 
 import Footer from "./footer";
 
@@ -223,6 +225,27 @@ export default function ServiceRecord({
                         }
 
                     />
+
+
+                    {/* CLARENCE S. CAMPBELL TROPHY */}
+
+                    <ClarenceSCampbellTrophy
+
+                        member={
+                            member
+                        }
+
+                    />
+
+                    {/* PRINCE OF WALES TROPHY */}
+
+<PrinceOfWalesTrophy
+
+    member={
+        member
+    }
+
+/>
 
 
                 </DecorationRow>
