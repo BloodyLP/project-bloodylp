@@ -1,3 +1,23 @@
+/**
+ * ============================================
+ *
+ * BloodyArmy
+ *
+ * ============================================
+ *
+ * Project:
+ *
+ * BloodyArmy Website
+ *
+ * ============================================
+ *
+ * Component:
+ *
+ * NhlPoMeisteAssistsCard
+ *
+ * ============================================
+ */
+
 import Image from "next/image";
 
 import styles from "./NhlPoMeisteAssistsCard.module.css";
@@ -10,6 +30,8 @@ import styles from "./NhlPoMeisteAssistsCard.module.css";
 interface NhlPoMeisteAssistsCardProps {
 
     title: string;
+
+    subtitle: string;
 
     image: string;
 
@@ -26,12 +48,13 @@ export default function NhlPoMeisteAssistsCard({
 
     title,
 
+    subtitle,
+
     image,
 
-    years = [],
+    years,
 
 }: NhlPoMeisteAssistsCardProps) {
-
 
     return (
 
@@ -66,7 +89,7 @@ export default function NhlPoMeisteAssistsCard({
 
 
             {/* ================================= */}
-            {/* BADGE                             */}
+            {/* BADGE IMAGE                       */}
             {/* ================================= */}
 
             <div
@@ -114,7 +137,7 @@ export default function NhlPoMeisteAssistsCard({
                     }
                 >
 
-                    NHL PLAYOFFS
+                    {subtitle}
 
                 </h3>
 
@@ -128,6 +151,7 @@ export default function NhlPoMeisteAssistsCard({
                     {
 
                         years.map(
+
                             (year) => (
 
                                 <span
@@ -147,6 +171,7 @@ export default function NhlPoMeisteAssistsCard({
                                 </span>
 
                             )
+
                         )
 
                     }
@@ -154,7 +179,6 @@ export default function NhlPoMeisteAssistsCard({
                 </div>
 
             </footer>
-
 
         </article>
 

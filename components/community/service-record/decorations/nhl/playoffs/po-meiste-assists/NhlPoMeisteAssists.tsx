@@ -1,15 +1,24 @@
 /**
  * ============================================
+ *
  * BloodyArmy
+ *
  * ============================================
  *
  * Project:
+ *
  * BloodyArmy Website
  *
+ * ============================================
+ *
  * Component:
- * NHL Playoffs – Meiste Assists
+ *
+ * NhlPoMeisteAssists
+ *
+ * ============================================
  *
  * Description:
+ *
  * Auszeichnung für die meisten Assists
  * in den NHL Playoffs.
  *
@@ -18,21 +27,29 @@
 
 import NhlPoMeisteAssistsCard from "./NhlPoMeisteAssistsCard";
 
-import {
-
-    nhlPoMeisteAssists,
-
-} from "./NhlPoMeisteAssistsLevels";
-
 import type {
-
     ServiceRecordMember,
-
 } from "@/types/service-record";
 
 
 /* ========================================= */
-/* PROPS                                     */
+/* BADGE DATA                               */
+/* ========================================= */
+
+export const nhlPoMeisteAssists = {
+
+    title: "MEISTE ASSISTS PLAYOFFS",
+
+    subtitle: "NHL PLAYOFFS",
+
+    image:
+        "/images/stats/nhl/nhl-po-meiste-assists.png",
+
+} as const;
+
+
+/* ========================================= */
+/* PROPS                                    */
 /* ========================================= */
 
 interface NhlPoMeisteAssistsProps {
@@ -43,7 +60,7 @@ interface NhlPoMeisteAssistsProps {
 
 
 /* ========================================= */
-/* COMPONENT                                 */
+/* COMPONENT                                */
 /* ========================================= */
 
 export default function NhlPoMeisteAssists({
@@ -54,7 +71,7 @@ export default function NhlPoMeisteAssists({
 
 
     /* ========================================= */
-    /* YEARS                                     */
+    /* JAHRE                                    */
     /* ========================================= */
 
     const years =
@@ -67,7 +84,7 @@ export default function NhlPoMeisteAssists({
 
 
     /* ========================================= */
-    /* NOT AWARDED                               */
+    /* KEINE AUSZEICHNUNG                       */
     /* ========================================= */
 
     if (
@@ -82,7 +99,7 @@ export default function NhlPoMeisteAssists({
 
 
     /* ========================================= */
-    /* BADGE                                     */
+    /* CARD                                     */
     /* ========================================= */
 
     return (

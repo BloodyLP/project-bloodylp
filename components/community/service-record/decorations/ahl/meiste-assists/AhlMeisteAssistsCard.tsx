@@ -13,25 +13,24 @@
  *
  * Component:
  *
- * NhlPoMeisteAssistsCard
+ * AHL Meiste Assists Card
  *
  * ============================================
+ *
  */
 
 import Image from "next/image";
 
-import styles from "./NhlPoMeisteAssistsCard.module.css";
+import styles from "./AhlMeisteAssistsCard.module.css";
 
 
 /* ========================================= */
-/* PROPS                                     */
+/* PROPS                                      */
 /* ========================================= */
 
-interface NhlPoMeisteAssistsCardProps {
+interface AhlMeisteAssistsCardProps {
 
     title: string;
-
-    subtitle: string;
 
     image: string;
 
@@ -41,27 +40,30 @@ interface NhlPoMeisteAssistsCardProps {
 
 
 /* ========================================= */
-/* COMPONENT                                 */
+/* COMPONENT                                  */
 /* ========================================= */
 
-export default function NhlPoMeisteAssistsCard({
+export default function AhlMeisteAssistsCard({
 
     title,
-
-    subtitle,
 
     image,
 
     years,
 
-}: NhlPoMeisteAssistsCardProps) {
+}: AhlMeisteAssistsCardProps) {
+
 
     return (
 
         <article
+
             className={
+
                 styles.card
+
             }
+
         >
 
 
@@ -70,15 +72,23 @@ export default function NhlPoMeisteAssistsCard({
             {/* ================================= */}
 
             <header
+
                 className={
+
                     styles.header
+
                 }
+
             >
 
                 <span
+
                     className={
+
                         styles.title
+
                     }
+
                 >
 
                     {title}
@@ -93,25 +103,35 @@ export default function NhlPoMeisteAssistsCard({
             {/* ================================= */}
 
             <div
+
                 className={
+
                     styles.badge
+
                 }
+
             >
 
                 <Image
 
                     src={
+
                         image
+
                     }
 
                     alt={
+
                         title
+
                     }
 
                     fill
 
                     className={
+
                         styles.image
+
                     }
 
                     sizes="160px"
@@ -126,26 +146,38 @@ export default function NhlPoMeisteAssistsCard({
             {/* ================================= */}
 
             <footer
+
                 className={
+
                     styles.footer
+
                 }
+
             >
 
                 <h3
+
                     className={
+
                         styles.footerTitle
+
                     }
+
                 >
 
-                    {subtitle}
+                    AUSZEICHNUNGEN
 
                 </h3>
 
 
                 <div
+
                     className={
+
                         styles.years
+
                     }
+
                 >
 
                     {
@@ -157,11 +189,15 @@ export default function NhlPoMeisteAssistsCard({
                                 <span
 
                                     key={
+
                                         year
+
                                     }
 
                                     className={
+
                                         styles.year
+
                                     }
 
                                 >
