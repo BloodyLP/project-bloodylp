@@ -433,6 +433,108 @@ nhlPoMeisteTore?: {
 
 };
 
+/**
+ * NHL Playoffs – Meiste Assists
+ *
+ * Auszeichnung für die meisten Assists
+ * in den NHL Playoffs.
+ */
+
+nhlPoMeisteAssists?: {
+
+    years: number[];
+
+};
+
+/**
+ * =========================================
+ * NHL PLAYOFFS
+ * MEISTE STRAFMINUTEN
+ * =========================================
+ */
+
+poMeisteStrafminuten?: {
+
+    years:
+        number[];
+
+};
+
+/* ========================================= */
+/* NHL PLAYOFFS BESTE +/- BILANZ             */
+/* ========================================= */
+
+nhlPoBestePlusMinus?: {
+
+    years: number[];
+
+};
+
+/**
+ * AHL Topscorer
+ *
+ * Auszeichnung für den Topscorer
+ * der AHL.
+ */
+
+ahlTopscorer?: {
+
+    years: number[];
+
+};
+
+/**
+ * AHL Meiste Tore
+ *
+ * Auszeichnung für die meisten
+ * erzielten Tore in der AHL.
+ */
+
+ahlMeisteTore?: {
+
+    years: number[];
+
+};
+
+/**
+ * AHL Meiste Assists
+ *
+ * Auszeichnung für die meisten
+ * Assists in der AHL.
+ */
+
+ahlMeisteAssists?: {
+
+    years: number[];
+
+};
+
+/**
+ * AHL Meiste Strafminuten
+ *
+ * Auszeichnung für die meisten
+ * Strafminuten in der AHL.
+ */
+
+ahlMeisteStrafminuten?: {
+
+    years: number[];
+
+};
+
+/**
+ * AHL Beste Plus-Minus Bilanz
+ *
+ * Auszeichnung für die beste
+ * Plus-Minus-Bilanz in der AHL.
+ */
+
+ahlBestePlusMinus?: {
+
+    years: number[];
+
+};
+
 
     /**
      * Ribbon Rack

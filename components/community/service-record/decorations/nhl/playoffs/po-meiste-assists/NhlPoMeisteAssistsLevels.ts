@@ -7,15 +7,16 @@
  * BloodyArmy Website
  *
  * Component:
- * NHL Playoffs Topscorer
+ * NHL Playoffs – Meiste Assists
  *
  * Description:
- * Stammdaten der NHL-Playoffs-Topscorer-Auszeichnung.
+ * Stammdaten der Auszeichnung für die meisten
+ * Assists in den NHL Playoffs.
  *
  * ============================================
  */
 
-export const nhlPoTopscorer = {
+export const nhlPoMeisteAssists = {
 
     category: "decoration",
 
@@ -25,18 +26,20 @@ export const nhlPoTopscorer = {
 
     issued: "NHL",
 
-    title: "TOPSCORER PLAYOFFS",
+    title: "MEISTE ASSISTS PLAYOFFS",
 
     subtitle: "NHL PLAYOFFS",
 
     description:
-        "Auszeichnung für den Topscorer der NHL Playoffs.",
+        "Auszeichnung für die meisten erzielten Assists in den NHL Playoffs.",
 
     requirements: [
-        "Meiste Punkte in den NHL Playoffs",
+
+        "Meiste Assists in den NHL Playoffs",
+
     ],
 
     image:
-        "/images/stats/nhl/nhl-po-topscorer.png",
+        "/images/stats/nhl/nhl-po-meiste-assists.png",
 
 } as const;

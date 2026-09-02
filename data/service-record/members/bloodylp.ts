@@ -265,6 +265,26 @@ nhlPoMeisteTore: {
     ],
 
 },
+
+nhlPoMeisteAssists: {
+
+    years: [
+
+        2021,
+
+    ],
+
+},
+
+nhlPoBestePlusMinus: {
+
+    years: [
+
+        2019,
+
+    ],
+
+},
     
 
     /**

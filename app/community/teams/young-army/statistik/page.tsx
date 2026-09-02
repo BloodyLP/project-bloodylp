@@ -81,7 +81,7 @@ const regularSeasonRecords = [
             { year: "2021", player: "KleinerHans", value: "32" },
             { year: "2022", player: "FlorianH", value: "33" },
             { year: "2023", player: "xXNicoXx / FlorianH", value: "25" },
-            { year: "2024", player: "Tonsak", value: "32" },
+            { year: "2024", player: "Tonska", value: "32" },
             { year: "2025", player: "Phrasenschwein", value: "15" },
             {
                 year: "2026",

@@ -26,7 +26,7 @@ export const nhlPoMeisteTore = {
 
     issued: "NHL",
 
-    title: "MEISTE TORE",
+    title: "MEISTE TORE PLAYOFFS",
 
     subtitle: "NHL PLAYOFFS",
 

@@ -40,6 +40,14 @@ import NhlMeisteStrafminuten from "./decorations/nhl/meiste-strafminuten/NhlMeis
 import NhlBestePlusMinus from "./decorations/nhl/beste-plus-minus/NhlBestePlusMinus";
 import NhlPoTopscorer from "./decorations/nhl/playoffs/po-topscorer/NhlPoTopscorer";
 import NhlPoMeisteTore from "./decorations/nhl/playoffs/po-meiste-tore/NhlPoMeisteTore";
+import NhlPoMeisteAssists from "./decorations/nhl/playoffs/po-meiste-assists/NhlPoMeisteAssists";
+import PoMeisteStrafminuten from "./decorations/nhl/playoffs/po-meiste-strafminuten/PoMeisteStrafminuten";
+import NhlPoBestePlusMinus from "./decorations/nhl/playoffs/po-beste-plus-minus";
+import AhlTopscorer from "./decorations/ahl/topscorer/AhlTopscorer";
+import AhlMeisteTore from "./decorations/ahl/meiste-tore/AhlMeisteTore";
+import AhlMeisteAssists from "./decorations/ahl/meiste-assists/AhlMeisteAssists";
+import AhlMeisteStrafminuten from "./decorations/ahl/meiste-strafminuten/AhlMeisteStrafminuten";
+import AhlBestePlusMinus from "./decorations/ahl/beste-plus-minus/AhlBestePlusMinus";
 
 import Footer from "./footer";
 
@@ -360,6 +368,98 @@ export default function ServiceRecord({
     }
 
 />
+
+{/* NHL PLAYOFFS – MEISTE ASSISTS */}
+
+<NhlPoMeisteAssists
+
+    member={
+        member
+    }
+
+/>
+
+{/* NHL PLAYOFFS – MEISTE STRAFMINUTEN */}
+
+<PoMeisteStrafminuten
+
+    member={
+        member
+    }
+
+/>
+
+{/* NHL PLAYOFFS BESTE +/- BILANZ */}
+
+<NhlPoBestePlusMinus
+
+    member={
+        member
+    }
+
+/>
+
+{/* AHL TOPSCORER */}
+
+<AhlTopscorer
+
+    member={
+
+        member
+
+    }
+
+/>
+
+{/* AHL MEISTE TORE */}
+
+<AhlMeisteTore
+
+    member={
+
+        member
+
+    }
+
+/>
+
+{/* AHL MEISTE ASSISTS */}
+
+<AhlMeisteAssists
+
+    member={
+
+        member
+
+    }
+
+/>
+
+{/* AHL MEISTE STRAFMINUTEN */}
+
+<AhlMeisteStrafminuten
+
+    member={
+
+        member
+
+    }
+
+/>
+
+{/* AHL BESTE +/- BILANZ */}
+
+<AhlBestePlusMinus
+
+    member={
+
+        member
+
+    }
+
+/>
+
+
 
                 </DecorationRow>
 

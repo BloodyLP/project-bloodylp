@@ -162,6 +162,17 @@ export const schmiedli: ServiceRecordMember = {
 
 },
 
+ahlBestePlusMinus: {
+
+    years: [
+
+        2024,
+        2026,
+
+    ],
+
+},
+
 
     /**
      * Ribbon Rack

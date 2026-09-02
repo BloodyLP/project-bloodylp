@@ -28,7 +28,7 @@ export const nhlTopscorer = {
 
     issued: "BloodyArmy",
 
-    title: "NHL TOPSCORER",
+    title: "TOPSCORER",
 
     subtitle: "AUSZEICHNUNG",
 
