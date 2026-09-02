@@ -30,6 +30,16 @@ import PresidentsTrophy from "./decorations/presidents-trophy/PresidentsTrophy";
 import CalderCup from "./decorations/calder-cup";
 import ClarenceSCampbellTrophy from "./decorations/clarence-s-campbell-trophy/ClarenceSCampbellTrophy";
 import PrinceOfWalesTrophy from "./decorations/prince-of-wales-trophy/PrinceOfWalesTrophy";
+import MacgregorKilpatrickTrophy from "./decorations/macgregor-kilpatrick-trophy/MacgregorKilpatrickTrophy";
+import RichardFCanningTrophy from "./decorations/richard-f-canning-trophy/RichardFCanningTrophy";
+import RobertWClarkeTrophy from "./decorations/robert-w-clarke-trophy/RobertWClarkeTrophy";
+import NhlTopscorer from "./decorations/nhl/topscorer/NhlTopscorer";
+import NhlMeisteTore from "./decorations/nhl/meiste-tore";
+import NhlMeisteAssists from "./decorations/nhl/meiste-assists/NhlMeisteAssists";
+import NhlMeisteStrafminuten from "./decorations/nhl/meiste-strafminuten/NhlMeisteStrafminuten";
+import NhlBestePlusMinus from "./decorations/nhl/beste-plus-minus/NhlBestePlusMinus";
+import NhlPoTopscorer from "./decorations/nhl/playoffs/po-topscorer/NhlPoTopscorer";
+import NhlPoMeisteTore from "./decorations/nhl/playoffs/po-meiste-tore/NhlPoMeisteTore";
 
 import Footer from "./footer";
 
@@ -247,6 +257,109 @@ export default function ServiceRecord({
 
 />
 
+{/* MACGREGOR KILPATRICK TROPHY */}
+
+<MacgregorKilpatrickTrophy
+
+    member={
+        member
+    }
+
+/>
+
+{/* RICHARD F. CANNING TROPHY */}
+
+<RichardFCanningTrophy
+
+    member={
+        member
+    }
+
+/>
+
+{/* ROBERT W. CLARKE TROPHY */}
+
+<RobertWClarkeTrophy
+
+    member={
+        member
+    }
+
+/>
+
+{/* NHL TOPSCORER */}
+
+<NhlTopscorer
+
+    member={
+        member
+    }
+
+/>
+
+{/* NHL MEISTE TORE */}
+
+<NhlMeisteTore
+
+    member={
+        member
+    }
+
+/>
+
+{/* NHL MEISTE ASSISTS */}
+
+<NhlMeisteAssists
+
+    member={
+        member
+    }
+
+/>
+
+{/* ================================= */}
+{/* NHL – MEISTE STRAFMINUTEN         */}
+{/* ================================= */}
+
+<NhlMeisteStrafminuten
+
+    member={
+        member
+    }
+
+/>
+
+{/* ================================= */}
+{/* NHL – BESTE +/- BILANZ            */}
+{/* ================================= */}
+
+<NhlBestePlusMinus
+
+    member={
+        member
+    }
+
+/>
+
+{/* NHL PLAYOFFS TOPSCORER */}
+
+<NhlPoTopscorer
+
+    member={
+        member
+    }
+
+/>
+
+{/* NHL PLAYOFFS – MEISTE TORE */}
+
+<NhlPoMeisteTore
+
+    member={
+        member
+    }
+
+/>
 
                 </DecorationRow>
 

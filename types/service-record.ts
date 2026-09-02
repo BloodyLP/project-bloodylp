@@ -315,6 +315,124 @@ princeOfWalesTrophy?: {
 
 };
 
+/**
+ * Macgregor Kilpatrick Trophy
+ *
+ * Für Mitglieder mit dieser Auszeichnung.
+ */
+
+macgregorKilpatrickTrophy?: {
+
+    years: number[];
+
+};
+
+/**
+ * Richard F. Canning Trophy
+ *
+ * Für Gewinner der Richard F. Canning Trophy.
+ */
+richardFCanningTrophy?: {
+
+    years: number[];
+
+};
+
+/**
+ * Robert W. Clarke Trophy
+ *
+ * Für Gewinner der Robert W. Clarke Trophy.
+ */
+robertWClarkeTrophy?: {
+
+    years: number[];
+
+};
+
+    /**
+     * NHL Topscorer
+     *
+     * Auszeichnung für den
+     * NHL-Topscorer einer Saison.
+     */
+    nhlTopscorer?: {
+        years: number[];
+    };
+
+    /**
+ * NHL Meiste Tore
+ *
+ * Auszeichnung für die meisten Tore
+ * in einer NHL-Saison.
+ */
+nhlMeisteTore?: {
+
+    years: number[];
+
+};
+
+/**
+ * =========================================
+ * NHL – MEISTE ASSISTS
+ * =========================================
+ */
+
+nhlMeisteAssists?: {
+
+    years: number[];
+
+};
+
+/**
+ * =========================================
+ * NHL – MEISTE STRAFMINUTEN
+ * =========================================
+ */
+
+nhlMeisteStrafminuten?: {
+
+    years: number[];
+
+};
+
+/**
+ * =========================================
+ * NHL – BESTE +/- BILANZ
+ * =========================================
+ */
+
+nhlBestePlusMinus?: {
+
+    years: number[];
+
+};
+
+/**
+ * NHL Playoffs Topscorer
+ *
+ * Auszeichnung für die meisten Punkte
+ * in den NHL Playoffs.
+ */
+
+nhlPoTopscorer?: {
+
+    years: number[];
+
+};
+
+/**
+ * NHL Playoffs – Meiste Tore
+ *
+ * Auszeichnung für die meisten erzielten
+ * Tore in den NHL Playoffs.
+ */
+
+nhlPoMeisteTore?: {
+
+    years: number[];
+
+};
+
 
     /**
      * Ribbon Rack

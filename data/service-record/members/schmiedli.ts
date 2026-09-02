@@ -141,6 +141,27 @@ export const schmiedli: ServiceRecordMember = {
 
     },
 
+    robertWClarkeTrophy: {
+
+    years: [
+
+        2021,
+
+        2025,
+
+    ],
+
+},
+
+    richardFCanningTrophy: {
+
+    years: [
+
+
+    ],
+
+},
+
 
     /**
      * Ribbon Rack

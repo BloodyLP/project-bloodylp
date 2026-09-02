@@ -185,6 +185,86 @@ princeOfWalesTrophy: {
     ],
 
 },
+
+nhlTopscorer: {
+    years: [
+        2020,
+        2023,
+        2025,
+        2026,
+    ],
+},
+
+nhlMeisteTore: {
+
+    years: [
+        2019,
+        2020,
+        2023,
+        2024,
+        2025,
+        2026,
+
+    ],
+
+},
+
+nhlMeisteAssists: {
+
+    years: [
+
+        2020,
+
+    ],
+
+},
+
+nhlMeisteStrafminuten: {
+
+    years: [
+
+        2021,
+        2023,
+        2025,
+
+    ],
+
+},
+
+nhlBestePlusMinus: {
+
+    years: [
+
+        2023,
+        2024,
+        2025,
+
+    ],
+
+},
+
+nhlPoTopscorer: {
+
+    years: [
+
+        2021,
+        2026,
+
+    ],
+
+},
+
+nhlPoMeisteTore: {
+
+    years: [
+
+        2019,
+        2022,
+        2024,
+        2026,
+    ],
+
+},
     
 
     /**
