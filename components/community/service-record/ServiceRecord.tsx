@@ -48,6 +48,21 @@ import AhlMeisteTore from "./decorations/ahl/meiste-tore/AhlMeisteTore";
 import AhlMeisteAssists from "./decorations/ahl/meiste-assists/AhlMeisteAssists";
 import AhlMeisteStrafminuten from "./decorations/ahl/meiste-strafminuten/AhlMeisteStrafminuten";
 import AhlBestePlusMinus from "./decorations/ahl/beste-plus-minus/AhlBestePlusMinus";
+import AhlPoTopscorer from "./decorations/ahl/playoffs/topscorer/AhlPoTopscorer";
+import AhlPoMeisteTore from "./decorations/ahl/playoffs/meiste-tore/AhlPoMeisteTore";
+import AhlPoMeisteAssists from "./decorations/ahl/playoffs/meiste-assists/AhlPoMeisteAssists";
+import AhlPoMeisteStrafminuten from "./decorations/ahl/playoffs/meiste-strafminuten/AhlPoMeisteStrafminuten";
+import AhlPoBestePlusMinus from "./decorations/ahl/playoffs/beste-plus-minus/AhlPoBestePlusMinus";
+import Sub50Monate from "./decorations/subs/50-monate/Sub50Monate";
+import Sub75Monate from "./decorations/subs/75-monate/Sub75Monate";
+import Sub100Monate from "./decorations/subs/100-monate/Sub100Monate";
+import Sub150Monate from "./decorations/subs/150-monate/Sub150Monate";
+import Sub200Monate from "./decorations/subs/200-monate/Sub200Monate";
+import PatreonBronze from "./decorations/patreon/bronze/PatreonBronze";
+import PatreonSilber from "./decorations/patreon/silber/PatreonSilber";
+import PatreonGold from "./decorations/patreon/gold/PatreonGold";
+import PatreonHallOfFame from "./decorations/patreon/hall-of-fame/PatreonHallOfFame";
+import PatreonGoat from "./decorations/patreon/goat/PatreonGoat";
 
 import Footer from "./footer";
 
@@ -458,6 +473,132 @@ export default function ServiceRecord({
     }
 
 />
+
+{/* AHL PLAYOFFS TOPSCORER */}
+
+<AhlPoTopscorer
+    member={
+        member
+    }
+/>
+
+<AhlPoMeisteTore
+    member={
+        member
+    }
+/>
+
+{/* AHL PLAYOFFS – MEISTE ASSISTS */}
+
+<AhlPoMeisteAssists
+
+    member={
+        member
+    }
+
+/>
+
+{/* AHL PLAYOFFS – MEISTE STRAFMINUTEN */}
+
+<AhlPoMeisteStrafminuten
+
+    member={
+        member
+    }
+
+/>
+
+{/* AHL PLAYOFFS – BESTE +/- BILANZ */}
+
+<AhlPoBestePlusMinus
+
+    member={
+        member
+    }
+
+/>
+
+{/* ================================= */}
+{/* SUB BADGES                        */}
+{/* ================================= */}
+
+{
+    member.sub50Monate === true
+    && (
+        <Sub50Monate />
+    )
+}
+
+
+{
+    member.sub75Monate === true
+    && (
+        <Sub75Monate />
+    )
+}
+
+
+{
+    member.sub100Monate === true
+    && (
+        <Sub100Monate />
+    )
+}
+
+
+{
+    member.sub150Monate === true
+    && (
+        <Sub150Monate />
+    )
+}
+
+
+{
+    member.sub200Monate === true
+    && (
+        <Sub200Monate />
+    )
+}
+
+{
+    member.patreonBronze
+    && (
+        <PatreonBronze />
+    )
+}
+
+
+{
+    member.patreonSilber
+    && (
+        <PatreonSilber />
+    )
+}
+
+
+{
+    member.patreonGold
+    && (
+        <PatreonGold />
+    )
+}
+
+
+{
+    member.patreonHallOfFame
+    && (
+        <PatreonHallOfFame />
+    )
+}
+
+
+{
+    member.patreonGoat
+    && (
+        <PatreonGoat />
+    )
+}
 
 
 

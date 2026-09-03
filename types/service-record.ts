@@ -1,15 +1,20 @@
 /**
  * ============================================
+ *
  * BloodyArmy
+ *
  * ============================================
  *
  * Project:
+ *
  * BloodyArmy Website
  *
  * File:
+ *
  * service-record.ts
  *
  * Description:
+ *
  * Typdefinitionen für alle Service Records.
  *
  * ============================================
@@ -48,7 +53,7 @@ import type {
 
 
 /* ========================================= */
-/* TEAMS */
+/* TEAMS                                      */
 /* ========================================= */
 
 export type TeamType =
@@ -59,7 +64,7 @@ export type TeamType =
 
 
 /* ========================================= */
-/* STANDARD STATS */
+/* STANDARD STATS                             */
 /* ========================================= */
 
 export type StandardServiceRecordStats = {
@@ -70,7 +75,7 @@ export type StandardServiceRecordStats = {
 
 
 /* ========================================= */
-/* DUAL ROLE STATS */
+/* DUAL ROLE STATS                            */
 /* ========================================= */
 
 export type DualRoleServiceRecordStats = {
@@ -91,7 +96,7 @@ export type DualRoleServiceRecordStats = {
 
 
 /* ========================================= */
-/* SERVICE RECORD MEMBER */
+/* SERVICE RECORD MEMBER                      */
 /* ========================================= */
 
 export interface ServiceRecordMember {
@@ -147,12 +152,6 @@ export interface ServiceRecordMember {
 
     /**
      * Spielertyp
-     *
-     * Bestimmt grundsätzlich den
-     * primären Spielertyp der Karte.
-     *
-     * Bei einem Dual-Role-Spieler kann
-     * hier weiterhin "skater" stehen.
      */
     playerType:
 
@@ -163,43 +162,18 @@ export interface ServiceRecordMember {
 
     /**
      * Dual Role
-     *
-     * true:
-     *
-     * Der Spieler war sowohl
-     * Skater als auch Goalie.
-     *
-     * false / undefined:
-     *
-     * Normaler Spieler.
      */
     dualRole?: boolean;
 
 
     /**
      * Verstorben
-     *
-     * true:
-     *
-     * Das Mitglied wird unter
-     * "UNVERGESSEN" geführt.
-     *
-     * false / undefined:
-     *
-     * Normales Archivmitglied.
-     *
-     * Verstorbene Mitglieder werden
-     * nicht zusätzlich in ihrem normalen
-     * Dienstgrad-Bereich angezeigt.
      */
     deceased?: boolean;
 
 
     /**
      * Individueller Gedenktext
-     *
-     * Optionaler Text für die
-     * UNVERGESSEN-/Memorial-Darstellung.
      */
     memorialText?: string;
 
@@ -246,22 +220,17 @@ export interface ServiceRecordMember {
     visible: boolean;
 
 
-    /**
-     * Decorations
-     *
-     * Beispiele:
-     *
-     * "stanley-cup"
-     * "calder-cup"
-     */
+    /* ========================================= */
+    /* DECORATIONS                                */
+    /* ========================================= */
+
     decorations: string[];
 
 
-    /**
-     * Stanley Cup
-     *
-     * Für NHL-Spieler.
-     */
+    /* ========================================= */
+    /* STANLEY CUP                                */
+    /* ========================================= */
+
     stanleyCup?: {
 
         years: number[];
@@ -269,327 +238,425 @@ export interface ServiceRecordMember {
     };
 
 
-    /**
-     * Calder Cup
-     *
-     * Für AHL-Spieler.
-     */
+    /* ========================================= */
+    /* CALDER CUP                                 */
+    /* ========================================= */
+
     calderCup?: {
 
         years: number[];
 
     };
 
-    /**
- * Clarence S. Campbell Trophy
- *
- * Für NHL-Spieler.
- */
 
-clarenceSCampbellTrophy?: {
+    /* ========================================= */
+    /* CLARENCE S. CAMPBELL TROPHY                */
+    /* ========================================= */
 
-    years: number[];
+    clarenceSCampbellTrophy?: {
 
-};
+        years: number[];
 
-        /**
-     * =========================================
-     * PRESIDENT'S TROPHY
-     * =========================================
-     *
-     * Für den Gewinn der Presidents' Trophy.
-     */
+    };
+
+
+    /* ========================================= */
+    /* PRESIDENT'S TROPHY                         */
+    /* ========================================= */
+
     presidentsTrophy?: {
+
         years: number[];
+
     };
 
-    /**
- * Prince of Wales Trophy
- *
- * Für NHL-Spieler.
- */
 
-princeOfWalesTrophy?: {
+    /* ========================================= */
+    /* PRINCE OF WALES TROPHY                     */
+    /* ========================================= */
 
-    years: number[];
+    princeOfWalesTrophy?: {
 
-};
+        years: number[];
 
-/**
- * Macgregor Kilpatrick Trophy
- *
- * Für Mitglieder mit dieser Auszeichnung.
- */
+    };
 
-macgregorKilpatrickTrophy?: {
 
-    years: number[];
+    /* ========================================= */
+    /* MACGREGOR KILPATRICK TROPHY                */
+    /* ========================================= */
 
-};
+    macgregorKilpatrickTrophy?: {
 
-/**
- * Richard F. Canning Trophy
- *
- * Für Gewinner der Richard F. Canning Trophy.
- */
-richardFCanningTrophy?: {
+        years: number[];
 
-    years: number[];
+    };
 
-};
 
-/**
- * Robert W. Clarke Trophy
- *
- * Für Gewinner der Robert W. Clarke Trophy.
- */
-robertWClarkeTrophy?: {
+    /* ========================================= */
+    /* RICHARD F. CANNING TROPHY                  */
+    /* ========================================= */
 
-    years: number[];
+    richardFCanningTrophy?: {
 
-};
+        years: number[];
 
-    /**
-     * NHL Topscorer
-     *
-     * Auszeichnung für den
-     * NHL-Topscorer einer Saison.
-     */
+    };
+
+
+    /* ========================================= */
+    /* ROBERT W. CLARKE TROPHY                    */
+    /* ========================================= */
+
+    robertWClarkeTrophy?: {
+
+        years: number[];
+
+    };
+
+
+    /* ========================================= */
+    /* NHL – TOPSCORER                            */
+    /* ========================================= */
+
     nhlTopscorer?: {
+
         years: number[];
+
     };
 
+
+    /* ========================================= */
+    /* NHL – MEISTE TORE                          */
+    /* ========================================= */
+
+    nhlMeisteTore?: {
+
+        years: number[];
+
+    };
+
+
+    /* ========================================= */
+    /* NHL – MEISTE ASSISTS                       */
+    /* ========================================= */
+
+    nhlMeisteAssists?: {
+
+        years: number[];
+
+    };
+
+
+    /* ========================================= */
+    /* NHL – MEISTE STRAFMINUTEN                  */
+    /* ========================================= */
+
+    nhlMeisteStrafminuten?: {
+
+        years: number[];
+
+    };
+
+
+    /* ========================================= */
+    /* NHL – BESTE PLUS-MINUS                     */
+    /* ========================================= */
+
+    nhlBestePlusMinus?: {
+
+        years: number[];
+
+    };
+
+
+    /* ========================================= */
+    /* NHL PLAYOFFS – TOPSCORER                   */
+    /* ========================================= */
+
+    nhlPoTopscorer?: {
+
+        years: number[];
+
+    };
+
+
+    /* ========================================= */
+    /* NHL PLAYOFFS – MEISTE TORE                 */
+    /* ========================================= */
+
+    nhlPoMeisteTore?: {
+
+        years: number[];
+
+    };
+
+
+    /* ========================================= */
+    /* NHL PLAYOFFS – MEISTE ASSISTS              */
+    /* ========================================= */
+
+    nhlPoMeisteAssists?: {
+
+        years: number[];
+
+    };
+
+
+    /* ========================================= */
+    /* NHL PLAYOFFS – MEISTE STRAFMINUTEN         */
+    /* ========================================= */
+
+    poMeisteStrafminuten?: {
+
+        years: number[];
+
+    };
+
+
+    /* ========================================= */
+    /* NHL PLAYOFFS – BESTE PLUS-MINUS            */
+    /* ========================================= */
+
+    nhlPoBestePlusMinus?: {
+
+        years: number[];
+
+    };
+
+
+    /* ========================================= */
+    /* AHL – TOPSCORER                            */
+    /* ========================================= */
+
+    ahlTopscorer?: {
+
+        years: number[];
+
+    };
+
+
+    /* ========================================= */
+    /* AHL – MEISTE TORE                          */
+    /* ========================================= */
+
+    ahlMeisteTore?: {
+
+        years: number[];
+
+    };
+
+
+    /* ========================================= */
+    /* AHL – MEISTE ASSISTS                       */
+    /* ========================================= */
+
+    ahlMeisteAssists?: {
+
+        years: number[];
+
+    };
+
+
+    /* ========================================= */
+    /* AHL – MEISTE STRAFMINUTEN                  */
+    /* ========================================= */
+
+    ahlMeisteStrafminuten?: {
+
+        years: number[];
+
+    };
+
+
+    /* ========================================= */
+    /* AHL – BESTE PLUS-MINUS                     */
+    /* ========================================= */
+
+    ahlBestePlusMinus?: {
+
+        years: number[];
+
+    };
+
+
+    /* ========================================= */
+    /* AHL PLAYOFFS – TOPSCORER                   */
+    /* ========================================= */
+
+    ahlPoTopscorer?: {
+
+        years: number[];
+
+    };
+
+
+    /* ========================================= */
+    /* AHL PLAYOFFS – MEISTE TORE                 */
+    /* ========================================= */
+
+    ahlPoMeisteTore?: {
+
+        years: number[];
+
+    };
+
+
+    /* ========================================= */
+    /* AHL PLAYOFFS – MEISTE ASSISTS              */
+    /* ========================================= */
+
+    ahlPoMeisteAssists?: {
+
+        years: number[];
+
+    };
+
+
+    /* ========================================= */
+    /* AHL PLAYOFFS – MEISTE STRAFMINUTEN         */
+    /* ========================================= */
+
+    ahlPoMeisteStrafminuten?: {
+
+        years: number[];
+
+    };
+
+
+    /* ========================================= */
+    /* AHL PLAYOFFS – BESTE PLUS-MINUS            */
+    /* ========================================= */
+
+    ahlPoBestePlusMinus?: {
+
+        years: number[];
+
+    };
+
+
+   /**
+ * =========================================
+ * SUB BADGES
+ * =========================================
+ *
+ * Individuelle Subscription-Auszeichnungen.
+ *
+ * =========================================
+ */
+
+
+/**
+ * 50 Monate SUB
+ */
+sub50Monate?: boolean;
+
+
+/**
+ * 75 Monate SUB
+ */
+sub75Monate?: boolean;
+
+
+/**
+ * 100 Monate SUB
+ */
+sub100Monate?: boolean;
+
+
+/**
+ * 150 Monate SUB
+ */
+sub150Monate?: boolean;
+
+
+/**
+ * 200 Monate SUB
+ */
+sub200Monate?: boolean;
+
     /**
- * NHL Meiste Tore
+ * =========================================
+ * PATREON BADGES
+ * =========================================
  *
- * Auszeichnung für die meisten Tore
- * in einer NHL-Saison.
- */
-nhlMeisteTore?: {
-
-    years: number[];
-
-};
-
-/**
- * =========================================
- * NHL – MEISTE ASSISTS
- * =========================================
- */
-
-nhlMeisteAssists?: {
-
-    years: number[];
-
-};
-
-/**
- * =========================================
- * NHL – MEISTE STRAFMINUTEN
+ * Individuelle Patreon-Auszeichnungen.
+ *
+ * Die Badges werden pro Mitglied
+ * separat vergeben.
+ *
+ * Bronze
+ * Silber
+ * Gold
+ * Hall of Fame
+ * GOAT
+ *
  * =========================================
  */
 
-nhlMeisteStrafminuten?: {
-
-    years: number[];
-
-};
 
 /**
- * =========================================
- * NHL – BESTE +/- BILANZ
- * =========================================
+ * Patreon Bronze
  */
+patreonBronze?: boolean;
 
-nhlBestePlusMinus?: {
-
-    years: number[];
-
-};
 
 /**
- * NHL Playoffs Topscorer
- *
- * Auszeichnung für die meisten Punkte
- * in den NHL Playoffs.
+ * Patreon Silber
  */
+patreonSilber?: boolean;
 
-nhlPoTopscorer?: {
-
-    years: number[];
-
-};
 
 /**
- * NHL Playoffs – Meiste Tore
- *
- * Auszeichnung für die meisten erzielten
- * Tore in den NHL Playoffs.
+ * Patreon Gold
  */
+patreonGold?: boolean;
 
-nhlPoMeisteTore?: {
-
-    years: number[];
-
-};
 
 /**
- * NHL Playoffs – Meiste Assists
- *
- * Auszeichnung für die meisten Assists
- * in den NHL Playoffs.
+ * Patreon Hall of Fame
  */
+patreonHallOfFame?: boolean;
 
-nhlPoMeisteAssists?: {
-
-    years: number[];
-
-};
 
 /**
- * =========================================
- * NHL PLAYOFFS
- * MEISTE STRAFMINUTEN
- * =========================================
+ * Patreon GOAT
  */
-
-poMeisteStrafminuten?: {
-
-    years:
-        number[];
-
-};
-
-/* ========================================= */
-/* NHL PLAYOFFS BESTE +/- BILANZ             */
-/* ========================================= */
-
-nhlPoBestePlusMinus?: {
-
-    years: number[];
-
-};
-
-/**
- * AHL Topscorer
- *
- * Auszeichnung für den Topscorer
- * der AHL.
- */
-
-ahlTopscorer?: {
-
-    years: number[];
-
-};
-
-/**
- * AHL Meiste Tore
- *
- * Auszeichnung für die meisten
- * erzielten Tore in der AHL.
- */
-
-ahlMeisteTore?: {
-
-    years: number[];
-
-};
-
-/**
- * AHL Meiste Assists
- *
- * Auszeichnung für die meisten
- * Assists in der AHL.
- */
-
-ahlMeisteAssists?: {
-
-    years: number[];
-
-};
-
-/**
- * AHL Meiste Strafminuten
- *
- * Auszeichnung für die meisten
- * Strafminuten in der AHL.
- */
-
-ahlMeisteStrafminuten?: {
-
-    years: number[];
-
-};
-
-/**
- * AHL Beste Plus-Minus Bilanz
- *
- * Auszeichnung für die beste
- * Plus-Minus-Bilanz in der AHL.
- */
-
-ahlBestePlusMinus?: {
-
-    years: number[];
-
-};
+patreonGoat?: boolean;
 
 
-    /**
-     * Ribbon Rack
-     */
+    /* ========================================= */
+    /* RIBBON RACK                                */
+    /* ========================================= */
+
     ribbons: string[];
 
 
-    /**
-     * Medaillen
-     */
+    /* ========================================= */
+    /* MEDAILLEN                                  */
+    /* ========================================= */
+
     medals: string[];
 
 
-    /**
-     * Abzeichen
-     */
+    /* ========================================= */
+    /* ABZEICHEN                                  */
+    /* ========================================= */
+
     badges: string[];
 
 
-    /**
-     * Achievements
-     */
+    /* ========================================= */
+    /* ACHIEVEMENTS                               */
+    /* ========================================= */
+
     achievements: string[];
 
 
-    /**
-     * Karriere-Statistik
-     *
-     * Standard:
-     *
-     * stats: {
-     *
-     *     seasons: [...]
-     *
-     * }
-     *
-     *
-     * Dual Role:
-     *
-     * stats: {
-     *
-     *     skater: {
-     *
-     *         seasons: [...]
-     *
-     *     },
-     *
-     *     goalie: {
-     *
-     *         seasons: [...]
-     *
-     *     }
-     *
-     * }
-     */
+    /* ========================================= */
+    /* KARRIERE-STATISTIK                         */
+    /* ========================================= */
+
     stats?:
 
         | StandardServiceRecordStats
@@ -597,9 +664,10 @@ ahlBestePlusMinus?: {
         | DualRoleServiceRecordStats;
 
 
-    /**
-     * Bemerkungen
-     */
+    /* ========================================= */
+    /* BEMERKUNGEN                                */
+    /* ========================================= */
+
     remarks?: string;
 
 }

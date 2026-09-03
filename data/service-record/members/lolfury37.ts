@@ -135,19 +135,17 @@ playerNumber:"37",
      */
     prestige:0,
 
-
-
-
-
     /**
      * Patreon
      */
     patreon:0,
-
-
-
-
-
+ 
+/**
+ * Patreon GOAT
+ *
+ * Höchste Patreon-Auszeichnung.
+ */
+patreonBronze: true,
     /**
      * Aktiv
      */
@@ -170,7 +168,7 @@ playerNumber:"37",
      * Decorations
      */
     decorations: [
-
+        "patreon-bronze",
         "stanley-cup",
 
 ],

@@ -100,11 +100,18 @@ export const o1l3r5: ServiceRecordMember = {
     prestige:2,
 
 
-    /**
-     * Patreon
-     */
-    patreon:0,
+   /**
+ * Patreon
+ */
+patreon: 0,
 
+
+/**
+ * Patreon GOAT
+ *
+ * Höchste Patreon-Auszeichnung.
+ */
+patreonGoat: true,
 
     /**
      * Aktiv
@@ -122,6 +129,7 @@ export const o1l3r5: ServiceRecordMember = {
      * Decorations
      */
     decorations:[
+        "patreon-goat",
         "stanley-cup",
     ],
 
