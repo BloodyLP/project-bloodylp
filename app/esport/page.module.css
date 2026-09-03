@@ -1,0 +1,2042 @@
+/**
+ * ============================================
+ *
+ * BloodyLP
+ *
+ * ============================================
+ *
+ * Project:
+ *
+ * BloodyLP Website
+ *
+ * File:
+ *
+ * app/esport/page.module.css
+ *
+ * Description:
+ *
+ * Styling für den DEG eSports Bereich.
+ *
+ * ============================================
+ */
+
+
+/* ========================================= */
+/* PAGE                                     */
+/* ========================================= */
+
+.page {
+
+    --deg-red:
+        #dc143c;
+
+    --deg-red-light:
+        #f02d55;
+
+    --deg-yellow:
+        #f6d12a;
+
+    --background:
+        #0b0c0f;
+
+    --background-light:
+        #13151a;
+
+    --background-card:
+        #181b21;
+
+    --border:
+        rgba(255, 255, 255, .08);
+
+    --text:
+        #ffffff;
+
+    --text-muted:
+        #9ca3af;
+
+    width:
+        100%;
+
+    min-height:
+        100vh;
+
+    padding-top:
+        50px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #090a0d 0%,
+            #111319 100%
+        );
+
+    color:
+        var(--text);
+
+    overflow:
+        hidden;
+
+}
+
+
+/* ========================================= */
+/* HERO                                     */
+/* ========================================= */
+
+.hero {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    min-height:
+        520px;
+
+    padding:
+        130px 24px 100px;
+
+    overflow:
+        hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(220, 20, 60, .22),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(246, 209, 42, .08),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #08090c 0%,
+            #171014 55%,
+            #0c0d10 100%
+        );
+
+}
+
+
+/* ========================================= */
+/* HERO GLOW                                */
+/* ========================================= */
+
+.heroGlow {
+
+    position:
+        absolute;
+
+    top:
+        -250px;
+
+    right:
+        -250px;
+
+    width:
+        650px;
+
+    height:
+        650px;
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(220, 20, 60, .25) 0%,
+            rgba(220, 20, 60, .08) 40%,
+            transparent 70%
+        );
+
+    pointer-events:
+        none;
+
+}
+
+
+/* ========================================= */
+/* HERO CONTENT                             */
+/* ========================================= */
+
+.heroContent {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        100%;
+
+    max-width:
+        1180px;
+
+    margin:
+        0 auto;
+
+}
+
+
+/* ========================================= */
+/* EYEBROW                                  */
+/* ========================================= */
+
+.eyebrow {
+
+    margin:
+        0 0 16px;
+
+    color:
+        var(--deg-yellow);
+
+    font-size:
+        .75rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .18em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* ========================================= */
+/* HERO TITLE                               */
+/* ========================================= */
+
+.title {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    margin:
+        0;
+
+    font-size:
+        clamp(
+            4rem,
+            10vw,
+            8rem
+        );
+
+    font-weight:
+        900;
+
+    line-height:
+        .85;
+
+    letter-spacing:
+        -.05em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.titleAccent {
+
+    color:
+        var(--deg-red);
+
+    text-shadow:
+        0 0 30px
+        rgba(220, 20, 60, .25);
+
+}
+
+
+/* ========================================= */
+/* DESCRIPTION                              */
+/* ========================================= */
+
+.description {
+
+    max-width:
+        600px;
+
+    margin:
+        28px 0 0;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        1.05rem;
+
+    line-height:
+        1.7;
+
+}
+
+
+/* ========================================= */
+/* HERO ACTIONS                             */
+/* ========================================= */
+
+.heroActions {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px;
+
+    margin-top:
+        32px;
+
+}
+
+
+/* ========================================= */
+/* BUTTONS                                  */
+/* ========================================= */
+
+.primaryButton,
+.secondaryButton {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        46px;
+
+    padding:
+        0 24px;
+
+    border-radius:
+        8px;
+
+    font-size:
+        .72rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .08em;
+
+    text-decoration:
+        none;
+
+    text-transform:
+        uppercase;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease,
+        border-color .2s ease;
+
+}
+
+
+.primaryButton {
+
+    color:
+        #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--deg-red),
+            var(--deg-red-light)
+        );
+
+    box-shadow:
+        0 8px 24px
+        rgba(220, 20, 60, .25);
+
+}
+
+
+.primaryButton:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(220, 20, 60, .40);
+
+}
+
+
+.secondaryButton {
+
+    color:
+        #ffffff;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, .14);
+
+    background:
+        rgba(255, 255, 255, .04);
+
+}
+
+
+.secondaryButton:hover {
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        var(--deg-yellow);
+
+    background:
+        rgba(246, 209, 42, .08);
+
+}
+
+
+/* ========================================= */
+/* SECTION                                  */
+/* ========================================= */
+
+.section {
+
+    width:
+        100%;
+
+    max-width:
+        1180px;
+
+    margin:
+        0 auto;
+
+    padding:
+        80px 24px;
+
+}
+
+
+/* ========================================= */
+/* TEAM HISTORY                             */
+/* ========================================= */
+
+.hero + .section {
+
+    max-width:
+        1280px;
+
+    padding:
+        96px 24px 110px;
+
+}
+
+
+/* ========================================= */
+/* SECTION HEADER                           */
+/* ========================================= */
+
+.sectionHeader {
+
+    margin-bottom:
+        36px;
+
+}
+
+
+.hero + .section .sectionHeader {
+
+    margin-bottom:
+        48px;
+
+}
+
+
+/* ========================================= */
+/* SECTION EYEBROW                          */
+/* ========================================= */
+
+.sectionEyebrow {
+
+    margin:
+        0 0 10px;
+
+    color:
+        var(--deg-red-light);
+
+    font-size:
+        .7rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .16em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* ========================================= */
+/* TEAM HISTORY EYEBROW                     */
+/* ========================================= */
+
+.historyEyebrow {
+
+    color:
+        var(--deg-red);
+
+}
+
+
+/* ========================================= */
+/* SECTION TITLE                            */
+/* ========================================= */
+
+.sectionTitle {
+
+    margin:
+        0;
+
+    font-size:
+        clamp(
+            2rem,
+            4vw,
+            3rem
+        );
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        -.03em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.hero + .section .sectionTitle {
+
+    font-size:
+        clamp(
+            2.4rem,
+            4.5vw,
+            3.5rem
+        );
+
+}
+
+
+/* ========================================= */
+/* STATS GRID                               */
+/* ========================================= */
+
+.statsGrid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
+        );
+
+    gap:
+        22px;
+
+}
+
+
+/* ========================================= */
+/* STAT CARD                                */
+/* ========================================= */
+
+.statCard {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        190px;
+
+    padding:
+        28px 24px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, .05),
+            rgba(255, 255, 255, .015)
+        );
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.statCard:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(220, 20, 60, .65);
+
+    box-shadow:
+        0 16px 36px
+        rgba(220, 20, 60, .18);
+
+}
+
+
+/* ========================================= */
+/* STAT VALUE                               */
+/* ========================================= */
+
+.statValue {
+
+    color:
+        var(--deg-red-light);
+
+    font-size:
+        clamp(
+            3rem,
+            4vw,
+            4.25rem
+        );
+
+    font-weight:
+        900;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -.04em;
+
+    text-shadow:
+        0 0 24px
+        rgba(220, 20, 60, .14);
+
+}
+
+
+/* ========================================= */
+/* STAT LABEL                               */
+/* ========================================= */
+
+.statLabel {
+
+    margin-top:
+        16px;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        .72rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .13em;
+
+    text-align:
+        center;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* ========================================= */
+/* DIVIDER                                  */
+/* ========================================= */
+
+.divider {
+
+    width:
+        min(
+            calc(100% - 48px),
+            1132px
+        );
+
+    height:
+        1px;
+
+    margin:
+        0 auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(220, 20, 60, .45),
+            rgba(246, 209, 42, .35),
+            transparent
+        );
+
+}
+
+
+/* ========================================= */
+/* ROSTER SECTION                           */
+/* ========================================= */
+
+.rosterSection {
+
+    margin-top:
+        48px;
+
+}
+
+
+.rosterSection:first-of-type {
+
+    margin-top:
+        0;
+
+}
+
+
+/* ========================================= */
+/* ROSTER TITLE                             */
+/* ========================================= */
+
+.rosterTitle {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin:
+        0 0 18px;
+
+    color:
+        var(--deg-yellow);
+
+    font-size:
+        .95rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .12em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* ========================================= */
+/* ROSTER GRID                              */
+/* ========================================= */
+
+.rosterGrid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(240px, 1fr)
+        );
+
+    gap:
+        16px;
+
+}
+
+
+/* ========================================= */
+/* PLAYER CARD                              */
+/* ========================================= */
+
+.playerCard {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    min-height:
+        150px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, .045),
+            rgba(255, 255, 255, .015)
+        );
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.playerCard::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        4px;
+
+    height:
+        100%;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--deg-red),
+            var(--deg-yellow)
+        );
+
+}
+
+
+.playerCard:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(220, 20, 60, .55);
+
+    box-shadow:
+        0 14px 32px
+        rgba(220, 20, 60, .15);
+
+}
+
+
+/* ========================================= */
+/* PLAYER NUMBER                             */
+/* ========================================= */
+
+.playerNumber {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        72px;
+
+    flex-shrink:
+        0;
+
+    color:
+        rgba(255, 255, 255, .14);
+
+    font-size:
+        1.8rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        -.05em;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(220, 20, 60, .14),
+            rgba(246, 209, 42, .04)
+        );
+
+}
+
+
+/* ========================================= */
+/* PLAYER CONTENT                            */
+/* ========================================= */
+
+.playerContent {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    min-width:
+        0;
+
+    padding:
+        20px;
+
+}
+
+
+/* ========================================= */
+/* PLAYER ROLE                               */
+/* ========================================= */
+
+.playerRole {
+
+    color:
+        var(--deg-red-light);
+
+    font-size:
+        .58rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .24em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* ========================================= */
+/* PLAYER NICKNAME                           */
+/* ========================================= */
+
+.playerNickname {
+
+    margin:
+        6px 0 0;
+
+    overflow:
+        hidden;
+
+    color:
+        #ffffff;
+
+    font-size:
+        1.25rem;
+
+    font-weight:
+        900;
+
+    line-height:
+        1.05;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+
+}
+
+
+/* ========================================= */
+/* PLAYER NAME                               */
+/* ========================================= */
+
+.playerName {
+
+    margin:
+        7px 0 0;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        .85rem;
+
+    font-weight:
+        600;
+
+}
+
+
+/* ========================================= */
+/* PLAYER AGE                                */
+/* ========================================= */
+
+.playerAge {
+
+    display:
+        inline-flex;
+
+    width:
+        fit-content;
+
+    margin-top:
+        9px;
+
+    padding:
+        4px 7px;
+
+    border:
+        1px solid
+        rgba(246, 209, 42, .25);
+
+    border-radius:
+        5px;
+
+    color:
+        var(--deg-yellow);
+
+    background:
+        rgba(246, 209, 42, .05);
+
+    font-size:
+        .65rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .06em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* ========================================= */
+/* FEATURE GRID                              */
+/* ========================================= */
+
+.featureGrid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap:
+        16px;
+
+}
+
+
+/* ========================================= */
+/* FEATURE CARD                              */
+/* ========================================= */
+
+.featureCard {
+
+    position:
+        relative;
+
+    min-height:
+        220px;
+
+    padding:
+        28px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, .035),
+            rgba(255, 255, 255, .01)
+        );
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.featureCard:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(220, 20, 60, .65);
+
+    box-shadow:
+        0 14px 35px
+        rgba(220, 20, 60, .15);
+
+}
+
+
+.featureNumber {
+
+    display:
+        block;
+
+    margin-bottom:
+        32px;
+
+    color:
+        var(--deg-red);
+
+    font-size:
+        2.5rem;
+
+    font-weight:
+        900;
+
+    opacity:
+        .8;
+
+}
+
+
+.featureTitle {
+
+    margin:
+        0;
+
+    font-size:
+        1rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .04em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.featureText {
+
+    margin:
+        14px 0 0;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        .85rem;
+
+    line-height:
+        1.65;
+
+}
+
+
+/* ========================================= */
+/* DIE WELT DER DEG                          */
+/* ========================================= */
+
+.worldGrid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap:
+        20px;
+
+}
+
+
+/* ========================================= */
+/* WORLD CARD                                */
+/* ========================================= */
+
+.worldCard {
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    min-height:
+        340px;
+
+    padding:
+        32px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, .045),
+            rgba(255, 255, 255, .012)
+        );
+
+    color:
+        var(--text);
+
+    text-decoration:
+        none;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+
+}
+
+
+.worldCard:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        rgba(220, 20, 60, .65);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(220, 20, 60, .08),
+            rgba(255, 255, 255, .018)
+        );
+
+    box-shadow:
+        0 18px 45px
+        rgba(220, 20, 60, .16);
+
+}
+
+
+.worldCard::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        100%;
+
+    height:
+        3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--deg-red),
+            var(--deg-yellow),
+            transparent
+        );
+
+    opacity:
+        .85;
+
+}
+
+
+/* ========================================= */
+/* WORLD CARD LOGO                           */
+/* ========================================= */
+
+.worldCardLogo {
+
+    position:
+        absolute;
+
+    top:
+        24px;
+
+    right:
+        24px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        76px;
+
+    height:
+        76px;
+
+    opacity:
+        .95;
+
+}
+
+
+.worldLogoImage {
+
+    width:
+        100%;
+
+    height:
+        auto;
+
+    max-height:
+        72px;
+
+    object-fit:
+        contain;
+
+}
+
+
+/* ========================================= */
+/* LEAGUE LOGOS                              */
+/* ========================================= */
+
+.worldCardLeagueLogos {
+
+    position:
+        absolute;
+
+    top:
+        24px;
+
+    right:
+        24px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+}
+
+
+.worldLeagueLogo {
+
+    width:
+        58px;
+
+    height:
+        58px;
+
+    object-fit:
+        contain;
+
+}
+
+
+/* ========================================= */
+/* WORLD NUMBER                              */
+/* ========================================= */
+
+.worldNumber {
+
+    display:
+        block;
+
+    margin-bottom:
+        62px;
+
+    color:
+        var(--deg-red);
+
+    font-size:
+        2.6rem;
+
+    font-weight:
+        900;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -.04em;
+
+    opacity:
+        .9;
+
+}
+
+
+/* ========================================= */
+/* WORLD TITLE                               */
+/* ========================================= */
+
+.worldTitle {
+
+    margin:
+        0;
+
+    color:
+        #ffffff;
+
+    font-size:
+        1.25rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .04em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* ========================================= */
+/* WORLD TEXT                                */
+/* ========================================= */
+
+.worldText {
+
+    margin:
+        16px 0 0;
+
+    max-width:
+        340px;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        .95rem;
+
+    font-weight:
+        500;
+
+    line-height:
+        1.7;
+
+}
+
+
+/* ========================================= */
+/* WORLD LINK                                */
+/* ========================================= */
+
+.worldLink {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin-top:
+        auto;
+
+    padding-top:
+        28px;
+
+    color:
+        var(--deg-yellow);
+
+    font-size:
+        .72rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .12em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.worldArrow {
+
+    display:
+        inline-block;
+
+    color:
+        var(--deg-red-light);
+
+    font-size:
+        1rem;
+
+    transition:
+        transform .2s ease;
+
+}
+
+
+.worldCard:hover .worldArrow {
+
+    transform:
+        translateX(5px);
+
+}
+
+
+/* ========================================= */
+/* COMMENTATOR                               */
+/* ========================================= */
+
+.commentator {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        40px;
+
+    padding:
+        48px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid
+        rgba(220, 20, 60, .20);
+
+    border-radius:
+        18px;
+
+    background:
+        radial-gradient(
+            circle at right,
+            rgba(220, 20, 60, .16),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, .04),
+            rgba(255, 255, 255, .01)
+        );
+
+}
+
+
+/* ========================================= */
+/* COMMENTATOR LABEL                         */
+/* ========================================= */
+
+.commentatorLabel {
+
+    margin:
+        0 0 14px;
+
+    color:
+        var(--deg-yellow);
+
+    font-size:
+        .65rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .15em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* ========================================= */
+/* COMMENTATOR NAME                          */
+/* ========================================= */
+
+.commentatorName {
+
+    margin:
+        0;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(
+            2rem,
+            4vw,
+            3.5rem
+        );
+
+    font-weight:
+        900;
+
+    line-height:
+        .95;
+
+    letter-spacing:
+        -.04em;
+
+}
+
+
+/* ========================================= */
+/* COMMENTATOR ROLE                          */
+/* ========================================= */
+
+.commentatorRole {
+
+    max-width:
+        600px;
+
+    margin:
+        20px 0 0;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        .9rem;
+
+    line-height:
+        1.7;
+
+}
+
+
+/* ========================================= */
+/* COMMENTATOR BADGE                         */
+/* ========================================= */
+
+.commentatorBadge {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        180px;
+
+    height:
+        180px;
+
+    flex-shrink:
+        0;
+
+    border:
+        2px solid
+        var(--deg-yellow);
+
+    border-radius:
+        50%;
+
+    color:
+        var(--deg-yellow);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(220, 20, 60, .20),
+            rgba(0, 0, 0, .20)
+        );
+
+    box-shadow:
+        0 0 30px
+        rgba(220, 20, 60, .20),
+        inset
+        0 0 30px
+        rgba(246, 209, 42, .05);
+
+    font-size:
+        .72rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .10em;
+
+    line-height:
+        1.5;
+
+    text-align:
+        center;
+
+}
+
+
+/* ========================================= */
+/* TABLET                                    */
+/* ========================================= */
+
+@media (
+    max-width: 900px
+) {
+
+    .hero + .section {
+
+        padding:
+            80px 24px 90px;
+
+    }
+
+
+    .statsGrid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
+        gap:
+            16px;
+
+    }
+
+
+    .statCard {
+
+        min-height:
+            170px;
+
+    }
+
+
+    .featureGrid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .worldGrid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .worldCard {
+
+        min-height:
+            290px;
+
+    }
+
+
+    .commentator {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+    }
+
+}
+
+
+/* ========================================= */
+/* MOBILE                                    */
+/* ========================================= */
+
+@media (
+    max-width: 700px
+) {
+
+    .page {
+
+        padding-top:
+            20px;
+
+    }
+
+
+    .hero {
+
+        min-height:
+            460px;
+
+        padding:
+            80px 20px;
+
+    }
+
+
+    .section {
+
+        padding:
+            60px 20px;
+
+    }
+
+
+    .hero + .section {
+
+        padding:
+            70px 18px 80px;
+
+    }
+
+
+    .statsGrid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .statCard {
+
+        min-height:
+            160px;
+
+    }
+
+
+    .statValue {
+
+        font-size:
+            3.25rem;
+
+    }
+
+
+    .rosterGrid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .playerCard {
+
+        min-height:
+            135px;
+
+    }
+
+
+    .worldCard {
+
+        min-height:
+            280px;
+
+        padding:
+            26px;
+
+    }
+
+
+    .worldCardLogo {
+
+        top:
+            20px;
+
+        right:
+            20px;
+
+        width:
+            60px;
+
+        height:
+            60px;
+
+    }
+
+
+    .worldCardLeagueLogos {
+
+        top:
+            20px;
+
+        right:
+            20px;
+
+        gap:
+            6px;
+
+    }
+
+
+    .worldLeagueLogo {
+
+        width:
+            48px;
+
+        height:
+            48px;
+
+    }
+
+
+    .worldNumber {
+
+        margin-bottom:
+            55px;
+
+        font-size:
+            2.3rem;
+
+    }
+
+
+    .worldTitle {
+
+        font-size:
+            1.1rem;
+
+    }
+
+
+    .worldText {
+
+        font-size:
+            .88rem;
+
+    }
+
+
+    .commentator {
+
+        padding:
+            30px 24px;
+
+    }
+
+
+    .commentatorBadge {
+
+        width:
+            140px;
+
+        height:
+            140px;
+
+    }
+
+}

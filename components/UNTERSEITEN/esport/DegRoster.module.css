@@ -1,0 +1,921 @@
+/* ============================================ */
+/* BloodyArmy                                   */
+/* ============================================ */
+/*                                               */
+/* Project:                                      */
+/* BloodyLP Website                              */
+/*                                               */
+/* File:                                         */
+/* DegRoster.module.css                          */
+/*                                               */
+/* Description:                                  */
+/* Styling für den aktuellen                     */
+/* DEG eSport Kader.                             */
+/*                                               */
+/* ============================================ */
+
+
+/* ============================================ */
+/* ROSTER SECTION                                */
+/* ============================================ */
+
+.rosterSection {
+
+    width:
+
+        100%;
+
+    margin:
+
+        0 0 72px;
+
+}
+
+
+/* ============================================ */
+/* SECTION HEADER                                */
+/* ============================================ */
+
+.sectionHeader {
+
+    display:
+
+        flex;
+
+    align-items:
+
+        center;
+
+    gap:
+
+        18px;
+
+    width:
+
+        100%;
+
+    margin:
+
+        0 0 28px;
+
+}
+
+
+.sectionTitle {
+
+    margin:
+
+        0;
+
+    color:
+
+        var(--deg-red);
+
+    font-size:
+
+        clamp(
+            1.05rem,
+            1.5vw,
+            1.35rem
+        );
+
+    font-weight:
+
+        900;
+
+    letter-spacing:
+
+        .18em;
+
+    text-transform:
+
+        uppercase;
+
+    white-space:
+
+        nowrap;
+
+}
+
+
+.sectionLine {
+
+    width:
+
+        100%;
+
+    height:
+
+        1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(220, 20, 60, .65),
+            rgba(220, 20, 60, .15),
+            transparent
+        );
+
+}
+
+
+/* ============================================ */
+/* PLAYERS GRID                                  */
+/* ============================================ */
+
+.playersGrid {
+
+    display:
+
+        grid;
+
+    grid-template-columns:
+
+        repeat(
+            auto-fill,
+            minmax(
+                400px,
+                1fr
+            )
+        );
+
+    gap:
+
+        22px;
+
+    width:
+
+        100%;
+
+}
+
+
+/* ============================================ */
+/* PLAYER CARD                                   */
+/* ============================================ */
+
+.playerCard {
+
+    position:
+
+        relative;
+
+    display:
+
+        flex;
+
+    align-items:
+
+        stretch;
+
+    width:
+
+        100%;
+
+    min-height:
+
+        205px;
+
+    overflow:
+
+        hidden;
+
+    border:
+
+        1px solid
+        rgba(255, 255, 255, .09);
+
+    border-left:
+
+        4px solid
+        var(--deg-red);
+
+    border-radius:
+
+        16px;
+
+    background:
+
+        linear-gradient(
+            120deg,
+            rgba(130, 10, 35, .30),
+            rgba(20, 23, 29, .98) 48%,
+            rgba(17, 20, 26, 1)
+        );
+
+    box-shadow:
+
+        0 12px 28px
+        rgba(0, 0, 0, .22);
+
+    text-decoration:
+
+        none;
+
+    color:
+
+        inherit;
+
+    cursor:
+
+        pointer;
+
+    transition:
+
+        transform .22s ease,
+        border-color .22s ease,
+        box-shadow .22s ease;
+
+}
+
+
+.playerCard:hover {
+
+    transform:
+
+        translateY(-5px);
+
+    border-color:
+
+        rgba(220, 20, 60, .75);
+
+    box-shadow:
+
+        0 18px 42px
+        rgba(220, 20, 60, .16);
+
+}
+
+
+/* ============================================ */
+/* PLAYER IMAGE                                  */
+/* ============================================ */
+
+.playerImageWrapper {
+
+    position:
+
+        relative;
+
+    flex:
+
+        0 0 145px;
+
+    min-height:
+
+        205px;
+
+    align-self:
+
+        stretch;
+
+    z-index:
+
+        3;
+
+    overflow:
+
+        hidden;
+
+}
+
+
+.playerImage {
+
+    object-fit:
+
+        contain;
+
+    object-position:
+
+        center bottom;
+
+    filter:
+
+        drop-shadow(
+            8px 0 16px
+            rgba(0, 0, 0, .45)
+        );
+
+}
+
+
+.placeholder {
+
+    display:
+
+        flex;
+
+    align-items:
+
+        center;
+
+    justify-content:
+
+        center;
+
+    width:
+
+        100%;
+
+    height:
+
+        100%;
+
+    color:
+
+        rgba(255, 255, 255, .20);
+
+    font-size:
+
+        4rem;
+
+    font-weight:
+
+        900;
+
+}
+
+
+/* ============================================ */
+/* BACKGROUND NUMBER                             */
+/* ============================================ */
+
+.backgroundNumber {
+
+    position:
+
+        absolute;
+
+    right:
+
+        18px;
+
+    top:
+
+        50%;
+
+    z-index:
+
+        1;
+
+    color:
+
+        rgba(255, 255, 255, .12);
+
+    font-size:
+
+        9rem;
+
+    font-weight:
+
+        900;
+
+    line-height:
+
+        1;
+
+    transform:
+
+        translateY(-50%);
+
+    pointer-events:
+
+        none;
+
+    user-select:
+
+        none;
+
+}
+
+
+/* ============================================ */
+/* FLAG                                          */
+/* ============================================ */
+
+.flag {
+
+    position:
+
+        absolute;
+
+    top:
+
+        20px;
+
+    right:
+
+        20px;
+
+    z-index:
+
+        5;
+
+    display:
+
+        flex;
+
+    align-items:
+
+        center;
+
+    justify-content:
+
+        center;
+
+}
+
+
+.flagImage {
+
+    width:
+
+        30px;
+
+    height:
+
+        auto;
+
+    object-fit:
+
+        contain;
+
+    filter:
+
+        drop-shadow(
+            0 3px 8px
+            rgba(0, 0, 0, .45)
+        );
+
+}
+
+
+/* ============================================ */
+/* PLAYER CONTENT                                */
+/* ============================================ */
+
+.playerContent {
+
+    position:
+
+        relative;
+
+    z-index:
+
+        4;
+
+    display:
+
+        flex;
+
+    flex-direction:
+
+        column;
+
+    justify-content:
+
+        center;
+
+    flex:
+
+        1;
+
+    min-width:
+
+        0;
+
+    padding:
+
+        24px 90px 24px 12px;
+
+}
+
+
+/* ============================================ */
+/* GAMERTAG                                      */
+/* ============================================ */
+
+.gamerTag {
+
+    position:
+
+        relative;
+
+    z-index:
+
+        4;
+
+    width:
+
+        100%;
+
+    margin:
+
+        0;
+
+    padding:
+
+        0;
+
+    color:
+
+        rgba(255, 255, 255, .98);
+
+    font-size:
+
+        clamp(
+            1.3rem,
+            2vw,
+            1.7rem
+        );
+
+    font-weight:
+
+        900;
+
+    line-height:
+
+        1.1;
+
+    letter-spacing:
+
+        .01em;
+
+    white-space:
+
+        nowrap;
+
+    overflow:
+
+        visible;
+
+    text-overflow:
+
+        clip;
+
+    word-break:
+
+        normal;
+
+}
+
+
+/* ============================================ */
+/* PLAYER NAME                                   */
+/* ============================================ */
+
+.playerName {
+
+    margin:
+
+        9px 0 0;
+
+    color:
+
+        rgba(255, 255, 255, .62);
+
+    font-size:
+
+        .9rem;
+
+    font-weight:
+
+        700;
+
+    line-height:
+
+        1.4;
+
+}
+
+
+/* ============================================ */
+/* PLAYER FOOTER                                 */
+/* ============================================ */
+
+.playerFooter {
+
+    display:
+
+        flex;
+
+    align-items:
+
+        center;
+
+    justify-content:
+
+        space-between;
+
+    gap:
+
+        14px;
+
+    margin-top:
+
+        22px;
+
+}
+
+
+.position {
+
+    display:
+
+        inline-flex;
+
+    align-items:
+
+        center;
+
+    min-height:
+
+        32px;
+
+    padding:
+
+        0 14px;
+
+    border:
+
+        1px solid
+        rgba(220, 20, 60, .50);
+
+    border-radius:
+
+        7px;
+
+    color:
+
+        var(--deg-red);
+
+    background:
+
+        rgba(80, 0, 18, .25);
+
+    font-size:
+
+        .68rem;
+
+    font-weight:
+
+        900;
+
+    letter-spacing:
+
+        .14em;
+
+    text-transform:
+
+        uppercase;
+
+}
+
+
+.profileLink {
+
+    display:
+
+        inline-flex;
+
+    align-items:
+
+        center;
+
+    gap:
+
+        7px;
+
+    color:
+
+        rgba(255, 255, 255, .50);
+
+    font-size:
+
+        .62rem;
+
+    font-weight:
+
+        900;
+
+    letter-spacing:
+
+        .12em;
+
+    white-space:
+
+        nowrap;
+
+}
+
+
+.arrow {
+
+    color:
+
+        var(--deg-red);
+
+    font-size:
+
+        .95rem;
+
+    font-weight:
+
+        900;
+
+}
+
+
+/* ============================================ */
+/* HOVER EFFECTS                                 */
+/* ============================================ */
+
+.playerCard:hover .profileLink {
+
+    color:
+
+        rgba(255, 255, 255, .90);
+
+}
+
+
+.playerCard:hover .backgroundNumber {
+
+    color:
+
+        rgba(255, 255, 255, .17);
+
+}
+
+
+/* ============================================ */
+/* TABLET                                        */
+/* ============================================ */
+
+@media (
+
+    max-width:
+
+        1100px
+
+) {
+
+    .playersGrid {
+
+        grid-template-columns:
+
+            repeat(
+                2,
+                minmax(
+                    0,
+                    1fr
+                )
+            );
+
+    }
+
+}
+
+
+/* ============================================ */
+/* MOBILE                                        */
+/* ============================================ */
+
+@media (
+
+    max-width:
+
+        700px
+
+) {
+
+    .rosterSection {
+
+        margin-bottom:
+
+            52px;
+
+    }
+
+
+    .playersGrid {
+
+        grid-template-columns:
+
+            1fr;
+
+        gap:
+
+            16px;
+
+    }
+
+
+    .playerCard {
+
+        min-height:
+
+            190px;
+
+    }
+
+
+    .playerImageWrapper {
+
+        flex-basis:
+
+            120px;
+
+        min-height:
+
+            190px;
+
+    }
+
+
+    .backgroundNumber {
+
+        right:
+
+            12px;
+
+        font-size:
+
+            7rem;
+
+    }
+
+
+    .playerContent {
+
+        padding:
+
+            20px 55px 20px 8px;
+
+    }
+
+
+    .gamerTag {
+
+        font-size:
+
+            1.15rem;
+
+        white-space:
+
+            nowrap;
+
+    }
+
+
+    .playerName {
+
+        font-size:
+
+            .82rem;
+
+    }
+
+
+    .flag {
+
+        top:
+
+            14px;
+
+        right:
+
+            14px;
+
+    }
+
+
+    .flagImage {
+
+        width:
+
+            26px;
+
+    }
+
+
+    .playerFooter {
+
+        margin-top:
+
+            16px;
+
+    }
+
+
+    .profileLink {
+
+        font-size:
+
+            .55rem;
+
+    }
+
+}

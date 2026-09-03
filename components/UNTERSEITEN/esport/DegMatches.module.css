@@ -1,0 +1,1410 @@
+/* ============================================ */
+/* MATCHES SECTION                              */
+/* ============================================ */
+
+.matchesSection {
+    width: 100%;
+    padding: 42px 0 100px;
+}
+
+
+.matchesInner {
+    width: min(
+        1180px,
+        calc(100% - 48px)
+    );
+
+    margin: 0 auto;
+}
+
+
+/* ============================================ */
+/* HEADER                                       */
+/* ============================================ */
+
+.sectionHeader {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 280px;
+
+    margin-bottom: 46px;
+
+    padding:
+        35px
+        40px
+        25px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(28, 31, 38, 0.92),
+            rgba(17, 19, 25, 0.96)
+        );
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+.headerWatermark {
+    position: absolute;
+
+    top: 50%;
+    right: -70px;
+
+    width: 520px;
+    height: 520px;
+
+    transform:
+        translateY(-50%);
+
+    pointer-events: none;
+
+    opacity: 0.055;
+}
+
+
+.headerWatermarkLogo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+.headerContent {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        280px;
+
+    align-items: center;
+
+    min-height: 220px;
+
+    gap: 40px;
+}
+
+
+.headerText {
+    position: relative;
+
+    z-index: 3;
+}
+
+
+.eyebrow {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #e52d4d;
+
+    font-size: 12px;
+    font-weight: 900;
+
+    letter-spacing: 4px;
+}
+
+
+.sectionHeader h2 {
+    margin: 0;
+
+    color: #f3f4f6;
+
+    font-size: clamp(
+        40px,
+        3.6vw,
+        56px
+    );
+
+    font-weight: 900;
+
+    line-height: 1.05;
+
+    letter-spacing: 0.5px;
+}
+
+
+.sectionDescription {
+    max-width: 620px;
+
+    margin:
+        18px
+        0
+        0;
+
+    color: #aab1ba;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* ============================================ */
+/* VISIBLE DEG LOGO                             */
+/* ============================================ */
+
+.headerLogoArea {
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 220px;
+}
+
+
+.headerLogoArea::before {
+    content: "";
+
+    position: absolute;
+
+    width: 230px;
+    height: 230px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(229, 45, 77, 0.18),
+            rgba(229, 45, 77, 0.04) 45%,
+            transparent 70%
+        );
+
+    filter:
+        blur(5px);
+}
+
+
+.headerLogo {
+    position: relative;
+
+    z-index: 2;
+
+    width: auto;
+    height: auto;
+
+    max-width: 250px;
+    max-height: 250px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 15px 25px
+            rgba(0, 0, 0, 0.4)
+        );
+}
+
+
+/* ============================================ */
+/* HEADER LINE                                  */
+/* ============================================ */
+
+.headerLine {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+    height: 1px;
+
+    margin-top: 18px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #e52d4d 0%,
+            rgba(229, 45, 77, 0.45) 30%,
+            rgba(229, 45, 77, 0.08) 60%,
+            transparent 100%
+        );
+}
+
+
+/* ============================================ */
+/* SECTION HEADING                              */
+/* ============================================ */
+
+.sectionHeading {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 17px;
+}
+
+
+.sectionLabel {
+    color: #c2c8cf;
+
+    font-size: 13px;
+    font-weight: 900;
+
+    letter-spacing: 2.5px;
+}
+
+
+.sectionHint {
+    color: #737b85;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+}
+
+
+/* ============================================ */
+/* NEXT MATCH                                   */
+/* ============================================ */
+
+.nextMatchArea {
+    margin-bottom: 45px;
+}
+
+
+.nextMatchCard {
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(229, 45, 77, 0.38);
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(28, 31, 38, 0.98),
+            rgba(15, 17, 22, 0.98)
+        );
+
+    box-shadow:
+        0 25px 60px
+        rgba(0, 0, 0, 0.22);
+}
+
+
+.nextMatchCard::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(229, 45, 77, 0.08),
+            transparent 45%
+        );
+}
+
+
+.nextMatchCard::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(229, 45, 77, 0.75),
+            transparent
+        );
+}
+
+
+/* ============================================ */
+/* LEAGUE BADGE                                  */
+/* ============================================ */
+
+.leagueBadge {
+    position: absolute;
+
+    top: 18px;
+    left: 20px;
+
+    z-index: 3;
+
+    padding:
+        8px
+        14px;
+
+    border:
+        1px solid
+        rgba(229, 45, 77, 0.35);
+
+    border-radius: 6px;
+
+    background:
+        rgba(229, 45, 77, 0.08);
+
+    color: #f04a67;
+
+    font-size: 11px;
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* ============================================ */
+/* TEAMS                                         */
+/* ============================================ */
+
+.matchTeams {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        140px
+        1fr;
+
+    align-items: center;
+
+    min-height: 285px;
+
+    padding:
+        65px
+        70px
+        35px;
+
+    gap: 28px;
+}
+
+
+.nextTeam {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    text-align: center;
+}
+
+
+/* ============================================ */
+/* TEAM LOGOS WITHOUT CIRCLE                     */
+/* ============================================ */
+
+.teamLogoFrame {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 150px;
+    height: 130px;
+
+    border: none;
+
+    border-radius: 0;
+
+    background: transparent;
+
+    box-shadow: none;
+}
+
+
+.nextLogo {
+    width: auto;
+    height: auto;
+
+    max-width: 145px;
+    max-height: 125px;
+
+    object-fit: contain;
+}
+
+
+.opponentPlaceholder {
+    color: #9ba2ad;
+
+    font-size: 48px;
+    font-weight: 900;
+}
+
+
+.nextTeamName {
+    color: #f0f2f4;
+
+    font-size: 22px;
+    font-weight: 800;
+}
+
+
+/* ============================================ */
+/* VS                                            */
+/* ============================================ */
+
+.vsBlock {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.vsCircle {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 84px;
+    height: 84px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.2);
+}
+
+
+.vsCircle span {
+    color: #f2f2f2;
+
+    font-size: 24px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+.vsSubtext {
+    color: #8a929c;
+
+    font-size: 10px;
+    font-weight: 900;
+
+    letter-spacing: 1.8px;
+}
+
+
+/* ============================================ */
+/* NEXT MATCH FOOTER                             */
+/* ============================================ */
+
+.nextMatchFooter {
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding:
+        19px
+        24px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+
+    background:
+        rgba(0, 0, 0, 0.14);
+}
+
+
+.matchInfo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.matchInfo span {
+    color: #8b939d;
+
+    font-size: 11px;
+    font-weight: 900;
+
+    letter-spacing: 1.2px;
+}
+
+
+.matchInfo strong {
+    color: #f0f1f3;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+}
+
+
+/* ============================================ */
+/* TWITCH BUTTON                                 */
+/* ============================================ */
+
+.twitchButton {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding:
+        12px
+        18px;
+
+    border:
+        1px solid
+        rgba(229, 45, 77, 0.55);
+
+    border-radius: 7px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e52d4d,
+            #b51d39
+        );
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 900;
+
+    letter-spacing: 1.2px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+.twitchButton:hover {
+    transform:
+        translateY(-2px);
+
+    filter:
+        brightness(1.08);
+
+    box-shadow:
+        0 10px 25px
+        rgba(229, 45, 77, 0.28);
+}
+
+
+.liveDot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    animation:
+        livePulse
+        1.5s
+        infinite;
+}
+
+
+.twitchArrow {
+    font-size: 15px;
+}
+
+
+@keyframes livePulse {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.35;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+
+/* ============================================ */
+/* STATISTICS                                    */
+/* ============================================ */
+
+.statisticsArea {
+    margin-bottom: 48px;
+}
+
+
+.statsGrid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            1fr
+        );
+
+    gap: 14px;
+}
+
+
+.statCard {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 130px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(28, 31, 38, 0.92),
+            rgba(18, 20, 26, 0.92)
+        );
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.statCard::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 15%;
+
+    width: 70%;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(229, 45, 77, 0.55),
+            transparent
+        );
+}
+
+
+.statCard:hover {
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(229, 45, 77, 0.25);
+}
+
+
+.statCard strong {
+    color: #e52d4d;
+
+    font-size: 38px;
+    font-weight: 900;
+}
+
+
+.statCard span {
+    margin-top: 10px;
+
+    color: #aab1ba;
+
+    font-size: 10px;
+    font-weight: 900;
+
+    letter-spacing: 1.7px;
+
+    text-align: center;
+}
+
+
+/* ============================================ */
+/* RESULTS                                       */
+/* ============================================ */
+
+.resultsArea {
+    margin-top: 8px;
+}
+
+
+.resultsGrid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 16px;
+}
+
+
+/* ============================================ */
+/* RESULT CARD                                   */
+/* ============================================ */
+
+.resultCard {
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(29, 32, 39, 0.98),
+            rgba(18, 20, 26, 0.98)
+        );
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.resultCard:hover {
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(229, 45, 77, 0.3);
+
+    box-shadow:
+        0 16px 35px
+        rgba(0, 0, 0, 0.28);
+}
+
+
+.resultWin::before,
+.resultLoss::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 3px;
+    height: 100%;
+}
+
+
+.resultWin::before {
+    background: #e52d4d;
+}
+
+
+.resultLoss::before {
+    background: #59616b;
+}
+
+
+/* ============================================ */
+/* RESULT TOP                                    */
+/* ============================================ */
+
+.resultTop {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding:
+        15px
+        16px;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.05);
+}
+
+
+.resultTop span {
+    color: #a0a7b0;
+
+    font-size: 10px;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+/* ============================================ */
+/* RESULT STATUS                                 */
+/* ============================================ */
+
+.resultStatus {
+    position: absolute;
+
+    top: 50px;
+    right: 14px;
+
+    padding:
+        6px
+        10px;
+
+    border-radius: 5px;
+
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+.statusWin {
+    background:
+        rgba(229, 45, 77, 0.12);
+
+    color: #ef4262;
+}
+
+
+.statusLoss {
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color: #9ca3ac;
+}
+
+
+.statusDraw {
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color: #c0c5cb;
+}
+
+
+/* ============================================ */
+/* RESULT MATCH                                  */
+/* ============================================ */
+
+.resultMatch {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto
+        minmax(0, 1fr);
+
+    align-items: center;
+
+    min-height: 155px;
+
+    padding:
+        22px
+        15px;
+
+    gap: 8px;
+}
+
+
+.resultTeam {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 0;
+
+    text-align: center;
+}
+
+
+.resultLogoFrame {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: 70px;
+}
+
+
+.resultLogo {
+    width: auto;
+    height: auto;
+
+    max-width: 66px;
+    max-height: 66px;
+
+    object-fit: contain;
+}
+
+
+.resultTeam span {
+    display: block;
+
+    width: 100%;
+    max-width: 140px;
+
+    overflow: hidden;
+
+    color: #eef0f2;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    line-height: 1.35;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ============================================ */
+/* SCORE                                         */
+/* ============================================ */
+
+.scoreBlock {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.scoreBlock strong {
+    color: #d9dde1;
+
+    font-size: 30px;
+    font-weight: 900;
+}
+
+
+.scoreBlock span {
+    color: #7b838d;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+.winnerScore {
+    color: #e52d4d !important;
+}
+
+
+.scoreBlock small {
+    position: absolute;
+
+    top: 100%;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    margin-top: 5px;
+
+    color: #8a929b;
+
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+/* ============================================ */
+/* RESULT FOOTER                                 */
+/* ============================================ */
+
+.resultFooter {
+    padding:
+        13px
+        14px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.05);
+
+    background:
+        rgba(0, 0, 0, 0.1);
+
+    color: #9299a2;
+
+    font-size: 10px;
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    text-align: center;
+}
+
+
+/* ============================================ */
+/* TABLET                                        */
+/* ============================================ */
+
+@media (
+    max-width: 1000px
+) {
+
+    .matchesInner {
+        width: min(
+            900px,
+            calc(100% - 40px)
+        );
+    }
+
+
+    .matchTeams {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+
+    .resultsGrid {
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+    }
+
+}
+
+
+/* ============================================ */
+/* HEADER TABLET                                 */
+/* ============================================ */
+
+@media (
+    max-width: 900px
+) {
+
+    .sectionHeader {
+        min-height: auto;
+
+        padding:
+            30px
+            30px
+            22px;
+    }
+
+
+    .headerContent {
+        grid-template-columns:
+            minmax(0, 1fr)
+            220px;
+
+        gap: 25px;
+    }
+
+
+    .headerLogo {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
+
+    .headerLogoArea::before {
+        width: 190px;
+        height: 190px;
+    }
+
+
+    .headerWatermark {
+        right: -170px;
+
+        width: 480px;
+        height: 480px;
+    }
+
+}
+
+
+/* ============================================ */
+/* MOBILE                                        */
+/* ============================================ */
+
+@media (
+    max-width: 700px
+) {
+
+    .matchesSection {
+        padding:
+            35px
+            0
+            70px;
+    }
+
+
+    .matchesInner {
+        width:
+            calc(100% - 28px);
+    }
+
+
+    .sectionHeader {
+        padding:
+            32px
+            24px
+            24px;
+
+        text-align: center;
+    }
+
+
+    .headerContent {
+        grid-template-columns:
+            1fr;
+
+        gap: 18px;
+
+        text-align: center;
+    }
+
+
+    .headerText {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .sectionHeader h2 {
+        font-size: 36px;
+    }
+
+
+    .sectionDescription {
+        max-width: 500px;
+
+        font-size: 15px;
+    }
+
+
+    .headerLogoArea {
+        min-height: 180px;
+
+        order: -1;
+    }
+
+
+    .headerLogo {
+        max-width: 180px;
+        max-height: 180px;
+    }
+
+
+    .headerLogoArea::before {
+        width: 170px;
+        height: 170px;
+    }
+
+
+    .headerWatermark {
+        top: 50%;
+        right: 50%;
+
+        width: 420px;
+        height: 420px;
+
+        transform:
+            translate(
+                50%,
+                -50%
+            );
+
+        opacity: 0.045;
+    }
+
+
+    .headerLine {
+        margin-top: 20px;
+    }
+
+
+    .matchTeams {
+        grid-template-columns:
+            1fr;
+
+        min-height: auto;
+
+        padding:
+            75px
+            20px
+            35px;
+
+        gap: 24px;
+    }
+
+
+    .teamLogoFrame {
+        width: 140px;
+        height: 120px;
+    }
+
+
+    .vsBlock {
+        margin:
+            0
+            0
+            2px;
+    }
+
+
+    .nextMatchFooter {
+        flex-direction: column;
+
+        gap: 14px;
+
+        align-items: stretch;
+
+        text-align: center;
+    }
+
+
+    .matchInfo {
+        justify-content: center;
+    }
+
+
+    .twitchButton {
+        justify-content: center;
+    }
+
+
+    .statsGrid {
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+    }
+
+
+    .resultsGrid {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+/* ============================================ */
+/* SMALL MOBILE                                  */
+/* ============================================ */
+
+@media (
+    max-width: 430px
+) {
+
+    .statsGrid {
+        gap: 9px;
+    }
+
+
+    .statCard {
+        min-height: 110px;
+    }
+
+
+    .statCard strong {
+        font-size: 30px;
+    }
+
+
+    .sectionHeading {
+        gap: 15px;
+    }
+
+
+    .sectionHint {
+        font-size: 8px;
+    }
+
+}
