@@ -17,6 +17,7 @@ import styles from "./page.module.css";
 
 import DegMatches from "@/components/UNTERSEITEN/esport/DegMatches";
 import DegRoster from "@/components/UNTERSEITEN/esport/DegRoster";
+import DegStandings from "@/components/UNTERSEITEN/esport/DegStandings";
 
 /* ============================================ */
 /* PAGE                                        */
@@ -194,11 +195,22 @@ export default function EsportPage() {
             <DegMatches />
 
 
-            {/* ========================================= */}
-            {/* DIVIDER                                   */}
-            {/* ========================================= */}
+          {/* ========================================= */}
+{/* DIVIDER                                   */}
+{/* ========================================= */}
 
-            <div className={styles.divider} />
+<div
+
+    className={styles.divider}
+
+/>
+
+
+{/* ========================================= */}
+{/* STANDINGS                                 */}
+{/* ========================================= */}
+
+<DegStandings />
 
 
            {/* ========================================= */}
@@ -243,8 +255,8 @@ export default function EsportPage() {
                 <Image
                     src="/images/esport/logos/deg-esports.png"
                     alt="DEG eSports"
-                    width={72}
-                    height={72}
+                    width={64}
+                    height={64}
                     className={styles.worldLogoImage}
                 />
             </div>
@@ -304,10 +316,10 @@ export default function EsportPage() {
                 />
 
                 <Image
-                    src="/images/esport/logos/ecl.png"
+                    src="/images/esport/logos/ecl2.png"
                     alt="ECL"
-                    width={64}
-                    height={64}
+                    width={72}
+                    height={72}
                     className={styles.worldLeagueLogo}
                 />
             </div>
@@ -361,8 +373,8 @@ export default function EsportPage() {
                 <Image
                     src="/images/esport/logos/twitch2.png"
                     alt="Twitch"
-                    width={68}
-                    height={68}
+                    width={64}
+                    height={64}
                     className={styles.worldLogoImage}
                 />
             </div>

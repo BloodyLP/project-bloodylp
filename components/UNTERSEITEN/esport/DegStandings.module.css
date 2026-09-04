@@ -1,0 +1,840 @@
+/* ============================================ */
+/*                                              */
+/* BloodyLP                                     */
+/*                                              */
+/* ============================================ */
+/*                                              */
+/* Project:                                     */
+/*                                              */
+/* BloodyLP Website                             */
+/*                                              */
+/* File:                                        */
+/*                                              */
+/* components/UNTERSEITEN/esport/               */
+/* DegStandings.module.css                      */
+/*                                              */
+/* Description:                                 */
+/*                                              */
+/* Styling für DEG eSports Tabelle.             */
+/*                                              */
+/* ============================================ */
+
+
+/* ========================================= */
+/* STANDINGS                                */
+/* ========================================= */
+
+.standings {
+
+    width:
+        100%;
+
+    max-width:
+        1180px;
+
+    margin:
+        0 auto;
+
+    padding:
+        80px 24px;
+
+}
+
+
+/* ========================================= */
+/* HEADER                                   */
+/* ========================================= */
+
+.header {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        24px;
+
+    margin-bottom:
+        28px;
+
+}
+
+
+.headerLeague {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        22px;
+
+}
+
+
+/* ========================================= */
+/* LEAGUE LOGO                              */
+/* ========================================= */
+
+.leagueLogo {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        92px;
+
+    height:
+        92px;
+
+    flex-shrink:
+        0;
+
+    border:
+        1px solid
+        rgba(246, 209, 42, .25);
+
+    border-radius:
+        16px;
+
+    background:
+        rgba(255, 255, 255, .035);
+
+}
+
+
+.leagueLogoImage {
+
+    width:
+        72px;
+
+    height:
+        72px;
+
+    object-fit:
+        contain;
+
+}
+
+
+/* ========================================= */
+/* HEADER CONTENT                           */
+/* ========================================= */
+
+.headerContent {
+
+    min-width:
+        0;
+
+}
+
+
+.eyebrow {
+
+    margin:
+        0 0 8px;
+
+    color:
+        #f6d12a;
+
+    font-size:
+        .78rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .16em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.title {
+
+    margin:
+        0;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(
+            2.3rem,
+            5vw,
+            4rem
+        );
+
+    font-weight:
+        900;
+
+    line-height:
+        .95;
+
+    letter-spacing:
+        -.04em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.leagueName {
+
+    margin:
+        12px 0 0;
+
+    color:
+        #ffffff;
+
+    font-size:
+        1.15rem;
+
+    font-weight:
+        900;
+
+}
+
+
+.leagueMeta {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin-top:
+        8px;
+
+    color:
+        #9ca3af;
+
+    font-size:
+        .8rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .06em;
+
+}
+
+
+.metaDivider {
+
+    color:
+        #dc143c;
+
+}
+
+
+/* ========================================= */
+/* HEADER BADGE                             */
+/* ========================================= */
+
+.headerBadge {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex-shrink:
+        0;
+
+    padding:
+        10px 16px;
+
+    border:
+        1px solid
+        rgba(220, 20, 60, .45);
+
+    border-radius:
+        8px;
+
+    color:
+        #f02d55;
+
+    background:
+        rgba(220, 20, 60, .08);
+
+    font-size:
+        .72rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .1em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+/* ========================================= */
+/* TABLE WRAPPER                            */
+/* ========================================= */
+
+.tableWrapper {
+
+    overflow-x:
+        auto;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, .08);
+
+    border-radius:
+        18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, .045),
+            rgba(255, 255, 255, .015)
+        );
+
+}
+
+
+/* ========================================= */
+/* TABLE HEADER                             */
+/* ========================================= */
+
+.tableHeader {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        60px
+        minmax(280px, 2fr)
+        repeat(8, minmax(60px, 1fr));
+
+    min-width:
+        980px;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, .08);
+
+    background:
+        rgba(0, 0, 0, .25);
+
+}
+
+
+.tableHeader > div {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    min-height:
+        58px;
+
+    padding:
+        0 10px;
+
+    color:
+        #9ca3af;
+
+    font-size:
+        .8rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .08em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.teamHeader {
+
+    justify-content:
+        flex-start !important;
+
+}
+
+
+/* ========================================= */
+/* TABLE BODY                               */
+/* ========================================= */
+
+.tableBody {
+
+    width:
+        100%;
+
+}
+
+
+/* ========================================= */
+/* TABLE ROW                                */
+/* ========================================= */
+
+.tableRow {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        60px
+        minmax(280px, 2fr)
+        repeat(8, minmax(60px, 1fr));
+
+    min-width:
+        980px;
+
+    min-height:
+        74px;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, .055);
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+
+}
+
+
+.tableRow:last-child {
+
+    border-bottom:
+        none;
+
+}
+
+
+.tableRow:hover {
+
+    background:
+        rgba(255, 255, 255, .035);
+
+}
+
+
+/* ========================================= */
+/* DEG ROW                                  */
+/* ========================================= */
+
+.degRow {
+
+    position:
+        relative;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(220, 20, 60, .18),
+            rgba(220, 20, 60, .06)
+        );
+
+    box-shadow:
+        inset 4px 0 0
+        #dc143c;
+
+}
+
+
+.degRow:hover {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(220, 20, 60, .25),
+            rgba(220, 20, 60, .08)
+        );
+
+}
+
+
+/* ========================================= */
+/* POSITION CELL                            */
+/* ========================================= */
+
+.positionCell {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        #ffffff;
+
+    font-size:
+        1.05rem;
+
+    font-weight:
+        900;
+
+}
+
+
+/* ========================================= */
+/* TEAM CELL                                */
+/* ========================================= */
+
+.teamCell {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        16px;
+
+    min-width:
+        0;
+
+    padding:
+        0 18px;
+
+}
+
+
+/* ========================================= */
+/* TEAM LOGO                                */
+/* ========================================= */
+
+.teamLogo {
+
+    width:
+        46px;
+
+    height:
+        46px;
+
+    flex-shrink:
+        0;
+
+    object-fit:
+        contain;
+
+}
+
+
+/* ========================================= */
+/* TEAM NAME                                */
+/* ========================================= */
+
+.teamName {
+
+    overflow:
+        hidden;
+
+    color:
+        #ffffff;
+
+    font-size:
+        1.12rem;
+
+    font-weight:
+        900;
+
+    line-height:
+        1.2;
+
+    letter-spacing:
+        -.015em;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+
+}
+
+
+/* ========================================= */
+/* STAT CELL                                */
+/* ========================================= */
+
+.statCell {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        0 10px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        1rem;
+
+    font-weight:
+        800;
+
+}
+
+
+/* ========================================= */
+/* POINTS CELL                              */
+/* ========================================= */
+
+.pointsCell {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        0 10px;
+
+    color:
+        #f6d12a;
+
+    font-size:
+        1.15rem;
+
+    font-weight:
+        900;
+
+}
+
+
+/* ========================================= */
+/* FOOTER                                   */
+/* ========================================= */
+
+.footer {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px 20px;
+
+    margin-top:
+        20px;
+
+    color:
+        #9ca3af;
+
+    font-size:
+        .72rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .03em;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+.footer span {
+
+    white-space:
+        nowrap;
+
+}
+
+
+/* ========================================= */
+/* TABLET                                   */
+/* ========================================= */
+
+@media (
+    max-width: 900px
+) {
+
+    .standings {
+
+        padding:
+            65px 20px;
+
+    }
+
+
+    .header {
+
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .headerBadge {
+
+        align-self:
+            flex-start;
+
+    }
+
+
+    .leagueLogo {
+
+        width:
+            76px;
+
+        height:
+            76px;
+
+    }
+
+
+    .leagueLogoImage {
+
+        width:
+            58px;
+
+        height:
+            58px;
+
+    }
+
+}
+
+
+/* ========================================= */
+/* MOBILE                                   */
+/* ========================================= */
+
+@media (
+    max-width: 700px
+) {
+
+    .standings {
+
+        padding:
+            55px 16px;
+
+    }
+
+
+    .headerLeague {
+
+        align-items:
+            flex-start;
+
+        gap:
+            16px;
+
+    }
+
+
+    .leagueLogo {
+
+        width:
+            68px;
+
+        height:
+            68px;
+
+        border-radius:
+            12px;
+
+    }
+
+
+    .leagueLogoImage {
+
+        width:
+            52px;
+
+        height:
+            52px;
+
+    }
+
+
+    .title {
+
+        font-size:
+            2.4rem;
+
+    }
+
+
+    .leagueName {
+
+        font-size:
+            1rem;
+
+    }
+
+
+    .footer {
+
+        gap:
+            10px 14px;
+
+        font-size:
+            .65rem;
+
+    }
+
+}

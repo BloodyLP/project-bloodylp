@@ -38,7 +38,7 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "data/service-record/members/theilmfurter.ts"  ],
+, "data/service-record/members/theilmfurter.ts", "data/service-record/members/1-decorations-reference"  ],
 
   "exclude": [
     "node_modules"
