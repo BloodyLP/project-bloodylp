@@ -42,7 +42,7 @@ export const liveData = {
                                           {
         day: "FR",
         date: "04. SEP",
-        time: "13:30 - 16:30 Uhr und 19:30 - 22:30 Uhr",
+        time: "19:30 - Open End",
         title: "NHL 27",
       }, 
                                                 {
