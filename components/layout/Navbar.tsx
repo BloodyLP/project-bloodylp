@@ -19,19 +19,24 @@ const navItems = [
     },
 
     {
-        label: "CONTENT CREATOR",
-        href: "/content-creator",
-    },
+    label: "CONTENT CREATOR",
+    href: "/content-creator",
+},
 
-    {
-        label: "KOMMENTATOR",
-        href: "/kommentator",
-    },
+{
+    label: "KOMMENTATOR",
+    href: "/kommentator",
+},
 
     {
         label: "COMMUNITY",
         href: "/community",
     },
+
+    {
+    label: "NHL 27",
+    href: "/nhl27",
+},
 
     {
         label: "LIVE",

@@ -1,0 +1,2492 @@
+/* ============================================================= */
+/* NHL 27 • BLOODYLP */
+/* ============================================================= */
+
+.page {
+    --lime: #a3e635;
+    --lime-light: #bef264;
+    --lime-dark: #84cc16;
+
+    --gold: #facc15;
+    --gold-light: #fde68a;
+    --gold-dark: #eab308;
+
+    --bg: #050608;
+    --bg-soft: #090b0e;
+
+    --card: rgba(255, 255, 255, 0.035);
+    --card-hover: rgba(163, 230, 53, 0.055);
+
+    --border: rgba(255, 255, 255, 0.09);
+    --border-lime: rgba(163, 230, 53, 0.22);
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(163, 230, 53, 0.08),
+            transparent 32%
+        ),
+        var(--bg);
+
+    color: white;
+
+    padding-top: 50px;
+}
+
+
+/* ============================================================= */
+/* HERO */
+/* ============================================================= */
+
+.hero {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 125px 24px 105px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.heroGlow {
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    top: -350px;
+    right: -180px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(163, 230, 53, 0.13),
+            transparent 70%
+        );
+
+    filter: blur(35px);
+
+    pointer-events: none;
+}
+
+.heroInner {
+    position: relative;
+
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.3fr)
+        minmax(300px, 0.7fr);
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.heroContent {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ============================================================= */
+/* HERO TYPOGRAFIE */
+/* ============================================================= */
+
+.eyebrow,
+.sectionEyebrow {
+    display: inline-flex;
+
+    color: var(--lime);
+
+    font-size: 0.72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.28em;
+
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 14px 0 24px;
+
+    font-size: clamp(
+        4rem,
+        9vw,
+        7.8rem
+    );
+
+    line-height: 0.84;
+
+    font-weight: 900;
+
+    letter-spacing: -0.055em;
+
+    text-transform: uppercase;
+}
+
+.hero h1 span {
+    display: block;
+
+    margin-top: 18px;
+
+    color: rgba(255, 255, 255, 0.42);
+
+    font-size: clamp(
+        1.25rem,
+        2.8vw,
+        2.15rem
+    );
+
+    line-height: 1;
+
+    letter-spacing: 0.16em;
+}
+
+.heroText {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 1.05rem;
+
+    line-height: 1.75;
+}
+
+
+/* ============================================================= */
+/* HERO BUTTONS */
+/* ============================================================= */
+
+.heroActions {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 35px;
+}
+
+.primaryButton,
+.secondaryButton {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    min-height: 48px;
+
+    padding: 0 22px;
+
+    border-radius: 999px;
+
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.primaryButton {
+    background: var(--lime);
+
+    color: #050608;
+}
+
+.primaryButton:hover {
+    transform: translateY(-2px);
+
+    background: var(--lime-light);
+}
+
+.secondaryButton {
+    border: 1px solid var(--border);
+
+    background: rgba(255, 255, 255, 0.035);
+
+    color: white;
+}
+
+.secondaryButton:hover {
+    transform: translateY(-2px);
+
+    border-color: var(--border-lime);
+
+    background: var(--card-hover);
+}
+
+
+/* ============================================================= */
+/* NHL 27 PROJEKT-HUB */
+/* ============================================================= */
+
+.heroVisual {
+    min-height: 390px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 35px;
+
+    border: 1px solid var(--border-lime);
+
+    border-radius: 24px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(163, 230, 53, 0.1),
+            transparent 58%
+        ),
+        rgba(255, 255, 255, 0.02);
+
+    box-shadow:
+        inset 0 0 60px rgba(163, 230, 53, 0.025),
+        0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+.nhlLogo {
+    width: 260px;
+    height: 260px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.nhlLogo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+
+    filter:
+        drop-shadow(
+            0 20px 35px rgba(0, 0, 0, 0.45)
+        )
+        drop-shadow(
+            0 0 30px rgba(163, 230, 53, 0.08)
+        );
+}
+
+.heroVisualText {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-top: 25px;
+
+    text-align: center;
+}
+
+.heroVisualText span {
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 0.65rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.35em;
+}
+
+.heroVisualText strong {
+    margin-top: 5px;
+
+    color: var(--lime);
+
+    font-size: 0.8rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.2em;
+}
+
+
+/* ============================================================= */
+/* ALLGEMEINE SEKTIONEN */
+/* ============================================================= */
+
+.section {
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 85px 24px;
+}
+
+.sectionHeader {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    margin-bottom: 40px;
+}
+
+.sectionHeader h2 {
+    margin: 8px 0 0;
+
+    font-size: clamp(
+        2rem,
+        4vw,
+        3.3rem
+    );
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: -0.045em;
+
+    text-transform: uppercase;
+}
+
+.sectionHeader p {
+    max-width: 430px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+}
+
+.divider {
+    max-width: 1130px;
+
+    height: 1px;
+
+    margin: 0 auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(163, 230, 53, 0.18),
+            transparent
+        );
+}
+
+
+/* ============================================================= */
+/* PROJEKTE */
+/* ============================================================= */
+
+.projectGrid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.projectCard {
+    min-height: 270px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 30px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    background: var(--card);
+
+    color: white;
+
+    text-decoration: none;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.projectCard:hover {
+    border-color: rgba(163, 230, 53, 0.25);
+
+    background: var(--card-hover);
+}
+
+.projectActive {
+    border-color: rgba(163, 230, 53, 0.18);
+}
+
+.projectNumber {
+    position: absolute;
+
+    top: 22px;
+    right: 25px;
+
+    color: rgba(255, 255, 255, 0.15);
+
+    font-size: 0.7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.18em;
+}
+
+.projectIcon {
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+    border: 1px solid rgba(163, 230, 53, 0.25);
+
+    border-radius: 16px;
+
+    background: rgba(163, 230, 53, 0.07);
+
+    color: var(--lime);
+
+    font-size: 1rem;
+
+    font-weight: 900;
+
+    letter-spacing: -0.04em;
+}
+
+.projectContent {
+    max-width: 500px;
+}
+
+.projectStatus,
+.projectStatusMuted {
+    font-size: 0.62rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.2em;
+}
+
+.projectStatus {
+    color: var(--lime);
+}
+
+.projectStatusMuted {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.projectContent h3 {
+    margin: 7px 0 10px;
+
+    font-size: 1.7rem;
+
+    font-weight: 900;
+
+    letter-spacing: -0.025em;
+}
+
+.projectContent p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 0.88rem;
+
+    line-height: 1.7;
+}
+
+.projectArrow,
+.projectArrowMuted {
+    position: absolute;
+
+    right: 30px;
+    bottom: 27px;
+
+    font-size: 1.4rem;
+
+    transition: transform 0.25s ease;
+}
+
+.projectArrow {
+    color: var(--lime);
+}
+
+.projectArrowMuted {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.projectCard:hover .projectArrow {
+    transform: translateX(5px);
+}
+
+
+/* ============================================================= */
+/* SPIELER-STECKBRIEF */
+/* ============================================================= */
+
+.playerProfile {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        300px minmax(0, 1fr);
+
+    min-height: 360px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border-lime);
+
+    border-radius: 22px;
+
+    background:
+        radial-gradient(
+            circle at 18% 50%,
+            rgba(163, 230, 53, 0.055),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.015)
+        );
+
+    box-shadow:
+        0 25px 65px rgba(0, 0, 0, 0.25),
+        inset 0 0 45px rgba(163, 230, 53, 0.018);
+}
+
+
+/* ============================================================= */
+/* SPIELERPROFIL – BILD */
+/* ============================================================= */
+
+.playerProfileImage {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 360px;
+
+    padding: 25px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.045);
+}
+
+.playerProfileImage img {
+    position: relative;
+
+    width: 250px;
+    height: 250px;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    display: block;
+
+    margin: 0;
+
+    object-fit: contain;
+    object-position: center;
+
+    z-index: 1;
+
+    filter:
+        drop-shadow(
+            0 16px 25px rgba(0, 0, 0, 0.5)
+        );
+}
+
+.playerProfileImage::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 55%,
+            rgba(5, 6, 8, 0.18)
+        ),
+        linear-gradient(
+            0deg,
+            rgba(5, 6, 8, 0.2),
+            transparent 35%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ============================================================= */
+/* SPIELERPROFIL – INHALT */
+/* ============================================================= */
+
+.playerProfileContent {
+    min-width: 0;
+
+    padding: 30px 42px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+/* ============================================================= */
+/* SPIELERPROFIL – KENNZEICHNUNG */
+/* ============================================================= */
+
+.playerProfileEyebrow {
+    margin-bottom: 9px;
+
+    color: var(--lime);
+
+    font-size: 0.65rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.25em;
+
+    text-transform: uppercase;
+}
+
+
+/* ============================================================= */
+/* NAME + POSITION */
+/* ============================================================= */
+
+.playerProfileHeader {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding-bottom: 19px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.playerProfileHeader h3 {
+    margin: 0;
+
+    font-size: clamp(
+        2.7rem,
+        4.2vw,
+        4.1rem
+    );
+
+    line-height: 0.88;
+
+    font-weight: 900;
+
+    letter-spacing: -0.055em;
+
+    text-transform: uppercase;
+}
+
+.playerProfileHeader p {
+    margin: 10px 0 0;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 0.76rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.17em;
+
+    text-transform: uppercase;
+}
+
+
+/* ============================================================= */
+/* TRIKOTNUMMER – LIME-KASTEN */
+/* ============================================================= */
+
+.playerProfileNumber {
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 92px;
+    min-height: 58px;
+
+    padding: 8px 15px;
+
+    border: 1px solid rgba(163, 230, 53, 0.28);
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(163, 230, 53, 0.1),
+            rgba(163, 230, 53, 0.035)
+        );
+
+    box-shadow:
+        inset 0 0 25px rgba(163, 230, 53, 0.025),
+        0 0 20px rgba(163, 230, 53, 0.035);
+
+    color: var(--lime);
+
+    font-size: 2.8rem;
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: -0.07em;
+}
+
+
+/* ============================================================= */
+/* SPIELERDATEN */
+/* ============================================================= */
+
+.playerProfileGrid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 0;
+
+    margin-top: 3px;
+}
+
+.playerProfileItem {
+    min-width: 0;
+
+    padding: 13px 22px 13px 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.playerProfileItem:nth-child(even) {
+    padding-left: 22px;
+
+    border-left: 1px solid var(--border);
+}
+
+.playerProfileItem span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: rgba(255, 255, 255, 0.38);
+
+    font-size: 0.58rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+}
+
+.playerProfileItem strong {
+    display: block;
+
+    overflow: hidden;
+
+    color: rgba(255, 255, 255, 0.96);
+
+    font-size: 1.02rem;
+
+    font-weight: 900;
+
+    line-height: 1.25;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ============================================================= */
+/* AKTUELLER VEREIN + VERTRAG */
+/* ============================================================= */
+
+.playerProfileContract {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(180px, 0.45fr);
+
+    gap: 25px;
+
+    margin-top: 16px;
+
+    padding: 14px 18px;
+
+    border: 1px solid rgba(163, 230, 53, 0.22);
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(163, 230, 53, 0.06),
+            rgba(163, 230, 53, 0.018)
+        );
+
+    box-shadow:
+        inset 0 0 30px rgba(163, 230, 53, 0.018);
+}
+
+.playerProfileContract > div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.playerProfileContract span {
+    color: rgba(255, 255, 255, 0.38);
+
+    font-size: 0.54rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+.playerProfileContract strong {
+    color: var(--lime);
+
+    font-size: 0.86rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.05em;
+}
+
+
+/* ============================================================= */
+/* UNTERÜBERSCHRIFTEN */
+/* ============================================================= */
+
+.subHeader {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 12px;
+
+    margin-top: 70px;
+
+    margin-bottom: 25px;
+}
+
+.subHeader span {
+    color: var(--lime);
+
+    font-size: 0.62rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.2em;
+}
+
+.subHeader h3 {
+    margin: 0;
+
+    font-size: 1.6rem;
+
+    font-weight: 900;
+
+    letter-spacing: -0.025em;
+
+    text-transform: uppercase;
+}
+
+
+/* ============================================================= */
+/* STATISTIKEN */
+/* ============================================================= */
+
+.statsGrid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.statCard {
+    min-height: 135px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 20px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    background: var(--card);
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.statCard:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(163, 230, 53, 0.16);
+
+    background: var(--card-hover);
+}
+
+.statCard strong {
+    color: white;
+
+    font-size: clamp(
+        2rem,
+        4vw,
+        3rem
+    );
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: -0.06em;
+}
+
+.statCard span {
+    margin-top: 10px;
+
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 0.6rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.16em;
+}
+
+.statCardHighlight {
+    border-color: rgba(163, 230, 53, 0.2);
+
+    background: rgba(163, 230, 53, 0.05);
+}
+
+.statCardHighlight strong {
+    color: var(--lime);
+}
+
+
+/* ============================================================= */
+/* KARRIERE-VEREINE */
+/* ============================================================= */
+
+.teamGrid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+.careerTeamCard {
+    min-height: 390px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 24px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    background: var(--card);
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.careerTeamCard:hover {
+    border-color: rgba(163, 230, 53, 0.2);
+
+    background: var(--card-hover);
+}
+
+
+/* ============================================================= */
+/* KARTENKOPF */
+/* ============================================================= */
+
+.careerTeamHeader {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.teamSeason {
+    color: rgba(255, 255, 255, 0.28);
+
+    font-size: 0.65rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+}
+
+.teamStatusActive,
+.teamStatusInactive {
+    padding: 5px 8px;
+
+    border-radius: 5px;
+
+    font-size: 0.48rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.12em;
+
+    white-space: nowrap;
+}
+
+.teamStatusActive {
+    border: 1px solid rgba(163, 230, 53, 0.25);
+
+    background: rgba(163, 230, 53, 0.07);
+
+    color: var(--lime);
+}
+
+.teamStatusInactive {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: rgba(255, 255, 255, 0.025);
+
+    color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* ============================================================= */
+/* LOGO + VEREIN */
+/* ============================================================= */
+
+.careerTeamIdentity {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 25px;
+
+    margin-bottom: 20px;
+}
+
+.careerTeamLogo {
+    width: 82px;
+    height: 82px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.careerTeamLogo img {
+    width: 82px;
+    height: 82px;
+
+    object-fit: contain;
+}
+
+.careerTeamInfo {
+    min-width: 0;
+}
+
+.careerTeamInfo span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--lime);
+
+    font-size: 0.55rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.16em;
+
+    line-height: 1.3;
+}
+
+.careerTeamInfo h4 {
+    margin: 0;
+
+    color: white;
+
+    font-size: 1.15rem;
+
+    font-weight: 900;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.025em;
+}
+
+
+/* ============================================================= */
+/* VERTRAG */
+/* ============================================================= */
+
+.teamContract {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+
+    padding: 11px 13px;
+
+    border: 1px solid rgba(163, 230, 53, 0.12);
+
+    border-radius: 9px;
+
+    background: rgba(163, 230, 53, 0.035);
+}
+
+.teamContract span {
+    color: rgba(255, 255, 255, 0.3);
+
+    font-size: 0.52rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+}
+
+.teamContract strong {
+    color: var(--lime);
+
+    font-size: 0.58rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.08em;
+
+    text-align: right;
+}
+
+
+/* ============================================================= */
+/* VEREINS-STATISTIKEN */
+/* ============================================================= */
+
+.teamStats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    margin-top: auto;
+
+    border-top: 1px solid var(--border);
+}
+
+.teamStats > div {
+    min-height: 58px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 8px 10px;
+
+    border-right: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.teamStats > div:nth-child(3n) {
+    border-right: 0;
+}
+
+.teamStats > div:nth-child(n + 4) {
+    border-bottom: 0;
+}
+
+.teamStats strong {
+    color: white;
+
+    font-size: 1.1rem;
+
+    line-height: 1;
+
+    font-weight: 900;
+}
+
+.teamStats span {
+    margin-top: 5px;
+
+    color: rgba(255, 255, 255, 0.28);
+
+    font-size: 0.48rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+}
+
+
+/* ============================================================= */
+/* AUSZEICHNUNGEN */
+/* ============================================================= */
+
+.awardGrid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+.awardCard {
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(234, 179, 8, 0.35);
+
+    border-radius: 18px;
+
+    background:
+        radial-gradient(
+            circle at 0% 50%,
+            rgba(234, 179, 8, 0.1),
+            transparent 45%
+        ),
+        rgba(255, 255, 255, 0.025);
+
+    box-shadow:
+        inset 0 0 35px rgba(234, 179, 8, 0.025),
+        0 0 25px rgba(234, 179, 8, 0.025);
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+.awardCard::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 25px;
+    right: 25px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(250, 204, 21, 0.75),
+            transparent
+        );
+
+    opacity: 0.7;
+}
+
+.awardCard:hover {
+    border-color: rgba(250, 204, 21, 0.65);
+
+    background:
+        radial-gradient(
+            circle at 0% 50%,
+            rgba(234, 179, 8, 0.15),
+            transparent 50%
+        ),
+        rgba(255, 255, 255, 0.035);
+
+    box-shadow:
+        inset 0 0 45px rgba(234, 179, 8, 0.035),
+        0 0 35px rgba(234, 179, 8, 0.08);
+
+    transform: translateY(-4px);
+}
+
+
+/* ============================================================= */
+/* SILBER-AWARD */
+/* ============================================================= */
+
+.awardCardSilver {
+    border-color: rgba(203, 213, 225, 0.42);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(203, 213, 225, 0.055),
+            rgba(255, 255, 255, 0.018)
+        );
+
+    box-shadow:
+        inset 0 0 45px rgba(203, 213, 225, 0.025),
+        0 0 35px rgba(203, 213, 225, 0.055);
+}
+
+.awardCardSilver:hover {
+    border-color: rgba(203, 213, 225, 0.58);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(203, 213, 225, 0.075),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    box-shadow:
+        inset 0 0 45px rgba(203, 213, 225, 0.035),
+        0 0 35px rgba(203, 213, 225, 0.08);
+}
+
+.awardCardSilver::before {
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(203, 213, 225, 0.75),
+            transparent
+        );
+}
+
+
+/* ============================================================= */
+/* TROPHÄE */
+/* ============================================================= */
+
+.awardIcon {
+    width: 68px;
+    height: 68px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(250, 204, 21, 0.38);
+
+    border-radius: 14px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(250, 204, 21, 0.12),
+            rgba(250, 204, 21, 0.025) 70%
+        );
+
+    box-shadow:
+        inset 0 0 20px rgba(250, 204, 21, 0.04),
+        0 0 18px rgba(250, 204, 21, 0.05);
+
+    overflow: hidden;
+}
+
+.awardIcon img {
+    width: 100%;
+    height: 100%;
+
+    padding: 7px;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 3px 6px rgba(0, 0, 0, 0.5)
+        )
+        drop-shadow(
+            0 0 8px rgba(250, 204, 21, 0.15)
+        );
+}
+
+
+/* ============================================================= */
+/* SILBER-MEDAILLEN-KASTEN */
+/* ============================================================= */
+
+.awardIconSilver {
+    border-color: rgba(203, 213, 225, 0.55);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(203, 213, 225, 0.16),
+            rgba(203, 213, 225, 0.025) 70%
+        );
+
+    box-shadow:
+        inset 0 0 20px rgba(203, 213, 225, 0.055),
+        0 0 18px rgba(203, 213, 225, 0.1);
+}
+
+.awardIconSilver img {
+    filter:
+        drop-shadow(
+            0 3px 6px rgba(0, 0, 0, 0.5)
+        )
+        drop-shadow(
+            0 0 10px rgba(203, 213, 225, 0.28)
+        );
+}
+
+
+/* ============================================================= */
+/* AWARD-TEXT */
+/* ============================================================= */
+
+.awardCard > div:last-child {
+    min-width: 0;
+}
+
+.awardCard span {
+    display: block;
+
+    color: var(--gold);
+
+    font-size: 0.6rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+}
+
+.awardCard h4 {
+    margin: 6px 0 8px;
+
+    color: var(--gold-light);
+
+    font-size: 1.15rem;
+
+    font-weight: 900;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.02em;
+}
+
+.awardCard p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 0.82rem;
+
+    line-height: 1.65;
+}
+
+.awardCard h4::after {
+    content: "";
+
+    display: block;
+
+    width: 38px;
+    height: 2px;
+
+    margin-top: 10px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--gold),
+            rgba(250, 204, 21, 0)
+        );
+}
+
+
+/* ============================================================= */
+/* SILBER-AWARD – TEXT */
+/* ============================================================= */
+
+.awardCardSilver span {
+    color: #cbd5e1;
+}
+
+.awardCardSilver h4 {
+    color: #e2e8f0;
+}
+
+.awardCardSilver h4::after {
+    background:
+        linear-gradient(
+            90deg,
+            #cbd5e1,
+            rgba(203, 213, 225, 0)
+        );
+}
+
+
+/* ============================================================= */
+/* HIGHLIGHTS */
+/* ============================================================= */
+
+.highlightGrid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+.highlightCard {
+    min-height: 190px;
+
+    position: relative;
+
+    padding: 25px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 18px;
+
+    background: var(--card);
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.highlightCard:hover {
+    border-color: rgba(163, 230, 53, 0.2);
+
+    background: var(--card-hover);
+
+    transform: translateY(-4px);
+}
+
+.highlightNumber {
+    margin-bottom: 28px;
+
+    color: rgba(255, 255, 255, 0.14);
+
+    font-size: 1.8rem;
+
+    font-weight: 900;
+}
+
+
+/* ============================================================= */
+/* HIGHLIGHTS – DATUM OBEN RECHTS */
+/* ============================================================= */
+
+.highlightDate {
+    position: absolute;
+
+    top: 22px;
+    right: 25px;
+
+    color: rgba(255, 255, 255, 0.3);
+
+    font-size: 0.58rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.16em;
+
+    line-height: 1;
+
+    text-transform: uppercase;
+}
+
+.highlightCard span {
+    color: var(--lime);
+
+    font-size: 0.58rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+.highlightCard h4 {
+    margin: 5px 0 7px;
+
+    font-size: 1.1rem;
+
+    font-weight: 900;
+}
+
+.highlightCard p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.42);
+
+    font-size: 0.82rem;
+
+    line-height: 1.65;
+}
+
+
+/* ============================================================= */
+/* ABSCHLUSS */
+/* ============================================================= */
+
+.bottomSection {
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding: 70px 24px 120px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+.bottomSection span {
+    color: var(--lime);
+
+    font-size: 0.65rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.22em;
+}
+
+.bottomSection h2 {
+    margin: 10px 0 0;
+
+    font-size: clamp(
+        2.5rem,
+        5vw,
+        4.5rem
+    );
+
+    line-height: 0.9;
+
+    font-weight: 900;
+
+    letter-spacing: -0.05em;
+}
+
+.bottomSection p {
+    max-width: 400px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.38);
+
+    font-size: 0.85rem;
+
+    line-height: 1.7;
+}
+
+
+/* ============================================================= */
+/* RESPONSIVE • 1000 PX */
+/* ============================================================= */
+
+@media (max-width: 1000px) {
+    .heroInner {
+        grid-template-columns: 1fr;
+    }
+
+    .heroVisual {
+        max-width: 500px;
+
+        width: 100%;
+
+        margin: 0 auto;
+    }
+
+    .playerProfile {
+        grid-template-columns:
+            250px minmax(0, 1fr);
+
+        min-height: 340px;
+    }
+
+    .playerProfileImage {
+        min-height: 340px;
+    }
+
+    .playerProfileImage img {
+        width: 215px;
+        height: 215px;
+    }
+
+    .playerProfileContent {
+        padding: 28px 32px;
+    }
+
+    .playerProfileHeader h3 {
+        font-size: clamp(
+            2.4rem,
+            4vw,
+            3.5rem
+        );
+    }
+
+    .playerProfileNumber {
+        min-width: 82px;
+
+        min-height: 52px;
+
+        font-size: 2.4rem;
+    }
+
+    .statsGrid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .teamGrid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .highlightGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ============================================================= */
+/* RESPONSIVE • 700 PX */
+/* ============================================================= */
+
+@media (max-width: 700px) {
+    .page {
+        padding-top: 20px;
+    }
+
+
+    /* ========================================================= */
+    /* HERO */
+    /* ========================================================= */
+
+    .hero {
+        padding: 95px 20px 70px;
+    }
+
+    .heroInner {
+        gap: 45px;
+    }
+
+    .hero h1 {
+        font-size: clamp(
+            3.5rem,
+            17vw,
+            5.5rem
+        );
+    }
+
+    .hero h1 span {
+        font-size: 1rem;
+
+        letter-spacing: 0.12em;
+    }
+
+    .heroText {
+        font-size: 0.9rem;
+    }
+
+    .heroActions {
+        flex-direction: column;
+    }
+
+    .primaryButton,
+    .secondaryButton {
+        width: 100%;
+    }
+
+    .heroVisual {
+        min-height: 310px;
+
+        padding: 25px;
+    }
+
+    .nhlLogo {
+        width: 190px;
+        height: 190px;
+    }
+
+
+    /* ========================================================= */
+    /* SEKTIONEN */
+    /* ========================================================= */
+
+    .section {
+        padding: 60px 20px;
+    }
+
+    .sectionHeader {
+        display: block;
+
+        margin-bottom: 30px;
+    }
+
+    .sectionHeader p {
+        margin-top: 18px;
+    }
+
+
+    /* ========================================================= */
+    /* PROJEKTE */
+    /* ========================================================= */
+
+    .projectGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .projectCard {
+        min-height: 245px;
+    }
+
+
+    /* ========================================================= */
+    /* SPIELER-STECKBRIEF */
+    /* ========================================================= */
+
+    .playerProfile {
+        grid-template-columns: 1fr;
+
+        min-height: 0;
+    }
+
+    .playerProfileImage {
+        min-height: 280px;
+
+        height: 280px;
+
+        padding: 15px;
+
+        border-right: 0;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+    .playerProfileImage img {
+        width: 230px;
+        height: 230px;
+
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .playerProfileContent {
+        padding: 28px 22px 24px;
+    }
+
+    .playerProfileHeader {
+        gap: 15px;
+
+        padding-bottom: 18px;
+    }
+
+    .playerProfileHeader h3 {
+        font-size: clamp(
+            2.1rem,
+            9vw,
+            3.2rem
+        );
+    }
+
+    .playerProfileHeader p {
+        font-size: 0.6rem;
+
+        line-height: 1.5;
+    }
+
+    .playerProfileNumber {
+        min-width: 72px;
+
+        min-height: 48px;
+
+        padding: 7px 11px;
+
+        font-size: 2.1rem;
+    }
+
+    .playerProfileGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .playerProfileItem,
+    .playerProfileItem:nth-child(even) {
+        padding: 13px 0;
+
+        border-left: 0;
+    }
+
+    .playerProfileItem:last-child {
+        border-bottom: 0;
+    }
+
+    .playerProfileItem strong {
+        font-size: 0.95rem;
+    }
+
+    .playerProfileContract {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        margin-top: 16px;
+    }
+
+
+    /* ========================================================= */
+    /* STATISTIKEN */
+    /* ========================================================= */
+
+    .statsGrid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    /* ========================================================= */
+    /* KARRIERE-TEAMS */
+    /* ========================================================= */
+
+    .teamGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .subHeader {
+        margin-top: 55px;
+    }
+
+    .careerTeamCard {
+        min-height: 370px;
+    }
+
+    .careerTeamIdentity {
+        gap: 16px;
+    }
+
+    .careerTeamLogo {
+        width: 72px;
+        height: 72px;
+    }
+
+    .careerTeamLogo img {
+        width: 72px;
+        height: 72px;
+    }
+
+    .careerTeamInfo h4 {
+        font-size: 1.05rem;
+    }
+
+    .teamContract {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .teamContract strong {
+        text-align: left;
+    }
+
+    .teamStats > div {
+        padding: 8px 6px;
+    }
+
+    .teamStats strong {
+        font-size: 1rem;
+    }
+
+    .teamStats span {
+        font-size: 0.44rem;
+    }
+
+
+    /* ========================================================= */
+    /* AUSZEICHNUNGEN */
+    /* ========================================================= */
+
+    .awardGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .awardCard {
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    .awardIcon {
+        width: 62px;
+        height: 62px;
+    }
+
+    .awardIcon img {
+        padding: 6px;
+    }
+
+    .awardCard h4 {
+        font-size: 1.05rem;
+    }
+
+    .awardCard p {
+        font-size: 0.78rem;
+    }
+
+
+    /* ========================================================= */
+    /* HIGHLIGHTS */
+    /* ========================================================= */
+
+    .highlightGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .highlightDate {
+        top: 20px;
+
+        right: 20px;
+
+        font-size: 0.54rem;
+    }
+
+
+    /* ========================================================= */
+    /* ABSCHLUSS */
+    /* ========================================================= */
+
+    .bottomSection {
+        display: block;
+
+        padding: 50px 20px 90px;
+    }
+
+    .bottomSection p {
+        margin-top: 30px;
+    }
+}
+
+
+/* ============================================================= */
+/* RESPONSIVE • 420 PX */
+/* ============================================================= */
+
+@media (max-width: 420px) {
+    .hero h1 {
+        font-size: clamp(
+            3rem,
+            16vw,
+            4.5rem
+        );
+    }
+
+    .hero h1 span {
+        font-size: 0.85rem;
+    }
+
+
+    /* ========================================================= */
+    /* STECKBRIEF */
+    /* ========================================================= */
+
+    .playerProfileImage {
+        min-height: 250px;
+
+        height: 250px;
+
+        padding: 12px;
+    }
+
+    .playerProfileImage img {
+        width: 205px;
+        height: 205px;
+    }
+
+    .playerProfileContent {
+        padding: 24px 18px 22px;
+    }
+
+    .playerProfileHeader h3 {
+        font-size: 1.9rem;
+    }
+
+    .playerProfileHeader p {
+        font-size: 0.52rem;
+    }
+
+    .playerProfileNumber {
+        min-width: 64px;
+
+        min-height: 44px;
+
+        padding: 6px 9px;
+
+        font-size: 1.8rem;
+    }
+
+    .playerProfileItem strong {
+        font-size: 0.88rem;
+    }
+
+
+    /* ========================================================= */
+    /* STATISTIKEN */
+    /* ========================================================= */
+
+    .statsGrid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .statCard {
+        min-height: 115px;
+
+        padding: 17px;
+    }
+
+    .statCard strong {
+        font-size: 2rem;
+    }
+
+
+    /* ========================================================= */
+    /* KARRIERE-TEAMS */
+    /* ========================================================= */
+
+    .careerTeamCard {
+        padding: 20px;
+    }
+
+    .careerTeamIdentity {
+        gap: 12px;
+    }
+
+    .careerTeamLogo {
+        width: 64px;
+        height: 64px;
+    }
+
+    .careerTeamLogo img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .careerTeamInfo h4 {
+        font-size: 0.95rem;
+    }
+
+    .teamStatusActive,
+    .teamStatusInactive {
+        font-size: 0.42rem;
+
+        padding: 4px 6px;
+    }
+
+    .teamStats strong {
+        font-size: 0.9rem;
+    }
+
+    .teamStats span {
+        font-size: 0.4rem;
+
+        letter-spacing: 0.08em;
+    }
+
+
+    /* ========================================================= */
+    /* AUSZEICHNUNGEN */
+    /* ========================================================= */
+
+    .awardCard {
+        gap: 12px;
+
+        padding: 17px;
+    }
+
+    .awardIcon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .awardCard h4 {
+        font-size: 0.95rem;
+    }
+
+    .awardCard p {
+        font-size: 0.74rem;
+    }
+
+
+    /* ========================================================= */
+    /* HIGHLIGHTS */
+    /* ========================================================= */
+
+    .highlightDate {
+        top: 18px;
+
+        right: 18px;
+
+        font-size: 0.5rem;
+    }
+}
+
+/* ============================================================= */
+/* KARRIERE-VEREINE • DEUTLICH GRÖSSERE TYPOGRAFIE */
+/* ============================================================= */
+
+/* Saison */
+.teamSeason {
+    font-size: 0.95rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+/* Status */
+.teamStatusActive,
+.teamStatusInactive {
+    font-size: 0.68rem;
+    font-weight: 900;
+}
+
+/* Liga / Wettbewerb */
+.careerTeamInfo span {
+    font-size: 0.78rem;
+    font-weight: 900;
+    color: var(--lime);
+}
+
+/* Vereinsname */
+.careerTeamInfo h4 {
+    font-size: 1.55rem;
+    line-height: 1.15;
+}
+
+/* ============================================================= */
+/* VERTRAG */
+/* ============================================================= */
+
+.teamContract span {
+    font-size: 0.72rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.52);
+}
+
+.teamContract strong {
+    font-size: 0.82rem;
+    font-weight: 900;
+}
+
+
+/* ============================================================= */
+/* VEREINS-STATISTIKEN */
+/* ============================================================= */
+
+.teamStats strong {
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+.teamStats span {
+    margin-top: 6px;
+    font-size: 0.65rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.48);
+    letter-spacing: 0.12em;
+}
+
+
+/* ============================================================= */
+/* MOBILE • 700 PX */
+/* ============================================================= */
+
+@media (max-width: 700px) {
+
+    .teamSeason {
+        font-size: 0.85rem;
+    }
+
+    .teamStatusActive,
+    .teamStatusInactive {
+        font-size: 0.62rem;
+    }
+
+    .careerTeamInfo span {
+        font-size: 0.7rem;
+    }
+
+    .careerTeamInfo h4 {
+        font-size: 1.35rem;
+    }
+
+    .teamContract span {
+        font-size: 0.66rem;
+    }
+
+    .teamContract strong {
+        font-size: 0.76rem;
+    }
+
+    .teamStats strong {
+        font-size: 1.25rem;
+    }
+
+    .teamStats span {
+        font-size: 0.58rem;
+    }
+}
+
+
+/* ============================================================= */
+/* MOBILE • 420 PX */
+/* ============================================================= */
+
+@media (max-width: 420px) {
+
+    .teamSeason {
+        font-size: 0.8rem;
+    }
+
+    .teamStatusActive,
+    .teamStatusInactive {
+        font-size: 0.56rem;
+    }
+
+    .careerTeamInfo span {
+        font-size: 0.64rem;
+    }
+
+    .careerTeamInfo h4 {
+        font-size: 1.2rem;
+    }
+
+    .teamContract span {
+        font-size: 0.62rem;
+    }
+
+    .teamContract strong {
+        font-size: 0.72rem;
+    }
+
+    .teamStats strong {
+        font-size: 1.15rem;
+    }
+
+    .teamStats span {
+        font-size: 0.54rem;
+    }
+}

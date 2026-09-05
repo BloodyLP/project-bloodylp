@@ -166,7 +166,7 @@ export const degMatches: DegMatch[] = [
             "MIESKISSAT",
 
         opponentLogo:
-            "/images/esport/mieskissat-logo.png",
+            "/images/esport/mieskissat.png",
 
         degScore:
             1,
