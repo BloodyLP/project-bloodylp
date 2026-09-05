@@ -24,6 +24,6 @@ export const playerProfile: PlayerProfile = {
     weight: "100 KG",
     currentTeam: "Toronto Maple Leafs",
     currentLeague: "NHL",
-    contractUntil: "bis 2028/29",
+    contractUntil: "2028/29",
     image: "/images/nhl27/toronto2.png",
 };
