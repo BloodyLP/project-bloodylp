@@ -16,7 +16,7 @@ export const careerAwards: CareerAward[] = [
     },
 
     {
-    year: "2026/27",
+    year: "2025/26",
     title: "Vizeweltmeister U20",
     description:
         "Vizeweltmeister mit der deutschen U20-Nationalmannschaft.",
