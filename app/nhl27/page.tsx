@@ -26,8 +26,9 @@ import {
 
 import styles from "./page.module.css";
 
-
 export default function NHL27Page() {
+    const currentTeam = careerTeams[0];
+
     return (
         <main className={styles.page}>
 
@@ -46,17 +47,9 @@ export default function NHL27Page() {
                     {/* ================================================= */}
 
                     <motion.div
-                        initial={{
-                            opacity: 0,
-                            y: 20,
-                        }}
-                        animate={{
-                            opacity: 1,
-                            y: 0,
-                        }}
-                        transition={{
-                            duration: 0.7,
-                        }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.7 }}
                         className={styles.heroContent}
                     >
 
@@ -64,22 +57,18 @@ export default function NHL27Page() {
                             NHL 27
                         </div>
 
-
                         <h1>
                             NHL 27
-
                             <span>
                                 PROJEKTE &amp; KARRIEREN
                             </span>
                         </h1>
-
 
                         <p className={styles.heroText}>
                             Die NHL-27-Projekte von BloodyLP.
                             Karrieren, Statistiken, Erfolge und
                             zukünftige Spielmodi an einem Ort.
                         </p>
-
 
                         <div className={styles.heroActions}>
 
@@ -88,12 +77,8 @@ export default function NHL27Page() {
                                 className={styles.primaryButton}
                             >
                                 BE A PRO
-
-                                <span>
-                                    →
-                                </span>
+                                <span>→</span>
                             </Link>
-
 
                             <Link
                                 href="#projekte"
@@ -139,7 +124,6 @@ export default function NHL27Page() {
 
                         </div>
 
-
                         <div className={styles.heroVisualText}>
 
                             <span>
@@ -182,7 +166,6 @@ export default function NHL27Page() {
 
                     </div>
 
-
                     <p>
                         Hier entstehen und wachsen die verschiedenen
                         NHL-27-Projekte von BloodyLP.
@@ -199,12 +182,8 @@ export default function NHL27Page() {
 
                     <motion.a
                         href="#be-a-pro"
-                        whileHover={{
-                            y: -6,
-                        }}
-                        transition={{
-                            duration: 0.2,
-                        }}
+                        whileHover={{ y: -6 }}
+                        transition={{ duration: 0.2 }}
                         className={`${styles.projectCard} ${styles.projectActive}`}
                     >
 
@@ -212,11 +191,9 @@ export default function NHL27Page() {
                             01
                         </div>
 
-
                         <div className={styles.projectIcon}>
                             27
                         </div>
-
 
                         <div className={styles.projectContent}>
 
@@ -236,7 +213,6 @@ export default function NHL27Page() {
 
                         </div>
 
-
                         <span className={styles.projectArrow}>
                             →
                         </span>
@@ -249,12 +225,8 @@ export default function NHL27Page() {
                     {/* ================================================= */}
 
                     <motion.div
-                        whileHover={{
-                            y: -4,
-                        }}
-                        transition={{
-                            duration: 0.2,
-                        }}
+                        whileHover={{ y: -4 }}
+                        transition={{ duration: 0.2 }}
                         className={styles.projectCard}
                     >
 
@@ -262,11 +234,9 @@ export default function NHL27Page() {
                             02
                         </div>
 
-
                         <div className={styles.projectIcon}>
                             GM
                         </div>
-
 
                         <div className={styles.projectContent}>
 
@@ -285,7 +255,6 @@ export default function NHL27Page() {
                             </p>
 
                         </div>
-
 
                         <span className={styles.projectArrowMuted}>
                             →
@@ -323,7 +292,6 @@ export default function NHL27Page() {
                         </h2>
 
                     </div>
-
 
                     <p>
                         Die komplette Karriere mit aktuellem Verein,
@@ -483,10 +451,6 @@ export default function NHL27Page() {
                         </div>
 
 
-                        {/* ================================================= */}
-                        {/* VEREIN + VERTRAG */}
-                        {/* ================================================= */}
-
                         <div className={styles.playerProfileContract}>
 
                             <div>
@@ -509,9 +473,7 @@ export default function NHL27Page() {
                                 </span>
 
                                 <strong>
-                                    {playerProfile.contractFrom}
-                                    {" – "}
-                                    {playerProfile.contractUntil}
+                                    BIS SAISON {playerProfile.contractUntil}
                                 </strong>
 
                             </div>
@@ -524,17 +486,17 @@ export default function NHL27Page() {
 
 
                 {/* ===================================================== */}
-                {/* KARRIERE-STATISTIKEN */}
+                {/* STATISTIKEN */}
                 {/* ===================================================== */}
 
                 <div className={styles.subHeader}>
 
                     <span>
-                        KARRIERE-STATISTIKEN
+                        KARRIERE
                     </span>
 
                     <h3>
-                        HAUPTRUNDE
+                        STATISTIKEN
                     </h3>
 
                 </div>
@@ -577,59 +539,6 @@ export default function NHL27Page() {
 
 
                 {/* ===================================================== */}
-                {/* PLAYOFF-KARRIERE-STATISTIKEN */}
-                {/* ===================================================== */}
-
-                <div className={styles.subHeader}>
-
-                    <span>
-                        KARRIERE-STATISTIKEN
-                    </span>
-
-                    <h3>
-                        PLAYOFFS
-                    </h3>
-
-                </div>
-
-
-                <div className={styles.statsGrid}>
-
-                    <StatCard
-                        value={playerCareer.playoffStats.games}
-                        label="SPIELE"
-                    />
-
-                    <StatCard
-                        value={playerCareer.playoffStats.goals}
-                        label="TORE"
-                    />
-
-                    <StatCard
-                        value={playerCareer.playoffStats.assists}
-                        label="ASSISTS"
-                    />
-
-                    <StatCard
-                        value={playerCareer.playoffStats.points}
-                        label="PUNKTE"
-                        highlight
-                    />
-
-                    <StatCard
-                        value={playerCareer.playoffStats.plusMinus}
-                        label="+ / -"
-                    />
-
-                    <StatCard
-                        value={playerCareer.playoffStats.pim}
-                        label="STRAFMINUTEN"
-                    />
-
-                </div>
-
-
-                {/* ===================================================== */}
                 {/* KARRIERE-TEAMS */}
                 {/* ===================================================== */}
 
@@ -652,9 +561,7 @@ export default function NHL27Page() {
 
                         <motion.div
                             key={`${team.team}-${index}`}
-                            whileHover={{
-                                y: -4,
-                            }}
+                            whileHover={{ y: -4 }}
                             className={styles.careerTeamCard}
                         >
 
@@ -667,7 +574,6 @@ export default function NHL27Page() {
                                 <div className={styles.teamSeason}>
                                     {team.season}
                                 </div>
-
 
                                 <span
                                     className={
@@ -855,9 +761,7 @@ export default function NHL27Page() {
 
                         <motion.div
                             key={`${award.title}-${index}`}
-                            whileHover={{
-                                y: -4,
-                            }}
+                            whileHover={{ y: -4 }}
                             className={`${styles.awardCard} ${
                                 award.variant === "silver"
                                     ? styles.awardCardSilver
@@ -931,35 +835,30 @@ export default function NHL27Page() {
 
                         <motion.div
                             key={`${highlight.title}-${index}`}
-                            whileHover={{
-                                y: -4,
-                            }}
+                            whileHover={{ y: -4 }}
                             className={styles.highlightCard}
                         >
-
-                            <span className={styles.highlightDate}>
-                                {highlight.date}
-                            </span>
-
 
                             <div className={styles.highlightNumber}>
                                 {String(index + 1).padStart(2, "0")}
                             </div>
 
 
-                            <span>
-                                {highlight.category}
-                            </span>
+                            <div>
 
+                                <span>
+                                    {highlight.category}
+                                </span>
 
-                            <h4>
-                                {highlight.title}
-                            </h4>
+                                <h4>
+                                    {highlight.title}
+                                </h4>
 
+                                <p>
+                                    {highlight.description}
+                                </p>
 
-                            <p>
-                                {highlight.description}
-                            </p>
+                            </div>
 
                         </motion.div>
 
@@ -990,7 +889,6 @@ export default function NHL27Page() {
 
                 </div>
 
-
                 <p>
                     Dieser Bereich wird kontinuierlich erweitert
                     und kann zukünftig weitere NHL-27-Spielmodi,
@@ -1017,12 +915,12 @@ function StatCard({
     label: string;
     highlight?: boolean;
 }) {
+
     return (
+
         <div
             className={`${styles.statCard} ${
-                highlight
-                    ? styles.statCardHighlight
-                    : ""
+                highlight ? styles.statCardHighlight : ""
             }`}
         >
 
@@ -1035,5 +933,6 @@ function StatCard({
             </span>
 
         </div>
+
     );
 }
