@@ -34,7 +34,7 @@ export const careerTeams: CareerTeam[] = [
     },
 
     {
-        season: "2026/27",
+        season: "2025/26",
         team: "Skellefteå AIK",
         league: "CHAMPIONS HOCKEY LEAGUE",
         logo: "/images/nhl27/skelleftea-aik.svg",
@@ -50,7 +50,7 @@ export const careerTeams: CareerTeam[] = [
     },
 
     {
-        season: "2026/27",
+        season: "2025/26",
         team: "Deutschland U20",
         league: "U20-NATIONALMANNSCHAFT",
         logo: "/images/nhl27/deb.png",

@@ -486,17 +486,17 @@ export default function NHL27Page() {
 
 
                 {/* ===================================================== */}
-                {/* STATISTIKEN */}
+                {/* KARRIERE-STATISTIKEN */}
                 {/* ===================================================== */}
 
                 <div className={styles.subHeader}>
 
                     <span>
-                        KARRIERE
+                        KARRIERE-STATISTIKEN
                     </span>
 
                     <h3>
-                        STATISTIKEN
+                        HAUPTRUNDE
                     </h3>
 
                 </div>
@@ -532,6 +532,59 @@ export default function NHL27Page() {
 
                     <StatCard
                         value={playerCareer.stats.pim}
+                        label="STRAFMINUTEN"
+                    />
+
+                </div>
+
+
+                {/* ===================================================== */}
+                {/* PLAYOFF-KARRIERE-STATISTIKEN */}
+                {/* ===================================================== */}
+
+                <div className={styles.subHeader}>
+
+                    <span>
+                        KARRIERE-STATISTIKEN
+                    </span>
+
+                    <h3>
+                        PLAYOFFS
+                    </h3>
+
+                </div>
+
+
+                <div className={styles.statsGrid}>
+
+                    <StatCard
+                        value={playerCareer.playoffStats.games}
+                        label="SPIELE"
+                    />
+
+                    <StatCard
+                        value={playerCareer.playoffStats.goals}
+                        label="TORE"
+                    />
+
+                    <StatCard
+                        value={playerCareer.playoffStats.assists}
+                        label="ASSISTS"
+                    />
+
+                    <StatCard
+                        value={playerCareer.playoffStats.points}
+                        label="PUNKTE"
+                        highlight
+                    />
+
+                    <StatCard
+                        value={playerCareer.playoffStats.plusMinus}
+                        label="+ / -"
+                    />
+
+                    <StatCard
+                        value={playerCareer.playoffStats.pim}
                         label="STRAFMINUTEN"
                     />
 
