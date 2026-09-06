@@ -15,7 +15,7 @@ export type PlayerProfile = {
 
 export const playerProfile: PlayerProfile = {
     name: "Alexander Blattmann",
-    position: "LINKER FLÜGEL",
+    position: "RECHTER FLÜGEL",
     number: 15,
     birthPlace: "Freiburg im Breisgau, Deutschland",
     birthDate: "13. Juli 2008",
