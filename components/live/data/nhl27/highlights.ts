@@ -43,6 +43,6 @@ export const careerHighlights: CareerHighlight[] = [
         category: "ERSTES TOR",
         title: "1. Tor in der NHL",
         description:
-            "Erstes Tor in der NHL am 2. Spieltag der NHL Saison 2026/2027 gegen die Nahsville Predators zum 6:6.",
+            "Erstes Tor in der NHL am 4. Spieltag der NHL Saison 2026/2027 gegen die Nahsville Predators zum 6:6.",
     },
 ];
