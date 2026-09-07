@@ -29,4 +29,20 @@ export const careerHighlights: CareerHighlight[] = [
         description:
             "Draft an Position 1 von den Toronto Maple Leafs.",
     },
+
+    {
+        date: "06. September 2026",
+        category: "ERSTER ASSIST",
+        title: "1. Assist in der NHL",
+        description:
+            "Erster Assist in der NHL am 2. Spieltag der NHL Saison 2026/2027 gegen die New York Islanders zum 4:3.",
+    },
+
+    {
+        date: "06. September 2026",
+        category: "ERSTES TOR",
+        title: "1. Tor in der NHL",
+        description:
+            "Erstes Tor in der NHL am 2. Spieltag der NHL Saison 2026/2027 gegen die Nahsville Predators zum 6:6.",
+    },
 ];
