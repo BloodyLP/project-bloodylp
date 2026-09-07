@@ -124,6 +124,12 @@ export const maeusefinger: ServiceRecordMember = {
      */
     achievements:[],
 
+
+/**
+     * 75 Monate SUB
+     */
+    sub75Monate: true,
+
         /**
      * Calder Cup
      */
@@ -140,6 +146,53 @@ export const maeusefinger: ServiceRecordMember = {
         ],
 
     },
+
+            robertWClarkeTrophy: {
+
+        years: [2025,2026],
+
+    },
+
+    ahlTopscorer: {
+
+        years: [2020],
+
+    },
+
+
+    /* ========================================= */
+    /* AHL – MEISTE TORE                          */
+    /* ========================================= */
+
+    ahlMeisteTore: {
+
+        years: [2020],
+
+    },
+
+
+    /* ========================================= */
+    /* AHL – MEISTE ASSISTS                       */
+    /* ========================================= */
+
+    ahlMeisteAssists: {
+
+        years: [2020],
+
+    },
+
+         ahlPoMeisteStrafminuten: {
+
+        years: [2021],
+
+    },
+
+             ahlPoBestePlusMinus: {
+
+        years: [2020],
+
+    },
+
 
     /**
      * Karriere Statistiken

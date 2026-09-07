@@ -124,7 +124,10 @@ export const sackzefix: ServiceRecordMember = {
      */
     achievements:[],
 
-        /**
+          /**
+     * Calder Cup
+     */
+           /**
      * Calder Cup
      */
     calderCup:{
@@ -138,6 +141,43 @@ export const sackzefix: ServiceRecordMember = {
         ],
 
     },
+
+            robertWClarkeTrophy: {
+
+        years: [2025,2026],
+
+    },
+
+    ahlMeisteStrafminuten: {
+
+        years: [2026],
+
+ },
+
+
+
+    ahlPoMeisteAssists: {
+
+        years: [2026],
+
+    },
+
+
+    ahlPoMeisteStrafminuten: {
+
+        years: [2026],
+
+    },
+
+
+
+    ahlPoBestePlusMinus: {
+
+        years: [2025],
+
+    },
+
+
 
     /**
      * Karriere Statistiken

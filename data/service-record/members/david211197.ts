@@ -128,6 +128,18 @@ export const david211197: ServiceRecordMember = {
 
     },
 
+        robertWClarkeTrophy: {
+
+        years: [2025],
+
+    },
+
+        ahlMeisteTore: {
+
+        years: [2025],
+
+    },
+
     /**
      * Ribbon Rack
      */

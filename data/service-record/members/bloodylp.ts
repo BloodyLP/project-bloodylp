@@ -179,19 +179,20 @@ export const bloodylp: ServiceRecordMember = {
 princeOfWalesTrophy: {
 
     years: [
-
         2019,
-
     ],
 
 },
 
 nhlTopscorer: {
     years: [
+
+        2019,
         2020,
         2023,
         2025,
         2026,
+        
     ],
 },
 

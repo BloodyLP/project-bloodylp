@@ -113,7 +113,7 @@ export const vita: ServiceRecordMember = {
         /**
      * Calder Cup
      */
-    calderCup:{
+        calderCup:{
 
         years:[
 
@@ -122,6 +122,12 @@ export const vita: ServiceRecordMember = {
             2026,
 
         ],
+
+    },
+
+                robertWClarkeTrophy: {
+
+        years: [2025,2026],
 
     },
 

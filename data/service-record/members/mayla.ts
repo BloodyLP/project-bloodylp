@@ -127,6 +127,9 @@ export const MaylatheBloodylinchen: ServiceRecordMember = {
         /**
      * Calder Cup
      */
+           /**
+     * Calder Cup
+     */
     calderCup:{
 
         years:[
@@ -136,6 +139,12 @@ export const MaylatheBloodylinchen: ServiceRecordMember = {
             2026,
 
         ],
+
+    },
+
+            robertWClarkeTrophy: {
+
+        years: [2025,2026],
 
     },
 

@@ -124,6 +124,11 @@ export const schmiedli: ServiceRecordMember = {
     decorations:[],
 
 
+/**
+     * 50 Monate SUB
+     */
+    sub50Monate: true,
+
     /**
      * Calder Cup
      */

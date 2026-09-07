@@ -175,19 +175,67 @@ playerNumber:"18",
 
 ],
 
-stanleyCup:{
+   /**
+     * Stanley Cup
+     */
+    stanleyCup: {
 
-    years:[
+        years: [
 
-        2019,
+            2019,
+
+            2020,
+
+            2022,
+
+            2025,
+
+            2026,
+
+        ],
+
+    },
+
+    /**
+     * President's Trophy
+     */
+    presidentsTrophy: {
+
+        years: [
+            2023,
+
+            2025,
+
+            2026,
+
+        ],
+
+    },
+
+     /**
+     * Clarence S. Campbell Trophy
+     */
+    clarenceSCampbellTrophy: {
+
+    years: [
 
         2020,
-
         2022,
-
         2025,
-
         2026,
+
+    ],
+
+},
+
+  /**
+     * Prince of Wales Trophy
+     */
+princeOfWalesTrophy: {
+
+    years: [
+
+        2019,
 
     ],
 

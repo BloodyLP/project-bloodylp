@@ -115,6 +115,26 @@ export const knecht: ServiceRecordMember = {
         ],
     },
 
+      /**
+     * Presidents' Trophy
+     */
+    presidentsTrophy: {
+        years: [
+           
+            2026,
+        ],
+    },
+
+    /**
+     * Clarence S. Campbell Trophy
+     */
+    clarenceSCampbellTrophy: {
+        years: [
+          
+            2026,
+        ],
+    },
+
     /**
      * Ribbon Rack
      */

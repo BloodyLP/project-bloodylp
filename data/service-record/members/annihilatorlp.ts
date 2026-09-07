@@ -140,6 +140,21 @@ stanleyCup: {
 
 },
 
+    robertWClarkeTrophy: {
+
+        years:[
+
+            2025,
+        ],
+    },
+
+        ahlTopscorer: {
+
+        years:[
+            2025
+        ],
+
+    },
 
 /**
  * Ribbon Rack

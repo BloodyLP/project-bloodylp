@@ -220,6 +220,7 @@ const trophies = [
             { year: "2023", winner: "Charlotte Checkers" },
             { year: "2024", winner: "Cleveland Monsters" },
             { year: "2025", winner: "Syracuse Crunch" },
+            { year: "2026", winner: "Wilkes-Barre/Scranton Penguins" },
         ],
     },
     {
@@ -234,6 +235,7 @@ const trophies = [
             { year: "2023", winner: "Coachella Valley Firebirds" },
             { year: "2024", winner: "Grand Rapids Griffins" },
             { year: "2025", winner: "Ontario Young Army", youngArmy: true },
+            { year: "2026", winner: "Ontario Young Army", youngArmy: true },
         ],
     },
 ];

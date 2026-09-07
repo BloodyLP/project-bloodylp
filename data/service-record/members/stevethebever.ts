@@ -173,23 +173,148 @@ playerNumber:"96",
 
 ],
 
-stanleyCup:{
+  /**
+     * Stanley Cup
+     */
+    stanleyCup: {
 
-    years:[
+        years: [
 
-        2019,
+            2019,
+
+            2020,
+
+            2022,
+
+            2025,
+
+            2026,
+
+        ],
+
+    },
+
+    /**
+     * President's Trophy
+     */
+    presidentsTrophy: {
+
+        years: [
+            2023,
+
+            2025,
+
+            2026,
+
+        ],
+
+    },
+
+     /**
+     * Clarence S. Campbell Trophy
+     */
+    clarenceSCampbellTrophy: {
+
+    years: [
 
         2020,
-
         2022,
-
         2025,
-
         2026,
 
     ],
 
 },
+
+  /**
+     * Prince of Wales Trophy
+     */
+princeOfWalesTrophy: {
+
+    years: [
+        2019,
+    ],
+
+},
+
+nhlTopscorer: {
+    years: [
+
+        2021,
+        2024,
+        
+    ],
+},
+
+nhlMeisteStrafminuten: {
+
+    years: [
+
+        2020,
+        2024,
+
+    ],
+
+},
+
+ /* ========================================= */
+    /* NHL PLAYOFFS – TOPSCORER                   */
+    /* ========================================= */
+
+    nhlPoTopscorer: {
+
+        years: [2020],
+
+    },
+
+
+    /* ========================================= */
+    /* NHL PLAYOFFS – MEISTE TORE                 */
+    /* ========================================= */
+
+    nhlPoMeisteTore: {
+
+        years: [2020,2023],
+
+    },
+
+
+    /* ========================================= */
+    /* NHL PLAYOFFS – MEISTE ASSISTS              */
+    /* ========================================= */
+
+    nhlPoMeisteAssists: {
+
+        years: [2026],
+
+    },
+
+
+    /* ========================================= */
+    /* NHL PLAYOFFS – MEISTE STRAFMINUTEN         */
+    /* ========================================= */
+
+    poMeisteStrafminuten: {
+
+        years: [2021,2023,2024],
+
+    },
+
+
+    /* ========================================= */
+    /* NHL PLAYOFFS – BESTE PLUS-MINUS            */
+    /* ========================================= */
+
+    nhlPoBestePlusMinus: {
+
+        years: [2020],
+
+    },
+
+
+
+
+
     /**
      * Ribbon Rack
      */

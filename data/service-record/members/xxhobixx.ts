@@ -118,7 +118,7 @@ export const xxhobixx: ServiceRecordMember = {
         "stanley-cup",
     ],
 
-    /**
+   /**
      * Stanley Cup
      */
     stanleyCup:{
@@ -134,6 +134,24 @@ export const xxhobixx: ServiceRecordMember = {
             2025,
 
         ],
+
+    },
+
+        presidentsTrophy: {
+
+        years: [2023,2025],
+
+    },
+
+        clarenceSCampbellTrophy: {
+
+        years: [2020,2022,2025],
+
+    },
+
+        princeOfWalesTrophy: {
+
+        years: [2019],
 
     },
 

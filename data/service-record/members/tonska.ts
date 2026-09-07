@@ -177,6 +177,63 @@ export const tonska: ServiceRecordMember = {
 
     },
 
+                robertWClarkeTrophy: {
+
+        years: [2020,2021,2025,2026],
+
+    },
+
+        richardFCanningTrophy: {
+
+        years: [2019],
+
+    },
+
+    /* ========================================= */
+    /* AHL – TOPSCORER                            */
+    /* ========================================= */
+
+    ahlTopscorer: {
+
+        years: [2019],
+
+    },
+
+
+    /* ========================================= */
+    /* AHL – MEISTE TORE                          */
+    /* ========================================= */
+
+    ahlMeisteTore: {
+
+        years: [2019],
+
+    },
+
+
+    /* ========================================= */
+    /* AHL – MEISTE ASSISTS                       */
+    /* ========================================= */
+
+    ahlMeisteAssists: {
+
+        years: [2019],
+
+    },
+
+
+    /* ========================================= */
+    /* AHL – MEISTE STRAFMINUTEN                  */
+    /* ========================================= */
+
+    ahlMeisteStrafminuten: {
+
+        years: [2024],
+
+    },
+
+
+
 
     /**
      * Karriere Statistiken

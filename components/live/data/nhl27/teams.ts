@@ -17,7 +17,7 @@ export type CareerTeam = {
 
 export const careerTeams: CareerTeam[] = [
     {
-        season: "2026/27 – 2028/29",
+        season: "2026/2027",
         team: "Toronto Maple Leafs",
         league: "NHL",
         logo: "/images/nhl27/toronto-maple-leafs.png",

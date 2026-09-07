@@ -173,19 +173,117 @@ patreonBronze: true,
 
 ],
 
-stanleyCup:{
+/**
+     * 75 Monate SUB
+     */
+    sub75Monate: true,
 
-    years:[
+   /**
+     * Stanley Cup
+     */
+    stanleyCup: {
+
+        years: [
+
+            2019,
+
+            2020,
+
+            2022,
+
+            2025,
+
+            2026,
+
+        ],
+
+    },
+
+    /**
+     * President's Trophy
+     */
+    presidentsTrophy: {
+
+        years: [
+            2023,
+
+            2025,
+
+            2026,
+
+        ],
+
+    },
+
+     /**
+     * Clarence S. Campbell Trophy
+     */
+    clarenceSCampbellTrophy: {
+
+    years: [
+
+        2020,
+        2022,
+        2025,
+        2026,
+
+    ],
+
+},
+
+  /**
+     * Prince of Wales Trophy
+     */
+princeOfWalesTrophy: {
+
+    years: [
 
         2019,
 
-        2020,
+    ],
 
-        2022,
+},
 
+nhlMeisteTore: {
+
+    years: [
+        2021,
+
+    ],
+
+},
+
+nhlPoMeisteTore: {
+
+    years: [
+        2021,
+
+    ],
+
+},
+
+nhlPoMeisteAssists: {
+
+    years: [
+        2019,
+
+    ],
+
+},
+
+poMeisteStrafminuten: {
+
+    years: [
         2025,
 
-        2026,
+    ],
+
+},
+
+nhlBestePlusMinus: {
+
+    years: [
+        2021,
 
     ],
 

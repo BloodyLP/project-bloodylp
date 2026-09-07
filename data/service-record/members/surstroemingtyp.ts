@@ -182,6 +182,39 @@ stanleyCup:{
     ],
 
 },
+
+   /**
+     * President's Trophy
+     */
+    presidentsTrophy: {
+
+        years: [
+
+            2026,
+
+        ],
+
+    },
+
+     /**
+     * Clarence S. Campbell Trophy
+     */
+    clarenceSCampbellTrophy: {
+
+    years: [
+
+        2026,
+
+    ],
+
+},
+
+   nhlMeisteStrafminuten: {
+
+        years: [2026],
+
+    },
+
     /**
      * Ribbon Rack
      */

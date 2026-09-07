@@ -139,6 +139,12 @@ export const MadDog: ServiceRecordMember = {
 
     },
 
+            robertWClarkeTrophy: {
+
+        years: [2025,2026],
+
+    },
+
     /**
      * Karriere Statistiken
      */

@@ -184,6 +184,82 @@ stanleyCup:{
     ],
 
 },
+
+        /**
+     * President's Trophy
+     */
+    presidentsTrophy: {
+
+        years: [
+            2023,
+
+            2025,
+
+            2026,
+
+        ],
+
+    },
+
+     /**
+     * Clarence S. Campbell Trophy
+     */
+    clarenceSCampbellTrophy: {
+
+    years: [
+
+        2022,
+        2025,
+        2026,
+
+    ],
+
+},
+
+nhlMeisteAssists: {
+
+    years: [
+
+        2022,
+        2023,
+        2024,
+
+    ],
+
+},
+
+nhlPoMeisteAssists: {
+
+    years: [
+
+        2022,
+        2024,
+
+    ],
+
+},
+
+poMeisteStrafminuten: {
+
+    years: [
+
+        2022,
+        2026,
+
+    ],
+
+},
+
+nhlPoBestePlusMinus: {
+
+    years: [
+
+        2024,
+
+    ],
+
+},
+
     /**
      * Ribbon Rack
      */

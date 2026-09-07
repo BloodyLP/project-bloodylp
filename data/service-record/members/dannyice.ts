@@ -175,6 +175,11 @@ playerNumber:"16",
 
 ],
 
+ /**
+     * 50 Monate SUB
+     */
+    sub50Monate: true,
+
 stanleyCup:{
 
     years:[
@@ -192,6 +197,66 @@ stanleyCup:{
     ],
 
 },
+
+  /**
+     * Presidents' Trophy
+     */
+    presidentsTrophy: {
+        years: [
+            2023,
+            2025,
+            2026,
+        ],
+    },
+
+    /**
+     * Clarence S. Campbell Trophy
+     */
+    clarenceSCampbellTrophy: {
+        years: [
+            2020,
+            2022,
+            2025,
+            2026,
+        ],
+    },
+
+    /**
+     * Prince of Wales Trophy
+     */
+    princeOfWalesTrophy: {
+        years: [
+            2019,
+        ],
+    },
+
+    nhlTopscorer: {
+    years: [
+        2019,
+    ],
+},
+
+nhlPoTopscorer: {
+
+    years: [
+
+        2019,
+    ],
+
+},
+
+nhlPoBestePlusMinus: {
+
+    years: [
+
+        2023,
+
+        2026,
+    ],
+
+},
+
+
 
 
     /**

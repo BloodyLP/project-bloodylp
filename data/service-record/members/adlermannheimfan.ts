@@ -119,6 +119,16 @@ export const Adlermannheimfan: ServiceRecordMember = {
 
     },
 
+
+    robertWClarkeTrophy: {
+
+        years:[
+
+            2025,
+            2026,
+        ],
+    },
+
     /**
      * Ribbon Rack
      */

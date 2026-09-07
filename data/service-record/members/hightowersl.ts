@@ -173,23 +173,130 @@ playerNumber:"73",
 
 ],
 
-stanleyCup:{
+ /**
+     * 100 Monate SUB
+     */
+    sub100Monate: true,
 
-    years:[
+   /**
+     * Stanley Cup
+     */
+    stanleyCup: {
 
-        2019,
+        years: [
+
+            2019,
+
+            2020,
+
+            2022,
+
+            2025,
+
+            2026,
+
+        ],
+
+    },
+
+    /**
+     * President's Trophy
+     */
+    presidentsTrophy: {
+
+        years: [
+            2023,
+
+            2025,
+
+            2026,
+
+        ],
+
+    },
+
+     /**
+     * Clarence S. Campbell Trophy
+     */
+    clarenceSCampbellTrophy: {
+
+    years: [
 
         2020,
-
         2022,
-
         2025,
-
         2026,
 
     ],
 
 },
+
+  /**
+     * Prince of Wales Trophy
+     */
+princeOfWalesTrophy: {
+
+    years: [
+
+        2019,
+
+    ],
+
+},
+
+nhlTopscorer: {
+    years: [
+        2022,
+    ],
+},
+
+nhlMeisteTore: {
+
+    years: [
+        2022,
+
+    ],
+
+},
+
+nhlPoTopscorer: {
+
+    years: [
+
+        2022,
+        2025,
+
+    ],
+
+},
+
+nhlPoMeisteTore: {
+
+    years: [
+
+        2023,
+        2025,
+    ],
+
+},
+
+nhlPoMeisteAssists: {
+
+    years: [
+
+        2022,
+
+    ],
+
+},
+
+    poMeisteStrafminuten: {
+
+        years: [2019],
+
+    },
+
+
     /**
      * Ribbon Rack
      */

@@ -137,6 +137,54 @@ export const blackhawk: ServiceRecordMember = {
 
     },
 
+        presidentsTrophy: {
+
+        years: [2023,2025],
+
+    },
+
+        clarenceSCampbellTrophy: {
+
+        years: [2020,2022,2025],
+
+    },
+
+        princeOfWalesTrophy: {
+
+        years: [2029],
+
+    },
+
+        nhlMeisteStrafminuten: {
+
+        years: [2019],
+
+    },
+
+    nhlPoTopscorer: {
+
+        years: [2023,2024],
+
+    },
+
+        nhlPoMeisteTore: {
+
+        years: [2020],
+
+    },
+
+        nhlPoMeisteAssists: {
+
+        years: [2022,2023,2025],
+
+    },
+
+        nhlPoBestePlusMinus: {
+
+        years: [2025],
+
+    },
+
     /**
      * Ribbon Rack
      */
