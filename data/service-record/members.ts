@@ -150,6 +150,12 @@ import { thepiotrek } from "./members/thepiotrek";
 
 import { rosendorf } from "./members/rosendorf";
 
+import { adripey } from "./members/adripey169";
+
+import { bradyderechte } from "./members/bradyderechte";
+
+import { xxnicoxx } from "./members/xxnicoxx";
+
 
 
 export const MEMBERS: ServiceRecordMember[] = [
@@ -219,4 +225,10 @@ export const MEMBERS: ServiceRecordMember[] = [
     thepiotrek,
 
     rosendorf,
+
+    adripey,
+
+    bradyderechte,
+
+    xxnicoxx,
 ];

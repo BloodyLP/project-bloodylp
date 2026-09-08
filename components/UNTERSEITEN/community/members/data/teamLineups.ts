@@ -309,6 +309,16 @@ reserves: [
         position: "",
     },
 
+           {
+        memberId: "BA-034",
+        position: "LD",
+    },
+
+               {
+        memberId: "BA-035",
+        position: "RD",
+    },
+
   
 
 ],
