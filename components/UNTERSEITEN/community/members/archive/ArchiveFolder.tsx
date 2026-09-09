@@ -1,53 +1,47 @@
 "use client";
 
-
 import { useState } from "react";
 
-import { motion, AnimatePresence } from "framer-motion";
-
+import {
+    motion,
+    AnimatePresence,
+} from "framer-motion";
 
 import MemberCard from "../MemberCard";
 
-
 import { badgeThemes } from "../badgeThemes";
 
-
 import {
-
-    mapMemberToCard
-
+    mapMemberToCard,
 } from "../memberMapper";
 
+import type {
+    ServiceRecordMember,
+} from "@/types/service-record";
 
 import styles from "./PersonnelArchive.module.css";
 
 
-
-
-
-
+/* ============================================ */
+/* TYPES                                        */
+/* ============================================ */
 
 type ArchiveFolderProps = {
 
+    title: string;
 
-    title:string;
+    theme: string;
 
-    theme:string;
-
-    members:any[];
-
+    members: ServiceRecordMember[];
 
 };
 
 
-
-
-
-
-
+/* ============================================ */
+/* COMPONENT                                    */
+/* ============================================ */
 
 export default function ArchiveFolder({
-
 
     title,
 
@@ -55,19 +49,24 @@ export default function ArchiveFolder({
 
     members,
 
-
-}:ArchiveFolderProps){
-
+}: ArchiveFolderProps) {
 
 
-    const [open,setOpen] = useState(false);
+    /* ========================================= */
+    /* STATE                                     */
+    /* ========================================= */
+
+    const [
+        open,
+        setOpen,
+    ] = useState(false);
 
 
-
-
+    /* ========================================= */
+    /* COLOR                                     */
+    /* ========================================= */
 
     const color =
-
 
         badgeThemes[theme]?.border
 
@@ -76,274 +75,212 @@ export default function ArchiveFolder({
         "#A3E635";
 
 
-
-
-
-
+    /* ========================================= */
+    /* RENDER                                    */
+    /* ========================================= */
 
     return (
 
-
-
         <section
-
 
             className={styles.folder}
 
-
-
             style={{
 
-
                 borderColor:
-
-                    `${color}55`
-
+                    `${color}55`,
 
             }}
-
-
 
         >
 
 
-
-
-
+            {/* ===================================== */}
+            {/* FOLDER HEADER                         */}
+            {/* ===================================== */}
 
             <button
 
-
-
                 className={styles.folderHeader}
 
-
-
-                onClick={()=>setOpen(!open)}
-
-
+                onClick={() =>
+                    setOpen(!open)
+                }
 
                 style={{
 
-
                     borderLeft:
-
-                        `4px solid ${color}`
-
+                        `4px solid ${color}`,
 
                 }}
 
-
-
             >
 
+                {/* ================================= */}
+                {/* ARROW                             */}
+                {/* ================================= */}
 
+                <span
+                    className={styles.arrow}
+                >
 
-                <span className={styles.arrow}>
-
-
-                    {open ? "▼" : "▶"}
-
+                    {
+                        open
+                            ? "▼"
+                            : "▶"
+                    }
 
                 </span>
 
 
+                {/* ================================= */}
+                {/* TITLE                             */}
+                {/* ================================= */}
 
-
-
-                <span className={styles.folderTitle}>
-
+                <span
+                    className={styles.folderTitle}
+                >
 
                     {title}
 
-
                 </span>
 
 
-
-
+                {/* ================================= */}
+                {/* COUNT                             */}
+                {/* ================================= */}
 
                 <span
 
-
-                    className={styles.folderCount}
-
-
+                    className={
+                        styles.folderCount
+                    }
 
                     style={{
 
-
-                        color:color
-
+                        color: color,
 
                     }}
 
-
-
                 >
 
-
-
-                    {members.length
-
-                        .toString()
-
-                        .padStart(2,"0")
-
+                    {
+                        members.length
+                            .toString()
+                            .padStart(
+                                2,
+                                "0"
+                            )
                     }
 
+                    {" "}
 
-                    {" "}MEMBER
-
-
+                    MEMBER
 
                 </span>
-
-
-
-
 
             </button>
 
 
-
-
-
-
-
-
+            {/* ===================================== */}
+            {/* CONTENT                               */}
+            {/* ===================================== */}
 
             <AnimatePresence>
 
+                {
 
+                    open && (
 
-                {open && (
+                        <motion.div
 
+                            className={
+                                styles.folderContent
+                            }
 
+                            initial={{
 
-                    <motion.div
+                                opacity: 0,
 
+                                height: 0,
 
+                            }}
 
-                        className={styles.folderContent}
+                            animate={{
 
+                                opacity: 1,
 
+                                height: "auto",
 
-                        initial={{
+                            }}
 
+                            exit={{
 
-                            opacity:0,
+                                opacity: 0,
 
+                                height: 0,
 
-                            height:0,
+                            }}
 
+                            transition={{
 
-                        }}
+                                duration: 0.35,
 
+                            }}
 
+                        >
 
-                        animate={{
+                            {
 
+                                members.map(
 
-                            opacity:1,
+                                    member => {
 
+                                        const card =
+                                            mapMemberToCard(
+                                                member
+                                            );
 
-                            height:"auto",
 
+                                        return (
 
-                        }}
+                                            <MemberCard
 
+                                                key={
+                                                    member.id
+                                                }
 
+                                                compact
 
-                        exit={{
+                                                {...card}
 
+                                                playerType={
+                                                    member.dualRole
+                                                        ? "dual"
+                                                        : member.playerType
+                                                }
 
-                            opacity:0,
+                                            />
 
+                                        );
 
-                            height:0,
-
-
-                        }}
-
-
-
-                        transition={{
-
-
-                            duration:.35,
-
-
-                        }}
-
-
-
-                    >
-
-
-
-
-
-                        {
-
-
-                            members.map(
-
-                                member => (
-
-
-
-                                    <MemberCard
-
-
-
-                                        key={member.id}
-
-
-
-                                        compact
-
-
-
-                                        {...mapMemberToCard(member)}
-
-
-
-                                    />
-
-
+                                    }
 
                                 )
 
+                            }
 
-                            )
+                        </motion.div>
 
+                    )
 
-                        }
-
-
-
-
-
-                    </motion.div>
-
-
-
-                )}
-
-
+                }
 
             </AnimatePresence>
 
 
-
-
-
         </section>
 
-
-
     );
-
 
 }
