@@ -7,6 +7,7 @@ import {
     ArrowUpRight,
     Gamepad2,
     Crosshair,
+    Shield,
 } from "lucide-react";
 
 import styles from "./ContentCreatorShowCase.module.css";
@@ -33,7 +34,19 @@ const projects = [
             "Große Geschichten, offene Welten und Abenteuer, die aus einer Gaming-Session eine eigene Reise machen.",
         image: "/content-creator/images/assassins-creed-showcase.jpg",
         icon: Crosshair,
-        featured: true,
+        featured: false,
+    },
+
+    {
+        number: "03",
+        type: "ADVENTURE • CLASSIC",
+        title: "THE LEGEND OF ZELDA",
+        highlight: "OCARINA OF TIME",
+        description:
+            "Ein zeitloses Abenteuer kehrt zurück: Hyrule, Link und eine Reise durch zwei Zeitalter. Ein Klassiker neu interpretiert für die Nintendo Switch 2.",
+        image: "/content-creator/images/zelda.jpg",
+        icon: Shield,
+        featured: false,
     },
 
     {
@@ -121,7 +134,7 @@ export default function ContentCreatorShowcase() {
                                 className={`${styles.card} ${
                                     project.featured
                                         ? styles.featured
-                                        : ""
+                                        : styles.halfCard
                                 } ${
                                     index === 3
                                         ? styles.lastCard
@@ -223,7 +236,6 @@ export default function ContentCreatorShowcase() {
                                     </span>
 
                                     <h3>
-
                                         {project.title}
 
                                         <br />
@@ -231,7 +243,6 @@ export default function ContentCreatorShowcase() {
                                         <span>
                                             {project.highlight}
                                         </span>
-
                                     </h3>
 
                                     <p>

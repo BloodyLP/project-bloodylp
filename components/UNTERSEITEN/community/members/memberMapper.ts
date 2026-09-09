@@ -610,147 +610,7 @@ export function mapMemberToCard(
             typeof buildGoalieCareerStats
         >
 
-        | {
-            skater:
-                ReturnType<
-                    typeof buildSkaterCareerStats
-                >;
-
-            goalie:
-                ReturnType<
-                    typeof buildGoalieCareerStats
-                >;
-
-        }
-
         | undefined;
-
-
-    /*
-    ============================================
-    DUAL ROLE
-    ============================================
-
-    Ein Dual-Role-Mitglied besitzt getrennte
-    Statistiken für:
-
-    - Feldspieler / Skater
-    - Torhüter / Goalie
-
-    Die Datenstruktur des Service Records
-    bleibt dabei unverändert.
-
-    Beispiel Tonska:
-
-        dualRole: true
-
-        stats: {
-            skater: {...},
-            goalie: {...}
-        }
-
-    ============================================
-    */
-
-    if (
-
-        member.dualRole === true
-
-        &&
-
-        member.stats
-
-    ) {
-
-        const dualStats =
-            member.stats as
-            unknown as
-            DualRoleStats;
-
-
-        const skaterSeasons =
-            dualStats.skater?.seasons
-            ??
-            [];
-
-
-        const goalieSeasons =
-            dualStats.goalie?.seasons
-            ??
-            [];
-
-
-        const skaterStats =
-            skaterSeasons.length > 0
-                ? buildSkaterCareerStats(
-                    skaterSeasons
-                )
-                : undefined;
-
-
-        const goalieStats =
-            goalieSeasons.length > 0
-                ? buildGoalieCareerStats(
-                    goalieSeasons
-                )
-                : undefined;
-
-
-        /*
-        ========================================
-        DUAL STATS ZUSAMMENBAUEN
-        ========================================
-        */
-
-        if (
-
-            skaterStats
-
-            &&
-
-            goalieStats
-
-        ) {
-
-            stats = {
-
-                skater:
-                    skaterStats,
-
-                goalie:
-                    goalieStats,
-
-            };
-
-        }
-
-        else if (skaterStats) {
-
-            /*
-            ====================================
-            FALLBACK:
-            NUR SKATER-DATEN VORHANDEN
-            ====================================
-            */
-
-            stats = skaterStats;
-
-        }
-
-        else if (goalieStats) {
-
-            /*
-            ====================================
-            FALLBACK:
-            NUR GOALIE-DATEN VORHANDEN
-            ====================================
-            */
-
-            stats = goalieStats;
-
-        }
-
-    }
 
 
     /*
@@ -759,7 +619,7 @@ export function mapMemberToCard(
     ============================================
     */
 
-    else if (
+    if (
 
         member.playerType === "goalie"
 
@@ -813,11 +673,34 @@ export function mapMemberToCard(
     ============================================
     SPIELERTYP
     ============================================
+
+    MemberCard erwartet:
+
+    - skater
+    - goalie
+    - dual
+
+    ServiceRecordMember arbeitet weiterhin
+    mit playerType + dualRole.
+
+    Wenn dualRole aktiv ist, wird die
+    MemberCard deshalb explizit als "dual"
+    typisiert.
+
+    Dadurch bleibt das bestehende Datenmodell
+    unverändert.
+    ============================================
     */
 
-    const playerType =
+    const playerType:
+        | "skater"
+        | "goalie"
+        | "dual" =
+
         member.dualRole === true
+
             ? "dual"
+
             : member.playerType;
 
 
