@@ -156,6 +156,8 @@ import { bradyderechte } from "./members/bradyderechte";
 
 import { xxnicoxx } from "./members/xxnicoxx";
 
+import { eishockeylive } from "./members/eishockeylive";
+
 
 
 export const MEMBERS: ServiceRecordMember[] = [
@@ -231,4 +233,6 @@ export const MEMBERS: ServiceRecordMember[] = [
     bradyderechte,
 
     xxnicoxx,
+
+    eishockeylive,
 ];

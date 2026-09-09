@@ -10,11 +10,9 @@
  * BloodyLP Website
  *
  * File:
- *
  * app/esport/page.tsx
  *
  * Description:
- *
  * DEG eSports Bereich.
  *
  * ============================================
@@ -646,7 +644,13 @@ export default function EsportPage() {
                     {/* ASE HOCKEY                         */}
                     {/* ================================= */}
 
-                    <article className={styles.mainSponsor}>
+                    <a
+                        href="https://www.ase-hockey-shop.de/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.mainSponsor}
+                        aria-label="ASE Hockey besuchen"
+                    >
 
                         <span className={styles.sponsorLabel}>
                             HAUPTSPONSOR
@@ -664,14 +668,20 @@ export default function EsportPage() {
 
                         </div>
 
-                    </article>
+                    </a>
 
 
                     {/* ================================= */}
                     {/* RENÉ GRÖLL                         */}
                     {/* ================================= */}
 
-                    <article className={styles.mainSponsor}>
+                    <a
+                        href="https://signal-iduna-agentur.de/rene.groell/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.mainSponsor}
+                        aria-label="René Gröll – SIGNAL IDUNA besuchen"
+                    >
 
                         <span className={styles.sponsorLabel}>
                             HAUPTSPONSOR
@@ -689,7 +699,7 @@ export default function EsportPage() {
 
                         </div>
 
-                    </article>
+                    </a>
 
                 </div>
 
@@ -705,7 +715,13 @@ export default function EsportPage() {
                     </p>
 
 
-                    <div className={styles.otherSponsor}>
+                    <a
+                        href="https://ccmhockey.com/de-de/homepage.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.otherSponsor}
+                        aria-label="CCM Hockey besuchen"
+                    >
 
                         <Image
                             src="/images/esport/sponsors/ccm.jpg"
@@ -714,7 +730,7 @@ export default function EsportPage() {
                             sizes="230px"
                         />
 
-                    </div>
+                    </a>
 
                 </div>
 

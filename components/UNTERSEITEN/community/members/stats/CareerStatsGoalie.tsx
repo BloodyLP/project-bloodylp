@@ -714,7 +714,7 @@ export default function CareerStatsGoalie({
 
                         <h3>
 
-                            GESAMTKARRIERE
+                            AHL GESAMT
 
                         </h3>
 
@@ -931,7 +931,7 @@ export default function CareerStatsGoalie({
 
                         <h3>
 
-                            GESAMTKARRIERE
+                            NHL GESAMT
 
                         </h3>
 

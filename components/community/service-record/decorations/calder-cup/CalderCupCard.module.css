@@ -6,7 +6,6 @@
  * Component:
  * CalderCupCard
  *
- * Gleiche Kartengröße wie Stanley Cup
  * YoungArmy Red Theme
  *
  * ============================================
@@ -25,13 +24,15 @@
 
     flex-direction: column;
 
+    flex: 0 0 160px;
+
     width: 160px;
+
+    height: 225px;
 
     min-width: 160px;
 
     max-width: 160px;
-
-    height: 225px;
 
     min-height: 225px;
 
@@ -41,38 +42,24 @@
 
     box-sizing: border-box;
 
-    flex: 0 0 160px;
-
     background:
-
         linear-gradient(
-
             180deg,
-
             #251b1d 0%,
-
             #18191b 100%
-
         );
 
     border:
-
         2px solid
-
-        rgba(255, 85, 85, .22);
+        rgba(255, 85, 85, .28);
 
     border-radius: 14px;
 
     transition:
-
         border-color .25s ease,
-
         box-shadow .25s ease,
-
         background .25s ease,
-
         transform .25s ease;
-
 }
 
 
@@ -83,39 +70,28 @@
 .card:hover {
 
     transform:
-
         translateY(-3px);
 
     border-color:
-
         var(--accent);
 
     background:
-
         linear-gradient(
-
             180deg,
-
-            #2a1d20 0%,
-
-            #1b191b 100%
-
+            #302022 0%,
+            #1b1d19 100%
         );
 
     box-shadow:
 
         0 0 0 1px
-
-        rgba(255, 85, 85, .40),
+        rgba(255, 85, 85, .35),
 
         0 0 18px
-
-        rgba(255, 85, 85, .22),
+        rgba(255, 85, 85, .20),
 
         0 10px 24px
-
         rgba(0, 0, 0, .45);
-
 }
 
 
@@ -128,47 +104,34 @@
     display: flex;
 
     justify-content:
-
         space-between;
 
     align-items:
-
         center;
 
-    flex-shrink:
+    flex: 0 0 36px;
 
-        0;
+    width: 100%;
 
-    height:
+    height: 36px;
 
-        36px;
+    min-height: 36px;
 
-    min-height:
+    max-height: 36px;
 
-        36px;
-
-    max-height:
-
-        36px;
+    box-sizing: border-box;
 
     padding:
-
         0 12px;
 
-    box-sizing:
-
-        border-box;
+    overflow: hidden;
 
     border-bottom:
-
         1px solid
-
-        rgba(255, 255, 255, .06);
+        rgba(255, 85, 85, .12);
 
     background:
-
-        rgba(255, 85, 85, .04);
-
+        rgba(255, 85, 85, .05);
 }
 
 
@@ -179,37 +142,22 @@
 .title {
 
     font-size:
-
         .62rem;
 
     font-weight:
-
         700;
 
     letter-spacing:
-
         .10em;
 
     text-transform:
-
         uppercase;
 
     color:
-
         #ff7777;
 
     white-space:
-
         nowrap;
-
-    overflow:
-
-        hidden;
-
-    text-overflow:
-
-        ellipsis;
-
 }
 
 
@@ -219,30 +167,23 @@
 
 .code {
 
-    flex-shrink:
-
-        0;
-
     font-size:
-
         .60rem;
 
     font-weight:
-
         700;
 
     letter-spacing:
-
         .06em;
 
     text-transform:
-
         uppercase;
 
     color:
+        #ffd0d0;
 
-        #d8d8d8;
-
+    white-space:
+        nowrap;
 }
 
 
@@ -253,59 +194,42 @@
 .badge {
 
     position:
-
         relative;
 
-    height:
+    flex: 0 0 128px;
 
-        128px;
+    width: 100%;
 
-    min-height:
+    height: 128px;
 
-        128px;
+    min-height: 128px;
 
-    max-height:
+    max-height: 128px;
 
-        128px;
+    box-sizing: border-box;
 
     display:
-
         flex;
 
     justify-content:
-
         center;
 
     align-items:
-
         center;
 
-    flex-shrink:
-
-        0;
-
     overflow:
-
         hidden;
 
     border-bottom:
-
         1px solid
-
-        rgba(255, 255, 255, .06);
+        rgba(255, 85, 85, .10);
 
     background:
-
         radial-gradient(
-
             circle at center,
-
-            rgba(255, 85, 85, .10) 0%,
-
+            rgba(255, 85, 85, .11) 0%,
             transparent 70%
-
         );
-
 }
 
 
@@ -316,64 +240,43 @@
 .image {
 
     object-fit:
-
         contain;
 
     transform:
-
         scale(.90);
 
     transition:
-
         transform .25s ease,
-
         filter .25s ease;
 
     filter:
-
         drop-shadow(
-
             0 10px 18px
-
             rgba(0, 0, 0, .45)
-
         )
 
         drop-shadow(
-
             0 0 10px
-
-            rgba(255, 70, 70, .20)
-
+            rgba(255, 85, 85, .18)
         );
-
 }
 
 
 .card:hover .image {
 
     transform:
-
         scale(1.03);
 
     filter:
-
         drop-shadow(
-
             0 10px 18px
-
             rgba(0, 0, 0, .45)
-
         )
 
         drop-shadow(
-
             0 0 14px
-
-            rgba(255, 70, 70, .38)
-
+            rgba(255, 85, 85, .35)
         );
-
 }
 
 
@@ -383,54 +286,41 @@
 
 .footer {
 
-    display:
+    flex: 0 0 57px;
 
+    width: 100%;
+
+    height: 57px;
+
+    min-height: 57px;
+
+    max-height: 57px;
+
+    box-sizing: border-box;
+
+    display:
         flex;
 
     flex-direction:
-
         column;
 
     justify-content:
-
-        center;
+        flex-start;
 
     align-items:
-
         center;
 
-    flex:
-
-        1 1 auto;
-
-    min-height:
-
-        0;
-
-    max-height:
-
-        57px;
-
-    overflow:
-
-        hidden;
-
     gap:
-
         5px;
 
     padding:
+        6px 8px;
 
-        7px 10px;
-
-    box-sizing:
-
-        border-box;
+    overflow:
+        hidden;
 
     background:
-
         rgba(255, 85, 85, .025);
-
 }
 
 
@@ -440,42 +330,35 @@
 
 .footerTitle {
 
-    flex-shrink:
-
-        0;
+    flex:
+        0 0 auto;
 
     margin:
-
         0;
 
     font-size:
-
-        .68rem;
+        .60rem;
 
     font-weight:
-
         700;
 
     color:
-
         #ffffff;
 
     text-align:
-
         center;
 
     line-height:
-
-        1.05;
+        1;
 
     letter-spacing:
-
-        .05em;
+        .04em;
 
     text-transform:
-
         uppercase;
 
+    white-space:
+        nowrap;
 }
 
 
@@ -485,38 +368,26 @@
 
 .years {
 
-    display:
-
-        flex;
-
-    flex-wrap:
-
-        wrap;
-
-    justify-content:
-
-        center;
-
-    align-items:
-
-        center;
-
-    gap:
-
-        4px;
-
     width:
-
         100%;
 
-    max-height:
+    display:
+        grid;
 
-        32px;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
 
-    overflow:
+    grid-auto-rows:
+        16px;
 
-        hidden;
+    gap:
+        3px;
 
+    justify-items:
+        stretch;
+
+    align-content:
+        start;
 }
 
 
@@ -526,62 +397,73 @@
 
 .year {
 
-    min-width:
+    width:
+        100%;
 
+    min-width:
         0;
 
-    padding:
+    height:
+        16px;
 
-        2px 6px;
+    min-height:
+        16px;
+
+    max-height:
+        16px;
+
+    box-sizing:
+        border-box;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    padding:
+        0 2px;
+
+    overflow:
+        hidden;
 
     border-radius:
-
-        6px;
+        4px;
 
     border:
-
         1px solid
-
-        rgba(255, 85, 85, .60);
+        rgba(255, 85, 85, .65);
 
     background:
-
         rgba(255, 85, 85, .08);
 
     color:
-
-        #ffb0b0;
+        #ff7777;
 
     text-align:
-
         center;
 
     font-size:
-
-        .54rem;
-
-    line-height:
-
-        1.1;
+        .48rem;
 
     font-weight:
-
         700;
 
-    letter-spacing:
+    line-height:
+        1;
 
-        .03em;
+    letter-spacing:
+        0;
 
     white-space:
-
         nowrap;
 
     box-shadow:
-
-        0 0 8px
-
-        rgba(255, 70, 70, .10);
-
+        0 0 6px
+        rgba(255, 85, 85, .10);
 }
 
 
@@ -590,41 +472,30 @@
 /* ========================================= */
 
 @media (
-
     max-width: 700px
-
 ) {
 
     .card {
 
-        width:
+        flex:
+            0 0 160px;
 
+        width:
             160px;
 
         min-width:
-
             160px;
 
         max-width:
-
             160px;
 
         height:
-
             225px;
 
         min-height:
-
             225px;
 
         max-height:
-
             225px;
-
-        flex:
-
-            0 0 160px;
-
     }
-
 }
