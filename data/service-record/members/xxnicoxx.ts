@@ -143,6 +143,70 @@ export const xxnicoxx: ServiceRecordMember = {
 
     },
 
+    /* ========================================= */
+    /* AHL – TOPSCORER                            */
+    /* ========================================= */
+
+    ahlTopscorer: {
+
+        years: [2024],
+
+    },
+
+
+    /* ========================================= */
+    /* AHL – MEISTE TORE                          */
+    /* ========================================= */
+
+    ahlMeisteTore: {
+
+        years: [2024],
+
+    },
+
+
+    /* ========================================= */
+    /* AHL – MEISTE ASSISTS                       */
+    /* ========================================= */
+
+    ahlMeisteAssists: {
+
+         years: [2024],
+
+    },
+
+
+    /* ========================================= */
+    /* AHL – MEISTE STRAFMINUTEN                  */
+    /* ========================================= */
+
+    ahlMeisteStrafminuten: {
+
+         years: [2023],
+
+    },
+
+     /* ========================================= */
+    /* AHL PLAYOFFS – TOPSCORER                   */
+    /* ========================================= */
+
+    ahlPoTopscorer: {
+
+        years: [2024],
+
+    },
+
+
+    /* ========================================= */
+    /* AHL PLAYOFFS – MEISTE TORE                 */
+    /* ========================================= */
+
+    ahlPoMeisteTore: {
+
+        years: [2023],
+
+    },
+
     /**
      * Karriere Statistiken
      */
@@ -157,7 +221,7 @@ export const xxnicoxx: ServiceRecordMember = {
                 team:"Young Army",
 
                 games:82,
-                goals:255,
+                goals:25,
                 assists:20,
                 points:45,
                 plusMinus:11,
@@ -225,19 +289,19 @@ export const xxnicoxx: ServiceRecordMember = {
 
                 team:"Young Army",
 
-                games:0,
-                goals:0,
-                assists:0,
-                points:0,
-                plusMinus:0,
-                penaltyMinutes:0,
+                games:82,
+                goals:17,
+                assists:36,
+                points:53,
+                plusMinus:12,
+                penaltyMinutes:10,
 
-                playoffGames:0,
-                playoffGoals:0,
-                playoffAssists:0,
-                playoffPoints:0,
-                playoffPlusMinus:0,
-                playoffPenaltyMinutes:0,
+                playoffGames:22,
+                playoffGoals:11,
+                playoffAssists:5,
+                playoffPoints:16,
+                playoffPlusMinus:1,
+                playoffPenaltyMinutes:2,
 
                 titles:[]
 
