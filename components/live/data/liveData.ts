@@ -40,9 +40,9 @@ export const liveData = {
     events: [  
 
                   {
-        day: "DO",
-        date: "10. SEP",
-        time: "19:30 Uhr",
+        day: "FR",
+        date: "11. SEP",
+        time: "13:30 Uhr",
         title: "NHL 27",
       }, 
 
