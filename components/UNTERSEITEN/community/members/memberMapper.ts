@@ -35,7 +35,7 @@ import {
 
 
 /* ========================================= */
-/* BADGE THEME */
+/* BADGE THEME                               */
 /* ========================================= */
 
 function getBadgeTheme(
@@ -46,31 +46,15 @@ function getBadgeTheme(
     ============================================
     UNVERGESSEN
     ============================================
-
-    Verstorbene Mitglieder bekommen immer
-    das Memorial-Badge.
-
-    Dieses Badge hat Vorrang vor:
-
-    - Founder
-    - Prestige III
-    - Prestige II
-    - Prestige I
-    - Dienstgrad
-
-    Das historische Prestige bleibt im
-    Service Record selbstverständlich erhalten.
-    ============================================
     */
 
-    if (member.deceased === true) {
+    if (
+        member.deceased === true
+    ) {
 
         return {
-
             title: "UNVERGESSEN",
-
             theme: "memorial",
-
         };
 
     }
@@ -82,14 +66,13 @@ function getBadgeTheme(
     ============================================
     */
 
-    if (member.prestige === 10) {
+    if (
+        member.prestige === 10
+    ) {
 
         return {
-
             title: "FOUNDER",
-
             theme: "prestigeX",
-
         };
 
     }
@@ -101,14 +84,13 @@ function getBadgeTheme(
     ============================================
     */
 
-    if (member.prestige === 3) {
+    if (
+        member.prestige === 3
+    ) {
 
         return {
-
             title: "PRESTIGE III",
-
             theme: "prestigeIII",
-
         };
 
     }
@@ -120,14 +102,13 @@ function getBadgeTheme(
     ============================================
     */
 
-    if (member.prestige === 2) {
+    if (
+        member.prestige === 2
+    ) {
 
         return {
-
             title: "PRESTIGE II",
-
             theme: "prestigeII",
-
         };
 
     }
@@ -139,14 +120,13 @@ function getBadgeTheme(
     ============================================
     */
 
-    if (member.prestige === 1) {
+    if (
+        member.prestige === 1
+    ) {
 
         return {
-
             title: "PRESTIGE I",
-
             theme: "prestigeI",
-
         };
 
     }
@@ -158,9 +138,10 @@ function getBadgeTheme(
     ============================================
     */
 
-    const rank = ServiceRecord.rank(
-        member.rank
-    );
+    const rank =
+        ServiceRecord.rank(
+            member.rank
+        );
 
 
     switch (rank.category) {
@@ -174,11 +155,8 @@ function getBadgeTheme(
         case "command":
 
             return {
-
                 title: "GENERAL",
-
                 theme: "generale",
-
             };
 
 
@@ -191,11 +169,8 @@ function getBadgeTheme(
         case "offiziere":
 
             return {
-
                 title: "OFFIZIER",
-
                 theme: "offiziere",
-
             };
 
 
@@ -208,11 +183,10 @@ function getBadgeTheme(
         case "feldwebel":
 
             return {
-
-                title: "UNTEROFFIZIER MIT PORTEPEE",
-
-                theme: "portepee",
-
+                title:
+                    "UNTEROFFIZIER MIT PORTEPEE",
+                theme:
+                    "portepee",
             };
 
 
@@ -225,11 +199,10 @@ function getBadgeTheme(
         case "unteroffiziere":
 
             return {
-
-                title: "UNTEROFFIZIER",
-
-                theme: "unteroffiziere",
-
+                title:
+                    "UNTEROFFIZIER",
+                theme:
+                    "unteroffiziere",
             };
 
 
@@ -242,11 +215,10 @@ function getBadgeTheme(
         case "mannschaften":
 
             return {
-
-                title: "MANNSCHAFT",
-
-                theme: "mannschaften",
-
+                title:
+                    "MANNSCHAFT",
+                theme:
+                    "mannschaften",
             };
 
 
@@ -259,11 +231,10 @@ function getBadgeTheme(
         case "zivilisten":
 
             return {
-
-                title: "ZIVILIST",
-
-                theme: "zivilisten",
-
+                title:
+                    "ZIVILIST",
+                theme:
+                    "zivilisten",
             };
 
 
@@ -276,11 +247,10 @@ function getBadgeTheme(
         case "sanitaet":
 
             return {
-
-                title: "SANITÄT",
-
-                theme: "offiziere",
-
+                title:
+                    "SANITÄT",
+                theme:
+                    "offiziere",
             };
 
 
@@ -293,11 +263,10 @@ function getBadgeTheme(
         case "warrant":
 
             return {
-
-                title: "WARRANT OFFICER",
-
-                theme: "offiziere",
-
+                title:
+                    "WARRANT OFFICER",
+                theme:
+                    "offiziere",
             };
 
 
@@ -310,55 +279,50 @@ function getBadgeTheme(
         case "teamkader":
 
             return {
-
-                title: "TEAMKADER",
-
-                theme: "offiziere",
-
+                title:
+                    "TEAMKADER",
+                theme:
+                    "offiziere",
             };
 
 
         case "fuehrungsspieler":
 
             return {
-
-                title: "FÜHRUNGSSPIELER",
-
-                theme: "offiziere",
-
+                title:
+                    "FÜHRUNGSSPIELER",
+                theme:
+                    "offiziere",
             };
 
 
         case "teamleitung":
 
             return {
-
-                title: "TEAMLEITUNG",
-
-                theme: "offiziere",
-
+                title:
+                    "TEAMLEITUNG",
+                theme:
+                    "offiziere",
             };
 
 
         case "organisation":
 
             return {
-
-                title: "ORGANISATION",
-
-                theme: "offiziere",
-
+                title:
+                    "ORGANISATION",
+                theme:
+                    "offiziere",
             };
 
 
         case "auszeichnung":
 
             return {
-
-                title: "AUSZEICHNUNG",
-
-                theme: "offiziere",
-
+                title:
+                    "AUSZEICHNUNG",
+                theme:
+                    "offiziere",
             };
 
 
@@ -371,11 +335,10 @@ function getBadgeTheme(
         default:
 
             return {
-
-                title: "UNBEKANNT",
-
-                theme: "zivilisten",
-
+                title:
+                    "UNBEKANNT",
+                theme:
+                    "zivilisten",
             };
 
     }
@@ -384,23 +347,21 @@ function getBadgeTheme(
 
 
 /* ========================================= */
-/* LEGACY STATS */
+/* LEGACY STATS                             */
 /* ========================================= */
 
 type LegacyStats = {
 
     seasons: (
-
         | CareerSeasonStats
         | CareerGoalieSeasonStats
-
     )[];
 
 };
 
 
 /* ========================================= */
-/* DUAL ROLE STATS */
+/* DUAL ROLE STATS                          */
 /* ========================================= */
 
 type DualRoleStats = {
@@ -423,132 +384,193 @@ type DualRoleStats = {
 
 
 /* ========================================= */
-/* CAREER SEASONS ERMITTELN */
+/* GET STATS                                 */
 /* ========================================= */
 
-function getCareerSeasons(
-
+function getStats(
     member: ServiceRecordMember
-
 ) {
 
-    /*
-    ============================================
-    KEINE STATISTIKEN
-    ============================================
-    */
+    /* ============================================ */
+    /* KEINE STATISTIKEN                            */
+    /* ============================================ */
 
-    if (!member.stats) {
-
-        return [];
-
+    if (
+        !member.stats
+    ) {
+        return undefined;
     }
 
 
-    const stats =
+    const rawStats =
         member.stats as
         unknown as
-        LegacyStats | DualRoleStats;
+        LegacyStats |
+        DualRoleStats;
 
+
+    /* ============================================ */
+    /* DUAL ROLE                                    */
+    /* ============================================ */
 
     /*
-    ============================================
-    ALTE STRUKTUR
-    ============================================
-    */
+     * Wichtig:
+     * Tonska bleibt auf der MemberCard
+     * ein SKATER.
+     *
+     * Durch:
+     *     dualRole: true
+     *
+     * werden aber beide Statistikbereiche
+     * aufgebaut.
+     */
 
     if (
-
-        "seasons" in stats
-
+        member.dualRole === true
         &&
-
-        Array.isArray(stats.seasons)
-
+        "skater" in rawStats
     ) {
 
-        return stats.seasons;
+        const skaterSeasons =
+            rawStats.skater?.seasons
+            ?? [];
 
+
+        const goalieSeasons =
+            "goalie" in rawStats
+                ? rawStats.goalie?.seasons
+                    ?? []
+                : [];
+
+
+        const skater =
+            skaterSeasons.length > 0
+                ? buildSkaterCareerStats(
+                    skaterSeasons
+                )
+                : undefined;
+
+
+        const goalie =
+            goalieSeasons.length > 0
+                ? buildGoalieCareerStats(
+                    goalieSeasons
+                )
+                : undefined;
+
+
+        /* ======================================== */
+        /* DUAL DATA                                */
+        /* ======================================== */
+
+        return {
+            skater,
+            goalie,
+        };
     }
 
 
-    /*
-    ============================================
-    DUAL ROLE - GOALIE
-    ============================================
-    */
+    /* ============================================ */
+    /* ALTE STRUKTUR                               */
+    /* ============================================ */
 
     if (
-
-        member.playerType === "goalie"
-
+        "seasons" in rawStats
         &&
-
-        "goalie" in stats
-
+        Array.isArray(
+            rawStats.seasons
+        )
     ) {
 
-        return (
+        /* ======================================== */
+        /* GOALIE                                    */
+        /* ======================================== */
 
-            stats.goalie?.seasons
+        if (
+            member.playerType ===
+            "goalie"
+        ) {
 
-            ??
+            return buildGoalieCareerStats(
+                rawStats.seasons as CareerGoalieSeasonStats[]
+            );
+        }
 
-            []
 
+        /* ======================================== */
+        /* SKATER                                    */
+        /* ======================================== */
+
+        return buildSkaterCareerStats(
+            rawStats.seasons as CareerSeasonStats[]
         );
-
     }
 
 
-    /*
-    ============================================
-    DUAL ROLE - SKATER
-    ============================================
-    */
+    /* ============================================ */
+    /* NEUE DUAL-STRUKTUR                           */
+    /* ============================================ */
 
     if (
-
-        member.playerType === "skater"
-
+        member.playerType ===
+        "goalie"
         &&
-
-        "skater" in stats
-
+        "goalie" in rawStats
     ) {
 
-        return (
+        const seasons =
+            rawStats.goalie?.seasons
+            ?? [];
 
-            stats.skater?.seasons
 
-            ??
+        if (
+            seasons.length === 0
+        ) {
+            return undefined;
+        }
 
-            []
 
+        return buildGoalieCareerStats(
+            seasons
         );
-
     }
 
 
-    /*
-    ============================================
-    KEINE PASSENDEN STATISTIKEN
-    ============================================
-    */
+    if (
+        member.playerType ===
+        "skater"
+        &&
+        "skater" in rawStats
+    ) {
 
-    return [];
+        const seasons =
+            rawStats.skater?.seasons
+            ?? [];
 
+
+        if (
+            seasons.length === 0
+        ) {
+            return undefined;
+        }
+
+
+        return buildSkaterCareerStats(
+            seasons
+        );
+    }
+
+
+    return undefined;
 }
 
 
 /* ========================================= */
-/* MAPPER */
+/* MAPPER                                    */
 /* ========================================= */
 
 export function mapMemberToCard(
-
     member: ServiceRecordMember
-
 ) {
 
     /*
@@ -557,9 +579,10 @@ export function mapMemberToCard(
     ============================================
     */
 
-    const rank = ServiceRecord.rank(
-        member.rank
-    );
+    const rank =
+        ServiceRecord.rank(
+            member.rank
+        );
 
 
     /*
@@ -581,17 +604,9 @@ export function mapMemberToCard(
     */
 
     const badge =
-        getBadgeTheme(member);
-
-
-    /*
-    ============================================
-    KARRIERE SEASONS
-    ============================================
-    */
-
-    const careerSeasons =
-        getCareerSeasons(member);
+        getBadgeTheme(
+            member
+        );
 
 
     /*
@@ -600,108 +615,10 @@ export function mapMemberToCard(
     ============================================
     */
 
-    let stats:
-
-        | ReturnType<
-            typeof buildSkaterCareerStats
-        >
-
-        | ReturnType<
-            typeof buildGoalieCareerStats
-        >
-
-        | undefined;
-
-
-    /*
-    ============================================
-    GOALIE
-    ============================================
-    */
-
-    if (
-
-        member.playerType === "goalie"
-
-        &&
-
-        careerSeasons.length > 0
-
-    ) {
-
-        const goalieSeasons =
-            careerSeasons as CareerGoalieSeasonStats[];
-
-
-        stats =
-            buildGoalieCareerStats(
-                goalieSeasons
-            );
-
-    }
-
-
-    /*
-    ============================================
-    SKATER
-    ============================================
-    */
-
-    else if (
-
-        member.playerType === "skater"
-
-        &&
-
-        careerSeasons.length > 0
-
-    ) {
-
-        const skaterSeasons =
-            careerSeasons as CareerSeasonStats[];
-
-
-        stats =
-            buildSkaterCareerStats(
-                skaterSeasons
-            );
-
-    }
-
-
-    /*
-    ============================================
-    SPIELERTYP
-    ============================================
-
-    MemberCard erwartet:
-
-    - skater
-    - goalie
-    - dual
-
-    ServiceRecordMember arbeitet weiterhin
-    mit playerType + dualRole.
-
-    Wenn dualRole aktiv ist, wird die
-    MemberCard deshalb explizit als "dual"
-    typisiert.
-
-    Dadurch bleibt das bestehende Datenmodell
-    unverändert.
-    ============================================
-    */
-
-    const playerType:
-        | "skater"
-        | "goalie"
-        | "dual" =
-
-        member.dualRole === true
-
-            ? "dual"
-
-            : member.playerType;
+    const stats =
+        getStats(
+            member
+        );
 
 
     /*
@@ -744,7 +661,8 @@ export function mapMemberToCard(
         */
 
         deceased:
-            member.deceased ?? false,
+            member.deceased
+            ?? false,
 
 
         /*
@@ -818,7 +736,8 @@ export function mapMemberToCard(
         ========================================
         */
 
-        playerType,
+        playerType:
+            member.playerType,
 
 
         /*
@@ -828,7 +747,8 @@ export function mapMemberToCard(
         */
 
         dualRole:
-            member.dualRole ?? false,
+            member.dualRole
+            ?? false,
 
 
         /*
@@ -841,8 +761,7 @@ export function mapMemberToCard(
 
             position:
                 position?.title
-                ??
-                "",
+                ?? "",
 
             number:
                 member.playerNumber,

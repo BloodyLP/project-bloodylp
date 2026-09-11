@@ -47,7 +47,7 @@ export const sackzefix: ServiceRecordMember = {
     /**
      * Dienstgrad
      */
-    rank:"bundeswehr-stabskorporal",
+    rank:"bundeswehr-unteroffizier",
 
     /**
      * Organisation

@@ -106,13 +106,6 @@ export const o1l3r5: ServiceRecordMember = {
 patreon: 0,
 
 
-/**
- * Patreon GOAT
- *
- * Höchste Patreon-Auszeichnung.
- */
-patreonGoat: true,
-
     /**
      * Aktiv
      */
