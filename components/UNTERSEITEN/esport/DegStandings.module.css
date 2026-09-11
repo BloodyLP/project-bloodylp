@@ -5,16 +5,13 @@
 /* ============================================ */
 /*                                              */
 /* Project:                                     */
-/*                                              */
 /* BloodyLP Website                             */
 /*                                              */
 /* File:                                        */
-/*                                              */
 /* components/UNTERSEITEN/esport/               */
 /* DegStandings.module.css                      */
 /*                                              */
 /* Description:                                 */
-/*                                              */
 /* Styling für DEG eSports Tabelle.             */
 /*                                              */
 /* ============================================ */
@@ -95,10 +92,10 @@
         center;
 
     width:
-        92px;
+        100px;
 
     height:
-        92px;
+        100px;
 
     flex-shrink:
         0;
@@ -119,10 +116,10 @@
 .leagueLogoImage {
 
     width:
-        72px;
+        80px;
 
     height:
-        72px;
+        80px;
 
     object-fit:
         contain;
@@ -336,13 +333,18 @@
     display:
         grid;
 
+    /*
+     * TEAM-Spalte bewusst größer,
+     * damit lange Teamnamen nicht
+     * abgeschnitten werden.
+     */
     grid-template-columns:
         60px
-        minmax(280px, 2fr)
-        repeat(8, minmax(60px, 1fr));
+        minmax(340px, 2fr)
+        repeat(8, minmax(54px, 1fr));
 
     min-width:
-        980px;
+        950px;
 
     border-bottom:
         1px solid
@@ -369,13 +371,13 @@
         58px;
 
     padding:
-        0 10px;
+        0 8px;
 
     color:
         #9ca3af;
 
     font-size:
-        .8rem;
+        1.0rem;
 
     font-weight:
         900;
@@ -418,16 +420,22 @@
     display:
         grid;
 
+    /*
+     * Gleiche Spaltenstruktur wie der Header.
+     *
+     * Die Team-Spalte ist breiter.
+     * Die Statistikspalten sind etwas kompakter.
+     */
     grid-template-columns:
         60px
-        minmax(280px, 2fr)
-        repeat(8, minmax(60px, 1fr));
+        minmax(340px, 2fr)
+        repeat(8, minmax(54px, 1fr));
 
     min-width:
-        980px;
+        950px;
 
     min-height:
-        74px;
+        70px;
 
     border-bottom:
         1px solid
@@ -452,6 +460,40 @@
 
     background:
         rgba(255, 255, 255, .035);
+
+}
+
+
+/* ========================================= */
+/* PLAYOFF PLÄTZE 1–8                      */
+/* ========================================= */
+/*
+ * Nur die Platznummer wird eingefärbt.
+ *
+ * 1–8 = Playoff-Plätze
+ */
+
+.tableRow:nth-child(-n + 8) .positionCell {
+
+    color:
+        #9eff43;
+
+}
+
+
+/* ========================================= */
+/* PLÄTZE 9–12                             */
+/* ========================================= */
+/*
+ * Nur die Platznummer wird eingefärbt.
+ *
+ * 9–12 = weiterer Bereich
+ */
+
+.tableRow:nth-child(n + 9):nth-child(-n + 12) .positionCell {
+
+    color:
+        #dc143c;
 
 }
 
@@ -491,6 +533,19 @@
 }
 
 
+/*
+ * Die DEG-Platznummer bleibt rot,
+ * unabhängig von ihrer Tabellenposition.
+ */
+
+.degRow .positionCell {
+
+    color:
+        #f02d55;
+
+}
+
+
 /* ========================================= */
 /* POSITION CELL                            */
 /* ========================================= */
@@ -510,7 +565,7 @@
         #ffffff;
 
     font-size:
-        1.05rem;
+        1.35rem;
 
     font-weight:
         900;
@@ -531,13 +586,13 @@
         center;
 
     gap:
-        16px;
+        14px;
 
     min-width:
         0;
 
     padding:
-        0 18px;
+        0 14px;
 
 }
 
@@ -569,6 +624,11 @@
 
 .teamName {
 
+    /*
+     * Kein Abschneiden mehr durch
+     * eine künstliche Breitenbegrenzung.
+     */
+
     overflow:
         hidden;
 
@@ -576,7 +636,7 @@
         #ffffff;
 
     font-size:
-        1.12rem;
+        1.18rem;
 
     font-weight:
         900;
@@ -612,13 +672,13 @@
         center;
 
     padding:
-        0 10px;
+        0 6px;
 
     color:
         #ffffff;
 
     font-size:
-        1rem;
+        1.10rem;
 
     font-weight:
         800;
@@ -642,13 +702,13 @@
         center;
 
     padding:
-        0 10px;
+        0 6px;
 
     color:
         #f6d12a;
 
     font-size:
-        1.15rem;
+        1.35rem;
 
     font-weight:
         900;
@@ -756,6 +816,44 @@
 
     }
 
+
+    /*
+     * Auf Tablet bleibt die Team-Spalte
+     * bewusst großzügig.
+     */
+
+    .tableHeader,
+    .tableRow {
+
+        grid-template-columns:
+            56px
+            minmax(300px, 2fr)
+            repeat(8, minmax(52px, 1fr));
+
+        min-width:
+            900px;
+
+    }
+
+
+    .teamCell {
+
+        gap:
+            12px;
+
+        padding:
+            0 12px;
+
+    }
+
+
+    .teamName {
+
+        font-size:
+            1rem;
+
+    }
+
 }
 
 
@@ -820,6 +918,108 @@
 
 
     .leagueName {
+
+        font-size:
+            1rem;
+
+    }
+
+
+    /*
+     * Mobile:
+     * Tabelle bleibt horizontal scrollbar,
+     * Teamnamen bekommen trotzdem genug Platz.
+     */
+
+    .tableHeader,
+    .tableRow {
+
+        grid-template-columns:
+            54px
+            minmax(280px, 2fr)
+            repeat(8, minmax(50px, 1fr));
+
+        min-width:
+            820px;
+
+    }
+
+
+    .tableHeader > div {
+
+        min-height:
+            54px;
+
+        padding:
+            0 6px;
+
+        font-size:
+            .72rem;
+
+    }
+
+
+    .tableRow {
+
+        min-height:
+            66px;
+
+    }
+
+
+    .teamCell {
+
+        gap:
+            10px;
+
+        padding:
+            0 10px;
+
+    }
+
+
+    .teamLogo {
+
+        width:
+            40px;
+
+        height:
+            40px;
+
+    }
+
+
+    .teamName {
+
+        font-size:
+            .92rem;
+
+    }
+
+
+    .statCell {
+
+        padding:
+            0 4px;
+
+        font-size:
+            .88rem;
+
+    }
+
+
+    .pointsCell {
+
+        padding:
+            0 4px;
+
+        font-size:
+            1rem;
+
+    }
+
+
+    .positionCell {
 
         font-size:
             1rem;

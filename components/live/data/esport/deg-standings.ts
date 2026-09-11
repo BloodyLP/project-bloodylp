@@ -5,448 +5,287 @@
 /* ============================================ */
 /*                                              */
 /* Project:                                     */
-/*                                              */
 /* BloodyLP Website                             */
 /*                                              */
 /* File:                                        */
-/*                                              */
-/* components/live/data/esport/deg-standings.ts */
+/* deg-standings.ts                             */
 /*                                              */
 /* Description:                                 */
-/*                                              */
-/* DEG eSports Tabellen-Daten.                  */
+/* GCL 13 – aktuelle Mannschaften                */
 /*                                              */
 /* ============================================ */
 
-export type StandingTeam = {
 
-    position:
-        number;
+/* ============================================ */
+/* LEAGUE                                       */
+/* ============================================ */
 
-    team:
-        string;
+export type DegStandingsLeague = {
 
-    teamUrl?:
-        string;
+    name: string;
 
-    logo:
-        string;
+    logo: string;
 
-    gamesPlayed:
-        number;
+    group: string;
 
-    wins:
-        number;
-
-    overtimeWins:
-        number;
-
-    overtimeLosses:
-        number;
-
-    losses:
-        number;
-
-    goalsFor:
-        number;
-
-    goalsAgainst:
-        number;
-
-    points:
-        number;
-
-    isDeg?:
-        boolean;
+    season: string;
 
 };
 
 
+/* ============================================ */
+/* LEAGUE DATA                                  */
+/* ============================================ */
 
-export const degStandingsLeague = {
+export const degStandingsLeague: DegStandingsLeague = {
 
     name:
-        "ECL '26: SPRING - LITE",
-
-    group:
-        "GROUP 2",
-
-    season:
-        "2026",
+        "GCL 13",
 
     logo:
-        "/images/esport/logos/ecl2.png",
+        "/images/esport/logos/gcl.png",
+
+    group:
+        "DIVISION I",
+
+    season:
+        "",
 
 };
 
 
+/* ============================================ */
+/* TEAM                                          */
+/* ============================================ */
 
-export const degStandings: StandingTeam[] = [
+export type DegStanding = {
 
-    {
-        position:
-            1,
+    position: number;
 
-        team:
-            "HC Punishers",
+    team: string;
 
-        teamUrl:
-            "https://sportsgamer.gg/leagues/509/teams",
+    logo: string;
 
-        logo:
-            "/images/esport/hc-punishers-logo.png",
+    players: number;
 
-        gamesPlayed:
-            28,
+    gamesPlayed: number;
 
-        wins:
-            22,
+    wins: number;
 
-        overtimeWins:
-            2,
+    overtimeWins: number;
 
-        overtimeLosses:
-            1,
+    overtimeLosses: number;
 
-        losses:
-            3,
+    losses: number;
 
-        goalsFor:
-            161,
+    goalsFor: number;
 
-        goalsAgainst:
-            71,
+    goalsAgainst: number;
 
-        points:
-            71,
+    points: number;
 
-    },
+    isDeg?: boolean;
+
+};
 
 
+/* ============================================ */
+/* GCL 13                                         */
+/* ============================================ */
+
+export const degStandings: DegStanding[] = [
 
     {
-        position:
-            2,
+        position: 1,
 
         team:
-            "MIESKISSAT",
-
-        teamUrl:
-            "https://sportsgamer.gg/leagues/509/teams",
+            "Black Ice Ravens",
 
         logo:
-            "/images/esport/mieskissat.png",
+            "/images/esport/gcl13/black-ice-ravens.png",
+
+        players:
+            8,
 
         gamesPlayed:
-            28,
+            0,
 
         wins:
-            16,
-
-        overtimeWins:
-            4,
-
-        overtimeLosses:
-            2,
-
-        losses:
-            6,
-
-        goalsFor:
-            117,
-
-        goalsAgainst:
-            83,
-
-        points:
-            58,
-
-    },
-
-
-
-    {
-        position:
-            3,
-
-        team:
-            "Silver Sword Griffins",
-
-        teamUrl:
-            "https://sportsgamer.gg/leagues/509/teams",
-
-        logo:
-            "/images/esport/silver-sword-griffins.png",
-
-        gamesPlayed:
-            28,
-
-        wins:
-            15,
-
-        overtimeWins:
-            4,
-
-        overtimeLosses:
-            5,
-
-        losses:
-            4,
-
-        goalsFor:
-            103,
-
-        goalsAgainst:
-            65,
-
-        points:
-            58,
-
-    },
-
-
-
-    {
-        position:
-            4,
-
-        team:
-            "Kokemus Puuttuu",
-
-        teamUrl:
-            "https://sportsgamer.gg/leagues/509/teams",
-
-        logo:
-            "/images/esport/kokemus-puuttuu.png",
-
-        gamesPlayed:
-            28,
-
-        wins:
-            13,
-
-        overtimeWins:
-            5,
-
-        overtimeLosses:
-            3,
-
-        losses:
-            7,
-
-        goalsFor:
-            74,
-
-        goalsAgainst:
-            56,
-
-        points:
-            52,
-
-    },
-
-
-
-    {
-        position:
-            5,
-
-        team:
-            "SSK Adepts",
-
-        teamUrl:
-            "https://sportsgamer.gg/leagues/509/teams",
-
-        logo:
-            "/images/esport/ssk-adepts.png",
-
-        gamesPlayed:
-            28,
-
-        wins:
-            13,
-
-        overtimeWins:
-            4,
-
-        overtimeLosses:
-            2,
-
-        losses:
-            9,
-
-        goalsFor:
-            86,
-
-        goalsAgainst:
-            76,
-
-        points:
-            49,
-
-    },
-
-
-
-    {
-        position:
-            6,
-
-        team:
-            "Rampa Bay",
-
-        teamUrl:
-            "https://sportsgamer.gg/leagues/509/teams",
-
-        logo:
-            "/images/esport/rampa-bay.png",
-
-        gamesPlayed:
-            28,
-
-        wins:
-            14,
-
-        overtimeWins:
-            2,
-
-        overtimeLosses:
-            3,
-
-        losses:
-            9,
-
-        goalsFor:
-            96,
-
-        goalsAgainst:
-            75,
-
-        points:
-            49,
-
-    },
-
-
-
-    {
-        position:
-            7,
-
-        team:
-            "Refuse Too Lose",
-
-        teamUrl:
-            "https://sportsgamer.gg/leagues/509/teams",
-
-        logo:
-            "/images/esport/refuse-too-lose.png",
-
-        gamesPlayed:
-            28,
-
-        wins:
-            15,
+            0,
 
         overtimeWins:
             0,
 
         overtimeLosses:
-            1,
+            0,
 
         losses:
-            12,
+            0,
 
         goalsFor:
-            100,
+            0,
 
         goalsAgainst:
-            92,
+            0,
 
         points:
-            46,
+            0,
 
     },
 
 
-
     {
-        position:
-            8,
+        position: 2,
 
         team:
-            "Resurrection",
-
-        teamUrl:
-            "https://sportsgamer.gg/leagues/509/teams",
+            "Catastrophic Turnovers",
 
         logo:
-            "/images/esport/resurrection.png",
+            "/images/esport/gcl13/catastrophic-turnovers.jpg",
+
+        players:
+            5,
 
         gamesPlayed:
-            28,
+            0,
 
         wins:
-            13,
+            0,
 
         overtimeWins:
-            2,
+            0,
 
         overtimeLosses:
-            1,
+            0,
 
         losses:
-            12,
+            0,
 
         goalsFor:
-            86,
+            0,
 
         goalsAgainst:
-            86,
+            0,
 
         points:
-            44,
+            0,
 
     },
 
 
+    {
+        position: 3,
+
+        team:
+            "Clowns On Ice",
+
+        logo:
+            "/images/esport/gcl13/clowns-on-ice.png",
+
+        players:
+            4,
+
+        gamesPlayed:
+            0,
+
+        wins:
+            0,
+
+        overtimeWins:
+            0,
+
+        overtimeLosses:
+            0,
+
+        losses:
+            0,
+
+        goalsFor:
+            0,
+
+        goalsAgainst:
+            0,
+
+        points:
+            0,
+
+    },
+
 
     {
-        position:
-            9,
+        position: 4,
+
+        team:
+            "Conexion",
+
+        logo:
+            "/images/esport/gcl13/conexion.png",
+
+        players:
+            6,
+
+        gamesPlayed:
+            0,
+
+        wins:
+            0,
+
+        overtimeWins:
+            0,
+
+        overtimeLosses:
+            0,
+
+        losses:
+            0,
+
+        goalsFor:
+            0,
+
+        goalsAgainst:
+            0,
+
+        points:
+            0,
+
+    },
+
+
+    {
+        position: 5,
 
         team:
             "DEG eSports",
 
-        teamUrl:
-            "https://sportsgamer.gg/leagues/509/teams/423",
-
         logo:
-            "/images/esport/deg-esports-logo.png",
+            "/images/esport/gcl13/deg-esports.png",
+
+        players:
+            8,
 
         gamesPlayed:
-            28,
+            0,
 
         wins:
-            10,
+            0,
 
         overtimeWins:
-            5,
+            0,
 
         overtimeLosses:
-            3,
+            0,
 
         losses:
-            10,
+            0,
 
         goalsFor:
-            95,
+            0,
 
         goalsAgainst:
-            82,
+            0,
 
         points:
-            43,
+            0,
 
         isDeg:
             true,
@@ -454,248 +293,431 @@ export const degStandings: StandingTeam[] = [
     },
 
 
-
     {
-        position:
-            10,
+        position: 6,
 
         team:
-            "Kaupparit",
-
-        teamUrl:
-            "https://sportsgamer.gg/leagues/509/teams",
+            "EC Kassel Huskies eSports",
 
         logo:
-            "/images/esport/kaupparit.png",
+            "/images/esport/gcl13/ec-kassel-huskies-esports.png",
 
-        gamesPlayed:
-            28,
-
-        wins:
-            10,
-
-        overtimeWins:
-            4,
-
-        overtimeLosses:
-            5,
-
-        losses:
-            9,
-
-        goalsFor:
-            83,
-
-        goalsAgainst:
-            74,
-
-        points:
-            43,
-
-    },
-
-
-
-    {
-        position:
-            11,
-
-        team:
-            "ARMEIJAN KURI",
-
-        teamUrl:
-            "https://sportsgamer.gg/leagues/509/teams",
-
-        logo:
-            "/images/esport/armeijan-kuri.png",
-
-        gamesPlayed:
-            28,
-
-        wins:
-            8,
-
-        overtimeWins:
-            2,
-
-        overtimeLosses:
-            5,
-
-        losses:
-            13,
-
-        goalsFor:
-            92,
-
-        goalsAgainst:
-            103,
-
-        points:
-            33,
-
-    },
-
-
-
-    {
-        position:
-            12,
-
-        team:
-            "HC Nova Hut",
-
-        teamUrl:
-            "https://sportsgamer.gg/leagues/509/teams",
-
-        logo:
-            "/images/esport/hc-nova-hut.png",
-
-        gamesPlayed:
-            28,
-
-        wins:
-            10,
-
-        overtimeWins:
-            1,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            17,
-
-        goalsFor:
-            82,
-
-        goalsAgainst:
-            125,
-
-        points:
-            32,
-
-    },
-
-
-
-    {
-        position:
-            13,
-
-        team:
-            "Sjukstugan",
-
-        teamUrl:
-            "https://sportsgamer.gg/leagues/509/teams",
-
-        logo:
-            "/images/esport/sjukstugan.png",
-
-        gamesPlayed:
-            28,
-
-        wins:
+        players:
             6,
 
+        gamesPlayed:
+            0,
+
+        wins:
+            0,
+
         overtimeWins:
             0,
 
         overtimeLosses:
+            0,
+
+        losses:
+            0,
+
+        goalsFor:
+            0,
+
+        goalsAgainst:
+            0,
+
+        points:
+            0,
+
+    },
+
+
+    {
+        position: 7,
+
+        team:
+            "EHC Olten eSports",
+
+        logo:
+            "/images/esport/gcl13/ehc-olten-esports.png",
+
+        players:
+            6,
+
+        gamesPlayed:
+            0,
+
+        wins:
+            0,
+
+        overtimeWins:
+            0,
+
+        overtimeLosses:
+            0,
+
+        losses:
+            0,
+
+        goalsFor:
+            0,
+
+        goalsAgainst:
+            0,
+
+        points:
+            0,
+
+    },
+
+
+    {
+        position: 8,
+
+        team:
+            "German Elite Hockey",
+
+        logo:
+            "/images/esport/gcl13/german-elite-hockey.png",
+
+        players:
+            9,
+
+        gamesPlayed:
+            0,
+
+        wins:
+            0,
+
+        overtimeWins:
+            0,
+
+        overtimeLosses:
+            0,
+
+        losses:
+            0,
+
+        goalsFor:
+            0,
+
+        goalsAgainst:
+            0,
+
+        points:
+            0,
+
+    },
+
+
+    {
+        position: 9,
+
+        team:
+            "Hammer Eisbären eSports",
+
+        logo:
+            "/images/esport/gcl13/hammer-eisbaeren-esports.png",
+
+        players:
+            7,
+
+        gamesPlayed:
+            0,
+
+        wins:
+            0,
+
+        overtimeWins:
+            0,
+
+        overtimeLosses:
+            0,
+
+        losses:
+            0,
+
+        goalsFor:
+            0,
+
+        goalsAgainst:
+            0,
+
+        points:
+            0,
+
+    },
+
+
+    {
+        position: 10,
+
+        team:
+            "Hockeyholics",
+
+        logo:
+            "/images/esport/gcl13/hockeyholics.png",
+
+        players:
+            6,
+
+        gamesPlayed:
+            0,
+
+        wins:
+            0,
+
+        overtimeWins:
+            0,
+
+        overtimeLosses:
+            0,
+
+        losses:
+            0,
+
+        goalsFor:
+            0,
+
+        goalsAgainst:
+            0,
+
+        points:
+            0,
+
+    },
+
+
+    {
+        position: 11,
+
+        team:
+            "Iserlohn Roosters eSports",
+
+        logo:
+            "/images/esport/gcl13/iserlohn-roosters-esports.png",
+
+        players:
             1,
 
-        losses:
-            21,
-
-        goalsFor:
-            70,
-
-        goalsAgainst:
-            139,
-
-        points:
-            19,
-
-    },
-
-
-
-    {
-        position:
-            14,
-
-        team:
-            "Dynamo IHC",
-
-        teamUrl:
-            "https://sportsgamer.gg/leagues/509/teams",
-
-        logo:
-            "/images/esport/dynamo-ihc.png",
-
         gamesPlayed:
-            28,
+            0,
 
         wins:
-            5,
+            0,
 
         overtimeWins:
             0,
 
         overtimeLosses:
-            2,
+            0,
 
         losses:
-            21,
+            0,
 
         goalsFor:
-            66,
+            0,
 
         goalsAgainst:
-            116,
+            0,
 
         points:
-            17,
+            0,
 
     },
 
 
-
     {
-        position:
-            15,
+        position: 12,
 
         team:
-            "Nordic Nosebleed",
-
-        teamUrl:
-            "https://sportsgamer.gg/leagues/509/teams",
+            "Old but Gold",
 
         logo:
-            "/images/esport/nordic-nosebleed-logo.png",
+            "/images/esport/gcl13/old-but-gold.png",
+
+        players:
+            9,
 
         gamesPlayed:
-            28,
+            0,
 
         wins:
-            3,
+            0,
 
         overtimeWins:
-            2,
+            0,
 
         overtimeLosses:
-            3,
+            0,
 
         losses:
-            20,
+            0,
 
         goalsFor:
-            48,
+            0,
 
         goalsAgainst:
-            116,
+            0,
 
         points:
-            16,
+            0,
+
+    },
+
+
+    {
+        position: 13,
+
+        team:
+            "Outlaws Hockey",
+
+        logo:
+            "/images/esport/gcl13/outlaws-hockey.png",
+
+        players:
+            8,
+
+        gamesPlayed:
+            0,
+
+        wins:
+            0,
+
+        overtimeWins:
+            0,
+
+        overtimeLosses:
+            0,
+
+        losses:
+            0,
+
+        goalsFor:
+            0,
+
+        goalsAgainst:
+            0,
+
+        points:
+            0,
+
+    },
+
+
+    {
+        position: 14,
+
+        team:
+            "REH Gaming",
+
+        logo:
+            "/images/esport/gcl13/reh-gaming.png",
+
+        players:
+            6,
+
+        gamesPlayed:
+            0,
+
+        wins:
+            0,
+
+        overtimeWins:
+            0,
+
+        overtimeLosses:
+            0,
+
+        losses:
+            0,
+
+        goalsFor:
+            0,
+
+        goalsAgainst:
+            0,
+
+        points:
+            0,
+
+    },
+
+
+    {
+        position: 15,
+
+        team:
+            "SCB eSports",
+
+        logo:
+            "/images/esport/gcl13/scb-esports.png",
+
+        players:
+            8,
+
+        gamesPlayed:
+            0,
+
+        wins:
+            0,
+
+        overtimeWins:
+            0,
+
+        overtimeLosses:
+            0,
+
+        losses:
+            0,
+
+        goalsFor:
+            0,
+
+        goalsAgainst:
+            0,
+
+        points:
+            0,
+
+    },
+
+
+    {
+        position: 16,
+
+        team:
+            "Valhalla Vikings HC",
+
+        logo:
+            "/images/esport/gcl13/valhalla-vikings-hc.png",
+
+        players:
+            8,
+
+        gamesPlayed:
+            0,
+
+        wins:
+            0,
+
+        overtimeWins:
+            0,
+
+        overtimeLosses:
+            0,
+
+        losses:
+            0,
+
+        goalsFor:
+            0,
+
+        goalsAgainst:
+            0,
+
+        points:
+            0,
 
     },
 
