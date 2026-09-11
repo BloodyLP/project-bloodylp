@@ -34,12 +34,12 @@ export const playerCareer: PlayerCareer = {
      */
 
     stats: {
-        games: 25,
-        goals: 9,
-        assists: 12,
-        points: 21,
-        plusMinus: 8,
-        pim: 2,
+        games: 38,
+        goals: 19,
+        assists: 18,
+        points: 37,
+        plusMinus: 12,
+        pim: 13,
     },
 
     /*

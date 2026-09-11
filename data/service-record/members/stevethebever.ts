@@ -77,7 +77,7 @@ export const stevethebever: ServiceRecordMember = {
     /**
      * Dienstgrad
      */
-    rank: "canadian-army-general",
+    rank: "ba-tryout-spieler",
 
 
 
@@ -132,7 +132,7 @@ playerNumber:"96",
     /**
      * Prestige
      */
-    prestige:2,
+    prestige:3,
 
 
 

@@ -45,4 +45,20 @@ export const careerHighlights: CareerHighlight[] = [
         description:
             "Erstes Tor in der NHL am 4. Spieltag der NHL Saison 2026/2027 gegen die Nahsville Predators zum 6:6.",
     },
+
+        {
+        date: "11. September 2026",
+        category: "ERSTER HATTRICK",
+        title: "1. Hattrick in der NHL",
+        description:
+            "Erster Hattrick in der NHL am 28. Spieltag der NHL Saison 2026/2027 gegen die Pittsburgh Penguins beim 9:0 Sieg.",
+    },
+
+            {
+        date: "11. September 2026",
+        category: "ERSTER KAMPF",
+        title: "1. Kampf in der NHL",
+        description:
+            "Erster Kampf in der NHL am 30. Spieltag der NHL Saison 2026/2027 gegen die Carolina Hurricanes.",
+    },
 ];
