@@ -160,6 +160,8 @@ import { eishockeylive } from "./members/eishockeylive";
 
 import { adriangross0602 } from "./members/adriangross0602";
 
+import { stitch } from "./members/stitch";
+
 
 
 export const MEMBERS: ServiceRecordMember[] = [
@@ -239,4 +241,6 @@ export const MEMBERS: ServiceRecordMember[] = [
     eishockeylive,
 
     adriangross0602,
+
+    stitch,
 ];
