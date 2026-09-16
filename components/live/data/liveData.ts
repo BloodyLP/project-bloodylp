@@ -39,13 +39,6 @@ export const liveData = {
 
     events: [  
 
-                                   {
-        day: "MI",
-        date: "16. SEP",
-        time: "19:30 Uhr",
-        title: "NHL 27",
-      }, 
-
                                          {
         day: "DO",
         date: "17. SEP",
@@ -56,6 +49,13 @@ export const liveData = {
                         {
         day: "SA",
         date: "19. SEP",
+        time: "19:30 Uhr",
+        title: "NHL 27",
+      }, 
+
+                                         {
+        day: "SO",
+        date: "20. SEP",
         time: "19:30 Uhr",
         title: "NHL 27",
       }, 
