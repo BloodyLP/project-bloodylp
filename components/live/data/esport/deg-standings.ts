@@ -55,7 +55,7 @@ export const degStandingsLeague: DegStandingsLeague = {
 
 
 /* ============================================ */
-/* TEAM                                          */
+/* TEAM                                         */
 /* ============================================ */
 
 export type DegStanding = {
@@ -90,10 +90,14 @@ export type DegStanding = {
 
 
 /* ============================================ */
-/* GCL 13                                         */
+/* GCL 13                                       */
 /* ============================================ */
 
 export const degStandings: DegStanding[] = [
+
+    /* ---------------------------------------- */
+    /* 01 – BLACK ICE RAVENS                    */
+    /* ---------------------------------------- */
 
     {
         position: 1,
@@ -105,7 +109,7 @@ export const degStandings: DegStanding[] = [
             "/images/esport/gcl13/black-ice-ravens.png",
 
         players:
-            8,
+            11,
 
         gamesPlayed:
             0,
@@ -133,6 +137,10 @@ export const degStandings: DegStanding[] = [
 
     },
 
+
+    /* ---------------------------------------- */
+    /* 02 – CATASTROPHIC TURNOVERS             */
+    /* ---------------------------------------- */
 
     {
         position: 2,
@@ -144,7 +152,7 @@ export const degStandings: DegStanding[] = [
             "/images/esport/gcl13/catastrophic-turnovers.jpg",
 
         players:
-            5,
+            8,
 
         gamesPlayed:
             0,
@@ -172,6 +180,10 @@ export const degStandings: DegStanding[] = [
 
     },
 
+
+    /* ---------------------------------------- */
+    /* 03 – CLOWNS ON ICE                      */
+    /* ---------------------------------------- */
 
     {
         position: 3,
@@ -183,7 +195,7 @@ export const degStandings: DegStanding[] = [
             "/images/esport/gcl13/clowns-on-ice.png",
 
         players:
-            4,
+            10,
 
         gamesPlayed:
             0,
@@ -211,6 +223,10 @@ export const degStandings: DegStanding[] = [
 
     },
 
+
+    /* ---------------------------------------- */
+    /* 04 – CONEXION                            */
+    /* ---------------------------------------- */
 
     {
         position: 4,
@@ -222,7 +238,7 @@ export const degStandings: DegStanding[] = [
             "/images/esport/gcl13/conexion.png",
 
         players:
-            6,
+            8,
 
         gamesPlayed:
             0,
@@ -251,8 +267,55 @@ export const degStandings: DegStanding[] = [
     },
 
 
+    /* ---------------------------------------- */
+    /* 05 – DEADLY PHANTOMS                    */
+    /* ---------------------------------------- */
+
     {
         position: 5,
+
+        team:
+            "Deadly Phantoms",
+
+        logo:
+            "/images/esport/gcl13/deadly-phantoms.png",
+
+        players:
+            7,
+
+        gamesPlayed:
+            0,
+
+        wins:
+            0,
+
+        overtimeWins:
+            0,
+
+        overtimeLosses:
+            0,
+
+        losses:
+            0,
+
+        goalsFor:
+            0,
+
+        goalsAgainst:
+            0,
+
+        points:
+            0,
+
+    },
+
+
+    /* ---------------------------------------- */
+    /* 06 – DEG ESPORTS                        */
+    /* ---------------------------------------- */
+
+    {
+        position: 6,
 
         team:
             "DEG eSports",
@@ -261,7 +324,7 @@ export const degStandings: DegStanding[] = [
             "/images/esport/gcl13/deg-esports.png",
 
         players:
-            8,
+            11,
 
         gamesPlayed:
             0,
@@ -293,8 +356,12 @@ export const degStandings: DegStanding[] = [
     },
 
 
+    /* ---------------------------------------- */
+    /* 07 – EC KASSEL HUSKIES ESPORTS          */
+    /* ---------------------------------------- */
+
     {
-        position: 6,
+        position: 7,
 
         team:
             "EC Kassel Huskies eSports",
@@ -303,7 +370,7 @@ export const degStandings: DegStanding[] = [
             "/images/esport/gcl13/ec-kassel-huskies-esports.png",
 
         players:
-            6,
+            8,
 
         gamesPlayed:
             0,
@@ -332,8 +399,12 @@ export const degStandings: DegStanding[] = [
     },
 
 
+    /* ---------------------------------------- */
+    /* 08 – EHC OLTEN ESPORTS                  */
+    /* ---------------------------------------- */
+
     {
-        position: 7,
+        position: 8,
 
         team:
             "EHC Olten eSports",
@@ -371,8 +442,12 @@ export const degStandings: DegStanding[] = [
     },
 
 
+    /* ---------------------------------------- */
+    /* 09 – GERMAN ELITE HOCKEY                */
+    /* ---------------------------------------- */
+
     {
-        position: 8,
+        position: 9,
 
         team:
             "German Elite Hockey",
@@ -410,14 +485,61 @@ export const degStandings: DegStanding[] = [
     },
 
 
+    /* ---------------------------------------- */
+    /* 10 – HAMMER EISBÄREN ESPORTS            */
+    /* ---------------------------------------- */
+
     {
-        position: 9,
+        position: 10,
 
         team:
             "Hammer Eisbären eSports",
 
         logo:
             "/images/esport/gcl13/hammer-eisbaeren-esports.png",
+
+        players:
+            8,
+
+        gamesPlayed:
+            0,
+
+        wins:
+            0,
+
+        overtimeWins:
+            0,
+
+        overtimeLosses:
+            0,
+
+        losses:
+            0,
+
+        goalsFor:
+            0,
+
+        goalsAgainst:
+            0,
+
+        points:
+            0,
+
+    },
+
+
+    /* ---------------------------------------- */
+    /* 11 – HOCKEYHOLICS                      */
+    /* ---------------------------------------- */
+
+    {
+        position: 11,
+
+        team:
+            "Hockeyholics",
+
+        logo:
+            "/images/esport/gcl13/hockeyholics.png",
 
         players:
             7,
@@ -449,47 +571,12 @@ export const degStandings: DegStanding[] = [
     },
 
 
-    {
-        position: 10,
-
-        team:
-            "Hockeyholics",
-
-        logo:
-            "/images/esport/gcl13/hockeyholics.png",
-
-        players:
-            6,
-
-        gamesPlayed:
-            0,
-
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
-    },
-
+    /* ---------------------------------------- */
+    /* 12 – ISERLOHN ROOSTERS ESPORTS          */
+    /* ---------------------------------------- */
 
     {
-        position: 11,
+        position: 12,
 
         team:
             "Iserlohn Roosters eSports",
@@ -498,7 +585,7 @@ export const degStandings: DegStanding[] = [
             "/images/esport/gcl13/iserlohn-roosters-esports.png",
 
         players:
-            1,
+            5,
 
         gamesPlayed:
             0,
@@ -527,8 +614,12 @@ export const degStandings: DegStanding[] = [
     },
 
 
+    /* ---------------------------------------- */
+    /* 13 – OLD BUT GOLD                      */
+    /* ---------------------------------------- */
+
     {
-        position: 12,
+        position: 13,
 
         team:
             "Old but Gold",
@@ -566,8 +657,12 @@ export const degStandings: DegStanding[] = [
     },
 
 
+    /* ---------------------------------------- */
+    /* 14 – OUTLAWS HOCKEY                     */
+    /* ---------------------------------------- */
+
     {
-        position: 13,
+        position: 14,
 
         team:
             "Outlaws Hockey",
@@ -576,7 +671,7 @@ export const degStandings: DegStanding[] = [
             "/images/esport/gcl13/outlaws-hockey.png",
 
         players:
-            8,
+            12,
 
         gamesPlayed:
             0,
@@ -605,8 +700,12 @@ export const degStandings: DegStanding[] = [
     },
 
 
+    /* ---------------------------------------- */
+    /* 15 – REH GAMING                         */
+    /* ---------------------------------------- */
+
     {
-        position: 14,
+        position: 15,
 
         team:
             "REH Gaming",
@@ -644,8 +743,55 @@ export const degStandings: DegStanding[] = [
     },
 
 
+    /* ---------------------------------------- */
+    /* 16 – SC RACKELBAHN EV                   */
+    /* ---------------------------------------- */
+
     {
-        position: 15,
+        position: 16,
+
+        team:
+            "SC Rackelbahn eV",
+
+        logo:
+            "/images/esport/gcl13/sc-rackelhahn.jpg",
+
+        players:
+            9,
+
+        gamesPlayed:
+            0,
+
+        wins:
+            0,
+
+        overtimeWins:
+            0,
+
+        overtimeLosses:
+            0,
+
+        losses:
+            0,
+
+        goalsFor:
+            0,
+
+        goalsAgainst:
+            0,
+
+        points:
+            0,
+
+    },
+
+
+    /* ---------------------------------------- */
+    /* 17 – SCB ESPORTS                        */
+    /* ---------------------------------------- */
+
+    {
+        position: 17,
 
         team:
             "SCB eSports",
@@ -683,8 +829,55 @@ export const degStandings: DegStanding[] = [
     },
 
 
+    /* ---------------------------------------- */
+    /* 18 – THE LAST SHIFT                     */
+    /* ---------------------------------------- */
+
     {
-        position: 16,
+        position: 18,
+
+        team:
+            "The Last Shift",
+
+        logo:
+            "/images/esport/gcl13/the-last-shift.jpg",
+
+        players:
+            5,
+
+        gamesPlayed:
+            0,
+
+        wins:
+            0,
+
+        overtimeWins:
+            0,
+
+        overtimeLosses:
+            0,
+
+        losses:
+            0,
+
+        goalsFor:
+            0,
+
+        goalsAgainst:
+            0,
+
+        points:
+            0,
+
+    },
+
+
+    /* ---------------------------------------- */
+    /* 19 – VALHALLA VIKINGS HC                */
+    /* ---------------------------------------- */
+
+    {
+        position: 19,
 
         team:
             "Valhalla Vikings HC",
@@ -693,7 +886,7 @@ export const degStandings: DegStanding[] = [
             "/images/esport/gcl13/valhalla-vikings-hc.png",
 
         players:
-            8,
+            10,
 
         gamesPlayed:
             0,

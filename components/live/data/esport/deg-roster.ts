@@ -1,17 +1,19 @@
 /* ============================================ */
 /* BloodyArmy                                   */
 /* ============================================ */
-/*                                             */
+/*                                              */
 /* Project:                                     */
 /* BloodyLP Website                             */
-/*                                             */
+/*                                              */
 /* File:                                        */
 /* deg-roster.ts                                */
-/*                                             */
+/*                                              */
 /* Description:                                 */
 /* Spielerdaten des aktuellen                   */
 /* DEG eSport Kaders.                           */
-/*                                             */
+/*                                              */
+/* GCL 13                                       */
+/*                                              */
 /* ============================================ */
 
 
@@ -20,6 +22,7 @@
 /* ============================================ */
 
 export type DegPlayer = {
+
     number: number;
 
     gamerTag: string;
@@ -38,6 +41,7 @@ export type DegPlayer = {
         | "forward";
 
     sportsgamerUrl: string;
+
 };
 
 
@@ -72,6 +76,7 @@ export const degGoalies: DegPlayer[] = [
             "",
     },
 
+
     {
         number: 39,
 
@@ -96,6 +101,7 @@ export const degGoalies: DegPlayer[] = [
         sportsgamerUrl:
             "https://sportsgamer.gg/players/5944",
     },
+
 
     {
         number: 67,
@@ -156,6 +162,7 @@ export const degDefensemen: DegPlayer[] = [
             "https://sportsgamer.gg/players/5995",
     },
 
+
     {
         number: 97,
 
@@ -181,6 +188,7 @@ export const degDefensemen: DegPlayer[] = [
             "https://sportsgamer.gg/players/8930",
     },
 
+
     {
         number: 91,
 
@@ -205,6 +213,7 @@ export const degDefensemen: DegPlayer[] = [
         sportsgamerUrl:
             "https://sportsgamer.gg/players/10333",
     },
+
 
     {
         number: 14,
@@ -265,6 +274,7 @@ export const degForwards: DegPlayer[] = [
             "https://sportsgamer.gg/players/2695",
     },
 
+
     {
         number: 71,
 
@@ -289,6 +299,7 @@ export const degForwards: DegPlayer[] = [
         sportsgamerUrl:
             "https://sportsgamer.gg/players/607",
     },
+
 
     {
         number: 91,
@@ -315,7 +326,8 @@ export const degForwards: DegPlayer[] = [
             "https://sportsgamer.gg/players/3235",
     },
 
-        {
+
+    {
         number: 17,
 
         gamerTag:
@@ -339,5 +351,30 @@ export const degForwards: DegPlayer[] = [
         sportsgamerUrl:
             "https://sportsgamer.gg/players/15266",
     },
+
+    {
+    number: 79,
+
+    gamerTag:
+        "stefanoojj",
+
+    name:
+        "Stefano Ojj",
+
+    nationality:
+        "/images/esport/flags/fin.png",
+
+    flag:
+        "/images/esport/flags/fin.png",
+
+    image:
+        "/images/esport/players/stefanoojj.png",
+
+    position:
+        "forward",
+
+    sportsgamerUrl:
+        "https://sportsgamer.gg/players/16931",
+},
 
 ];
