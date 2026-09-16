@@ -55,7 +55,7 @@ export type DegMatch = {
 export const degTeam = {
 
     name:
-        "DEG eSport",
+        "DEG eSports",
 
     logo:
         "/images/esport/deg-esports-logo.png",
