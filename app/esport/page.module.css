@@ -93,7 +93,6 @@
     height: 110% !important;
 
     object-fit: cover;
-
     object-position: center;
 
     z-index: 0;
@@ -161,6 +160,58 @@
 
 
 /* ========================================= */
+/* HERO LOGO                                 */
+/* ========================================= */
+
+.heroLogo {
+
+    position: absolute;
+
+    z-index: 3;
+
+    top: 50%;
+
+    right:
+        max(
+            24px,
+            calc((100% - 1180px) / 2)
+        );
+
+    width: 460px;
+    height: 460px;
+
+    transform:
+        translateY(-50%);
+
+    pointer-events: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ========================================= */
+/* HERO LOGO IMAGE                           */
+/* ========================================= */
+
+.heroLogoImage {
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: contain;
+    object-position: center;
+
+    filter:
+        drop-shadow(
+            0 14px 30px
+            rgba(0, 0, 0, .45)
+        );
+}
+
+
+/* ========================================= */
 /* HERO CONTENT                              */
 /* ========================================= */
 
@@ -168,7 +219,7 @@
 
     position: relative;
 
-    z-index: 3;
+    z-index: 4;
 
     width: 100%;
     max-width: 1180px;
@@ -267,12 +318,20 @@
 
 .heroActions {
 
+    position: absolute;
+
+    left: 0;
+    bottom: -100px;
+
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 12px;
 
-    margin-top: 32px;
+    margin: 0;
+
+    z-index: 10;
 }
 
 
@@ -1656,6 +1715,24 @@
         object-position: 58% center !important;
     }
 
+
+    /* ===================================== */
+    /* HERO LOGO                             */
+    /* ===================================== */
+
+    .heroLogo {
+
+        top: 28px;
+        right: 24px;
+
+        width: 125px;
+        height: 125px;
+
+        transform: none;
+
+        opacity: .85;
+    }
+
 }
 
 
@@ -1694,6 +1771,24 @@
     .commentatorImage {
 
         min-height: 470px;
+    }
+
+
+    /* ===================================== */
+    /* HERO LOGO                             */
+    /* ===================================== */
+
+    .heroLogo {
+
+        top: 22px;
+        right: 20px;
+
+        width: 105px;
+        height: 105px;
+
+        transform: none;
+
+        opacity: .80;
     }
 
 }
@@ -1760,6 +1855,46 @@
     }
 
 
+    /* ===================================== */
+    /* HERO LOGO                             */
+    /* ===================================== */
+
+    /*
+     * Auf Mobilgeräten bleibt das DEG-Logo
+     * bewusst klein und sitzt oben rechts.
+     *
+     * Es nimmt keinen Platz im normalen
+     * Layout ein und kann deshalb weder
+     * Titel noch Buttons verschieben.
+     */
+
+    .heroLogo {
+
+        top: 18px;
+        right: 16px;
+
+        width: 82px;
+        height: 82px;
+
+        transform: none;
+
+        opacity: .78;
+
+        z-index: 5;
+    }
+
+
+    .heroLogoImage {
+
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: contain;
+
+        object-position: center;
+    }
+
+
     .section {
 
         padding:
@@ -1776,7 +1911,8 @@
 
     .statsGrid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
         gap: 14px;
     }
@@ -1839,7 +1975,6 @@
         width: 100%;
 
         height: 380px;
-
         min-height: 380px;
 
         border-left: 0;
@@ -1934,22 +2069,19 @@
 
     .sponsorsHeader {
 
-        margin-bottom:
-            30px;
+        margin-bottom: 30px;
     }
 
 
     .sponsorsTitle {
 
-        font-size:
-            2rem;
+        font-size: 2rem;
     }
 
 
     .sponsorsIntro {
 
-        font-size:
-            .8rem;
+        font-size: .8rem;
     }
 
 
@@ -1964,22 +2096,31 @@
 
     .mainSponsor {
 
-        min-height:
-            190px;
+        min-height: 190px;
     }
 
 
     .mainSponsorImage img {
 
-        padding:
-            28px;
+        padding: 28px;
     }
 
 
     .otherSponsors {
 
-        margin-top:
-            30px;
+        margin-top: 30px;
+    }
+
+
+    /* ===================================== */
+    /* SOCIAL MEDIA                          */
+    /* ===================================== */
+
+    .socialsSection {
+
+        padding:
+            0 20px
+            70px;
     }
 
 }
@@ -1995,8 +2136,7 @@
 
     .hero {
 
-        min-height:
-            480px;
+        min-height: 480px;
 
         padding:
             80px 18px 70px;
@@ -2005,41 +2145,62 @@
 
     .title {
 
-        font-size:
-            3.4rem;
+        font-size: 3.4rem;
+    }
+
+
+    /* ===================================== */
+    /* HERO LOGO                             */
+    /* ===================================== */
+
+    .heroLogo {
+
+        top: 14px;
+        right: 12px;
+
+        width: 65px;
+        height: 65px;
+
+        transform: none;
+
+        opacity: .72;
+
+        z-index: 5;
+    }
+
+
+    .heroLogoImage {
+
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: contain;
     }
 
 
     .historyVisual {
 
-        height:
-            210px;
+        height: 210px;
     }
 
 
     .commentatorImage {
 
-        height:
-            320px;
+        height: 320px;
 
-        min-height:
-            320px;
+        min-height: 320px;
     }
 
 
     .commentatorImageElement {
 
-        top:
-            -25% !important;
+        top: -25% !important;
 
-        left:
-            -25% !important;
+        left: -25% !important;
 
-        width:
-            150% !important;
+        width: 150% !important;
 
-        height:
-            150% !important;
+        height: 150% !important;
 
         object-position:
             58% center !important;
@@ -2055,38 +2216,30 @@
 
     .mainSponsor {
 
-        min-height:
-            165px;
+        min-height: 165px;
     }
 
 
     .sponsorLabel {
 
-        top:
-            12px;
+        top: 12px;
 
-        left:
-            12px;
+        left: 12px;
 
-        font-size:
-            .50rem;
+        font-size: .50rem;
     }
 
 
     .mainSponsorImage img {
 
-        padding:
-            22px;
+        padding: 22px;
     }
 
 
     .otherSponsor {
 
-        width:
-            200px;
-
-        height:
-            86px;
+        width: 200px;
+        height: 86px;
     }
 
 }

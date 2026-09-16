@@ -93,7 +93,7 @@ export const degGoalies: DegPlayer[] = [
             "/images/esport/flags/de.png",
 
         image:
-            "/images/esport/players/meazza1704.png",
+            "/images/esport/players/meazza17042.png",
 
         position:
             "goalie",
@@ -179,7 +179,7 @@ export const degDefensemen: DegPlayer[] = [
             "/images/esport/flags/de.png",
 
         image:
-            "/images/esport/players/kempe.png",
+            "/images/esport/players/original-fungus.png",
 
         position:
             "defense",

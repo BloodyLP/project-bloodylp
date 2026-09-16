@@ -1,0 +1,940 @@
+/* ============================================
+   BloodyArmy
+   ============================================
+
+   Project:
+   BloodyLP Website
+
+   File:
+   DEGSocials.module.css
+
+   Description:
+   DEG eSports Social Media
+
+   ============================================ */
+
+
+/* ============================================
+   SECTION
+   ============================================ */
+
+.socialSection {
+    position: relative;
+
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding: 95px 35px 90px;
+
+    overflow: hidden;
+}
+
+
+/* ============================================
+   SUBTLE BACKGROUND GLOW
+   ============================================ */
+
+.socialSection::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 700px;
+    height: 350px;
+
+    transform: translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(227, 6, 19, 0.07) 0%,
+            rgba(227, 6, 19, 0.025) 35%,
+            transparent 72%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.sectionHeader {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    margin-bottom: 58px;
+}
+
+
+/* ============================================
+   DEG ESPORTS
+   ============================================ */
+
+.degLabel {
+    display: block;
+
+    margin-bottom: 13px;
+
+    color: #ffe900;
+
+    font-size: 11px;
+    font-weight: 900;
+
+    letter-spacing: 0.45em;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 12px rgba(255, 233, 0, 0.18);
+}
+
+
+/* ============================================
+   TITLE
+   ============================================ */
+
+.title {
+    display: block;
+
+    margin: 0;
+
+    font-family:
+        inherit;
+
+    font-size:
+        clamp(42px, 5vw, 68px);
+
+    font-weight: 900;
+
+    line-height: 0.95;
+
+    letter-spacing: 0.075em;
+
+    text-transform: uppercase;
+}
+
+.titleWhite {
+    color: #f2f2f2;
+
+    text-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.35);
+}
+
+.titleRed {
+    color: #e30613;
+
+    text-shadow:
+        0 0 22px rgba(227, 6, 19, 0.18);
+}
+
+
+/* ============================================
+   SUBTITLE
+   ============================================ */
+
+.subtitleRow {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 24px;
+
+    margin-top: 26px;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 0.30em;
+
+    white-space: nowrap;
+
+    text-transform: uppercase;
+}
+
+
+/* ============================================
+   YELLOW LINES
+   ============================================ */
+
+.yellowLine {
+    display: block;
+
+    width: 115px;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ffe900
+        );
+
+    box-shadow:
+        0 0 8px rgba(255, 233, 0, 0.22);
+}
+
+.yellowLine:last-child {
+    background:
+        linear-gradient(
+            90deg,
+            #ffe900,
+            transparent
+        );
+}
+
+
+/* ============================================
+   SOCIAL GRID
+   ============================================ */
+
+.socialGrid {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 22px;
+
+    width: 100%;
+}
+
+
+/* ============================================
+   SOCIAL CARD
+   ============================================ */
+
+.socialCard {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 155px;
+
+    padding: 25px 27px;
+
+    overflow: hidden;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(48, 49, 55, 0.92),
+            rgba(30, 31, 36, 0.95)
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-left:
+        3px solid
+        #e30613;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.22);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* ============================================
+   RED NEON BORDER
+   ============================================ */
+
+.socialCard::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -1px;
+
+    border:
+        1px solid
+        rgba(227, 6, 19, 0);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 0 rgba(227, 6, 19, 0);
+
+    pointer-events: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* ============================================
+   TOP LIGHT
+   ============================================ */
+
+.socialCard::after {
+    content: "";
+
+    position: absolute;
+
+    left: 15%;
+    right: 15%;
+    top: 0;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(227, 6, 19, 0.5),
+            transparent
+        );
+
+    opacity: 0.5;
+}
+
+
+/* ============================================
+   CARD GLOW
+   ============================================ */
+
+.cardGlow {
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    right: -110px;
+    top: -110px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(227, 6, 19, 0.22),
+            transparent 70%
+        );
+
+    filter: blur(12px);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.35s ease;
+}
+
+
+/* ============================================
+   LOGO BOX
+   ============================================ */
+
+.logoBox {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 70px;
+
+    width: 70px;
+    height: 70px;
+
+    margin-right: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.055);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+
+    border-radius: 13px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* ============================================
+   PLATFORM ICON
+   ============================================ */
+
+.logoBox svg {
+    display: block;
+
+    width: 34px;
+    height: 34px;
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+
+/* ============================================
+   FACEBOOK
+   ============================================ */
+
+.facebook .logoBox {
+    color: #1877f2;
+}
+
+.facebook:hover .logoBox {
+    background: #1877f2;
+
+    border-color: #1877f2;
+
+    box-shadow:
+        0 0 25px rgba(24, 119, 242, 0.45);
+}
+
+.facebook:hover .logoBox svg {
+    color: #ffffff;
+}
+
+
+/* ============================================
+   TWITCH
+   ============================================ */
+
+.twitch .logoBox {
+    color: #9146ff;
+}
+
+.twitch:hover .logoBox {
+    background: #9146ff;
+
+    border-color: #9146ff;
+
+    box-shadow:
+        0 0 25px rgba(145, 70, 255, 0.45);
+}
+
+.twitch:hover .logoBox svg {
+    color: #ffffff;
+}
+
+
+/* ============================================
+   TIKTOK
+   ============================================ */
+
+.tiktok .logoBox {
+    color: #ffffff;
+
+    text-shadow:
+        2px 0 #fe2c55,
+        -2px 0 #25f4ee;
+}
+
+.tiktok:hover .logoBox {
+    background: #111111;
+
+    border-color: #ffffff;
+
+    box-shadow:
+        0 0 25px rgba(255, 255, 255, 0.18);
+}
+
+
+/* ============================================
+   INSTAGRAM
+   ============================================ */
+
+.instagram .logoBox {
+    color: #e1306c;
+}
+
+.instagram:hover .logoBox {
+    background:
+        linear-gradient(
+            135deg,
+            #833ab4,
+            #e1306c,
+            #fd1d1d,
+            #fcb045
+        );
+
+    border-color: transparent;
+
+    box-shadow:
+        0 0 25px rgba(225, 48, 108, 0.45);
+}
+
+.instagram:hover .logoBox svg {
+    color: #ffffff;
+}
+
+
+/* ============================================
+   DIVIDER
+   ============================================ */
+
+.cardDivider {
+    position: relative;
+    z-index: 2;
+
+    width: 1px;
+    height: 48px;
+
+    margin-right: 19px;
+
+    background:
+        rgba(255, 255, 255, 0.15);
+}
+
+
+/* ============================================
+   CONTENT
+   ============================================ */
+
+.cardContent {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+.platform {
+    color: #f5f5f5;
+
+    font-size: 17px;
+    font-weight: 900;
+
+    line-height: 1.15;
+
+    letter-spacing: 0.07em;
+
+    text-transform: uppercase;
+}
+
+.handle {
+    margin-top: 8px;
+
+    color:
+        rgba(255, 255, 255, 0.45);
+
+    font-size: 11px;
+    font-weight: 500;
+
+    line-height: 1.3;
+
+    letter-spacing: 0.03em;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ============================================
+   ARROW
+   ============================================ */
+
+.cardArrow {
+    position: absolute;
+
+    right: 18px;
+    bottom: 16px;
+
+    color:
+        rgba(255, 255, 255, 0.35);
+
+    font-size: 21px;
+    font-weight: 700;
+
+    line-height: 1;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* ============================================
+   HOVER CARD
+   ============================================ */
+
+.socialCard:hover {
+    transform:
+        translateY(-7px);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(57, 38, 42, 0.96),
+            rgba(31, 30, 35, 0.98)
+        );
+
+    border-color:
+        rgba(227, 6, 19, 0.72);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.34),
+        0 0 28px rgba(227, 6, 19, 0.16);
+}
+
+.socialCard:hover::before {
+    border-color:
+        rgba(227, 6, 19, 0.8);
+
+    box-shadow:
+        0 0 20px rgba(227, 6, 19, 0.22),
+        inset 0 0 20px rgba(227, 6, 19, 0.035);
+}
+
+.socialCard:hover .cardGlow {
+    opacity: 1;
+}
+
+.socialCard:hover .logoBox {
+    transform:
+        scale(1.06);
+}
+
+.socialCard:hover .logoBox svg {
+    transform:
+        scale(1.08);
+}
+
+.socialCard:hover .cardArrow {
+    color: #e30613;
+
+    transform:
+        translate(4px, -4px);
+}
+
+
+/* ============================================
+   TAGLINE
+   ============================================ */
+
+.tagline {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    margin-top: 55px;
+
+    gap: 24px;
+}
+
+
+/* ============================================
+   TAGLINE LINES
+   ============================================ */
+
+.taglineLine {
+    position: relative;
+
+    flex: 1;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #e30613 55%,
+            #ffe900
+        );
+}
+
+.taglineLine:last-child {
+    background:
+        linear-gradient(
+            90deg,
+            #ffe900,
+            #e30613 45%,
+            transparent
+        );
+}
+
+
+/* ============================================
+   SMALL SECOND LINE
+   ============================================ */
+
+.taglineLine::after {
+    content: "";
+
+    position: absolute;
+
+    left: 25%;
+    right: 0;
+
+    top: 5px;
+
+    height: 1px;
+
+    background:
+        rgba(227, 6, 19, 0.35);
+}
+
+.taglineLine:last-child::after {
+    left: 0;
+    right: 25%;
+}
+
+
+/* ============================================
+   TAGLINE TEXT
+   ============================================ */
+
+.taglineText {
+    flex: 0 0 auto;
+
+    color: #ffe900;
+
+    font-size: 14px;
+    font-weight: 900;
+
+    letter-spacing: 0.32em;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 12px rgba(255, 233, 0, 0.14);
+}
+
+
+/* ============================================
+   FOCUS
+   ============================================ */
+
+.socialCard:focus-visible {
+    outline:
+        2px solid #ffe900;
+
+    outline-offset: 5px;
+}
+
+
+/* ============================================
+   ACTIVE
+   ============================================ */
+
+.socialCard:active {
+    transform:
+        translateY(-3px);
+}
+
+
+/* ============================================
+   TABLET
+   ============================================ */
+
+@media (max-width: 1100px) {
+
+    .socialGrid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* ============================================
+   MOBILE
+   ============================================ */
+
+@media (max-width: 680px) {
+
+    .socialSection {
+        padding:
+            70px
+            18px
+            65px;
+    }
+
+
+    .sectionHeader {
+        margin-bottom: 38px;
+    }
+
+
+    .title {
+        font-size: 38px;
+
+        letter-spacing:
+            0.055em;
+    }
+
+
+    .subtitleRow {
+        gap: 12px;
+    }
+
+
+    .yellowLine {
+        width: 45px;
+    }
+
+
+    .subtitle {
+        font-size: 9px;
+
+        letter-spacing:
+            0.18em;
+    }
+
+
+    .socialGrid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+
+    .socialCard {
+        min-height: 125px;
+
+        padding:
+            20px;
+    }
+
+
+    .logoBox {
+        flex-basis: 58px;
+
+        width: 58px;
+        height: 58px;
+
+        margin-right: 15px;
+    }
+
+
+    .logoBox svg {
+        width: 28px;
+        height: 28px;
+    }
+
+
+    .cardDivider {
+        height: 42px;
+
+        margin-right: 15px;
+    }
+
+
+    .platform {
+        font-size: 14px;
+    }
+
+
+    .handle {
+        font-size: 10px;
+    }
+
+
+    .tagline {
+        gap: 12px;
+
+        margin-top: 40px;
+    }
+
+
+    .taglineText {
+        font-size: 9px;
+
+        letter-spacing:
+            0.20em;
+    }
+
+}
+
+
+/* ============================================
+   VERY SMALL MOBILE
+   ============================================ */
+
+@media (max-width: 430px) {
+
+    .title {
+        font-size: 32px;
+    }
+
+
+    .subtitleRow {
+        gap: 8px;
+    }
+
+
+    .subtitle {
+        font-size: 8px;
+    }
+
+
+    .yellowLine {
+        width: 25px;
+    }
+
+
+    .logoBox {
+        flex-basis: 52px;
+
+        width: 52px;
+        height: 52px;
+    }
+
+
+    .cardDivider {
+        margin-right: 12px;
+    }
+
+
+    .platform {
+        font-size: 12px;
+    }
+
+
+    .handle {
+        font-size: 9px;
+    }
+
+}

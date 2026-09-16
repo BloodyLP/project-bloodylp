@@ -6,7 +6,6 @@
  * ============================================
  *
  * Project:
- *
  * BloodyLP Website
  *
  * File:
@@ -26,7 +25,8 @@ import styles from "./page.module.css";
 import DegMatches from "@/components/UNTERSEITEN/esport/DegMatches";
 import DegRoster from "@/components/UNTERSEITEN/esport/DegRoster";
 import DegStandings from "@/components/UNTERSEITEN/esport/DegStandings";
-
+import DegSocials from "@/components/UNTERSEITEN/esport/DEGSocials";
+import DegPlayerStats from "@/components/UNTERSEITEN/esport/DegPlayerStats";
 
 /**
  * ============================================
@@ -35,9 +35,7 @@ import DegStandings from "@/components/UNTERSEITEN/esport/DegStandings";
  */
 
 export default function EsportPage() {
-
     return (
-
         <main className={styles.page}>
 
             {/* ========================================= */}
@@ -60,6 +58,28 @@ export default function EsportPage() {
                 <div className={styles.heroGlow} />
 
 
+                {/* ===================================== */}
+                {/* DEG ESPORTS LOGO                       */}
+                {/* ===================================== */}
+
+                <div className={styles.heroLogo}>
+
+                    <Image
+                        src="/images/esport/logos/deg-esports.png"
+                        alt="DEG eSports"
+                        fill
+                        priority
+                        sizes="260px"
+                        className={styles.heroLogoImage}
+                    />
+
+                </div>
+
+
+                {/* ===================================== */}
+                {/* HERO CONTENT                           */}
+                {/* ===================================== */}
+
                 <div className={styles.heroContent}>
 
                     <p className={styles.eyebrow}>
@@ -68,13 +88,11 @@ export default function EsportPage() {
 
 
                     <h1 className={styles.title}>
-
                         DEG
 
                         <span className={styles.titleAccent}>
                             ESPORTS
                         </span>
-
                     </h1>
 
 
@@ -86,7 +104,16 @@ export default function EsportPage() {
                     </p>
 
 
-                    <div className={styles.heroActions}>
+                    {/* ================================= */}
+                    {/* HERO NAVIGATION                    */}
+                    {/* ================================= */}
+
+                    <nav
+                        className={styles.heroActions}
+                        aria-label="DEG eSports Navigation"
+                    >
+
+                        {/* DAS TEAM */}
 
                         <Link
                             href="#team"
@@ -97,15 +124,72 @@ export default function EsportPage() {
                         </Link>
 
 
+                        {/* ERGEBNISSE */}
+
                         <Link
-                            href="#history"
+                            href="#ergebnisse"
                             className={styles.secondaryButton}
                         >
-                            TEAM HISTORY
+                            ERGEBNISSE
                             <span>→</span>
                         </Link>
 
-                    </div>
+
+                        {/* TABELLE */}
+
+                        <Link
+                            href="#tabelle"
+                            className={styles.secondaryButton}
+                        >
+                            TABELLE
+                            <span>→</span>
+                        </Link>
+
+
+                        {/* STATISTIKEN */}
+
+                        <Link
+                            href="#statistiken"
+                            className={styles.secondaryButton}
+                        >
+                            STATISTIKEN
+                            <span>→</span>
+                        </Link>
+
+
+                        {/* KOMMENTATOR */}
+
+                        <Link
+                            href="#kommentator"
+                            className={styles.secondaryButton}
+                        >
+                            KOMMENTATOR
+                            <span>→</span>
+                        </Link>
+
+
+                        {/* UNSERE PARTNER */}
+
+                        <Link
+                            href="#partner"
+                            className={styles.secondaryButton}
+                        >
+                            UNSERE PARTNER
+                            <span>→</span>
+                        </Link>
+
+
+                        {/* SOCIAL MEDIA */}
+
+                        <Link
+                            href="#social-media"
+                            className={styles.secondaryButton}
+                        >
+                            SOCIAL MEDIA
+                            <span>→</span>
+                        </Link>
+
+                    </nav>
 
 
                     <div className={styles.heroSignature}>
@@ -133,7 +217,6 @@ export default function EsportPage() {
                     >
                         DEG ESPORTS
                     </p>
-
 
                     <h2 className={styles.sectionTitle}>
                         TEAM HISTORY
@@ -268,7 +351,14 @@ export default function EsportPage() {
             {/* SPIELE & ERGEBNISSE                       */}
             {/* ========================================= */}
 
-            <DegMatches />
+            <section
+                id="ergebnisse"
+                className={styles.anchorSection}
+            >
+
+                <DegMatches />
+
+            </section>
 
 
             {/* ========================================= */}
@@ -279,10 +369,45 @@ export default function EsportPage() {
 
 
             {/* ========================================= */}
-            {/* STANDINGS                                 */}
+            {/* TABELLE                                   */}
             {/* ========================================= */}
 
-            <DegStandings />
+            <section
+                id="tabelle"
+                className={styles.anchorSection}
+            >
+
+                <DegStandings />
+
+            </section>
+
+
+            {/* ========================================= */}
+            {/* DIVIDER                                   */}
+            {/* ========================================= */}
+
+            <div className={styles.divider} />
+
+
+            {/* ========================================= */}
+            {/* SPIELERSTATISTIKEN                        */}
+            {/* ========================================= */}
+
+            <section
+                id="statistiken"
+                className={styles.anchorSection}
+            >
+
+                <DegPlayerStats />
+
+            </section>
+
+
+            {/* ========================================= */}
+            {/* DIVIDER                                   */}
+            {/* ========================================= */}
+
+            <div className={styles.divider} />
 
 
             {/* ========================================= */}
@@ -299,7 +424,6 @@ export default function EsportPage() {
                     <p className={styles.sectionEyebrow}>
                         DEG ESPORTS HUB
                     </p>
-
 
                     <h2 className={styles.sectionTitle}>
                         DIE WELT DER DEG
@@ -350,13 +474,11 @@ export default function EsportPage() {
 
 
                         <span className={styles.worldLink}>
-
                             ZUM TEAM
 
                             <span className={styles.worldArrow}>
                                 →
                             </span>
-
                         </span>
 
                     </Link>
@@ -382,7 +504,6 @@ export default function EsportPage() {
                                 height={64}
                                 className={styles.worldLeagueLogo}
                             />
-
 
                             <Image
                                 src="/images/esport/logos/ecl2.png"
@@ -413,13 +534,11 @@ export default function EsportPage() {
 
 
                         <span className={styles.worldLink}>
-
                             ZU SPORTSGAMER
 
                             <span className={styles.worldArrow}>
                                 →
                             </span>
-
                         </span>
 
                     </Link>
@@ -467,13 +586,11 @@ export default function EsportPage() {
 
 
                         <span className={styles.worldLink}>
-
                             ZUM STREAM
 
                             <span className={styles.worldArrow}>
                                 →
                             </span>
-
                         </span>
 
                     </Link>
@@ -494,7 +611,10 @@ export default function EsportPage() {
             {/* COMMENTATOR                               */}
             {/* ========================================= */}
 
-            <section className={styles.section}>
+            <section
+                id="kommentator"
+                className={styles.section}
+            >
 
                 <div className={styles.commentator}>
 
@@ -510,9 +630,7 @@ export default function EsportPage() {
 
 
                         <h2 className={styles.commentatorName}>
-
                             ALEXANDER
-
                             <br />
 
                             <span>
@@ -522,7 +640,6 @@ export default function EsportPage() {
                             <br />
 
                             BLATTMANN
-
                         </h2>
 
 
@@ -610,10 +727,13 @@ export default function EsportPage() {
 
 
             {/* ========================================= */}
-            {/* SPONSOREN                                 */}
+            {/* SPONSOREN & PARTNER                       */}
             {/* ========================================= */}
 
-            <section className={styles.sponsorsSection}>
+            <section
+                id="partner"
+                className={styles.sponsorsSection}
+            >
 
                 <div className={styles.sponsorsHeader}>
 
@@ -639,10 +759,6 @@ export default function EsportPage() {
                 {/* ===================================== */}
 
                 <div className={styles.mainSponsors}>
-
-                    {/* ================================= */}
-                    {/* ASE HOCKEY                         */}
-                    {/* ================================= */}
 
                     <a
                         href="https://www.ase-hockey-shop.de/"
@@ -670,10 +786,6 @@ export default function EsportPage() {
 
                     </a>
 
-
-                    {/* ================================= */}
-                    {/* RENÉ GRÖLL                         */}
-                    {/* ================================= */}
 
                     <a
                         href="https://signal-iduna-agentur.de/rene.groell/"
@@ -715,13 +827,7 @@ export default function EsportPage() {
                     </p>
 
 
-                    <a
-                        href="https://ccmhockey.com/de-de/homepage.html"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.otherSponsor}
-                        aria-label="CCM Hockey besuchen"
-                    >
+                    <div className={styles.otherSponsor}>
 
                         <Image
                             src="/images/esport/sponsors/ccm.jpg"
@@ -730,14 +836,33 @@ export default function EsportPage() {
                             sizes="230px"
                         />
 
-                    </a>
+                    </div>
 
                 </div>
 
             </section>
 
+
+            {/* ========================================= */}
+            {/* DIVIDER                                   */}
+            {/* ========================================= */}
+
+            <div className={styles.divider} />
+
+
+            {/* ========================================= */}
+            {/* SOCIAL MEDIA                              */}
+            {/* ========================================= */}
+
+            <section
+                id="social-media"
+                className={styles.socialsSection}
+            >
+
+                <DegSocials />
+
+            </section>
+
         </main>
-
     );
-
 }

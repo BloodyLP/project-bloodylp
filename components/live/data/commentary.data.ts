@@ -15,5 +15,5 @@ export const nextCommentary = {
   homeLogo: "/teams/del2/ehc_freiburg.png",
   awayLogo: "/teams/del2/ec_bad_nauheim.png",
 
-  streamUrl: "https://sporteurope.tv/ehc-freiburg",
+  streamUrl: "https://sporteurope.tv/ehc-freiburg/ehc-freiburg-vs-ec-bad-nauheim",
 };

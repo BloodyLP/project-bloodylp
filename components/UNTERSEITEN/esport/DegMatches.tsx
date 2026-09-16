@@ -216,7 +216,7 @@ export default function DegMatches() {
                                     styles.eyebrow
                                 }
                             >
-                                DEG ESPORT
+                                DEG ESPORTS
                             </span>
 
 
@@ -553,7 +553,7 @@ export default function DegMatches() {
                                 styles.sectionHint
                             }
                         >
-                            DEG ESPORT
+                            DEG ESPORTS
                         </span>
 
                     </div>
