@@ -11,7 +11,7 @@
 /* deg-standings.ts                             */
 /*                                              */
 /* Description:                                 */
-/* GCL 13 – aktuelle Mannschaften                */
+/* GCL 13 – aktuelle Mannschaften               */
 /*                                              */
 /* ============================================ */
 
@@ -529,11 +529,54 @@ export const degStandings: DegStanding[] = [
 
 
     /* ---------------------------------------- */
-    /* 11 – HOCKEYHOLICS                      */
+    /* 11 – EISHOCKEYNET YETIS                 */
     /* ---------------------------------------- */
 
     {
         position: 11,
+
+        team:
+            "Eishockeynet Yetis",
+
+        logo:
+            "/images/esport/gcl13/eishockeynet-yetis.png",
+
+        players:
+            3,
+
+        gamesPlayed:
+            0,
+
+        wins:
+            0,
+
+        overtimeWins:
+            0,
+
+        overtimeLosses:
+            0,
+
+        losses:
+            0,
+
+        goalsFor:
+            0,
+
+        goalsAgainst:
+            0,
+
+        points:
+            0,
+
+    },
+
+
+    /* ---------------------------------------- */
+    /* 12 – HOCKEYHOLICS                       */
+    /* ---------------------------------------- */
+
+    {
+        position: 12,
 
         team:
             "Hockeyholics",
@@ -572,11 +615,11 @@ export const degStandings: DegStanding[] = [
 
 
     /* ---------------------------------------- */
-    /* 12 – ISERLOHN ROOSTERS ESPORTS          */
+    /* 13 – ISERLOHN ROOSTERS ESPORTS          */
     /* ---------------------------------------- */
 
     {
-        position: 12,
+        position: 13,
 
         team:
             "Iserlohn Roosters eSports",
@@ -615,11 +658,11 @@ export const degStandings: DegStanding[] = [
 
 
     /* ---------------------------------------- */
-    /* 13 – OLD BUT GOLD                      */
+    /* 14 – OLD BUT GOLD                       */
     /* ---------------------------------------- */
 
     {
-        position: 13,
+        position: 14,
 
         team:
             "Old but Gold",
@@ -658,11 +701,11 @@ export const degStandings: DegStanding[] = [
 
 
     /* ---------------------------------------- */
-    /* 14 – OUTLAWS HOCKEY                     */
+    /* 15 – OUTLAWS HOCKEY                     */
     /* ---------------------------------------- */
 
     {
-        position: 14,
+        position: 15,
 
         team:
             "Outlaws Hockey",
@@ -701,11 +744,11 @@ export const degStandings: DegStanding[] = [
 
 
     /* ---------------------------------------- */
-    /* 15 – REH GAMING                         */
+    /* 16 – REH GAMING                         */
     /* ---------------------------------------- */
 
     {
-        position: 15,
+        position: 16,
 
         team:
             "REH Gaming",
@@ -744,17 +787,17 @@ export const degStandings: DegStanding[] = [
 
 
     /* ---------------------------------------- */
-    /* 16 – SC RACKELBAHN EV                   */
+    /* 17 – SC RACKELBAHN EV                   */
     /* ---------------------------------------- */
 
     {
-        position: 16,
+        position: 17,
 
         team:
             "SC Rackelbahn eV",
 
         logo:
-            "/images/esport/gcl13/sc-rackelhahn.jpg",
+            "/images/esport/gcl13/sc-rackelhahn.png",
 
         players:
             9,
@@ -787,11 +830,11 @@ export const degStandings: DegStanding[] = [
 
 
     /* ---------------------------------------- */
-    /* 17 – SCB ESPORTS                        */
+    /* 18 – SCB ESPORTS                        */
     /* ---------------------------------------- */
 
     {
-        position: 17,
+        position: 18,
 
         team:
             "SCB eSports",
@@ -830,11 +873,11 @@ export const degStandings: DegStanding[] = [
 
 
     /* ---------------------------------------- */
-    /* 18 – THE LAST SHIFT                     */
+    /* 19 – THE LAST SHIFT                     */
     /* ---------------------------------------- */
 
     {
-        position: 18,
+        position: 19,
 
         team:
             "The Last Shift",
@@ -873,11 +916,11 @@ export const degStandings: DegStanding[] = [
 
 
     /* ---------------------------------------- */
-    /* 19 – VALHALLA VIKINGS HC                */
+    /* 20 – VALHALLA VIKINGS HC                */
     /* ---------------------------------------- */
 
     {
-        position: 19,
+        position: 20,
 
         team:
             "Valhalla Vikings HC",

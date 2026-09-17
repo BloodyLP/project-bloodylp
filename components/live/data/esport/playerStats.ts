@@ -29,21 +29,54 @@ export type PlayerPosition =
 
 /* =========================================
  * FELDSPIELER-STATS
+ *
+ * Entsprechend der Statistik-Tabelle:
+ *
+ * GP   = Games Played
+ * G    = Goals
+ * A    = Assists
+ * P    = Points
+ * +/-  = Plus/Minus
+ * PIM  = Penalty Minutes
+ * PPG  = Powerplay Goals
+ * SHG  = Shorthanded Goals
+ * GWG  = Game Winning Goals
+ * S    = Shots
+ * S%   = Shooting Percentage
+ * Hits = Hits
+ * FOW% = Faceoff Win Percentage
  * ========================================= */
 
 export type SkaterStats = {
     games: number;
-    wins: number;
-    losses: number;
-    overtimeLosses: number;
     goals: number;
     assists: number;
     points: number;
+    plusMinus: number;
     pim: number;
+    powerplayGoals: number;
+    shorthandedGoals: number;
+    gameWinningGoals: number;
+    shots: number;
+    shootingPercentage: number;
+    hits: number;
+    faceoffWinPercentage: number;
 };
 
 /* =========================================
  * GOALIE-STATS
+ *
+ * Entsprechend der Statistik-Tabelle:
+ *
+ * GP  = Games Played
+ * W   = Wins
+ * L   = Losses
+ * OTL = Overtime Losses
+ * Svs = Saves
+ * GA  = Goals Against
+ * SV% = Save Percentage
+ * GAA = Goals Against Average
+ * SO  = Shutouts
  * ========================================= */
 
 export type GoalieStats = {
@@ -53,8 +86,9 @@ export type GoalieStats = {
     overtimeLosses: number;
     saves: number;
     goalsAgainst: number;
-    shutouts: number;
     savePercentage: number;
+    goalsAgainstAverage: number;
+    shutouts: number;
 };
 
 /* =========================================
@@ -119,8 +153,9 @@ export const goalieStats: GoaliePlayer[] = [
             overtimeLosses: 0,
             saves: 0,
             goalsAgainst: 0,
-            shutouts: 0,
             savePercentage: 0,
+            goalsAgainstAverage: 0,
+            shutouts: 0,
         },
     },
 
@@ -137,8 +172,9 @@ export const goalieStats: GoaliePlayer[] = [
             overtimeLosses: 0,
             saves: 0,
             goalsAgainst: 0,
-            shutouts: 0,
             savePercentage: 0,
+            goalsAgainstAverage: 0,
+            shutouts: 0,
         },
     },
 
@@ -155,8 +191,9 @@ export const goalieStats: GoaliePlayer[] = [
             overtimeLosses: 0,
             saves: 0,
             goalsAgainst: 0,
-            shutouts: 0,
             savePercentage: 0,
+            goalsAgainstAverage: 0,
+            shutouts: 0,
         },
     },
 ];
@@ -174,13 +211,18 @@ export const defenseStats: SkaterPlayer[] = [
         image: "/images/esport/players/PantherOnSkates.png",
         stats: {
             games: 0,
-            wins: 0,
-            losses: 0,
-            overtimeLosses: 0,
             goals: 0,
             assists: 0,
             points: 0,
+            plusMinus: 0,
             pim: 0,
+            powerplayGoals: 0,
+            shorthandedGoals: 0,
+            gameWinningGoals: 0,
+            shots: 0,
+            shootingPercentage: 0,
+            hits: 0,
+            faceoffWinPercentage: 0,
         },
     },
 
@@ -192,13 +234,18 @@ export const defenseStats: SkaterPlayer[] = [
         image: "/images/esport/players/kempe.png",
         stats: {
             games: 0,
-            wins: 0,
-            losses: 0,
-            overtimeLosses: 0,
             goals: 0,
             assists: 0,
             points: 0,
+            plusMinus: 0,
             pim: 0,
+            powerplayGoals: 0,
+            shorthandedGoals: 0,
+            gameWinningGoals: 0,
+            shots: 0,
+            shootingPercentage: 0,
+            hits: 0,
+            faceoffWinPercentage: 0,
         },
     },
 
@@ -210,31 +257,41 @@ export const defenseStats: SkaterPlayer[] = [
         image: "/images/esport/players/TooEzXx.png",
         stats: {
             games: 0,
-            wins: 0,
-            losses: 0,
-            overtimeLosses: 0,
             goals: 0,
             assists: 0,
             points: 0,
+            plusMinus: 0,
             pim: 0,
+            powerplayGoals: 0,
+            shorthandedGoals: 0,
+            gameWinningGoals: 0,
+            shots: 0,
+            shootingPercentage: 0,
+            hits: 0,
+            faceoffWinPercentage: 0,
         },
     },
 
     {
         number: 14,
-        gamerTag: "FellyKnight",
+        gamerTag: "Alex96rizz",
         name: "A. Rindå",
         position: "defense",
         image: "/images/esport/players/FellyKnight.png",
         stats: {
             games: 0,
-            wins: 0,
-            losses: 0,
-            overtimeLosses: 0,
             goals: 0,
             assists: 0,
             points: 0,
+            plusMinus: 0,
             pim: 0,
+            powerplayGoals: 0,
+            shorthandedGoals: 0,
+            gameWinningGoals: 0,
+            shots: 0,
+            shootingPercentage: 0,
+            hits: 0,
+            faceoffWinPercentage: 0,
         },
     },
 ];
@@ -252,13 +309,18 @@ export const forwardStats: SkaterPlayer[] = [
         image: "/images/esport/players/goalie_breaker.png",
         stats: {
             games: 0,
-            wins: 0,
-            losses: 0,
-            overtimeLosses: 0,
             goals: 0,
             assists: 0,
             points: 0,
+            plusMinus: 0,
             pim: 0,
+            powerplayGoals: 0,
+            shorthandedGoals: 0,
+            gameWinningGoals: 0,
+            shots: 0,
+            shootingPercentage: 0,
+            hits: 0,
+            faceoffWinPercentage: 0,
         },
     },
 
@@ -270,13 +332,18 @@ export const forwardStats: SkaterPlayer[] = [
         image: "/images/esport/players/akin_penta.png",
         stats: {
             games: 0,
-            wins: 0,
-            losses: 0,
-            overtimeLosses: 0,
             goals: 0,
             assists: 0,
             points: 0,
+            plusMinus: 0,
             pim: 0,
+            powerplayGoals: 0,
+            shorthandedGoals: 0,
+            gameWinningGoals: 0,
+            shots: 0,
+            shootingPercentage: 0,
+            hits: 0,
+            faceoffWinPercentage: 0,
         },
     },
 
@@ -288,13 +355,18 @@ export const forwardStats: SkaterPlayer[] = [
         image: "/images/esport/players/xxIceforcerxx.png",
         stats: {
             games: 0,
-            wins: 0,
-            losses: 0,
-            overtimeLosses: 0,
             goals: 0,
             assists: 0,
             points: 0,
+            plusMinus: 0,
             pim: 0,
+            powerplayGoals: 0,
+            shorthandedGoals: 0,
+            gameWinningGoals: 0,
+            shots: 0,
+            shootingPercentage: 0,
+            hits: 0,
+            faceoffWinPercentage: 0,
         },
     },
 
@@ -306,31 +378,41 @@ export const forwardStats: SkaterPlayer[] = [
         image: "/images/esport/players/Pasq86ualePS.png",
         stats: {
             games: 0,
-            wins: 0,
-            losses: 0,
-            overtimeLosses: 0,
             goals: 0,
             assists: 0,
             points: 0,
+            plusMinus: 0,
             pim: 0,
+            powerplayGoals: 0,
+            shorthandedGoals: 0,
+            gameWinningGoals: 0,
+            shots: 0,
+            shootingPercentage: 0,
+            hits: 0,
+            faceoffWinPercentage: 0,
         },
     },
 
     {
-        number: 0,
+        number: 79,
         gamerTag: "stefanoojj",
         name: "stefanoojj",
         position: "forward",
         image: "/images/esport/players/stefanoojj.png",
         stats: {
             games: 0,
-            wins: 0,
-            losses: 0,
-            overtimeLosses: 0,
             goals: 0,
             assists: 0,
             points: 0,
+            plusMinus: 0,
             pim: 0,
+            powerplayGoals: 0,
+            shorthandedGoals: 0,
+            gameWinningGoals: 0,
+            shots: 0,
+            shootingPercentage: 0,
+            hits: 0,
+            faceoffWinPercentage: 0,
         },
     },
 ];

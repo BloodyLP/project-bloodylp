@@ -67,13 +67,13 @@ export const degGoalies: DegPlayer[] = [
             "/images/esport/flags/de.png",
 
         image:
-            "/images/esport/players/houddel_26.png",
+            "/images/esport/players/houddel_262.png",
 
         position:
             "goalie",
 
         sportsgamerUrl:
-            "",
+            "https://sportsgamer.gg/players/477",
     },
 
 
@@ -205,7 +205,7 @@ export const degDefensemen: DegPlayer[] = [
             "/images/esport/flags/de.png",
 
         image:
-            "/images/esport/players/TooEzXx.png",
+            "/images/esport/players/TooEzXx2.png",
 
         position:
             "defense",
@@ -219,7 +219,7 @@ export const degDefensemen: DegPlayer[] = [
         number: 14,
 
         gamerTag:
-            "FellyKnight",
+            "Alex96rizz",
 
         name:
             "A. Rindå",
@@ -343,7 +343,7 @@ export const degForwards: DegPlayer[] = [
             "/images/esport/flags/de.png",
 
         image:
-            "/images/esport/players/Pasq86ualePS.png",
+            "/images/esport/players/Pasq86ualePS2.png",
 
         position:
             "forward",

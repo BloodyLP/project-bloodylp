@@ -1,30 +1,5 @@
 "use client";
 
-/**
- * ============================================
- *
- * BloodyLP
- *
- * ============================================
- *
- * Project:
- * BloodyLP Website
- *
- * File:
- * components/UNTERSEITEN/esport/DegPlayerStats.tsx
- *
- * Description:
- * Saisonstatistiken der DEG eSports Spieler.
- *
- * Darstellung:
- * - Feldspieler
- * - Goalies
- * - Tabellenansicht
- * - Kein Spielerbild
- *
- * ============================================
- */
-
 import {
     playerStats,
     PlayerStat,
@@ -35,16 +10,9 @@ import {
 import styles from "./DegPlayerStats.module.css";
 
 /* =========================================
- * TYP-GUARDS
+ * TYPE GUARDS
  * ========================================= */
 
-/**
- * Prüft, ob es sich um einen Feldspieler handelt.
- *
- * Dadurch weiß TypeScript automatisch,
- * dass anschließend SkaterStats verwendet
- * werden dürfen.
- */
 function isSkater(
     player: PlayerStat
 ): player is SkaterPlayer {
@@ -54,13 +22,6 @@ function isSkater(
     );
 }
 
-/**
- * Prüft, ob es sich um einen Torwart handelt.
- *
- * Dadurch weiß TypeScript automatisch,
- * dass anschließend GoalieStats verwendet
- * werden dürfen.
- */
 function isGoalie(
     player: PlayerStat
 ): player is GoaliePlayer {
@@ -80,7 +41,7 @@ function getGoalies(): GoaliePlayer[] {
 }
 
 /* =========================================
- * POSITIONEN
+ * POSITIONSBEZEICHNUNG
  * ========================================= */
 
 function getPositionLabel(
@@ -99,7 +60,7 @@ function getPositionLabel(
 }
 
 /* =========================================
- * HAUPTKOMPONENTE
+ * COMPONENT
  * ========================================= */
 
 export default function DegPlayerStats() {
@@ -112,8 +73,8 @@ export default function DegPlayerStats() {
             id="player-stats"
         >
             {/* =========================================
-                HEADER
-            ========================================= */}
+             * HEADER
+             * ========================================= */}
 
             <div className={styles.header}>
                 <span className={styles.eyebrow}>
@@ -131,8 +92,8 @@ export default function DegPlayerStats() {
             </div>
 
             {/* =========================================
-                FELDSPIELER
-            ========================================= */}
+             * FELDSPIELER
+             * ========================================= */}
 
             <div className={styles.category}>
                 <div className={styles.categoryHeader}>
@@ -158,7 +119,39 @@ export default function DegPlayerStats() {
                                 </th>
 
                                 <th>
-                                    SP
+                                    GP
+                                </th>
+
+                                <th>
+                                    G
+                                </th>
+
+                                <th>
+                                    A
+                                </th>
+
+                                <th>
+                                    P
+                                </th>
+
+                                <th>
+                                    +/-
+                                </th>
+
+                                <th>
+                                    PIM
+                                </th>
+
+                                <th>
+                                    PPG
+                                </th>
+
+                                <th>
+                                    SHG
+                                </th>
+
+                                <th>
+                                    GWG
                                 </th>
 
                                 <th>
@@ -166,27 +159,15 @@ export default function DegPlayerStats() {
                                 </th>
 
                                 <th>
-                                    N
+                                    S%
                                 </th>
 
                                 <th>
-                                    OT-N
+                                    HITS
                                 </th>
 
                                 <th>
-                                    TORE
-                                </th>
-
-                                <th>
-                                    ASSISTS
-                                </th>
-
-                                <th>
-                                    PUNKTE
-                                </th>
-
-                                <th>
-                                    PIM
+                                    FOW%
                                 </th>
                             </tr>
                         </thead>
@@ -197,16 +178,9 @@ export default function DegPlayerStats() {
                                     key={`${player.gamerTag}-${player.number}`}
                                 >
                                     {/* SPIELER */}
-
-                                    <td
-                                        className={
-                                            styles.playerCell
-                                        }
-                                    >
+                                    <td className={styles.playerCell}>
                                         <span
-                                            className={
-                                                styles.jerseyNumber
-                                            }
+                                            className={styles.jerseyNumber}
                                         >
                                             #{player.number}
                                         </span>
@@ -227,7 +201,6 @@ export default function DegPlayerStats() {
                                     </td>
 
                                     {/* POSITION */}
-
                                     <td>
                                         <span
                                             className={
@@ -240,32 +213,12 @@ export default function DegPlayerStats() {
                                         </span>
                                     </td>
 
-                                    {/* SPIELE */}
-
+                                    {/* GP */}
                                     <td>
                                         {player.stats.games}
                                     </td>
 
-                                    {/* SIEGE */}
-
-                                    <td>
-                                        {player.stats.wins}
-                                    </td>
-
-                                    {/* NIEDERLAGEN */}
-
-                                    <td>
-                                        {player.stats.losses}
-                                    </td>
-
-                                    {/* OVERTIME-NIEDERLAGEN */}
-
-                                    <td>
-                                        {player.stats.overtimeLosses}
-                                    </td>
-
-                                    {/* TORE */}
-
+                                    {/* G */}
                                     <td
                                         className={
                                             styles.highlight
@@ -274,8 +227,7 @@ export default function DegPlayerStats() {
                                         {player.stats.goals}
                                     </td>
 
-                                    {/* ASSISTS */}
-
+                                    {/* A */}
                                     <td
                                         className={
                                             styles.highlight
@@ -284,18 +236,62 @@ export default function DegPlayerStats() {
                                         {player.stats.assists}
                                     </td>
 
-                                    {/* PUNKTE */}
-
+                                    {/* P */}
                                     <td
                                         className={`${styles.highlight} ${styles.points}`}
                                     >
                                         {player.stats.points}
                                     </td>
 
-                                    {/* PIM */}
+                                    {/* +/- */}
+                                    <td>
+                                        {player.stats.plusMinus}
+                                    </td>
 
+                                    {/* PIM */}
                                     <td>
                                         {player.stats.pim}
+                                    </td>
+
+                                    {/* PPG */}
+                                    <td>
+                                        {player.stats.powerplayGoals}
+                                    </td>
+
+                                    {/* SHG */}
+                                    <td>
+                                        {player.stats.shorthandedGoals}
+                                    </td>
+
+                                    {/* GWG */}
+                                    <td>
+                                        {player.stats.gameWinningGoals}
+                                    </td>
+
+                                    {/* S */}
+                                    <td>
+                                        {player.stats.shots}
+                                    </td>
+
+                                    {/* S% */}
+                                    <td>
+                                        {player.stats.shootingPercentage.toFixed(
+                                            1
+                                        )}
+                                        %
+                                    </td>
+
+                                    {/* HITS */}
+                                    <td>
+                                        {player.stats.hits}
+                                    </td>
+
+                                    {/* FOW% */}
+                                    <td>
+                                        {player.stats.faceoffWinPercentage.toFixed(
+                                            1
+                                        )}
+                                        %
                                     </td>
                                 </tr>
                             ))}
@@ -305,8 +301,8 @@ export default function DegPlayerStats() {
             </div>
 
             {/* =========================================
-                GOALIES
-            ========================================= */}
+             * GOALIES
+             * ========================================= */}
 
             <div className={styles.category}>
                 <div className={styles.categoryHeader}>
@@ -315,7 +311,7 @@ export default function DegPlayerStats() {
                     </span>
 
                     <h3>
-                        GOALIES
+                        TORHÜTER
                     </h3>
                 </div>
 
@@ -328,35 +324,39 @@ export default function DegPlayerStats() {
                                 </th>
 
                                 <th>
-                                    SP
+                                    GP
                                 </th>
 
                                 <th>
-                                    S
+                                    W
                                 </th>
 
                                 <th>
-                                    N
+                                    L
                                 </th>
 
                                 <th>
-                                    OT-N
+                                    OTL
                                 </th>
 
                                 <th>
-                                    SAVES
+                                    SVS
                                 </th>
 
                                 <th>
-                                    GEGENTORE
+                                    GA
                                 </th>
 
                                 <th>
-                                    SHUTOUTS
+                                    SV%
                                 </th>
 
                                 <th>
-                                    SAVE %
+                                    GAA
+                                </th>
+
+                                <th>
+                                    SO
                                 </th>
                             </tr>
                         </thead>
@@ -367,12 +367,7 @@ export default function DegPlayerStats() {
                                     key={`${player.gamerTag}-${player.number}`}
                                 >
                                     {/* SPIELER */}
-
-                                    <td
-                                        className={
-                                            styles.playerCell
-                                        }
-                                    >
+                                    <td className={styles.playerCell}>
                                         <span
                                             className={
                                                 styles.jerseyNumber
@@ -396,32 +391,27 @@ export default function DegPlayerStats() {
                                         </div>
                                     </td>
 
-                                    {/* SPIELE */}
-
+                                    {/* GP */}
                                     <td>
                                         {player.stats.games}
                                     </td>
 
-                                    {/* SIEGE */}
-
+                                    {/* W */}
                                     <td>
                                         {player.stats.wins}
                                     </td>
 
-                                    {/* NIEDERLAGEN */}
-
+                                    {/* L */}
                                     <td>
                                         {player.stats.losses}
                                     </td>
 
-                                    {/* OVERTIME-NIEDERLAGEN */}
-
+                                    {/* OTL */}
                                     <td>
                                         {player.stats.overtimeLosses}
                                     </td>
 
-                                    {/* SAVES */}
-
+                                    {/* SVS */}
                                     <td
                                         className={
                                             styles.highlight
@@ -430,31 +420,40 @@ export default function DegPlayerStats() {
                                         {player.stats.saves}
                                     </td>
 
-                                    {/* GEGENTORE */}
-
+                                    {/* GA */}
                                     <td>
                                         {player.stats.goalsAgainst}
                                     </td>
 
-                                    {/* SHUTOUTS */}
+                                    {/* SV% */}
+                                    <td
+                                        className={
+                                            styles.highlight
+                                        }
+                                    >
+                                        {player.stats.savePercentage.toFixed(
+                                            2
+                                        )}
+                                    </td>
 
+                                    {/* GAA */}
+                                    <td
+                                        className={
+                                            styles.highlight
+                                        }
+                                    >
+                                        {player.stats.goalsAgainstAverage.toFixed(
+                                            2
+                                        )}
+                                    </td>
+
+                                    {/* SO */}
                                     <td
                                         className={
                                             styles.highlight
                                         }
                                     >
                                         {player.stats.shutouts}
-                                    </td>
-
-                                    {/* SAVE % */}
-
-                                    <td
-                                        className={`${styles.highlight} ${styles.points}`}
-                                    >
-                                        {player.stats.savePercentage.toFixed(
-                                            1
-                                        )}
-                                        %
                                     </td>
                                 </tr>
                             ))}
