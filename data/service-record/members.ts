@@ -162,6 +162,8 @@ import { adriangross0602 } from "./members/adriangross0602";
 
 import { stitch } from "./members/stitch";
 
+import { donpaco } from "./members/donpaco";
+
 
 
 export const MEMBERS: ServiceRecordMember[] = [
@@ -243,4 +245,6 @@ export const MEMBERS: ServiceRecordMember[] = [
     adriangross0602,
 
     stitch,
+
+    donpaco,
 ];
