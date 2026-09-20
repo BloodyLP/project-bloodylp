@@ -8,10 +8,13 @@
 /* BloodyLP Website                             */
 /*                                              */
 /* File:                                        */
-/* deg-standings.ts                             */
+/* components/live/data/esport/deg-standings.ts */
 /*                                              */
 /* Description:                                 */
-/* GCL 13 – aktuelle Mannschaften               */
+/* GCL 13 – Division 1                          */
+/* Finale 9 Mannschaften                         */
+/* Platz 1–8 Playoffs                           */
+/* Platz 9 keine Playoffs                       */
 /*                                              */
 /* ============================================ */
 
@@ -21,15 +24,10 @@
 /* ============================================ */
 
 export type DegStandingsLeague = {
-
     name: string;
-
     logo: string;
-
     group: string;
-
     season: string;
-
 };
 
 
@@ -38,19 +36,10 @@ export type DegStandingsLeague = {
 /* ============================================ */
 
 export const degStandingsLeague: DegStandingsLeague = {
-
-    name:
-        "GCL 13",
-
-    logo:
-        "/images/esport/logos/gcl.png",
-
-    group:
-        "DIVISION I",
-
-    season:
-        "",
-
+    name: "GCL 13",
+    logo: "/images/esport/logos/gcl.png",
+    group: "DIVISION I",
+    season: "",
 };
 
 
@@ -59,902 +48,288 @@ export const degStandingsLeague: DegStandingsLeague = {
 /* ============================================ */
 
 export type DegStanding = {
-
     position: number;
 
     team: string;
-
     logo: string;
-
     players: number;
 
     gamesPlayed: number;
 
     wins: number;
-
     overtimeWins: number;
-
     overtimeLosses: number;
-
     losses: number;
 
     goalsFor: number;
-
     goalsAgainst: number;
-
     points: number;
 
-    isDeg?: boolean;
+    /*
+     * Playoff-Status:
+     * Platz 1–8 = true
+     * Platz 9    = false
+     */
+    playoffs: boolean;
 
+    /*
+     * Kennzeichnung für DEG eSports
+     */
+    isDeg?: boolean;
 };
 
 
 /* ============================================ */
-/* GCL 13                                       */
+/* GCL 13 – DIVISION 1                          */
+/*                                              */
+/* 9 TEAMS                                      */
+/* 8 PLAYOFF-PLÄTZE                             */
+/* 1 TEAM OHNE PLAYOFFS                         */
 /* ============================================ */
 
 export const degStandings: DegStanding[] = [
 
     /* ---------------------------------------- */
-    /* 01 – BLACK ICE RAVENS                    */
+    /* 01 – DEG ESPORTS                         */
+    /* PLAYOFFS: JA                             */
     /* ---------------------------------------- */
 
     {
         position: 1,
 
-        team:
-            "Black Ice Ravens",
+        team: "DEG eSports",
+        logo: "/images/esport/gcl13/deg-esports.png",
+        players: 11,
 
-        logo:
-            "/images/esport/gcl13/black-ice-ravens.png",
+        gamesPlayed: 0,
 
-        players:
-            11,
+        wins: 0,
+        overtimeWins: 0,
+        overtimeLosses: 0,
+        losses: 0,
 
-        gamesPlayed:
-            0,
+        goalsFor: 0,
+        goalsAgainst: 0,
+        points: 0,
 
-        wins:
-            0,
+        playoffs: true,
 
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
+        isDeg: true,
     },
 
 
     /* ---------------------------------------- */
-    /* 02 – CATASTROPHIC TURNOVERS             */
+    /* 02 – GERMAN ELITE HOCKEY                */
+    /* PLAYOFFS: JA                             */
     /* ---------------------------------------- */
 
     {
         position: 2,
 
-        team:
-            "Catastrophic Turnovers",
+        team: "German Elite Hockey",
+        logo: "/images/esport/gcl13/german-elite-hockey.png",
+        players: 9,
 
-        logo:
-            "/images/esport/gcl13/catastrophic-turnovers.jpg",
+        gamesPlayed: 0,
 
-        players:
-            8,
+        wins: 0,
+        overtimeWins: 0,
+        overtimeLosses: 0,
+        losses: 0,
 
-        gamesPlayed:
-            0,
+        goalsFor: 0,
+        goalsAgainst: 0,
+        points: 0,
 
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
+        playoffs: true,
     },
 
 
     /* ---------------------------------------- */
-    /* 03 – CLOWNS ON ICE                      */
+    /* 03 – HOCKEYHOLICS                       */
+    /* PLAYOFFS: JA                             */
     /* ---------------------------------------- */
 
     {
         position: 3,
 
-        team:
-            "Clowns On Ice",
+        team: "Hockeyholics",
+        logo: "/images/esport/gcl13/hockeyholics.png",
+        players: 7,
 
-        logo:
-            "/images/esport/gcl13/clowns-on-ice.png",
+        gamesPlayed: 0,
 
-        players:
-            10,
+        wins: 0,
+        overtimeWins: 0,
+        overtimeLosses: 0,
+        losses: 0,
 
-        gamesPlayed:
-            0,
+        goalsFor: 0,
+        goalsAgainst: 0,
+        points: 0,
 
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
+        playoffs: true,
     },
 
 
     /* ---------------------------------------- */
     /* 04 – CONEXION                            */
+    /* PLAYOFFS: JA                             */
     /* ---------------------------------------- */
 
     {
         position: 4,
 
-        team:
-            "Conexion",
+        team: "Conexion",
+        logo: "/images/esport/gcl13/conexion.png",
+        players: 8,
 
-        logo:
-            "/images/esport/gcl13/conexion.png",
+        gamesPlayed: 0,
 
-        players:
-            8,
+        wins: 0,
+        overtimeWins: 0,
+        overtimeLosses: 0,
+        losses: 0,
 
-        gamesPlayed:
-            0,
+        goalsFor: 0,
+        goalsAgainst: 0,
+        points: 0,
 
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
+        playoffs: true,
     },
 
 
     /* ---------------------------------------- */
-    /* 05 – DEADLY PHANTOMS                    */
+    /* 05 – ISERLOHN ROOSTERS ESPORTS          */
+    /* PLAYOFFS: JA                             */
     /* ---------------------------------------- */
 
     {
         position: 5,
 
-        team:
-            "Deadly Phantoms",
+        team: "Iserlohn Roosters eSports",
+        logo: "/images/esport/gcl13/iserlohn-roosters-esports.png",
+        players: 5,
 
-        logo:
-            "/images/esport/gcl13/deadly-phantoms.png",
+        gamesPlayed: 0,
 
-        players:
-            7,
+        wins: 0,
+        overtimeWins: 0,
+        overtimeLosses: 0,
+        losses: 0,
 
-        gamesPlayed:
-            0,
+        goalsFor: 0,
+        goalsAgainst: 0,
+        points: 0,
 
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
+        playoffs: true,
     },
 
 
     /* ---------------------------------------- */
-    /* 06 – DEG ESPORTS                        */
+    /* 06 – REH GAMING                         */
+    /* PLAYOFFS: JA                             */
     /* ---------------------------------------- */
 
     {
         position: 6,
 
-        team:
-            "DEG eSports",
+        team: "REH Gaming",
+        logo: "/images/esport/gcl13/reh-gaming.png",
+        players: 6,
 
-        logo:
-            "/images/esport/gcl13/deg-esports.png",
+        gamesPlayed: 0,
 
-        players:
-            11,
+        wins: 0,
+        overtimeWins: 0,
+        overtimeLosses: 0,
+        losses: 0,
 
-        gamesPlayed:
-            0,
+        goalsFor: 0,
+        goalsAgainst: 0,
+        points: 0,
 
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
-        isDeg:
-            true,
-
+        playoffs: true,
     },
 
 
     /* ---------------------------------------- */
-    /* 07 – EC KASSEL HUSKIES ESPORTS          */
+    /* 07 – SCB ESPORTS                        */
+    /* PLAYOFFS: JA                             */
     /* ---------------------------------------- */
 
     {
         position: 7,
 
-        team:
-            "EC Kassel Huskies eSports",
+        team: "SCB eSports",
+        logo: "/images/esport/gcl13/scb-esports.png",
+        players: 8,
 
-        logo:
-            "/images/esport/gcl13/ec-kassel-huskies-esports.png",
+        gamesPlayed: 0,
 
-        players:
-            8,
+        wins: 0,
+        overtimeWins: 0,
+        overtimeLosses: 0,
+        losses: 0,
 
-        gamesPlayed:
-            0,
+        goalsFor: 0,
+        goalsAgainst: 0,
+        points: 0,
 
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
+        playoffs: true,
     },
 
 
     /* ---------------------------------------- */
-    /* 08 – EHC OLTEN ESPORTS                  */
+    /* 08 – DEADLY PHANTOMS                    */
+    /* PLAYOFFS: JA                             */
     /* ---------------------------------------- */
 
     {
         position: 8,
 
-        team:
-            "EHC Olten eSports",
+        team: "Deadly Phantoms",
+        logo: "/images/esport/gcl13/deadly-phantoms.png",
+        players: 7,
 
-        logo:
-            "/images/esport/gcl13/ehc-olten-esports.png",
+        gamesPlayed: 0,
 
-        players:
-            6,
+        wins: 0,
+        overtimeWins: 0,
+        overtimeLosses: 0,
+        losses: 0,
 
-        gamesPlayed:
-            0,
+        goalsFor: 0,
+        goalsAgainst: 0,
+        points: 0,
 
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
+        playoffs: true,
     },
 
 
     /* ---------------------------------------- */
-    /* 09 – GERMAN ELITE HOCKEY                */
+    /* 09 – THE LAST SHIFT                     */
+    /* PLAYOFFS: NEIN                           */
     /* ---------------------------------------- */
 
     {
         position: 9,
 
-        team:
-            "German Elite Hockey",
+        team: "The Last Shift",
+        logo: "/images/esport/gcl13/the-last-shift.jpg",
+        players: 5,
 
-        logo:
-            "/images/esport/gcl13/german-elite-hockey.png",
+        gamesPlayed: 0,
 
-        players:
-            9,
+        wins: 0,
+        overtimeWins: 0,
+        overtimeLosses: 0,
+        losses: 0,
 
-        gamesPlayed:
-            0,
+        goalsFor: 0,
+        goalsAgainst: 0,
+        points: 0,
 
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
+        playoffs: false,
     },
-
-
-    /* ---------------------------------------- */
-    /* 10 – HAMMER EISBÄREN ESPORTS            */
-    /* ---------------------------------------- */
-
-    {
-        position: 10,
-
-        team:
-            "Hammer Eisbären eSports",
-
-        logo:
-            "/images/esport/gcl13/hammer-eisbaeren-esports.png",
-
-        players:
-            8,
-
-        gamesPlayed:
-            0,
-
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
-    },
-
-
-    /* ---------------------------------------- */
-    /* 11 – EISHOCKEYNET YETIS                 */
-    /* ---------------------------------------- */
-
-    {
-        position: 11,
-
-        team:
-            "Eishockeynet Yetis",
-
-        logo:
-            "/images/esport/gcl13/eishockeynet-yetis.png",
-
-        players:
-            3,
-
-        gamesPlayed:
-            0,
-
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
-    },
-
-
-    /* ---------------------------------------- */
-    /* 12 – HOCKEYHOLICS                       */
-    /* ---------------------------------------- */
-
-    {
-        position: 12,
-
-        team:
-            "Hockeyholics",
-
-        logo:
-            "/images/esport/gcl13/hockeyholics.png",
-
-        players:
-            7,
-
-        gamesPlayed:
-            0,
-
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
-    },
-
-
-    /* ---------------------------------------- */
-    /* 13 – ISERLOHN ROOSTERS ESPORTS          */
-    /* ---------------------------------------- */
-
-    {
-        position: 13,
-
-        team:
-            "Iserlohn Roosters eSports",
-
-        logo:
-            "/images/esport/gcl13/iserlohn-roosters-esports.png",
-
-        players:
-            5,
-
-        gamesPlayed:
-            0,
-
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
-    },
-
-
-    /* ---------------------------------------- */
-    /* 14 – OLD BUT GOLD                       */
-    /* ---------------------------------------- */
-
-    {
-        position: 14,
-
-        team:
-            "Old but Gold",
-
-        logo:
-            "/images/esport/gcl13/old-but-gold.png",
-
-        players:
-            9,
-
-        gamesPlayed:
-            0,
-
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
-    },
-
-
-    /* ---------------------------------------- */
-    /* 15 – OUTLAWS HOCKEY                     */
-    /* ---------------------------------------- */
-
-    {
-        position: 15,
-
-        team:
-            "Outlaws Hockey",
-
-        logo:
-            "/images/esport/gcl13/outlaws-hockey.png",
-
-        players:
-            12,
-
-        gamesPlayed:
-            0,
-
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
-    },
-
-
-    /* ---------------------------------------- */
-    /* 16 – REH GAMING                         */
-    /* ---------------------------------------- */
-
-    {
-        position: 16,
-
-        team:
-            "REH Gaming",
-
-        logo:
-            "/images/esport/gcl13/reh-gaming.png",
-
-        players:
-            6,
-
-        gamesPlayed:
-            0,
-
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
-    },
-
-
-    /* ---------------------------------------- */
-    /* 17 – SC RACKELBAHN EV                   */
-    /* ---------------------------------------- */
-
-    {
-        position: 17,
-
-        team:
-            "SC Rackelbahn eV",
-
-        logo:
-            "/images/esport/gcl13/sc-rackelhahn.png",
-
-        players:
-            9,
-
-        gamesPlayed:
-            0,
-
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
-    },
-
-
-    /* ---------------------------------------- */
-    /* 18 – SCB ESPORTS                        */
-    /* ---------------------------------------- */
-
-    {
-        position: 18,
-
-        team:
-            "SCB eSports",
-
-        logo:
-            "/images/esport/gcl13/scb-esports.png",
-
-        players:
-            8,
-
-        gamesPlayed:
-            0,
-
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
-    },
-
-
-    /* ---------------------------------------- */
-    /* 19 – THE LAST SHIFT                     */
-    /* ---------------------------------------- */
-
-    {
-        position: 19,
-
-        team:
-            "The Last Shift",
-
-        logo:
-            "/images/esport/gcl13/the-last-shift.jpg",
-
-        players:
-            5,
-
-        gamesPlayed:
-            0,
-
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
-    },
-
-
-    /* ---------------------------------------- */
-    /* 20 – VALHALLA VIKINGS HC                */
-    /* ---------------------------------------- */
-
-    {
-        position: 20,
-
-        team:
-            "Valhalla Vikings HC",
-
-        logo:
-            "/images/esport/gcl13/valhalla-vikings-hc.png",
-
-        players:
-            10,
-
-        gamesPlayed:
-            0,
-
-        wins:
-            0,
-
-        overtimeWins:
-            0,
-
-        overtimeLosses:
-            0,
-
-        losses:
-            0,
-
-        goalsFor:
-            0,
-
-        goalsAgainst:
-            0,
-
-        points:
-            0,
-
-    },
-
 ];
