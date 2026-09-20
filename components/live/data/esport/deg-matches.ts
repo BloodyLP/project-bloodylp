@@ -1,26 +1,25 @@
 /* ============================================ */
-/* BloodyArmy                                    */
+/* BloodyArmy                                   */
 /* ============================================ */
-/*                                               */
-/* Project:                                      */
-/* BloodyLP Website                              */
-/*                                               */
-/* File:                                         */
-/* deg-matches.ts                                */
-/*                                               */
-/* Description:                                  */
-/* Spiel- und Ergebnisdaten der                  */
-/* DEG eSport Mannschaft.                        */
-/*                                               */
+/*                                              */
+/* Project:                                     */
+/* BloodyLP Website                             */
+/*                                              */
+/* File:                                        */
+/* deg-matches.ts                               */
+/*                                              */
+/* Description:                                 */
+/* Spiel- und Ergebnisdaten der                 */
+/* DEG eSport Mannschaft.                       */
+/*                                              */
 /* ============================================ */
 
 
 /* ============================================ */
-/* TYPES                                         */
+/* TYPES                                        */
 /* ============================================ */
 
 export type DegMatch = {
-
     date:
         string;
 
@@ -44,48 +43,87 @@ export type DegMatch = {
 
     home:
         boolean;
-
 };
 
 
 /* ============================================ */
-/* DEG TEAM                                      */
+/* UPCOMING MATCH TYPE                          */
+/* ============================================ */
+
+export type UpcomingMatch = {
+    date:
+        string;
+
+    league:
+        string;
+
+    opponent:
+        string;
+
+    opponentLogo:
+        string;
+
+    opponent2?:
+        string;
+
+    opponentLogo2?:
+        string;
+};
+
+
+/* ============================================ */
+/* DEG TEAM                                     */
 /* ============================================ */
 
 export const degTeam = {
-
     name:
         "DEG eSports",
 
     logo:
         "/images/esport/deg-esports-logo.png",
-
 };
 
 
 /* ============================================ */
-/* NEXT MATCH                                    */
+/* NEXT MATCH                                   */
 /* ============================================ */
 
-export const upcomingMatch = {
-
+export const upcomingMatch: UpcomingMatch = {
     date:
-        "TBA",
+        "Montag, 21. September 2026 ab 20.20 Uhr",
 
     league:
-        "ECL LITE",
+        "GCL POKAL / SPIELTAG 1",
 
     opponent:
-        "Gegner folgt",
+        "Outlaws Hockey",
 
     opponentLogo:
-        "",
+        "/images/esport/gcl13/outlaws-hockey.png",
 
+    opponent2:
+        "The Last Shift",
+
+    opponentLogo2:
+        "/images/esport/gcl13/the-last-shift.png",
+};
+
+/* ============================================ */
+/* SEASON STATS                                 */
+/* ============================================ */
+
+export const degSeasonStats = {
+    games: 0,
+    wins: 0,
+    losses: 0,
+    overtimeLosses: 0,
+    goalsFor: 0,
+    goalsAgainst: 0,
 };
 
 
 /* ============================================ */
-/* MATCH RESULTS                                 */
+/* MATCH RESULTS                                */
 /* ============================================ */
 
 export const degMatches: DegMatch[] = [
@@ -95,28 +133,26 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-
         date:
-            "19. April 2026",
+            "21. September 2026",
 
         league:
-            "ECL LITE",
+            "GCL 13",
 
         opponent:
-            "HC Punishers",
+            "The Last Shift",
 
         opponentLogo:
-            "/images/esport/hc-punishers-logo.png",
+            "/images/esport/gcl13/the-last-shift.png",
 
         degScore:
-            8,
+            0,
 
         opponentScore:
-            2,
+            0,
 
         home:
             true,
-
     },
 
 
@@ -125,28 +161,26 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-
         date:
-            "17. April 2026",
+            "21. September 2026",
 
         league:
-            "ECL LITE",
+            "GCL 13",
 
         opponent:
-            "Nordic Nosebleed",
+            "The Last Shift",
 
         opponentLogo:
-            "/images/esport/nordic-nosebleed-logo.png",
+            "/images/esport/gcl13/the-last-shift.png",
 
         degScore:
-            4,
+            0,
 
         opponentScore:
-            1,
+            0,
 
         home:
             false,
-
     },
 
 
@@ -155,28 +189,25 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-
         date:
-            "16. April 2026",
+            "21. September 2026",
 
         league:
-            "ECL LITE",
+            "GCL 13 - Pokal",
 
         opponent:
-            "MIESKISSAT",
+            "Outlaws Hockey",
 
         opponentLogo:
-            "/images/esport/mieskissat.png",
+            "/images/esport/gcl13/outlaws-hockey.png",
 
         degScore:
-            1,
+            0,
 
         opponentScore:
-            3,
+            0,
 
         home:
-            true,
-
+            false,
     },
-
 ];

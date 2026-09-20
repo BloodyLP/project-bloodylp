@@ -316,7 +316,7 @@ export const degStandings: DegStanding[] = [
         position: 9,
 
         team: "The Last Shift",
-        logo: "/images/esport/gcl13/the-last-shift.jpg",
+        logo: "/images/esport/gcl13/the-last-shift.png",
         players: 5,
 
         gamesPlayed: 0,

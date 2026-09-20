@@ -1,9 +1,16 @@
 /* ============================================ */
 /* BloodyArmy                                   */
 /* ============================================ */
-/* Project: BloodyLP Website                    */
-/* File: DegMatches.tsx                         */
-/* Description: DEG eSports Matches             */
+/*                                              */
+/* Project:                                     */
+/* BloodyLP Website                             */
+/*                                              */
+/* File:                                        */
+/* DegMatches.tsx                               */
+/*                                              */
+/* Description:                                 */
+/* DEG eSports Matches                          */
+/*                                              */
 /* ============================================ */
 
 "use client";
@@ -16,11 +23,12 @@ import {
     degTeam,
     upcomingMatch,
     degMatches,
+    degSeasonStats,
 } from "../../live/data/esport/deg-matches";
 
 
 /* ============================================ */
-/* TYPES                                         */
+/* TYPES                                        */
 /* ============================================ */
 
 type MatchResult =
@@ -30,7 +38,7 @@ type MatchResult =
 
 
 /* ============================================ */
-/* HELPERS                                       */
+/* HELPERS                                      */
 /* ============================================ */
 
 function getMatchResult(
@@ -54,7 +62,6 @@ function getMatchResult(
     }
 
     return "draw";
-
 }
 
 
@@ -75,73 +82,36 @@ function getResultLabel(
     }
 
     return "";
-
 }
 
 
 /* ============================================ */
-/* COMPONENT                                     */
+/* COMPONENT                                    */
 /* ============================================ */
 
 export default function DegMatches() {
 
+/* ======================================== */
+/* STATISTICS                               */
+/* ======================================== */
 
-    /* ======================================== */
-    /* STATISTICS                               */
-    /* ======================================== */
+const completedMatches =
+    degSeasonStats.games;
 
-    const completedMatches =
-        degMatches.filter(
-            (match) =>
-                match.degScore !== null &&
-                match.opponentScore !== null
-        );
+const wins =
+    degSeasonStats.wins;
 
+const losses =
+    degSeasonStats.losses;
 
-    const wins =
-        completedMatches.filter(
-            (match) =>
-                match.degScore !== null &&
-                match.opponentScore !== null &&
-                match.degScore > match.opponentScore
-        ).length;
+const overtimeLosses =
+    degSeasonStats.overtimeLosses;
 
+const goalsFor =
+    degSeasonStats.goalsFor;
 
-    const losses =
-        completedMatches.filter(
-            (match) =>
-                match.degScore !== null &&
-                match.opponentScore !== null &&
-                match.degScore < match.opponentScore
-        ).length;
-
-
-    const overtimeLosses =
-        completedMatches.filter(
-            (match) =>
-                match.overtime === true &&
-                match.degScore !== null &&
-                match.opponentScore !== null &&
-                match.degScore < match.opponentScore
-        ).length;
-
-
-    const goalsFor =
-        completedMatches.reduce(
-            (total, match) =>
-                total +
-                (match.degScore ?? 0),
-            0
-        );
-
-
-    const goalsAgainst =
-        completedMatches.reduce(
-            (total, match) =>
-                total +
-                (match.opponentScore ?? 0),
-            0
-        );
+const goalsAgainst =
+    degSeasonStats.goalsAgainst;
 
 
     return (
@@ -333,7 +303,9 @@ export default function DegMatches() {
                         >
 
 
-                            {/* DEG */}
+                            {/* ================================= */}
+                            {/* DEG                                  */}
+                            {/* ================================= */}
 
                             <div
                                 className={
@@ -375,7 +347,9 @@ export default function DegMatches() {
                             </div>
 
 
-                            {/* VS */}
+                            {/* ================================= */}
+                            {/* VS                                   */}
+                            {/* ================================= */}
 
                             <div
                                 className={
@@ -405,58 +379,117 @@ export default function DegMatches() {
                             </div>
 
 
-                            {/* OPPONENT */}
+                            {/* ================================= */}
+                            {/* OPPONENTS                            */}
+                            {/* ================================= */}
 
                             <div
                                 className={
-                                    styles.nextTeam
+                                    styles.opponentsGroup
                                 }
                             >
 
+                                {/* GEGNER 1 */}
+
                                 <div
                                     className={
-                                        styles.teamLogoFrame
+                                        styles.opponentTeam
                                     }
                                 >
 
-                                    {upcomingMatch.opponentLogo ? (
+                                    <div
+                                        className={
+                                            styles.teamLogoFrame
+                                        }
+                                    >
 
-                                        <Image
-                                            src={
-                                                upcomingMatch.opponentLogo
-                                            }
-                                            alt={
-                                                upcomingMatch.opponent
-                                            }
-                                            width={150}
-                                            height={130}
-                                            className={
-                                                styles.nextLogo
-                                            }
-                                        />
+                                        {upcomingMatch.opponentLogo ? (
 
-                                    ) : (
+                                            <Image
+                                                src={
+                                                    upcomingMatch.opponentLogo
+                                                }
+                                                alt={
+                                                    upcomingMatch.opponent
+                                                }
+                                                width={150}
+                                                height={130}
+                                                className={
+                                                    styles.nextLogo
+                                                }
+                                            />
 
-                                        <span
-                                            className={
-                                                styles.opponentPlaceholder
-                                            }
-                                        >
-                                            ?
-                                        </span>
+                                        ) : (
 
-                                    )}
+                                            <span
+                                                className={
+                                                    styles.opponentPlaceholder
+                                                }
+                                            >
+                                                ?
+                                            </span>
+
+                                        )}
+
+                                    </div>
+
+
+                                    <span
+                                        className={
+                                            styles.nextTeamName
+                                        }
+                                    >
+                                        {upcomingMatch.opponent}
+                                    </span>
 
                                 </div>
 
 
-                                <span
-                                    className={
-                                        styles.nextTeamName
-                                    }
-                                >
-                                    {upcomingMatch.opponent}
-                                </span>
+                                {/* GEGNER 2 – OPTIONAL */}
+
+                                {upcomingMatch.opponentLogo2 && (
+                                    <div
+                                        className={
+                                            styles.opponentTeam
+                                        }
+                                    >
+
+                                        <div
+                                            className={
+                                                styles.teamLogoFrame
+                                            }
+                                        >
+
+                                            <Image
+                                                src={
+                                                    upcomingMatch.opponentLogo2
+                                                }
+                                                alt={
+                                                    upcomingMatch.opponent2 ??
+                                                    "Zweiter Gegner"
+                                                }
+                                                width={150}
+                                                height={130}
+                                                className={
+                                                    styles.nextLogo
+                                                }
+                                            />
+
+                                        </div>
+
+
+                                        {upcomingMatch.opponent2 && (
+                                            <span
+                                                className={
+                                                    styles.nextTeamName
+                                                }
+                                            >
+                                                {upcomingMatch.opponent2}
+                                            </span>
+                                        )}
+
+                                    </div>
+                                )}
 
                             </div>
 
@@ -573,8 +606,8 @@ export default function DegMatches() {
                         >
 
                             <strong>
-                                {completedMatches.length}
-                            </strong>
+    {degSeasonStats.games}
+</strong>
 
                             <span>
                                 SPIELE
@@ -986,5 +1019,4 @@ export default function DegMatches() {
         </section>
 
     );
-
 }
