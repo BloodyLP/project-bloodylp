@@ -200,7 +200,7 @@ export const gcl13Cup: GCL13Cup = {
                     home: teams.outlaws,
                     away: teams.deg,
                     homeScore: 0,
-                    awayScore: 5,
+                    awayScore: 7,
                     played: true,
                 },
             ],
