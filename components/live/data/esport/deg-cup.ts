@@ -98,7 +98,7 @@ const teams = {
     },
 
     flashback: {
-        name: "Flashback Skuad",
+        name: "Flaschback Skwad",
         logo: "/images/esport/gcl13/flaschback-squad.png",
     },
 
