@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import standingsStyles from "./DegStandings.module.css";
 import styles from "./gcl13cup.module.css";
 
@@ -8,45 +9,93 @@ import {
     GCL13CupTeam,
 } from "@/components/live/data/esport/deg-cup";
 
+
+/* ============================================ */
+/* CUP TEAM                                     */
+/* ============================================ */
+
 function CupTeam({ team }: { team: GCL13CupTeam }) {
     return (
         <div
-            className={`${styles.teamCell} ${
-                team.isDeg ? styles.degTeam : ""
-            }`}
+            className={[
+                styles.teamCell,
+                team.isDeg ? styles.degTeam : "",
+                team.eliminated ? styles.eliminatedTeam : "",
+            ]
+                .filter(Boolean)
+                .join(" ")}
         >
-            <Image
-                src={team.logo}
-                alt={`${team.name} Logo`}
-                width={46}
-                height={46}
-                className={standingsStyles.teamLogo}
-            />
+            <div className={styles.teamLogoWrap}>
+                <Image
+                    src={team.logo}
+                    alt={`${team.name} Logo`}
+                    width={46}
+                    height={46}
+                    className={standingsStyles.teamLogo}
+                />
+            </div>
 
-            <span className={standingsStyles.teamName}>
-                {team.name}
-            </span>
+            <div className={styles.teamInfo}>
+                <span className={standingsStyles.teamName}>
+                    {team.name}
+                </span>
+
+                {team.eliminated && (
+                    <span className={styles.eliminatedLabel}>
+                        AUSGESCHIEDEN
+                    </span>
+                )}
+            </div>
         </div>
     );
 }
 
+
+/* ============================================ */
+/* CUP MATCH                                    */
+/* ============================================ */
+
 function CupMatch({ match }: { match: GCL13CupMatch }) {
     return (
         <div className={styles.match}>
-            <div className={styles.teamRow}>
+            <div
+                className={`${styles.teamRow} ${
+                    match.home.eliminated
+                        ? styles.eliminatedRow
+                        : ""
+                }`}
+            >
                 <CupTeam team={match.home} />
 
-                <div className={styles.score}>
+                <div
+                    className={`${styles.score} ${
+                        match.home.eliminated
+                            ? styles.eliminatedScore
+                            : ""
+                    }`}
+                >
                     {match.played
                         ? match.homeScore
                         : "–"}
                 </div>
             </div>
 
-            <div className={styles.teamRow}>
+            <div
+                className={`${styles.teamRow} ${
+                    match.away.eliminated
+                        ? styles.eliminatedRow
+                        : ""
+                }`}
+            >
                 <CupTeam team={match.away} />
 
-                <div className={styles.score}>
+                <div
+                    className={`${styles.score} ${
+                        match.away.eliminated
+                            ? styles.eliminatedScore
+                            : ""
+                    }`}
+                >
                     {match.played
                         ? match.awayScore
                         : "–"}
@@ -55,6 +104,11 @@ function CupMatch({ match }: { match: GCL13CupMatch }) {
         </div>
     );
 }
+
+
+/* ============================================ */
+/* CUP ROUND                                    */
+/* ============================================ */
 
 function CupRound({
     name,
@@ -89,16 +143,32 @@ function CupRound({
     );
 }
 
+
+/* ============================================ */
+/* MAIN COMPONENT                               */
+/* ============================================ */
+
 export default function GCL13Cup() {
     return (
         <section className={standingsStyles.standings}>
-            {/* =====================================================
+
+            {/* =================================
                 HEADER
-            ===================================================== */}
+            ================================= */}
 
             <div className={standingsStyles.header}>
-                <div className={standingsStyles.headerLeague}>
-                    <div className={standingsStyles.leagueLogo}>
+
+                <div
+                    className={
+                        standingsStyles.headerLeague
+                    }
+                >
+
+                    <div
+                        className={
+                            standingsStyles.leagueLogo
+                        }
+                    >
                         <Image
                             src={gcl13Cup.logo}
                             alt={`${gcl13Cup.name} Logo`}
@@ -110,16 +180,32 @@ export default function GCL13Cup() {
                         />
                     </div>
 
-                    <div className={standingsStyles.headerContent}>
-                        <p className={standingsStyles.eyebrow}>
+                    <div
+                        className={
+                            standingsStyles.headerContent
+                        }
+                    >
+                        <p
+                            className={
+                                standingsStyles.eyebrow
+                            }
+                        >
                             DEG ESPORTS
                         </p>
 
-                        <h2 className={standingsStyles.title}>
+                        <h2
+                            className={
+                                standingsStyles.title
+                            }
+                        >
                             POKAL
                         </h2>
 
-                        <p className={standingsStyles.leagueName}>
+                        <p
+                            className={
+                                standingsStyles.leagueName
+                            }
+                        >
                             {gcl13Cup.name}
                         </p>
 
@@ -152,9 +238,10 @@ export default function GCL13Cup() {
                 </div>
             </div>
 
-            {/* =====================================================
+
+            {/* =================================
                 CUP ROUNDS
-            ===================================================== */}
+            ================================= */}
 
             <div className={styles.rounds}>
                 {gcl13Cup.rounds.map((round) => (
@@ -166,21 +253,19 @@ export default function GCL13Cup() {
                 ))}
             </div>
 
-            {/* =====================================================
+
+            {/* =================================
                 FOOTER
-            ===================================================== */}
+            ================================= */}
 
             <div className={standingsStyles.footer}>
                 <span>GCL 13</span>
-
                 <span>•</span>
-
                 <span>POKAL</span>
-
                 <span>•</span>
-
                 <span>AKTUELLE BEGEGNUNGEN</span>
             </div>
+
         </section>
     );
 }

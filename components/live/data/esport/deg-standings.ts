@@ -12,7 +12,7 @@
 /*                                              */
 /* Description:                                 */
 /* GCL 13 – Division 1                          */
-/* Finale 9 Mannschaften                         */
+/* Finale 9 Mannschaften                        */
 /* Platz 1–8 Playoffs                           */
 /* Platz 9 keine Playoffs                       */
 /*                                              */
@@ -49,30 +49,53 @@ export const degStandingsLeague: DegStandingsLeague = {
 
 export type DegStanding = {
     position: number;
-
     team: string;
     logo: string;
     players: number;
 
-    gamesPlayed: number;
+    /* ---------------------------------------- */
+    /* GAME RECORD                              */
+    /* ---------------------------------------- */
 
+    gamesPlayed: number;
     wins: number;
     overtimeWins: number;
     overtimeLosses: number;
     losses: number;
 
+    /* ---------------------------------------- */
+    /* GOALS / POINTS                           */
+    /* ---------------------------------------- */
+
     goalsFor: number;
     goalsAgainst: number;
     points: number;
 
-    /*
-     * Playoff-Status:
-     * Platz 1–8 = true
-     * Platz 9    = false
+    /* ---------------------------------------- */
+    /* ADDITIONAL STATISTICS                    */
+    /* ---------------------------------------- */
+
+    powerplayPercentage?: number | null;
+    penaltyKillPercentage?: number | null;
+
+    pim: number;
+    shots: number;
+    faceoffPercentage?: number | null;
+    hits: number;
+
+    last10: string;
+
+    /* ---------------------------------------- */
+    /* PLAYOFF STATUS                           */
+    /* ---------------------------------------- */
+
+    /**
+     * Platz 1–8 = Playoffs
+     * Platz 9    = keine Playoffs
      */
     playoffs: boolean;
 
-    /*
+    /**
      * Kennzeichnung für DEG eSports
      */
     isDeg?: boolean;
@@ -96,69 +119,82 @@ export const degStandings: DegStanding[] = [
 
     {
         position: 1,
-
         team: "DEG eSports",
         logo: "/images/esport/gcl13/deg-esports.png",
         players: 11,
 
-        gamesPlayed: 0,
-
-        wins: 0,
+        gamesPlayed: 2,
+        wins: 1,
         overtimeWins: 0,
-        overtimeLosses: 0,
+        overtimeLosses: 1,
         losses: 0,
 
-        goalsFor: 0,
-        goalsAgainst: 0,
-        points: 0,
+        goalsFor: 5,
+        goalsAgainst: 5,
+        points: 4,
+
+        powerplayPercentage: 100,
+        penaltyKillPercentage: 100,
+
+        pim: 0,
+        shots: 32,
+        faceoffPercentage: 55.26,
+        hits: 9,
+
+        last10: "1-0-1",
 
         playoffs: true,
-
         isDeg: true,
     },
 
 
     /* ---------------------------------------- */
-    /* 02 – GERMAN ELITE HOCKEY                */
+    /* 02 – THE LAST SHIFT                     */
     /* PLAYOFFS: JA                             */
     /* ---------------------------------------- */
 
     {
         position: 2,
+        team: "The Last Shift",
+        logo: "/images/esport/gcl13/the-last-shift.png",
+        players: 5,
 
-        team: "German Elite Hockey",
-        logo: "/images/esport/gcl13/german-elite-hockey.png",
-        players: 9,
-
-        gamesPlayed: 0,
-
+        gamesPlayed: 2,
         wins: 0,
-        overtimeWins: 0,
+        overtimeWins: 1,
         overtimeLosses: 0,
-        losses: 0,
+        losses: 1,
 
-        goalsFor: 0,
-        goalsAgainst: 0,
-        points: 0,
+        goalsFor: 5,
+        goalsAgainst: 5,
+        points: 2,
+
+        powerplayPercentage: null,
+        penaltyKillPercentage: null,
+
+        pim: 2,
+        shots: 26,
+        faceoffPercentage: 44.74,
+        hits: 19,
+
+        last10: "1-1-0",
 
         playoffs: true,
     },
 
 
     /* ---------------------------------------- */
-    /* 03 – HOCKEYHOLICS                       */
+    /* 03 – GERMAN ELITE HOCKEY                */
     /* PLAYOFFS: JA                             */
     /* ---------------------------------------- */
 
     {
         position: 3,
-
-        team: "Hockeyholics",
-        logo: "/images/esport/gcl13/hockeyholics.png",
-        players: 7,
+        team: "German Elite Hockey",
+        logo: "/images/esport/gcl13/german-elite-hockey.png",
+        players: 9,
 
         gamesPlayed: 0,
-
         wins: 0,
         overtimeWins: 0,
         overtimeLosses: 0,
@@ -168,24 +204,32 @@ export const degStandings: DegStanding[] = [
         goalsAgainst: 0,
         points: 0,
 
+        powerplayPercentage: null,
+        penaltyKillPercentage: null,
+
+        pim: 0,
+        shots: 0,
+        faceoffPercentage: null,
+        hits: 0,
+
+        last10: "0-0-0",
+
         playoffs: true,
     },
 
 
     /* ---------------------------------------- */
-    /* 04 – CONEXION                            */
+    /* 04 – HOCKEYHOLICS                       */
     /* PLAYOFFS: JA                             */
     /* ---------------------------------------- */
 
     {
         position: 4,
-
-        team: "Conexion",
-        logo: "/images/esport/gcl13/conexion.png",
-        players: 8,
+        team: "Hockeyholics",
+        logo: "/images/esport/gcl13/hockeyholics.png",
+        players: 7,
 
         gamesPlayed: 0,
-
         wins: 0,
         overtimeWins: 0,
         overtimeLosses: 0,
@@ -195,24 +239,32 @@ export const degStandings: DegStanding[] = [
         goalsAgainst: 0,
         points: 0,
 
+        powerplayPercentage: null,
+        penaltyKillPercentage: null,
+
+        pim: 0,
+        shots: 0,
+        faceoffPercentage: null,
+        hits: 0,
+
+        last10: "0-0-0",
+
         playoffs: true,
     },
 
 
     /* ---------------------------------------- */
-    /* 05 – ISERLOHN ROOSTERS ESPORTS          */
+    /* 05 – CONEXION                            */
     /* PLAYOFFS: JA                             */
     /* ---------------------------------------- */
 
     {
         position: 5,
-
-        team: "Iserlohn Roosters eSports",
-        logo: "/images/esport/gcl13/iserlohn-roosters-esports.png",
-        players: 5,
+        team: "Conexion",
+        logo: "/images/esport/gcl13/conexion.png",
+        players: 8,
 
         gamesPlayed: 0,
-
         wins: 0,
         overtimeWins: 0,
         overtimeLosses: 0,
@@ -222,24 +274,32 @@ export const degStandings: DegStanding[] = [
         goalsAgainst: 0,
         points: 0,
 
+        powerplayPercentage: null,
+        penaltyKillPercentage: null,
+
+        pim: 0,
+        shots: 0,
+        faceoffPercentage: null,
+        hits: 0,
+
+        last10: "0-0-0",
+
         playoffs: true,
     },
 
 
     /* ---------------------------------------- */
-    /* 06 – REH GAMING                         */
+    /* 06 – ISERLOHN ROOSTERS ESPORTS           */
     /* PLAYOFFS: JA                             */
     /* ---------------------------------------- */
 
     {
         position: 6,
-
-        team: "REH Gaming",
-        logo: "/images/esport/gcl13/reh-gaming.png",
-        players: 6,
+        team: "Iserlohn Roosters eSports",
+        logo: "/images/esport/gcl13/iserlohn-roosters-esports.png",
+        players: 5,
 
         gamesPlayed: 0,
-
         wins: 0,
         overtimeWins: 0,
         overtimeLosses: 0,
@@ -249,24 +309,32 @@ export const degStandings: DegStanding[] = [
         goalsAgainst: 0,
         points: 0,
 
+        powerplayPercentage: null,
+        penaltyKillPercentage: null,
+
+        pim: 0,
+        shots: 0,
+        faceoffPercentage: null,
+        hits: 0,
+
+        last10: "0-0-0",
+
         playoffs: true,
     },
 
 
     /* ---------------------------------------- */
-    /* 07 – SCB ESPORTS                        */
+    /* 07 – REH GAMING                         */
     /* PLAYOFFS: JA                             */
     /* ---------------------------------------- */
 
     {
         position: 7,
-
-        team: "SCB eSports",
-        logo: "/images/esport/gcl13/scb-esports.png",
-        players: 8,
+        team: "REH Gaming",
+        logo: "/images/esport/gcl13/reh-gaming.png",
+        players: 6,
 
         gamesPlayed: 0,
-
         wins: 0,
         overtimeWins: 0,
         overtimeLosses: 0,
@@ -276,24 +344,32 @@ export const degStandings: DegStanding[] = [
         goalsAgainst: 0,
         points: 0,
 
+        powerplayPercentage: null,
+        penaltyKillPercentage: null,
+
+        pim: 0,
+        shots: 0,
+        faceoffPercentage: null,
+        hits: 0,
+
+        last10: "0-0-0",
+
         playoffs: true,
     },
 
 
     /* ---------------------------------------- */
-    /* 08 – DEADLY PHANTOMS                    */
+    /* 08 – SCB ESPORTS                        */
     /* PLAYOFFS: JA                             */
     /* ---------------------------------------- */
 
     {
         position: 8,
-
-        team: "Deadly Phantoms",
-        logo: "/images/esport/gcl13/deadly-phantoms.png",
-        players: 7,
+        team: "SCB eSports",
+        logo: "/images/esport/gcl13/scb-esports.png",
+        players: 8,
 
         gamesPlayed: 0,
-
         wins: 0,
         overtimeWins: 0,
         overtimeLosses: 0,
@@ -302,25 +378,33 @@ export const degStandings: DegStanding[] = [
         goalsFor: 0,
         goalsAgainst: 0,
         points: 0,
+
+        powerplayPercentage: null,
+        penaltyKillPercentage: null,
+
+        pim: 0,
+        shots: 0,
+        faceoffPercentage: null,
+        hits: 0,
+
+        last10: "0-0-0",
 
         playoffs: true,
     },
 
 
     /* ---------------------------------------- */
-    /* 09 – THE LAST SHIFT                     */
+    /* 09 – DEADLY PHANTOMS                    */
     /* PLAYOFFS: NEIN                           */
     /* ---------------------------------------- */
 
     {
         position: 9,
-
-        team: "The Last Shift",
-        logo: "/images/esport/gcl13/the-last-shift.png",
-        players: 5,
+        team: "Deadly Phantoms",
+        logo: "/images/esport/gcl13/deadly-phantoms.png",
+        players: 7,
 
         gamesPlayed: 0,
-
         wins: 0,
         overtimeWins: 0,
         overtimeLosses: 0,
@@ -329,6 +413,16 @@ export const degStandings: DegStanding[] = [
         goalsFor: 0,
         goalsAgainst: 0,
         points: 0,
+
+        powerplayPercentage: null,
+        penaltyKillPercentage: null,
+
+        pim: 0,
+        shots: 0,
+        faceoffPercentage: null,
+        hits: 0,
+
+        last10: "0-0-0",
 
         playoffs: false,
     },

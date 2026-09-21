@@ -2,6 +2,7 @@
     width: 100%;
 }
 
+
 /* =========================================================
    ROUNDS
    ========================================================= */
@@ -18,6 +19,7 @@
 .round:last-child {
     margin-bottom: 0;
 }
+
 
 /* =========================================================
    ROUND HEADER
@@ -38,6 +40,7 @@
 .roundAccent {
     width: 8px;
     height: 8px;
+
     flex: 0 0 8px;
 
     background: #f6d12a;
@@ -52,11 +55,14 @@
 
     font-size: 1rem;
     font-weight: 900;
+
     line-height: 1.1;
 
     letter-spacing: 0.08em;
+
     text-transform: uppercase;
 }
+
 
 /* =========================================================
    MATCH GRID
@@ -64,12 +70,15 @@
 
 .matches {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
 
     gap: 14px;
 
     width: 100%;
 }
+
 
 /* =========================================================
    MATCH / DUELL
@@ -77,15 +86,13 @@
 
 .match {
     position: relative;
+
     overflow: hidden;
 
-    /*
-     * Dunkler Hintergrund wie bei der Tabelle.
-     * KEIN Grau.
-     */
     background: #17191d;
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid
+        rgba(255, 255, 255, 0.08);
 
     box-shadow: none;
 
@@ -97,8 +104,10 @@
 .match:hover {
     background: #1a1c20;
 
-    border-color: rgba(255, 255, 255, 0.12);
+    border-color:
+        rgba(255, 255, 255, 0.12);
 }
+
 
 /* =========================================================
    TEAM ROW
@@ -106,16 +115,25 @@
 
 .teamRow {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 58px;
+
+    grid-template-columns:
+        minmax(0, 1fr) 58px;
 
     min-height: 70px;
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.055);
+
+    transition:
+        background 0.2s ease,
+        opacity 0.2s ease,
+        filter 0.2s ease;
 }
 
 .teamRow:last-child {
     border-bottom: none;
 }
+
 
 /* =========================================================
    TEAM CELL
@@ -123,6 +141,7 @@
 
 .teamCell {
     display: flex;
+
     align-items: center;
 
     min-width: 0;
@@ -132,18 +151,62 @@
     padding: 0 14px;
 
     background: transparent;
+
+    transition:
+        opacity 0.2s ease,
+        filter 0.2s ease,
+        background 0.2s ease;
 }
 
 .teamCell:hover {
-    background: rgba(255, 255, 255, 0.02);
+    background:
+        rgba(255, 255, 255, 0.02);
 }
+
+
+/* =========================================================
+   TEAM INFO
+   ========================================================= */
+
+.teamInfo {
+    display: flex;
+
+    align-items: center;
+
+    min-width: 0;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   TEAM LOGO
+   ========================================================= */
+
+.teamLogoWrap {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 46px;
+
+    width: 46px;
+    height: 46px;
+
+    transition:
+        opacity 0.2s ease,
+        filter 0.2s ease;
+}
+
 
 /* =========================================================
    DEG TEAM
    ========================================================= */
 
 /*
- * WICHTIG:
  * Nur die DEG-Zeile wird rot hinterlegt.
  *
  * Der Gegner bleibt vollständig dunkel.
@@ -157,8 +220,84 @@
             rgba(220, 20, 60, 0.055)
         );
 
-    box-shadow: inset 4px 0 0 #dc143c;
+    box-shadow:
+        inset 4px 0 0 #dc143c;
 }
+
+
+/* =========================================================
+   ELIMINATED TEAM
+   ========================================================= */
+
+/*
+ * Ausgeschiedene Mannschaften werden deutlich
+ * dunkler und entsättigt dargestellt.
+ *
+ * Die Datensteuerung erfolgt über:
+ *
+ * eliminated: true
+ */
+
+.eliminatedTeam {
+    opacity: 0.42;
+
+    filter:
+        grayscale(1)
+        brightness(0.65);
+}
+
+.eliminatedTeam:hover {
+    opacity: 0.48;
+
+    filter:
+        grayscale(1)
+        brightness(0.7);
+}
+
+
+/* =========================================================
+   ELIMINATED ROW
+   ========================================================= */
+
+.eliminatedRow {
+    background:
+        rgba(0, 0, 0, 0.16);
+}
+
+
+/* =========================================================
+   ELIMINATED LABEL
+   ========================================================= */
+
+.eliminatedLabel {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 4px 7px;
+
+    color: #737780;
+
+    background:
+        rgba(255, 255, 255, 0.055);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 4px;
+
+    font-size: 0.55rem;
+    font-weight: 900;
+
+    line-height: 1;
+
+    letter-spacing: 0.08em;
+
+    white-space: nowrap;
+
+    text-transform: uppercase;
+}
+
 
 /* =========================================================
    SCORE
@@ -166,6 +305,7 @@
 
 .score {
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -173,19 +313,38 @@
 
     color: #ffffff;
 
-    /*
-     * Ausschließlich DEG Rot.
-     */
     background: #dc143c;
 
-    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-left:
+        1px solid rgba(255, 255, 255, 0.08);
 
     font-size: 1.1rem;
     font-weight: 900;
+
     line-height: 1;
 
     letter-spacing: 0.02em;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        opacity 0.2s ease;
 }
+
+
+/* =========================================================
+   ELIMINATED SCORE
+   ========================================================= */
+
+.eliminatedScore {
+    color: #7c8088;
+
+    background: #25272b;
+
+    border-left-color:
+        rgba(255, 255, 255, 0.04);
+}
+
 
 /* =========================================================
    EMPTY ROUND
@@ -193,6 +352,7 @@
 
 .emptyRound {
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -204,36 +364,43 @@
 
     background: #17191d;
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
 
     font-size: 0.8rem;
     font-weight: 900;
 
     letter-spacing: 0.08em;
+
     text-transform: uppercase;
 }
+
 
 /* =========================================================
    TABLET
    ========================================================= */
 
 @media (max-width: 900px) {
+
     .matches {
         grid-template-columns: 1fr;
     }
 }
+
 
 /* =========================================================
    MOBILE
    ========================================================= */
 
 @media (max-width: 700px) {
+
     .round {
         margin-bottom: 26px;
     }
 
     .roundHeader {
         min-height: 52px;
+
         padding-bottom: 12px;
     }
 
@@ -242,18 +409,38 @@
     }
 
     .teamRow {
-        grid-template-columns: minmax(0, 1fr) 54px;
+        grid-template-columns:
+            minmax(0, 1fr) 54px;
 
         min-height: 64px;
     }
 
     .teamCell {
         gap: 10px;
+
         padding: 0 10px;
+    }
+
+    .teamInfo {
+        gap: 6px;
     }
 
     .score {
         min-width: 54px;
+
         font-size: 1rem;
+    }
+
+    .eliminatedLabel {
+        font-size: 0.48rem;
+
+        padding: 3px 5px;
+    }
+
+    .teamLogoWrap {
+        flex-basis: 40px;
+
+        width: 40px;
+        height: 40px;
     }
 }
