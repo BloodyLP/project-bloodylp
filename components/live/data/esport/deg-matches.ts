@@ -118,7 +118,7 @@ export const degSeasonStats = {
     losses: 0,
     overtimeLosses: 1,
     goalsFor: 9,
-    goalsAgainst: 3,
+    goalsAgainst: 5,
 };
 
 
@@ -174,10 +174,10 @@ export const degMatches: DegMatch[] = [
             "/images/esport/gcl13/the-last-shift.png",
 
         degScore:
-            0,
+            3,
 
         opponentScore:
-            0,
+            2,
 
         home:
             false,
