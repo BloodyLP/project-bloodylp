@@ -113,12 +113,12 @@ export const upcomingMatch: UpcomingMatch = {
 /* ============================================ */
 
 export const degSeasonStats = {
-    games: 0,
-    wins: 0,
+    games: 2,
+    wins: 1,
     losses: 0,
-    overtimeLosses: 0,
-    goalsFor: 0,
-    goalsAgainst: 0,
+    overtimeLosses: 1,
+    goalsFor: 9,
+    goalsAgainst: 3,
 };
 
 
