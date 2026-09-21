@@ -88,7 +88,7 @@ const teams = {
     },
 
     nuernberg: {
-        name: "Nürnberg Nidhogger",
+        name: "Nürnberg Nidhoggr",
         logo: "/images/esport/gcl13/nuernberg-nidhoggr.jpg",
     },
 
