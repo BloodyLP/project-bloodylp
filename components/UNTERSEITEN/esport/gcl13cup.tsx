@@ -1,6 +1,6 @@
 import Image from "next/image";
 import standingsStyles from "./DegStandings.module.css";
-import styles from "./GCL13Cup.module.css";
+import styles from "./gcl13cup.module.css";
 
 import {
     gcl13Cup,
