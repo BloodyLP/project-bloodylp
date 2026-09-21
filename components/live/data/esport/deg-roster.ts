@@ -359,7 +359,7 @@ export const degForwards: DegPlayer[] = [
         "stefanoojj",
 
     name:
-        "Stefano Ojj",
+        "S. Berg",
 
     nationality:
         "/images/esport/flags/fin.png",

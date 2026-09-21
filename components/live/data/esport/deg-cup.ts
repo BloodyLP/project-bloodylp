@@ -90,6 +90,7 @@ const teams = {
     blackIceRavens: {
         name: "Black Ice Ravens",
         logo: "/images/esport/gcl13/black-ice-ravens.png",
+        eliminated: true,
     },
 
     ehcOlten: {
@@ -205,10 +206,10 @@ export const gcl13Cup: GCL13Cup = {
                     home: teams.clownsOnIce,
                     away: teams.blackIceRavens,
 
-                    homeScore: 0,
-                    awayScore: 0,
+                    homeScore: 3,
+                    awayScore: 2,
 
-                    played: false,
+                    played: true,
                 },
 
 
@@ -322,6 +323,18 @@ export const gcl13Cup: GCL13Cup = {
                     id: "gcl13-cup-r2-deg",
 
                     home: teams.deg,
+                    away: teams.tbd,
+
+                    homeScore: 0,
+                    awayScore: 0,
+
+                    played: false,
+                },
+
+                                {
+                    id: "gcl13-cup-r2-ClownsOnIce",
+
+                    home: teams.clownsOnIce,
                     away: teams.tbd,
 
                     homeScore: 0,
