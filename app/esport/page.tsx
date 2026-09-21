@@ -25,6 +25,7 @@ import styles from "./page.module.css";
 import DegMatches from "@/components/UNTERSEITEN/esport/DegMatches";
 import DegRoster from "@/components/UNTERSEITEN/esport/DegRoster";
 import DegStandings from "@/components/UNTERSEITEN/esport/DegStandings";
+import GCL13Cup from "@/components/UNTERSEITEN/esport/gcl13cup";
 import DegSocials from "@/components/UNTERSEITEN/esport/DEGSocials";
 import DegPlayerStats from "@/components/UNTERSEITEN/esport/DegPlayerStats";
 
@@ -142,6 +143,17 @@ export default function EsportPage() {
                             className={styles.secondaryButton}
                         >
                             TABELLE
+                            <span>→</span>
+                        </Link>
+
+
+                        {/* POKAL */}
+
+                        <Link
+                            href="#pokal"
+                            className={styles.secondaryButton}
+                        >
+                            POKAL
                             <span>→</span>
                         </Link>
 
@@ -383,6 +395,27 @@ export default function EsportPage() {
 
 
             {/* ========================================= */}
+            {/* GCL 13 POKAL                              */}
+            {/* ========================================= */}
+
+            <section
+                id="pokal"
+                className={styles.anchorSection}
+            >
+
+                <GCL13Cup />
+
+            </section>
+
+
+            {/* ========================================= */}
+            {/* DIVIDER                                   */}
+            {/* ========================================= */}
+
+            <div className={styles.divider} />
+
+
+            {/* ========================================= */}
             {/* DIVIDER                                   */}
             {/* ========================================= */}
 
@@ -403,11 +436,6 @@ export default function EsportPage() {
             </section>
 
 
-            {/* ========================================= */}
-            {/* DIVIDER                                   */}
-            {/* ========================================= */}
-
-            <div className={styles.divider} />
 
 
             {/* ========================================= */}

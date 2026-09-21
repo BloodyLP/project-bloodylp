@@ -1,0 +1,259 @@
+.cup {
+    width: 100%;
+}
+
+/* =========================================================
+   ROUNDS
+   ========================================================= */
+
+.rounds {
+    width: 100%;
+}
+
+.round {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.round:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================================
+   ROUND HEADER
+   ========================================================= */
+
+.roundHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-height: 58px;
+    padding: 0 0 14px;
+
+    background: transparent;
+    border: none;
+}
+
+.roundAccent {
+    width: 8px;
+    height: 8px;
+    flex: 0 0 8px;
+
+    background: #f6d12a;
+    border-radius: 50%;
+}
+
+.roundHeader h3 {
+    margin: 0;
+    padding: 0;
+
+    color: #9ca3af;
+
+    font-size: 1rem;
+    font-weight: 900;
+    line-height: 1.1;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   MATCH GRID
+   ========================================================= */
+
+.matches {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+
+    width: 100%;
+}
+
+/* =========================================================
+   MATCH / DUELL
+   ========================================================= */
+
+.match {
+    position: relative;
+    overflow: hidden;
+
+    /*
+     * Dunkler Hintergrund wie bei der Tabelle.
+     * KEIN Grau.
+     */
+    background: #17191d;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: none;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.match:hover {
+    background: #1a1c20;
+
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* =========================================================
+   TEAM ROW
+   ========================================================= */
+
+.teamRow {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 58px;
+
+    min-height: 70px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.teamRow:last-child {
+    border-bottom: none;
+}
+
+/* =========================================================
+   TEAM CELL
+   ========================================================= */
+
+.teamCell {
+    display: flex;
+    align-items: center;
+
+    min-width: 0;
+
+    gap: 14px;
+
+    padding: 0 14px;
+
+    background: transparent;
+}
+
+.teamCell:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* =========================================================
+   DEG TEAM
+   ========================================================= */
+
+/*
+ * WICHTIG:
+ * Nur die DEG-Zeile wird rot hinterlegt.
+ *
+ * Der Gegner bleibt vollständig dunkel.
+ */
+
+.degTeam {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(220, 20, 60, 0.18),
+            rgba(220, 20, 60, 0.055)
+        );
+
+    box-shadow: inset 4px 0 0 #dc143c;
+}
+
+/* =========================================================
+   SCORE
+   ========================================================= */
+
+.score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 58px;
+
+    color: #ffffff;
+
+    /*
+     * Ausschließlich DEG Rot.
+     */
+    background: #dc143c;
+
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+
+    font-size: 1.1rem;
+    font-weight: 900;
+    line-height: 1;
+
+    letter-spacing: 0.02em;
+}
+
+/* =========================================================
+   EMPTY ROUND
+   ========================================================= */
+
+.emptyRound {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100px;
+
+    padding: 24px;
+
+    color: #9ca3af;
+
+    background: #17191d;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    font-size: 0.8rem;
+    font-weight: 900;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .matches {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+    .round {
+        margin-bottom: 26px;
+    }
+
+    .roundHeader {
+        min-height: 52px;
+        padding-bottom: 12px;
+    }
+
+    .roundHeader h3 {
+        font-size: 0.9rem;
+    }
+
+    .teamRow {
+        grid-template-columns: minmax(0, 1fr) 54px;
+
+        min-height: 64px;
+    }
+
+    .teamCell {
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .score {
+        min-width: 54px;
+        font-size: 1rem;
+    }
+}
