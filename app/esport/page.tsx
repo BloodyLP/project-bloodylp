@@ -114,24 +114,24 @@ export default function EsportPage() {
                         aria-label="DEG eSports Navigation"
                     >
 
-                        {/* DAS TEAM */}
+                        {/* TEAM */}
 
                         <Link
                             href="#team"
                             className={styles.primaryButton}
                         >
-                            DAS TEAM
+                            TEAM
                             <span>→</span>
                         </Link>
 
 
-                        {/* ERGEBNISSE */}
+                        {/* HISTORY */}
 
                         <Link
-                            href="#ergebnisse"
+                            href="#history"
                             className={styles.secondaryButton}
                         >
-                            ERGEBNISSE
+                            HISTORY
                             <span>→</span>
                         </Link>
 
@@ -169,24 +169,24 @@ export default function EsportPage() {
                         </Link>
 
 
-                        {/* KOMMENTATOR */}
+                        {/* LETZTE SPIELE */}
 
                         <Link
-                            href="#kommentator"
+                            href="#ergebnisse"
                             className={styles.secondaryButton}
                         >
-                            KOMMENTATOR
+                            LETZTE SPIELE
                             <span>→</span>
                         </Link>
 
 
-                        {/* UNSERE PARTNER */}
+                        {/* SPONSOREN */}
 
                         <Link
                             href="#partner"
                             className={styles.secondaryButton}
                         >
-                            UNSERE PARTNER
+                            SPONSOREN
                             <span>→</span>
                         </Link>
 
@@ -436,8 +436,6 @@ export default function EsportPage() {
             </section>
 
 
-
-
             {/* ========================================= */}
             {/* ESPORT HUB                                */}
             {/* ========================================= */}
@@ -658,7 +656,9 @@ export default function EsportPage() {
 
 
                         <h2 className={styles.commentatorName}>
+
                             ALEXANDER
+
                             <br />
 
                             <span>
@@ -668,6 +668,7 @@ export default function EsportPage() {
                             <br />
 
                             BLATTMANN
+
                         </h2>
 
 

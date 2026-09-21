@@ -318,18 +318,25 @@
 
 .heroActions {
 
-    position: absolute;
+    position: relative;
 
-    left: 0;
-    bottom: -100px;
+    left: auto;
+
+    bottom: -120px;
 
     display: flex;
 
-    flex-wrap: wrap;
+    align-items: center;
 
-    gap: 12px;
+    justify-content: center;
+
+    flex-wrap: nowrap;
+
+    gap: 7px;
 
     margin: 0;
+
+    flex: 0 1 auto;
 
     z-index: 10;
 }
@@ -345,31 +352,42 @@
     display: inline-flex;
 
     align-items: center;
+
     justify-content: center;
 
-    gap: 14px;
+    gap: 6px;
 
-    min-height: 48px;
+    min-height: 38px;
 
-    padding: 0 24px;
+    padding: 0 10px;
 
     border-radius: 7px;
 
-    font-size: .72rem;
+    font-size: .52rem;
+
     font-weight: 900;
 
-    letter-spacing: .08em;
+    letter-spacing: .055em;
 
     text-decoration: none;
+
     text-transform: uppercase;
+
+    white-space: nowrap;
 
     transition:
         transform .2s ease,
         box-shadow .2s ease,
         background .2s ease,
         border-color .2s ease;
+
+    box-sizing: border-box;
 }
 
+
+/* ========================================= */
+/* PRIMARY BUTTON                            */
+/* ========================================= */
 
 .primaryButton {
 
@@ -397,6 +415,10 @@
         rgba(220, 20, 60, .45);
 }
 
+
+/* ========================================= */
+/* SECONDARY BUTTON                          */
+/* ========================================= */
 
 .secondaryButton {
 
@@ -1804,7 +1826,7 @@
 
     .page {
 
-        padding-top: 20px;
+        padding-top: 100px;
     }
 
 
@@ -1813,7 +1835,7 @@
         min-height: 520px;
 
         padding:
-            90px 20px 80px;
+            90px 100px 80px;
     }
 
 
@@ -1852,6 +1874,38 @@
         font-size: .52rem;
 
         letter-spacing: .30em;
+    }
+
+
+    /* ===================================== */
+    /* HERO BUTTONS                          */
+    /* ===================================== */
+
+    .heroActions {
+
+        width: 100%;
+        max-width: 100%;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 8px;
+
+        box-sizing: border-box;
+    }
+
+
+    .primaryButton,
+    .secondaryButton {
+
+        flex: 1 1 140px;
+
+        min-width: 0;
+
+        max-width: 100%;
+
+        box-sizing: border-box;
     }
 
 
@@ -2146,6 +2200,32 @@
     .title {
 
         font-size: 3.4rem;
+    }
+
+
+    /* ===================================== */
+    /* HERO BUTTONS                          */
+    /* ===================================== */
+
+    .heroActions {
+
+        width: 100%;
+        max-width: 100%;
+
+        gap: 6px;
+
+        box-sizing: border-box;
+    }
+
+
+    .primaryButton,
+    .secondaryButton {
+
+        flex: 1 1 125px;
+
+        min-width: 0;
+
+        max-width: 100%;
     }
 
 
