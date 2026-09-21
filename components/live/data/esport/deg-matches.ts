@@ -146,10 +146,10 @@ export const degMatches: DegMatch[] = [
             "/images/esport/gcl13/the-last-shift.png",
 
         degScore:
-            0,
+            2,
 
         opponentScore:
-            0,
+            3,
 
         home:
             true,
