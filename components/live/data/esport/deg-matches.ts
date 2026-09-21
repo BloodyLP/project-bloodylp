@@ -202,7 +202,7 @@ export const degMatches: DegMatch[] = [
             "/images/esport/gcl13/outlaws-hockey.png",
 
         degScore:
-            0,
+            7,
 
         opponentScore:
             0,
