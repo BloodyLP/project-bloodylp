@@ -24,7 +24,7 @@ export const careerAwards: CareerAward[] = [
         image: "/images/nhl27/chl.png",
     },
         {
-        year: "2025/26",
+        year: "2026/27",
         title: "CALDER MEMORIAL TROPHY",
         description:
             "Gewinn der Calder Memorial Trophy in der Saison 2026/27.",
