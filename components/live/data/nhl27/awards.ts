@@ -7,6 +7,15 @@ export type CareerAward = {
 };
 
 export const careerAwards: CareerAward[] = [
+    
+        {
+        year: "2025/26",
+        title: "Vizeweltmeister U20",
+        description:
+            "Vizeweltmeister mit der deutschen U20-Nationalmannschaft.",
+        image: "/images/nhl27/silber-u20.png",
+        variant: "silver",
+    },
     {
         year: "2025/26",
         title: "CHL CHAMPION",
@@ -14,13 +23,11 @@ export const careerAwards: CareerAward[] = [
             "Gewinn der Champions Hockey League in der Saison 2025/26.",
         image: "/images/nhl27/chl.png",
     },
-
-    {
-    year: "2025/26",
-    title: "Vizeweltmeister U20",
-    description:
-        "Vizeweltmeister mit der deutschen U20-Nationalmannschaft.",
-    image: "/images/nhl27/silber-u20.png",
-    variant: "silver",
-},
+        {
+        year: "2025/26",
+        title: "CALDER MEMORIAL TROPHY",
+        description:
+            "Gewinn der Calder Memorial Trophy in der Saison 2026/27.",
+        image: "/images/nhl27/calder-trophy.png",
+    },
 ];

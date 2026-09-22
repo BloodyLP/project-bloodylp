@@ -28,7 +28,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 
-
 /* ========================================= */
 /* NAVIGATION                                */
 /* ========================================= */
@@ -70,64 +69,52 @@ const navItems = [
     },
 
     {
+        label: "PARTNER",
+        href: "/partner",
+    },
+
+    {
         label: "KONTAKT",
         href: "/kontakt",
     },
 ];
-
 
 /* ========================================= */
 /* NAVBAR                                    */
 /* ========================================= */
 
 export default function Navbar() {
-
     const [menuOpen, setMenuOpen] = useState(false);
 
     const [scrolled, setScrolled] = useState(false);
 
     const pathname = usePathname();
 
-
     /* ========================================= */
     /* SCROLL                                    */
     /* ========================================= */
 
     useEffect(() => {
-
         const handleScroll = () => {
-
-            setScrolled(
-                window.scrollY > 40
-            );
-
+            setScrolled(window.scrollY > 40);
         };
-
 
         handleScroll();
 
-
-        window.addEventListener(
-            "scroll",
-            handleScroll
-        );
-
+        window.addEventListener("scroll", handleScroll);
 
         return () =>
             window.removeEventListener(
                 "scroll",
                 handleScroll
             );
-
     }, []);
-
 
     /* ========================================= */
     /* RENDER                                    */
     /* ========================================= */
 
     return (
-
         <div
             className="
                 fixed
@@ -144,28 +131,23 @@ export default function Navbar() {
                 2xl:px-12
             "
         >
-
-
             {/* ========================================= */}
             {/* SPOTLIGHT                                 */}
             {/* ========================================= */}
 
             <motion.div
-
                 animate={{
                     opacity: scrolled
-                        ? .55
-                        : .9,
+                        ? 0.55
+                        : 0.9,
 
                     scale: scrolled
-                        ? .95
+                        ? 0.95
                         : 1,
                 }}
-
                 transition={{
-                    duration: .45,
+                    duration: 0.45,
                 }}
-
                 className="
                     absolute
                     inset-0
@@ -179,21 +161,17 @@ export default function Navbar() {
                 "
             />
 
-
             {/* ========================================= */}
             {/* NAVBAR                                    */}
             {/* ========================================= */}
 
             <motion.header
-
                 transition={{
                     type: "spring",
                     stiffness: 120,
                     damping: 18,
                 }}
-
                 className={`
-
                     mx-auto
 
                     w-full
@@ -220,12 +198,9 @@ export default function Navbar() {
 
                     transition-all
                     duration-500
-
                 `}
             >
-
                 <div
-
                     className="
                         flex
                         items-center
@@ -250,33 +225,25 @@ export default function Navbar() {
                         2xl:px-12
                     "
                 >
-
-
                     {/* ========================================= */}
                     {/* LOGO                                       */}
                     {/* ========================================= */}
 
                     <motion.div
-
                         animate={{
                             scale: menuOpen
                                 ? 1.03
                                 : 1,
                         }}
-
                         transition={{
                             duration: 0.25,
                         }}
                     >
-
                         <Link
-
                             href="/"
-
                             onClick={() =>
                                 setMenuOpen(false)
                             }
-
                             className="
                                 flex
                                 items-center
@@ -288,7 +255,6 @@ export default function Navbar() {
                                 hover:scale-[1.02]
                             "
                         >
-
                             <Image
                                 src="/logos/bloodylp-logo.png"
                                 alt="BloodyLP Logo"
@@ -297,14 +263,12 @@ export default function Navbar() {
                                 priority
                             />
 
-
                             <div
                                 className="
                                     flex
                                     flex-col
                                 "
                             >
-
                                 <span
                                     className="
                                         font-display
@@ -322,11 +286,8 @@ export default function Navbar() {
                                         text-white
                                     "
                                 >
-
                                     BLOODYLP
-
                                 </span>
-
 
                                 <span
                                     className="
@@ -341,17 +302,11 @@ export default function Navbar() {
                                         text-lime-400
                                     "
                                 >
-
                                     Alexander Blattmann
-
                                 </span>
-
                             </div>
-
                         </Link>
-
                     </motion.div>
-
 
                     {/* ========================================= */}
                     {/* DESKTOP NAVIGATION                         */}
@@ -372,206 +327,175 @@ export default function Navbar() {
                             2xl:gap-2
                         "
                     >
+                        {navItems.map(
+                            (item) => {
+                                const isActive =
+                                    item.href === "/"
+                                        ? pathname === "/"
 
-                        {
-                            navItems.map(
-                                (item) => {
-
-                                    const isActive =
-                                        item.href === "/"
+                                        : item.href === "/#live"
                                             ? pathname === "/"
 
-                                            : item.href === "/#live"
-                                                ? pathname === "/"
+                                            : pathname.startsWith(
+                                                item.href
+                                            );
 
-                                                : pathname.startsWith(
-                                                    item.href
-                                                );
+                                /*
+                                 * DEG eSports bekommt
+                                 * beim aktiven Zustand
+                                 * seine eigene DEG-Farbe.
+                                 */
+                                const isDegEsports =
+                                    item.href === "/esport";
 
+                                return (
+                                    <Link
+                                        key={item.label}
+                                        href={item.href}
+                                        className={`
+                                            group
 
-                                    /*
-                                     * DEG eSports bekommt
-                                     * beim aktiven Zustand
-                                     * seine eigene DEG-Farbe.
-                                     */
-                                    const isDegEsports =
-                                        item.href === "/esport";
+                                            relative
 
+                                            rounded-full
 
-                                    return (
+                                            px-3
+                                            py-3
 
-                                        <Link
+                                            2xl:px-4
 
-                                            key={item.label}
+                                            font-ui
 
-                                            href={item.href}
+                                            text-[0.82rem]
 
-                                            className={`
+                                            2xl:text-[0.88rem]
 
-                                                group
+                                            font-bold
 
+                                            uppercase
+
+                                            tracking-[.10em]
+
+                                            2xl:tracking-[.12em]
+
+                                            whitespace-nowrap
+
+                                            transition-all
+
+                                            duration-300
+
+                                            ease-out
+
+                                            ${
+                                                isActive
+
+                                                    ? isDegEsports
+
+                                                        ? `
+                                                            border
+
+                                                            border-red-500/30
+
+                                                            bg-red-500/10
+
+                                                            text-red-400
+
+                                                            shadow-[0_0_24px_rgba(220,20,60,.14)]
+                                                        `
+
+                                                        : `
+                                                            border
+
+                                                            border-lime-400/30
+
+                                                            bg-lime-400/10
+
+                                                            text-lime-300
+
+                                                            shadow-[0_0_24px_rgba(163,230,53,.12)]
+                                                        `
+
+                                                    : `
+                                                        border
+
+                                                        border-transparent
+
+                                                        text-zinc-300
+
+                                                        hover:border-white/10
+
+                                                        hover:bg-white/[0.05]
+
+                                                        hover:text-white
+
+                                                        hover:shadow-[0_10px_30px_rgba(0,0,0,.18)]
+
+                                                        hover:scale-[1.03]
+                                                    `
+                                            }
+
+                                        `}
+                                    >
+                                        <span
+                                            className="
                                                 relative
+
+                                                z-10
+                                            "
+                                        >
+                                            {item.label}
+                                        </span>
+
+                                        <span
+                                            className="
+                                                pointer-events-none
+
+                                                absolute
+
+                                                inset-0
 
                                                 rounded-full
 
-                                                px-3
-                                                py-3
+                                                bg-gradient-to-b
 
-                                                2xl:px-4
+                                                from-white/[0.05]
 
-                                                font-ui
+                                                to-transparent
 
-                                                text-[0.82rem]
+                                                opacity-0
 
-                                                2xl:text-[0.88rem]
-
-                                                font-bold
-
-                                                uppercase
-
-                                                tracking-[.10em]
-
-                                                2xl:tracking-[.12em]
-
-                                                whitespace-nowrap
-
-                                                transition-all
+                                                transition-opacity
 
                                                 duration-300
 
-                                                ease-out
-
-                                                ${
-                                                    isActive
-
-                                                        ? isDegEsports
-
-                                                            ? `
-
-                                                                border
-
-                                                                border-red-500/30
-
-                                                                bg-red-500/10
-
-                                                                text-red-400
-
-                                                                shadow-[0_0_24px_rgba(220,20,60,.14)]
-
-                                                            `
-
-                                                            : `
-
-                                                                border
-
-                                                                border-lime-400/30
-
-                                                                bg-lime-400/10
-
-                                                                text-lime-300
-
-                                                                shadow-[0_0_24px_rgba(163,230,53,.12)]
-
-                                                            `
-
-                                                        : `
-
-                                                            border
-
-                                                            border-transparent
-
-                                                            text-zinc-300
-
-                                                            hover:border-white/10
-
-                                                            hover:bg-white/[0.05]
-
-                                                            hover:text-white
-
-                                                            hover:shadow-[0_10px_30px_rgba(0,0,0,.18)]
-
-                                                            hover:scale-[1.03]
-
-                                                        `
-                                                }
-
-                                            `}
-                                        >
-
-                                            <span
-                                                className="
-                                                    relative
-
-                                                    z-10
-                                                "
-                                            >
-
-                                                {item.label}
-
-                                            </span>
-
-
-                                            <span
-                                                className="
-                                                    pointer-events-none
-
-                                                    absolute
-
-                                                    inset-0
-
-                                                    rounded-full
-
-                                                    bg-gradient-to-b
-
-                                                    from-white/[0.05]
-
-                                                    to-transparent
-
-                                                    opacity-0
-
-                                                    transition-opacity
-
-                                                    duration-300
-
-                                                    group-hover:opacity-100
-                                                "
-                                            />
-
-                                        </Link>
-
-                                    );
-
-                                }
-                            )
-                        }
-
+                                                group-hover:opacity-100
+                                            "
+                                        />
+                                    </Link>
+                                );
+                            }
+                        )}
                     </nav>
-
 
                     {/* ========================================= */}
                     {/* MOBILE BUTTON                             */}
                     {/* ========================================= */}
 
                     <motion.button
-
                         whileHover={{
                             scale: 1.04,
                         }}
-
                         whileTap={{
                             scale: 0.92,
                         }}
-
                         transition={{
                             duration: 0.2,
                         }}
-
                         onClick={() =>
                             setMenuOpen(
                                 !menuOpen
                             )
                         }
-
                         className="
                             xl:hidden
 
@@ -607,106 +531,71 @@ export default function Navbar() {
 
                             hover:text-lime-300
                         "
-
                         aria-label="Navigation öffnen"
-
                     >
-
                         <motion.svg
-
                             animate={{
                                 rotate: menuOpen
                                     ? 90
                                     : 0,
                             }}
-
                             transition={{
                                 duration: 0.25,
                             }}
-
                             xmlns="http://www.w3.org/2000/svg"
-
                             width="24"
-
                             height="24"
-
                             viewBox="0 0 24 24"
-
                             fill="none"
-
                             stroke="currentColor"
-
                             strokeWidth="2.4"
-
                             strokeLinecap="round"
-
                             strokeLinejoin="round"
-
                         >
+                            {menuOpen ? (
+                                <>
+                                    <line
+                                        x1="18"
+                                        y1="6"
+                                        x2="6"
+                                        y2="18"
+                                    />
 
-                            {
-                                menuOpen
+                                    <line
+                                        x1="6"
+                                        y1="6"
+                                        x2="18"
+                                        y2="18"
+                                    />
+                                </>
+                            ) : (
+                                <>
+                                    <line
+                                        x1="3"
+                                        y1="6"
+                                        x2="21"
+                                        y2="6"
+                                    />
 
-                                    ? (
+                                    <line
+                                        x1="3"
+                                        y1="12"
+                                        x2="21"
+                                        y2="12"
+                                    />
 
-                                        <>
-
-                                            <line
-                                                x1="18"
-                                                y1="6"
-                                                x2="6"
-                                                y2="18"
-                                            />
-
-                                            <line
-                                                x1="6"
-                                                y1="6"
-                                                x2="18"
-                                                y2="18"
-                                            />
-
-                                        </>
-
-                                    )
-
-                                    : (
-
-                                        <>
-
-                                            <line
-                                                x1="3"
-                                                y1="6"
-                                                x2="21"
-                                                y2="6"
-                                            />
-
-                                            <line
-                                                x1="3"
-                                                y1="12"
-                                                x2="21"
-                                                y2="12"
-                                            />
-
-                                            <line
-                                                x1="3"
-                                                y1="18"
-                                                x2="21"
-                                                y2="18"
-                                            />
-
-                                        </>
-
-                                    )
-                            }
-
+                                    <line
+                                        x1="3"
+                                        y1="18"
+                                        x2="21"
+                                        y2="18"
+                                    />
+                                </>
+                            )}
                         </motion.svg>
-
                     </motion.button>
-
                 </div>
-
             </motion.header>
-
 
             {/* ========================================= */}
             {/* MOBILE MENU                               */}
@@ -716,309 +605,250 @@ export default function Navbar() {
                 initial={false}
                 mode="sync"
             >
+                {menuOpen && (
+                    <motion.div
+                        initial={{
+                            opacity: 0,
+                            y: -16,
+                        }}
+                        animate={{
+                            opacity: 1,
+                            y: 0,
+                        }}
+                        exit={{
+                            opacity: 0,
+                            y: -16,
+                        }}
+                        transition={{
+                            duration: 0.18,
+                            ease: "easeOut",
+                        }}
+                        className="
+                            absolute
 
-                {
-                    menuOpen && (
+                            left-4
+                            right-4
 
-                        <motion.div
+                            sm:left-5
+                            sm:right-5
 
-                            initial={{
-                                opacity: 0,
-                                y: -16,
-                            }}
+                            md:left-8
+                            md:right-8
 
-                            animate={{
-                                opacity: 1,
-                                y: 0,
-                            }}
+                            lg:left-10
+                            lg:right-10
 
-                            exit={{
-                                opacity: 0,
-                                y: -16,
-                            }}
+                            top-full
 
-                            transition={{
-                                duration: 0.18,
-                                ease: "easeOut",
-                            }}
+                            mt-3
 
+                            xl:hidden
+
+                            overflow-hidden
+
+                            rounded-3xl
+
+                            border
+
+                            border-white/10
+
+                            bg-white/[0.05]
+
+                            backdrop-blur-3xl
+
+                            shadow-[0_25px_60px_rgba(0,0,0,.30)]
+                        "
+                    >
+                        <div
                             className="
-                                absolute
+                                px-4
 
-                                left-4
-                                right-4
+                                sm:px-5
 
-                                sm:left-5
-                                sm:right-5
-
-                                md:left-8
-                                md:right-8
-
-                                lg:left-10
-                                lg:right-10
-
-                                top-full
-
-                                mt-3
-
-                                xl:hidden
-
-                                overflow-hidden
-
-                                rounded-3xl
-
-                                border
-
-                                border-white/10
-
-                                bg-white/[0.05]
-
-                                backdrop-blur-3xl
-
-                                shadow-[0_25px_60px_rgba(0,0,0,.30)]
+                                py-2
                             "
                         >
-
-                            <div
+                            <nav
                                 className="
-                                    px-4
+                                    flex
 
-                                    sm:px-5
-
-                                    py-2
+                                    flex-col
                                 "
                             >
+                                {navItems.map(
+                                    (
+                                        item,
+                                        index
+                                    ) => {
+                                        const isActive =
+                                            item.href === "/"
+                                                ? pathname === "/"
 
-                                <nav
-                                    className="
-                                        flex
+                                                : item.href === "/#live"
+                                                    ? pathname === "/"
 
-                                        flex-col
-                                    "
-                                >
+                                                    : pathname.startsWith(
+                                                        item.href
+                                                    );
 
-                                    {
-                                        navItems.map(
-                                            (
-                                                item,
-                                                index
-                                            ) => {
+                                        /*
+                                         * Auch im Mobile-Menü
+                                         * bekommt DEG eSports
+                                         * seine rote Active-Farbe.
+                                         */
+                                        const isDegEsports =
+                                            item.href === "/esport";
 
-                                                const isActive =
-                                                    item.href === "/"
-                                                        ? pathname === "/"
+                                        return (
+                                            <motion.div
+                                                key={item.label}
+                                                initial={{
+                                                    opacity: 0,
+                                                    x: -16,
+                                                }}
+                                                animate={{
+                                                    opacity: 1,
+                                                    x: 0,
+                                                }}
+                                                exit={{
+                                                    opacity: 0,
+                                                    x: -16,
+                                                }}
+                                                transition={{
+                                                    delay:
+                                                        index * 0.05,
 
-                                                        : item.href === "/#live"
-                                                            ? pathname === "/"
+                                                    duration: 0.25,
+                                                }}
+                                            >
+                                                <Link
+                                                    href={item.href}
+                                                    onClick={() =>
+                                                        setMenuOpen(
+                                                            false
+                                                        )
+                                                    }
+                                                    className={`
+                                                        group
 
-                                                            : pathname.startsWith(
-                                                                item.href
-                                                            );
+                                                        flex
 
+                                                        items-center
+                                                        justify-between
 
-                                                /*
-                                                 * Auch im Mobile-Menü
-                                                 * bekommt DEG eSports
-                                                 * seine rote Active-Farbe.
-                                                 */
-                                                const isDegEsports =
-                                                    item.href === "/esport";
+                                                        rounded-2xl
 
+                                                        px-4
+                                                        py-4
 
-                                                return (
+                                                        transition-all
 
-                                                    <motion.div
+                                                        duration-300
 
-                                                        key={item.label}
+                                                        ${
+                                                            isActive
 
-                                                        initial={{
-                                                            opacity: 0,
-                                                            x: -16,
-                                                        }}
+                                                                ? isDegEsports
 
-                                                        animate={{
-                                                            opacity: 1,
-                                                            x: 0,
-                                                        }}
+                                                                    ? `
+                                                                        border
 
-                                                        exit={{
-                                                            opacity: 0,
-                                                            x: -16,
-                                                        }}
+                                                                        border-red-500/20
 
-                                                        transition={{
-                                                            delay:
-                                                                index * 0.05,
+                                                                        bg-red-500/10
 
-                                                            duration: 0.25,
-                                                        }}
+                                                                        text-white
 
+                                                                        shadow-[0_0_20px_rgba(220,20,60,.12)]
+                                                                    `
+
+                                                                    : `
+                                                                        border
+
+                                                                        border-lime-400/20
+
+                                                                        bg-lime-400/10
+
+                                                                        text-white
+
+                                                                        shadow-[0_0_20px_rgba(163,230,53,.12)]
+                                                                    `
+
+                                                                : `
+                                                                    border
+
+                                                                    border-transparent
+
+                                                                    text-zinc-300
+
+                                                                    hover:border-white/10
+
+                                                                    hover:bg-white/[0.05]
+
+                                                                    hover:text-white
+                                                                `
+                                                        }
+
+                                                    `}
+                                                >
+                                                    <span
+                                                        className="
+                                                            font-ui
+
+                                                            text-base
+
+                                                            font-bold
+
+                                                            uppercase
+
+                                                            tracking-[.14em]
+                                                        "
                                                     >
+                                                        {item.label}
+                                                    </span>
 
-                                                        <Link
+                                                    <motion.span
+                                                        animate={{
+                                                            x:
+                                                                isActive
+                                                                    ? 0
+                                                                    : -3,
 
-                                                            href={item.href}
+                                                            opacity:
+                                                                isActive
+                                                                    ? 1
+                                                                    : 0,
+                                                        }}
+                                                        whileHover={{
+                                                            x: 0,
+                                                            opacity: 1,
+                                                        }}
+                                                        transition={{
+                                                            duration: 0.2,
+                                                        }}
+                                                        className={`
+                                                            text-sm
 
-                                                            onClick={() =>
-                                                                setMenuOpen(
-                                                                    false
-                                                                )
+                                                            ${
+                                                                isActive &&
+                                                                isDegEsports
+                                                                    ? "text-red-400"
+                                                                    : "text-lime-400"
                                                             }
-
-                                                            className={`
-
-                                                                group
-
-                                                                flex
-
-                                                                items-center
-                                                                justify-between
-
-                                                                rounded-2xl
-
-                                                                px-4
-                                                                py-4
-
-                                                                transition-all
-
-                                                                duration-300
-
-                                                                ${
-                                                                    isActive
-
-                                                                        ? isDegEsports
-
-                                                                            ? `
-
-                                                                                border
-
-                                                                                border-red-500/20
-
-                                                                                bg-red-500/10
-
-                                                                                text-white
-
-                                                                                shadow-[0_0_20px_rgba(220,20,60,.12)]
-
-                                                                            `
-
-                                                                            : `
-
-                                                                                border
-
-                                                                                border-lime-400/20
-
-                                                                                bg-lime-400/10
-
-                                                                                text-white
-
-                                                                                shadow-[0_0_20px_rgba(163,230,53,.12)]
-
-                                                                            `
-
-                                                                        : `
-
-                                                                            border
-
-                                                                            border-transparent
-
-                                                                            text-zinc-300
-
-                                                                            hover:border-white/10
-
-                                                                            hover:bg-white/[0.05]
-
-                                                                            hover:text-white
-
-                                                                        `
-                                                                }
-
-                                                            `}
-                                                        >
-
-                                                            <span
-                                                                className="
-                                                                    font-ui
-
-                                                                    text-base
-
-                                                                    font-bold
-
-                                                                    uppercase
-
-                                                                    tracking-[.14em]
-                                                                "
-                                                            >
-
-                                                                {item.label}
-
-                                                            </span>
-
-
-                                                            <motion.span
-
-                                                                animate={{
-
-                                                                    x:
-                                                                        isActive
-                                                                            ? 0
-                                                                            : -3,
-
-                                                                    opacity:
-                                                                        isActive
-                                                                            ? 1
-                                                                            : 0,
-
-                                                                }}
-
-                                                                whileHover={{
-                                                                    x: 0,
-                                                                    opacity: 1,
-                                                                }}
-
-                                                                transition={{
-                                                                    duration: 0.2,
-                                                                }}
-
-                                                                className={`
-                                                                    text-sm
-
-                                                                    ${
-                                                                        isActive &&
-                                                                        isDegEsports
-                                                                            ? "text-red-400"
-                                                                            : "text-lime-400"
-                                                                    }
-                                                                `}
-                                                            >
-
-                                                                →
-
-                                                            </motion.span>
-
-                                                        </Link>
-
-                                                    </motion.div>
-
-                                                );
-
-                                            }
-                                        )
+                                                        `}
+                                                    >
+                                                        →
+                                                    </motion.span>
+                                                </Link>
+                                            </motion.div>
+                                        );
                                     }
-
-                                </nav>
-
-                            </div>
-
-                        </motion.div>
-
-                    )
-                }
-
+                                )}
+                            </nav>
+                        </div>
+                    </motion.div>
+                )}
             </AnimatePresence>
-
         </div>
-
     );
-
 }

@@ -21,7 +21,7 @@ export const playerProfile: PlayerProfile = {
     birthDate: "13. Juli 2008",
     shoots: "R",
     height: "193 cm",
-    weight: "100 KG",
+    weight: "101 KG",
     currentTeam: "Toronto Maple Leafs",
     currentLeague: "NHL",
     contractUntil: "2028/29",

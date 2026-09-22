@@ -61,4 +61,20 @@ export const careerHighlights: CareerHighlight[] = [
         description:
             "Erster Kampf in der NHL am 30. Spieltag der NHL Saison 2026/2027 gegen die Carolina Hurricanes.",
     },
+
+                {
+        date: "22. September 2026",
+        category: "ERSTES PLAYOFF TOR",
+        title: "1. Playofftor in der NHL",
+        description:
+            "Erstes Playofftor in der NHL in Spiel 5 der 1. Runde 1 2026/2027 gegen die Detroit Red Wings.",
+    },
+
+                {
+        date: "22. September 2026",
+        category: "CALDER MEMORIAL TROPHY",
+        title: "NHL-AUSZEICHNUNG",
+        description:
+            "Gewinner der Calder Memorial-Trophy für den besten Rookie der Saison 2026/2027",
+    },
 ];
