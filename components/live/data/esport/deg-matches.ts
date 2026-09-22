@@ -85,7 +85,7 @@ export const degTeam = {
 /* ============================================ */
 
 export const upcomingMatch: UpcomingMatch = {
-    date: "TBD",
+    date: "Mittwoch, 23. September 2026, 21.50 Uhr",
 
     league: "GCL SPIELTAG 2",
 
