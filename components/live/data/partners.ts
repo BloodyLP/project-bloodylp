@@ -19,11 +19,15 @@ export type PartnerTier =
     | "gold"
     | "platinum";
 
+export type PartnerCategoryType =
+    | "tier"
+    | "additional";
+
 export type Partner = {
     name: string;
     logo: string;
     website?: string;
-    tier: PartnerTier;
+    tier?: PartnerTier;
     category: string;
     description: string;
     tags: string[];
@@ -31,6 +35,7 @@ export type Partner = {
     discountCode?: string;
     featureTitle?: string;
     featureText?: string;
+    categoryType?: PartnerCategoryType;
 };
 
 export type PartnerTierInfo = {
@@ -49,7 +54,7 @@ export const partnerTiers: PartnerTierInfo[] = [
     {
         id: "platinum",
         name: "PLATIN",
-        title: "Official Partner",
+        title: "Exklusiv Partner",
         number: "01",
         description:
             "Die höchste Partnerschaftsstufe von BloodyLP für besonders umfangreiche und langfristige Kooperationen.",
@@ -65,7 +70,7 @@ export const partnerTiers: PartnerTierInfo[] = [
     {
         id: "silver",
         name: "SILBER",
-        title: "BloodyLP Partner",
+        title: "Senior Partner",
         number: "03",
         description:
             "Fester Bestandteil der BloodyLP Community mit sichtbarer Einbindung in ausgewählten Bereichen.",
@@ -73,7 +78,7 @@ export const partnerTiers: PartnerTierInfo[] = [
     {
         id: "bronze",
         name: "BRONZE",
-        title: "Community Partner",
+        title: "Junior Partner",
         number: "04",
         description:
             "Partner, die BloodyLP und die Community unterstützen und Teil unseres Projekts sind.",
@@ -85,6 +90,9 @@ export const partnerTiers: PartnerTierInfo[] = [
 /* ============================================ */
 
 export const partners: Partner[] = [
+    /* ======================================== */
+    /* GOLD                                     */
+    /* ======================================== */
     {
         name: "HOLY",
         logo: "/images/partner/holy.png",
@@ -101,6 +109,7 @@ export const partners: Partner[] = [
         ],
         discountCode: "BloodyLP10",
         active: true,
+        categoryType: "tier",
     },
     {
         name: "EA SPORTS",
@@ -119,5 +128,76 @@ export const partners: Partner[] = [
         featureText:
             "Mit 32 authentischen NHL-Arenen, einem neuen Übertragungserlebnis, Connected Franchise und teamspezifischen Playbooks steht die NHL-Reihe besonders nah an der Eishockey-Content-Welt von BloodyLP.",
         active: true,
+        categoryType: "tier",
+    },
+
+    /* ======================================== */
+    /* WEITERE PARTNER                          */
+    /* ======================================== */
+    {
+        name: "KALYPSO MEDIA",
+        logo: "/images/partner/kalypso.png",
+        website: "https://www.kalypsomedia.com/de",
+        category: "WEITERE PARTNER",
+        description:
+            "Teil des erweiterten BloodyLP Partnernetzwerks.",
+        tags: ["PARTNER", "GAMING", "COMMUNITY"],
+        active: true,
+        categoryType: "additional",
+    },
+    {
+        name: "MICROSOFT",
+        logo: "/images/partner/microsoft.png",
+        website: "https://www.microsoft.com/de-de/",
+        category: "WEITERE PARTNER",
+        description:
+            "Teil des erweiterten BloodyLP Partnernetzwerks.",
+        tags: ["PARTNER", "TECHNOLOGY", "GAMING"],
+        active: true,
+        categoryType: "additional",
+    },
+    {
+        name: "PLAION",
+        logo: "/images/partner/plaion.png",
+        website: "https://plaion.com/",
+        category: "WEITERE PARTNER",
+        description:
+            "Teil des erweiterten BloodyLP Partnernetzwerks.",
+        tags: ["PARTNER", "GAMING", "ENTERTAINMENT"],
+        active: true,
+        categoryType: "additional",
+    },
+    {
+        name: "SQUARE ENIX",
+        logo: "/images/partner/square-enix.png",
+        website: "https://www.square-enix-games.com/de_DE/home",
+        category: "WEITERE PARTNER",
+        description:
+            "Teil des erweiterten BloodyLP Partnernetzwerks.",
+        tags: ["PARTNER", "GAMING", "ENTERTAINMENT"],
+        active: true,
+        categoryType: "additional",
+    },
+    {
+        name: "UBISOFT",
+        logo: "/images/partner/ubisoft.png",
+        website: "https://www.ubisoft.com/de-de/",
+        category: "WEITERE PARTNER",
+        description:
+            "Teil des erweiterten BloodyLP Partnernetzwerks.",
+        tags: ["PARTNER", "GAMING", "COMMUNITY"],
+        active: true,
+        categoryType: "additional",
+    },
+    {
+        name: "WARGAMING",
+        logo: "/images/partner/wargaming.png",
+        website: "https://www.wargaming.net/",
+        category: "WEITERE PARTNER",
+        description:
+            "Teil des erweiterten BloodyLP Partnernetzwerks.",
+        tags: ["PARTNER", "GAMING", "COMMUNITY"],
+        active: true,
+        categoryType: "additional",
     },
 ];

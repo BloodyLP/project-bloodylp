@@ -3335,3 +3335,500 @@
         font-size: 0.72rem;
     }
 }
+
+
+/* ============================================ */
+/* PARTNER HIGHLIGHTS - FINAL DESIGN            */
+/* ============================================ */
+
+.partnerHighlight {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 126px;
+    margin-top: 18px;
+    padding: 18px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(57, 255, 20, 0.105),
+            rgba(57, 255, 20, 0.035) 55%,
+            rgba(255, 255, 255, 0.018)
+        );
+    border: 1px solid rgba(57, 255, 20, 0.35);
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+
+.highlightMain {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    gap: 18px;
+}
+
+.highlightIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 62px;
+    width: 62px;
+    height: 62px;
+    color: var(--bloody-green);
+    border: 1px solid rgba(57, 255, 20, 0.38);
+    border-radius: 50%;
+    background:
+        radial-gradient(
+            circle,
+            rgba(57, 255, 20, 0.12),
+            rgba(57, 255, 20, 0.025)
+        );
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+.highlightIcon svg {
+    width: 30px;
+    height: 30px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.highlightValue {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 5px;
+    padding-left: 18px;
+    border-left: 1px solid rgba(57, 255, 20, 0.25);
+}
+
+.highlightLabel {
+    display: block;
+    color: rgba(255, 255, 255, 0.48);
+    font-size: 0.52rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.highlightValue strong {
+    display: block;
+    color: var(--bloody-green);
+    font-size: 1.45rem;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+.discountCode {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 0 0 auto;
+    gap: 6px;
+    min-width: 138px;
+    padding-left: 20px;
+    border-left: 1px solid rgba(57, 255, 20, 0.22);
+}
+
+.discountCode > span {
+    color: rgba(255, 255, 255, 0.42);
+    font-size: 0.52rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.discountCodeBox {
+    display: flex;
+    align-items: center;
+    min-height: 38px;
+    overflow: hidden;
+    border: 1px solid rgba(57, 255, 20, 0.42);
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.28);
+}
+
+.discountCodeBox strong {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 12px;
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+.copyIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 38px;
+    color: var(--bloody-green);
+    border-left: 1px solid rgba(57, 255, 20, 0.3);
+    background: rgba(57, 255, 20, 0.06);
+}
+
+.copyIcon svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.partnerHighlight > p {
+    flex: 1;
+    max-width: 390px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 0.82rem;
+    font-weight: 500;
+    line-height: 1.65;
+}
+
+.tierSection-gold .partnerHighlight {
+    min-height: 126px;
+}
+
+.tierSection-gold .highlightValue strong {
+    color: var(--bloody-green);
+    font-size: 1.45rem;
+}
+
+.tierSection-gold .partnerHighlight > p {
+    color: rgba(255, 255, 255, 0.58);
+    font-size: 0.82rem;
+    line-height: 1.65;
+}
+
+.partnerCard:hover .partnerHighlight {
+    border-color: rgba(57, 255, 20, 0.48);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(57, 255, 20, 0.13),
+            rgba(57, 255, 20, 0.045) 55%,
+            rgba(255, 255, 255, 0.02)
+        );
+}
+
+.partnerCard:hover .highlightIcon {
+    background:
+        radial-gradient(
+            circle,
+            rgba(57, 255, 20, 0.18),
+            rgba(57, 255, 20, 0.035)
+        );
+    border-color: rgba(57, 255, 20, 0.55);
+}
+
+@media (max-width: 700px) {
+    .partnerHighlight {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 16px;
+        min-height: auto;
+        padding: 16px;
+    }
+
+    .highlightMain {
+        gap: 14px;
+    }
+
+    .highlightIcon {
+        flex-basis: 52px;
+        width: 52px;
+        height: 52px;
+        font-size: 1.65rem;
+    }
+
+    .highlightIcon svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .highlightValue {
+        padding-left: 14px;
+    }
+
+    .highlightValue strong {
+        font-size: 1.15rem;
+    }
+
+    .discountCode {
+        width: 100%;
+        padding: 14px 0 0;
+        border-left: 0;
+        border-top: 1px solid rgba(57, 255, 20, 0.2);
+    }
+
+    .discountCodeBox {
+        width: 100%;
+    }
+
+    .discountCodeBox strong {
+        flex: 1;
+    }
+
+    .partnerHighlight > p {
+        max-width: none;
+        font-size: 0.78rem;
+        line-height: 1.6;
+    }
+}
+
+/* ============================================ */
+/* WEITERE PARTNER                              */
+/* ============================================ */
+
+.additionalPartnersSection {
+    margin-top: 85px;
+    padding-top: 55px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.additionalPartnersHeader {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    align-items: end;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.additionalPartnersEyebrow {
+    display: block;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.38);
+    font-size: 0.56rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.additionalPartnersHeader h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3.1rem);
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    line-height: 0.95;
+    text-transform: uppercase;
+}
+
+.additionalPartnersHeader h2 span {
+    color: var(--bloody-green);
+}
+
+.additionalPartnersHeader p {
+    max-width: 360px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.42);
+    font-size: 0.82rem;
+    font-weight: 500;
+    line-height: 1.65;
+}
+
+.additionalPartnerGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    align-items: stretch;
+}
+
+.additionalPartnerCard {
+    min-width: 0;
+}
+
+.additionalPartnersSection .partnerCard {
+    min-height: 0;
+    padding: 10px;
+    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(10, 12, 11, 0.78);
+}
+
+.additionalPartnersSection .partnerCard::before {
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        rgba(57, 255, 20, 0.35),
+        rgba(57, 255, 20, 0.08)
+    );
+}
+
+.additionalPartnersSection .cardTop {
+    min-height: 24px;
+    padding: 0 3px;
+}
+
+.additionalPartnersSection .partnerLevel {
+    color: rgba(255, 255, 255, 0.34);
+    font-size: 0.47rem;
+}
+
+.additionalPartnersSection .levelDot {
+    width: 4px;
+    height: 4px;
+    background: rgba(57, 255, 20, 0.6);
+}
+
+.additionalPartnersSection .externalIcon {
+    font-size: 0.82rem;
+}
+
+.additionalPartnersSection .logoArea {
+    min-height: 135px;
+    margin-top: 7px;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.additionalPartnersSection .partnerLogo {
+    max-width: 220px;
+    height: 100px;
+}
+
+.additionalPartnersSection .partnerContent {
+    padding: 14px 3px 7px;
+}
+
+.additionalPartnersSection .category {
+    margin-bottom: 5px;
+    font-size: 0.48rem;
+}
+
+.additionalPartnersSection .partnerContent h3 {
+    font-size: 1rem;
+}
+
+.additionalPartnersSection .partnerContent p {
+    margin-top: 7px;
+    color: rgba(255, 255, 255, 0.38);
+    font-size: 0.76rem;
+    line-height: 1.5;
+}
+
+.additionalPartnersSection .partnerTags {
+    gap: 5px;
+    margin-top: 11px;
+}
+
+.additionalPartnersSection .partnerTags span {
+    padding: 4px 6px;
+    font-size: 0.40rem;
+}
+
+.additionalPartnersSection .visit {
+    min-height: 35px;
+    margin-top: 8px;
+    padding: 10px 3px 2px;
+    font-size: 0.55rem;
+}
+
+.additionalPartnersSection .visit span {
+    font-size: 0.85rem;
+}
+
+.additionalPartnersSection .partnerCard:hover {
+    border-color: rgba(57, 255, 20, 0.22);
+}
+
+@media (max-width: 900px) {
+    .additionalPartnersHeader {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .additionalPartnersHeader p {
+        max-width: 650px;
+    }
+
+    .additionalPartnerGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .additionalPartnersSection {
+        margin-top: 60px;
+        padding-top: 40px;
+    }
+
+    .additionalPartnersHeader h2 {
+        font-size: 2rem;
+    }
+
+    .additionalPartnerGrid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .additionalPartnersSection .logoArea {
+        min-height: 150px;
+    }
+
+    .additionalPartnersSection .partnerLogo {
+        max-width: 240px;
+        height: 105px;
+    }
+}
+
+/* ============================================ */
+/* EINHEITLICHE PARTNER-ÜBERSCHRIFTEN           */
+/* ============================================ */
+
+/*
+ * Alle offiziellen Partnerstufen verwenden
+ * exakt dieselbe Größenlogik wie WEITERE PARTNER.
+ */
+.tierTitleArea h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(2rem, 4vw, 3.1rem);
+    font-weight: 900;
+    letter-spacing: -0.035em;
+    line-height: 0.95;
+    text-transform: uppercase;
+}
+
+
+/* Auch auf Tablet und Mobile bleibt die Hierarchie
+   identisch zur Überschrift WEITERE PARTNER. */
+@media (max-width: 900px) {
+    .tierTitleArea h2 {
+        font-size: clamp(2rem, 6vw, 3.1rem);
+    }
+}
+
+
+@media (max-width: 700px) {
+    .tierTitleArea h2 {
+        font-size: 2rem;
+        line-height: 0.98;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .tierTitleArea h2 {
+        font-size: 2rem;
+    }
+}

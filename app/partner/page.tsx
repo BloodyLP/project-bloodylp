@@ -104,7 +104,18 @@ const collaborationAreas = [
 
 function getTierPartners(tier: PartnerTier) {
     return partners.filter(
-        (partner) => partner.tier === tier && partner.active !== false
+        (partner) =>
+            partner.tier === tier &&
+            partner.categoryType !== "additional" &&
+            partner.active !== false
+    );
+}
+
+function getAdditionalPartners() {
+    return partners.filter(
+        (partner) =>
+            partner.categoryType === "additional" &&
+            partner.active !== false
     );
 }
 
@@ -114,22 +125,28 @@ function getTierPartners(tier: PartnerTier) {
 
 function PartnerCard({
     partner,
+    compact = false,
 }: {
     partner: Partner;
+    compact?: boolean;
 }) {
+    const tierClass = partner.tier
+        ? styles[`tier-${partner.tier}`]
+        : "";
+
     return (
         <a
             href={partner.website}
             target="_blank"
             rel="noopener noreferrer"
-            className={`${styles.partnerCard} ${
-                styles[`tier-${partner.tier}`]
+            className={`${styles.partnerCard} ${tierClass} ${
+                compact ? styles.additionalPartnerCard : ""
             }`}
         >
             <div className={styles.cardTop}>
                 <div className={styles.partnerLevel}>
                     <span className={styles.levelDot} />
-                    {partner.tier}
+                    {compact ? "WEITERE PARTNER" : partner.tier}
                 </div>
 
                 <span className={styles.externalIcon}>↗</span>
@@ -160,27 +177,68 @@ function PartnerCard({
 
                 {partner.discountCode && (
                     <div className={styles.partnerHighlight}>
-                        <div>
-                            <span className={styles.highlightLabel}>
-                                DEIN BLOODYLP VORTEIL
-                            </span>
-                            <strong>10 % RABATT</strong>
+                        <div className={styles.highlightMain}>
+                            <div className={styles.highlightIcon}>
+                                %
+                            </div>
+
+                            <div className={styles.highlightValue}>
+                                <span className={styles.highlightLabel}>
+                                    DEIN BLOODYLP VORTEIL
+                                </span>
+
+                                <strong>10 % RABATT</strong>
+                            </div>
                         </div>
 
                         <div className={styles.discountCode}>
                             <span>CODE</span>
-                            <strong>{partner.discountCode}</strong>
+
+                            <div className={styles.discountCodeBox}>
+                                <strong>{partner.discountCode}</strong>
+
+                                <span className={styles.copyIcon}>
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                    >
+                                        <rect
+                                            x="8"
+                                            y="8"
+                                            width="11"
+                                            height="11"
+                                            rx="2"
+                                        />
+                                        <path d="M5 16H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1" />
+                                    </svg>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 )}
 
                 {partner.featureTitle && partner.featureText && (
                     <div className={styles.partnerHighlight}>
-                        <div>
-                            <span className={styles.highlightLabel}>
-                                AKTUELLER FOKUS
-                            </span>
-                            <strong>{partner.featureTitle}</strong>
+                        <div className={styles.highlightMain}>
+                            <div className={styles.highlightIcon}>
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M7.5 7.5h9a3.5 3.5 0 0 1 3.5 3.5v3.5a3.5 3.5 0 0 1-3.5 3.5h-1.7l-2.8-2.3-2.8 2.3H7.5A3.5 3.5 0 0 1 4 14.5V11a3.5 3.5 0 0 1 3.5-3.5Z" />
+                                    <path d="M8 11v4M6 13h4" />
+                                    <circle cx="16" cy="12" r=".8" />
+                                    <circle cx="18" cy="14" r=".8" />
+                                </svg>
+                            </div>
+
+                            <div className={styles.highlightValue}>
+                                <span className={styles.highlightLabel}>
+                                    AKTUELLER FOKUS
+                                </span>
+
+                                <strong>{partner.featureTitle}</strong>
+                            </div>
                         </div>
 
                         <p>{partner.featureText}</p>
@@ -308,7 +366,7 @@ export default function PartnerPage() {
                         <div className={styles.statDivider} />
 
                         <div className={styles.heroStat}>
-                            <strong>5.654</strong>
+                            <strong>5.650+</strong>
 
                             <span>
                                 TWITCH
@@ -318,7 +376,7 @@ export default function PartnerPage() {
                         <div className={styles.statDivider} />
 
                         <div className={styles.heroStat}>
-                            <strong>7,5 MIO.</strong>
+                            <strong>7,5 MIO.+</strong>
 
                             <span>
                                 VIDEO VIEWS
@@ -441,6 +499,38 @@ export default function PartnerPage() {
                         />
                     ))}
                 </div>
+
+                {/* ================================== */}
+                {/* WEITERE PARTNER                    */}
+                {/* ================================== */}
+
+                {getAdditionalPartners().length > 0 && (
+                    <section className={styles.additionalPartnersSection}>
+                        <div className={styles.additionalPartnersHeader}>
+                            <div>
+                                <span className={styles.additionalPartnersEyebrow}>
+                                    ERWEITERTES PARTNERNETZWERK
+                                </span>
+
+                                <h2>WEITERE <span>PARTNER</span></h2>
+                            </div>
+
+                            <p>
+                                Weitere Marken und Unternehmen aus dem erweiterten BloodyLP Partnernetzwerk.
+                            </p>
+                        </div>
+
+                        <div className={styles.additionalPartnerGrid}>
+                            {getAdditionalPartners().map((partner) => (
+                                <PartnerCard
+                                    key={partner.name}
+                                    partner={partner}
+                                    compact
+                                />
+                            ))}
+                        </div>
+                    </section>
+                )}
             </section>
 
             {/* ================================== */}
