@@ -69,15 +69,14 @@ export async function POST(request: Request) {
     try {
         const body = (await request.json()) as Partial<InquiryData>;
 
-        /*
-         * ============================================
-         * HONEYPOT
-         * ============================================
-         *
-         * Dieses Feld ist für normale Besucher unsichtbar.
-         * Wenn es ausgefüllt wurde, behandeln wir die Anfrage
-         * als Bot und antworten trotzdem erfolgreich.
-         */
+        // ============================================
+        // HONEYPOT
+        // ============================================
+
+        // Dieses Feld ist für normale Besucher unsichtbar.
+        // Wenn es ausgefüllt wurde, behandeln wir die Anfrage
+        // als Bot und antworten trotzdem erfolgreich.
+
         if (clean(body.companyWebsite)) {
             return NextResponse.json(
                 { ok: true },
@@ -85,11 +84,9 @@ export async function POST(request: Request) {
             );
         }
 
-        /*
-         * ============================================
-         * FORMULARDATEN
-         * ============================================
-         */
+        // ============================================
+        // FORMULARDATEN
+        // ============================================
 
         const data = {
             firstName: clean(body.firstName),
@@ -105,15 +102,13 @@ export async function POST(request: Request) {
             message: clean(body.message),
         };
 
-        /*
-         * ============================================
-         * DATENSCHUTZ-CHECK
-         * ============================================
-         *
-         * Wir akzeptieren true sowie "true" und "on".
-         * Dadurch ist die API robust gegenüber verschiedenen
-         * Formularimplementierungen.
-         */
+        // ============================================
+        // DATENSCHUTZ-CHECK
+        // ============================================
+
+        // Wir akzeptieren true sowie "true" und "on".
+        // Dadurch ist die API robust gegenüber verschiedenen
+        // Formularimplementierungen.
 
         const consent =
             body.consent === true ||
@@ -130,11 +125,9 @@ export async function POST(request: Request) {
             );
         }
 
-        /*
-         * ============================================
-         * PFLICHTFELDER
-         * ============================================
-         */
+        // ============================================
+        // PFLICHTFELDER
+        // ============================================
 
         const requiredFields = [
             ["firstName", data.firstName],
@@ -156,11 +149,9 @@ export async function POST(request: Request) {
             }
         }
 
-        /*
-         * ============================================
-         * E-MAIL VALIDIERUNG
-         * ============================================
-         */
+        // ============================================
+        // E-MAIL VALIDIERUNG
+        // ============================================
 
         if (!isValidEmail(data.email)) {
             return NextResponse.json(
@@ -172,11 +163,9 @@ export async function POST(request: Request) {
             );
         }
 
-        /*
-         * ============================================
-         * WEBSITE VALIDIERUNG
-         * ============================================
-         */
+        // ============================================
+        // WEBSITE VALIDIERUNG
+        // ============================================
 
         if (!isValidOptionalUrl(data.website)) {
             return NextResponse.json(
@@ -188,11 +177,9 @@ export async function POST(request: Request) {
             );
         }
 
-        /*
-         * ============================================
-         * LÄNGEN-CHECK
-         * ============================================
-         */
+        // ============================================
+        // LÄNGEN-CHECK
+        // ============================================
 
         for (const [field, maxLength] of Object.entries(
             MAX_LENGTHS
@@ -211,11 +198,9 @@ export async function POST(request: Request) {
             }
         }
 
-        /*
-         * ============================================
-         * NACHRICHT MINDESTLÄNGE
-         * ============================================
-         */
+        // ============================================
+        // NACHRICHT MINDESTLÄNGE
+        // ============================================
 
         if (data.message.length < 20) {
             return NextResponse.json(
@@ -227,32 +212,31 @@ export async function POST(request: Request) {
             );
         }
 
-        /*
-         * ============================================
-         * IONOS SMTP
-         * ============================================
-         */
+        // ============================================
+        // IONOS SMTP
+        // ============================================
 
         const smtpHost =
-            process.env.SMTP_HOST || "smtp.ionos.de";
+            process.env.IONOS_SMTP_HOST ||
+            "smtp.ionos.de";
 
         const smtpPort = Number(
-            process.env.SMTP_PORT || 465
+            process.env.IONOS_SMTP_PORT || 465
         );
 
         const smtpUser =
-            process.env.SMTP_USER;
+            process.env.IONOS_SMTP_USER;
 
         const smtpPassword =
-            process.env.SMTP_PASSWORD;
+            process.env.IONOS_SMTP_PASSWORD;
 
         const recipient =
-            process.env.PARTNER_INQUIRY_TO ||
+            process.env.IONOS_CONTACT_TO ||
             "kontakt@bloodylp.de";
 
         if (!smtpUser || !smtpPassword) {
             console.error(
-                "PARTNER INQUIRY: SMTP_USER oder SMTP_PASSWORD fehlt."
+                "PARTNER INQUIRY: IONOS_SMTP_USER oder IONOS_SMTP_PASSWORD fehlt."
             );
 
             return NextResponse.json(
@@ -264,11 +248,9 @@ export async function POST(request: Request) {
             );
         }
 
-        /*
-         * ============================================
-         * SMTP TRANSPORTER
-         * ============================================
-         */
+        // ============================================
+        // SMTP TRANSPORTER
+        // ============================================
 
         const transporter = nodemailer.createTransport({
             host: smtpHost,
@@ -280,11 +262,9 @@ export async function POST(request: Request) {
             },
         });
 
-        /*
-         * ============================================
-         * SICHERE HTML-WERTE
-         * ============================================
-         */
+        // ============================================
+        // SICHERE HTML-WERTE
+        // ============================================
 
         const safe = {
             firstName: escapeHtml(data.firstName),
@@ -303,11 +283,9 @@ export async function POST(request: Request) {
         const subject =
             `Neue Partneranfrage – ${data.company} – ${data.firstName} ${data.lastName}`;
 
-        /*
-         * ============================================
-         * HTML E-MAIL
-         * ============================================
-         */
+        // ============================================
+        // HTML E-MAIL
+        // ============================================
 
         const html = `
 <!DOCTYPE html>
@@ -368,6 +346,7 @@ export async function POST(request: Request) {
             </h2>
 
             <p style="line-height:1.7;">
+
                 <strong>Name:</strong>
                 ${safe.firstName} ${safe.lastName}
                 <br>
@@ -391,6 +370,7 @@ export async function POST(request: Request) {
 
                 <strong>Website:</strong>
                 ${safe.website || "–"}
+
             </p>
 
             <hr style="
@@ -409,6 +389,7 @@ export async function POST(request: Request) {
             </h2>
 
             <p style="line-height:1.7;">
+
                 <strong>Kooperationsart:</strong>
                 ${safe.cooperation}
                 <br>
@@ -423,6 +404,7 @@ export async function POST(request: Request) {
 
                 <strong>Projekt / Kampagne:</strong>
                 ${safe.campaign || "–"}
+
             </p>
 
             <hr style="
@@ -468,11 +450,9 @@ export async function POST(request: Request) {
 </html>
 `;
 
-        /*
-         * ============================================
-         * TEXT E-MAIL
-         * ============================================
-         */
+        // ============================================
+        // TEXT E-MAIL
+        // ============================================
 
         const text = `
 Neue Partneranfrage über bloodylp.de
@@ -516,33 +496,26 @@ ${data.message}
 
 
 ---
+
 Diese Anfrage wurde über das Partnerformular auf bloodylp.de gesendet.
 `;
 
-        /*
-         * ============================================
-         * E-MAIL SENDEN
-         * ============================================
-         */
+        // ============================================
+        // E-MAIL SENDEN
+        // ============================================
 
         await transporter.sendMail({
             from: smtpUser,
             to: recipient,
-
-            // Antwort geht direkt an den Interessenten
             replyTo: data.email,
-
             subject,
-
             text,
             html,
         });
 
-        /*
-         * ============================================
-         * ERFOLG
-         * ============================================
-         */
+        // ============================================
+        // ERFOLG
+        // ============================================
 
         return NextResponse.json(
             {
