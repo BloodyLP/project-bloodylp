@@ -242,7 +242,7 @@ export default function EsportPage() {
                     <article className={styles.statCard}>
 
                         <span className={styles.statValue}>
-                            887
+                            886
                         </span>
 
                         <span className={styles.statLabel}>
