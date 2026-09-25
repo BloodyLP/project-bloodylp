@@ -9,7 +9,7 @@
 /* components/live/data/esport/deg-standings.ts */
 /*                                              */
 /* Description:                                 */
-/* GCL 13 – Division 1                           */
+/* GCL 13 – Division 1                          */
 /* Aktueller Stand – 9 Mannschaften             */
 /* Platz 1–8 Playoffs                            */
 /* Platz 9 keine Playoffs                       */
@@ -99,6 +99,7 @@ export type DegStanding = {
 /* ============================================ */
 
 export const degStandings: DegStanding[] = [
+
     /* ---------------------------------------- */
     /* 01 – DEG ESPORTS                         */
     /* PLAYOFFS: JA                             */
@@ -141,23 +142,23 @@ export const degStandings: DegStanding[] = [
         logo: "/images/esport/gcl13/conexion.png",
         players: 8,
 
-        gamesPlayed: 2,
-        wins: 2,
+        gamesPlayed: 4,
+        wins: 3,
         overtimeWins: 0,
         overtimeLosses: 0,
         losses: 0,
 
-        goalsFor: 8,
-        goalsAgainst: 2,
-        points: 6,
+        goalsFor: 12,
+        goalsAgainst: 3,
+        points: 9,
 
         powerplayPercentage: null,
         penaltyKillPercentage: 100,
-        pim: 2,
-        shots: 37,
-        faceoffPercentage: 46.67,
-        hits: 25,
-        last10: "2-0-0",
+        pim: 10,
+        shots: 54,
+        faceoffPercentage: 49.23,
+        hits: 68,
+        last10: "3-1-0",
 
         playoffs: true,
     },
@@ -358,23 +359,23 @@ export const degStandings: DegStanding[] = [
         logo: "/images/esport/gcl13/german-elite-hockey.png",
         players: 9,
 
-        gamesPlayed: 2,
+        gamesPlayed: 4,
         wins: 0,
         overtimeWins: 0,
         overtimeLosses: 0,
-        losses: 2,
+        losses: 3,
 
-        goalsFor: 3,
-        goalsAgainst: 9,
+        goalsFor: 4,
+        goalsAgainst: 13,
         points: 0,
 
         powerplayPercentage: null,
-        penaltyKillPercentage: 50,
-        pim: 4,
-        shots: 30,
-        faceoffPercentage: 47.5,
-        hits: 29,
-        last10: "0-2-0",
+        penaltyKillPercentage: 66.67,
+        pim: 6,
+        shots: 41,
+        faceoffPercentage: 46.67,
+        hits: 49,
+        last10: "0-4-0",
 
         playoffs: false,
     },

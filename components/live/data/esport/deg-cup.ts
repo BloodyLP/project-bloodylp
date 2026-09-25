@@ -85,6 +85,7 @@ const teams = {
     clownsOnIce: {
         name: "Clowns On Ice",
         logo: "/images/esport/gcl13/clowns-on-ice.png",
+
     },
 
     blackIceRavens: {
@@ -101,6 +102,7 @@ const teams = {
     rackelhahn: {
         name: "SG Rackelhahn eV",
         logo: "/images/esport/gcl13/sc-rackelhahn.png",
+        eliminated: true,
     },
 
     hannover: {
@@ -335,6 +337,18 @@ export const gcl13Cup: GCL13Cup = {
                     id: "gcl13-cup-r2-ClownsOnIce",
 
                     home: teams.clownsOnIce,
+                    away: teams.tbd,
+
+                    homeScore: 0,
+                    awayScore: 0,
+
+                    played: false,
+                },
+
+                                {
+                    id: "gcl13-cup-r2-ehcOlten",
+
+                    home: teams.ehcOlten,
                     away: teams.tbd,
 
                     homeScore: 0,
