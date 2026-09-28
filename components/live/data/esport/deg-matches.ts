@@ -85,14 +85,14 @@ export const degTeam = {
 /* ============================================ */
 
 export const upcomingMatch: UpcomingMatch = {
-    date: "TBD",
+    date: "28. September 2026 ab 20.50 Uhr",
 
     league: "GCL SPIELTAG 3",
 
-    opponent: "TBD",
+    opponent: "Conexion",
 
     opponentLogo:
-        "",
+        "/images/esport/gcl13/conexion.png",
 };
 
 
