@@ -85,14 +85,14 @@ export const degTeam = {
 /* ============================================ */
 
 export const upcomingMatch: UpcomingMatch = {
-    date: "28. September 2026 ab 20.50 Uhr",
+    date: "30. September 2026 ab 20.50 Uhr",
 
-    league: "GCL SPIELTAG 3",
+    league: "GCL SPIELTAG 4",
 
-    opponent: "Conexion",
+    opponent: "REH Gaming",
 
     opponentLogo:
-        "/images/esport/gcl13/conexion.png",
+        "/images/esport/gcl13/reh-gaming.png",
 };
 
 
@@ -101,12 +101,12 @@ export const upcomingMatch: UpcomingMatch = {
 /* ============================================ */
 
 export const degSeasonStats = {
-    games: 5,
+    games: 7,
     wins: 4,
-    losses: 0,
+    losses: 2,
     overtimeLosses: 1,
-    goalsFor: 21,
-    goalsAgainst: 8,
+    goalsFor: 24,
+    goalsAgainst: 14,
 };
 
 
@@ -124,20 +124,20 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-        date: "23. September 2026",
+        date: "28. September 2026",
 
         league: "GCL 13",
 
-        opponent: "German Elite Hockey",
+        opponent: "Conexion",
 
         opponentLogo:
-            "/images/esport/gcl13/german-elite-hockey.png",
+            "/images/esport/gcl13/conexion.png",
 
-        degScore: 4,
+        degScore: 1,
 
-        opponentScore: 2,
+        opponentScore: 3,
 
-        overtime: true,
+        overtime: false,
 
         shootout: false,
 
@@ -150,6 +150,35 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
     /* DEG gewinnt regulär                       */
     /* Ergebnis: 3:2                            */
+    /* ======================================== */
+
+    {
+        date: "28. September 2026",
+
+        league: "GCL 13",
+
+        opponent: "German Elite Hockey",
+
+        opponentLogo:
+            "/images/esport/gcl13/conexion.png",
+
+        degScore: 2,
+
+        opponentScore: 3,
+
+        overtime: false,
+
+        shootout: false,
+
+        home: true,
+    },
+
+
+    /* ======================================== */
+    /* MATCH 03                                  */
+    /* ======================================== */
+    /* DEG gewinnt regulär                       */
+    /* Ergebnis: 7:0                            */
     /* ======================================== */
 
     {
@@ -166,39 +195,10 @@ export const degMatches: DegMatch[] = [
 
         opponentScore: 1,
 
-        overtime: true,
-
-        shootout: false,
-
-        home: true,
-    },
-
-
-    /* ======================================== */
-    /* MATCH 03                                  */
-    /* ======================================== */
-    /* DEG gewinnt regulär                       */
-    /* Ergebnis: 7:0                            */
-    /* ======================================== */
-
-    {
-        date: "21. September 2026",
-
-        league: "GCL 13",
-
-        opponent: "The Last Shift",
-
-        opponentLogo:
-            "/images/esport/gcl13/the-last-shift.png",
-
-        degScore: 3,
-
-        opponentScore: 2,
-
         overtime: false,
 
         shootout: false,
 
-        home: false,
+        home: true,
     },
 ];

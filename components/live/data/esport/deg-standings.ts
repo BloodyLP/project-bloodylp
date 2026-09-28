@@ -110,88 +110,88 @@ export const degStandings: DegStanding[] = [
         logo: "/images/esport/gcl13/conexion.png",
         players: 8,
 
-        gamesPlayed: 4,
-        wins: 3,
+        gamesPlayed: 6,
+        wins: 5,
         overtimeWins: 0,
         overtimeLosses: 1,
         losses: 0,
 
-        goalsFor: 14,
-        goalsAgainst: 6,
-        points: 10,
+        goalsFor: 20,
+        goalsAgainst: 9,
+        points: 16,
 
-        powerplayPercentage: 25,
-        penaltyKillPercentage: 100,
-        pim: 12,
-        shots: 88,
+        powerplayPercentage: 20,
+        penaltyKillPercentage: 87.5,
+        pim: 16,
+        shots: 125,
         faceoffPercentage: 47.22,
-        hits: 85,
-        last10: "3-0-1",
+        hits: 95,
+        last10: "5-0-1",
 
         playoffs: true,
     },
 
     /* ---------------------------------------- */
-    /* 02 – DEG ESPORTS                         */
+    /* 02 – THE LAST SHIFT                      */
     /* PLAYOFFS: JA                             */
     /* ---------------------------------------- */
     {
         position: 2,
-        team: "DEG eSports",
-        logo: "/images/esport/gcl13/deg-esports.png",
-        players: 11,
-
-        gamesPlayed: 4,
-        wins: 3,
-        overtimeWins: 0,
-        overtimeLosses: 1,
-        losses: 0,
-
-        goalsFor: 14,
-        goalsAgainst: 8,
-        points: 10,
-
-        powerplayPercentage: 66.67,
-        penaltyKillPercentage: 75,
-        pim: 8,
-        shots: 57,
-        faceoffPercentage: 53.85,
-        hits: 15,
-        last10: "3-0-1",
-
-        playoffs: true,
-        isDeg: true,
-    },
-
-    /* ---------------------------------------- */
-    /* 03 – THE LAST SHIFT                      */
-    /* PLAYOFFS: JA                             */
-    /* ---------------------------------------- */
-    {
-        position: 3,
         team: "The Last Shift",
         logo: "/images/esport/gcl13/the-last-shift.png",
         players: 5,
 
-        gamesPlayed: 4,
-        wins: 1,
+        gamesPlayed: 6,
+        wins: 3,
         overtimeWins: 1,
         overtimeLosses: 0,
         losses: 2,
 
-        goalsFor: 14,
-        goalsAgainst: 11,
-        points: 5,
+        goalsFor: 23,
+        goalsAgainst: 14,
+        points: 11,
 
         powerplayPercentage: 60,
-        penaltyKillPercentage: 50,
-        pim: 8,
-        shots: 56,
-        faceoffPercentage: 43.68,
-        hits: 50,
-        last10: "2-2-0",
+        penaltyKillPercentage: 60,
+        pim: 10,
+        shots: 93,
+        faceoffPercentage: 44.8,
+        hits: 83,
+        last10: "4-2-0",
 
         playoffs: true,
+    },
+
+    /* ---------------------------------------- */
+    /* 03 – DEG ESPORTS                         */
+    /* PLAYOFFS: JA                             */
+    /* ---------------------------------------- */
+    {
+        position: 3,
+        team: "DEG eSports",
+        logo: "/images/esport/gcl13/deg-esports.png",
+        players: 11,
+
+        gamesPlayed: 6,
+        wins: 3,
+        overtimeWins: 0,
+        overtimeLosses: 1,
+        losses: 2,
+
+        goalsFor: 17,
+        goalsAgainst: 14,
+        points: 10,
+
+        powerplayPercentage: 60,
+        penaltyKillPercentage: 80,
+        pim: 10,
+        shots: 78,
+        faceoffPercentage: 53.1,
+        hits: 30,
+        last10: "3-2-1",
+
+        playoffs: true,
+        isDeg: true,
     },
 
     /* ---------------------------------------- */
@@ -204,23 +204,23 @@ export const degStandings: DegStanding[] = [
         logo: "/images/esport/gcl13/scb-esports.png",
         players: 8,
 
-        gamesPlayed: 3,
-        wins: 1,
+        gamesPlayed: 6,
+        wins: 2,
         overtimeWins: 1,
         overtimeLosses: 0,
-        losses: 1,
+        losses: 3,
 
-        goalsFor: 8,
-        goalsAgainst: 10,
-        points: 5,
+        goalsFor: 15,
+        goalsAgainst: 18,
+        points: 8,
 
-        powerplayPercentage: 25,
-        penaltyKillPercentage: 66.67,
-        pim: 12,
-        shots: 36,
-        faceoffPercentage: 55.88,
-        hits: 31,
-        last10: "2-1-0",
+        powerplayPercentage: 33.33,
+        penaltyKillPercentage: 75,
+        pim: 32,
+        shots: 76,
+        faceoffPercentage: 55.3,
+        hits: 59,
+        last10: "3-3-0",
 
         playoffs: true,
     },
@@ -266,23 +266,23 @@ export const degStandings: DegStanding[] = [
         logo: "/images/esport/gcl13/german-elite-hockey.png",
         players: 9,
 
-        gamesPlayed: 4,
-        wins: 0,
+        gamesPlayed: 6,
+        wins: 1,
         overtimeWins: 1,
         overtimeLosses: 0,
-        losses: 3,
+        losses: 4,
 
-        goalsFor: 7,
-        goalsAgainst: 15,
-        points: 2,
+        goalsFor: 12,
+        goalsAgainst: 20,
+        points: 5,
 
-        powerplayPercentage: null,
-        penaltyKillPercentage: 60,
-        pim: 10,
-        shots: 58,
-        faceoffPercentage: 50.49,
-        hits: 73,
-        last10: "1-3-0",
+        powerplayPercentage: 7.14,
+        penaltyKillPercentage: 57.14,
+        pim: 14,
+        shots: 94,
+        faceoffPercentage: 47.3,
+        hits: 90,
+        last10: "2-4-0",
 
         playoffs: true,
     },
@@ -297,23 +297,23 @@ export const degStandings: DegStanding[] = [
         logo: "/images/esport/gcl13/iserlohn-roosters-esports.png",
         players: 5,
 
-        gamesPlayed: 1,
-        wins: 0,
+        gamesPlayed: 4,
+        wins: 1,
         overtimeWins: 0,
         overtimeLosses: 1,
-        losses: 0,
+        losses: 2,
 
-        goalsFor: 1,
-        goalsAgainst: 2,
-        points: 1,
+        goalsFor: 7,
+        goalsAgainst: 13,
+        points: 4,
 
-        powerplayPercentage: null,
+        powerplayPercentage: 14.29,
         penaltyKillPercentage: 100,
         pim: 2,
-        shots: 11,
-        faceoffPercentage: 47.37,
-        hits: 11,
-        last10: "0-0-1",
+        shots: 43,
+        faceoffPercentage: 52.63,
+        hits: 21,
+        last10: "1-2-1",
 
         playoffs: true,
     },

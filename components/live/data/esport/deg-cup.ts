@@ -75,6 +75,7 @@ const teams = {
     iserlohn: {
         name: "Iserlohn Roosters eSports",
         logo: "/images/esport/gcl13/iserlohn-roosters-esports.png",
+                eliminated: true,
     },
 
     germanEliteHockey: {
@@ -108,11 +109,12 @@ const teams = {
     hannover: {
         name: "Hannover Indians eSports",
         logo: "/images/esport/gcl13/hannover-indians-esports.png",
+                eliminated: true,
     },
 
     nuernberg: {
         name: "Nürnberg Nidhoggr",
-        logo: "/images/esport/gcl13/nuernberg-nidhoggr.jpg",
+        logo: "/images/esport/gcl13/nuernberg-nidhoggr2.jpg",
     },
 
     connexion: {
@@ -128,6 +130,7 @@ const teams = {
     yetis: {
         name: "Eishockeynet Yetis",
         logo: "/images/esport/gcl13/eishockeynet-yetis.png",
+                        eliminated: true,
     },
 
     deadlyPhantoms: {
@@ -191,10 +194,10 @@ export const gcl13Cup: GCL13Cup = {
                     home: teams.iserlohn,
                     away: teams.germanEliteHockey,
 
-                    homeScore: 0,
-                    awayScore: 0,
+                    homeScore: 2,
+                    awayScore: 4,
 
-                    played: false,
+                    played: true,
                 },
 
 
@@ -225,10 +228,10 @@ export const gcl13Cup: GCL13Cup = {
                     home: teams.ehcOlten,
                     away: teams.rackelhahn,
 
-                    homeScore: 0,
-                    awayScore: 0,
+                    homeScore: 8,
+                    awayScore: 1,
 
-                    played: false,
+                    played: true,
                 },
 
 
@@ -242,10 +245,10 @@ export const gcl13Cup: GCL13Cup = {
                     home: teams.hannover,
                     away: teams.nuernberg,
 
-                    homeScore: 0,
-                    awayScore: 0,
+                    homeScore: 2,
+                    awayScore: 5,
 
-                    played: false,
+                    played: true,
                 },
 
 
@@ -277,9 +280,9 @@ export const gcl13Cup: GCL13Cup = {
                     away: teams.deadlyPhantoms,
 
                     homeScore: 0,
-                    awayScore: 0,
+                    awayScore: 5,
 
-                    played: false,
+                    played: true,
                 },
 
 
@@ -349,6 +352,40 @@ export const gcl13Cup: GCL13Cup = {
                     id: "gcl13-cup-r2-ehcOlten",
 
                     home: teams.ehcOlten,
+                    away: teams.tbd,
+
+                    homeScore: 0,
+                    awayScore: 0,
+
+                    played: false,
+                },
+
+                                {
+                    id: "gcl13-cup-r2-german-elite-hockey",
+
+                    home: teams.germanEliteHockey,
+                    away: teams.tbd,
+
+                    homeScore: 0,
+                    awayScore: 0,
+
+                    played: false,
+                },
+                                                {
+                    id: "gcl13-cup-r2-deadly-phantoms",
+
+                    home: teams.deadlyPhantoms,
+                    away: teams.tbd,
+
+                    homeScore: 0,
+                    awayScore: 0,
+
+                    played: false,
+                },
+                                                                {
+                    id: "gcl13-cup-r2-nuernberg-nidhoggr",
+
+                    home: teams.nuernberg,
                     away: teams.tbd,
 
                     homeScore: 0,
