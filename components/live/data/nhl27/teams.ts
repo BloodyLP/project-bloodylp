@@ -23,12 +23,12 @@ export const careerTeams: CareerTeam[] = [
         league: "NHL",
         logo: "/images/nhl27/toronto-maple-leafs.png",
 
-        games: 4,
-        goals: 5,
-        assists: 1,
-        points: 6,
-        plusMinus: 5,
-        pim: 2,
+        games: 14,
+        goals: 10,
+        assists: 6,
+        points: 16,
+        plusMinus: 9,
+        pim: 6,
 
         status: "AKTUELL",
         contractUntil: "2028/29",
@@ -40,7 +40,7 @@ export const careerTeams: CareerTeam[] = [
         league: "NHL",
         logo: "/images/nhl27/toronto-maple-leafs.png",
 
-        games: 77,
+        games: 71,
         goals: 36,
         assists: 25,
         points: 61,

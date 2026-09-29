@@ -47,7 +47,7 @@ export const david211197: ServiceRecordMember = {
     /**
      * Dienstgrad
      */
-    rank:"us-army-cw3",
+    rank:"us-army-cw5",
 
     /**
      * Organisation
@@ -89,6 +89,12 @@ export const david211197: ServiceRecordMember = {
      */
     patreon:0,
 
+    /**
+ * Patreon Bronze
+ *
+ * Erste Patreon-Auszeichnung.
+ */
+patreonHallOfFame: true,
     /**
      * Aktiv
      */
