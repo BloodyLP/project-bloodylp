@@ -2,8 +2,6 @@
 /*                                              */
 /* BloodyLP                                     */
 /*                                              */
-/* ============================================ */
-/*                                              */
 /* Project:                                     */
 /* BloodyLP Website                             */
 /*                                              */
@@ -62,6 +60,7 @@ export type GCL13Cup = {
     name: string;
     logo: string;
     season: string;
+
     rounds: GCL13CupRound[];
 };
 
@@ -72,10 +71,14 @@ export type GCL13Cup = {
 
 const teams = {
 
+    /* ---------------------------------------- */
+    /* ROUND 1 TEAMS                            */
+    /* ---------------------------------------- */
+
     iserlohn: {
         name: "Iserlohn Roosters eSports",
         logo: "/images/esport/gcl13/iserlohn-roosters-esports.png",
-                eliminated: true,
+        eliminated: true,
     },
 
     germanEliteHockey: {
@@ -86,7 +89,6 @@ const teams = {
     clownsOnIce: {
         name: "Clowns On Ice",
         logo: "/images/esport/gcl13/clowns-on-ice.png",
-
     },
 
     blackIceRavens: {
@@ -109,7 +111,7 @@ const teams = {
     hannover: {
         name: "Hannover Indians eSports",
         logo: "/images/esport/gcl13/hannover-indians-esports.png",
-                eliminated: true,
+        eliminated: true,
     },
 
     nuernberg: {
@@ -125,12 +127,13 @@ const teams = {
     flashback: {
         name: "Flaschback Skwad",
         logo: "/images/esport/gcl13/flaschback-squad.png",
+        eliminated: true,
     },
 
     yetis: {
         name: "Eishockeynet Yetis",
         logo: "/images/esport/gcl13/eishockeynet-yetis.png",
-                        eliminated: true,
+        eliminated: true,
     },
 
     deadlyPhantoms: {
@@ -150,19 +153,60 @@ const teams = {
         isDeg: true,
     },
 
+
     /* ---------------------------------------- */
-    /* TBD TEAM                                 */
+    /* ROUND 2 – NEUE TEAMS                     */
     /* ---------------------------------------- */
 
-    tbd: {
-        name: "TBD",
-        logo: "/images/esport/logos/gcl.png",
+    ecKasselHuskies: {
+        name: "EC Kassel Huskies eSports",
+        logo: "/images/esport/gcl13/ec-kassel-huskies-esports.png",
+    },
+
+    hockeyholics: {
+        name: "Hockeyholics",
+        logo: "/images/esport/gcl13/hockeyholics.png",
+    },
+
+    theLastShift: {
+        name: "The Last Shift",
+        logo: "/images/esport/gcl13/the-last-shift.png",
+    },
+
+    catastrophicTurnovers: {
+        name: "Catastrophic Turnovers",
+        logo: "/images/esport/gcl13/catastrophic-turnovers.png",
+    },
+
+    scbEsports: {
+        name: "SCB eSports",
+        logo: "/images/esport/gcl13/scb-esports.png",
+    },
+
+    valhallaVikings: {
+        name: "Valhalla Vikings HC",
+        logo: "/images/esport/gcl13/valhalla-vikings-hc.png",
+    },
+
+    rehGaming: {
+        name: "REH Gaming",
+        logo: "/images/esport/gcl13/reh-gaming.png",
+    },
+
+    hammerEisbaeren: {
+        name: "Hammer Eisbaeren eSports",
+        logo: "/images/esport/gcl13/hammer-eisbaeren-esports.png",
+    },
+
+    oldButGold: {
+        name: "Old but Gold",
+        logo: "/images/esport/gcl13/old-but-gold.png",
     },
 };
 
 
 /* ============================================ */
-/* GCL 13 – POKAL                              */
+/* GCL 13 – POKAL                               */
 /* ============================================ */
 
 export const gcl13Cup: GCL13Cup = {
@@ -176,7 +220,7 @@ export const gcl13Cup: GCL13Cup = {
     rounds: [
 
         /* ====================================== */
-        /* ROUND 1                                */
+        /* ROUND 1                                 */
         /* ====================================== */
 
         {
@@ -185,7 +229,7 @@ export const gcl13Cup: GCL13Cup = {
             matches: [
 
                 /* -------------------------------- */
-                /* MATCH 01                         */
+                /* MATCH 01                          */
                 /* -------------------------------- */
 
                 {
@@ -194,15 +238,15 @@ export const gcl13Cup: GCL13Cup = {
                     home: teams.iserlohn,
                     away: teams.germanEliteHockey,
 
-                    homeScore: 2,
-                    awayScore: 4,
+                    homeScore: 0,
+                    awayScore: 1,
 
                     played: true,
                 },
 
 
                 /* -------------------------------- */
-                /* MATCH 02                         */
+                /* MATCH 02                          */
                 /* -------------------------------- */
 
                 {
@@ -211,15 +255,15 @@ export const gcl13Cup: GCL13Cup = {
                     home: teams.clownsOnIce,
                     away: teams.blackIceRavens,
 
-                    homeScore: 3,
-                    awayScore: 2,
+                    homeScore: 1,
+                    awayScore: 0,
 
                     played: true,
                 },
 
 
                 /* -------------------------------- */
-                /* MATCH 03                         */
+                /* MATCH 03                          */
                 /* -------------------------------- */
 
                 {
@@ -228,15 +272,15 @@ export const gcl13Cup: GCL13Cup = {
                     home: teams.ehcOlten,
                     away: teams.rackelhahn,
 
-                    homeScore: 8,
-                    awayScore: 1,
+                    homeScore: 1,
+                    awayScore: 0,
 
                     played: true,
                 },
 
 
                 /* -------------------------------- */
-                /* MATCH 04                         */
+                /* MATCH 04                          */
                 /* -------------------------------- */
 
                 {
@@ -245,15 +289,15 @@ export const gcl13Cup: GCL13Cup = {
                     home: teams.hannover,
                     away: teams.nuernberg,
 
-                    homeScore: 2,
-                    awayScore: 5,
+                    homeScore: 0,
+                    awayScore: 1,
 
                     played: true,
                 },
 
 
                 /* -------------------------------- */
-                /* MATCH 05                         */
+                /* MATCH 05                          */
                 /* -------------------------------- */
 
                 {
@@ -262,15 +306,15 @@ export const gcl13Cup: GCL13Cup = {
                     home: teams.connexion,
                     away: teams.flashback,
 
-                    homeScore: 0,
+                    homeScore: 1,
                     awayScore: 0,
 
-                    played: false,
+                    played: true,
                 },
 
 
                 /* -------------------------------- */
-                /* MATCH 06                         */
+                /* MATCH 06                          */
                 /* -------------------------------- */
 
                 {
@@ -280,18 +324,14 @@ export const gcl13Cup: GCL13Cup = {
                     away: teams.deadlyPhantoms,
 
                     homeScore: 0,
-                    awayScore: 5,
+                    awayScore: 1,
 
                     played: true,
                 },
 
 
                 /* -------------------------------- */
-                /* MATCH 07                         */
-                /* -------------------------------- */
-                /* OUTLAWS 0 : 7 DEG                */
-                /* DEG WEITER                       */
-                /* OUTLAWS AUSGESCHIEDEN            */
+                /* MATCH 07                          */
                 /* -------------------------------- */
 
                 {
@@ -301,7 +341,7 @@ export const gcl13Cup: GCL13Cup = {
                     away: teams.deg,
 
                     homeScore: 0,
-                    awayScore: 7,
+                    awayScore: 1,
 
                     played: true,
                 },
@@ -310,7 +350,7 @@ export const gcl13Cup: GCL13Cup = {
 
 
         /* ====================================== */
-        /* ROUND 2                                */
+        /* ROUND 2                                 */
         /* ====================================== */
 
         {
@@ -319,28 +359,14 @@ export const gcl13Cup: GCL13Cup = {
             matches: [
 
                 /* -------------------------------- */
-                /* DEG eSports                      */
-                /* bereits qualifiziert             */
-                /* Gegner noch TBD                   */
+                /* MATCH 01                          */
                 /* -------------------------------- */
 
                 {
-                    id: "gcl13-cup-r2-deg",
+                    id: "gcl13-cup-r2-1",
 
-                    home: teams.deg,
-                    away: teams.tbd,
-
-                    homeScore: 0,
-                    awayScore: 0,
-
-                    played: false,
-                },
-
-                                {
-                    id: "gcl13-cup-r2-ClownsOnIce",
-
-                    home: teams.clownsOnIce,
-                    away: teams.tbd,
+                    home: teams.ecKasselHuskies,
+                    away: teams.germanEliteHockey,
 
                     homeScore: 0,
                     awayScore: 0,
@@ -348,11 +374,33 @@ export const gcl13Cup: GCL13Cup = {
                     played: false,
                 },
 
-                                {
-                    id: "gcl13-cup-r2-ehcOlten",
 
-                    home: teams.ehcOlten,
-                    away: teams.tbd,
+                /* -------------------------------- */
+                /* MATCH 02                          */
+                /* -------------------------------- */
+
+                {
+                    id: "gcl13-cup-r2-2",
+
+                    home: teams.hockeyholics,
+                    away: teams.theLastShift,
+
+                    homeScore: 0,
+                    awayScore: 0,
+
+                    played: false,
+                },
+
+
+                /* -------------------------------- */
+                /* MATCH 03                          */
+                /* -------------------------------- */
+
+                {
+                    id: "gcl13-cup-r2-3",
+
+                    home: teams.catastrophicTurnovers,
+                    away: teams.connexion,
 
                     homeScore: 0,
                     awayScore: 0,
@@ -360,33 +408,84 @@ export const gcl13Cup: GCL13Cup = {
                     played: false,
                 },
 
-                                {
-                    id: "gcl13-cup-r2-german-elite-hockey",
 
-                    home: teams.germanEliteHockey,
-                    away: teams.tbd,
+                /* -------------------------------- */
+                /* MATCH 04                          */
+                /* -------------------------------- */
 
-                    homeScore: 0,
-                    awayScore: 0,
-
-                    played: false,
-                },
-                                                {
-                    id: "gcl13-cup-r2-deadly-phantoms",
-
-                    home: teams.deadlyPhantoms,
-                    away: teams.tbd,
-
-                    homeScore: 0,
-                    awayScore: 0,
-
-                    played: false,
-                },
-                                                                {
-                    id: "gcl13-cup-r2-nuernberg-nidhoggr",
+                {
+                    id: "gcl13-cup-r2-4",
 
                     home: teams.nuernberg,
-                    away: teams.tbd,
+                    away: teams.ehcOlten,
+
+                    homeScore: 0,
+                    awayScore: 0,
+
+                    played: false,
+                },
+
+
+                /* -------------------------------- */
+                /* MATCH 05                          */
+                /* -------------------------------- */
+
+                {
+                    id: "gcl13-cup-r2-5",
+
+                    home: teams.scbEsports,
+                    away: teams.valhallaVikings,
+
+                    homeScore: 0,
+                    awayScore: 0,
+
+                    played: false,
+                },
+
+
+                /* -------------------------------- */
+                /* MATCH 06                          */
+                /* -------------------------------- */
+
+                {
+                    id: "gcl13-cup-r2-6",
+
+                    home: teams.hammerEisbaeren,
+                    away: teams.deadlyPhantoms,
+
+                    homeScore: 0,
+                    awayScore: 0,
+
+                    played: false,
+                },
+
+
+                /* -------------------------------- */
+                /* MATCH 07                          */
+                /* -------------------------------- */
+
+                {
+                    id: "gcl13-cup-r2-7",
+
+                    home: teams.rehGaming,
+                    away: teams.deg,
+
+                    homeScore: 0,
+                    awayScore: 0,
+
+                    played: false,
+                },
+
+
+                /* -------------------------------- */
+                /* MATCH 08                          */
+                /* -------------------------------- */
+
+                {
+                    id: "gcl13-cup-r2-8",
+
+                    home: teams.clownsOnIce,
+                    away: teams.oldButGold,
 
                     homeScore: 0,
                     awayScore: 0,
@@ -398,7 +497,7 @@ export const gcl13Cup: GCL13Cup = {
 
 
         /* ====================================== */
-        /* QUARTERFINALS                          */
+        /* QUARTERFINALS                           */
         /* ====================================== */
 
         {
@@ -409,7 +508,7 @@ export const gcl13Cup: GCL13Cup = {
 
 
         /* ====================================== */
-        /* SEMIFINALS                             */
+        /* SEMIFINALS                              */
         /* ====================================== */
 
         {
@@ -420,7 +519,7 @@ export const gcl13Cup: GCL13Cup = {
 
 
         /* ====================================== */
-        /* FINALS                                 */
+        /* FINALS                                  */
         /* ====================================== */
 
         {
