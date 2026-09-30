@@ -85,14 +85,14 @@ export const degTeam = {
 /* ============================================ */
 
 export const upcomingMatch: UpcomingMatch = {
-    date: "30. September 2026 ab 20.50 Uhr",
+    date: "TBD",
 
-    league: "GCL SPIELTAG 4",
+    league: "GCL SPIELTAG 5",
 
-    opponent: "REH Gaming",
+    opponent: "TBD",
 
     opponentLogo:
-        "/images/esport/gcl13/reh-gaming.png",
+        "",
 };
 
 
@@ -101,12 +101,12 @@ export const upcomingMatch: UpcomingMatch = {
 /* ============================================ */
 
 export const degSeasonStats = {
-    games: 7,
-    wins: 4,
-    losses: 2,
+    games: 10,
+    wins: 5,
+    losses: 4,
     overtimeLosses: 1,
-    goalsFor: 24,
-    goalsAgainst: 14,
+    goalsFor: 32,
+    goalsAgainst: 26,
 };
 
 
@@ -124,20 +124,20 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-        date: "28. September 2026",
+        date: "30. September 2026",
 
-        league: "GCL 13",
+        league: "GCL 13 - Pokal",
 
-        opponent: "Conexion",
+        opponent: "REH Gaming",
 
         opponentLogo:
-            "/images/esport/gcl13/conexion.png",
+            "/images/esport/gcl13/reh-gaming.png",
 
-        degScore: 1,
+        degScore: 5,
 
-        opponentScore: 3,
+        opponentScore: 4,
 
-        overtime: false,
+        overtime: true,
 
         shootout: false,
 
@@ -153,16 +153,16 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-        date: "28. September 2026",
+        date: "30. September 2026",
 
         league: "GCL 13",
 
-        opponent: "German Elite Hockey",
+        opponent: "REH Gaming",
 
         opponentLogo:
-            "/images/esport/gcl13/conexion.png",
+            "/images/esport/gcl13/reh-gaming.png",
 
-        degScore: 2,
+        degScore: 1,
 
         opponentScore: 3,
 
@@ -181,24 +181,24 @@ export const degMatches: DegMatch[] = [
     /* Ergebnis: 7:0                            */
     /* ======================================== */
 
-    {
-        date: "23. September 2026",
+   {
+        date: "30. September 2026",
 
         league: "GCL 13",
 
-        opponent: "German Elite Hockey",
+        opponent: "REH Gaming",
 
         opponentLogo:
-            "/images/esport/gcl13/german-elite-hockey.png",
+            "/images/esport/gcl13/reh-gaming.png",
 
-        degScore: 5,
+        degScore: 2,
 
-        opponentScore: 1,
+        opponentScore: 5,
 
         overtime: false,
 
         shootout: false,
 
-        home: true,
+        home: false,
     },
 ];
