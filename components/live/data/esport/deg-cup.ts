@@ -181,6 +181,7 @@ const teams = {
     valhallaVikings: {
         name: "Valhalla Vikings HC",
         logo: "/images/esport/gcl13/valhalla-vikings-hc.png",
+                        eliminated: true,
     },
 
     rehGaming: {
@@ -192,7 +193,6 @@ const teams = {
     hammerEisbaeren: {
         name: "Hammer Eisbaeren eSports",
         logo: "/images/esport/gcl13/hammer-eisbaeren-esports.png",
-                eliminated: true,
     },
 
     oldButGold: {
@@ -384,25 +384,25 @@ export const gcl13Cup: GCL13Cup = {
                 {
                     id: "gcl13-cup-r2-5",
 
-                    home: teams.scbEsports,
+                    home: teams.deadlyPhantoms,
                     away: teams.valhallaVikings,
 
-                    homeScore: 0,
+                    homeScore: 1,
                     awayScore: 0,
 
-                    played: false,
+                    played: true,
                 },
 
                 {
                     id: "gcl13-cup-r2-6",
 
                     home: teams.hammerEisbaeren,
-                    away: teams.deadlyPhantoms,
+                    away: teams.scbEsports,
 
                     homeScore: 0,
-                    awayScore: 1,
+                    awayScore: 0,
 
-                    played: true,
+                    played: false,
                 },
 
                 {

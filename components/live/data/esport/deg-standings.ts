@@ -14,6 +14,8 @@
 /* Platz 1–8 Playoffs                            */
 /* Platz 9 keine Playoffs                        */
 /*                                              */
+/* Stand: 01.10.2026                            */
+/*                                              */
 /* ============================================ */
 
 
@@ -105,7 +107,7 @@ export type DegStanding = {
 /* 8 PLAYOFF-PLÄTZE                             */
 /* 1 TEAM OHNE PLAYOFFS                         */
 /*                                              */
-/* Stand: 30.09.2026                            */
+/* Stand: 01.10.2026                            */
 /* ============================================ */
 
 export const degStandings: DegStanding[] = [
@@ -210,12 +212,45 @@ export const degStandings: DegStanding[] = [
 
 
   /* ---------------------------------------- */
-  /* 04 – DEG ESPORTS                         */
+  /* 04 – HOCKEYHOLICS                       */
   /* PLAYOFFS: JA                             */
   /* ---------------------------------------- */
 
   {
     position: 4,
+    team: "Hockeyholics",
+    logo: "/images/esport/gcl13/hockeyholics.png",
+    players: 7,
+
+    gamesPlayed: 5,
+    wins: 3,
+    overtimeWins: 0,
+    overtimeLosses: 1,
+    losses: 1,
+
+    goalsFor: 18,
+    goalsAgainst: 14,
+    points: 10,
+
+    powerplayPercentage: null,
+    penaltyKillPercentage: 100,
+    pim: 12,
+    shots: 86,
+    faceoffPercentage: 49.06,
+    hits: 31,
+    last10: "3-1-1",
+
+    playoffs: true,
+  },
+
+
+  /* ---------------------------------------- */
+  /* 05 – DEG ESPORTS                         */
+  /* PLAYOFFS: JA                             */
+  /* ---------------------------------------- */
+
+  {
+    position: 5,
     team: "DEG eSports",
     logo: "/images/esport/gcl13/deg-esports.png",
     players: 11,
@@ -235,7 +270,7 @@ export const degStandings: DegStanding[] = [
     pim: 14,
     shots: 106,
     faceoffPercentage: 51.68,
-    hits: 63,
+    hits: 53,
     last10: "3-4-1",
 
     playoffs: true,
@@ -244,12 +279,45 @@ export const degStandings: DegStanding[] = [
 
 
   /* ---------------------------------------- */
-  /* 05 – SCB ESPORTS                         */
+  /* 06 – GERMAN ELITE HOCKEY                */
   /* PLAYOFFS: JA                             */
   /* ---------------------------------------- */
 
   {
-    position: 5,
+    position: 6,
+    team: "German Elite Hockey",
+    logo: "/images/esport/gcl13/german-elite-hockey.png",
+    players: 9,
+
+    gamesPlayed: 9,
+    wins: 2,
+    overtimeWins: 1,
+    overtimeLosses: 0,
+    losses: 6,
+
+    goalsFor: 20,
+    goalsAgainst: 29,
+    points: 8,
+
+    powerplayPercentage: 11.76,
+    penaltyKillPercentage: 72.73,
+    pim: 20,
+    shots: 119,
+    faceoffPercentage: 47.32,
+    hits: 119,
+    last10: "3-6-0",
+
+    playoffs: true,
+  },
+
+
+  /* ---------------------------------------- */
+  /* 07 – SCB ESPORTS                         */
+  /* PLAYOFFS: JA                             */
+  /* ---------------------------------------- */
+
+  {
+    position: 7,
     team: "SCB eSports",
     logo: "/images/esport/gcl13/scb-esports.png",
     players: 8,
@@ -271,72 +339,6 @@ export const degStandings: DegStanding[] = [
     faceoffPercentage: 57.46,
     hits: 64,
     last10: "3-5-0",
-
-    playoffs: true,
-  },
-
-
-  /* ---------------------------------------- */
-  /* 06 – HOCKEYHOLICS                        */
-  /* PLAYOFFS: JA                             */
-  /* ---------------------------------------- */
-
-  {
-    position: 6,
-    team: "Hockeyholics",
-    logo: "/images/esport/gcl13/hockeyholics.png",
-    players: 7,
-
-    gamesPlayed: 4,
-    wins: 2,
-    overtimeWins: 0,
-    overtimeLosses: 1,
-    losses: 1,
-
-    goalsFor: 14,
-    goalsAgainst: 13,
-    points: 7,
-
-    powerplayPercentage: null,
-    penaltyKillPercentage: 100,
-    pim: 10,
-    shots: 71,
-    faceoffPercentage: 49.44,
-    hits: 24,
-    last10: "2-1-1",
-
-    playoffs: true,
-  },
-
-
-  /* ---------------------------------------- */
-  /* 07 – GERMAN ELITE HOCKEY                */
-  /* PLAYOFFS: JA                             */
-  /* ---------------------------------------- */
-
-  {
-    position: 7,
-    team: "German Elite Hockey",
-    logo: "/images/esport/gcl13/german-elite-hockey.png",
-    players: 9,
-
-    gamesPlayed: 7,
-    wins: 1,
-    overtimeWins: 1,
-    overtimeLosses: 0,
-    losses: 5,
-
-    goalsFor: 16,
-    goalsAgainst: 25,
-    points: 5,
-
-    powerplayPercentage: 13.33,
-    penaltyKillPercentage: 62.5,
-    pim: 16,
-    shots: 106,
-    faceoffPercentage: 46.07,
-    hits: 102,
-    last10: "2-5-0",
 
     playoffs: true,
   },
