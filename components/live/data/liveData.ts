@@ -39,12 +39,6 @@ export const liveData = {
 
     events: [  
 
-                  {
-        day: "DO",
-        date: "01. OKT",
-        time: "19:30 Uhr",
-        title: "NHL 27 - GOALIE",
-      }, 
                         {
         day: "SA",
         date: "03. OKT",
@@ -56,7 +50,7 @@ export const liveData = {
         day: "MO",
         date: "05. OKT",
         time: "19:30 Uhr",
-        title: "NHL 27 - BE A PRO",
+        title: "NHL 27 - GOALIE",
       }, 
 
                                     {
@@ -64,6 +58,13 @@ export const liveData = {
         date: "06. OKT",
         time: "20:50 Uhr",
         title: "DEG eSPORTS",
+      }, 
+
+                                          {
+        day: "FR",
+        date: "09. OKT",
+        time: "19:30 Uhr",
+        title: "NHL 27 - BE A PRO",
       }, 
       
     ],
