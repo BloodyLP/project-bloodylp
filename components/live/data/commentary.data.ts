@@ -2,7 +2,7 @@ export const nextCommentary = {
   platform: "SportEurope.TV",
 
   league: "DEL2",
-  matchday: "5. Spieltag",
+  matchday: "8. Spieltag",
 
   date: "11.10.2026",
   time: "18:30 Uhr",
