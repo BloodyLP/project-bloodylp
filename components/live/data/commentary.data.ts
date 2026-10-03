@@ -4,16 +4,16 @@ export const nextCommentary = {
   league: "DEL2",
   matchday: "5. Spieltag",
 
-  date: "02.10.2026",
-  time: "19:30 Uhr",
+  date: "11.10.2026",
+  time: "18:30 Uhr",
 
-  role: "Kommentator",
+  role: "Moderator",
 
   homeTeam: "EHC Freiburg",
-  awayTeam: "EV Landshut",
+  awayTeam: "Starbulls Rosenheim",
 
   homeLogo: "/teams/del2/ehc_freiburg.png",
-  awayLogo: "/teams/del2/ev_landshut.svg",
+  awayLogo: "/teams/del2/starbulls_rosenheim.png",
 
-  streamUrl: "https://sporteurope.tv/ehc-freiburg/ehc-freiburg-vs-ev-landshut",
+  streamUrl: "https://sporteurope.tv/ehc-freiburg/ehc-freiburg-vs-starbulls-rosenheim",
 };
