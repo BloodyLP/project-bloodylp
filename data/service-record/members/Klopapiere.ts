@@ -42,7 +42,7 @@ export const Klopapiere: ServiceRecordMember = {
     /**
      * Avatar
      */
-    avatar:"/members/klopapiere/avatar.png",
+    avatar:"/members/Klopapiere/avatar.png",
 
     /**
      * Dienstgrad

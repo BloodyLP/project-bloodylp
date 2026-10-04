@@ -42,7 +42,7 @@ export const ZentralratDerSchneemänner: ServiceRecordMember = {
     /**
      * Avatar
      */
-    avatar:"/members/zentralratDerSchneemänner/avatar.png",
+    avatar:"/members/ZentralratDerSchneemänner/avatar.png",
 
     /**
      * Dienstgrad
