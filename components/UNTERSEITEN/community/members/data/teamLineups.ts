@@ -98,11 +98,11 @@ export const BLOODY_ARMY_LINEUP: TeamLineup = {
 
 leadership: {
 
-    captain: "BA-001",
+    captain: "",
 
-    assistantLeft: "BA-010",
+    assistantLeft: "",
 
-    assistantRight: "BA-009",
+    assistantRight: "",
 
 },
 
@@ -120,7 +120,7 @@ forwards: {
 
     line2: {
 
-        lw: "BA-020",
+        lw: "BA-007",
 
         c: "BA-015",
 
@@ -130,7 +130,7 @@ forwards: {
 
     line3: {
 
-        lw: "BA-007",
+        lw: "BA-020",
 
         c: "BA-028",
 
