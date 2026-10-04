@@ -52,18 +52,18 @@ export const liveData = {
         title: "NHL 27 - GOALIE",
       }, 
 
-                                          {
-        day: "MI",
-        date: "07. OKT",
-        time: "20:50 Uhr",
-        title: "DEG eSPORTS",
-      }, 
-
                                                 {
         day: "DO",
         date: "09. OKT",
         time: "20:50 Uhr",
         title: "DEG eSPORTS",
+      }, 
+
+                                                      {
+        day: "SA",
+        date: "10. OKT",
+        time: "19:30 Uhr",
+        title: "NHL 27 - Be A Pro",
       }, 
       
       
