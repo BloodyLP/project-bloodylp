@@ -42,12 +42,12 @@ export const knecht: ServiceRecordMember = {
     /**
      * Avatar
      */
-    avatar:"/members/knecht/avatar.png",
+    avatar:"/members/knecht/avatar2.png",
 
     /**
      * Dienstgrad
      */
-    rank:"ba-schluesselspieler",
+    rank:"ba-elite-spieler-organisation",
 
     /**
      * Organisation

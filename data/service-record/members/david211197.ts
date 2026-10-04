@@ -42,12 +42,12 @@ export const david211197: ServiceRecordMember = {
     /**
      * Avatar
      */
-    avatar:"/members/david211197/avatar.png",
+    avatar:"/members/david211197/avatar2.png",
 
     /**
      * Dienstgrad
      */
-    rank:"us-army-cw5",
+    rank:"us-army-major",
 
     /**
      * Organisation

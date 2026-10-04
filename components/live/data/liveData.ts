@@ -49,14 +49,14 @@ export const liveData = {
         day: "DI",
         date: "06. OKT",
         time: "20:50 Uhr",
-        title: "DEG eSPORTS",
+        title: "EA FC 27",
       }, 
 
                                           {
         day: "MI",
         date: "07. OKT",
-        time: "19:30 Uhr",
-        title: "EA FC 27",
+        time: "20:50 Uhr",
+        title: "DEG eSPORTS",
       }, 
 
                                                 {

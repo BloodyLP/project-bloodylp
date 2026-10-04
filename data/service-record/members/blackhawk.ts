@@ -151,7 +151,7 @@ export const blackhawk: ServiceRecordMember = {
 
         princeOfWalesTrophy: {
 
-        years: [2029],
+        years: [2019],
 
     },
 

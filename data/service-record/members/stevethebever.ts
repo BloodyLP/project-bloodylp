@@ -68,7 +68,7 @@ export const stevethebever: ServiceRecordMember = {
     /**
      * Avatar
      */
-    avatar:"/members/stevethebever/avatar.png",
+    avatar:"/members/stevethebever/avatar2.png",
 
 
 

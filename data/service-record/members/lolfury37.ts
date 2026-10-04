@@ -141,9 +141,9 @@ playerNumber:"37",
     patreon:0,
  
 /**
- * Patreon GOAT
+ * Patreon Bronze
  *
- * Höchste Patreon-Auszeichnung.
+ * Erste Patreon-Auszeichnung.
  */
 patreonBronze: true,
     /**
