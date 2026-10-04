@@ -75,7 +75,7 @@ const featuredMembers: Record<number, FeaturedMember> = {
     },
 
     7: {
-        image: "/members/david211197/avatar.png",
+        image: "/members/david211197/avatar2.png",
         name: "David211197",
         organization: "bloodyArmy",
     },
@@ -87,13 +87,13 @@ const featuredMembers: Record<number, FeaturedMember> = {
     },
 
     3: {
-        image: "/members/knecht/avatar.png",
+        image: "/members/knecht/avatar2.png",
         name: "Kn3cht82",
         organization: "bloodyArmy",
     },
 
     1: {
-        image: "/members/stevethebever/avatar.png",
+        image: "/members/stevethebever/avatar2.png",
         name: "stevethebever",
         organization: "bloodyArmy",
     },
