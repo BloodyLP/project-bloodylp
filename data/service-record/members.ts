@@ -164,6 +164,10 @@ import { stitch } from "./members/stitch";
 
 import { donpaco } from "./members/donpaco";
 
+import { Klopapiere } from "./members/Klopapiere";
+
+import { ZentralratDerSchneemänner } from "./members/ZentralratDerSchneemänner";
+
 
 
 export const MEMBERS: ServiceRecordMember[] = [
@@ -247,4 +251,8 @@ export const MEMBERS: ServiceRecordMember[] = [
     stitch,
 
     donpaco,
+
+    Klopapiere,
+
+    ZentralratDerSchneemänner,
 ];

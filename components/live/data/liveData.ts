@@ -42,14 +42,14 @@ export const liveData = {
         day: "MO",
         date: "05. OKT",
         time: "19:30 Uhr",
-        title: "NHL 27 - GOALIE",
+        title: "EA FC 27",
       }, 
 
                                     {
         day: "DI",
         date: "06. OKT",
-        time: "20:50 Uhr",
-        title: "EA FC 27",
+        time: "19:30 Uhr",
+        title: "NHL 27 - GOALIE",
       }, 
 
                                           {
