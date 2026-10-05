@@ -198,11 +198,11 @@ export const YOUNG_ARMY_LINEUP: TeamLineup = {
 
 leadership: {
 
-    captain: "BA-029",
+    captain: "",
 
-    assistantLeft: "BA-019",
+    assistantLeft: "",
 
-    assistantRight: "BA-017",
+    assistantRight: "",
 
 },
 
@@ -210,7 +210,7 @@ forwards: {
 
     line1: {
 
-        lw: "BA-037",
+        lw: "BA-029",
 
         c: "BA-041",
 
@@ -220,7 +220,7 @@ forwards: {
 
     line2: {
 
-        lw: "BA-029",
+        lw: "BA-019",
 
         c: "",
 
@@ -230,7 +230,7 @@ forwards: {
 
     line3: {
 
-        lw: "BA-019",
+        lw: "BA-017",
 
         c: "",
 
@@ -240,9 +240,9 @@ forwards: {
 
     line4: {
 
-        lw: "BA-017",
+        lw: "",
 
-        c: "",
+        c: "BA-040",
 
         rw: "BA-016",
 
@@ -254,7 +254,7 @@ defense: {
 
     pair1: {
 
-        ld: "",
+        ld: "BA-012",
 
         rd: "BA-024",
 
@@ -262,7 +262,7 @@ defense: {
 
     pair2: {
 
-        ld: "BA-012",
+        ld: "",
 
         rd: "",
 
