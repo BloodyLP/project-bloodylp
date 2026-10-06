@@ -11,6 +11,8 @@
 /* Description:                                 */
 /* GCL 13 – Pokal                               */
 /*                                              */
+/* Stand: 06.10.2026                            */
+/*                                              */
 /* ============================================ */
 
 
@@ -19,43 +21,49 @@
 /* ============================================ */
 
 export type GCL13CupTeam = {
-    name: string;
-    logo: string;
+  name: string;
+  logo: string;
 
-    /* Kennzeichnung für DEG eSports */
-    isDeg?: boolean;
+  /**
+   * Kennzeichnung für DEG eSports
+   */
+  isDeg?: boolean;
 
-    /* Team ist aus dem Pokal ausgeschieden */
-    eliminated?: boolean;
+  /**
+   * Team ist aus dem Pokal ausgeschieden
+   */
+  eliminated?: boolean;
 };
 
 
 export type GCL13CupMatch = {
-    id: string;
+  id: string;
 
-    home: GCL13CupTeam;
-    away: GCL13CupTeam;
+  home: GCL13CupTeam;
+  away: GCL13CupTeam;
 
-    homeScore: number;
-    awayScore: number;
+  homeScore: number;
+  awayScore: number;
 
-    /* true = Spiel wurde bereits gespielt */
-    played: boolean;
+  /**
+   * true = Spiel wurde bereits gespielt
+   */
+  played: boolean;
 };
 
 
 export type GCL13CupRound = {
-    name: string;
-    matches: GCL13CupMatch[];
+  name: string;
+  matches: GCL13CupMatch[];
 };
 
 
 export type GCL13Cup = {
-    name: string;
-    logo: string;
-    season: string;
+  name: string;
+  logo: string;
+  season: string;
 
-    rounds: GCL13CupRound[];
+  rounds: GCL13CupRound[];
 };
 
 
@@ -65,150 +73,153 @@ export type GCL13Cup = {
 
 const teams = {
 
-    /* ---------------------------------------- */
-    /* ROUND 1 TEAMS                            */
-    /* ---------------------------------------- */
+  /* ---------------------------------------- */
+  /* ROUND 1 TEAMS                            */
+  /* ---------------------------------------- */
 
-    iserlohn: {
-        name: "Iserlohn Roosters eSports",
-        logo: "/images/esport/gcl13/iserlohn-roosters-esports.png",
+  iserlohn: {
+    name: "Iserlohn Roosters eSports",
+    logo: "/images/esport/gcl13/iserlohn-roosters-esports.png",
+    eliminated: true,
+  },
+
+  germanEliteHockey: {
+    name: "German Elite Hockey",
+    logo: "/images/esport/gcl13/german-elite-hockey.png",
+  },
+
+  clownsOnIce: {
+    name: "Clowns On Ice",
+    logo: "/images/esport/gcl13/clowns-on-ice.png",
+  },
+
+  blackIceRavens: {
+    name: "Black Ice Ravens",
+    logo: "/images/esport/gcl13/black-ice-ravens.png",
+    eliminated: true,
+  },
+
+  ehcOlten: {
+    name: "EHC Olten eSports",
+    logo: "/images/esport/gcl13/ehc-olten-esports.png",
         eliminated: true,
-    },
+  },
 
-    germanEliteHockey: {
-        name: "German Elite Hockey",
-        logo: "/images/esport/gcl13/german-elite-hockey.png",
-    },
+  rackelhahn: {
+    name: "SG Rackelhahn eV",
+    logo: "/images/esport/gcl13/sc-rackelhahn.png",
+    eliminated: true,
+  },
 
-    clownsOnIce: {
-        name: "Clowns On Ice",
-        logo: "/images/esport/gcl13/clowns-on-ice.png",
-    },
+  hannover: {
+    name: "Hannover Indians eSports",
+    logo: "/images/esport/gcl13/hannover-indians-esports.png",
+    eliminated: true,
+  },
 
-    blackIceRavens: {
-        name: "Black Ice Ravens",
-        logo: "/images/esport/gcl13/black-ice-ravens.png",
+  nuernberg: {
+    name: "Nürnberg Nidhoggr",
+    logo: "/images/esport/gcl13/nuernberg-nidhoggr2.jpg",
+  },
+
+  connexion: {
+    name: "Connexion",
+    logo: "/images/esport/gcl13/conexion.png",
+  },
+
+  flashback: {
+    name: "Flaschback Skwad",
+    logo: "/images/esport/gcl13/flaschback-squad.png",
+    eliminated: true,
+  },
+
+  yetis: {
+    name: "Eishockeynet Yetis",
+    logo: "/images/esport/gcl13/eishockeynet-yetis.png",
+    eliminated: true,
+  },
+
+  deadlyPhantoms: {
+    name: "Deadly Phantoms",
+    logo: "/images/esport/gcl13/deadly-phantoms.png",
+  },
+
+  outlaws: {
+    name: "Outlaws Hockey",
+    logo: "/images/esport/gcl13/outlaws-hockey.png",
+    eliminated: true,
+  },
+
+  deg: {
+    name: "DEG eSports",
+    logo: "/images/esport/gcl13/deg-esports.png",
+    isDeg: true,
+  },
+
+
+  /* ---------------------------------------- */
+  /* ROUND 2 – NEUE TEAMS                     */
+  /* ---------------------------------------- */
+
+  ecKasselHuskies: {
+    name: "EC Kassel Huskies eSports",
+    logo: "/images/esport/gcl13/ec-kassel-huskies-esports.png",
         eliminated: true,
-    },
+  },
 
-    ehcOlten: {
-        name: "EHC Olten eSports",
-        logo: "/images/esport/gcl13/ehc-olten-esports.png",
-    },
+  hockeyholics: {
+    name: "Hockeyholics",
+    logo: "/images/esport/gcl13/hockeyholics.png",
+  },
 
-    rackelhahn: {
-        name: "SG Rackelhahn eV",
-        logo: "/images/esport/gcl13/sc-rackelhahn.png",
-        eliminated: true,
-    },
+  theLastShift: {
+    name: "The Last Shift",
+    logo: "/images/esport/gcl13/the-last-shift.png",
+  },
 
-    hannover: {
-        name: "Hannover Indians eSports",
-        logo: "/images/esport/gcl13/hannover-indians-esports.png",
-        eliminated: true,
-    },
+  catastrophicTurnovers: {
+    name: "Catastrophic Turnovers",
+    logo: "/images/esport/gcl13/catastrophic-turnovers.png",
+    eliminated: true,
+  },
 
-    nuernberg: {
-        name: "Nürnberg Nidhoggr",
-        logo: "/images/esport/gcl13/nuernberg-nidhoggr2.jpg",
-    },
+  scbEsports: {
+    name: "SCB eSports",
+    logo: "/images/esport/gcl13/scb-esports.png",
+  },
 
-    connexion: {
-        name: "Connexion",
-        logo: "/images/esport/gcl13/conexion.png",
-    },
+  valhallaVikings: {
+    name: "Valhalla Vikings HC",
+    logo: "/images/esport/gcl13/valhalla-vikings-hc.png",
+    eliminated: true,
+  },
 
-    flashback: {
-        name: "Flaschback Skwad",
-        logo: "/images/esport/gcl13/flaschback-squad.png",
-        eliminated: true,
-    },
+  rehGaming: {
+    name: "REH Gaming",
+    logo: "/images/esport/gcl13/reh-gaming.png",
+    eliminated: true,
+  },
 
-    yetis: {
-        name: "Eishockeynet Yetis",
-        logo: "/images/esport/gcl13/eishockeynet-yetis.png",
-        eliminated: true,
-    },
+  hammerEisbaeren: {
+    name: "Hammer Eisbaeren eSports",
+    logo: "/images/esport/gcl13/hammer-eisbaeren-esports.png",
+    eliminated: true,
+  },
 
-    deadlyPhantoms: {
-        name: "Deadly Phantoms",
-        logo: "/images/esport/gcl13/deadly-phantoms.png",
-    },
-
-    outlaws: {
-        name: "Outlaws Hockey",
-        logo: "/images/esport/gcl13/outlaws-hockey.png",
-        eliminated: true,
-    },
-
-    deg: {
-        name: "DEG eSports",
-        logo: "/images/esport/gcl13/deg-esports.png",
-        isDeg: true,
-    },
+  oldButGold: {
+    name: "Old but Gold",
+    logo: "/images/esport/gcl13/old-but-gold.png",
+  },
 
 
-    /* ---------------------------------------- */
-    /* ROUND 2 – NEUE TEAMS                     */
-    /* ---------------------------------------- */
+  /* ---------------------------------------- */
+  /* PLACEHOLDER                              */
+  /* ---------------------------------------- */
 
-    ecKasselHuskies: {
-        name: "EC Kassel Huskies eSports",
-        logo: "/images/esport/gcl13/ec-kassel-huskies-esports.png",
-    },
-
-    hockeyholics: {
-        name: "Hockeyholics",
-        logo: "/images/esport/gcl13/hockeyholics.png",
-    },
-
-    theLastShift: {
-        name: "The Last Shift",
-        logo: "/images/esport/gcl13/the-last-shift.png",
-    },
-
-    catastrophicTurnovers: {
-        name: "Catastrophic Turnovers",
-        logo: "/images/esport/gcl13/catastrophic-turnovers.png",
-                eliminated: true,
-    },
-
-    scbEsports: {
-        name: "SCB eSports",
-        logo: "/images/esport/gcl13/scb-esports.png",
-    },
-
-    valhallaVikings: {
-        name: "Valhalla Vikings HC",
-        logo: "/images/esport/gcl13/valhalla-vikings-hc.png",
-                        eliminated: true,
-    },
-
-    rehGaming: {
-        name: "REH Gaming",
-        logo: "/images/esport/gcl13/reh-gaming.png",
-        eliminated: true,
-    },
-
-    hammerEisbaeren: {
-        name: "Hammer Eisbaeren eSports",
-        logo: "/images/esport/gcl13/hammer-eisbaeren-esports.png",
-    },
-
-    oldButGold: {
-        name: "Old but Gold",
-        logo: "/images/esport/gcl13/old-but-gold.png",
-    },
-
-
-    /* ---------------------------------------- */
-    /* PLACEHOLDER                              */
-    /* ---------------------------------------- */
-
-    tbd: {
-        name: "TBD",
-        logo: "/images/esport/logos/gcl.png",
-    },
+  tbd: {
+    name: "TBD",
+    logo: "/images/esport/logos/gcl.png",
+  },
 
 };
 
@@ -219,361 +230,365 @@ const teams = {
 
 export const gcl13Cup: GCL13Cup = {
 
-    name: "GCL 13",
+  name: "GCL 13",
 
-    logo: "/images/esport/logos/gcl.png",
+  logo: "/images/esport/logos/gcl.png",
 
-    season: "GCL 13",
+  season: "GCL 13",
 
-    rounds: [
+  rounds: [
 
-        /* ====================================== */
-        /* ROUND 1                                */
-        /* ====================================== */
+    /* ====================================== */
+    /* ROUND 1                                 */
+    /* ====================================== */
 
-        {
-            name: "Round 1",
+    {
+      name: "Round 1",
 
-            matches: [
-
-                {
-                    id: "gcl13-cup-r1-1",
-
-                    home: teams.iserlohn,
-                    away: teams.germanEliteHockey,
-
-                    homeScore: 0,
-                    awayScore: 1,
-
-                    played: true,
-                },
-
-                {
-                    id: "gcl13-cup-r1-2",
-
-                    home: teams.clownsOnIce,
-                    away: teams.blackIceRavens,
-
-                    homeScore: 1,
-                    awayScore: 0,
-
-                    played: true,
-                },
-
-                {
-                    id: "gcl13-cup-r1-3",
-
-                    home: teams.ehcOlten,
-                    away: teams.rackelhahn,
-
-                    homeScore: 1,
-                    awayScore: 0,
-
-                    played: true,
-                },
-
-                {
-                    id: "gcl13-cup-r1-4",
-
-                    home: teams.hannover,
-                    away: teams.nuernberg,
-
-                    homeScore: 0,
-                    awayScore: 1,
-
-                    played: true,
-                },
-
-                {
-                    id: "gcl13-cup-r1-5",
-
-                    home: teams.connexion,
-                    away: teams.flashback,
-
-                    homeScore: 1,
-                    awayScore: 0,
-
-                    played: true,
-                },
-
-                {
-                    id: "gcl13-cup-r1-6",
-
-                    home: teams.yetis,
-                    away: teams.deadlyPhantoms,
-
-                    homeScore: 0,
-                    awayScore: 1,
-
-                    played: true,
-                },
-
-                {
-                    id: "gcl13-cup-r1-7",
-
-                    home: teams.outlaws,
-                    away: teams.deg,
-
-                    homeScore: 0,
-                    awayScore: 1,
-
-                    played: true,
-                },
-
-            ],
-        },
-
-
-        /* ====================================== */
-        /* ROUND 2                                */
-        /* ====================================== */
+      matches: [
 
         {
-            name: "Round 2",
+          id: "gcl13-cup-r1-1",
 
-            matches: [
+          home: teams.iserlohn,
+          away: teams.germanEliteHockey,
 
-                {
-                    id: "gcl13-cup-r2-1",
+          homeScore: 0,
+          awayScore: 1,
 
-                    home: teams.ecKasselHuskies,
-                    away: teams.germanEliteHockey,
-
-                    homeScore: 0,
-                    awayScore: 0,
-
-                    played: false,
-                },
-
-                {
-                    id: "gcl13-cup-r2-2",
-
-                    home: teams.hockeyholics,
-                    away: teams.theLastShift,
-
-                    homeScore: 0,
-                    awayScore: 0,
-
-                    played: false,
-                },
-
-                {
-                    id: "gcl13-cup-r2-3",
-
-                    home: teams.catastrophicTurnovers,
-                    away: teams.connexion,
-
-                    homeScore: 0,
-                    awayScore: 1,
-
-                    played: true,
-                },
-
-                {
-                    id: "gcl13-cup-r2-4",
-
-                    home: teams.nuernberg,
-                    away: teams.ehcOlten,
-
-                    homeScore: 0,
-                    awayScore: 0,
-
-                    played: false,
-                },
-
-                {
-                    id: "gcl13-cup-r2-5",
-
-                    home: teams.deadlyPhantoms,
-                    away: teams.valhallaVikings,
-
-                    homeScore: 1,
-                    awayScore: 0,
-
-                    played: true,
-                },
-
-                {
-                    id: "gcl13-cup-r2-6",
-
-                    home: teams.hammerEisbaeren,
-                    away: teams.scbEsports,
-
-                    homeScore: 0,
-                    awayScore: 0,
-
-                    played: false,
-                },
-
-                {
-                    id: "gcl13-cup-r2-7",
-
-                    home: teams.rehGaming,
-                    away: teams.deg,
-
-                    homeScore: 0,
-                    awayScore: 1,
-
-                    played: true,
-                },
-
-                {
-                    id: "gcl13-cup-r2-8",
-
-                    home: teams.clownsOnIce,
-                    away: teams.oldButGold,
-
-                    homeScore: 0,
-                    awayScore: 0,
-
-                    played: false,
-                },
-
-            ],
+          played: true,
         },
-
-
-        /* ====================================== */
-        /* QUARTERFINALS                          */
-        /* ====================================== */
 
         {
-            name: "Quarterfinals",
+          id: "gcl13-cup-r1-2",
 
-            matches: [
+          home: teams.clownsOnIce,
+          away: teams.blackIceRavens,
 
-                /* -------------------------------- */
-                /* QF 1                             */
-                /* -------------------------------- */
+          homeScore: 1,
+          awayScore: 0,
 
-                {
-                    id: "gcl13-cup-qf-1",
-
-                    home: teams.tbd,
-                    away: teams.deg,
-
-                    homeScore: 0,
-                    awayScore: 0,
-
-                    played: false,
-                },
-
-
-                /* -------------------------------- */
-                /* QF 2                             */
-                /* -------------------------------- */
-
-                {
-                    id: "gcl13-cup-qf-2",
-
-                    home: teams.connexion,
-                    away: teams.tbd,
-
-                    homeScore: 0,
-                    awayScore: 0,
-
-                    played: false,
-                },
-
-
-                /* -------------------------------- */
-                /* QF 3                             */
-                /* -------------------------------- */
-
-                {
-                    id: "gcl13-cup-qf-3",
-
-                    home: teams.tbd,
-                    away: teams.deadlyPhantoms,
-
-                    homeScore: 0,
-                    awayScore: 0,
-
-                    played: false,
-                },
-
-
-                /* -------------------------------- */
-                /* QF 4                             */
-                /* -------------------------------- */
-
-                {
-                    id: "gcl13-cup-qf-4",
-
-                    home: teams.tbd,
-                    away: teams.tbd,
-
-                    homeScore: 0,
-                    awayScore: 0,
-
-                    played: false,
-                },
-
-            ],
+          played: true,
         },
-
-
-        /* ====================================== */
-        /* SEMIFINALS                             */
-        /* ====================================== */
 
         {
-            name: "Semifinals",
+          id: "gcl13-cup-r1-3",
 
-            matches: [
+          home: teams.ehcOlten,
+          away: teams.rackelhahn,
 
-                {
-                    id: "gcl13-cup-sf-1",
+          homeScore: 1,
+          awayScore: 0,
 
-                    home: teams.tbd,
-                    away: teams.tbd,
-
-                    homeScore: 0,
-                    awayScore: 0,
-
-                    played: false,
-                },
-
-                {
-                    id: "gcl13-cup-sf-2",
-
-                    home: teams.tbd,
-                    away: teams.tbd,
-
-                    homeScore: 0,
-                    awayScore: 0,
-
-                    played: false,
-                },
-
-            ],
+          played: true,
         },
-
-
-        /* ====================================== */
-        /* FINAL                                  */
-        /* ====================================== */
 
         {
-            name: "Final",
+          id: "gcl13-cup-r1-4",
 
-            matches: [
+          home: teams.hannover,
+          away: teams.nuernberg,
 
-                {
-                    id: "gcl13-cup-final",
+          homeScore: 0,
+          awayScore: 1,
 
-                    home: teams.tbd,
-                    away: teams.tbd,
-
-                    homeScore: 0,
-                    awayScore: 0,
-
-                    played: false,
-                },
-
-            ],
+          played: true,
         },
 
-    ],
+        {
+          id: "gcl13-cup-r1-5",
+
+          home: teams.connexion,
+          away: teams.flashback,
+
+          homeScore: 1,
+          awayScore: 0,
+
+          played: true,
+        },
+
+        {
+          id: "gcl13-cup-r1-6",
+
+          home: teams.yetis,
+          away: teams.deadlyPhantoms,
+
+          homeScore: 0,
+          awayScore: 1,
+
+          played: true,
+        },
+
+        {
+          id: "gcl13-cup-r1-7",
+
+          home: teams.outlaws,
+          away: teams.deg,
+
+          homeScore: 0,
+          awayScore: 1,
+
+          played: true,
+        },
+
+      ],
+    },
+
+
+    /* ====================================== */
+    /* ROUND 2                                 */
+    /* ====================================== */
+
+    {
+      name: "Round 2",
+
+      matches: [
+
+        {
+          id: "gcl13-cup-r2-1",
+
+          home: teams.ecKasselHuskies,
+          away: teams.germanEliteHockey,
+
+          homeScore: 0,
+          awayScore: 1,
+
+          played: true,
+        },
+
+        {
+          id: "gcl13-cup-r2-2",
+
+          home: teams.hockeyholics,
+          away: teams.theLastShift,
+
+          homeScore: 0,
+          awayScore: 0,
+
+          played: false,
+        },
+
+        {
+          id: "gcl13-cup-r2-3",
+
+          home: teams.catastrophicTurnovers,
+          away: teams.connexion,
+
+          homeScore: 0,
+          awayScore: 1,
+
+          played: true,
+        },
+
+        {
+          id: "gcl13-cup-r2-4",
+
+          home: teams.nuernberg,
+          away: teams.ehcOlten,
+
+          homeScore: 1,
+          awayScore: 0,
+
+          played: true,
+        },
+
+        {
+          id: "gcl13-cup-r2-5",
+
+          home: teams.scbEsports,
+          away: teams.valhallaVikings,
+
+          homeScore: 1,
+          awayScore: 0,
+
+          played: true,
+        },
+
+        {
+          id: "gcl13-cup-r2-6",
+
+          home: teams.hammerEisbaeren,
+          away: teams.deadlyPhantoms,
+
+          homeScore: 0,
+          awayScore: 1,
+
+          played: true,
+        },
+
+        {
+          id: "gcl13-cup-r2-7",
+
+          home: teams.rehGaming,
+          away: teams.deg,
+
+          homeScore: 0,
+          awayScore: 1,
+
+          played: true,
+        },
+
+        {
+          id: "gcl13-cup-r2-8",
+
+          home: teams.clownsOnIce,
+          away: teams.oldButGold,
+
+          homeScore: 0,
+          awayScore: 0,
+
+          played: false,
+        },
+
+      ],
+    },
+
+
+    /* ====================================== */
+    /* QUARTERFINALS                           */
+    /* ====================================== */
+
+    {
+      name: "Quarterfinals",
+
+      matches: [
+
+        {
+          id: "gcl13-cup-qf-1",
+
+          home: teams.tbd,
+          away: teams.deg,
+
+          homeScore: 0,
+          awayScore: 0,
+
+          played: false,
+        },
+
+        {
+          id: "gcl13-cup-qf-2",
+
+          home: teams.connexion,
+          away: teams.tbd,
+
+          homeScore: 0,
+          awayScore: 0,
+
+          played: false,
+        },
+
+        {
+          id: "gcl13-cup-qf-3",
+
+          home: teams.tbd,
+          away: teams.deadlyPhantoms,
+
+          homeScore: 0,
+          awayScore: 0,
+
+          played: false,
+        },
+
+        {
+          id: "gcl13-cup-qf-4",
+
+          home: teams.germanEliteHockey,
+          away: teams.tbd,
+
+          homeScore: 0,
+          awayScore: 0,
+
+          played: false,
+        },
+
+            {
+          id: "gcl13-cup-qf-5",
+
+          home: teams.scbEsports,
+          away: teams.tbd,
+
+          homeScore: 0,
+          awayScore: 0,
+
+          played: false,
+        },
+                {
+          id: "gcl13-cup-qf-6",
+
+          home: teams.nuernberg,
+          away: teams.tbd,
+
+          homeScore: 0,
+          awayScore: 0,
+
+          played: false,
+        },
+
+      ],
+    },
+
+
+    /* ====================================== */
+    /* SEMIFINALS                              */
+    /* ====================================== */
+
+    {
+      name: "Semifinals",
+
+      matches: [
+
+        {
+          id: "gcl13-cup-sf-1",
+
+          home: teams.tbd,
+          away: teams.tbd,
+
+          homeScore: 0,
+          awayScore: 0,
+
+          played: false,
+        },
+
+        {
+          id: "gcl13-cup-sf-2",
+
+          home: teams.tbd,
+          away: teams.tbd,
+
+          homeScore: 0,
+          awayScore: 0,
+
+          played: false,
+        },
+
+      ],
+    },
+
+
+    /* ====================================== */
+    /* FINAL                                   */
+    /* ====================================== */
+
+    {
+      name: "Final",
+
+      matches: [
+
+        {
+          id: "gcl13-cup-final",
+
+          home: teams.tbd,
+          away: teams.tbd,
+
+          homeScore: 0,
+          awayScore: 0,
+
+          played: false,
+        },
+
+      ],
+    },
+
+  ],
 
 };
