@@ -296,12 +296,12 @@ reserves: [
 
        {
         memberId: "BA-004",
-        position: "",
+        position: "LW",
     },
 
        {
         memberId: "BA-011",
-        position: "",
+        position: "LW",
     },
 
        {
