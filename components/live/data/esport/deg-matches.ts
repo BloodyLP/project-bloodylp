@@ -87,7 +87,7 @@ export const degTeam = {
 export const upcomingMatch: UpcomingMatch = {
     date: "TBD",
 
-    league: "GCL SPIELTAG 5",
+    league: "GCL SPIELTAG 6",
 
     opponent: "TBD",
 
@@ -101,12 +101,12 @@ export const upcomingMatch: UpcomingMatch = {
 /* ============================================ */
 
 export const degSeasonStats = {
-    games: 10,
+    games: 12,
     wins: 5,
-    losses: 4,
+    losses: 6,
     overtimeLosses: 1,
-    goalsFor: 32,
-    goalsAgainst: 26,
+    goalsFor: 35,
+    goalsAgainst: 35,
 };
 
 
@@ -124,20 +124,20 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-        date: "30. September 2026",
+        date: "07. Oktober 2026",
 
-        league: "GCL 13 - Pokal",
+        league: "GCL 13",
 
-        opponent: "REH Gaming",
+        opponent: "HockeyHolics",
 
         opponentLogo:
-            "/images/esport/gcl13/reh-gaming.png",
+            "/images/esport/gcl13/hockeyholics.png",
 
-        degScore: 5,
+        degScore: 3,
 
-        opponentScore: 4,
+        opponentScore: 5,
 
-        overtime: true,
+        overtime: false,
 
         shootout: false,
 
@@ -152,19 +152,19 @@ export const degMatches: DegMatch[] = [
     /* Ergebnis: 3:2                            */
     /* ======================================== */
 
-    {
-        date: "30. September 2026",
+   {
+        date: "07. Oktober 2026",
 
         league: "GCL 13",
 
-        opponent: "REH Gaming",
+        opponent: "HockeyHolics",
 
         opponentLogo:
-            "/images/esport/gcl13/reh-gaming.png",
+            "/images/esport/gcl13/hockeyholics.png",
 
-        degScore: 1,
+        degScore: 0,
 
-        opponentScore: 3,
+        opponentScore: 4,
 
         overtime: false,
 
@@ -181,21 +181,21 @@ export const degMatches: DegMatch[] = [
     /* Ergebnis: 7:0                            */
     /* ======================================== */
 
-   {
+    {
         date: "30. September 2026",
 
-        league: "GCL 13",
+        league: "GCL 13 - Pokal",
 
         opponent: "REH Gaming",
 
         opponentLogo:
             "/images/esport/gcl13/reh-gaming.png",
 
-        degScore: 2,
+        degScore: 5,
 
-        opponentScore: 5,
+        opponentScore: 4,
 
-        overtime: false,
+        overtime: true,
 
         shootout: false,
 
