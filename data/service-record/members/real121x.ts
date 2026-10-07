@@ -57,7 +57,7 @@ export const real121x: ServiceRecordMember = {
     /**
      * Position
      */
-    position:"leftwing",
+    position:"leftWing",
 
     /**
      * Spielertyp
