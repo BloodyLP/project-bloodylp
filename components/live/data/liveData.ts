@@ -39,9 +39,9 @@ export const liveData = {
 
     events: [  
                                                 {
-        day: "DO",
-        date: "09. OKT",
-        time: "20:50 Uhr",
+        day: "MI",
+        date: "07. OKT",
+        time: "21:20 Uhr",
         title: "DEG eSPORTS",
       }, 
 
