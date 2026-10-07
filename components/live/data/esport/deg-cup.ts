@@ -396,7 +396,7 @@ export const gcl13Cup: GCL13Cup = {
           id: "gcl13-cup-r2-5",
 
           home: teams.scbEsports,
-          away: teams.valhallaVikings,
+          away: teams.hammerEisbaeren,
 
           homeScore: 1,
           awayScore: 0,
@@ -407,7 +407,7 @@ export const gcl13Cup: GCL13Cup = {
         {
           id: "gcl13-cup-r2-6",
 
-          home: teams.hammerEisbaeren,
+          home: teams.valhallaVikings,
           away: teams.deadlyPhantoms,
 
           homeScore: 0,

@@ -14,7 +14,7 @@
 /* Platz 1–8 Playoffs                            */
 /* Platz 9 keine Playoffs                        */
 /*                                              */
-/* Stand: 06.10.2026                            */
+/* Stand: 07.10.2026                            */
 /*                                              */
 /* ============================================ */
 
@@ -107,7 +107,7 @@ export type DegStanding = {
 /* 8 PLAYOFF-PLÄTZE                             */
 /* 1 TEAM OHNE PLAYOFFS                         */
 /*                                              */
-/* Stand: 06.10.2026                            */
+/* Stand: 07.10.2026                            */
 /* ============================================ */
 
 export const degStandings: DegStanding[] = [
@@ -245,12 +245,45 @@ export const degStandings: DegStanding[] = [
 
 
   /* ---------------------------------------- */
-  /* 05 – DEG ESPORTS                         */
+  /* 05 – DEADLY PHANTOMS                     */
   /* PLAYOFFS: JA                             */
   /* ---------------------------------------- */
 
   {
     position: 5,
+    team: "Deadly Phantoms",
+    logo: "/images/esport/gcl13/deadly-phantoms.png",
+    players: 7,
+
+    gamesPlayed: 6,
+    wins: 3,
+    overtimeWins: 0,
+    overtimeLosses: 1,
+    losses: 2,
+
+    goalsFor: 13,
+    goalsAgainst: 14,
+    points: 10,
+
+    powerplayPercentage: 12.5,
+    penaltyKillPercentage: 85.71,
+    pim: 14,
+    shots: 87,
+    faceoffPercentage: 52.73,
+    hits: 43,
+    last10: "3-2-1",
+
+    playoffs: true,
+  },
+
+
+  /* ---------------------------------------- */
+  /* 06 – DEG ESPORTS                         */
+  /* PLAYOFFS: JA                             */
+  /* ---------------------------------------- */
+
+  {
+    position: 6,
     team: "DEG eSports",
     logo: "/images/esport/gcl13/deg-esports.png",
     players: 11,
@@ -279,12 +312,12 @@ export const degStandings: DegStanding[] = [
 
 
   /* ---------------------------------------- */
-  /* 06 – GERMAN ELITE HOCKEY                */
+  /* 07 – GERMAN ELITE HOCKEY                */
   /* PLAYOFFS: JA                             */
   /* ---------------------------------------- */
 
   {
-    position: 6,
+    position: 7,
     team: "German Elite Hockey",
     logo: "/images/esport/gcl13/german-elite-hockey.png",
     players: 9,
@@ -301,7 +334,7 @@ export const degStandings: DegStanding[] = [
 
     powerplayPercentage: 11.76,
     penaltyKillPercentage: 72.73,
-    pim: 20,
+    pim: 22,
     shots: 119,
     faceoffPercentage: 47.32,
     hits: 119,
@@ -312,66 +345,33 @@ export const degStandings: DegStanding[] = [
 
 
   /* ---------------------------------------- */
-  /* 07 – SCB ESPORTS                         */
-  /* PLAYOFFS: JA                             */
-  /* ---------------------------------------- */
-
-  {
-    position: 7,
-    team: "SCB eSports",
-    logo: "/images/esport/gcl13/scb-esports.png",
-    players: 8,
-
-    gamesPlayed: 8,
-    wins: 2,
-    overtimeWins: 1,
-    overtimeLosses: 0,
-    losses: 5,
-
-    goalsFor: 20,
-    goalsAgainst: 31,
-    points: 8,
-
-    powerplayPercentage: 33.33,
-    penaltyKillPercentage: 77.78,
-    pim: 36,
-    shots: 102,
-    faceoffPercentage: 57.46,
-    hits: 64,
-    last10: "3-5-0",
-
-    playoffs: true,
-  },
-
-
-  /* ---------------------------------------- */
-  /* 08 – DEADLY PHANTOMS                     */
+  /* 08 – SCB ESPORTS                         */
   /* PLAYOFFS: JA                             */
   /* ---------------------------------------- */
 
   {
     position: 8,
-    team: "Deadly Phantoms",
-    logo: "/images/esport/gcl13/deadly-phantoms.png",
-    players: 7,
+    team: "SCB eSports",
+    logo: "/images/esport/gcl13/scb-esports.png",
+    players: 8,
 
-    gamesPlayed: 3,
-    wins: 1,
-    overtimeWins: 0,
-    overtimeLosses: 1,
-    losses: 1,
+    gamesPlayed: 10,
+    wins: 2,
+    overtimeWins: 1,
+    overtimeLosses: 0,
+    losses: 7,
 
-    goalsFor: 7,
-    goalsAgainst: 8,
-    points: 4,
+    goalsFor: 23,
+    goalsAgainst: 37,
+    points: 8,
 
-    powerplayPercentage: null,
-    penaltyKillPercentage: 80,
-    pim: 10,
-    shots: 48,
-    faceoffPercentage: 60.61,
-    hits: 21,
-    last10: "1-1-1",
+    powerplayPercentage: 30,
+    penaltyKillPercentage: 75,
+    pim: 40,
+    shots: 122,
+    faceoffPercentage: 57.67,
+    hits: 75,
+    last10: "3-7-0",
 
     playoffs: true,
   },
