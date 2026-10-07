@@ -57,7 +57,7 @@ export const real121x: ServiceRecordMember = {
     /**
      * Position
      */
-    position:"center",
+    position:"leftwing",
 
     /**
      * Spielertyp
@@ -67,7 +67,7 @@ export const real121x: ServiceRecordMember = {
     /**
      * Trikotnummer
      */
-    playerNumber:"00",
+    playerNumber:"16",
 
     /**
      * Reihe

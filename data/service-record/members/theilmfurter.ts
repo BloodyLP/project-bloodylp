@@ -57,7 +57,7 @@ export const TheIlmfurter: ServiceRecordMember = {
     /**
      * Position
      */
-    position:"center",
+    position:"leftWing",
 
     /**
      * Spielertyp
@@ -67,7 +67,7 @@ export const TheIlmfurter: ServiceRecordMember = {
     /**
      * Trikotnummer
      */
-    playerNumber:"00",
+    playerNumber:"91",
 
     /**
      * Reihe
