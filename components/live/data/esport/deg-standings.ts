@@ -14,7 +14,7 @@
 /* Platz 1–8 Playoffs                            */
 /* Platz 9 keine Playoffs                        */
 /*                                              */
-/* Stand: 07.10.2026                            */
+/* Stand: 08.10.2026                            */
 /*                                              */
 /* ============================================ */
 
@@ -107,7 +107,7 @@ export type DegStanding = {
 /* 8 PLAYOFF-PLÄTZE                             */
 /* 1 TEAM OHNE PLAYOFFS                         */
 /*                                              */
-/* Stand: 07.10.2026                            */
+/* Stand: 08.10.2026                            */
 /* ============================================ */
 
 export const degStandings: DegStanding[] = [
@@ -156,35 +156,68 @@ export const degStandings: DegStanding[] = [
     logo: "/images/esport/gcl13/hockeyholics.png",
     players: 7,
 
-    gamesPlayed: 7,
-    wins: 5,
+    gamesPlayed: 9,
+    wins: 7,
     overtimeWins: 0,
     overtimeLosses: 1,
     losses: 1,
 
-    goalsFor: 26,
-    goalsAgainst: 17,
-    points: 16,
+    goalsFor: 35,
+    goalsAgainst: 20,
+    points: 22,
 
-    powerplayPercentage: 8.33,
-    penaltyKillPercentage: 87.5,
-    pim: 16,
-    shots: 121,
-    faceoffPercentage: 49.31,
-    hits: 59,
-    last10: "5-1-1",
+    powerplayPercentage: 13.33,
+    penaltyKillPercentage: 77.78,
+    pim: 18,
+    shots: 164,
+    faceoffPercentage: 50.54,
+    hits: 79,
+    last10: "7-1-1",
 
     playoffs: true,
   },
 
 
   /* ---------------------------------------- */
-  /* 03 – THE LAST SHIFT                      */
+  /* 03 – REH GAMING                          */
   /* PLAYOFFS: JA                             */
   /* ---------------------------------------- */
 
   {
     position: 3,
+    team: "REH Gaming",
+    logo: "/images/esport/gcl13/reh-gaming.png",
+    players: 6,
+
+    gamesPlayed: 10,
+    wins: 4,
+    overtimeWins: 2,
+    overtimeLosses: 0,
+    losses: 4,
+
+    goalsFor: 24,
+    goalsAgainst: 23,
+    points: 16,
+
+    powerplayPercentage: null,
+    penaltyKillPercentage: 100,
+    pim: 24,
+    shots: 111,
+    faceoffPercentage: 48.69,
+    hits: 58,
+    last10: "6-4-0",
+
+    playoffs: true,
+  },
+
+
+  /* ---------------------------------------- */
+  /* 04 – THE LAST SHIFT                      */
+  /* PLAYOFFS: JA                             */
+  /* ---------------------------------------- */
+
+  {
+    position: 4,
     team: "The Last Shift",
     logo: "/images/esport/gcl13/the-last-shift.png",
     players: 5,
@@ -206,39 +239,6 @@ export const degStandings: DegStanding[] = [
     faceoffPercentage: 44.05,
     hits: 108,
     last10: "5-3-0",
-
-    playoffs: true,
-  },
-
-
-  /* ---------------------------------------- */
-  /* 04 – REH GAMING                          */
-  /* PLAYOFFS: JA                             */
-  /* ---------------------------------------- */
-
-  {
-    position: 4,
-    team: "REH Gaming",
-    logo: "/images/esport/gcl13/reh-gaming.png",
-    players: 6,
-
-    gamesPlayed: 8,
-    wins: 3,
-    overtimeWins: 1,
-    overtimeLosses: 0,
-    losses: 4,
-
-    goalsFor: 18,
-    goalsAgainst: 21,
-    points: 11,
-
-    powerplayPercentage: null,
-    penaltyKillPercentage: 100,
-    pim: 18,
-    shots: 80,
-    faceoffPercentage: 48.37,
-    hits: 46,
-    last10: "4-4-0",
 
     playoffs: true,
   },
@@ -288,23 +288,23 @@ export const degStandings: DegStanding[] = [
     logo: "/images/esport/gcl13/deg-esports.png",
     players: 11,
 
-    gamesPlayed: 8,
+    gamesPlayed: 10,
     wins: 3,
     overtimeWins: 0,
     overtimeLosses: 1,
-    losses: 4,
+    losses: 6,
 
-    goalsFor: 20,
-    goalsAgainst: 22,
+    goalsFor: 23,
+    goalsAgainst: 31,
     points: 10,
 
-    powerplayPercentage: 50,
-    penaltyKillPercentage: 85.71,
-    pim: 14,
-    shots: 106,
-    faceoffPercentage: 51.68,
-    hits: 53,
-    last10: "3-4-1",
+    powerplayPercentage: 57.14,
+    penaltyKillPercentage: 80,
+    pim: 20,
+    shots: 128,
+    faceoffPercentage: 50.26,
+    hits: 68,
+    last10: "3-6-1",
 
     playoffs: true,
     isDeg: true,
@@ -378,7 +378,7 @@ export const degStandings: DegStanding[] = [
 
 
   /* ---------------------------------------- */
-  /* 09 – ISERLOHN ROOSTERS ESPORTS            */
+  /* 09 – ISERLOHN ROOSTERS ESPORTS           */
   /* PLAYOFFS: NEIN                            */
   /* ---------------------------------------- */
 
@@ -388,23 +388,23 @@ export const degStandings: DegStanding[] = [
     logo: "/images/esport/gcl13/iserlohn-roosters-esports.png",
     players: 5,
 
-    gamesPlayed: 6,
+    gamesPlayed: 8,
     wins: 1,
     overtimeWins: 0,
-    overtimeLosses: 1,
-    losses: 4,
+    overtimeLosses: 2,
+    losses: 5,
 
-    goalsFor: 10,
-    goalsAgainst: 21,
-    points: 4,
+    goalsFor: 12,
+    goalsAgainst: 27,
+    points: 5,
 
-    powerplayPercentage: 22.22,
-    penaltyKillPercentage: 66.67,
-    pim: 6,
-    shots: 65,
-    faceoffPercentage: 51.75,
-    hits: 31,
-    last10: "1-4-1",
+    powerplayPercentage: 16.67,
+    penaltyKillPercentage: 80,
+    pim: 10,
+    shots: 88,
+    faceoffPercentage: 51.32,
+    hits: 42,
+    last10: "1-5-2",
 
     playoffs: false,
   },
