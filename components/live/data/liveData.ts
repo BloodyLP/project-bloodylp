@@ -61,7 +61,7 @@ export const liveData = {
       }, 
 
                                                       {
-        day: "MO",
+        day: "SO",
         date: "19. OKT",
         time: "19:30 Uhr",
         title: "EA FC 27 - Be A Pro",
