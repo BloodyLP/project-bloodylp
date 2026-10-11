@@ -209,6 +209,7 @@ const teams = {
   oldButGold: {
     name: "Old but Gold",
     logo: "/images/esport/gcl13/old-but-gold.png",
+        eliminated: true,
   },
 
 
@@ -434,10 +435,10 @@ export const gcl13Cup: GCL13Cup = {
           home: teams.clownsOnIce,
           away: teams.oldButGold,
 
-          homeScore: 0,
+          homeScore: 1,
           awayScore: 0,
 
-          played: false,
+          played: true,
         },
 
       ],
@@ -516,6 +517,18 @@ export const gcl13Cup: GCL13Cup = {
           id: "gcl13-cup-qf-6",
 
           home: teams.nuernberg,
+          away: teams.tbd,
+
+          homeScore: 0,
+          awayScore: 0,
+
+          played: false,
+        },
+
+                        {
+          id: "gcl13-cup-qf-7",
+
+          home: teams.clownsOnIce,
           away: teams.tbd,
 
           homeScore: 0,

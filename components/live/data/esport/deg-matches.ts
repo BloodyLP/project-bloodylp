@@ -85,14 +85,14 @@ export const degTeam = {
 /* ============================================ */
 
 export const upcomingMatch: UpcomingMatch = {
-    date: "TBD",
+    date: "12. Oktober 2026 ab 21.05 Uhr",
 
     league: "GCL SPIELTAG 6",
 
-    opponent: "TBD",
+    opponent: "Iserlohn Roosters eSports",
 
     opponentLogo:
-        "",
+        "/images/esport/gcl13/iserlohn-roosters-esports.png",
 };
 
 

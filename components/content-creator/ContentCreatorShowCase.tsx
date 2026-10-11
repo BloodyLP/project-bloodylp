@@ -1,15 +1,9 @@
+
 "use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import {
-    Trophy,
-    ArrowUpRight,
-    Gamepad2,
-    Crosshair,
-    Shield,
-} from "lucide-react";
-
+import { Trophy, ArrowUpRight, Gamepad2, Shield } from "lucide-react";
 import styles from "./ContentCreatorShowCase.module.css";
 
 const projects = [
@@ -24,19 +18,17 @@ const projects = [
         icon: Trophy,
         featured: true,
     },
-
     {
         number: "02",
-        type: "STORY • ADVENTURE",
-        title: "ASSASSIN'S CREED",
-        highlight: "BLACK FLAG",
+        type: "SPORT • SPIELERKARRIERE",
+        title: "EA FC",
+        highlight: "27",
         description:
-            "Große Geschichten, offene Welten und Abenteuer, die aus einer Gaming-Session eine eigene Reise machen.",
-        image: "/content-creator/images/assassins-creed-showcase.jpg",
-        icon: Crosshair,
+            "Die Spielerkarriere mit Alexander Blattmann: vom ersten Einsatz bis zu den großen Momenten auf dem Platz. Entscheidungen, Entwicklung und der Weg an die Spitze stehen im Mittelpunkt.",
+        image: "/content-creator/images/ea_fc_27.jpg",
+        icon: Trophy,
         featured: false,
     },
-
     {
         number: "03",
         type: "ADVENTURE • CLASSIC",
@@ -48,7 +40,6 @@ const projects = [
         icon: Shield,
         featured: false,
     },
-
     {
         number: "04",
         type: "GAMING • ENTERTAINMENT",
@@ -64,68 +55,36 @@ const projects = [
 
 export default function ContentCreatorShowcase() {
     return (
-        <section
-            id="showcase"
-            className={styles.section}
-        >
-            {/* ========================================= */}
+        <section id="showcase" className={styles.section}>
             {/* BACKGROUND */}
-            {/* ========================================= */}
-
             <div className={styles.backgroundGlow} />
 
             <div className={styles.container}>
-
-                {/* ========================================= */}
                 {/* HEADER */}
-                {/* ========================================= */}
-
                 <motion.div
                     className={styles.header}
-                    initial={{
-                        opacity: 0,
-                        y: 30,
-                    }}
-                    whileInView={{
-                        opacity: 1,
-                        y: 0,
-                    }}
-                    viewport={{
-                        once: true,
-                        amount: 0.25,
-                    }}
-                    transition={{
-                        duration: 0.7,
-                        ease: "easeOut",
-                    }}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.25 }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
                 >
                     <span className={styles.overline}>
                         AKTUELLE WELTEN
                     </span>
 
                     <h2 className={styles.title}>
-                        GAMES, DIE{" "}
-                        <span>
-                            GESCHICHTEN ERZÄHLEN.
-                        </span>
+                        GAMES, DIE <span>GESCHICHTEN ERZÄHLEN.</span>
                     </h2>
 
                     <p className={styles.intro}>
-                        Manche Spiele bleiben einfach Spiele.
-                        Andere werden zu Abenteuern, Wettbewerben
-                        und Erinnerungen, die man gemeinsam erlebt.
+                        Manche Spiele bleiben einfach Spiele. Andere werden zu Abenteuern,
+                        Wettbewerben und Erinnerungen, die man gemeinsam erlebt.
                     </p>
                 </motion.div>
 
-
-                {/* ========================================= */}
                 {/* SHOWCASE GRID */}
-                {/* ========================================= */}
-
                 <div className={styles.grid}>
-
                     {projects.map((project, index) => {
-
                         const Icon = project.icon;
 
                         return (
@@ -140,31 +99,17 @@ export default function ContentCreatorShowcase() {
                                         ? styles.lastCard
                                         : ""
                                 }`}
-                                initial={{
-                                    opacity: 0,
-                                    y: 35,
-                                }}
-                                whileInView={{
-                                    opacity: 1,
-                                    y: 0,
-                                }}
-                                viewport={{
-                                    once: true,
-                                    amount: 0.15,
-                                }}
+                                initial={{ opacity: 0, y: 35 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, amount: 0.15 }}
                                 transition={{
                                     duration: 0.7,
                                     delay: index * 0.08,
                                     ease: "easeOut",
                                 }}
                             >
-
-                                {/* ================================= */}
                                 {/* IMAGE */}
-                                {/* ================================= */}
-
                                 <div className={styles.imageWrapper}>
-
                                     <Image
                                         src={project.image}
                                         alt={`${project.title} ${project.highlight}`}
@@ -177,125 +122,55 @@ export default function ContentCreatorShowcase() {
                                         className={styles.image}
                                     />
 
-                                    <div
-                                        className={
-                                            styles.imageOverlay
-                                        }
-                                    />
-
-                                    <div
-                                        className={
-                                            styles.imageVignette
-                                        }
-                                    />
-
+                                    <div className={styles.imageOverlay} />
+                                    <div className={styles.imageVignette} />
                                 </div>
 
-
-                                {/* ================================= */}
                                 {/* NUMBER */}
-                                {/* ================================= */}
-
-                                <span
-                                    className={styles.number}
-                                >
+                                <span className={styles.number}>
                                     {project.number}
                                 </span>
 
-
-                                {/* ================================= */}
                                 {/* ICON */}
-                                {/* ================================= */}
-
-                                <div
-                                    className={styles.icon}
-                                >
-                                    <Icon
-                                        size={21}
-                                        strokeWidth={1.8}
-                                    />
+                                <div className={styles.icon}>
+                                    <Icon size={21} strokeWidth={1.8} />
                                 </div>
 
-
-                                {/* ================================= */}
                                 {/* CONTENT */}
-                                {/* ================================= */}
-
-                                <div
-                                    className={
-                                        styles.cardContent
-                                    }
-                                >
-
-                                    <span
-                                        className={
-                                            styles.cardType
-                                        }
-                                    >
+                                <div className={styles.cardContent}>
+                                    <span className={styles.cardType}>
                                         {project.type}
                                     </span>
 
                                     <h3>
                                         {project.title}
-
                                         <br />
-
-                                        <span>
-                                            {project.highlight}
-                                        </span>
+                                        <span>{project.highlight}</span>
                                     </h3>
 
-                                    <p>
-                                        {project.description}
-                                    </p>
-
+                                    <p>{project.description}</p>
                                 </div>
 
-
-                                {/* ================================= */}
                                 {/* CORNER */}
-                                {/* ================================= */}
-
-                                <div
-                                    className={
-                                        styles.cornerArrow
-                                    }
-                                >
+                                <div className={styles.cornerArrow}>
                                     <ArrowUpRight
                                         size={20}
                                         strokeWidth={2}
                                     />
                                 </div>
-
                             </motion.article>
                         );
                     })}
-
                 </div>
 
-
-                {/* ========================================= */}
                 {/* SIGNATURE */}
-                {/* ========================================= */}
-
                 <motion.div
                     className={styles.signature}
-                    initial={{
-                        opacity: 0,
-                    }}
-                    whileInView={{
-                        opacity: 1,
-                    }}
-                    viewport={{
-                        once: true,
-                        amount: 0.3,
-                    }}
-                    transition={{
-                        duration: 0.7,
-                        delay: 0.15,
-                    }}
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.7, delay: 0.15 }}
                 >
-
                     <span />
 
                     <p>
@@ -306,9 +181,7 @@ export default function ContentCreatorShowcase() {
                     </p>
 
                     <span />
-
                 </motion.div>
-
             </div>
         </section>
     );
