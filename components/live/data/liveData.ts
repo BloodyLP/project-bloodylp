@@ -39,13 +39,6 @@ export const liveData = {
 
     events: [  
 
-                                          {
-        day: "DI",
-        date: "13. OKT",
-        time: "19:30 Uhr",
-        title: "NHL 27 - Be A Pro",
-      }, 
-
                                                 {
         day: "SA",
         date: "17. OKT",
@@ -55,16 +48,23 @@ export const liveData = {
 
                                                       {
         day: "SO",
-        date: "19. OKT",
+        date: "18. OKT",
         time: "19:30 Uhr",
         title: "EA FC 27 - Spielerkarriere",
       }, 
 
                                                             {
-        day: "SO",
-        date: "21. OKT",
+        day: "DI",
+        date: "20. OKT",
         time: "19:30 Uhr",
         title: "NHL 27 - Be A Pro",
+      }, 
+
+                                                                  {
+        day: "DO",
+        date: "22. OKT",
+        time: "19:30 Uhr",
+        title: "NHL 27 - Goalie Mode",
       }, 
       
       

@@ -77,4 +77,12 @@ export const careerHighlights: CareerHighlight[] = [
         description:
             "Gewinner der Calder Memorial-Trophy für den besten Rookie der Saison 2026/2027",
     },
+
+                    {
+        date: "13. Oktober 2026",
+        category: "100 Punkte in der NHL",
+        title: "NHL-AUSZEICHNUNG",
+        description:
+            "Die 100 Punkte-Marke in der NHL in der Saison 2026/2027 geknackt.",
+    },
 ];
