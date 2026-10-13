@@ -85,14 +85,14 @@ export const degTeam = {
 /* ============================================ */
 
 export const upcomingMatch: UpcomingMatch = {
-    date: "12. Oktober 2026 ab 21.05 Uhr",
+    date: "TBD",
 
-    league: "GCL SPIELTAG 6",
+    league: "GCL SPIELTAG 7",
 
-    opponent: "Iserlohn Roosters eSports",
+    opponent: "TBD",
 
     opponentLogo:
-        "/images/esport/gcl13/iserlohn-roosters-esports.png",
+        "",
 };
 
 
@@ -101,12 +101,12 @@ export const upcomingMatch: UpcomingMatch = {
 /* ============================================ */
 
 export const degSeasonStats = {
-    games: 12,
-    wins: 5,
+    games: 14,
+    wins: 7,
     losses: 6,
     overtimeLosses: 1,
-    goalsFor: 35,
-    goalsAgainst: 35,
+    goalsFor: 42,
+    goalsAgainst: 36,
 };
 
 
@@ -124,18 +124,18 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-        date: "07. Oktober 2026",
+        date: "12. Oktober 2026",
 
         league: "GCL 13",
 
-        opponent: "HockeyHolics",
+        opponent: "Iserlohn Roosters eSports",
 
         opponentLogo:
-            "/images/esport/gcl13/hockeyholics.png",
+            "/images/esport/gcl13/iserlohn-roosters-esports.png",
 
         degScore: 3,
 
-        opponentScore: 5,
+        opponentScore: 1,
 
         overtime: false,
 
@@ -152,19 +152,19 @@ export const degMatches: DegMatch[] = [
     /* Ergebnis: 3:2                            */
     /* ======================================== */
 
-   {
-        date: "07. Oktober 2026",
+    {
+        date: "12. Oktober 2026",
 
         league: "GCL 13",
 
-        opponent: "HockeyHolics",
+        opponent: "Iserlohn Roosters eSports",
 
         opponentLogo:
-            "/images/esport/gcl13/hockeyholics.png",
+            "/images/esport/gcl13/iserlohn-roosters-esports.png",
 
-        degScore: 0,
+        degScore: 4,
 
-        opponentScore: 4,
+        opponentScore: 0,
 
         overtime: false,
 
@@ -181,21 +181,21 @@ export const degMatches: DegMatch[] = [
     /* Ergebnis: 7:0                            */
     /* ======================================== */
 
-    {
-        date: "30. September 2026",
+     {
+        date: "07. Oktober 2026",
 
-        league: "GCL 13 - Pokal",
+        league: "GCL 13",
 
-        opponent: "REH Gaming",
+        opponent: "HockeyHolics",
 
         opponentLogo:
-            "/images/esport/gcl13/reh-gaming.png",
+            "/images/esport/gcl13/hockeyholics.png",
 
-        degScore: 5,
+        degScore: 3,
 
-        opponentScore: 4,
+        opponentScore: 5,
 
-        overtime: true,
+        overtime: false,
 
         shootout: false,
 

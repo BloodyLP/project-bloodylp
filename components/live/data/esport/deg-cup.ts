@@ -123,7 +123,7 @@ const teams = {
   },
 
   connexion: {
-    name: "Connexion",
+    name: "Conexion",
     logo: "/images/esport/gcl13/conexion.png",
   },
 
@@ -175,6 +175,7 @@ const teams = {
   theLastShift: {
     name: "The Last Shift",
     logo: "/images/esport/gcl13/the-last-shift.png",
+            eliminated: true,
   },
 
   catastrophicTurnovers: {
@@ -363,10 +364,10 @@ export const gcl13Cup: GCL13Cup = {
           home: teams.hockeyholics,
           away: teams.theLastShift,
 
-          homeScore: 0,
+          homeScore: 1,
           awayScore: 0,
 
-          played: false,
+          played: true,
         },
 
         {
@@ -457,8 +458,8 @@ export const gcl13Cup: GCL13Cup = {
         {
           id: "gcl13-cup-qf-1",
 
-          home: teams.tbd,
-          away: teams.deg,
+          home: teams.deg,
+          away: teams.hockeyholics,
 
           homeScore: 0,
           awayScore: 0,
@@ -469,8 +470,8 @@ export const gcl13Cup: GCL13Cup = {
         {
           id: "gcl13-cup-qf-2",
 
-          home: teams.connexion,
-          away: teams.tbd,
+          home: teams.germanEliteHockey,
+          away: teams.nuernberg,
 
           homeScore: 0,
           awayScore: 0,
@@ -481,8 +482,8 @@ export const gcl13Cup: GCL13Cup = {
         {
           id: "gcl13-cup-qf-3",
 
-          home: teams.tbd,
-          away: teams.deadlyPhantoms,
+          home: teams.deadlyPhantoms,
+          away: teams.connexion,
 
           homeScore: 0,
           awayScore: 0,
@@ -493,43 +494,8 @@ export const gcl13Cup: GCL13Cup = {
         {
           id: "gcl13-cup-qf-4",
 
-          home: teams.germanEliteHockey,
-          away: teams.tbd,
-
-          homeScore: 0,
-          awayScore: 0,
-
-          played: false,
-        },
-
-            {
-          id: "gcl13-cup-qf-5",
-
-          home: teams.scbEsports,
-          away: teams.tbd,
-
-          homeScore: 0,
-          awayScore: 0,
-
-          played: false,
-        },
-                {
-          id: "gcl13-cup-qf-6",
-
-          home: teams.nuernberg,
-          away: teams.tbd,
-
-          homeScore: 0,
-          awayScore: 0,
-
-          played: false,
-        },
-
-                        {
-          id: "gcl13-cup-qf-7",
-
           home: teams.clownsOnIce,
-          away: teams.tbd,
+          away: teams.scbEsports,
 
           homeScore: 0,
           awayScore: 0,
