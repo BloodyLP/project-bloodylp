@@ -85,4 +85,12 @@ export const careerHighlights: CareerHighlight[] = [
         description:
             "Die 100 Punkte-Marke in der NHL in der Saison 2026/2027 geknackt.",
     },
+
+                        {
+        date: "17. Oktober 2026",
+        category: "Erster Sponsorenvertrag",
+        title: "Persönliche Auszeichnung",
+        description:
+            "Der erste Sponsorenvertrag in der Karriere.",
+    },
 ];
