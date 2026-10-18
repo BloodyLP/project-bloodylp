@@ -38,32 +38,32 @@ export const liveData = {
     title: "Als Nächstes",
 
     events: [  
-                                                      {
-        day: "SO",
-        date: "18. OKT",
-        time: "19:30 Uhr",
-        title: "EA FC 27 - Spielerkarriere",
-      }, 
-
                                                             {
-        day: "DI",
-        date: "20. OKT",
-        time: "19:30 Uhr",
-        title: "NHL 27 - Goalie Mode",
+        day: "MO",
+        date: "19. OKT",
+        time: "20:50 Uhr",
+        title: "DEG eSports - GCL 13",
       }, 
 
                                                                   {
-        day: "DO",
-        date: "22. OKT",
-        time: "19:30 Uhr",
-        title: "NHL 27 - Be A Pro",
+        day: "DI",
+        date: "20. OKT",
+        time: "20.50 Uhr",
+        title: "DEG eSports - GCL 13",
       }, 
 
                                                                         {
-        day: "SA",
-        date: "24. OKT",
+        day: "MI",
+        date: "21. OKT",
         time: "19:30 Uhr",
-        title: "NHL 27 - Be A Pro",
+        title: "NHL 27 - GOALIE MODE",
+      }, 
+
+                                                                              {
+        day: "FR",
+        date: "23. OKT",
+        time: "19:30 Uhr",
+        title: "NHL 27 - BE A PRO",
       }, 
       
       
