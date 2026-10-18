@@ -47,7 +47,7 @@ export const knecht: ServiceRecordMember = {
     /**
      * Dienstgrad
      */
-    rank:"ba-elite-spieler-organisation",
+    rank:"ba-schluesselspieler-organisation",
 
     /**
      * Organisation

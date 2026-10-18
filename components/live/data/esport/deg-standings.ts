@@ -12,7 +12,7 @@
 /* GCL 13 – Division I                          */
 /* Aktueller Tabellenstand                      */
 /*                                              */
-/* Stand: 14.10.2026                            */
+/* Stand: 18.10.2026                            */
 /*                                              */
 /* ============================================ */
 
@@ -85,7 +85,7 @@ export type DegStanding = {
 /* 9 TEAMS                                      */
 /* 8 PLAYOFF-PLÄTZE                             */
 /*                                              */
-/* Stand: 14.10.2026                            */
+/* Stand: 18.10.2026                            */
 /* ============================================ */
 
 export const degStandings: DegStanding[] = [
@@ -155,11 +155,75 @@ export const degStandings: DegStanding[] = [
 
 
   /* ---------------------------------------- */
-  /* 03 – REH GAMING                          */
+  /* 03 – DEADLY PHANTOMS                     */
   /* ---------------------------------------- */
 
   {
     position: 3,
+    team: "Deadly Phantoms",
+    logo: "/images/esport/gcl13/deadly-phantoms.png",
+    players: 7,
+
+    gamesPlayed: 12,
+    wins: 8,
+    overtimeWins: 1,
+    overtimeLosses: 1,
+    losses: 2,
+
+    goalsFor: 33,
+    goalsAgainst: 22,
+    points: 27,
+
+    powerplayPercentage: 21.43,
+    penaltyKillPercentage: 81.25,
+    pim: 32,
+    shots: 179,
+    faceoffPercentage: 53.1,
+    hits: 109,
+    last10: "9-1-0",
+
+    playoffs: true,
+  },
+
+
+  /* ---------------------------------------- */
+  /* 04 – GERMAN ELITE HOCKEY                 */
+  /* ---------------------------------------- */
+
+  {
+    position: 4,
+    team: "German Elite Hockey",
+    logo: "/images/esport/gcl13/german-elite-hockey.png",
+    players: 9,
+
+    gamesPlayed: 14,
+    wins: 5,
+    overtimeWins: 3,
+    overtimeLosses: 0,
+    losses: 6,
+
+    goalsFor: 35,
+    goalsAgainst: 32,
+    points: 21,
+
+    powerplayPercentage: 16,
+    penaltyKillPercentage: 85,
+    pim: 40,
+    shots: 193,
+    faceoffPercentage: 51.11,
+    hits: 174,
+    last10: "7-3-0",
+
+    playoffs: true,
+  },
+
+
+  /* ---------------------------------------- */
+  /* 05 – REH GAMING                          */
+  /* ---------------------------------------- */
+
+  {
+    position: 5,
     team: "REH Gaming",
     logo: "/images/esport/gcl13/reh-gaming.png",
     players: 6,
@@ -180,70 +244,6 @@ export const degStandings: DegStanding[] = [
     shots: 173,
     faceoffPercentage: 48.56,
     hits: 93,
-    last10: "6-4-0",
-
-    playoffs: true,
-  },
-
-
-  /* ---------------------------------------- */
-  /* 04 – DEADLY PHANTOMS                     */
-  /* ---------------------------------------- */
-
-  {
-    position: 4,
-    team: "Deadly Phantoms",
-    logo: "/images/esport/gcl13/deadly-phantoms.png",
-    players: 7,
-
-    gamesPlayed: 10,
-    wins: 6,
-    overtimeWins: 1,
-    overtimeLosses: 1,
-    losses: 2,
-
-    goalsFor: 25,
-    goalsAgainst: 20,
-    points: 21,
-
-    powerplayPercentage: 16.67,
-    penaltyKillPercentage: 90.91,
-    pim: 22,
-    shots: 144,
-    faceoffPercentage: 51.46,
-    hits: 76,
-    last10: "7-2-1",
-
-    playoffs: true,
-  },
-
-
-  /* ---------------------------------------- */
-  /* 05 – GERMAN ELITE HOCKEY                */
-  /* ---------------------------------------- */
-
-  {
-    position: 5,
-    team: "German Elite Hockey",
-    logo: "/images/esport/gcl13/german-elite-hockey.png",
-    players: 9,
-
-    gamesPlayed: 12,
-    wins: 4,
-    overtimeWins: 2,
-    overtimeLosses: 0,
-    losses: 6,
-
-    goalsFor: 30,
-    goalsAgainst: 31,
-    points: 16,
-
-    powerplayPercentage: 17.39,
-    penaltyKillPercentage: 84.21,
-    pim: 38,
-    shots: 159,
-    faceoffPercentage: 50,
-    hits: 145,
     last10: "6-4-0",
 
     playoffs: true,
@@ -357,23 +357,23 @@ export const degStandings: DegStanding[] = [
     logo: "/images/esport/gcl13/iserlohn-roosters-esports.png",
     players: 5,
 
-    gamesPlayed: 12,
+    gamesPlayed: 16,
     wins: 1,
     overtimeWins: 0,
-    overtimeLosses: 2,
-    losses: 9,
+    overtimeLosses: 3,
+    losses: 12,
 
-    goalsFor: 19,
-    goalsAgainst: 55,
-    points: 5,
+    goalsFor: 22,
+    goalsAgainst: 68,
+    points: 6,
 
-    powerplayPercentage: 18.75,
-    penaltyKillPercentage: 60,
-    pim: 20,
-    shots: 128,
-    faceoffPercentage: 48.82,
-    hits: 77,
-    last10: "0-9-1",
+    powerplayPercentage: 22.73,
+    penaltyKillPercentage: 64.29,
+    pim: 28,
+    shots: 187,
+    faceoffPercentage: 46.63,
+    hits: 98,
+    last10: "0-8-2",
 
     playoffs: false,
   },
