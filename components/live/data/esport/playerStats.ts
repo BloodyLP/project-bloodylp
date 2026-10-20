@@ -1,4 +1,5 @@
-/* =========================================
+/*
+ * =========================================
  * BloodyLP
  *
  * Project:
@@ -10,7 +11,8 @@
  * Description:
  * Individuelle Saisonstatistiken der aktuellen
  * DEG eSports Spieler.
- * ========================================= */
+ * =========================================
+ */
 
 export type PlayerPosition =
     | "goalie"
@@ -102,15 +104,15 @@ export const goalieStats: GoaliePlayer[] = [
         position: "goalie",
         image: "/images/esport/players/houddel_26.png",
         stats: {
-            games: 8,
-            wins: 4,
+            games: 10,
+            wins: 6,
             losses: 4,
             overtimeLosses: 0,
-            saves: 107,
+            saves: 128,
             goalsAgainst: 19,
-            savePercentage: 84.92,
-            goalsAgainstAverage: 2.38,
-            shutouts: 1,
+            savePercentage: 87.07,
+            goalsAgainstAverage: 1.9,
+            shutouts: 3,
         },
     },
     {
@@ -164,17 +166,17 @@ export const defenseStats: SkaterPlayer[] = [
         position: "defense",
         image: "/images/esport/players/TooEzXx.png",
         stats: {
-            games: 12,
-            goals: 13,
+            games: 14,
+            goals: 15,
             assists: 8,
-            points: 21,
-            plusMinus: -5,
+            points: 23,
+            plusMinus: -3,
             pim: 2,
             powerplayGoals: 1,
             shorthandedGoals: 0,
-            gameWinningGoals: 0,
-            shots: 60,
-            shootingPercentage: 21.7,
+            gameWinningGoals: 3,
+            shots: 68,
+            shootingPercentage: 22.1,
             hits: 7,
             faceoffWinPercentage: 0,
         },
@@ -186,19 +188,19 @@ export const defenseStats: SkaterPlayer[] = [
         position: "forward",
         image: "/images/esport/players/akin_penta.png",
         stats: {
-            games: 12,
+            games: 14,
             goals: 9,
-            assists: 11,
-            points: 20,
-            plusMinus: -5,
-            pim: 6,
+            assists: 13,
+            points: 22,
+            plusMinus: -3,
+            pim: 8,
             powerplayGoals: 0,
             shorthandedGoals: 0,
             gameWinningGoals: 4,
-            shots: 44,
-            shootingPercentage: 20.5,
+            shots: 50,
+            shootingPercentage: 18,
             hits: 3,
-            faceoffWinPercentage: 51.1,
+            faceoffWinPercentage: 51.8,
         },
     },
     {
@@ -208,17 +210,17 @@ export const defenseStats: SkaterPlayer[] = [
         position: "defense",
         image: "/images/esport/players/PantherOnSkates.png",
         stats: {
-            games: 12,
+            games: 14,
             goals: 7,
-            assists: 10,
-            points: 17,
-            plusMinus: -5,
+            assists: 12,
+            points: 19,
+            plusMinus: -3,
             pim: 4,
             powerplayGoals: 2,
             shorthandedGoals: 0,
             gameWinningGoals: 0,
-            shots: 26,
-            shootingPercentage: 26.9,
+            shots: 30,
+            shootingPercentage: 23.3,
             hits: 25,
             faceoffWinPercentage: 50,
         },
@@ -230,16 +232,16 @@ export const defenseStats: SkaterPlayer[] = [
         position: "defense",
         image: "/images/esport/players/FellyKnight.png",
         stats: {
-            games: 12,
+            games: 14,
             goals: 0,
             assists: 11,
             points: 11,
-            plusMinus: -5,
+            plusMinus: -3,
             pim: 4,
             powerplayGoals: 0,
             shorthandedGoals: 0,
             gameWinningGoals: 0,
-            shots: 9,
+            shots: 10,
             shootingPercentage: 0,
             hits: 21,
             faceoffWinPercentage: 0,
@@ -247,23 +249,23 @@ export const defenseStats: SkaterPlayer[] = [
     },
     {
         number: 17,
-        gamerTag: "Pasq86ualePS",
+        gamerTag: "Pasq86uale",
         name: "P. Schultz",
         position: "forward",
         image: "/images/esport/players/Pasq86ualePS.png",
         stats: {
-            games: 12,
+            games: 14,
             goals: 1,
             assists: 9,
             points: 10,
-            plusMinus: -5,
+            plusMinus: -3,
             pim: 8,
             powerplayGoals: 1,
             shorthandedGoals: 0,
             gameWinningGoals: 0,
             shots: 17,
             shootingPercentage: 5.9,
-            hits: 22,
+            hits: 23,
             faceoffWinPercentage: 0,
         },
     },

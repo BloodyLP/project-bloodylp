@@ -81,18 +81,23 @@ export const degTeam = {
 
 
 /* ============================================ */
-/* NEXT MATCH                                   */
+/* NEXT MATCH                                  */
 /* ============================================ */
 
 export const upcomingMatch: UpcomingMatch = {
-    date: "TBD",
+    date: "20. Oktober 2026 ab 20.50 Uhr",
 
-    league: "GCL SPIELTAG 7",
+    league: "GCL SPIELTAG 8 + POKAL VF",
 
-    opponent: "TBD",
-
+    // Erstes Spiel: GCL 13 – Spieltag 8
+    opponent: "Deadly Phantoms",
     opponentLogo:
-        "",
+        "/images/esport/gcl13/deadly-phantoms.png",
+
+    // Zweites Spiel: Pokal-Viertelfinale
+    opponent2: "Hockeyholics",
+        opponentLogo2:
+        "/images/esport/gcl13/hockeyholics.png",
 };
 
 
@@ -101,11 +106,11 @@ export const upcomingMatch: UpcomingMatch = {
 /* ============================================ */
 
 export const degSeasonStats = {
-    games: 14,
-    wins: 7,
+    games: 16,
+    wins: 9,
     losses: 6,
     overtimeLosses: 1,
-    goalsFor: 42,
+    goalsFor: 44,
     goalsAgainst: 36,
 };
 
@@ -124,18 +129,18 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-        date: "12. Oktober 2026",
+        date: "19. Oktober 2026",
 
         league: "GCL 13",
 
-        opponent: "Iserlohn Roosters eSports",
+        opponent: "SC Bern eSports",
 
         opponentLogo:
-            "/images/esport/gcl13/iserlohn-roosters-esports.png",
+            "/images/esport/gcl13/scb-esports.png",
 
-        degScore: 3,
+        degScore: 1,
 
-        opponentScore: 1,
+        opponentScore: 0,
 
         overtime: false,
 
@@ -153,16 +158,16 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-        date: "12. Oktober 2026",
+        date: "19. Oktober 2026",
 
         league: "GCL 13",
 
-        opponent: "Iserlohn Roosters eSports",
+        opponent: "SC Bern eSports",
 
         opponentLogo:
-            "/images/esport/gcl13/iserlohn-roosters-esports.png",
+            "/images/esport/gcl13/scb-esports.png",
 
-        degScore: 4,
+        degScore: 1,
 
         opponentScore: 0,
 
@@ -181,19 +186,19 @@ export const degMatches: DegMatch[] = [
     /* Ergebnis: 7:0                            */
     /* ======================================== */
 
-     {
-        date: "07. Oktober 2026",
+    {
+        date: "12. Oktober 2026",
 
         league: "GCL 13",
 
-        opponent: "HockeyHolics",
+        opponent: "Iserlohn Roosters eSports",
 
         opponentLogo:
-            "/images/esport/gcl13/hockeyholics.png",
+            "/images/esport/gcl13/iserlohn-roosters-esports.png",
 
         degScore: 3,
 
-        opponentScore: 5,
+        opponentScore: 1,
 
         overtime: false,
 
