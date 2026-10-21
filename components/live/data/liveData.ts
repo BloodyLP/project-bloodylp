@@ -38,13 +38,6 @@ export const liveData = {
     title: "Als Nächstes",
 
     events: [  
-                                                                        {
-        day: "MI",
-        date: "21. OKT",
-        time: "19:30 Uhr",
-        title: "NHL 27 - DEL Saison",
-      }, 
-
                                                                               {
         day: "FR",
         date: "23. OKT",
@@ -64,6 +57,13 @@ export const liveData = {
         date: "26. OKT",
         time: "19:30 Uhr",
         title: "NHL 27 - DEL Saison",
+      }, 
+
+                                                                                                {
+        day: "MI",
+        date: "28. OKT",
+        time: "19:30 Uhr",
+        title: "EA FC 27 - Spielerkarriere",
       }, 
       
       
