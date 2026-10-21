@@ -1,5 +1,4 @@
-/*
- * =========================================
+/* =========================================
  * BloodyLP
  *
  * Project:
@@ -11,8 +10,7 @@
  * Description:
  * Individuelle Saisonstatistiken der aktuellen
  * DEG eSports Spieler.
- * =========================================
- */
+ * ========================================= */
 
 export type PlayerPosition =
     | "goalie"
@@ -104,15 +102,15 @@ export const goalieStats: GoaliePlayer[] = [
         position: "goalie",
         image: "/images/esport/players/houddel_26.png",
         stats: {
-            games: 10,
-            wins: 6,
+            games: 12,
+            wins: 7,
             losses: 4,
-            overtimeLosses: 0,
-            saves: 128,
-            goalsAgainst: 19,
-            savePercentage: 87.07,
-            goalsAgainstAverage: 1.9,
-            shutouts: 3,
+            overtimeLosses: 1,
+            saves: 151,
+            goalsAgainst: 23,
+            savePercentage: 86.78,
+            goalsAgainstAverage: 1.92,
+            shutouts: 4,
         },
     },
     {
@@ -133,24 +131,6 @@ export const goalieStats: GoaliePlayer[] = [
             shutouts: 0,
         },
     },
-    {
-        number: 39,
-        gamerTag: "MEAZZA1704",
-        name: "D. Otten",
-        position: "goalie",
-        image: "/images/esport/players/meazza17042.png",
-        stats: {
-            games: 0,
-            wins: 0,
-            losses: 0,
-            overtimeLosses: 0,
-            saves: 0,
-            goalsAgainst: 0,
-            savePercentage: 0,
-            goalsAgainstAverage: 0,
-            shutouts: 0,
-        },
-    },
 ];
 
 /* =========================================
@@ -160,47 +140,47 @@ export const goalieStats: GoaliePlayer[] = [
 
 export const defenseStats: SkaterPlayer[] = [
     {
-        number: 91,
-        gamerTag: "TooEzXx",
-        name: "L. Hansen",
-        position: "defense",
-        image: "/images/esport/players/TooEzXx.png",
-        stats: {
-            games: 14,
-            goals: 15,
-            assists: 8,
-            points: 23,
-            plusMinus: -3,
-            pim: 2,
-            powerplayGoals: 1,
-            shorthandedGoals: 0,
-            gameWinningGoals: 3,
-            shots: 68,
-            shootingPercentage: 22.1,
-            hits: 7,
-            faceoffWinPercentage: 0,
-        },
-    },
-    {
         number: 71,
         gamerTag: "Akin_Penta",
         name: "A. Isik",
         position: "forward",
         image: "/images/esport/players/akin_penta.png",
         stats: {
-            games: 14,
-            goals: 9,
-            assists: 13,
-            points: 22,
+            games: 16,
+            goals: 10,
+            assists: 15,
+            points: 25,
             plusMinus: -3,
             pim: 8,
             powerplayGoals: 0,
             shorthandedGoals: 0,
             gameWinningGoals: 4,
-            shots: 50,
-            shootingPercentage: 18,
-            hits: 3,
-            faceoffWinPercentage: 51.8,
+            shots: 56,
+            shootingPercentage: 17.9,
+            hits: 4,
+            faceoffWinPercentage: 50.2,
+        },
+    },
+    {
+        number: 91,
+        gamerTag: "TooEzXx",
+        name: "L. Hansen",
+        position: "defense",
+        image: "/images/esport/players/TooEzXx.png",
+        stats: {
+            games: 16,
+            goals: 16,
+            assists: 8,
+            points: 24,
+            plusMinus: -3,
+            pim: 2,
+            powerplayGoals: 1,
+            shorthandedGoals: 0,
+            gameWinningGoals: 3,
+            shots: 73,
+            shootingPercentage: 21.9,
+            hits: 7,
+            faceoffWinPercentage: 0,
         },
     },
     {
@@ -210,41 +190,19 @@ export const defenseStats: SkaterPlayer[] = [
         position: "defense",
         image: "/images/esport/players/PantherOnSkates.png",
         stats: {
-            games: 14,
-            goals: 7,
-            assists: 12,
-            points: 19,
+            games: 16,
+            goals: 9,
+            assists: 14,
+            points: 23,
             plusMinus: -3,
-            pim: 4,
+            pim: 6,
             powerplayGoals: 2,
             shorthandedGoals: 0,
             gameWinningGoals: 0,
-            shots: 30,
-            shootingPercentage: 23.3,
-            hits: 25,
+            shots: 42,
+            shootingPercentage: 21.4,
+            hits: 27,
             faceoffWinPercentage: 50,
-        },
-    },
-    {
-        number: 14,
-        gamerTag: "Alex96rizz",
-        name: "A. Rindå",
-        position: "defense",
-        image: "/images/esport/players/FellyKnight.png",
-        stats: {
-            games: 14,
-            goals: 0,
-            assists: 11,
-            points: 11,
-            plusMinus: -3,
-            pim: 4,
-            powerplayGoals: 0,
-            shorthandedGoals: 0,
-            gameWinningGoals: 0,
-            shots: 10,
-            shootingPercentage: 0,
-            hits: 21,
-            faceoffWinPercentage: 0,
         },
     },
     {
@@ -254,50 +212,50 @@ export const defenseStats: SkaterPlayer[] = [
         position: "forward",
         image: "/images/esport/players/Pasq86ualePS.png",
         stats: {
-            games: 14,
+            games: 16,
             goals: 1,
-            assists: 9,
-            points: 10,
+            assists: 12,
+            points: 13,
             plusMinus: -3,
             pim: 8,
             powerplayGoals: 1,
             shorthandedGoals: 0,
             gameWinningGoals: 0,
-            shots: 17,
-            shootingPercentage: 5.9,
-            hits: 23,
+            shots: 18,
+            shootingPercentage: 5.6,
+            hits: 28,
+            faceoffWinPercentage: 0,
+        },
+    },
+    {
+        number: 14,
+        gamerTag: "Alex96rizz",
+        name: "A. Rindå",
+        position: "defense",
+        image: "/images/esport/players/FellyKnight.png",
+        stats: {
+            games: 16,
+            goals: 0,
+            assists: 12,
+            points: 12,
+            plusMinus: -3,
+            pim: 4,
+            powerplayGoals: 0,
+            shorthandedGoals: 0,
+            gameWinningGoals: 0,
+            shots: 11,
+            shootingPercentage: 0,
+            hits: 22,
             faceoffWinPercentage: 0,
         },
     },
 ];
 
 /* =========================================
- * SPIELER OHNE PUNKTE
+ * WEITERE FELDSPIELER
  * ========================================= */
 
 export const forwardStats: SkaterPlayer[] = [
-    {
-        number: 69,
-        gamerTag: "goalie_breaker",
-        name: "N. Hoffmann",
-        position: "forward",
-        image: "/images/esport/players/goalie_breaker.png",
-        stats: {
-            games: 0,
-            goals: 0,
-            assists: 0,
-            points: 0,
-            plusMinus: 0,
-            pim: 0,
-            powerplayGoals: 0,
-            shorthandedGoals: 0,
-            gameWinningGoals: 0,
-            shots: 0,
-            shootingPercentage: 0,
-            hits: 0,
-            faceoffWinPercentage: 0,
-        },
-    },
     {
         number: 91,
         gamerTag: "xxICEFORCERxx",

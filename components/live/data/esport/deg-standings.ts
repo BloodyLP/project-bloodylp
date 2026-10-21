@@ -1,21 +1,24 @@
 /*
-============================================
-BloodyLP
-============================================
-Project: BloodyLP Website
-File: components/live/data/esport/deg-standings.ts
-
-Description:
-GCL 13 – Division I
-Aktueller Tabellenstand
-
-Stand: 20.10.2026
-============================================
-*/
+ * ============================================
+ * BloodyLP
+ *
+ * Project:
+ * BloodyLP Website
+ *
+ * File:
+ * components/live/data/esport/deg-standings.ts
+ *
+ * Description:
+ * GCL 13 – Division I
+ * Aktueller Tabellenstand
+ *
+ * Stand: 21.10.2026
+ * ============================================
+ */
 
 /* ============================================
-   LEAGUE TYPE
-============================================ */
+ * LEAGUE TYPE
+ * ============================================ */
 
 export type DegStandingsLeague = {
   name: string;
@@ -25,8 +28,8 @@ export type DegStandingsLeague = {
 };
 
 /* ============================================
-   LEAGUE DATA
-============================================ */
+ * LEAGUE DATA
+ * ============================================ */
 
 export const degStandingsLeague: DegStandingsLeague = {
   name: "GCL 13",
@@ -36,8 +39,8 @@ export const degStandingsLeague: DegStandingsLeague = {
 };
 
 /* ============================================
-   TEAM TYPE
-============================================ */
+ * TEAM TYPE
+ * ============================================ */
 
 export type DegStanding = {
   position: number;
@@ -74,17 +77,17 @@ export type DegStanding = {
 };
 
 /* ============================================
-   GCL 13 – DIVISION I
-   9 TEAMS
-   8 PLAYOFF-PLÄTZE
-
-   Stand: 20.10.2026
-============================================ */
+ * GCL 13 – DIVISION I
+ * 9 TEAMS
+ * 8 PLAYOFF-PLÄTZE
+ *
+ * Stand: 21.10.2026
+ * ============================================ */
 
 export const degStandings: DegStanding[] = [
   /* ----------------------------------------
-     01 – CONEXION
-  ---------------------------------------- */
+   * 01 – CONEXION
+   * ---------------------------------------- */
   {
     position: 1,
     team: "Conexion",
@@ -113,10 +116,40 @@ export const degStandings: DegStanding[] = [
   },
 
   /* ----------------------------------------
-     02 – HOCKEYHOLICS
-  ---------------------------------------- */
+   * 02 – DEADLY PHANTOMS
+   * ---------------------------------------- */
   {
     position: 2,
+    team: "Deadly Phantoms",
+    logo: "/images/esport/gcl13/deadly-phantoms.png",
+    players: 7,
+
+    gamesPlayed: 14,
+    wins: 8,
+    overtimeWins: 2,
+    overtimeLosses: 1,
+    losses: 3,
+
+    goalsFor: 37,
+    goalsAgainst: 26,
+    points: 29,
+
+    powerplayPercentage: 20,
+    penaltyKillPercentage: 83.33,
+    pim: 36,
+    shots: 206,
+    faceoffPercentage: 53.95,
+    hits: 133,
+    last10: "9-1-0",
+
+    playoffs: true,
+  },
+
+  /* ----------------------------------------
+   * 03 – HOCKEYHOLICS
+   * ---------------------------------------- */
+  {
+    position: 3,
     team: "Hockeyholics",
     logo: "/images/esport/gcl13/hockeyholics.png",
     players: 7,
@@ -143,69 +176,39 @@ export const degStandings: DegStanding[] = [
   },
 
   /* ----------------------------------------
-     03 – DEADLY PHANTOMS
-  ---------------------------------------- */
-  {
-    position: 3,
-    team: "Deadly Phantoms",
-    logo: "/images/esport/gcl13/deadly-phantoms.png",
-    players: 7,
-
-    gamesPlayed: 12,
-    wins: 8,
-    overtimeWins: 1,
-    overtimeLosses: 1,
-    losses: 2,
-
-    goalsFor: 33,
-    goalsAgainst: 22,
-    points: 27,
-
-    powerplayPercentage: 21.43,
-    penaltyKillPercentage: 81.25,
-    pim: 32,
-    shots: 179,
-    faceoffPercentage: 53.1,
-    hits: 109,
-    last10: "9-1-0",
-
-    playoffs: true,
-  },
-
-  /* ----------------------------------------
-     04 – DEG ESPORTS
-  ---------------------------------------- */
+   * 04 – DEG ESPORTS
+   * ---------------------------------------- */
   {
     position: 4,
     team: "DEG eSports",
     logo: "/images/esport/gcl13/deg-esports.png",
     players: 11,
 
-    gamesPlayed: 14,
-    wins: 7,
+    gamesPlayed: 16,
+    wins: 8,
     overtimeWins: 0,
-    overtimeLosses: 1,
+    overtimeLosses: 2,
     losses: 6,
 
-    goalsFor: 32,
-    goalsAgainst: 32,
-    points: 22,
+    goalsFor: 36,
+    goalsAgainst: 36,
+    points: 26,
 
-    powerplayPercentage: 40,
-    penaltyKillPercentage: 84.62,
-    pim: 26,
-    shots: 194,
-    faceoffPercentage: 51.72,
-    hits: 79,
-    last10: "4-6-0",
+    powerplayPercentage: 33.33,
+    penaltyKillPercentage: 85.71,
+    pim: 28,
+    shots: 220,
+    faceoffPercentage: 50.16,
+    hits: 88,
+    last10: "5-4-1",
 
     playoffs: true,
     isDeg: true,
   },
 
   /* ----------------------------------------
-     05 – GERMAN ELITE HOCKEY
-  ---------------------------------------- */
+   * 05 – GERMAN ELITE HOCKEY
+   * ---------------------------------------- */
   {
     position: 5,
     team: "German Elite Hockey",
@@ -234,8 +237,8 @@ export const degStandings: DegStanding[] = [
   },
 
   /* ----------------------------------------
-     06 – REH GAMING
-  ---------------------------------------- */
+   * 06 – REH GAMING
+   * ---------------------------------------- */
   {
     position: 6,
     team: "REH Gaming",
@@ -264,8 +267,8 @@ export const degStandings: DegStanding[] = [
   },
 
   /* ----------------------------------------
-     07 – THE LAST SHIFT
-  ---------------------------------------- */
+   * 07 – THE LAST SHIFT
+   * ---------------------------------------- */
   {
     position: 7,
     team: "The Last Shift",
@@ -294,8 +297,8 @@ export const degStandings: DegStanding[] = [
   },
 
   /* ----------------------------------------
-     08 – SCB ESPORTS
-  ---------------------------------------- */
+   * 08 – SCB ESPORTS
+   * ---------------------------------------- */
   {
     position: 8,
     team: "SCB eSports",
@@ -324,8 +327,8 @@ export const degStandings: DegStanding[] = [
   },
 
   /* ----------------------------------------
-     09 – ISERLOHN ROOSTERS ESPORTS
-  ---------------------------------------- */
+   * 09 – ISERLOHN ROOSTERS ESPORTS
+   * ---------------------------------------- */
   {
     position: 9,
     team: "Iserlohn Roosters eSports",

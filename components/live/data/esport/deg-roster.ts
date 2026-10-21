@@ -250,32 +250,6 @@ export const degDefensemen: DegPlayer[] = [
 export const degForwards: DegPlayer[] = [
 
     {
-        number: 69,
-
-        gamerTag:
-            "goalie_breaker",
-
-        name:
-            "N. Hoffmann",
-
-        nationality:
-            "/images/esport/flags/de.png",
-
-        flag:
-            "/images/esport/flags/de.png",
-
-        image:
-            "/images/esport/players/goalie_breaker.png",
-
-        position:
-            "forward",
-
-        sportsgamerUrl:
-            "https://sportsgamer.gg/players/2695",
-    },
-
-
-    {
         number: 71,
 
         gamerTag:

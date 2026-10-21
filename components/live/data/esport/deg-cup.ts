@@ -170,6 +170,7 @@ const teams = {
   hockeyholics: {
     name: "Hockeyholics",
     logo: "/images/esport/gcl13/hockeyholics.png",
+        eliminated: true,
   },
 
   theLastShift: {
@@ -461,10 +462,10 @@ export const gcl13Cup: GCL13Cup = {
           home: teams.deg,
           away: teams.hockeyholics,
 
-          homeScore: 0,
+          homeScore: 1,
           awayScore: 0,
 
-          played: false,
+          played: true,
         },
 
         {
@@ -519,7 +520,7 @@ export const gcl13Cup: GCL13Cup = {
         {
           id: "gcl13-cup-sf-1",
 
-          home: teams.tbd,
+          home: teams.deg,
           away: teams.tbd,
 
           homeScore: 0,
