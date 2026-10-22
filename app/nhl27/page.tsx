@@ -1071,7 +1071,7 @@ export default function NHL27Page() {
                                         {played ? (
                                             <div className={`${styles.gameScore} ${won ? styles.gameScoreWin : ""} ${lost ? styles.gameScoreLoss : ""}`}>
                                                 <strong>{game.homeScore} : {game.awayScore}</strong>
-                                                {game.overtime && <span>n. O.</span>}
+                                                {game.overtime && <span>OT</span>}
                                             </div>
                                         ) : (
                                             <div className={styles.gameScoreUpcoming}>
