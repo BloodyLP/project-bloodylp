@@ -168,6 +168,8 @@ import { Klopapiere } from "./members/Klopapiere";
 
 import { ZentralratDerSchneemänner } from "./members/ZentralratDerSchneemänner";
 
+import { Katzenpfote } from "./members/katzenpfote";
+
 
 
 export const MEMBERS: ServiceRecordMember[] = [
@@ -255,4 +257,6 @@ export const MEMBERS: ServiceRecordMember[] = [
     Klopapiere,
 
     ZentralratDerSchneemänner,
+
+    Katzenpfote,
 ];

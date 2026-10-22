@@ -214,7 +214,7 @@ forwards: {
 
         c: "BA-041",
 
-        rw: "",
+        rw: "BA-042",
 
     },
 
@@ -327,11 +327,6 @@ reserves: [
                        {
         memberId: "BA-039",
         position: "",
-    },
-
-                           {
-        memberId: "BA-040",
-        position: "Center",
     },
 
   

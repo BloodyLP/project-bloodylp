@@ -254,7 +254,7 @@ export default function NHL27Page() {
                     >
                         <span className={styles.projectTabNumber}></span>
                         <span>BE A PRO</span>
-                        <span className={styles.projectTabArrow}>↗</span>
+                        <span className={styles.projectTabArrow}></span>
                     </button>
 
                     <button
@@ -268,7 +268,7 @@ export default function NHL27Page() {
                     >
                         <span className={styles.projectTabNumber}></span>
                         <span>PENNYDEL-SAISON</span>
-                        <span className={styles.projectTabArrow}>↗</span>
+                        <span className={styles.projectTabArrow}></span>
                     </button>
 
                     <button
@@ -282,7 +282,7 @@ export default function NHL27Page() {
                     >
                         <span className={styles.projectTabNumber}></span>
                         <span>BLOODYARMY</span>
-                        <span className={styles.projectTabArrow}>↗</span>
+                        <span className={styles.projectTabArrow}></span>
                     </button>
                 </div>
             </section>
@@ -1101,20 +1101,59 @@ export default function NHL27Page() {
                         <p>Das BloodyArmy-Projekt bekommt seinen eigenen Bereich für Kader, Saisonverlauf, Ergebnisse und Statistiken.</p>
                     </div>
 
-                    <div className={styles.seasonIntroCard}>
-                        <div className={styles.seasonIntroMark}>BA</div>
-                        <div>
-                            <span className={styles.projectStatus}>PROJEKT-HUB</span>
-                            <h3>Los Angeles BloodyArmy</h3>
-                            <p>Der Bereich ist vorbereitet und kann später um Kader, Spielerstatistiken, Ergebnisse und Tabellen ergänzt werden.</p>
-                        </div>
-                    </div>
+                   
+<div className={styles.bloodyArmyTeamGrid}>
+    <div className={styles.seasonIntroCard}>
+        <div className={styles.seasonIntroLogos}>
+            <Image
+                src="/images/nhl27/bloodyarmy-logo.png"
+                alt="Los Angeles BloodyArmy Logo"
+                width={140}
+                height={140}
+                className={styles.bloodyArmyTeamLogo}
+            />
+        </div>
 
-                    <div className={styles.emptyStateCard}>
-                        <span className={styles.emptyStateNumber}>03</span>
-                        <h3>BloodyArmy – Inhalte folgen</h3>
-                        <p>Hier wird künftig das NHL-27-Projekt der BloodyArmy angezeigt. Die Projektumschaltung funktioniert bereits; die konkreten Saisoninhalte können anschließend ergänzt werden.</p>
-                    </div>
+        <div>
+            <span className={styles.projectStatus}>
+                NHL • PACIFIC DIVISION
+            </span>
+            <h3>Los Angeles BloodyArmy</h3>
+            <p>
+                Die Los Angeles BloodyArmy startet in NHL 27 in ein
+                neues Teamprojekt. Hier entsteht die Heimat für den
+                Kader, den Saisonverlauf, Ergebnisse und Statistiken
+                unseres Teams.
+            </p>
+        </div>
+    </div>
+
+    <div className={styles.seasonIntroCard}>
+        <div className={styles.seasonIntroLogos}>
+            <Image
+                src="/images/nhl27/youngarmy-logo.png"
+                alt="Ontario YoungArmy Logo"
+                width={140}
+                height={140}
+                className={styles.bloodyArmyTeamLogo}
+            />
+        </div>
+
+        <div>
+            <span className={styles.projectStatus}>
+                AHL • PACIFIC DIVISION
+            </span>
+            <h3>Ontario YoungArmy</h3>
+            <p>
+                Die Ontario YoungArmy steht für die nächste Generation
+                der BloodyArmy. Hier werden künftig das Team, die
+                Entwicklung der Spieler, Ergebnisse und Statistiken
+                des Nachwuchsprojekts präsentiert.
+            </p>
+        </div>
+    </div>
+</div>
+
                 </section>
             )}
 
