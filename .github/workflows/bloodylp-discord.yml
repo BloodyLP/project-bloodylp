@@ -1,0 +1,151 @@
+
+name: BloodyLP Discord Updates
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      # Alle Community-Unterseiten und zugehörige Komponenten
+      - "app/community/**"
+      - "app/communities/**"
+      - "app/**/community/**"
+      - "components/community/**"
+      - "components/communities/**"
+      - "components/**/community/**"
+
+      # Community-Daten, Karten, Statistiken und Dienstgrade
+      - "data/community/**"
+      - "data/communities/**"
+      - "public/data/community/**"
+      - "public/data/communities/**"
+      - "public/images/community/**"
+      - "public/images/communities/**"
+
+      # Gesamtes NHL-27-Projekt
+      - "app/nhl27/**"
+      - "components/live/data/nhl27/**"
+      - "data/nhl27/**"
+      - "public/data/nhl27/**"
+      - "public/images/nhl27/**"
+
+  # Manueller Test über GitHub Actions
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notify-discord:
+    name: Discord benachrichtigen
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Geänderte Dateien ermitteln
+        id: changes
+        shell: bash
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            {
+              echo "files<<EOF"
+              echo "Manueller Testlauf"
+              echo "EOF"
+            } >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if [ -z "$BEFORE" ] || \
+             [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            FILES=$(git diff-tree --no-commit-id --name-only -r "$AFTER")
+          else
+            FILES=$(git diff --name-only "$BEFORE" "$AFTER")
+          fi
+
+          if [ -z "$FILES" ]; then
+            FILES="Dateiliste nicht verfügbar"
+          fi
+
+          {
+            echo "files<<EOF"
+            echo "$FILES"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Discord-Nachricht senden
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          CHANGED_FILES: ${{ steps.changes.outputs.files }}
+          REPOSITORY: ${{ github.repository }}
+          COMMIT_URL: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}
+          EVENT_NAME: ${{ github.event_name }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import urllib.request
+
+          webhook = os.environ["DISCORD_WEBHOOK_URL"]
+          files = os.environ.get(
+              "CHANGED_FILES",
+              "Änderungen konnten nicht aufgelistet werden"
+          )
+
+          # Discord begrenzt die Länge eines Embed-Feldes.
+          files = files[:950]
+
+          if os.environ["EVENT_NAME"] == "workflow_dispatch":
+              title = "🧪 BloodyLP – Discord-Test"
+              description = (
+                  "Dies ist eine manuell ausgelöste Testnachricht "
+                  "für den Website-Workflow."
+              )
+          else:
+              title = "🏒 BloodyLP – Homepage aktualisiert"
+              description = (
+                  "Neue Änderungen wurden in das Repository "
+                  f"**{os.environ['REPOSITORY']}** übertragen."
+              )
+
+          payload = {
+              "username": "BloodyLP Website",
+              "allowed_mentions": {"parse": []},
+              "embeds": [{
+                  "title": title,
+                  "description": description,
+                  "fields": [{
+                      "name": "Geänderte Dateien",
+                      "value": f"```text\n{files}\n```"
+                  }],
+                  "url": os.environ["COMMIT_URL"],
+                  "color": 10610202,
+                  "footer": {
+                      "text": "Automatische BloodyLP-Website-Benachrichtigung"
+                  }
+              }]
+          }
+
+          request = urllib.request.Request(
+              webhook,
+              data=json.dumps(payload).encode("utf-8"),
+              headers={"Content-Type": "application/json"},
+              method="POST"
+          )
+
+          with urllib.request.urlopen(request, timeout=15) as response:
+              if response.status not in (200, 204):
+                  raise RuntimeError(
+                      f"Discord antwortete mit HTTP {response.status}"
+                  )
+
+          print("Discord-Benachrichtigung erfolgreich gesendet.")
+          PY
