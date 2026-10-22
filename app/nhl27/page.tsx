@@ -994,7 +994,15 @@ export default function NHL27Page() {
                                     {pennyDelStandings.map((team) => {
                                         const isKrefeld = team.team === "Krefeld Pinguine";
                                         return (
-                                            <tr key={team.team} className={isKrefeld ? styles.krefeldStandingsRow : undefined}>
+                                            <tr
+                                                key={team.team}
+                                                className={[
+                                                    team.rank <= 6 ? styles.playoffZone : "",
+                                                    team.rank >= 7 && team.rank <= 10 ? styles.prePlayoffZone : "",
+                                                    team.rank === 14 ? styles.relegationZone : "",
+                                                    isKrefeld ? styles.krefeldStandingsRow : "",
+                                                ].filter(Boolean).join(" ")}
+                                            >
                                                 <td>{team.rank}</td>
                                                 <td className={styles.standingsTeamCell}>
                                                     <span>{team.team}</span>
@@ -1005,8 +1013,25 @@ export default function NHL27Page() {
                                     })}
                                 </tbody>
                             </table>
+
+                            <div className={styles.standingsLegend}>
+    <div className={styles.legendItem}>
+        <span className={`${styles.legendDot} ${styles.legendPlayoff}`} />
+        <span>Platz 1–6: Direkte Playoffs</span>
+    </div>
+
+    <div className={styles.legendItem}>
+        <span className={`${styles.legendDot} ${styles.legendPrePlayoff}`} />
+        <span>Platz 7–10: Pre-Playoffs</span>
+    </div>
+
+    <div className={styles.legendItem}>
+        <span className={`${styles.legendDot} ${styles.legendRelegation}`} />
+        <span>Platz 14: Sportlicher Abstieg in die DEL2</span>
+    </div>
+</div>
                         </div>
-                        <p className={styles.tableFootnote}>Stand nach den ersten fünf Spielen der Krefeld Pinguine. Die übrigen Mannschaftswerte entsprechen dem bereitgestellten Screenshot.</p>
+                        <p className={styles.tableFootnote}></p>
                     </div>
 
                     <div className={styles.subHeader}>

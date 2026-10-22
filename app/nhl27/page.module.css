@@ -2935,7 +2935,59 @@
 }
 
 .standingsTable tbody tr:hover:not(.krefeldStandingsRow) {
-    background: rgba(255, 255, 255, 0.025);
+    filter: brightness(1.12);
+}
+
+/* Tabellenzonen: direkte Playoffs, Pre-Playoffs und sportlicher Abstieg */
+.playoffZone {
+    --zone-accent: #a3e635;
+    --zone-bg: rgba(163, 230, 53, 0.075);
+    --zone-border: rgba(163, 230, 53, 0.16);
+}
+
+.prePlayoffZone {
+    --zone-accent: #facc15;
+    --zone-bg: rgba(250, 204, 21, 0.075);
+    --zone-border: rgba(250, 204, 21, 0.17);
+}
+
+.relegationZone {
+    --zone-accent: #f87171;
+    --zone-bg: rgba(248, 113, 113, 0.075);
+    --zone-border: rgba(248, 113, 113, 0.18);
+}
+
+.standingsTable tbody tr.playoffZone,
+.standingsTable tbody tr.prePlayoffZone,
+.standingsTable tbody tr.relegationZone {
+    background: var(--zone-bg);
+    box-shadow: inset 3px 0 0 var(--zone-accent);
+}
+
+.standingsTable tbody tr.playoffZone td,
+.standingsTable tbody tr.prePlayoffZone td,
+.standingsTable tbody tr.relegationZone td {
+    border-bottom-color: var(--zone-border);
+}
+
+/* Krefeld wird innerhalb seiner aktuellen Tabellenzone betont,
+   statt unabhängig davon immer grün markiert zu werden. */
+.standingsTable tbody tr.krefeldStandingsRow {
+    background: var(--zone-bg, rgba(163, 230, 53, 0.075));
+    box-shadow:
+        inset 4px 0 0 var(--zone-accent, #a3e635),
+        inset 0 0 0 1px var(--zone-border, rgba(163, 230, 53, 0.2));
+}
+
+.standingsTable tbody tr.krefeldStandingsRow td {
+    color: #fff;
+    border-bottom-color: var(--zone-border, rgba(163, 230, 53, 0.16));
+    font-weight: 850;
+}
+
+.standingsTable tbody tr.krefeldStandingsRow .standingsTeamCell,
+.standingsTable tbody tr.krefeldStandingsRow .standingsPoints {
+    color: var(--zone-accent, var(--lime)) !important;
 }
 
 .standingsTeamCell {
@@ -2959,22 +3011,6 @@
 .standingsPoints {
     font-weight: 900;
     color: #fff !important;
-}
-
-.krefeldStandingsRow {
-    background: rgba(163, 230, 53, 0.105);
-    box-shadow: inset 3px 0 0 var(--lime);
-}
-
-.krefeldStandingsRow td {
-    color: #fff;
-    border-bottom-color: rgba(163, 230, 53, 0.16);
-    font-weight: 800;
-}
-
-.krefeldStandingsRow .standingsTeamCell,
-.krefeldStandingsRow .standingsPoints {
-    color: var(--lime) !important;
 }
 
 .youBadge {
@@ -3170,5 +3206,60 @@
 
     .youBadge {
         margin: 6px 0 0;
+    }
+}
+
+/* Legende unter der Tabelle */
+.standingsLegend {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 22px;
+    margin-top: 25px;
+    padding: 0px 16px;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+.legendDot {
+    display: inline-block;
+    flex: 0 0 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.legendPlayoff {
+    background: #a3e635;
+    box-shadow: 0 0 8px rgba(163, 230, 53, 0.35);
+}
+
+.legendPrePlayoff {
+    background: #facc15;
+    box-shadow: 0 0 8px rgba(250, 204, 21, 0.3);
+}
+
+.legendRelegation {
+    background: #f87171;
+    box-shadow: 0 0 8px rgba(248, 113, 113, 0.3);
+}
+
+@media (max-width: 600px) {
+    .standingsLegend {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .legendItem {
+        font-size: 0.78rem;
     }
 }
