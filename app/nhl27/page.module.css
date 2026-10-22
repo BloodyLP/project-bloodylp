@@ -767,7 +767,7 @@
     justify-content: center;
 
     min-width: 92px;
-    min-height: 58px;
+    min-height: 76px;
 
     padding: 8px 15px;
 
@@ -1279,7 +1279,7 @@
 }
 
 .teamStats > div {
-    min-height: 58px;
+    min-height: 76px;
 
     display: flex;
 
@@ -2488,5 +2488,687 @@
 
     .teamStats span {
         font-size: 0.54rem;
+    }
+}
+
+/* ============================================================= */
+/* NHL 27 • PROJEKT-SWITCHER */
+/* Ergänzung zur bestehenden Gestaltung */
+/* ============================================================= */
+
+.projectSwitcherSection {
+    position: relative;
+    z-index: 3;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 35px 24px 0;
+    scroll-margin-top: 90px;
+}
+
+.projectSwitcherHeader {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 18px;
+}
+
+.projectSwitcherHeader p {
+    max-width: 480px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+.projectSwitcher {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    padding: 7px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.025);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.16);
+}
+
+.projectTab {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-width: 0;
+    min-height: 76px;
+    padding: 13px 16px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.58);
+    font: inherit;
+    font-size: 0.72rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+        color 0.22s ease,
+        background 0.22s ease,
+        border-color 0.22s ease,
+        transform 0.22s ease;
+}
+
+.projectTab:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.projectTab:focus-visible {
+    outline: 2px solid var(--lime);
+    outline-offset: 3px;
+}
+
+.projectTabActive {
+    border-color: var(--border-lime);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(163, 230, 53, 0.11),
+            rgba(163, 230, 53, 0.035)
+        );
+    color: var(--lime);
+    box-shadow: inset 0 0 24px rgba(163, 230, 53, 0.025);
+}
+
+.projectTabNumber {
+    color: rgba(255, 255, 255, 0.28);
+    font-size: 0.64rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+}
+
+.projectTabActive .projectTabNumber {
+    color: var(--lime);
+}
+
+.projectTabArrow {
+    color: rgba(255, 255, 255, 0.22);
+    font-size: 0.9rem;
+    transition: transform 0.22s ease, color 0.22s ease;
+}
+
+.projectTab:hover .projectTabArrow,
+.projectTabActive .projectTabArrow {
+    color: var(--lime);
+    transform: translate(2px, -2px);
+}
+
+/* Die Hero-Aktionslinks sind jetzt Buttons, bleiben optisch gleich. */
+.heroActions button.primaryButton,
+.heroActions button.secondaryButton {
+    border: 0;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.heroActions button.secondaryButton {
+    border: 1px solid var(--border);
+}
+
+/* ============================================================= */
+/* PENNYDEL & BLOODYARMY • PROJEKTKARTEN */
+/* ============================================================= */
+
+.seasonIntroCard {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr);
+    align-items: center;
+    gap: 28px;
+    padding: 30px;
+    border: 1px solid var(--border-lime);
+    border-radius: 20px;
+    background:
+        radial-gradient(
+            circle at 0% 50%,
+            rgba(163, 230, 53, 0.075),
+            transparent 42%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.012)
+        );
+}
+
+.seasonIntroMark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 112px;
+    padding: 14px;
+    border: 1px solid var(--border-lime);
+    border-radius: 15px;
+    background: rgba(163, 230, 53, 0.055);
+    color: var(--lime);
+    font-size: 1.05rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-align: center;
+}
+
+.seasonIntroCard h3 {
+    margin: 7px 0 10px;
+    color: #fff;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 900;
+    letter-spacing: -0.035em;
+}
+
+.seasonIntroCard p {
+    max-width: 760px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    line-height: 1.75;
+}
+
+.tableFrame,
+.gameList,
+.emptyStateCard {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--card);
+}
+
+.tableFrameHeader,
+.gameListHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 24px 26px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.018);
+}
+
+.tableEyebrow {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--lime);
+    font-size: 0.6rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.tableFrameHeader h3,
+.gameListHeader h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: -0.025em;
+}
+
+.tableStatus {
+    flex-shrink: 0;
+    padding: 7px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.55rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+}
+
+.emptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 26px 34px;
+}
+
+.emptyStateNumber {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 18px;
+    border: 1px solid var(--border-lime);
+    border-radius: 10px;
+    background: rgba(163, 230, 53, 0.06);
+    color: var(--lime);
+    font-size: 0.72rem;
+    font-weight: 900;
+}
+
+.emptyState h4,
+.emptyStateCard h3 {
+    margin: 0 0 9px;
+    color: #fff;
+    font-size: 1.35rem;
+    font-weight: 900;
+}
+
+.emptyState p,
+.emptyStateCard p {
+    max-width: 740px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.86rem;
+    line-height: 1.75;
+}
+
+.emptyStateCard {
+    padding: 30px;
+}
+
+.emptyStateCard h3 {
+    font-size: 1.45rem;
+}
+
+/* ============================================================= */
+/* RESPONSIVE PROJEKT-AUSWAHL */
+/* ============================================================= */
+
+@media (max-width: 800px) {
+    .projectSwitcherHeader {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .projectSwitcher {
+        gap: 5px;
+        padding: 5px;
+    }
+
+    .projectTab {
+        gap: 7px;
+        padding: 12px 8px;
+        font-size: 0.64rem;
+        letter-spacing: 0.07em;
+    }
+
+    .seasonIntroCard {
+        grid-template-columns: 110px minmax(0, 1fr);
+        gap: 20px;
+        padding: 22px;
+    }
+}
+
+@media (max-width: 560px) {
+    .projectSwitcherSection {
+        padding: 25px 16px 0;
+    }
+
+    .projectSwitcher {
+        grid-template-columns: 1fr;
+        gap: 5px;
+        padding: 5px;
+    }
+
+    .projectTab {
+        justify-content: flex-start;
+        min-height: 50px;
+        padding: 11px 14px;
+        font-size: 0.68rem;
+        letter-spacing: 0.1em;
+    }
+
+    .projectTabArrow {
+        margin-left: auto;
+    }
+
+    .seasonIntroCard {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 20px;
+    }
+
+    .seasonIntroMark {
+        min-height: 70px;
+    }
+
+    .tableFrameHeader,
+    .gameListHeader {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .emptyState {
+        padding: 24px 20px 28px;
+    }
+
+    .emptyStateCard {
+        padding: 22px;
+    }
+}
+
+/* ============================================================= */
+/* PENNY-DEL • TABELLE, LOGOS UND KREFELD-SPIELE */
+/* ============================================================= */
+
+.seasonIntroLogos {
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid var(--border-lime);
+    border-radius: 15px;
+    background: rgba(163, 230, 53, 0.045);
+}
+
+.krefeldLogo {
+    display: block;
+    width: 86px;
+    height: 86px;
+    object-fit: contain;
+}
+
+.pennyDelLogo {
+    display: block;
+    width: 108px;
+    height: auto;
+    max-height: 42px;
+    object-fit: contain;
+}
+
+.tablePennyLogo {
+    width: 104px;
+    height: auto;
+    max-height: 42px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.standingsScroller {
+    width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+}
+
+.standingsTable {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    font-size: 1rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.standingsTable th {
+    padding: 13px 12px;
+    color: rgba(255, 255, 255, 0.46);
+    background: rgba(255, 255, 255, 0.025);
+    border-bottom: 1px solid var(--border);
+    font-size: 0.76rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.standingsTable th:nth-child(1),
+.standingsTable th:nth-child(2),
+.standingsTable td:nth-child(1),
+.standingsTable td:nth-child(2) {
+    text-align: left;
+}
+
+.standingsTable td {
+    padding: 16px 14px;
+    color: rgba(255, 255, 255, 0.76);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+    text-align: right;
+    white-space: nowrap;
+}
+
+.standingsTable tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.standingsTable tbody tr:hover:not(.krefeldStandingsRow) {
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.standingsTeamCell {
+    min-width: 280px;
+    font-size: 1rem;
+    font-weight: 750;
+}
+
+.standingsTeamCell span {
+    vertical-align: middle;
+}
+
+.standingsTeamLogo {
+    width: 25px;
+    height: 25px;
+    margin-right: 9px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.standingsPoints {
+    font-weight: 900;
+    color: #fff !important;
+}
+
+.krefeldStandingsRow {
+    background: rgba(163, 230, 53, 0.105);
+    box-shadow: inset 3px 0 0 var(--lime);
+}
+
+.krefeldStandingsRow td {
+    color: #fff;
+    border-bottom-color: rgba(163, 230, 53, 0.16);
+    font-weight: 800;
+}
+
+.krefeldStandingsRow .standingsTeamCell,
+.krefeldStandingsRow .standingsPoints {
+    color: var(--lime) !important;
+}
+
+.youBadge {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 4px 6px;
+    border: 1px solid rgba(163, 230, 53, 0.32);
+    border-radius: 4px;
+    color: var(--lime);
+    font-size: 0.5rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+}
+
+.tableFootnote {
+    margin: 0;
+    padding: 12px 18px 16px;
+    color: rgba(255, 255, 255, 0.38);
+    font-size: 0.7rem;
+    line-height: 1.6;
+}
+
+.krefeldGameList {
+    display: flex;
+    flex-direction: column;
+}
+
+.krefeldGameRow {
+    display: grid;
+    grid-template-columns: 100px minmax(0, 1fr) 120px;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.krefeldGameRow:last-child {
+    border-bottom: 0;
+}
+
+.gameDayLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    min-height: 76px;
+    border: 1px solid var(--border-lime);
+    border-radius: 9px;
+    background: rgba(163, 230, 53, 0.045);
+}
+
+.gameDayLabel span,
+.gameVenue {
+    color: rgba(255, 255, 255, 0.42);
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+}
+
+.gameDayLabel strong {
+    color: var(--lime);
+    font-size: 1.45rem;
+    font-weight: 900;
+}
+
+.gameMatchInfo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 10px;
+    min-width: 0;
+}
+
+.gameVenue {
+    flex-basis: 100%;
+    color: var(--lime);
+}
+
+.gameMatchInfo strong {
+    color: #fff;
+    font-size: 1.05rem;
+    line-height: 1.35;
+    font-weight: 800;
+}
+
+.gameVs {
+    display: inline-flex;
+    align-items: center;
+    color: var(--lime);
+    font-size: 1rem;
+    font-weight: 900;
+    line-height: 1.35;
+}
+
+.gameOpponent {
+    display: none;
+}
+
+.gameDayLabel small {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.68rem;
+    white-space: nowrap;
+}
+
+.gameScore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-width: 112px;
+    padding: 13px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.gameScore strong {
+    color: #fff;
+    font-size: 1.35rem;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.gameScore span {
+    color: var(--lime);
+    font-size: 0.65rem;
+    font-weight: 900;
+}
+
+.gameScoreWin {
+    border-color: rgba(163, 230, 53, 0.28);
+    background: rgba(163, 230, 53, 0.07);
+}
+
+.gameScoreLoss {
+    border-color: rgba(239, 68, 68, 0.58);
+    background: rgba(239, 68, 68, 0.18);
+    box-shadow: inset 0 0 0 1px rgba(239, 68, 68, 0.08);
+}
+
+.gameScoreLoss strong {
+    color: #fecaca;
+}
+
+.gameScoreUpcoming {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 112px;
+    padding: 13px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.035);
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+}
+
+@media (max-width: 700px) {
+    .seasonIntroLogos {
+        min-height: 110px;
+        flex-direction: row;
+    }
+
+    .krefeldLogo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .pennyDelLogo {
+        width: 88px;
+    }
+
+    .krefeldGameRow {
+        grid-template-columns: 74px minmax(0, 1fr) 90px;
+        gap: 10px;
+        padding: 16px 12px;
+    }
+
+    .gameMatchInfo strong {
+        font-size: 0.9rem;
+    }
+
+    .gameScore,
+    .gameScoreUpcoming {
+        flex-direction: column;
+        gap: 2px;
+        min-width: 0;
+        padding: 8px 4px;
+    }
+
+    .youBadge {
+        margin: 6px 0 0;
     }
 }

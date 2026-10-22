@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 import {
     playerCareer,
@@ -26,8 +26,81 @@ import {
 
 import styles from "./page.module.css";
 
+
+const pennyDelStandings = [
+    { rank: 1, team: "Nürnberg Ice Tigers", games: 6, points: 15, wins: 5, losses: 1, otWins: 0, otLosses: 0, percentage: "83,3 %", goalsFor: 23, goalsAgainst: 14 },
+    { rank: 2, team: "Kölner Haie", games: 5, points: 12, wins: 4, losses: 1, otWins: 0, otLosses: 0, percentage: "80,0 %", goalsFor: 25, goalsAgainst: 11 },
+    { rank: 3, team: "Eisbären Berlin", games: 5, points: 11, wins: 3, losses: 1, otWins: 1, otLosses: 0, percentage: "73,3 %", goalsFor: 16, goalsAgainst: 10 },
+    { rank: 4, team: "Fischtown Pinguins Bremerhaven", games: 5, points: 11, wins: 3, losses: 1, otWins: 1, otLosses: 0, percentage: "73,3 %", goalsFor: 18, goalsAgainst: 13 },
+    { rank: 5, team: "EHC Red Bull München", games: 5, points: 9, wins: 3, losses: 2, otWins: 0, otLosses: 0, percentage: "60,0 %", goalsFor: 22, goalsAgainst: 15 },
+    { rank: 6, team: "Schwenninger Wild Wings", games: 5, points: 9, wins: 2, losses: 1, otWins: 1, otLosses: 1, percentage: "60,0 %", goalsFor: 14, goalsAgainst: 12 },
+    { rank: 7, team: "Augsburger Panther", games: 5, points: 9, wins: 3, losses: 2, otWins: 0, otLosses: 0, percentage: "60,0 %", goalsFor: 18, goalsAgainst: 23 },
+    { rank: 8, team: "Krefeld Pinguine", games: 5, points: 7, wins: 1, losses: 2, otWins: 2, otLosses: 0, percentage: "46,7 %", goalsFor: 13, goalsAgainst: 16 },
+    { rank: 9, team: "Straubing Tigers", games: 5, points: 7, wins: 2, losses: 2, otWins: 0, otLosses: 1, percentage: "46,7 %", goalsFor: 12, goalsAgainst: 12 },
+    { rank: 10, team: "Adler Mannheim", games: 6, points: 7, wins: 2, losses: 3, otWins: 0, otLosses: 1, percentage: "38,9 %", goalsFor: 13, goalsAgainst: 18 },
+    { rank: 11, team: "Grizzlys Wolfsburg", games: 5, points: 5, wins: 1, losses: 2, otWins: 0, otLosses: 2, percentage: "33,3 %", goalsFor: 10, goalsAgainst: 15 },
+    { rank: 12, team: "Löwen Frankfurt", games: 5, points: 3, wins: 1, losses: 4, otWins: 0, otLosses: 0, percentage: "20,0 %", goalsFor: 14, goalsAgainst: 24 },
+    { rank: 13, team: "ERC Ingolstadt", games: 5, points: 2, wins: 0, losses: 4, otWins: 1, otLosses: 0, percentage: "13,3 %", goalsFor: 7, goalsAgainst: 16 },
+    { rank: 14, team: "Iserlohn Roosters", games: 5, points: 1, wins: 0, losses: 4, otWins: 0, otLosses: 1, percentage: "6,7 %", goalsFor: 8, goalsAgainst: 14 },
+];
+
+const krefeldGames = [
+    { day: 1, date: "18.09.2026", home: "Krefeld Pinguine", away: "Fischtown Pinguins Bremerhaven", homeScore: 3, awayScore: 7, overtime: false },
+    { day: 2, date: "20.09.2026", home: "Straubing Tigers", away: "Krefeld Pinguine", homeScore: 5, awayScore: 3, overtime: false },
+    { day: 3, date: "25.09.2026", home: "Adler Mannheim", away: "Krefeld Pinguine", homeScore: 1, awayScore: 2, overtime: true },
+    { day: 4, date: "27.09.2026", home: "Krefeld Pinguine", away: "Schwenninger Wild Wings", homeScore: 3, awayScore: 2, overtime: true },
+    { day: 5, date: "02.10.2026", home: "Krefeld Pinguine", away: "ERC Ingolstadt", homeScore: 2, awayScore: 1, overtime: false },
+    { day: 6, date: "04.10.2026", home: "Iserlohn Roosters", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 7, date: "08.10.2026", home: "Löwen Frankfurt", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 8, date: "11.10.2026", home: "Krefeld Pinguine", away: "Augsburger Panther", homeScore: null, awayScore: null, overtime: false },
+    { day: 9, date: "15.10.2026", home: "Grizzlys Wolfsburg", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 10, date: "18.10.2026", home: "Krefeld Pinguine", away: "Eisbären Berlin", homeScore: null, awayScore: null, overtime: false },
+    { day: 11, date: "23.10.2026", home: "Nürnberg Ice Tigers", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 12, date: "25.10.2026", home: "Krefeld Pinguine", away: "EHC Red Bull München", homeScore: null, awayScore: null, overtime: false },
+    { day: 41, date: "28.10.2026", home: "Krefeld Pinguine", away: "Schwenninger Wild Wings", homeScore: null, awayScore: null, overtime: false },
+    { day: 13, date: "30.10.2026", home: "Krefeld Pinguine", away: "Kölner Haie", homeScore: null, awayScore: null, overtime: false },
+    { day: 14, date: "01.11.2026", home: "Schwenninger Wild Wings", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 15, date: "13.11.2026", home: "Krefeld Pinguine", away: "Nürnberg Ice Tigers", homeScore: null, awayScore: null, overtime: false },
+    { day: 16, date: "15.11.2026", home: "EHC Red Bull München", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 17, date: "19.11.2026", home: "Krefeld Pinguine", away: "Straubing Tigers", homeScore: null, awayScore: null, overtime: false },
+    { day: 18, date: "22.11.2026", home: "Krefeld Pinguine", away: "Grizzlys Wolfsburg", homeScore: null, awayScore: null, overtime: false },
+    { day: 19, date: "24.11.2026", home: "Augsburger Panther", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 20, date: "27.11.2026", home: "ERC Ingolstadt", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 21, date: "29.11.2026", home: "Krefeld Pinguine", away: "Iserlohn Roosters", homeScore: null, awayScore: null, overtime: false },
+    { day: 22, date: "04.12.2026", home: "Fischtown Pinguins Bremerhaven", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 23, date: "06.12.2026", home: "Krefeld Pinguine", away: "Adler Mannheim", homeScore: null, awayScore: null, overtime: false },
+    { day: 24, date: "08.12.2026", home: "Kölner Haie", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 25, date: "11.12.2026", home: "Krefeld Pinguine", away: "Löwen Frankfurt", homeScore: null, awayScore: null, overtime: false },
+    { day: 26, date: "13.12.2026", home: "Eisbären Berlin", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 27, date: "18.12.2026", home: "Augsburger Panther", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 28, date: "20.12.2026", home: "EHC Red Bull München", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 29, date: "23.12.2026", home: "Krefeld Pinguine", away: "Grizzlys Wolfsburg", homeScore: null, awayScore: null, overtime: false },
+    { day: 30, date: "27.12.2026", home: "Straubing Tigers", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 31, date: "29.12.2026", home: "Krefeld Pinguine", away: "Fischtown Pinguins Bremerhaven", homeScore: null, awayScore: null, overtime: false },
+    { day: 32, date: "02.01.2027", home: "Eisbären Berlin", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 33, date: "05.01.2027", home: "Krefeld Pinguine", away: "Adler Mannheim", homeScore: null, awayScore: null, overtime: false },
+    { day: 34, date: "08.01.2027", home: "Krefeld Pinguine", away: "Löwen Frankfurt", homeScore: null, awayScore: null, overtime: false },
+    { day: 35, date: "10.01.2027", home: "Iserlohn Roosters", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 36, date: "15.01.2027", home: "ERC Ingolstadt", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 37, date: "17.01.2027", home: "Schwenninger Wild Wings", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 38, date: "21.01.2027", home: "Nürnberg Ice Tigers", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 39, date: "24.01.2027", home: "Krefeld Pinguine", away: "Kölner Haie", homeScore: null, awayScore: null, overtime: false },
+    { day: 40, date: "29.01.2027", home: "Adler Mannheim", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 42, date: "02.02.2027", home: "Krefeld Pinguine", away: "Augsburger Panther", homeScore: null, awayScore: null, overtime: false },
+    { day: 43, date: "05.02.2027", home: "Krefeld Pinguine", away: "Iserlohn Roosters", homeScore: null, awayScore: null, overtime: false },
+    { day: 44, date: "07.02.2027", home: "Krefeld Pinguine", away: "ERC Ingolstadt", homeScore: null, awayScore: null, overtime: false },
+    { day: 45, date: "17.02.2027", home: "Löwen Frankfurt", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 46, date: "19.02.2027", home: "Krefeld Pinguine", away: "Nürnberg Ice Tigers", homeScore: null, awayScore: null, overtime: false },
+    { day: 47, date: "21.02.2027", home: "Kölner Haie", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 48, date: "26.02.2027", home: "Fischtown Pinguins Bremerhaven", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+    { day: 49, date: "28.02.2027", home: "Krefeld Pinguine", away: "EHC Red Bull München", homeScore: null, awayScore: null, overtime: false },
+    { day: 50, date: "03.03.2027", home: "Krefeld Pinguine", away: "Straubing Tigers", homeScore: null, awayScore: null, overtime: false },
+    { day: 51, date: "05.03.2027", home: "Krefeld Pinguine", away: "Eisbären Berlin", homeScore: null, awayScore: null, overtime: false },
+    { day: 52, date: "07.03.2027", home: "Grizzlys Wolfsburg", away: "Krefeld Pinguine", homeScore: null, awayScore: null, overtime: false },
+];
+
 export default function NHL27Page() {
-    const currentTeam = careerTeams[0];
+    const [activeProject, setActiveProject] = useState<"be-a-pro" | "pennydel" | "bloodyarmy">("be-a-pro");
 
     return (
         <main className={styles.page}>
@@ -72,20 +145,32 @@ export default function NHL27Page() {
 
                         <div className={styles.heroActions}>
 
-                            <Link
-                                href="#be-a-pro"
+                            <button
+                                type="button"
                                 className={styles.primaryButton}
+                                onClick={() => setActiveProject("be-a-pro")}
                             >
                                 BE A PRO
                                 <span>→</span>
-                            </Link>
+                            </button>
 
-                            <Link
-                                href="#projekte"
-                                className={styles.secondaryButton}
+                                                        <button
+                                type="button"
+                                className={styles.primaryButton}
+                                onClick={() => setActiveProject("pennydel")}
                             >
-                                PROJEKTE
-                            </Link>
+                                PENNY DEL
+                                <span>→</span>
+                            </button>
+
+                                                                                    <button
+                                type="button"
+                                className={styles.primaryButton}
+                                onClick={() => setActiveProject("bloodyarmy")}
+                            >
+                                BLOODY ARMY
+                                <span>→</span>
+                            </button>
 
                         </div>
 
@@ -144,136 +229,69 @@ export default function NHL27Page() {
 
 
             {/* ========================================================= */}
-            {/* PROJEKTE */}
+            {/* PROJEKT-AUSWAHL */}
             {/* ========================================================= */}
 
             <section
-                id="projekte"
-                className={styles.section}
+                id="projekt-auswahl"
+                className={styles.projectSwitcherSection}
+                aria-label="NHL-27-Projekt auswählen"
             >
-
-                <div className={styles.sectionHeader}>
-
-                    <div>
-
-                        <span className={styles.sectionEyebrow}>
-                            NHL 27
-                        </span>
-
-                        <h2>
-                            MEINE PROJEKTE
-                        </h2>
-
-                    </div>
-
-                    <p>
-                        Hier entstehen und wachsen die verschiedenen
-                        NHL-27-Projekte von BloodyLP.
-                    </p>
-
+                <div className={styles.projectSwitcherHeader}>
+                    <span className={styles.sectionEyebrow}>NHL 27 • PROJEKTE</span>
+                    <p>Wähle dein Projekt aus. Der ausgewählte Bereich wird hier angezeigt.</p>
                 </div>
 
-
-                <div className={styles.projectGrid}>
-
-                    {/* ================================================= */}
-                    {/* BE A PRO */}
-                    {/* ================================================= */}
-
-                    <motion.a
-                        href="#be-a-pro"
-                        whileHover={{ y: -6 }}
-                        transition={{ duration: 0.2 }}
-                        className={`${styles.projectCard} ${styles.projectActive}`}
+                <div className={styles.projectSwitcher} role="tablist" aria-label="NHL-27-Projekte">
+                    <button
+                        type="button"
+                        role="tab"
+                        id="tab-be-a-pro"
+                        aria-selected={activeProject === "be-a-pro"}
+                        aria-controls="panel-be-a-pro"
+                        className={`${styles.projectTab} ${activeProject === "be-a-pro" ? styles.projectTabActive : ""}`}
+                        onClick={() => setActiveProject("be-a-pro")}
                     >
+                        <span className={styles.projectTabNumber}></span>
+                        <span>BE A PRO</span>
+                        <span className={styles.projectTabArrow}>↗</span>
+                    </button>
 
-                        <div className={styles.projectNumber}>
-                            01
-                        </div>
-
-                        <div className={styles.projectIcon}>
-                            27
-                        </div>
-
-                        <div className={styles.projectContent}>
-
-                            <span className={styles.projectStatus}>
-                                AKTIV
-                            </span>
-
-                            <h3>
-                                BE A PRO
-                            </h3>
-
-                            <p>
-                                Die Spielerkarriere von BloodyLP
-                                mit Karriereverlauf, Statistiken,
-                                Teams und Auszeichnungen.
-                            </p>
-
-                        </div>
-
-                        <span className={styles.projectArrow}>
-                            →
-                        </span>
-
-                    </motion.a>
-
-
-                    {/* ================================================= */}
-                    {/* GM CONNECTED */}
-                    {/* ================================================= */}
-
-                    <motion.div
-                        whileHover={{ y: -4 }}
-                        transition={{ duration: 0.2 }}
-                        className={styles.projectCard}
+                    <button
+                        type="button"
+                        role="tab"
+                        id="tab-pennydel"
+                        aria-selected={activeProject === "pennydel"}
+                        aria-controls="panel-pennydel"
+                        className={`${styles.projectTab} ${activeProject === "pennydel" ? styles.projectTabActive : ""}`}
+                        onClick={() => setActiveProject("pennydel")}
                     >
+                        <span className={styles.projectTabNumber}></span>
+                        <span>PENNYDEL-SAISON</span>
+                        <span className={styles.projectTabArrow}>↗</span>
+                    </button>
 
-                        <div className={styles.projectNumber}>
-                            02
-                        </div>
-
-                        <div className={styles.projectIcon}>
-                            GM
-                        </div>
-
-                        <div className={styles.projectContent}>
-
-                            <span className={styles.projectStatusMuted}>
-                                IN PLANUNG
-                            </span>
-
-                            <h3>
-                                GM CONNECTED
-                            </h3>
-
-                            <p>
-                                Ein zukünftiger Bereich für
-                                Franchise-, GM- und Connected-Projekte
-                                rund um NHL 27.
-                            </p>
-
-                        </div>
-
-                        <span className={styles.projectArrowMuted}>
-                            →
-                        </span>
-
-                    </motion.div>
-
+                    <button
+                        type="button"
+                        role="tab"
+                        id="tab-bloodyarmy"
+                        aria-selected={activeProject === "bloodyarmy"}
+                        aria-controls="panel-bloodyarmy"
+                        className={`${styles.projectTab} ${activeProject === "bloodyarmy" ? styles.projectTabActive : ""}`}
+                        onClick={() => setActiveProject("bloodyarmy")}
+                    >
+                        <span className={styles.projectTabNumber}></span>
+                        <span>BLOODYARMY</span>
+                        <span className={styles.projectTabArrow}>↗</span>
+                    </button>
                 </div>
-
             </section>
-
-
-            <div className={styles.divider} />
-
 
             {/* ========================================================= */}
             {/* BE A PRO */}
             {/* ========================================================= */}
 
+            {activeProject === "be-a-pro" && (
             <section
                 id="be-a-pro"
                 className={styles.section}
@@ -920,35 +938,160 @@ export default function NHL27Page() {
                 </div>
 
             </section>
+            )}
 
+            {activeProject === "pennydel" && (
+                <section
+                    id="panel-pennydel"
+                    role="tabpanel"
+                    aria-labelledby="tab-pennydel"
+                    className={styles.section}
+                >
+                    <div className={styles.sectionHeader}>
+                        <div>
+                            <span className={styles.sectionEyebrow}>NHL 27 • PENNYDEL</span>
+                            <h2>PENNY-DEL-SAISON</h2>
+                        </div>
+                        <p>Die Saison mit den Krefeld Pinguinen – Tabellenstand, Ergebnisse und Spielplan auf einen Blick.</p>
+                    </div>
 
-            {/* ========================================================= */}
-            {/* ABSCHLUSS */}
-            {/* ========================================================= */}
+                    <div className={styles.seasonIntroCard}>
+                        <div className={styles.seasonIntroLogos}>
+                            <Image
+                                src="/images/nhl27/krefeld-pinguine-logo.png"
+                                alt="Logo der Krefeld Pinguine"
+                                width={140}
+                                height={140}
+                                className={styles.krefeldLogo}
+                            />
+                        </div>
+                        <div>
+                            <span className={styles.projectStatus}>SAISONPROJEKT</span>
+                            <h3>Krefeld Pinguine</h3>
+                            <p>Die PENNY-DEL-Saison in NHL 27. Hier findest du den aktuellen Tabellenstand und alle bisherigen Spiele der Krefeld Pinguine.</p>
+                        </div>
+                    </div>
 
-            <section className={styles.bottomSection}>
+                    <div className={styles.subHeader}>
+                        <span>PENNY-DEL</span>
+                        <h3>TABELLE</h3>
+                    </div>
 
-                <div>
+                    <div className={styles.tableFrame}>
+                        <div className={styles.tableFrameHeader}>
+                            <div>
+                                <span className={styles.tableEyebrow}>SAISONÜBERSICHT</span>
+                                <h3>Aktueller Tabellenstand</h3>
+                            </div>
+                            <Image src="/images/nhl27/penny-del-logo.svg" alt="PENNY DEL" width={112} height={44} className={styles.tablePennyLogo} />
+                        </div>
+                        <div className={styles.standingsScroller}>
+                            <table className={styles.standingsTable}>
+                                <thead>
+                                    <tr><th>Pl.</th><th>Team</th><th>SP</th><th>PKT</th><th>S</th><th>N</th><th>OTS</th><th>OTN</th><th>P %</th><th>T</th><th>GT</th><th>Diff.</th></tr>
+                                </thead>
+                                <tbody>
+                                    {pennyDelStandings.map((team) => {
+                                        const isKrefeld = team.team === "Krefeld Pinguine";
+                                        return (
+                                            <tr key={team.team} className={isKrefeld ? styles.krefeldStandingsRow : undefined}>
+                                                <td>{team.rank}</td>
+                                                <td className={styles.standingsTeamCell}>
+                                                    <span>{team.team}</span>
+                                                </td>
+                                                <td>{team.games}</td><td className={styles.standingsPoints}>{team.points}</td><td>{team.wins}</td><td>{team.losses}</td><td>{team.otWins}</td><td>{team.otLosses}</td><td>{team.percentage}</td><td>{team.goalsFor}</td><td>{team.goalsAgainst}</td><td>{team.goalsFor - team.goalsAgainst > 0 ? "+" : ""}{team.goalsFor - team.goalsAgainst}</td>
+                                            </tr>
+                                        );
+                                    })}
+                                </tbody>
+                            </table>
+                        </div>
+                        <p className={styles.tableFootnote}>Stand nach den ersten fünf Spielen der Krefeld Pinguine. Die übrigen Mannschaftswerte entsprechen dem bereitgestellten Screenshot.</p>
+                    </div>
 
-                    <span>
-                        NHL 27
-                    </span>
+                    <div className={styles.subHeader}>
+                        <span>SPIELTAGE</span>
+                        <h3>ERGEBNISSE &amp; SPIELPLAN</h3>
+                    </div>
 
-                    <h2>
-                        WEITERE PROJEKTE
-                        <br />
-                        FOLGEN.
-                    </h2>
+                    <div className={styles.gameList}>
+                        <div className={styles.gameListHeader}>
+                            <div>
+                                <span className={styles.tableEyebrow}>KREFELD PINGUINE</span>
+                                <h3>Gespielte Spiele</h3>
+                            </div>
+                            <span className={styles.tableStatus}>SAISONVERLAUF</span>
+                        </div>
+                        <div className={styles.krefeldGameList}>
+                            {krefeldGames.map((game) => {
+                                const isHome = game.home === "Krefeld Pinguine";
+                                const played = game.homeScore !== null && game.awayScore !== null;
+                                const krefeldScore = isHome ? game.homeScore : game.awayScore;
+                                const opponentScore = isHome ? game.awayScore : game.homeScore;
+                                const won = played && krefeldScore! > opponentScore!;
+                                const lost = played && krefeldScore! < opponentScore!;
+                                return (
+                                    <div className={styles.krefeldGameRow} key={`${game.day}-${game.date}`}>
+                                        <div className={styles.gameDayLabel}>
+                                            <span>SPIELTAG</span>
+                                            <strong>{String(game.day).padStart(2, "0")}</strong>
+                                            <small>{game.date}</small>
+                                        </div>
+                                        <div className={styles.gameMatchInfo}>
+                                            <span className={styles.gameVenue}>{isHome ? "HEIMSPIEL" : "AUSWÄRTS"}</span>
+                                            <strong>{game.home}</strong>
+                                            <span className={styles.gameVs}>-</span>
+                                            <strong>{game.away}</strong>
+                                        </div>
+                                        {played ? (
+                                            <div className={`${styles.gameScore} ${won ? styles.gameScoreWin : ""} ${lost ? styles.gameScoreLoss : ""}`}>
+                                                <strong>{game.homeScore} : {game.awayScore}</strong>
+                                                {game.overtime && <span>n. O.</span>}
+                                            </div>
+                                        ) : (
+                                            <div className={styles.gameScoreUpcoming}>
+                                                <span>ANSTEHEND</span>
+                                            </div>
+                                        )}
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                </section>
+            )}
 
-                </div>
+            {activeProject === "bloodyarmy" && (
+                <section
+                    id="panel-bloodyarmy"
+                    role="tabpanel"
+                    aria-labelledby="tab-bloodyarmy"
+                    className={styles.section}
+                >
+                    <div className={styles.sectionHeader}>
+                        <div>
+                            <span className={styles.sectionEyebrow}>NHL 27 • BLOODYARMY</span>
+                            <h2>LOS ANGELES BLOODYARMY</h2>
+                        </div>
+                        <p>Das BloodyArmy-Projekt bekommt seinen eigenen Bereich für Kader, Saisonverlauf, Ergebnisse und Statistiken.</p>
+                    </div>
 
-                <p>
-                    Dieser Bereich wird kontinuierlich erweitert
-                    und kann zukünftig weitere NHL-27-Spielmodi,
-                    Karrieren und Statistiken aufnehmen.
-                </p>
+                    <div className={styles.seasonIntroCard}>
+                        <div className={styles.seasonIntroMark}>BA</div>
+                        <div>
+                            <span className={styles.projectStatus}>PROJEKT-HUB</span>
+                            <h3>Los Angeles BloodyArmy</h3>
+                            <p>Der Bereich ist vorbereitet und kann später um Kader, Spielerstatistiken, Ergebnisse und Tabellen ergänzt werden.</p>
+                        </div>
+                    </div>
 
-            </section>
+                    <div className={styles.emptyStateCard}>
+                        <span className={styles.emptyStateNumber}>03</span>
+                        <h3>BloodyArmy – Inhalte folgen</h3>
+                        <p>Hier wird künftig das NHL-27-Projekt der BloodyArmy angezeigt. Die Projektumschaltung funktioniert bereits; die konkreten Saisoninhalte können anschließend ergänzt werden.</p>
+                    </div>
+                </section>
+            )}
 
         </main>
     );
