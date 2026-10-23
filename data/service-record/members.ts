@@ -170,6 +170,8 @@ import { ZentralratDerSchneemänner } from "./members/ZentralratDerSchneemänner
 
 import { Katzenpfote } from "./members/katzenpfote";
 
+import { Hannsscheinwerfer } from "./members/hannsscheinwerfer";
+
 
 
 export const MEMBERS: ServiceRecordMember[] = [
@@ -259,4 +261,6 @@ export const MEMBERS: ServiceRecordMember[] = [
     ZentralratDerSchneemänner,
 
     Katzenpfote,
+
+    Hannsscheinwerfer,
 ];
