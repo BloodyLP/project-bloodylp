@@ -92,25 +92,43 @@ jobs:
           python - <<'PY'
           import json
           import os
+          import sys
+          import urllib.error
           import urllib.request
 
-          webhook = os.environ["DISCORD_WEBHOOK_URL"]
+          webhook = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
+
+          if not webhook:
+              print(
+                  "FEHLER: Das GitHub-Secret DISCORD_WEBHOOK_URL "
+                  "ist leer oder nicht verfügbar."
+              )
+              sys.exit(1)
+
+          # Die URL niemals im Protokoll ausgeben.
+          if not webhook.startswith("https://discord.com/api/webhooks/"):
+              print(
+                  "FEHLER: Die Webhook-URL hat nicht das erwartete "
+                  "Discord-Format. Bitte den Webhook in Discord neu kopieren."
+              )
+              sys.exit(1)
+
           files = os.environ.get(
               "CHANGED_FILES",
               "Änderungen konnten nicht aufgelistet werden"
           )
 
-          # Discord begrenzt die Länge eines Embed-Feldes.
-          files = files[:950]
+          # Discord-Embed-Feld auf maximal 1024 Zeichen begrenzen.
+          files = files[:900]
 
           if os.environ["EVENT_NAME"] == "workflow_dispatch":
-              title = "🧪 BloodyLP – Discord-Test"
+              title = "BloodyLP – Discord-Test"
               description = (
                   "Dies ist eine manuell ausgelöste Testnachricht "
                   "für den Website-Workflow."
               )
           else:
-              title = "🏒 BloodyLP – Homepage aktualisiert"
+              title = "BloodyLP – Homepage aktualisiert"
               description = (
                   "Neue Änderungen wurden in das Repository "
                   f"**{os.environ['REPOSITORY']}** übertragen."
@@ -124,7 +142,7 @@ jobs:
                   "description": description,
                   "fields": [{
                       "name": "Geänderte Dateien",
-                      "value": f"```text\n{files}\n```"
+                      "value": "```text\n" + files + "\n```"
                   }],
                   "url": os.environ["COMMIT_URL"],
                   "color": 10610202,
@@ -137,15 +155,34 @@ jobs:
           request = urllib.request.Request(
               webhook,
               data=json.dumps(payload).encode("utf-8"),
-              headers={"Content-Type": "application/json"},
+              headers={
+                  "Content-Type": "application/json",
+                  "User-Agent": "BloodyLP-Website-Notifier/1.0"
+              },
               method="POST"
           )
 
-          with urllib.request.urlopen(request, timeout=15) as response:
-              if response.status not in (200, 204):
-                  raise RuntimeError(
-                      f"Discord antwortete mit HTTP {response.status}"
-                  )
+          try:
+              with urllib.request.urlopen(request, timeout=15) as response:
+                  print(f"Discord HTTP-Status: {response.status}")
+
+                  if response.status not in (200, 204):
+                      print("FEHLER: Unerwarteter HTTP-Status.")
+                      sys.exit(1)
+
+          except urllib.error.HTTPError as error:
+              # Antworttext hilft bei der Diagnose; keine URL ausgeben.
+              response_text = error.read().decode(
+                  "utf-8", errors="replace"
+              )
+
+              print(f"Discord HTTP-Fehler: {error.code}")
+              print(f"Discord-Antwort: {response_text[:500]}")
+              sys.exit(1)
+
+          except urllib.error.URLError as error:
+              print(f"Verbindungsfehler zu Discord: {error.reason}")
+              sys.exit(1)
 
           print("Discord-Benachrichtigung erfolgreich gesendet.")
           PY
