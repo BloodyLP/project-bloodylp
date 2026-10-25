@@ -38,20 +38,12 @@ export const liveData = {
     title: "Als Nächstes",
 
     events: [  
-                                                                                    {
-        day: "SA",
-        date: "24. OKT",
-        time: "19:30 Uhr",
-        title: "NHL 27 - BE A PRO",
-      }, 
-
                                                                                           {
         day: "MO",
         date: "26. OKT",
         time: "19:30 Uhr",
         title: "EA FC 27 - Spielerkarriere",
       }, 
-
                                                                                                 {
         day: "MI",
         date: "28. OKT",
@@ -63,6 +55,13 @@ export const liveData = {
         date: "31. OKT",
         time: "19:30 Uhr",
         title: "HALLOWEEN-STREAM",
+      }, 
+
+                                          {
+        day: "MO",
+        date: "02. NOV",
+        time: "19:30 Uhr",
+        title: "NHL 27 - Be A Pro",
       }, 
       
       
