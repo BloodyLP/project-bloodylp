@@ -85,13 +85,13 @@ export const degTeam = {
 /* ============================================ */
 
 export const upcomingMatch: UpcomingMatch = {
-    date: "TBD",
+    date: "26. Oktober 2026",
 
-    league: "GCL 13 - PLAYOFFS",
+    league: "GCL 13 - PLAYOFF VF",
 
     // Erstes Spiel: GCL 13 – Spieltag 8
-    opponent: "TBD",
-    opponentLogo: "/images/esport/logos/gcl.png",
+    opponent: "German Elite Hockey",
+    opponentLogo: "/images/esport/gcl13/german-elite-hockey.png",
 };
 
 

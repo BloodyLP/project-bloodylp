@@ -1038,3 +1038,168 @@
     }
 
 }
+
+
+/* ========================================= */
+/* PLAYOFFS                                  */
+/* ========================================= */
+
+.playoffs {
+    margin-top: 64px;
+    padding-top: 36px;
+    border-top: 2px solid rgba(255, 255, 255, 0.12);
+}
+
+.playoffsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.playoffsEyebrow {
+    margin: 0 0 8px;
+    color: #dc143c;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.playoffsTitle {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.playoffsSubtitle {
+    margin: 10px 0 0;
+    color: #aeb4bd;
+    font-size: 0.9rem;
+}
+
+.playoffsBadge {
+    flex-shrink: 0;
+    padding: 10px 14px;
+    border: 1px solid rgba(220, 20, 60, 0.5);
+    border-radius: 6px;
+    background: rgba(220, 20, 60, 0.12);
+    color: #ff536e;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.playoffsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.playoffMatch {
+    min-width: 0;
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    background: #202228;
+}
+
+.playoffMatchHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+}
+
+.playoffStatus {
+    color: #aeb4bd;
+    font-size: 0.68rem;
+}
+
+.playoffTeam {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 60px;
+}
+
+.playoffTeam + .playoffTeam {
+    margin-top: 8px;
+}
+
+.playoffTeamInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.playoffSeed {
+    display: flex;
+    flex: 0 0 28px;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 5px;
+    background: #353941;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 800;
+}
+
+.playoffLogo {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.playoffTeamName {
+    overflow-wrap: anywhere;
+    color: #f4f4f5;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.playoffScore {
+    flex-shrink: 0;
+    color: #dc143c;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+/* ========================================= */
+/* PLAYOFFS – RESPONSIVE                     */
+/* ========================================= */
+
+@media (max-width: 700px) {
+    .playoffsHeader {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .playoffsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .playoffMatch {
+        padding: 14px;
+    }
+
+    .playoffTeamName {
+        font-size: 0.85rem;
+    }
+}

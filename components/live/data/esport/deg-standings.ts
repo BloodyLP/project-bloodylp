@@ -12,7 +12,7 @@
  * GCL 13 – Division I
  * Aktueller Tabellenstand
  *
- * Stand: 21.10.2026
+ * Stand: 26.10.2026
  * ============================================
  */
 
@@ -79,9 +79,8 @@ export type DegStanding = {
 /* ============================================
  * GCL 13 – DIVISION I
  * 9 TEAMS
- * 8 PLAYOFF-PLÄTZE
  *
- * Stand: 21.10.2026
+ * Stand: 26.10.2026
  * ============================================ */
 
 export const degStandings: DegStanding[] = [
@@ -94,32 +93,62 @@ export const degStandings: DegStanding[] = [
     logo: "/images/esport/gcl13/conexion.png",
     players: 8,
 
-    gamesPlayed: 16,
-    wins: 11,
+    gamesPlayed: 14,
+    wins: 10,
     overtimeWins: 1,
     overtimeLosses: 1,
-    losses: 3,
+    losses: 2,
 
-    goalsFor: 72,
-    goalsAgainst: 36,
-    points: 36,
+    goalsFor: 65,
+    goalsAgainst: 31,
+    points: 33,
 
     powerplayPercentage: 26.67,
-    penaltyKillPercentage: 79.17,
-    pim: 48,
-    shots: 347,
-    faceoffPercentage: 49.87,
-    hits: 230,
-    last10: "7-3-0",
+    penaltyKillPercentage: 80.95,
+    pim: 42,
+    shots: 299,
+    faceoffPercentage: 48.86,
+    hits: 212,
+    last10: "8-2-0",
 
     playoffs: true,
   },
 
   /* ----------------------------------------
-   * 02 – DEADLY PHANTOMS
+   * 02 – HOCKEYHOLICS
    * ---------------------------------------- */
   {
     position: 2,
+    team: "Hockeyholics",
+    logo: "/images/esport/gcl13/hockeyholics.png",
+    players: 7,
+
+    gamesPlayed: 14,
+    wins: 9,
+    overtimeWins: 0,
+    overtimeLosses: 3,
+    losses: 2,
+
+    goalsFor: 50,
+    goalsAgainst: 29,
+    points: 30,
+
+    powerplayPercentage: 8.7,
+    penaltyKillPercentage: 84.62,
+    pim: 26,
+    shots: 231,
+    faceoffPercentage: 48.51,
+    hits: 102,
+    last10: "5-2-3",
+
+    playoffs: true,
+  },
+
+  /* ----------------------------------------
+   * 03 – DEADLY PHANTOMS
+   * ---------------------------------------- */
+  {
+    position: 3,
     team: "Deadly Phantoms",
     logo: "/images/esport/gcl13/deadly-phantoms.png",
     players: 7,
@@ -146,36 +175,6 @@ export const degStandings: DegStanding[] = [
   },
 
   /* ----------------------------------------
-   * 03 – HOCKEYHOLICS
-   * ---------------------------------------- */
-  {
-    position: 3,
-    team: "Hockeyholics",
-    logo: "/images/esport/gcl13/hockeyholics.png",
-    players: 7,
-
-    gamesPlayed: 14,
-    wins: 8,
-    overtimeWins: 1,
-    overtimeLosses: 3,
-    losses: 2,
-
-    goalsFor: 51,
-    goalsAgainst: 35,
-    points: 29,
-
-    powerplayPercentage: 8.33,
-    penaltyKillPercentage: 76.47,
-    pim: 34,
-    shots: 266,
-    faceoffPercentage: 49.37,
-    hits: 113,
-    last10: "5-2-3",
-
-    playoffs: true,
-  },
-
-  /* ----------------------------------------
    * 04 – DEG ESPORTS
    * ---------------------------------------- */
   {
@@ -184,22 +183,22 @@ export const degStandings: DegStanding[] = [
     logo: "/images/esport/gcl13/deg-esports.png",
     players: 11,
 
-    gamesPlayed: 16,
-    wins: 8,
+    gamesPlayed: 14,
+    wins: 7,
     overtimeWins: 0,
-    overtimeLosses: 2,
+    overtimeLosses: 1,
     losses: 6,
 
-    goalsFor: 36,
-    goalsAgainst: 36,
-    points: 26,
+    goalsFor: 31,
+    goalsAgainst: 31,
+    points: 22,
 
-    powerplayPercentage: 33.33,
-    penaltyKillPercentage: 85.71,
-    pim: 28,
-    shots: 220,
-    faceoffPercentage: 50.16,
-    hits: 88,
+    powerplayPercentage: 27.27,
+    penaltyKillPercentage: 91.67,
+    pim: 24,
+    shots: 188,
+    faceoffPercentage: 49.44,
+    hits: 79,
     last10: "5-4-1",
 
     playoffs: true,
@@ -267,91 +266,91 @@ export const degStandings: DegStanding[] = [
   },
 
   /* ----------------------------------------
-   * 07 – THE LAST SHIFT
+   * 07 – SCB ESPORTS
    * ---------------------------------------- */
   {
     position: 7,
-    team: "The Last Shift",
-    logo: "/images/esport/gcl13/the-last-shift.png",
-    players: 5,
-
-    gamesPlayed: 10,
-    wins: 4,
-    overtimeWins: 1,
-    overtimeLosses: 1,
-    losses: 4,
-
-    goalsFor: 34,
-    goalsAgainst: 32,
-    points: 15,
-
-    powerplayPercentage: 50,
-    penaltyKillPercentage: 66.67,
-    pim: 12,
-    shots: 141,
-    faceoffPercentage: 44.5,
-    hits: 133,
-    last10: "5-4-1",
-
-    playoffs: true,
-  },
-
-  /* ----------------------------------------
-   * 08 – SCB ESPORTS
-   * ---------------------------------------- */
-  {
-    position: 8,
     team: "SCB eSports",
     logo: "/images/esport/gcl13/scb-esports.png",
     players: 8,
 
     gamesPlayed: 14,
-    wins: 2,
+    wins: 1,
     overtimeWins: 1,
     overtimeLosses: 1,
-    losses: 10,
+    losses: 11,
 
-    goalsFor: 24,
-    goalsAgainst: 44,
-    points: 9,
+    goalsFor: 18,
+    goalsAgainst: 45,
+    points: 6,
 
-    powerplayPercentage: 25,
-    penaltyKillPercentage: 80.77,
-    pim: 52,
-    shots: 162,
-    faceoffPercentage: 54.79,
-    hits: 105,
+    powerplayPercentage: 22.22,
+    penaltyKillPercentage: 86.96,
+    pim: 46,
+    shots: 135,
+    faceoffPercentage: 54.32,
+    hits: 83,
     last10: "1-8-1",
 
     playoffs: true,
   },
 
   /* ----------------------------------------
-   * 09 – ISERLOHN ROOSTERS ESPORTS
+   * 08 – ISERLOHN ROOSTERS ESPORTS
    * ---------------------------------------- */
   {
-    position: 9,
+    position: 8,
     team: "Iserlohn Roosters eSports",
     logo: "/images/esport/gcl13/iserlohn-roosters-esports.png",
     players: 5,
 
-    gamesPlayed: 16,
+    gamesPlayed: 14,
     wins: 1,
     overtimeWins: 0,
     overtimeLosses: 3,
-    losses: 12,
+    losses: 10,
 
-    goalsFor: 22,
-    goalsAgainst: 68,
+    goalsFor: 19,
+    goalsAgainst: 59,
     points: 6,
 
-    powerplayPercentage: 22.73,
+    powerplayPercentage: 23.81,
     penaltyKillPercentage: 64.29,
     pim: 28,
-    shots: 187,
-    faceoffPercentage: 46.63,
-    hits: 98,
+    shots: 169,
+    faceoffPercentage: 45.87,
+    hits: 95,
     last10: "0-8-2",
+
+    playoffs: true,
+  },
+
+  /* ----------------------------------------
+   * 09 – THE LAST SHIFT [DSQ]
+   * ---------------------------------------- */
+  {
+    position: 9,
+    team: "The Last Shift [DSQ]",
+    logo: "/images/esport/gcl13/the-last-shift.png",
+    players: 5,
+
+    gamesPlayed: 0,
+    wins: 0,
+    overtimeWins: 0,
+    overtimeLosses: 0,
+    losses: 0,
+
+    goalsFor: 0,
+    goalsAgainst: 0,
+    points: 0,
+
+    powerplayPercentage: null,
+    penaltyKillPercentage: null,
+    pim: 0,
+    shots: 0,
+    faceoffPercentage: null,
+    hits: 0,
+    last10: "0-0-0",
 
     playoffs: false,
   },
