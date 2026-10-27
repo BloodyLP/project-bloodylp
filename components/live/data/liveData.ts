@@ -38,17 +38,18 @@ export const liveData = {
     title: "Als Nächstes",
 
     events: [  
-                                                                                          {
-        day: "MO",
-        date: "26. OKT",
-        time: "19:30 Uhr",
-        title: "EA FC 27 - Spielerkarriere",
-      }, 
-                                                                                                {
+       {
         day: "MI",
         date: "28. OKT",
-        time: "19:30 Uhr",
-        title: "NHL 27 - DEL-Saison",
+        time: "20:50 Uhr",
+        title: "DEG eSports - GCL 13 • Playoff Viertelfinale",
+      }, 
+
+      {
+        day: "DO",
+        date: "28. OKT",
+        time: "20:50 Uhr",
+        title: "DEG eSports - GCL 13 • Playoff Viertelfinale",
       }, 
                                     {
         day: "SA",

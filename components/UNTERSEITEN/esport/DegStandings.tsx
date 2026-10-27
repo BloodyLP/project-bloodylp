@@ -472,7 +472,7 @@ export default function DegStandings() {
                         </h2>
 
                         <p className={styles.playoffsSubtitle}>
-                            Viertelfinale · Bestplatzierte gegen niedrigstplatzierte Teams
+                            Viertelfinale · Best of 7
                         </p>
                     </div>
 

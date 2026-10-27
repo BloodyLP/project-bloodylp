@@ -91,6 +91,7 @@ const teams = {
   clownsOnIce: {
     name: "Clowns On Ice",
     logo: "/images/esport/gcl13/clowns-on-ice.png",
+        eliminated: true,
   },
 
   blackIceRavens: {
@@ -120,11 +121,13 @@ const teams = {
   nuernberg: {
     name: "Nürnberg Nidhoggr",
     logo: "/images/esport/gcl13/nuernberg-nidhoggr2.jpg",
+        eliminated: true,
   },
 
   connexion: {
     name: "Conexion",
     logo: "/images/esport/gcl13/conexion.png",
+        eliminated: true,
   },
 
   flashback: {
@@ -246,7 +249,7 @@ export const gcl13Cup: GCL13Cup = {
     /* ====================================== */
 
     {
-      name: "Round 1",
+      name: "Runde 1",
 
       matches: [
 
@@ -343,7 +346,7 @@ export const gcl13Cup: GCL13Cup = {
     /* ====================================== */
 
     {
-      name: "Round 2",
+      name: "Runde 2",
 
       matches: [
 
@@ -452,7 +455,7 @@ export const gcl13Cup: GCL13Cup = {
     /* ====================================== */
 
     {
-      name: "Quarterfinals",
+      name: "Viertelfinale",
 
       matches: [
 
@@ -474,10 +477,10 @@ export const gcl13Cup: GCL13Cup = {
           home: teams.germanEliteHockey,
           away: teams.nuernberg,
 
-          homeScore: 0,
+          homeScore: 1,
           awayScore: 0,
 
-          played: false,
+          played: true,
         },
 
         {
@@ -486,10 +489,10 @@ export const gcl13Cup: GCL13Cup = {
           home: teams.deadlyPhantoms,
           away: teams.connexion,
 
-          homeScore: 0,
+          homeScore: 1,
           awayScore: 0,
 
-          played: false,
+          played: true,
         },
 
         {
@@ -499,9 +502,9 @@ export const gcl13Cup: GCL13Cup = {
           away: teams.scbEsports,
 
           homeScore: 0,
-          awayScore: 0,
+          awayScore: 1,
 
-          played: false,
+          played: true,
         },
 
       ],
@@ -513,7 +516,7 @@ export const gcl13Cup: GCL13Cup = {
     /* ====================================== */
 
     {
-      name: "Semifinals",
+      name: "Halbfinale",
 
       matches: [
 
@@ -521,7 +524,7 @@ export const gcl13Cup: GCL13Cup = {
           id: "gcl13-cup-sf-1",
 
           home: teams.deg,
-          away: teams.tbd,
+          away: teams.germanEliteHockey,
 
           homeScore: 0,
           awayScore: 0,
@@ -532,8 +535,8 @@ export const gcl13Cup: GCL13Cup = {
         {
           id: "gcl13-cup-sf-2",
 
-          home: teams.tbd,
-          away: teams.tbd,
+          home: teams.deadlyPhantoms,
+          away: teams.scbEsports,
 
           homeScore: 0,
           awayScore: 0,
@@ -550,7 +553,7 @@ export const gcl13Cup: GCL13Cup = {
     /* ====================================== */
 
     {
-      name: "Final",
+      name: "Finale",
 
       matches: [
 
