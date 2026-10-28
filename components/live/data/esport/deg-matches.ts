@@ -85,9 +85,9 @@ export const degTeam = {
 /* ============================================ */
 
 export const upcomingMatch: UpcomingMatch = {
-    date: "26. Oktober 2026",
+    date: "28. Oktober 2026 ab 20.50 Uhr",
 
-    league: "GCL 13 - PLAYOFF VF",
+    league: "GCL 13 - POKAL HF + PLAYOFF VF",
 
     // Erstes Spiel: GCL 13 – Spieltag 8
     opponent: "German Elite Hockey",
