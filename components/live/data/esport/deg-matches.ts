@@ -85,9 +85,9 @@ export const degTeam = {
 /* ============================================ */
 
 export const upcomingMatch: UpcomingMatch = {
-    date: "28. Oktober 2026 ab 20.50 Uhr",
+    date: "29. Oktober 2026 ab 20.50 Uhr",
 
-    league: "GCL 13 - POKAL HF + PLAYOFF VF",
+    league: "GCL 13 - PLAYOFF VF",
 
     // Erstes Spiel: GCL 13 – Spieltag 8
     opponent: "German Elite Hockey",
@@ -100,12 +100,12 @@ export const upcomingMatch: UpcomingMatch = {
 /* ============================================ */
 
 export const degSeasonStats = {
-    games: 19,
-    wins: 11,
-    losses: 6,
+    games: 23,
+    wins: 14,
+    losses: 7,
     overtimeLosses: 2,
-    goalsFor: 50,
-    goalsAgainst: 41,
+    goalsFor: 64,
+    goalsAgainst: 52,
 };
 
 
@@ -123,18 +123,18 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-        date: "20. Oktober 2026",
+        date: "28. Oktober 2026",
 
-        league: "GCL 13 - Pokal VF",
+        league: "GCL 13 - Playoff Viertelfinale",
 
-        opponent: "Hockeyholics",
+        opponent: "German Elite Hockey",
 
         opponentLogo:
-            "/images/esport/gcl13/hockeyholics.png",
+            "/images/esport/gcl13/german-elite-hockey.png",
 
-        degScore: 2,
+        degScore: 4,
 
-        opponentScore: 1,
+        opponentScore: 2,
 
         overtime: false,
 
@@ -152,20 +152,20 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-        date: "20. Oktober 2026",
+        date: "28. Oktober 2026",
 
-        league: "GCL 13",
+        league: "GCL 13 - Playoff Viertelfinale",
 
-        opponent: "Deadly Phantoms",
+        opponent: "German Elite Hockey",
 
         opponentLogo:
-            "/images/esport/gcl13/deadly-phantoms.png",
+            "/images/esport/gcl13/german-elite-hockey.png",
 
         degScore: 3,
 
-        opponentScore: 4,
+        opponentScore: 2,
 
-        overtime: true,
+        overtime: false,
 
         shootout: false,
 
@@ -181,18 +181,18 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-        date: "20. Oktober 2026",
+        date: "28. Oktober 2026",
 
-        league: "GCL 13",
+        league: "GCL 13 - Playoff Viertelfinale",
 
-        opponent: "Deadly Phantoms",
+        opponent: "German Elite Hockey",
 
         opponentLogo:
-            "/images/esport/gcl13/deadly-phantoms.png",
+            "/images/esport/gcl13/german-elite-hockey.png",
 
-        degScore: 1,
+        degScore: 3,
 
-        opponentScore: 0,
+        opponentScore: 5,
 
         overtime: false,
 

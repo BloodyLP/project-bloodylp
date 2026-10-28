@@ -38,13 +38,6 @@ export const liveData = {
     title: "Als Nächstes",
 
     events: [  
-       {
-        day: "MI",
-        date: "28. OKT",
-        time: "20:50 Uhr",
-        title: "DEG eSports - GCL 13 • Playoff Viertelfinale",
-      }, 
-
       {
         day: "DO",
         date: "28. OKT",
@@ -64,6 +57,13 @@ export const liveData = {
         date: "03. NOV",
         time: "19:30 Uhr",
         title: "EA FC 27 - Spielerkarriere",
+      }, 
+
+                  {
+        day: "DO",
+        date: "05. NOV",
+        time: "19:30 Uhr",
+        title: "Zelda: Ocarina of Time",
       }, 
       
       
