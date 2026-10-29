@@ -1,7 +1,10 @@
 "use client";
 
+import { useState } from "react";
+
 import {
     playerStats,
+    playoffPlayerStats,
     PlayerStat,
     SkaterPlayer,
     GoaliePlayer,
@@ -32,12 +35,12 @@ function isGoalie(
  * SPIELER FILTERN
  * ========================================= */
 
-function getSkaters(): SkaterPlayer[] {
-    return playerStats.filter(isSkater);
+function getSkaters(players: PlayerStat[]): SkaterPlayer[] {
+    return players.filter(isSkater);
 }
 
-function getGoalies(): GoaliePlayer[] {
-    return playerStats.filter(isGoalie);
+function getGoalies(players: PlayerStat[]): GoaliePlayer[] {
+    return players.filter(isGoalie);
 }
 
 /* =========================================
@@ -63,9 +66,13 @@ function getPositionLabel(
  * COMPONENT
  * ========================================= */
 
+type SeasonMode = "regular" | "playoffs";
+
 export default function DegPlayerStats() {
-    const skaters = getSkaters();
-    const goalies = getGoalies();
+    const [seasonMode, setSeasonMode] = useState<SeasonMode>("regular");
+    const activeStats = seasonMode === "playoffs" ? playoffPlayerStats : playerStats;
+    const skaters = getSkaters(activeStats);
+    const goalies = getGoalies(activeStats);
 
     return (
         <section
@@ -89,6 +96,25 @@ export default function DegPlayerStats() {
                     Die individuellen Statistiken der aktuellen
                     DEG eSports Mannschaft.
                 </p>
+
+                <div className={styles.seasonSwitch} role="group" aria-label="Statistik auswählen">
+                    <button
+                        type="button"
+                        className={`${styles.seasonButton} ${seasonMode === "regular" ? styles.seasonButtonActive : ""}`}
+                        onClick={() => setSeasonMode("regular")}
+                        aria-pressed={seasonMode === "regular"}
+                    >
+                        Regular Season
+                    </button>
+                    <button
+                        type="button"
+                        className={`${styles.seasonButton} ${seasonMode === "playoffs" ? styles.seasonButtonActive : ""}`}
+                        onClick={() => setSeasonMode("playoffs")}
+                        aria-pressed={seasonMode === "playoffs"}
+                    >
+                        Playoffs
+                    </button>
+                </div>
             </div>
 
             {/* =========================================

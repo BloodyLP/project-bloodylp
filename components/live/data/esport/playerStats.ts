@@ -311,3 +311,168 @@ export const playerStats: PlayerStat[] = [
     ...forwardStats,
     ...goalieStats,
 ];
+
+/* =========================================
+ * BloodyLP
+ *
+ * Project:
+ * BloodyLP Website
+ *
+ * File:
+ * components/live/data/esport/playerStats.ts
+ *
+ * Description:
+ * Individuelle Playoff-Statistiken der aktuellen
+ * DEG eSports Spieler.
+ * ========================================= */
+
+/* =========================================
+ * PLAYOFF-GOALIES
+ * ========================================= */
+
+export const playoffGoalieStats: GoaliePlayer[] = [
+    {
+        number: 26,
+        gamerTag: "Houddel_26",
+        name: "M. Houdelet",
+        position: "goalie",
+        image: "/images/esport/players/houddel_26.png",
+        stats: {
+            games: 3,
+            wins: 2,
+            losses: 1,
+            overtimeLosses: 0,
+            saves: 17,
+            goalsAgainst: 9,
+            savePercentage: 65.38,
+            goalsAgainstAverage: 3,
+            shutouts: 0,
+        },
+    },
+];
+
+/* =========================================
+ * PLAYOFF-FELDSPIELER
+ * ========================================= */
+
+export const playoffSkaterStats: SkaterPlayer[] = [
+    {
+        number: 91,
+        gamerTag: "TooEzXx",
+        name: "L. Hansen",
+        position: "defense",
+        image: "/images/esport/players/TooEzXx.png",
+        stats: {
+            games: 3,
+            goals: 5,
+            assists: 3,
+            points: 8,
+            plusMinus: 0,
+            pim: 0,
+            powerplayGoals: 2,
+            shorthandedGoals: 0,
+            gameWinningGoals: 2,
+            shots: 13,
+            shootingPercentage: 38.5,
+            hits: 3,
+            faceoffWinPercentage: 0,
+        },
+    },
+    {
+        number: 9,
+        gamerTag: "PantherOnSkates",
+        name: "L. Fedra",
+        position: "defense",
+        image: "/images/esport/players/PantherOnSkates.png",
+        stats: {
+            games: 3,
+            goals: 4,
+            assists: 4,
+            points: 8,
+            plusMinus: 0,
+            pim: 4,
+            powerplayGoals: 0,
+            shorthandedGoals: 0,
+            gameWinningGoals: 0,
+            shots: 7,
+            shootingPercentage: 57.1,
+            hits: 5,
+            faceoffWinPercentage: 0,
+        },
+    },
+    {
+        number: 79,
+        gamerTag: "stefanoojj-",
+        name: "J. Stenberg",
+        position: "forward",
+        image: "/images/esport/players/stefanoojj.png",
+        stats: {
+            games: 3,
+            goals: 0,
+            assists: 4,
+            points: 4,
+            plusMinus: 0,
+            pim: 2,
+            powerplayGoals: 0,
+            shorthandedGoals: 0,
+            gameWinningGoals: 0,
+            shots: 0,
+            shootingPercentage: 0,
+            hits: 2,
+            faceoffWinPercentage: 0,
+        },
+    },
+    {
+        number: 71,
+        gamerTag: "Akin_Penta",
+        name: "A. Isik",
+        position: "forward",
+        image: "/images/esport/players/akin_penta.png",
+        stats: {
+            games: 3,
+            goals: 1,
+            assists: 3,
+            points: 4,
+            plusMinus: 0,
+            pim: 0,
+            powerplayGoals: 0,
+            shorthandedGoals: 0,
+            gameWinningGoals: 0,
+            shots: 13,
+            shootingPercentage: 7.7,
+            hits: 0,
+            faceoffWinPercentage: 56.7,
+        },
+    },
+    {
+        number: 17,
+        gamerTag: "Pasq86uale",
+        name: "P. Schultz",
+        position: "forward",
+        image: "/images/esport/players/Pasq86ualePS.png",
+        stats: {
+            games: 3,
+            goals: 0,
+            assists: 2,
+            points: 2,
+            plusMinus: 0,
+            pim: 0,
+            powerplayGoals: 0,
+            shorthandedGoals: 0,
+            gameWinningGoals: 0,
+            shots: 2,
+            shootingPercentage: 0,
+            hits: 20,
+            faceoffWinPercentage: 0,
+        },
+    },
+];
+
+/* =========================================
+ * PLAYOFF-STATISTIKEN ALLER SPIELER
+ * ========================================= */
+
+export const playoffPlayerStats: PlayerStat[] = [
+    ...playoffSkaterStats,
+    ...playoffGoalieStats,
+];

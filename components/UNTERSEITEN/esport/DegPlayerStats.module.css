@@ -403,3 +403,64 @@
         font-size: 12px;
     }
 }
+
+/* ============================================
+   REGULAR SEASON / PLAYOFFS SWITCH
+   ============================================ */
+
+.seasonSwitch {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 28px;
+    padding: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.seasonButton {
+    appearance: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding: 12px 18px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.62);
+    font: inherit;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.seasonButton:hover {
+    color: #ffffff;
+}
+
+.seasonButtonActive {
+    background: #ff174f;
+    border-color: #ff174f;
+    color: #ffffff;
+}
+
+.seasonButtonActive:hover {
+    color: #ffffff;
+}
+
+.seasonButton:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+    .seasonSwitch {
+        margin-top: 22px;
+    }
+
+    .seasonButton {
+        padding: 11px 13px;
+        font-size: 11px;
+    }
+}
