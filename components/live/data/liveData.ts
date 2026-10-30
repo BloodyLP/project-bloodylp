@@ -39,27 +39,27 @@ export const liveData = {
 
     events: [  
       {
-        day: "DO",
-        date: "28. OKT",
-        time: "20:50 Uhr",
-        title: "DEG eSports - GCL 13 • Playoff Viertelfinale",
-      }, 
-
-      {
         day: "SO",
         date: "01. NOV",
-        time: "19:30 Uhr",
-        title: "NHL 27 - BloodyArmy - Start",
-      }, 
-
-            {
-        day: "DI",
-        date: "03. NOV",
         time: "19:30 Uhr",
         title: "EA FC 27 - Spielerkarriere",
       }, 
 
+            {
+        day: "MO",
+        date: "02. NOV",
+        time: "19:30 Uhr",
+        title: "DEG eSports",
+      }, 
+
                   {
+        day: "DI",
+        date: "03. NOV",
+        time: "19:30 Uhr",
+        title: "DEG eSports",
+      }, 
+
+                        {
         day: "DO",
         date: "05. NOV",
         time: "19:30 Uhr",
