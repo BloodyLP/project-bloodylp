@@ -100,12 +100,12 @@ export const upcomingMatch: UpcomingMatch = {
 /* ============================================ */
 
 export const degSeasonStats = {
-    games: 26,
+    games: 27,
     wins: 16,
-    losses: 8,
+    losses: 9,
     overtimeLosses: 2,
     goalsFor: 69,
-    goalsAgainst: 57,
+    goalsAgainst: 61,
 };
 
 
@@ -123,18 +123,18 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-        date: "29. Oktober 2026",
+        date: "02. November 2026",
 
-        league: "GCL 13 - Playoff Viertelfinale",
+        league: "GCL 13 - Playoff Halbfinale",
 
-        opponent: "German Elite Hockey",
+        opponent: "Hockeyholics",
 
         opponentLogo:
-            "/images/esport/gcl13/german-elite-hockey.png",
+            "/images/esport/gcl13/hockeyholics.png",
 
-        degScore: 3,
+        degScore: 0,
 
-        opponentScore: 2,
+        opponentScore: 4,
 
         overtime: false,
 
@@ -161,15 +161,15 @@ export const degMatches: DegMatch[] = [
         opponentLogo:
             "/images/esport/gcl13/german-elite-hockey.png",
 
-        degScore: 2,
+        degScore: 3,
 
-        opponentScore: 1,
+        opponentScore: 2,
 
         overtime: false,
 
         shootout: false,
 
-        home: true,
+        home: false,
     },
 
 
@@ -190,14 +190,14 @@ export const degMatches: DegMatch[] = [
         opponentLogo:
             "/images/esport/gcl13/german-elite-hockey.png",
 
-        degScore: 0,
+        degScore: 2,
 
-        opponentScore: 2,
+        opponentScore: 1,
 
         overtime: false,
 
         shootout: false,
 
-        home: false,
+        home: true,
     },
 ];

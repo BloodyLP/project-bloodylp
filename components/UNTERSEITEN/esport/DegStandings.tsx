@@ -1,9 +1,11 @@
-
 /* ============================================ */
 /* BloodyLP                                     */
+/*                                              */
 /* Project: BloodyLP Website                    */
+/*                                              */
 /* File: components/UNTERSEITEN/esport/         */
 /*       DegStandings.tsx                       */
+/*                                              */
 /* Description: DEG eSports Tabellenübersicht   */
 /* ============================================ */
 
@@ -15,15 +17,27 @@ import {
     degStandingsLeague,
 } from "@/components/live/data/esport/deg-standings";
 
+
 /* ============================================ */
 /* PLAYOFF-ERGEBNISSE                            */
 /* ============================================ */
 
 /*
  * Ergebnisse ausschließlich hier eintragen.
- * Solange played = false ist, werden Platzhalter angezeigt.
- * Nach Spielende homeScore/awayScore eintragen und played auf true setzen.
+ *
+ * Viertelfinale:
+ * homeSeed / awaySeed bestimmen die Paarungen.
+ * homeScore / awayScore sind die Serienergebnisse.
+ * played = true zeigt die Ergebnisse an.
+ *
+ * Halbfinale:
+ * Ergebnisse im Block semifinalMatches eintragen.
  */
+
+
+/* ============================================ */
+/* VIERTELFINALS                                */
+/* ============================================ */
 
 const quarterfinalMatches = [
     {
@@ -60,6 +74,47 @@ const quarterfinalMatches = [
     },
 ];
 
+
+/* ============================================ */
+/* HALBFINAL-ERGEBNISSE                         */
+/* ============================================ */
+
+/*
+ * HIER DIE HALBFINALERGEBNISSE EINTRAGEN.
+ *
+ * Halbfinale 1:
+ * Sieger Viertelfinale 1 gegen Sieger Viertelfinale 3
+ *
+ * Halbfinale 2:
+ * Sieger Viertelfinale 2 gegen Sieger Viertelfinale 4
+ *
+ * Beispiel:
+ * homeScore: 4,
+ * awayScore: 2,
+ * played: true,
+ *
+ * Solange eine Serie läuft:
+ * homeScore: null,
+ * awayScore: null,
+ * played: false,
+ */
+
+const semifinalMatches = [
+    {
+        id: 1,
+        homeScore: 0,
+        awayScore: 0,
+        played: true,
+    },
+    {
+        id: 2,
+        homeScore: 1,
+        awayScore: 0,
+        played: true,
+    },
+];
+
+
 /* ============================================ */
 /* SIEGER DER VIERTELFINALS                     */
 /* ============================================ */
@@ -93,19 +148,6 @@ const getQuarterfinalWinner = (matchId: number) => {
     );
 };
 
-/* ============================================ */
-/* HALBFINALS                                   */
-/* ============================================ */
-
-/*
- * Halbfinale 1:
- * Sieger VF 1 gegen Sieger VF 3
- *
- * Halbfinale 2:
- * Sieger VF 2 gegen Sieger VF 4
- *
- * Die Teilnehmer werden automatisch ermittelt.
- */
 
 /* ============================================ */
 /* COMPONENT                                    */
@@ -166,6 +208,7 @@ export default function DegStandings() {
                 </div>
             </div>
 
+
             {/* ========================================= */}
             {/* TABLE WRAPPER                             */}
             {/* ========================================= */}
@@ -215,6 +258,7 @@ export default function DegStandings() {
                         PKT
                     </div>
                 </div>
+
 
                 {/* TABLE BODY */}
 
@@ -282,6 +326,7 @@ export default function DegStandings() {
                 </div>
             </div>
 
+
             {/* ========================================= */}
             {/* PLAYOFFS – VIERTELFINALE                  */}
             {/* ========================================= */}
@@ -306,6 +351,7 @@ export default function DegStandings() {
                         VIERTELFINALE
                     </span>
                 </div>
+
 
                 <div className={styles.playoffsGrid}>
                     {quarterfinalMatches.map((match) => {
@@ -342,6 +388,9 @@ export default function DegStandings() {
                                     </span>
                                 </div>
 
+
+                                {/* HEIMTEAM */}
+
                                 <div className={styles.playoffTeam}>
                                     <div className={styles.playoffTeamInfo}>
                                         <span className={styles.playoffSeed}>
@@ -367,6 +416,9 @@ export default function DegStandings() {
                                             : "–"}
                                     </span>
                                 </div>
+
+
+                                {/* AUSWÄRTSTEAM */}
 
                                 <div className={styles.playoffTeam}>
                                     <div className={styles.playoffTeamInfo}>
@@ -399,6 +451,7 @@ export default function DegStandings() {
                 </div>
             </section>
 
+
             {/* ========================================= */}
             {/* PLAYOFFS – HALBFINALE                     */}
             {/* ========================================= */}
@@ -424,6 +477,7 @@ export default function DegStandings() {
                     </span>
                 </div>
 
+
                 <div className={styles.playoffsGrid}>
                     {[
                         {
@@ -440,63 +494,107 @@ export default function DegStandings() {
                             homePlaceholder: "Sieger Viertelfinale 2",
                             awayPlaceholder: "Sieger Viertelfinale 4",
                         },
-                    ].map((match) => (
-                        <article
-                            key={`semifinal-${match.id}`}
-                            className={styles.playoffMatch}
-                        >
-                            <div className={styles.playoffMatchHeader}>
-                                <span>
-                                    HALBFINALE {match.id}
-                                </span>
+                    ].map((match) => {
+                        const result = semifinalMatches.find(
+                            (item) => item.id === match.id
+                        );
 
-                                <span className={styles.playoffStatus}>
-                                    NOCH OFFEN
-                                </span>
-                            </div>
+                        if (!result) {
+                            return null;
+                        }
 
-                            {[match.home, match.away].map(
-                                (team, index) => (
-                                    <div
-                                        key={`${match.id}-${index}`}
-                                        className={styles.playoffTeam}
-                                    >
-                                        <div className={styles.playoffTeamInfo}>
-                                            <span className={styles.playoffSeed}>
-                                                {team
-                                                    ? team.position
-                                                    : "–"}
-                                            </span>
+                        return (
+                            <article
+                                key={`semifinal-${match.id}`}
+                                className={styles.playoffMatch}
+                            >
+                                <div className={styles.playoffMatchHeader}>
+                                    <span>
+                                        HALBFINALE {match.id}
+                                    </span>
 
-                                            {team && (
-                                                <Image
-                                                    src={team.logo}
-                                                    alt={`${team.team} Logo`}
-                                                    width={44}
-                                                    height={44}
-                                                    className={styles.playoffLogo}
-                                                />
-                                            )}
+                                    <span className={styles.playoffStatus}>
+                                        {result.played
+                                            ? "BEENDET"
+                                            : "NOCH OFFEN"}
+                                    </span>
+                                </div>
 
-                                            <span className={styles.playoffTeamName}>
-                                                {team
-                                                    ? team.team
-                                                    : index === 0
-                                                        ? match.homePlaceholder
-                                                        : match.awayPlaceholder}
-                                            </span>
-                                        </div>
 
-                                        <span className={styles.playoffScore}>
-                                            –
+                                {/* HEIMTEAM */}
+
+                                <div className={styles.playoffTeam}>
+                                    <div className={styles.playoffTeamInfo}>
+                                        <span className={styles.playoffSeed}>
+                                            {match.home
+                                                ? match.home.position
+                                                : "–"}
+                                        </span>
+
+                                        {match.home && (
+                                            <Image
+                                                src={match.home.logo}
+                                                alt={`${match.home.team} Logo`}
+                                                width={44}
+                                                height={44}
+                                                className={styles.playoffLogo}
+                                            />
+                                        )}
+
+                                        <span className={styles.playoffTeamName}>
+                                            {match.home
+                                                ? match.home.team
+                                                : match.homePlaceholder}
                                         </span>
                                     </div>
-                                )
-                            )}
-                        </article>
-                    ))}
+
+                                    <span className={styles.playoffScore}>
+                                        {result.played
+                                            ? result.homeScore
+                                            : "–"}
+                                    </span>
+                                </div>
+
+
+                                {/* AUSWÄRTSTEAM */}
+
+                                <div className={styles.playoffTeam}>
+                                    <div className={styles.playoffTeamInfo}>
+                                        <span className={styles.playoffSeed}>
+                                            {match.away
+                                                ? match.away.position
+                                                : "–"}
+                                        </span>
+
+                                        {match.away && (
+                                            <Image
+                                                src={match.away.logo}
+                                                alt={`${match.away.team} Logo`}
+                                                width={44}
+                                                height={44}
+                                                className={styles.playoffLogo}
+                                            />
+                                        )}
+
+                                        <span className={styles.playoffTeamName}>
+                                            {match.away
+                                                ? match.away.team
+                                                : match.awayPlaceholder}
+                                        </span>
+                                    </div>
+
+                                    <span className={styles.playoffScore}>
+                                        {result.played
+                                            ? result.awayScore
+                                            : "–"}
+                                    </span>
+                                </div>
+                            </article>
+                        );
+                    })}
                 </div>
             </section>
+
 
             {/* ========================================= */}
             {/* FOOTER                                    */}
