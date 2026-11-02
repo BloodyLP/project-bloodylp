@@ -30,7 +30,7 @@ const quarterfinalMatches = [
         id: 1,
         homeSeed: 1,
         awaySeed: 8,
-        homeScore: 3,
+        homeScore: 4,
         awayScore: 0,
         played: true,
     },
