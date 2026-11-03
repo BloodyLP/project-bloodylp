@@ -109,7 +109,7 @@ const semifinalMatches = [
     {
         id: 2,
         homeScore: 1,
-        awayScore: 0,
+        awayScore: 1,
         played: true,
     },
 ];
