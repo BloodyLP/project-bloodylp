@@ -85,7 +85,7 @@ export const degTeam = {
 /* ============================================ */
 
 export const upcomingMatch: UpcomingMatch = {
-    date: "02. November 2026 ab 20.50 Uhr",
+    date: "03. November 2026 ab 20.50 Uhr",
 
     league: "GCL 13 - PLAYOFF HF",
 
@@ -100,12 +100,12 @@ export const upcomingMatch: UpcomingMatch = {
 /* ============================================ */
 
 export const degSeasonStats = {
-    games: 27,
-    wins: 16,
+    games: 28,
+    wins: 17,
     losses: 9,
     overtimeLosses: 2,
-    goalsFor: 69,
-    goalsAgainst: 61,
+    goalsFor: 74,
+    goalsAgainst: 64,
 };
 
 
@@ -132,6 +132,35 @@ export const degMatches: DegMatch[] = [
         opponentLogo:
             "/images/esport/gcl13/hockeyholics.png",
 
+        degScore: 5,
+
+        opponentScore: 3,
+
+        overtime: false,
+
+        shootout: false,
+
+        home: true,
+    },
+
+
+    /* ======================================== */
+    /* MATCH 02                                  */
+    /* ======================================== */
+    /* DEG gewinnt regulär                       */
+    /* Ergebnis: 3:2                            */
+    /* ======================================== */
+
+    {
+        date: "02. November 2026",
+
+        league: "GCL 13 - Playoff Halbfinale",
+
+        opponent: "Hockeyholics",
+
+        opponentLogo:
+            "/images/esport/gcl13/hockeyholics.png",
+
         degScore: 0,
 
         opponentScore: 4,
@@ -145,13 +174,13 @@ export const degMatches: DegMatch[] = [
 
 
     /* ======================================== */
-    /* MATCH 02                                  */
+    /* MATCH 03                                  */
     /* ======================================== */
     /* DEG gewinnt regulär                       */
-    /* Ergebnis: 3:2                            */
+    /* Ergebnis: 7:0                            */
     /* ======================================== */
 
-    {
+   {
         date: "29. Oktober 2026",
 
         league: "GCL 13 - Playoff Viertelfinale",
@@ -170,34 +199,5 @@ export const degMatches: DegMatch[] = [
         shootout: false,
 
         home: false,
-    },
-
-
-    /* ======================================== */
-    /* MATCH 03                                  */
-    /* ======================================== */
-    /* DEG gewinnt regulär                       */
-    /* Ergebnis: 7:0                            */
-    /* ======================================== */
-
-    {
-        date: "29. Oktober 2026",
-
-        league: "GCL 13 - Playoff Viertelfinale",
-
-        opponent: "German Elite Hockey",
-
-        opponentLogo:
-            "/images/esport/gcl13/german-elite-hockey.png",
-
-        degScore: 2,
-
-        opponentScore: 1,
-
-        overtime: false,
-
-        shootout: false,
-
-        home: true,
     },
 ];

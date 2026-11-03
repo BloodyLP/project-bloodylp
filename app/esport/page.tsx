@@ -244,7 +244,7 @@ export default function EsportPage() {
                     <article className={styles.statCard}>
 
                         <span className={styles.statValue}>
-                            906
+                            908
                         </span>
 
                         <span className={styles.statLabel}>
@@ -257,7 +257,7 @@ export default function EsportPage() {
                     <article className={styles.statCard}>
 
                         <span className={styles.statValue}>
-                            411
+                            412
                         </span>
 
                         <span className={styles.statLabel}>
@@ -270,7 +270,7 @@ export default function EsportPage() {
                     <article className={styles.statCard}>
 
                         <span className={styles.statValue}>
-                            417
+                            418
                         </span>
 
                         <span className={styles.statLabel}>
