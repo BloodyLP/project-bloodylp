@@ -102,14 +102,14 @@ const quarterfinalMatches = [
 const semifinalMatches = [
     {
         id: 1,
-        homeScore: 0,
-        awayScore: 0,
+        homeScore: 1,
+        awayScore: 3,
         played: true,
     },
     {
         id: 2,
-        homeScore: 1,
-        awayScore: 1,
+        homeScore: 2,
+        awayScore: 4,
         played: true,
     },
 ];

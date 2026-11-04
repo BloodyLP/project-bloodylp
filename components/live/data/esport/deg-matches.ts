@@ -85,13 +85,13 @@ export const degTeam = {
 /* ============================================ */
 
 export const upcomingMatch: UpcomingMatch = {
-    date: "03. November 2026 ab 20.50 Uhr",
+    date: "TBD",
 
-    league: "GCL 13 - PLAYOFF HF",
+    league: "GCL 13 - PLAYOFF FINALE",
 
     // Erstes Spiel: GCL 13 – Spieltag 8
     opponent: "Hockeyholics",
-    opponentLogo: "/images/esport/gcl13/hockeyholics.png",
+    opponentLogo: "",
 };
 
 
@@ -100,12 +100,12 @@ export const upcomingMatch: UpcomingMatch = {
 /* ============================================ */
 
 export const degSeasonStats = {
-    games: 28,
-    wins: 17,
-    losses: 9,
+    games: 33,
+    wins: 20,
+    losses: 11,
     overtimeLosses: 2,
-    goalsFor: 74,
-    goalsAgainst: 64,
+    goalsFor: 84,
+    goalsAgainst: 75,
 };
 
 
@@ -123,7 +123,7 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-        date: "02. November 2026",
+        date: "03. November 2026",
 
         league: "GCL 13 - Playoff Halbfinale",
 
@@ -132,15 +132,15 @@ export const degMatches: DegMatch[] = [
         opponentLogo:
             "/images/esport/gcl13/hockeyholics.png",
 
-        degScore: 5,
+        degScore: 3,
 
-        opponentScore: 3,
+        opponentScore: 1,
 
         overtime: false,
 
         shootout: false,
 
-        home: true,
+        home: false,
     },
 
 
@@ -152,7 +152,7 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-        date: "02. November 2026",
+        date: "03. November 2026",
 
         league: "GCL 13 - Playoff Halbfinale",
 
@@ -161,15 +161,15 @@ export const degMatches: DegMatch[] = [
         opponentLogo:
             "/images/esport/gcl13/hockeyholics.png",
 
-        degScore: 0,
+        degScore: 3,
 
-        opponentScore: 4,
+        opponentScore: 1,
 
         overtime: false,
 
         shootout: false,
 
-        home: false,
+        home: true,
     },
 
 
@@ -181,18 +181,18 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
    {
-        date: "29. Oktober 2026",
+        date: "03. November 2026",
 
         league: "GCL 13 - Playoff Viertelfinale",
 
-        opponent: "German Elite Hockey",
+        opponent: "Hockeyholics",
 
         opponentLogo:
-            "/images/esport/gcl13/german-elite-hockey.png",
+            "/images/esport/gcl13/hockeyholics.png",
 
-        degScore: 3,
+        degScore: 4,
 
-        opponentScore: 2,
+        opponentScore: 3,
 
         overtime: false,
 

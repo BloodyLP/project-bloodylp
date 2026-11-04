@@ -1,14 +1,14 @@
-/* =========================================
- * BloodyLP
- * Project: BloodyLP Website
- * File: components/live/data/esport/playerStats.ts
- * ========================================= */
+// =========================================
+// BloodyLP
+// Project: BloodyLP Website
+// File: components/live/data/esport/playerStats.ts
+// =========================================
 
 export type PlayerPosition = "goalie" | "defense" | "forward";
 
-/* =========================================
- * FELDSPIELER-STATS
- * ========================================= */
+// =========================================
+// FELDSPIELER-STATS
+// =========================================
 
 export type SkaterStats = {
     games: number;
@@ -26,9 +26,9 @@ export type SkaterStats = {
     faceoffWinPercentage: number;
 };
 
-/* =========================================
- * GOALIE-STATS
- * ========================================= */
+// =========================================
+// GOALIE-STATS
+// =========================================
 
 export type GoalieStats = {
     games: number;
@@ -42,9 +42,9 @@ export type GoalieStats = {
     shutouts: number;
 };
 
-/* =========================================
- * BASIS-SPIELER
- * ========================================= */
+// =========================================
+// BASIS-SPIELER
+// =========================================
 
 type BasePlayer = {
     number: number;
@@ -53,9 +53,9 @@ type BasePlayer = {
     image: string;
 };
 
-/* =========================================
- * SPIELER-TYPEN
- * ========================================= */
+// =========================================
+// SPIELER-TYPEN
+// =========================================
 
 export type SkaterPlayer = BasePlayer & {
     position: "defense" | "forward";
@@ -69,9 +69,9 @@ export type GoaliePlayer = BasePlayer & {
 
 export type PlayerStat = SkaterPlayer | GoaliePlayer;
 
-/* =========================================
- * REGULAR SEASON – GOALIES
- * ========================================= */
+// =========================================
+// REGULAR SEASON – GOALIES
+// =========================================
 
 export const goalieStats: GoaliePlayer[] = [
     {
@@ -112,9 +112,9 @@ export const goalieStats: GoaliePlayer[] = [
     },
 ];
 
-/* =========================================
- * REGULAR SEASON – FELDSPIELER
- * ========================================= */
+// =========================================
+// REGULAR SEASON – FELDSPIELER
+// =========================================
 
 export const defenseStats: SkaterPlayer[] = [
     {
@@ -229,9 +229,9 @@ export const defenseStats: SkaterPlayer[] = [
     },
 ];
 
-/* =========================================
- * REGULAR SEASON – WEITERE FELDSPIELER
- * ========================================= */
+// =========================================
+// REGULAR SEASON – WEITERE FELDSPIELER
+// =========================================
 
 export const forwardStats: SkaterPlayer[] = [
     {
@@ -280,9 +280,9 @@ export const forwardStats: SkaterPlayer[] = [
     },
 ];
 
-/* =========================================
- * REGULAR SEASON – ALLE SPIELER
- * ========================================= */
+// =========================================
+// REGULAR SEASON – ALLE SPIELER
+// =========================================
 
 export const playerStats: PlayerStat[] = [
     ...defenseStats,
@@ -290,9 +290,9 @@ export const playerStats: PlayerStat[] = [
     ...goalieStats,
 ];
 
-/* =========================================
- * PLAYOFFS – GOALIES
- * ========================================= */
+// =========================================
+// PLAYOFFS – GOALIES
+// =========================================
 
 export const playoffGoalieStats: GoaliePlayer[] = [
     {
@@ -315,9 +315,9 @@ export const playoffGoalieStats: GoaliePlayer[] = [
     },
 ];
 
-/* =========================================
- * PLAYOFFS – FELDSPIELER
- * ========================================= */
+// =========================================
+// PLAYOFFS – FELDSPIELER
+// =========================================
 
 export const playoffSkaterStats: SkaterPlayer[] = [
     {
@@ -454,9 +454,9 @@ export const playoffSkaterStats: SkaterPlayer[] = [
     },
 ];
 
-/* =========================================
- * PLAYOFFS – ALLE SPIELER
- * ========================================= */
+// =========================================
+// PLAYOFFS – ALLE SPIELER
+// =========================================
 
 export const playoffPlayerStats: PlayerStat[] = [
     ...playoffSkaterStats,
