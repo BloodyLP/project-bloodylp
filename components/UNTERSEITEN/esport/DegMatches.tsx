@@ -1,41 +1,28 @@
 /* ============================================ */
-/* BloodyArmy                                   */
+/* BloodyArmy                                  */
 /* ============================================ */
-/*                                              */
-/* Project:                                     */
-/* BloodyLP Website                             */
-/*                                              */
-/* File:                                        */
-/* DegMatches.tsx                               */
-/*                                              */
-/* Description:                                 */
-/* DEG eSports Matches                          */
-/*                                              */
-/* ============================================ */
+/*
+ * Project: BloodyLP Website
+ * File: DegMatches.tsx
+ * Description: DEG eSports Matches
+ */
 
 "use client";
 
 import Image from "next/image";
-
 import styles from "./DegMatches.module.css";
 
 import {
     degTeam,
     upcomingMatch,
     degMatches,
-    degSeasonStats,
 } from "../../live/data/esport/deg-matches";
-
 
 /* ============================================ */
 /* TYPES                                        */
 /* ============================================ */
 
-type MatchResult =
-    | "win"
-    | "loss"
-    | "draw";
-
+type MatchResult = "win" | "loss" | "draw";
 
 /* ============================================ */
 /* HELPERS                                      */
@@ -45,7 +32,6 @@ function getMatchResult(
     degScore: number | null,
     opponentScore: number | null
 ): MatchResult | null {
-
     if (
         degScore === null ||
         opponentScore === null
@@ -64,11 +50,9 @@ function getMatchResult(
     return "draw";
 }
 
-
 function getResultLabel(
     result: MatchResult | null
 ) {
-
     if (result === "win") {
         return "SIEG";
     }
@@ -84,939 +68,423 @@ function getResultLabel(
     return "";
 }
 
-
 /* ============================================ */
 /* COMPONENT                                    */
 /* ============================================ */
 
 export default function DegMatches() {
-
-/* ======================================== */
-/* STATISTICS                               */
-/* ======================================== */
-
-const completedMatches =
-    degSeasonStats.games;
-
-const wins =
-    degSeasonStats.wins;
-
-const losses =
-    degSeasonStats.losses;
-
-const overtimeLosses =
-    degSeasonStats.overtimeLosses;
-
-const goalsFor =
-    degSeasonStats.goalsFor;
-
-const goalsAgainst =
-    degSeasonStats.goalsAgainst;
-
-
     return (
-
-        <section
-            className={
-                styles.matchesSection
-            }
-        >
-
-            <div
-                className={
-                    styles.matchesInner
-                }
-            >
-
+        <section className={styles.matchesSection}>
+            <div className={styles.matchesInner}>
 
                 {/* ==================================== */}
-                {/* HEADER                                */}
+                {/* HEADER                               */}
                 {/* ==================================== */}
 
-                <div
-                    className={
-                        styles.sectionHeader
-                    }
-                >
-
+                <div className={styles.sectionHeader}>
 
                     {/* WATERMARK */}
 
-                    <div
-                        className={
-                            styles.headerWatermark
-                        }
-                    >
-
+                    <div className={styles.headerWatermark}>
                         <Image
-                            src={
-                                degTeam.logo
-                            }
+                            src={degTeam.logo}
                             alt=""
                             width={600}
                             height={600}
-                            className={
-                                styles.headerWatermarkLogo
-                            }
+                            className={styles.headerWatermarkLogo}
                             aria-hidden="true"
                         />
-
                     </div>
-
 
                     {/* CONTENT */}
 
-                    <div
-                        className={
-                            styles.headerContent
-                        }
-                    >
-
+                    <div className={styles.headerContent}>
 
                         {/* TEXT */}
 
-                        <div
-                            className={
-                                styles.headerText
-                            }
-                        >
-
-                            <span
-                                className={
-                                    styles.eyebrow
-                                }
-                            >
+                        <div className={styles.headerText}>
+                            <span className={styles.eyebrow}>
                                 DEG ESPORTS
                             </span>
-
 
                             <h2>
                                 SPIELE & ERGEBNISSE
                             </h2>
 
-
-                            <p
-                                className={
-                                    styles.sectionDescription
-                                }
-                            >
+                            <p className={styles.sectionDescription}>
                                 Alle aktuellen Spiele,
                                 Ergebnisse und Statistiken
                                 der DEG eSports.
                             </p>
-
                         </div>
-
 
                         {/* VISIBLE LOGO */}
 
-                        <div
-                            className={
-                                styles.headerLogoArea
-                            }
-                        >
-
+                        <div className={styles.headerLogoArea}>
                             <Image
-                                src={
-                                    degTeam.logo
-                                }
+                                src={degTeam.logo}
                                 alt="DEG eSports"
                                 width={260}
                                 height={260}
-                                className={
-                                    styles.headerLogo
-                                }
+                                className={styles.headerLogo}
                                 priority
                             />
-
                         </div>
-
 
                     </div>
 
-
-                    <div
-                        className={
-                            styles.headerLine
-                        }
-                    />
+                    <div className={styles.headerLine} />
 
                 </div>
 
-
                 {/* ==================================== */}
-                {/* NEXT MATCH                            */}
+                {/* NEXT MATCH                           */}
                 {/* ==================================== */}
 
-                <div
-                    className={
-                        styles.nextMatchArea
-                    }
-                >
+                <div className={styles.nextMatchArea}>
 
-                    <div
-                        className={
-                            styles.sectionHeading
-                        }
-                    >
-
-                        <span
-                            className={
-                                styles.sectionLabel
-                            }
-                        >
+                    <div className={styles.sectionHeading}>
+                        <span className={styles.sectionLabel}>
                             NÄCHSTES SPIEL
                         </span>
 
-
-                        <span
-                            className={
-                                styles.sectionHint
-                            }
-                        >
+                        <span className={styles.sectionHint}>
                             MATCHDAY
                         </span>
-
                     </div>
 
+                    <div className={styles.nextMatchCard}>
 
-                    <div
-                        className={
-                            styles.nextMatchCard
-                        }
-                    >
-
-
-                        <div
-                            className={
-                                styles.leagueBadge
-                            }
-                        >
+                        <div className={styles.leagueBadge}>
                             {upcomingMatch.league}
                         </div>
 
-
-                        <div
-                            className={
-                                styles.matchTeams
-                            }
-                        >
-
+                        <div className={styles.matchTeams}>
 
                             {/* ================================= */}
-                            {/* DEG                                  */}
+                            {/* DEG                               */}
                             {/* ================================= */}
 
-                            <div
-                                className={
-                                    styles.nextTeam
-                                }
-                            >
-
-                                <div
-                                    className={
-                                        styles.teamLogoFrame
-                                    }
-                                >
-
+                            <div className={styles.nextTeam}>
+                                <div className={styles.teamLogoFrame}>
                                     <Image
-                                        src={
-                                            degTeam.logo
-                                        }
-                                        alt={
-                                            degTeam.name
-                                        }
+                                        src={degTeam.logo}
+                                        alt={degTeam.name}
                                         width={150}
                                         height={130}
-                                        className={
-                                            styles.nextLogo
-                                        }
+                                        className={styles.nextLogo}
                                     />
-
                                 </div>
 
-
-                                <span
-                                    className={
-                                        styles.nextTeamName
-                                    }
-                                >
+                                <span className={styles.nextTeamName}>
                                     {degTeam.name}
                                 </span>
-
                             </div>
 
-
                             {/* ================================= */}
-                            {/* VS                                   */}
+                            {/* VS                                */}
                             {/* ================================= */}
 
-                            <div
-                                className={
-                                    styles.vsBlock
-                                }
-                            >
-
-                                <div
-                                    className={
-                                        styles.vsCircle
-                                    }
-                                >
-                                    <span>
-                                        VS
-                                    </span>
+                            <div className={styles.vsBlock}>
+                                <div className={styles.vsCircle}>
+                                    <span>VS</span>
                                 </div>
 
-
-                                <span
-                                    className={
-                                        styles.vsSubtext
-                                    }
-                                >
+                                <span className={styles.vsSubtext}>
                                     MATCHDAY
                                 </span>
-
                             </div>
 
-
                             {/* ================================= */}
-                            {/* OPPONENTS                            */}
+                            {/* OPPONENTS                         */}
                             {/* ================================= */}
 
-                            <div
-                                className={
-                                    styles.opponentsGroup
-                                }
-                            >
+                            <div className={styles.opponentsGroup}>
 
                                 {/* GEGNER 1 */}
 
-                                <div
-                                    className={
-                                        styles.opponentTeam
-                                    }
-                                >
-
-                                    <div
-                                        className={
-                                            styles.teamLogoFrame
-                                        }
-                                    >
-
+                                <div className={styles.opponentTeam}>
+                                    <div className={styles.teamLogoFrame}>
                                         {upcomingMatch.opponentLogo ? (
-
                                             <Image
-                                                src={
-                                                    upcomingMatch.opponentLogo
-                                                }
-                                                alt={
-                                                    upcomingMatch.opponent
-                                                }
+                                                src={upcomingMatch.opponentLogo}
+                                                alt={upcomingMatch.opponent}
                                                 width={150}
                                                 height={130}
-                                                className={
-                                                    styles.nextLogo
-                                                }
+                                                className={styles.nextLogo}
                                             />
-
                                         ) : (
-
-                                            <span
-                                                className={
-                                                    styles.opponentPlaceholder
-                                                }
-                                            >
+                                            <span className={styles.opponentPlaceholder}>
                                                 ?
                                             </span>
-
                                         )}
-
                                     </div>
 
-
-                                    <span
-                                        className={
-                                            styles.nextTeamName
-                                        }
-                                    >
+                                    <span className={styles.nextTeamName}>
                                         {upcomingMatch.opponent}
                                     </span>
-
                                 </div>
-
 
                                 {/* GEGNER 2 – OPTIONAL */}
 
                                 {upcomingMatch.opponentLogo2 && (
-                                    <div
-                                        className={
-                                            styles.opponentTeam
-                                        }
-                                    >
-
-                                        <div
-                                            className={
-                                                styles.teamLogoFrame
-                                            }
-                                        >
-
+                                    <div className={styles.opponentTeam}>
+                                        <div className={styles.teamLogoFrame}>
                                             <Image
-                                                src={
-                                                    upcomingMatch.opponentLogo2
-                                                }
+                                                src={upcomingMatch.opponentLogo2}
                                                 alt={
                                                     upcomingMatch.opponent2 ??
                                                     "Zweiter Gegner"
                                                 }
                                                 width={150}
                                                 height={130}
-                                                className={
-                                                    styles.nextLogo
-                                                }
+                                                className={styles.nextLogo}
                                             />
-
                                         </div>
 
-
                                         {upcomingMatch.opponent2 && (
-                                            <span
-                                                className={
-                                                    styles.nextTeamName
-                                                }
-                                            >
+                                            <span className={styles.nextTeamName}>
                                                 {upcomingMatch.opponent2}
                                             </span>
                                         )}
-
                                     </div>
                                 )}
 
                             </div>
-
-
                         </div>
 
+                        {/* NEXT MATCH FOOTER */}
 
-                        <div
-                            className={
-                                styles.nextMatchFooter
-                            }
-                        >
+                        <div className={styles.nextMatchFooter}>
 
-                            <div
-                                className={
-                                    styles.matchInfo
-                                }
-                            >
-
+                            <div className={styles.matchInfo}>
                                 <span>
                                     NÄCHSTES SPIEL
                                 </span>
 
-
                                 <strong>
                                     {upcomingMatch.date}
                                 </strong>
-
                             </div>
-
 
                             <a
                                 href="https://www.twitch.tv/degesports"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className={
-                                    styles.twitchButton
-                                }
+                                className={styles.twitchButton}
                             >
-
-                                <span
-                                    className={
-                                        styles.liveDot
-                                    }
-                                />
+                                <span className={styles.liveDot} />
 
                                 LIVE AUF TWITCH
 
-                                <span
-                                    className={
-                                        styles.twitchArrow
-                                    }
-                                >
+                                <span className={styles.twitchArrow}>
                                     ↗
                                 </span>
-
                             </a>
 
                         </div>
-
-
                     </div>
-
                 </div>
 
-
                 {/* ==================================== */}
-                {/* STATISTICS                            */}
-                {/* ==================================== */}
-
-                <div
-                    className={
-                        styles.statisticsArea
-                    }
-                >
-
-                    <div
-                        className={
-                            styles.sectionHeading
-                        }
-                    >
-
-                        <span
-                            className={
-                                styles.sectionLabel
-                            }
-                        >
-                            SAISONÜBERSICHT
-                        </span>
-
-
-                        <span
-                            className={
-                                styles.sectionHint
-                            }
-                        >
-                            DEG ESPORTS
-                        </span>
-
-                    </div>
-
-
-                    <div
-                        className={
-                            styles.statsGrid
-                        }
-                    >
-
-
-                        <div
-                            className={
-                                styles.statCard
-                            }
-                        >
-
-                            <strong>
-    {degSeasonStats.games}
-</strong>
-
-                            <span>
-                                SPIELE
-                            </span>
-
-                        </div>
-
-
-                        <div
-                            className={
-                                styles.statCard
-                            }
-                        >
-
-                            <strong>
-                                {wins}
-                            </strong>
-
-                            <span>
-                                SIEGE
-                            </span>
-
-                        </div>
-
-
-                        <div
-                            className={
-                                styles.statCard
-                            }
-                        >
-
-                            <strong>
-                                {losses}
-                            </strong>
-
-                            <span>
-                                NIEDERLAGEN
-                            </span>
-
-                        </div>
-
-
-                        <div
-                            className={
-                                styles.statCard
-                            }
-                        >
-
-                            <strong>
-                                {goalsFor}:{goalsAgainst}
-                            </strong>
-
-                            <span>
-                                TORE
-                            </span>
-
-                        </div>
-
-
-                        {overtimeLosses > 0 && (
-
-                            <div
-                                className={
-                                    styles.statCard
-                                }
-                            >
-
-                                <strong>
-                                    {overtimeLosses}
-                                </strong>
-
-                                <span>
-                                    OVERTIME NIEDERLAGEN
-                                </span>
-
-                            </div>
-
-                        )}
-
-
-                    </div>
-
-                </div>
-
-
-                {/* ==================================== */}
-                {/* RESULTS                               */}
+                {/* RESULTS                              */}
                 {/* ==================================== */}
 
-                <div
-                    className={
-                        styles.resultsArea
-                    }
-                >
+                <div className={styles.resultsArea}>
 
-                    <div
-                        className={
-                            styles.sectionHeading
-                        }
-                    >
-
-                        <span
-                            className={
-                                styles.sectionLabel
-                            }
-                        >
+                    <div className={styles.sectionHeading}>
+                        <span className={styles.sectionLabel}>
                             LETZTE ERGEBNISSE
                         </span>
 
-
-                        <span
-                            className={
-                                styles.sectionHint
-                            }
-                        >
+                        <span className={styles.sectionHint}>
                             ECL LITE
                         </span>
-
                     </div>
 
+                    <div className={styles.resultsGrid}>
 
-                    <div
-                        className={
-                            styles.resultsGrid
-                        }
-                    >
+                        {degMatches.map((match, index) => {
 
-                        {degMatches.map(
-                            (match, index) => {
+                            const result = getMatchResult(
+                                match.degScore,
+                                match.opponentScore
+                            );
 
-                                const result =
-                                    getMatchResult(
-                                        match.degScore,
-                                        match.opponentScore
-                                    );
+                            const degWon = result === "win";
+                            const opponentWon = result === "loss";
 
+                            const degFirst = match.home;
 
-                                const degWon =
-                                    result === "win";
+                            const firstTeamName = degFirst
+                                ? degTeam.name
+                                : match.opponent;
 
+                            const secondTeamName = degFirst
+                                ? match.opponent
+                                : degTeam.name;
 
-                                const opponentWon =
-                                    result === "loss";
+                            const firstTeamLogo = degFirst
+                                ? degTeam.logo
+                                : match.opponentLogo;
 
+                            const secondTeamLogo = degFirst
+                                ? match.opponentLogo
+                                : degTeam.logo;
 
-                                const degFirst =
-                                    match.home;
+                            const firstScore = degFirst
+                                ? match.degScore
+                                : match.opponentScore;
 
+                            const secondScore = degFirst
+                                ? match.opponentScore
+                                : match.degScore;
 
-                                const firstTeamName =
-                                    degFirst
-                                        ? degTeam.name
-                                        : match.opponent;
+                            const firstWon = degFirst
+                                ? degWon
+                                : opponentWon;
 
+                            const secondWon = degFirst
+                                ? opponentWon
+                                : degWon;
 
-                                const secondTeamName =
-                                    degFirst
-                                        ? match.opponent
-                                        : degTeam.name;
+                            return (
+                                <article
+                                    key={`${match.date}-${index}`}
+                                    className={
+                                        `${styles.resultCard} ` +
+                                        `${
+                                            result === "win"
+                                                ? styles.resultWin
+                                                : result === "loss"
+                                                    ? styles.resultLoss
+                                                    : ""
+                                        }`
+                                    }
+                                >
 
+                                    {/* RESULT TOP */}
 
-                                const firstTeamLogo =
-                                    degFirst
-                                        ? degTeam.logo
-                                        : match.opponentLogo;
+                                    <div className={styles.resultTop}>
+                                        <span>
+                                            {match.league}
+                                        </span>
 
+                                        <span>
+                                            {match.date}
+                                        </span>
+                                    </div>
 
-                                const secondTeamLogo =
-                                    degFirst
-                                        ? match.opponentLogo
-                                        : degTeam.logo;
+                                    {/* RESULT STATUS */}
 
+                                    {result && (
+                                        <div
+                                            className={
+                                                `${styles.resultStatus} ` +
+                                                `${
+                                                    result === "win"
+                                                        ? styles.statusWin
+                                                        : result === "loss"
+                                                            ? styles.statusLoss
+                                                            : styles.statusDraw
+                                                }`
+                                            }
+                                        >
+                                            {getResultLabel(result)}
+                                        </div>
+                                    )}
 
-                                const firstScore =
-                                    degFirst
-                                        ? match.degScore
-                                        : match.opponentScore;
+                                    {/* RESULT MATCH */}
 
+                                    <div className={styles.resultMatch}>
 
-                                const secondScore =
-                                    degFirst
-                                        ? match.opponentScore
-                                        : match.degScore;
+                                        {/* FIRST TEAM */}
 
+                                        <div className={styles.resultTeam}>
+                                            <div className={styles.resultLogoFrame}>
+                                                <Image
+                                                    src={firstTeamLogo}
+                                                    alt={firstTeamName}
+                                                    width={70}
+                                                    height={70}
+                                                    className={styles.resultLogo}
+                                                />
+                                            </div>
 
-                                const firstWon =
-                                    degFirst
-                                        ? degWon
-                                        : opponentWon;
+                                            <span>
+                                                {firstTeamName}
+                                            </span>
+                                        </div>
 
+                                        {/* SCORE */}
 
-                                const secondWon =
-                                    degFirst
-                                        ? opponentWon
-                                        : degWon;
-
-
-                                return (
-
-                                    <article
-                                        key={
-                                            `${match.date}-${index}`
-                                        }
-                                        className={
-                                            `${styles.resultCard} ` +
-                                            `${
-                                                result === "win"
-                                                    ? styles.resultWin
-                                                    : result === "loss"
-                                                        ? styles.resultLoss
+                                        <div className={styles.scoreBlock}>
+                                            <strong
+                                                className={
+                                                    firstWon
+                                                        ? styles.winnerScore
                                                         : ""
-                                            }`
+                                                }
+                                            >
+                                                {firstScore}
+                                            </strong>
+
+                                            <span>:</span>
+
+                                            <strong
+                                                className={
+                                                    secondWon
+                                                        ? styles.winnerScore
+                                                        : ""
+                                                }
+                                            >
+                                                {secondScore}
+                                            </strong>
+
+                                            {match.overtime && (
+                                                <small>
+                                                    OT
+                                                </small>
+                                            )}
+                                        </div>
+
+                                        {/* SECOND TEAM */}
+
+                                        <div className={styles.resultTeam}>
+                                            <div className={styles.resultLogoFrame}>
+                                                <Image
+                                                    src={secondTeamLogo}
+                                                    alt={secondTeamName}
+                                                    width={70}
+                                                    height={70}
+                                                    className={styles.resultLogo}
+                                                />
+                                            </div>
+
+                                            <span>
+                                                {secondTeamName}
+                                            </span>
+                                        </div>
+
+                                    </div>
+
+                                    {/* RESULT FOOTER */}
+
+                                    <div className={styles.resultFooter}>
+                                        {match.home
+                                            ? "HEIMSPIEL"
+                                            : "AUSWÄRTSSPIEL"
                                         }
-                                    >
+                                    </div>
 
-
-                                        <div
-                                            className={
-                                                styles.resultTop
-                                            }
-                                        >
-
-                                            <span>
-                                                {match.league}
-                                            </span>
-
-
-                                            <span>
-                                                {match.date}
-                                            </span>
-
-                                        </div>
-
-
-                                        {result && (
-
-                                            <div
-                                                className={
-                                                    `${styles.resultStatus} ` +
-                                                    `${
-                                                        result === "win"
-                                                            ? styles.statusWin
-                                                            : result === "loss"
-                                                                ? styles.statusLoss
-                                                                : styles.statusDraw
-                                                    }`
-                                                }
-                                            >
-                                                {getResultLabel(
-                                                    result
-                                                )}
-                                            </div>
-
-                                        )}
-
-
-                                        <div
-                                            className={
-                                                styles.resultMatch
-                                            }
-                                        >
-
-
-                                            <div
-                                                className={
-                                                    styles.resultTeam
-                                                }
-                                            >
-
-                                                <div
-                                                    className={
-                                                        styles.resultLogoFrame
-                                                    }
-                                                >
-
-                                                    <Image
-                                                        src={
-                                                            firstTeamLogo
-                                                        }
-                                                        alt={
-                                                            firstTeamName
-                                                        }
-                                                        width={70}
-                                                        height={70}
-                                                        className={
-                                                            styles.resultLogo
-                                                        }
-                                                    />
-
-                                                </div>
-
-
-                                                <span>
-                                                    {firstTeamName}
-                                                </span>
-
-                                            </div>
-
-
-                                            <div
-                                                className={
-                                                    styles.scoreBlock
-                                                }
-                                            >
-
-                                                <strong
-                                                    className={
-                                                        firstWon
-                                                            ? styles.winnerScore
-                                                            : ""
-                                                    }
-                                                >
-                                                    {firstScore}
-                                                </strong>
-
-
-                                                <span>
-                                                    :
-                                                </span>
-
-
-                                                <strong
-                                                    className={
-                                                        secondWon
-                                                            ? styles.winnerScore
-                                                            : ""
-                                                    }
-                                                >
-                                                    {secondScore}
-                                                </strong>
-
-
-                                                {match.overtime && (
-
-                                                    <small>
-                                                        OT
-                                                    </small>
-
-                                                )}
-
-                                            </div>
-
-
-                                            <div
-                                                className={
-                                                    styles.resultTeam
-                                                }
-                                            >
-
-                                                <div
-                                                    className={
-                                                        styles.resultLogoFrame
-                                                    }
-                                                >
-
-                                                    <Image
-                                                        src={
-                                                            secondTeamLogo
-                                                        }
-                                                        alt={
-                                                            secondTeamName
-                                                        }
-                                                        width={70}
-                                                        height={70}
-                                                        className={
-                                                            styles.resultLogo
-                                                        }
-                                                    />
-
-                                                </div>
-
-
-                                                <span>
-                                                    {secondTeamName}
-                                                </span>
-
-                                            </div>
-
-
-                                        </div>
-
-
-                                        <div
-                                            className={
-                                                styles.resultFooter
-                                            }
-                                        >
-                                            {match.home
-                                                ? "HEIMSPIEL"
-                                                : "AUSWÄRTSSPIEL"
-                                            }
-                                        </div>
-
-
-                                    </article>
-
-                                );
-
-                            }
-                        )}
+                                </article>
+                            );
+                        })}
 
                     </div>
-
                 </div>
 
-
             </div>
-
         </section>
-
     );
 }

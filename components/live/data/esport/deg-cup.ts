@@ -192,6 +192,7 @@ const teams = {
   scbEsports: {
     name: "SCB eSports",
     logo: "/images/esport/gcl13/scb-esports.png",
+            eliminated: true,
   },
 
   valhallaVikings: {
@@ -539,10 +540,10 @@ export const gcl13Cup: GCL13Cup = {
           home: teams.deadlyPhantoms,
           away: teams.scbEsports,
 
-          homeScore: 0,
+          homeScore: 1,
           awayScore: 0,
 
-          played: false,
+          played: true,
         },
 
       ],
@@ -561,8 +562,8 @@ export const gcl13Cup: GCL13Cup = {
         {
           id: "gcl13-cup-final",
 
-          home: teams.deg,
-          away: teams.tbd,
+          home: teams.deadlyPhantoms,
+          away: teams.deg,
 
           homeScore: 0,
           awayScore: 0,

@@ -90,7 +90,7 @@ export const upcomingMatch: UpcomingMatch = {
     league: "GCL 13 - PLAYOFF FINALE",
 
     // Erstes Spiel: GCL 13 – Spieltag 8
-    opponent: "Hockeyholics",
+    opponent: "TBD",
     opponentLogo: "",
 };
 

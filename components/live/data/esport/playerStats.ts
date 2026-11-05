@@ -1,10 +1,26 @@
+
+/* =========================================
+ * BloodyLP
+ *
+ * Project:
+ * BloodyLP Website
+ *
+ * File:
+ * components/live/data/esport/playerStats.ts
+ *
+ * Description:
+ * Individuelle Saison- und Playoff-Statistiken
+ * der aktuellen DEG eSports Spieler.
+ * ========================================= */
+
 // =========================================
-// BloodyLP
-// Project: BloodyLP Website
-// File: components/live/data/esport/playerStats.ts
+// SPIELERPOSITIONEN
 // =========================================
 
-export type PlayerPosition = "goalie" | "defense" | "forward";
+export type PlayerPosition =
+    | "goalie"
+    | "defense"
+    | "forward";
 
 // =========================================
 // FELDSPIELER-STATS
@@ -54,7 +70,7 @@ type BasePlayer = {
 };
 
 // =========================================
-// SPIELER-TYPEN
+// FELDSPIELER
 // =========================================
 
 export type SkaterPlayer = BasePlayer & {
@@ -62,12 +78,23 @@ export type SkaterPlayer = BasePlayer & {
     stats: SkaterStats;
 };
 
+// =========================================
+// GOALIE
+// =========================================
+
 export type GoaliePlayer = BasePlayer & {
     position: "goalie";
     stats: GoalieStats;
 };
 
-export type PlayerStat = SkaterPlayer | GoaliePlayer;
+// =========================================
+// PLAYER
+// =========================================
+
+export type PlayerStat =
+    | SkaterPlayer
+    | GoaliePlayer;
+
 
 // =========================================
 // REGULAR SEASON – GOALIES
@@ -112,8 +139,9 @@ export const goalieStats: GoaliePlayer[] = [
     },
 ];
 
+
 // =========================================
-// REGULAR SEASON – FELDSPIELER
+// REGULAR SEASON – TOPSCORER
 // =========================================
 
 export const defenseStats: SkaterPlayer[] = [
@@ -229,6 +257,7 @@ export const defenseStats: SkaterPlayer[] = [
     },
 ];
 
+
 // =========================================
 // REGULAR SEASON – WEITERE FELDSPIELER
 // =========================================
@@ -280,6 +309,7 @@ export const forwardStats: SkaterPlayer[] = [
     },
 ];
 
+
 // =========================================
 // REGULAR SEASON – ALLE SPIELER
 // =========================================
@@ -289,6 +319,7 @@ export const playerStats: PlayerStat[] = [
     ...forwardStats,
     ...goalieStats,
 ];
+
 
 // =========================================
 // PLAYOFFS – GOALIES
@@ -302,18 +333,19 @@ export const playoffGoalieStats: GoaliePlayer[] = [
         position: "goalie",
         image: "/images/esport/players/houddel_26.png",
         stats: {
-            games: 8,
-            wins: 5,
-            losses: 3,
+            games: 12,
+            wins: 8,
+            losses: 4,
             overtimeLosses: 0,
-            saves: 82,
-            goalsAgainst: 21,
-            savePercentage: 79.61,
-            goalsAgainstAverage: 2.63,
+            saves: 145,
+            goalsAgainst: 32,
+            savePercentage: 81.92,
+            goalsAgainstAverage: 2.67,
             shutouts: 0,
         },
     },
 ];
+
 
 // =========================================
 // PLAYOFFS – FELDSPIELER
@@ -327,19 +359,19 @@ export const playoffSkaterStats: SkaterPlayer[] = [
         position: "defense",
         image: "/images/esport/players/PantherOnSkates.png",
         stats: {
-            games: 8,
-            goals: 8,
-            assists: 5,
-            points: 13,
-            plusMinus: -4,
-            pim: 6,
+            games: 12,
+            goals: 11,
+            assists: 12,
+            points: 23,
+            plusMinus: -2,
+            pim: 12,
             powerplayGoals: 0,
             shorthandedGoals: 0,
             gameWinningGoals: 0,
-            shots: 16,
-            shootingPercentage: 50,
-            hits: 14,
-            faceoffWinPercentage: 100,
+            shots: 28,
+            shootingPercentage: 39.3,
+            hits: 15,
+            faceoffWinPercentage: 66.7,
         },
     },
     {
@@ -349,18 +381,18 @@ export const playoffSkaterStats: SkaterPlayer[] = [
         position: "defense",
         image: "/images/esport/players/TooEzXx.png",
         stats: {
-            games: 8,
-            goals: 7,
-            assists: 5,
-            points: 12,
-            plusMinus: -4,
-            pim: 4,
+            games: 12,
+            goals: 8,
+            assists: 13,
+            points: 21,
+            plusMinus: -2,
+            pim: 8,
             powerplayGoals: 3,
             shorthandedGoals: 0,
             gameWinningGoals: 3,
-            shots: 33,
-            shootingPercentage: 21.2,
-            hits: 4,
+            shots: 45,
+            shootingPercentage: 17.8,
+            hits: 7,
             faceoffWinPercentage: 0,
         },
     },
@@ -371,19 +403,41 @@ export const playoffSkaterStats: SkaterPlayer[] = [
         position: "forward",
         image: "/images/esport/players/akin_penta.png",
         stats: {
-            games: 8,
-            goals: 4,
-            assists: 7,
-            points: 11,
-            plusMinus: -4,
-            pim: 2,
+            games: 12,
+            goals: 11,
+            assists: 10,
+            points: 21,
+            plusMinus: -2,
+            pim: 4,
             powerplayGoals: 2,
             shorthandedGoals: 0,
-            gameWinningGoals: 1,
-            shots: 32,
-            shootingPercentage: 12.5,
+            gameWinningGoals: 4,
+            shots: 46,
+            shootingPercentage: 23.9,
             hits: 1,
-            faceoffWinPercentage: 54.9,
+            faceoffWinPercentage: 51.7,
+        },
+    },
+    {
+        number: 17,
+        gamerTag: "Pasq86uale",
+        name: "P. Schultz",
+        position: "forward",
+        image: "/images/esport/players/Pasq86ualePS.png",
+        stats: {
+            games: 12,
+            goals: 0,
+            assists: 8,
+            points: 8,
+            plusMinus: -2,
+            pim: 0,
+            powerplayGoals: 0,
+            shorthandedGoals: 0,
+            gameWinningGoals: 0,
+            shots: 10,
+            shootingPercentage: 0,
+            hits: 34,
+            faceoffWinPercentage: 0,
         },
     },
     {
@@ -409,50 +463,29 @@ export const playoffSkaterStats: SkaterPlayer[] = [
         },
     },
     {
-        number: 17,
-        gamerTag: "Pasq86uale",
-        name: "P. Schultz",
-        position: "forward",
-        image: "/images/esport/players/Pasq86ualePS.png",
-        stats: {
-            games: 8,
-            goals: 0,
-            assists: 5,
-            points: 5,
-            plusMinus: -4,
-            pim: 0,
-            powerplayGoals: 0,
-            shorthandedGoals: 0,
-            gameWinningGoals: 0,
-            shots: 6,
-            shootingPercentage: 0,
-            hits: 26,
-            faceoffWinPercentage: 0,
-        },
-    },
-    {
         number: 14,
         gamerTag: "Alex96rizz",
         name: "A. Rindå",
         position: "defense",
         image: "/images/esport/players/FellyKnight.png",
         stats: {
-            games: 2,
+            games: 6,
             goals: 0,
             assists: 0,
             points: 0,
-            plusMinus: -3,
-            pim: 6,
+            plusMinus: -1,
+            pim: 10,
             powerplayGoals: 0,
             shorthandedGoals: 0,
             gameWinningGoals: 0,
-            shots: 0,
+            shots: 2,
             shootingPercentage: 0,
-            hits: 2,
+            hits: 6,
             faceoffWinPercentage: 0,
         },
     },
 ];
+
 
 // =========================================
 // PLAYOFFS – ALLE SPIELER
