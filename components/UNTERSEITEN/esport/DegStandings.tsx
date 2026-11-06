@@ -1,3 +1,4 @@
+
 /* ============================================ */
 /* BloodyLP                                     */
 /*                                              */
@@ -7,6 +8,7 @@
 /*       DegStandings.tsx                       */
 /*                                              */
 /* Description: DEG eSports Tabellenübersicht   */
+/* GCL 13 – Playoffs inklusive Finalserie       */
 /* ============================================ */
 
 import Image from "next/image";
@@ -16,23 +18,6 @@ import {
     degStandings,
     degStandingsLeague,
 } from "@/components/live/data/esport/deg-standings";
-
-
-/* ============================================ */
-/* PLAYOFF-ERGEBNISSE                            */
-/* ============================================ */
-
-/*
- * Ergebnisse ausschließlich hier eintragen.
- *
- * Viertelfinale:
- * homeSeed / awaySeed bestimmen die Paarungen.
- * homeScore / awayScore sind die Serienergebnisse.
- * played = true zeigt die Ergebnisse an.
- *
- * Halbfinale:
- * Ergebnisse im Block semifinalMatches eintragen.
- */
 
 
 /* ============================================ */
@@ -80,30 +65,18 @@ const quarterfinalMatches = [
 /* ============================================ */
 
 /*
- * HIER DIE HALBFINALERGEBNISSE EINTRAGEN.
- *
  * Halbfinale 1:
  * Sieger Viertelfinale 1 gegen Sieger Viertelfinale 3
  *
  * Halbfinale 2:
  * Sieger Viertelfinale 2 gegen Sieger Viertelfinale 4
- *
- * Beispiel:
- * homeScore: 4,
- * awayScore: 2,
- * played: true,
- *
- * Solange eine Serie läuft:
- * homeScore: null,
- * awayScore: null,
- * played: false,
  */
 
 const semifinalMatches = [
     {
         id: 1,
         homeScore: 1,
-        awayScore: 3,
+        awayScore: 4,
         played: true,
     },
     {
@@ -113,6 +86,51 @@ const semifinalMatches = [
         played: true,
     },
 ];
+
+
+/* ============================================ */
+/* FINALSERIE                                   */
+/* ============================================ */
+
+/*
+ * FINALE:
+ *
+ * DEG eSports gegen REH Gaming
+ *
+ * Heimrecht: DEG eSports
+ *
+ * HIER DIE FINALERGEBNISSE EINTRAGEN.
+ *
+ * Beispiel:
+ * homeScore: 4,
+ * awayScore: 2,
+ * played: true,
+ *
+ * homeScore = DEG eSports
+ * awayScore = REH Gaming
+ *
+ * Die Werte zeigen den Serienstand.
+ */
+
+const finalMatch = {
+    homeScore: null as number | null,
+    awayScore: null as number | null,
+    played: false,
+};
+
+
+/* ============================================ */
+/* TEAM-ZUORDNUNG                               */
+/* ============================================ */
+
+const getTeamByName = (name: string) => {
+    return (
+        degStandings.find(
+            (team) =>
+                team.team.toLowerCase() === name.toLowerCase()
+        ) ?? null
+    );
+};
 
 
 /* ============================================ */
@@ -147,6 +165,52 @@ const getQuarterfinalWinner = (matchId: number) => {
         ) ?? null
     );
 };
+
+
+/* ============================================ */
+/* SIEGER DER HALBFINALS                        */
+/* ============================================ */
+
+const getSemifinalWinner = (matchId: number) => {
+    const match = semifinalMatches.find(
+        (item) => item.id === matchId
+    );
+
+    if (
+        !match ||
+        !match.played ||
+        match.homeScore === null ||
+        match.awayScore === null ||
+        match.homeScore === match.awayScore
+    ) {
+        return null;
+    }
+
+    if (matchId === 1) {
+        return match.homeScore > match.awayScore
+            ? getQuarterfinalWinner(1)
+            : getQuarterfinalWinner(3);
+    }
+
+    return match.homeScore > match.awayScore
+        ? getQuarterfinalWinner(2)
+        : getQuarterfinalWinner(4);
+};
+
+
+/* ============================================ */
+/* FINALTEILNEHMER                              */
+/* ============================================ */
+
+/*
+ * Das Finale ist festgelegt:
+ *
+ * Heimteam: DEG eSports
+ * Auswärtsteam: REH Gaming
+ */
+
+const finalHome = getTeamByName("DEG eSports");
+const finalAway = getTeamByName("REH Gaming");
 
 
 /* ============================================ */
@@ -592,6 +656,118 @@ export default function DegStandings() {
                             </article>
                         );
                     })}
+                </div>
+            </section>
+
+
+            {/* ========================================= */}
+            {/* PLAYOFFS – FINALE                         */}
+            {/* ========================================= */}
+
+            <section className={styles.playoffs}>
+                <div className={styles.playoffsHeader}>
+                    <div>
+                        <p className={styles.playoffsEyebrow}>
+                            GCL 13 · DIVISION I
+                        </p>
+
+                        <h2 className={styles.playoffsTitle}>
+                            PLAYOFFS
+                        </h2>
+
+                        <p className={styles.playoffsSubtitle}>
+                            Finale · Best of 7
+                        </p>
+                    </div>
+
+                    <span className={styles.playoffsBadge}>
+                        FINALE
+                    </span>
+                </div>
+
+
+                <div className={styles.playoffsGrid}>
+                    <article className={styles.playoffMatch}>
+
+                        <div className={styles.playoffMatchHeader}>
+                            <span>
+                                FINALE
+                            </span>
+
+                            <span className={styles.playoffStatus}>
+                                {finalMatch.played
+                                    ? "BEENDET"
+                                    : "NOCH OFFEN"}
+                            </span>
+                        </div>
+
+
+                        {/* HEIMTEAM – DEG ESPORTS */}
+
+                        <div className={styles.playoffTeam}>
+                            <div className={styles.playoffTeamInfo}>
+                                <span className={styles.playoffSeed}>
+                                    H
+                                </span>
+
+                                {finalHome && (
+                                    <Image
+                                        src={finalHome.logo}
+                                        alt={`${finalHome.team} Logo`}
+                                        width={44}
+                                        height={44}
+                                        className={styles.playoffLogo}
+                                    />
+                                )}
+
+                                <span className={styles.playoffTeamName}>
+                                    {finalHome
+                                        ? finalHome.team
+                                        : "DEG eSports"}
+                                </span>
+                            </div>
+
+                            <span className={styles.playoffScore}>
+                                {finalMatch.played
+                                    ? finalMatch.homeScore
+                                    : "–"}
+                            </span>
+                        </div>
+
+
+                        {/* AUSWÄRTSTEAM – REH GAMING */}
+
+                        <div className={styles.playoffTeam}>
+                            <div className={styles.playoffTeamInfo}>
+                                <span className={styles.playoffSeed}>
+                                    A
+                                </span>
+
+                                {finalAway && (
+                                    <Image
+                                        src={finalAway.logo}
+                                        alt={`${finalAway.team} Logo`}
+                                        width={44}
+                                        height={44}
+                                        className={styles.playoffLogo}
+                                    />
+                                )}
+
+                                <span className={styles.playoffTeamName}>
+                                    {finalAway
+                                        ? finalAway.team
+                                        : "REH Gaming"}
+                                </span>
+                            </div>
+
+                            <span className={styles.playoffScore}>
+                                {finalMatch.played
+                                    ? finalMatch.awayScore
+                                    : "–"}
+                            </span>
+                        </div>
+
+                    </article>
                 </div>
             </section>
 

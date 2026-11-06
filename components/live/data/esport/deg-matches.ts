@@ -87,11 +87,11 @@ export const degTeam = {
 export const upcomingMatch: UpcomingMatch = {
     date: "TBD",
 
-    league: "GCL 13 - PLAYOFF FINALE",
+    league: "GCL 13 - PLAYOFF POKALFINALE",
 
     // Erstes Spiel: GCL 13 – Spieltag 8
-    opponent: "TBD",
-    opponentLogo: "",
+    opponent: "Deadly Phantoms",
+    opponentLogo: "/images/esport/gcl13/deadly-phantoms.png",
 };
 
 
