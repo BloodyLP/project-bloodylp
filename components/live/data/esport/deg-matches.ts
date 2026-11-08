@@ -85,9 +85,9 @@ export const degTeam = {
 /* ============================================ */
 
 export const upcomingMatch: UpcomingMatch = {
-    date: "TBD",
+    date: "09. November 2026 ab 21.20 Uhr",
 
-    league: "GCL 13 - PLAYOFF POKALFINALE",
+    league: "GCL 13 - POKALFINALE",
 
     // Erstes Spiel: GCL 13 – Spieltag 8
     opponent: "Deadly Phantoms",
