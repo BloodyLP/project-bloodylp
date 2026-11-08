@@ -39,32 +39,29 @@ export const liveData = {
 
     events: [  
 
-                                          {
+      {
+        day: "SO",
+        date: "08. NOV",
+        time: "19:30 Uhr",
+        title: "NHL 27 - Be A Pro",
+      }, 
+     {
         day: "MO",
         date: "09. NOV",
         time: "20:50 Uhr",
         title: "DEG eSports",
       }, 
-
-                                                {
+      {
         day: "DI",
         date: "10. NOV",
         time: "19:30 Uhr",
         title: "EA FC 27 - Spielerkarriere",
       }, 
-
-                                                      {
+      {
         day: "DO",
         date: "12. NOV",
         time: "19:30 Uhr",
         title: "NHL 27 - Be A Pro",
-      }, 
-
-                                                            {
-        day: "SA",
-        date: "14. NOV",
-        time: "19:30 Uhr",
-        title: "Zelda: Ocarina of Time",
       }, 
       
       
