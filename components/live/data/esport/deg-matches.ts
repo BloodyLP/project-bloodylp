@@ -85,13 +85,13 @@ export const degTeam = {
 /* ============================================ */
 
 export const upcomingMatch: UpcomingMatch = {
-    date: "09. November 2026 ab 21.20 Uhr",
+    date: "TBD",
 
-    league: "GCL 13 - POKALFINALE",
+    league: "GCL 13 - PLAYOFFS FINALE",
 
     // Erstes Spiel: GCL 13 – Spieltag 8
-    opponent: "Deadly Phantoms",
-    opponentLogo: "/images/esport/gcl13/deadly-phantoms.png",
+    opponent: "REH Gaming",
+    opponentLogo: "/images/esport/gcl13/reh-gaming.png",
 };
 
 
@@ -123,24 +123,24 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-        date: "03. November 2026",
+        date: "10. November 2026",
 
-        league: "GCL 13 - Playoff Halbfinale",
+        league: "GCL 13 - POKAL FINALE",
 
-        opponent: "Hockeyholics",
+        opponent: "Deadly Phantoms",
 
         opponentLogo:
-            "/images/esport/gcl13/hockeyholics.png",
+            "/images/esport/gcl13/deadly-phantoms.png",
 
-        degScore: 3,
+        degScore: 1,
 
-        opponentScore: 1,
+        opponentScore: 0,
 
-        overtime: false,
+        overtime: true,
 
         shootout: false,
 
-        home: false,
+        home: true,
     },
 
 
@@ -169,7 +169,7 @@ export const degMatches: DegMatch[] = [
 
         shootout: false,
 
-        home: true,
+        home: false,
     },
 
 
@@ -180,24 +180,24 @@ export const degMatches: DegMatch[] = [
     /* Ergebnis: 7:0                            */
     /* ======================================== */
 
-   {
+    {
         date: "03. November 2026",
 
-        league: "GCL 13 - Playoff Viertelfinale",
+        league: "GCL 13 - Playoff Halbfinale",
 
         opponent: "Hockeyholics",
 
         opponentLogo:
             "/images/esport/gcl13/hockeyholics.png",
 
-        degScore: 4,
+        degScore: 3,
 
-        opponentScore: 3,
+        opponentScore: 1,
 
         overtime: false,
 
         shootout: false,
 
-        home: false,
+        home: true,
     },
 ];

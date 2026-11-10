@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 
 import standingsStyles from "./DegStandings.module.css";
@@ -10,9 +11,9 @@ import {
 } from "@/components/live/data/esport/deg-cup";
 
 
-/* ============================================ */
-/* CUP TEAM                                     */
-/* ============================================ */
+/* ============================================
+   CUP TEAM
+============================================ */
 
 function CupTeam({ team }: { team: GCL13CupTeam }) {
     return (
@@ -51,9 +52,9 @@ function CupTeam({ team }: { team: GCL13CupTeam }) {
 }
 
 
-/* ============================================ */
-/* CUP MATCH                                    */
-/* ============================================ */
+/* ============================================
+   CUP MATCH
+============================================ */
 
 function CupMatch({ match }: { match: GCL13CupMatch }) {
     return (
@@ -106,9 +107,9 @@ function CupMatch({ match }: { match: GCL13CupMatch }) {
 }
 
 
-/* ============================================ */
-/* CUP ROUND                                    */
-/* ============================================ */
+/* ============================================
+   CUP ROUND
+============================================ */
 
 function CupRound({
     name,
@@ -144,9 +145,9 @@ function CupRound({
 }
 
 
-/* ============================================ */
-/* MAIN COMPONENT                               */
-/* ============================================ */
+/* ============================================
+   MAIN COMPONENT
+============================================ */
 
 export default function GCL13Cup() {
     return (
@@ -252,6 +253,53 @@ export default function GCL13Cup() {
                     />
                 ))}
             </div>
+
+
+            {/* =================================
+                GCL 13 POKALSIEGER
+            ================================= */}
+
+            {gcl13Cup.champion && (
+                <div className={styles.championSection}>
+
+                    <div className={styles.championTrophy}>
+                        🏆
+                    </div>
+
+                    <div className={styles.championContent}>
+                        <span className={styles.championEyebrow}>
+                            GCL 13 POKALSIEGER
+                        </span>
+
+                        <div className={styles.championTeam}>
+                            <Image
+                                src={gcl13Cup.champion.logo}
+                                alt={`${gcl13Cup.champion.name} Logo`}
+                                width={72}
+                                height={72}
+                                className={styles.championLogo}
+                            />
+
+                            <div className={styles.championInfo}>
+                                <h3>
+                                    {gcl13Cup.champion.name}
+                                </h3>
+
+                                <span>
+                                    SIEGER DES GCL 13 POKALS
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={styles.championResult}>
+                        <span>FINALE</span>
+                        <strong>1 : 0</strong>
+                        <span>OT-SIEG</span>
+                    </div>
+
+                </div>
+            )}
 
 
             {/* =================================
