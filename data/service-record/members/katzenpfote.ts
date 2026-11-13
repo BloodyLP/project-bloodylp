@@ -72,7 +72,7 @@ export const Katzenpfote: ServiceRecordMember = {
     /**
      * Reihe
      */
-    line:1,
+    line:2,
 
     /**
      * Eintrittsjahr

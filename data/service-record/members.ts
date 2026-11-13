@@ -172,6 +172,14 @@ import { Katzenpfote } from "./members/katzenpfote";
 
 import { Hannsscheinwerfer } from "./members/hannsscheinwerfer";
 
+import { andreaskecb } from "./members/andreaskecb";
+
+import { edyve_zockt } from "./members/edyve_zockt";
+
+import { florianh } from "./members/florianh";
+
+import { eurasischerwolf } from "./members/eurasischerwolf";
+
 
 
 export const MEMBERS: ServiceRecordMember[] = [
@@ -263,4 +271,12 @@ export const MEMBERS: ServiceRecordMember[] = [
     Katzenpfote,
 
     Hannsscheinwerfer,
+
+    andreaskecb,
+
+    edyve_zockt,
+
+    florianh,
+
+    eurasischerwolf,
 ];

@@ -93,4 +93,12 @@ export const careerHighlights: CareerHighlight[] = [
         description:
             "Der erste Sponsorenvertrag in der Karriere.",
     },
+
+                            {
+        date: "12. November 2026",
+        category: "100 Tore in der NHL",
+        title: "Persönliche Auszeichnung",
+        description:
+            "Die 100 Tore-Marke in der NHL in der Saison 2027/2028 geknackt.",
+    },
 ];
