@@ -72,7 +72,7 @@ export const Adlermannheimfan: ServiceRecordMember = {
     /**
      * Reihe
      */
-    line:4,
+    line:2,
 
     /**
      * Eintrittsjahr

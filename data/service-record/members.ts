@@ -182,6 +182,12 @@ import { eurasischerwolf } from "./members/eurasischerwolf";
 
 import { rainergznich } from "./members/rainergznich";
 
+import { misterpmf } from "./members/misterpmf";
+
+import { hitzicanada } from "./members/hitzicanada";
+
+import { hockeyboyaustria } from "./members/hockeyboy";
+
 
 
 export const MEMBERS: ServiceRecordMember[] = [
@@ -283,4 +289,10 @@ export const MEMBERS: ServiceRecordMember[] = [
     eurasischerwolf,
 
     rainergznich,
+
+    misterpmf,
+
+    hitzicanada,
+
+    hockeyboyaustria,
 ];

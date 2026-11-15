@@ -43,7 +43,7 @@ export const tonska: ServiceRecordMember = {
     /**
      * Anzeigename
      */
-    name: "tonska",
+    name: "Tonska",
 
 
     /**

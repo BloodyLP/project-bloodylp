@@ -262,17 +262,17 @@ defense: {
 
     pair2: {
 
-        ld: "",
+        ld: "BA-008",
 
-        rd: "",
+        rd: "BA-051",
 
     },
 
     pair3: {
 
-        ld: "",
+        ld: "BA-049",
 
-        rd: "",
+        rd: "BA-050",
 
     },
 
@@ -290,43 +290,33 @@ reserves: [
 
 
     {
-        memberId: "BA-008",
-        position: "LD",
-    },
-
-       {
-        memberId: "BA-004",
-        position: "LW",
-    },
-
-       {
         memberId: "BA-011",
         position: "LW",
     },
 
-       {
-        memberId: "BA-026",
-        position: "",
-    },
-
-           {
+    {
         memberId: "BA-034",
         position: "LD",
     },
 
-               {
+    {
         memberId: "BA-035",
         position: "RD",
     },
 
-                   {
+    {
         memberId: "BA-038",
-        position: "",
+        position: "LV",
     },
 
-                       {
+    {
         memberId: "BA-039",
-        position: "",
+        position: "C",
+    },
+
+        {
+        memberId: "BA-004",
+        position: "LW",
     },
 
   
