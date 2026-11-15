@@ -180,6 +180,8 @@ import { florianh } from "./members/florianh";
 
 import { eurasischerwolf } from "./members/eurasischerwolf";
 
+import { rainergznich } from "./members/rainergznich";
+
 
 
 export const MEMBERS: ServiceRecordMember[] = [
@@ -279,4 +281,6 @@ export const MEMBERS: ServiceRecordMember[] = [
     florianh,
 
     eurasischerwolf,
+
+    rainergznich,
 ];
