@@ -18,6 +18,23 @@ export type CareerTeam = {
 export const careerTeams: CareerTeam[] = [
     
      {
+        season: "2028/2029",
+        team: "Toronto Maple Leafs",
+        league: "NHL",
+        logo: "/images/nhl27/toronto-maple-leafs.png",
+
+        games: 0,
+        goals: 0,
+        assists: 0,
+        points: 0,
+        plusMinus: 0,
+        pim: 0,
+
+        status: "AKTUELL",
+        contractUntil: "2028/29",
+    },  
+
+    {
         season: "2027/2028",
         team: "Toronto Maple Leafs",
         league: "NHL",
@@ -30,7 +47,7 @@ export const careerTeams: CareerTeam[] = [
         plusMinus: 75,
         pim: 53,
 
-        status: "AKTUELL",
+        status: "NICHT MEHR AKTIV",
         contractUntil: "2028/29",
     },  
     
@@ -47,7 +64,7 @@ export const careerTeams: CareerTeam[] = [
         plusMinus: 21,
         pim: 48,
 
-        status: "AKTUELL",
+        status: "NICHT MEHR AKTIV",
         contractUntil: "2028/29",
     },
 

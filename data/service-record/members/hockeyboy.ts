@@ -37,7 +37,7 @@ export const hockeyboyaustria: ServiceRecordMember = {
     /**
      * Anzeigename
      */
-    name:"Hockeyboyustria20",
+    name:"Hockeyboyaustria20",
 
     /**
      * Avatar
