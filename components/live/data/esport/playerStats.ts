@@ -13,6 +13,7 @@
  * der aktuellen DEG eSports Spieler.
  * ========================================= */
 
+
 // =========================================
 // SPIELERPOSITIONEN
 // =========================================
@@ -21,6 +22,7 @@ export type PlayerPosition =
     | "goalie"
     | "defense"
     | "forward";
+
 
 // =========================================
 // FELDSPIELER-STATS
@@ -42,6 +44,7 @@ export type SkaterStats = {
     faceoffWinPercentage: number;
 };
 
+
 // =========================================
 // GOALIE-STATS
 // =========================================
@@ -58,6 +61,7 @@ export type GoalieStats = {
     shutouts: number;
 };
 
+
 // =========================================
 // BASIS-SPIELER
 // =========================================
@@ -69,6 +73,7 @@ type BasePlayer = {
     image: string;
 };
 
+
 // =========================================
 // FELDSPIELER
 // =========================================
@@ -78,6 +83,7 @@ export type SkaterPlayer = BasePlayer & {
     stats: SkaterStats;
 };
 
+
 // =========================================
 // GOALIE
 // =========================================
@@ -86,6 +92,7 @@ export type GoaliePlayer = BasePlayer & {
     position: "goalie";
     stats: GoalieStats;
 };
+
 
 // =========================================
 // PLAYER
@@ -333,15 +340,15 @@ export const playoffGoalieStats: GoaliePlayer[] = [
         position: "goalie",
         image: "/images/esport/players/houddel_26.png",
         stats: {
-            games: 12,
-            wins: 8,
-            losses: 4,
+            games: 18,
+            wins: 11,
+            losses: 7,
             overtimeLosses: 0,
-            saves: 145,
-            goalsAgainst: 32,
-            savePercentage: 81.92,
-            goalsAgainstAverage: 2.67,
-            shutouts: 0,
+            saves: 210,
+            goalsAgainst: 46,
+            savePercentage: 82.03,
+            goalsAgainstAverage: 2.56,
+            shutouts: 2,
         },
     },
 ];
@@ -353,47 +360,47 @@ export const playoffGoalieStats: GoaliePlayer[] = [
 
 export const playoffSkaterStats: SkaterPlayer[] = [
     {
-        number: 9,
-        gamerTag: "PantherOnSkates",
-        name: "L. Fedra",
-        position: "defense",
-        image: "/images/esport/players/PantherOnSkates.png",
-        stats: {
-            games: 12,
-            goals: 11,
-            assists: 12,
-            points: 23,
-            plusMinus: -2,
-            pim: 12,
-            powerplayGoals: 0,
-            shorthandedGoals: 0,
-            gameWinningGoals: 0,
-            shots: 28,
-            shootingPercentage: 39.3,
-            hits: 15,
-            faceoffWinPercentage: 66.7,
-        },
-    },
-    {
         number: 91,
         gamerTag: "TooEzXx",
         name: "L. Hansen",
         position: "defense",
         image: "/images/esport/players/TooEzXx.png",
         stats: {
-            games: 12,
-            goals: 8,
-            assists: 13,
-            points: 21,
-            plusMinus: -2,
-            pim: 8,
+            games: 18,
+            goals: 15,
+            assists: 18,
+            points: 33,
+            plusMinus: 0,
+            pim: 16,
             powerplayGoals: 3,
             shorthandedGoals: 0,
-            gameWinningGoals: 3,
-            shots: 45,
-            shootingPercentage: 17.8,
-            hits: 7,
+            gameWinningGoals: 5,
+            shots: 64,
+            shootingPercentage: 23.4,
+            hits: 11,
             faceoffWinPercentage: 0,
+        },
+    },
+    {
+        number: 9,
+        gamerTag: "PantherOnSkates",
+        name: "L. Fedra",
+        position: "defense",
+        image: "/images/esport/players/PantherOnSkates.png",
+        stats: {
+            games: 16,
+            goals: 14,
+            assists: 17,
+            points: 31,
+            plusMinus: -1,
+            pim: 16,
+            powerplayGoals: 0,
+            shorthandedGoals: 0,
+            gameWinningGoals: 0,
+            shots: 39,
+            shootingPercentage: 35.9,
+            hits: 17,
+            faceoffWinPercentage: 42.9,
         },
     },
     {
@@ -403,19 +410,19 @@ export const playoffSkaterStats: SkaterPlayer[] = [
         position: "forward",
         image: "/images/esport/players/akin_penta.png",
         stats: {
-            games: 12,
-            goals: 11,
-            assists: 10,
-            points: 21,
-            plusMinus: -2,
-            pim: 4,
+            games: 18,
+            goals: 15,
+            assists: 14,
+            points: 29,
+            plusMinus: 0,
+            pim: 10,
             powerplayGoals: 2,
             shorthandedGoals: 0,
-            gameWinningGoals: 4,
-            shots: 46,
-            shootingPercentage: 23.9,
-            hits: 1,
-            faceoffWinPercentage: 51.7,
+            gameWinningGoals: 5,
+            shots: 66,
+            shootingPercentage: 22.7,
+            hits: 5,
+            faceoffWinPercentage: 49.3,
         },
     },
     {
@@ -425,18 +432,18 @@ export const playoffSkaterStats: SkaterPlayer[] = [
         position: "forward",
         image: "/images/esport/players/Pasq86ualePS.png",
         stats: {
-            games: 12,
+            games: 18,
             goals: 0,
-            assists: 8,
-            points: 8,
-            plusMinus: -2,
-            pim: 0,
+            assists: 12,
+            points: 12,
+            plusMinus: -1,
+            pim: 6,
             powerplayGoals: 0,
             shorthandedGoals: 0,
             gameWinningGoals: 0,
-            shots: 10,
+            shots: 12,
             shootingPercentage: 0,
-            hits: 34,
+            hits: 44,
             faceoffWinPercentage: 0,
         },
     },
@@ -469,19 +476,41 @@ export const playoffSkaterStats: SkaterPlayer[] = [
         position: "defense",
         image: "/images/esport/players/FellyKnight.png",
         stats: {
-            games: 6,
+            games: 12,
             goals: 0,
-            assists: 0,
-            points: 0,
-            plusMinus: -1,
+            assists: 4,
+            points: 4,
+            plusMinus: 1,
             pim: 10,
             powerplayGoals: 0,
             shorthandedGoals: 0,
             gameWinningGoals: 0,
-            shots: 2,
+            shots: 7,
             shootingPercentage: 0,
-            hits: 6,
+            hits: 11,
             faceoffWinPercentage: 0,
+        },
+    },
+    {
+        number: 85,
+        gamerTag: "daen85",
+        name: "D. Zimmermann",
+        position: "forward",
+        image: "/images/esport/players/daen85.png",
+        stats: {
+            games: 2,
+            goals: 0,
+            assists: 1,
+            points: 1,
+            plusMinus: 1,
+            pim: 2,
+            powerplayGoals: 0,
+            shorthandedGoals: 0,
+            gameWinningGoals: 0,
+            shots: 4,
+            shootingPercentage: 0,
+            hits: 1,
+            faceoffWinPercentage: 100,
         },
     },
 ];

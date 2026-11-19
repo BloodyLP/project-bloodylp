@@ -113,9 +113,9 @@ const semifinalMatches = [
  */
 
 const finalMatch = {
-    homeScore: null as number | null,
-    awayScore: null as number | null,
-    played: false,
+    homeScore: 3,
+    awayScore: 3,
+    played: true,
 };
 
 

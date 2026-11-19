@@ -85,7 +85,7 @@ export const degTeam = {
 /* ============================================ */
 
 export const upcomingMatch: UpcomingMatch = {
-    date: "DIENSTAG, 17. NOVEMBER 2026 AB 21.20 UHR",
+    date: "DIENSTAG, 19. NOVEMBER 2026 AB 21.20 UHR",
 
     league: "GCL 13 - PLAYOFFS FINALE",
 
@@ -123,24 +123,24 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-        date: "10. November 2026",
+        date: "18. November 2026",
 
-        league: "GCL 13 - POKAL FINALE",
+        league: "GCL 13 - PLAYOFFS - FINALE",
 
-        opponent: "Deadly Phantoms",
+        opponent: "REH Gaming",
 
         opponentLogo:
-            "/images/esport/gcl13/deadly-phantoms.png",
+            "/images/esport/gcl13/reh-gaming.png",
 
         degScore: 1,
 
         opponentScore: 0,
 
-        overtime: true,
+        overtime: false,
 
         shootout: false,
 
-        home: true,
+        home: false,
     },
 
 
@@ -152,24 +152,24 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-        date: "03. November 2026",
+        date: "18. November 2026",
 
-        league: "GCL 13 - Playoff Halbfinale",
+        league: "GCL 13 - PLAYOFFS - FINALE",
 
-        opponent: "Hockeyholics",
+        opponent: "REH Gaming",
 
         opponentLogo:
-            "/images/esport/gcl13/hockeyholics.png",
+            "/images/esport/gcl13/reh-gaming.png",
 
         degScore: 3,
 
-        opponentScore: 1,
+        opponentScore: 4,
 
-        overtime: false,
+        overtime: true,
 
         shootout: false,
 
-        home: false,
+        home: true,
     },
 
 
@@ -181,23 +181,23 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
-        date: "03. November 2026",
+        date: "18. November 2026",
 
-        league: "GCL 13 - Playoff Halbfinale",
+        league: "GCL 13 - PLAYOFFS - FINALE",
 
-        opponent: "Hockeyholics",
+        opponent: "REH Gaming",
 
         opponentLogo:
-            "/images/esport/gcl13/hockeyholics.png",
+            "/images/esport/gcl13/reh-gaming.png",
 
         degScore: 3,
 
-        opponentScore: 1,
+        opponentScore: 2,
 
         overtime: false,
 
         shootout: false,
 
-        home: true,
+        home: false,
     },
 ];

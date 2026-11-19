@@ -39,24 +39,11 @@ export const liveData = {
 
     events: [  
 
-      {
-        day: "DI",
-        date: "17. NOV",
-        time: "21:20 Uhr",
-        title: "DEG eSports",
-      },
-      {
-        day: "MI",
-        date: "18. NOV",
-        time: "20:50 Uhr",
-        title: "DEG eSports",
-      },
-
             {
         day: "DO",
         date: "19. NOV",
-        time: "19:30 Uhr",
-        title: "EA FC 27 - Spielerkarriere",
+        time: "21:20 Uhr",
+        title: "DEG eSports vs. REH Gaming • GCL 13 - Playoffs - Finale",
       },
 
                   {
@@ -64,6 +51,20 @@ export const liveData = {
         date: "21. NOV",
         time: "19:30 Uhr",
         title: "The Legeend of Zelda: Ocarina of Time",
+      },
+
+                        {
+        day: "SO",
+        date: "22. NOV",
+        time: "19:30 Uhr",
+        title: "NHL 27 - BloodyArmy - Der Start",
+      },
+
+                        {
+        day: "MO",
+        date: "23. NOV",
+        time: "19:30 Uhr",
+        title: "NHL 27 - Be A Pro",
       },
       
       
