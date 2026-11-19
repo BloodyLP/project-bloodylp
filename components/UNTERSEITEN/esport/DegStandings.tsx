@@ -113,7 +113,7 @@ const semifinalMatches = [
  */
 
 const finalMatch = {
-    homeScore: 3,
+    homeScore: 4,
     awayScore: 3,
     played: true,
 };
@@ -211,6 +211,8 @@ const getSemifinalWinner = (matchId: number) => {
 
 const finalHome = getTeamByName("DEG eSports");
 const finalAway = getTeamByName("REH Gaming");
+
+
 
 
 /* ============================================ */
@@ -513,6 +515,8 @@ export default function DegStandings() {
                         );
                     })}
                 </div>
+
+                
             </section>
 
 
@@ -769,6 +773,42 @@ export default function DegStandings() {
 
                     </article>
                 </div>
+
+                {/* ========================================= */}
+{/* GCL 13 CHAMPION */}
+{/* ========================================= */}
+
+<div className={styles.championBanner}>
+
+    <div className={styles.championTrophy}>
+        🏆
+    </div>
+
+    <div className={styles.championContent}>
+
+        <span className={styles.championEyebrow}>
+            GCL 13 · DIVISION I
+        </span>
+
+        <h3 className={styles.championTitle}>
+            DEG ESPORTS
+        </h3>
+
+        <span className={styles.championSubtitle}>
+            CHAMPION DER GCL 13
+        </span>
+
+        <p className={styles.championResult}>
+            4:3 SERIENSIEG GEGEN REH GAMING
+        </p>
+
+    </div>
+
+    <div className={styles.championTrophy}>
+        🏆
+    </div>
+
+</div>
             </section>
 
 

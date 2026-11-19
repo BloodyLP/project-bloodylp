@@ -85,13 +85,13 @@ export const degTeam = {
 /* ============================================ */
 
 export const upcomingMatch: UpcomingMatch = {
-    date: "DIENSTAG, 19. NOVEMBER 2026 AB 21.20 UHR",
+    date: "TBD",
 
-    league: "GCL 13 - PLAYOFFS FINALE",
+    league: "ECL",
 
     // Erstes Spiel: GCL 13 – Spieltag 8
-    opponent: "REH Gaming",
-    opponentLogo: "/images/esport/gcl13/reh-gaming.png",
+    opponent: "TBD",
+    opponentLogo: "/images/esport/logos/ecl2.png",
 };
 
 
@@ -123,6 +123,35 @@ export const degMatches: DegMatch[] = [
     /* ======================================== */
 
     {
+        date: "19. November 2026",
+
+        league: "GCL 13 - PLAYOFFS - FINALE",
+
+        opponent: "REH Gaming",
+
+        opponentLogo:
+            "/images/esport/gcl13/reh-gaming.png",
+
+        degScore: 4,
+
+        opponentScore: 1,
+
+        overtime: false,
+
+        shootout: false,
+
+        home: true,
+    },
+
+
+    /* ======================================== */
+    /* MATCH 02                                  */
+    /* ======================================== */
+    /* DEG gewinnt regulär                       */
+    /* Ergebnis: 3:2                            */
+    /* ======================================== */
+
+    {
         date: "18. November 2026",
 
         league: "GCL 13 - PLAYOFFS - FINALE",
@@ -145,10 +174,10 @@ export const degMatches: DegMatch[] = [
 
 
     /* ======================================== */
-    /* MATCH 02                                  */
+    /* MATCH 03                                  */
     /* ======================================== */
     /* DEG gewinnt regulär                       */
-    /* Ergebnis: 3:2                            */
+    /* Ergebnis: 7:0                            */
     /* ======================================== */
 
     {
@@ -170,34 +199,5 @@ export const degMatches: DegMatch[] = [
         shootout: false,
 
         home: true,
-    },
-
-
-    /* ======================================== */
-    /* MATCH 03                                  */
-    /* ======================================== */
-    /* DEG gewinnt regulär                       */
-    /* Ergebnis: 7:0                            */
-    /* ======================================== */
-
-    {
-        date: "18. November 2026",
-
-        league: "GCL 13 - PLAYOFFS - FINALE",
-
-        opponent: "REH Gaming",
-
-        opponentLogo:
-            "/images/esport/gcl13/reh-gaming.png",
-
-        degScore: 3,
-
-        opponentScore: 2,
-
-        overtime: false,
-
-        shootout: false,
-
-        home: false,
     },
 ];

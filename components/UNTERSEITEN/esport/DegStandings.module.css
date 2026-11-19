@@ -1203,3 +1203,131 @@
         font-size: 0.85rem;
     }
 }
+
+/* ========================================= */
+/* GCL 13 CHAMPION */
+/* ========================================= */
+
+.championBanner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+
+    width: 100%;
+    margin-top: 28px;
+    padding: 32px 24px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(220, 20, 60, 0.18),
+            rgba(20, 20, 24, 0.96) 45%,
+            rgba(220, 20, 60, 0.12)
+        );
+
+    border: 1px solid rgba(220, 20, 60, 0.55);
+    border-radius: 16px;
+
+    box-shadow:
+        0 0 25px rgba(220, 20, 60, 0.12),
+        inset 0 0 30px rgba(220, 20, 60, 0.06);
+}
+
+.championBanner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.05),
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+.championTrophy {
+    position: relative;
+    z-index: 1;
+
+    font-size: 52px;
+    filter: drop-shadow(0 0 12px rgba(255, 190, 50, 0.4));
+}
+
+.championContent {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+}
+
+.championEyebrow {
+    color: #dc143c;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.championTitle {
+    margin: 0;
+
+    color: #ffffff;
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    text-shadow: 0 0 18px rgba(220, 20, 60, 0.4);
+}
+
+.championSubtitle {
+    color: #f5c542;
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.championResult {
+    margin: 8px 0 0;
+
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+@media (max-width: 600px) {
+    .championBanner {
+        gap: 12px;
+        padding: 24px 12px;
+    }
+
+    .championTrophy {
+        font-size: 32px;
+    }
+
+    .championEyebrow {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .championSubtitle {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .championResult {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+    }
+}

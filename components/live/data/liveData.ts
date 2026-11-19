@@ -39,13 +39,6 @@ export const liveData = {
 
     events: [  
 
-            {
-        day: "DO",
-        date: "19. NOV",
-        time: "21:20 Uhr",
-        title: "DEG eSports vs. REH Gaming • GCL 13 - Playoffs - Finale",
-      },
-
                   {
         day: "SA",
         date: "21. NOV",
@@ -65,6 +58,13 @@ export const liveData = {
         date: "23. NOV",
         time: "19:30 Uhr",
         title: "NHL 27 - Be A Pro",
+      },
+
+                              {
+        day: "MI",
+        date: "25. NOV",
+        time: "19:30 Uhr",
+        title: "EA FC 27 - Spielerkarriere",
       },
       
       
