@@ -41,28 +41,28 @@ export const liveData = {
 
                   {
         day: "SA",
-        date: "21. NOV",
+        date: "28. NOV",
         time: "19:30 Uhr",
         title: "The Legeend of Zelda: Ocarina of Time",
       },
 
                         {
         day: "SO",
-        date: "22. NOV",
+        date: "29. NOV",
         time: "19:30 Uhr",
         title: "NHL 27 - BloodyArmy - Der Start",
       },
 
                         {
         day: "MO",
-        date: "23. NOV",
+        date: "30. NOV",
         time: "19:30 Uhr",
         title: "NHL 27 - Be A Pro",
       },
 
                               {
         day: "MI",
-        date: "25. NOV",
+        date: "01. DEZ",
         time: "19:30 Uhr",
         title: "EA FC 27 - Spielerkarriere",
       },
