@@ -2523,7 +2523,7 @@
 
 .projectSwitcher {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 8px;
     padding: 7px;
     border: 1px solid var(--border);
@@ -3301,3 +3301,167 @@
         height: 100px;
     }
 }
+
+/* NHL-Liga-Logo im Kopf der Pacific-Division-Tabelle */
+.tableNhlLogo {
+    width: 104px;
+    height: auto;
+    max-height: 42px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+
+/* ============================================================= */
+/* YOUNGARMY • KOMPLETTE ROTE PROJEKTFARBEN                     */
+/* ============================================================= */
+
+.youngArmySection {
+    --lime: #c8102e;
+    --lime-light: #e31837;
+    --lime-dark: #9f1239;
+
+    --card-hover: rgba(200, 16, 46, 0.055);
+    --border-lime: rgba(200, 16, 46, 0.28);
+
+    --zone-accent: #e31837;
+    --zone-bg: rgba(200, 16, 46, 0.075);
+    --zone-border: rgba(200, 16, 46, 0.2);
+}
+
+/* YoungArmy in der Divisionstabelle */
+
+.youngArmySection .krefeldStandingsRow {
+    --zone-accent: #e31837;
+    --zone-bg: rgba(200, 16, 46, 0.075);
+    --zone-border: rgba(200, 16, 46, 0.2);
+}
+
+/* Spieltag-Kacheln */
+
+.youngArmySection .gameDayLabel {
+    border-color: rgba(200, 16, 46, 0.55);
+    background: rgba(200, 16, 46, 0.06);
+}
+
+.youngArmySection .gameDayLabel strong {
+    color: #e31837;
+}
+
+/* Spieler- und Team-Akzente */
+
+.youngArmySection .youBadge {
+    border-color: rgba(200, 16, 46, 0.45);
+    color: #e31837;
+}
+
+/* Siege ebenfalls im YoungArmy-Rot */
+
+.youngArmySection .gameScoreWin {
+    border-color: rgba(200, 16, 46, 0.45);
+    background: rgba(200, 16, 46, 0.09);
+}
+
+/* ============================================================= */
+/* YOUNGARMY • REITER                                             */
+/* ============================================================= */
+
+.youngArmyTab.projectTabActive {
+    border-color: #c8102e;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(200, 16, 46, 0.18),
+            rgba(200, 16, 46, 0.045)
+        );
+
+    color: #e31837;
+
+    box-shadow:
+        inset 0 0 24px rgba(200, 16, 46, 0.06),
+        0 0 18px rgba(200, 16, 46, 0.08);
+}
+
+.youngArmyTab.projectTabActive .projectTabNumber,
+.youngArmyTab.projectTabActive .projectTabArrow {
+    color: #e31837;
+}
+
+.youngArmyTab:hover {
+    border-color: rgba(200, 16, 46, 0.65);
+}
+
+.youngArmyTab:focus-visible {
+    outline-color: #c8102e;
+}
+
+
+/* ============================================================= */
+/* YOUNGARMY • GRÜNSTICH ENTFERNEN                                */
+/* ============================================================= */
+
+/* Gesamter Seitenhintergrund, solange YoungArmy aktiv ist */
+.page:has(.youngArmySection) {
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(200, 16, 46, 0.09),
+            transparent 38%
+        ),
+        #050608;
+}
+
+/* Teamkarte – auch die Fläche hinter dem Logo */
+.youngArmySection .seasonIntroCard {
+    border-color: rgba(200, 16, 46, 0.55);
+
+    background:
+        radial-gradient(
+            circle at 0% 50%,
+            rgba(200, 16, 46, 0.14),
+            transparent 42%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(200, 16, 46, 0.055),
+            rgba(255, 255, 255, 0.012)
+        );
+}
+
+/* Logo-Kachel: bisheriger grüner Hintergrund wird rot */
+.youngArmySection .seasonIntroLogos {
+    border-color: rgba(200, 16, 46, 0.65);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(200, 16, 46, 0.12),
+            transparent 75%
+        ),
+        rgba(200, 16, 46, 0.055);
+}
+
+/* Tabellen- und Statistikcontainer */
+.youngArmySection .tableFrame,
+.youngArmySection .gameList {
+    border-color: rgba(200, 16, 46, 0.2);
+}
+
+/* Hintergründe und Hover-Effekte in der YoungArmy-Ansicht */
+.youngArmySection .tableFrameHeader {
+    background: rgba(200, 16, 46, 0.035);
+}
+
+.youngArmySection .standingsTable tbody tr:hover {
+    background: rgba(200, 16, 46, 0.045);
+}
+
+/* Keine grünen Schatten oder Glows in diesem Bereich */
+.youngArmySection .seasonIntroCard,
+.youngArmySection .tableFrame,
+.youngArmySection .gameList {
+    box-shadow:
+        inset 0 0 35px rgba(200, 16, 46, 0.018);
+}
+

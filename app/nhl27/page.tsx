@@ -24,6 +24,20 @@ import {
     playerProfile,
 } from "@/components/live/data/nhl27/player-profile";
 
+import {
+    divisionStandings as bloodyArmyStandings,
+    teamScorers as bloodyArmyScorers,
+    teamGoalies as bloodyArmyGoalies,
+    teamGames as bloodyArmyGames,
+} from "@/components/live/data/nhl27/bloodyarmy/season";
+
+import {
+    divisionStandings as youngArmyStandings,
+    teamScorers as youngArmyScorers,
+    teamGoalies as youngArmyGoalies,
+    teamGames as youngArmyGames,
+} from "@/components/live/data/nhl27/youngarmy/season";
+
 import styles from "./page.module.css";
 
 
@@ -134,7 +148,7 @@ const krefeldGames = [
 ];
 
 export default function NHL27Page() {
-    const [activeProject, setActiveProject] = useState<"be-a-pro" | "pennydel" | "bloodyarmy">("be-a-pro");
+    const [activeProject, setActiveProject] = useState<"be-a-pro" | "pennydel" | "bloodyarmy" | "youngarmy">("be-a-pro");
 
     return (
         <main className={styles.page}>
@@ -178,33 +192,6 @@ export default function NHL27Page() {
                         </p>
 
                         <div className={styles.heroActions}>
-
-                            <button
-                                type="button"
-                                className={styles.primaryButton}
-                                onClick={() => setActiveProject("be-a-pro")}
-                            >
-                                BE A PRO
-                                <span>→</span>
-                            </button>
-
-                                                        <button
-                                type="button"
-                                className={styles.primaryButton}
-                                onClick={() => setActiveProject("pennydel")}
-                            >
-                                PENNY DEL
-                                <span>→</span>
-                            </button>
-
-                                                                                    <button
-                                type="button"
-                                className={styles.primaryButton}
-                                onClick={() => setActiveProject("bloodyarmy")}
-                            >
-                                BLOODY ARMY
-                                <span>→</span>
-                            </button>
 
                         </div>
 
@@ -316,6 +303,20 @@ export default function NHL27Page() {
                     >
                         <span className={styles.projectTabNumber}></span>
                         <span>BLOODYARMY</span>
+                        <span className={styles.projectTabArrow}></span>
+                    </button>
+
+                    <button
+                        type="button"
+                        role="tab"
+                        id="tab-youngarmy"
+                        aria-selected={activeProject === "youngarmy"}
+                        aria-controls="panel-youngarmy"
+className={`${styles.projectTab} ${styles.youngArmyTab} ${activeProject === "youngarmy" ? styles.projectTabActive : ""}`}
+                        onClick={() => setActiveProject("youngarmy")}
+                    >
+                        <span className={styles.projectTabNumber}></span>
+                        <span>YOUNGARMY</span>
                         <span className={styles.projectTabArrow}></span>
                     </button>
                 </div>
@@ -1241,76 +1242,779 @@ export default function NHL27Page() {
                 </section>
             )}
 
-            {activeProject === "bloodyarmy" && (
-                <section
-                    id="panel-bloodyarmy"
-                    role="tabpanel"
-                    aria-labelledby="tab-bloodyarmy"
-                    className={styles.section}
-                >
-                    <div className={styles.sectionHeader}>
-                        <div>
-                            <span className={styles.sectionEyebrow}>NHL 27 • BLOODYARMY</span>
-                            <h2>LOS ANGELES BLOODYARMY</h2>
-                        </div>
-                        <p>Das BloodyArmy-Projekt bekommt seinen eigenen Bereich für Kader, Saisonverlauf, Ergebnisse und Statistiken.</p>
-                    </div>
-
-                   
-<div className={styles.bloodyArmyTeamGrid}>
-    <div className={styles.seasonIntroCard}>
-        <div className={styles.seasonIntroLogos}>
-            <Image
-                src="/images/nhl27/bloodyarmy-logo.png"
-                alt="Los Angeles BloodyArmy Logo"
-                width={140}
-                height={140}
-                className={styles.bloodyArmyTeamLogo}
-            />
-        </div>
-
-        <div>
-            <span className={styles.projectStatus}>
-                NHL • PACIFIC DIVISION
-            </span>
-            <h3>Los Angeles BloodyArmy</h3>
+           {activeProject === "bloodyarmy" && (
+    <section
+        id="panel-bloodyarmy"
+        role="tabpanel"
+        aria-labelledby="tab-bloodyarmy"
+        className={styles.section}
+    >
+        <div className={styles.sectionHeader}>
+            <div>
+                <span className={styles.sectionEyebrow}>
+                    NHL 27 • BLOODYARMY • NHL
+                </span>
+                <h2>LOS ANGELES BLOODYARMY</h2>
+            </div>
             <p>
-                Die Los Angeles BloodyArmy startet in NHL 27 in ein
-                neues Teamprojekt. Hier entsteht die Heimat für den
-                Kader, den Saisonverlauf, Ergebnisse und Statistiken
-                unseres Teams.
+                Die NHL-Saison der Los Angeles BloodyArmy – mit
+                Divisionstabelle, Scorerliste und Spielübersicht.
             </p>
         </div>
+
+        <div className={styles.seasonIntroCard}>
+            <div className={styles.seasonIntroLogos}>
+                <Image
+                    src="/images/nhl27/bloodyarmy-logo.png"
+                    alt="Los Angeles BloodyArmy Logo"
+                    width={140}
+                    height={140}
+                    className={styles.bloodyArmyTeamLogo}
+                />
+            </div>
+
+            <div>
+                <span className={styles.projectStatus}>
+                    NHL • PACIFIC DIVISION
+                </span>
+                <h3>Los Angeles BloodyArmy</h3>
+                <p>
+                    Hier werden ausschließlich die Tabellenwerte der
+                    Division mit der BloodyArmy sowie die teambezogenen
+                    Scorer und Spiele geführt.
+                </p>
+            </div>
+        </div>
+
+        {/* PACIFIC-DIVISION-TABELLE */}
+        <div className={styles.subHeader}>
+            <span>NHL • PACIFIC DIVISION</span>
+            <h3>DIVISIONSTABELLE</h3>
+        </div>
+
+        <div className={styles.tableFrame}>
+            <div className={styles.tableFrameHeader}>
+                <div>
+                    <span className={styles.tableEyebrow}>
+                        SAISONÜBERSICHT
+                    </span>
+                    <h3>Pacific Division</h3>
+                </div>
+
+                <Image
+                    src="/images/nhl27/nhl-logo.svg"
+                    alt="NHL"
+                    width={112}
+                    height={44}
+                    className={styles.tableNhlLogo}
+                />
+            </div>
+
+            <div className={styles.standingsScroller}>
+                <table className={styles.standingsTable}>
+                    <thead>
+                        <tr>
+                            <th>Pl.</th>
+                            <th>Team</th>
+                            <th>SP</th>
+                            <th>PKT</th>
+                            <th>S</th>
+                            <th>N</th>
+                            <th>OTS</th>
+                            <th>OTN</th>
+                            <th>T</th>
+                            <th>GT</th>
+                            <th>Diff.</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {[...bloodyArmyStandings]
+                            .sort(
+                                (a, b) =>
+                                    b.points - a.points ||
+                                    b.wins - a.wins ||
+                                    a.team.localeCompare(b.team)
+                            )
+                            .map((team, index) => (
+                                <tr
+                                    key={team.team}
+                                    className={
+                                        team.team ===
+                                        "Los Angeles BloodyArmy"
+                                            ? styles.krefeldStandingsRow
+                                            : ""
+                                    }
+                                >
+                                    <td>{index + 1}</td>
+                                    <td className={styles.standingsTeamCell}>
+                                        <span>{team.team}</span>
+                                    </td>
+                                    <td>{team.games}</td>
+                                    <td className={styles.standingsPoints}>
+                                        {team.points}
+                                    </td>
+                                    <td>{team.wins}</td>
+                                    <td>{team.losses}</td>
+                                    <td>{team.overtimeWins}</td>
+                                    <td>{team.overtimeLosses}</td>
+                                    <td>{team.goalsFor}</td>
+                                    <td>{team.goalsAgainst}</td>
+                                    <td>
+                                        {team.goalsFor - team.goalsAgainst}
+                                    </td>
+                                </tr>
+                            ))}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        {/* FELDSPIELER – PENNYDEL-STATISTIK BIS PPP */}
+        <div className={styles.subHeader}>
+            <span>NHL • LOS ANGELES BLOODYARMY</span>
+            <h3>FELDSPIELER-STATISTIKEN</h3>
+        </div>
+
+        <div className={styles.tableFrame}>
+            <div className={styles.tableFrameHeader}>
+                <div>
+                    <span className={styles.tableEyebrow}>
+                        SAISONÜBERSICHT
+                    </span>
+                    <h3>Scorerliste</h3>
+                </div>
+            </div>
+
+            <div className={styles.standingsScroller}>
+                <table className={styles.standingsTable}>
+                    <thead>
+                        <tr>
+                            <th>Pos.</th>
+                            <th>Nr.</th>
+                            <th style={{ textAlign: "left" }}>Spieler</th>
+                            <th>SP</th>
+                            <th>T</th>
+                            <th>A</th>
+                            <th>P</th>
+                            <th>+/-</th>
+                            <th>STM</th>
+                            <th>S</th>
+                            <th>S %</th>
+                            <th>SGT</th>
+                            <th>PPT</th>
+                            <th>PPP</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {[...bloodyArmyScorers]
+                            .sort(
+                                (a, b) =>
+                                    b.points - a.points ||
+                                    b.goals - a.goals ||
+                                    a.gamertag.localeCompare(b.gamertag)
+                            )
+                            .map((player) => (
+                                <tr key={player.gamertag}>
+                                    <td>{player.position}</td>
+                                    <td>{player.jerseyNumber}</td>
+
+                                    <td
+                                        className={styles.standingsTeamCell}
+                                        style={{ textAlign: "left" }}
+                                    >
+                                        <span>{player.gamertag}</span>
+                                    </td>
+
+                                    <td>{player.games}</td>
+                                    <td>{player.goals}</td>
+                                    <td>{player.assists}</td>
+                                    <td className={styles.standingsPoints}>
+                                        {player.points}
+                                    </td>
+                                    <td>
+                                        {player.plusMinus > 0 ? "+" : ""}
+                                        {player.plusMinus}
+                                    </td>
+                                    <td>{player.penaltyMinutes}</td>
+                                    <td>{player.shots}</td>
+                                    <td>
+                                        {player.shootingPercentage.toLocaleString(
+                                            "de-DE",
+                                            {
+                                                minimumFractionDigits: 1,
+                                                maximumFractionDigits: 1,
+                                            }
+                                        )}{" "}
+                                        %
+                                    </td>
+                                    <td>{player.hits}</td>
+                                    <td>{player.powerPlayGoals}</td>
+                                    <td>{player.powerPlayPoints}</td>
+                                </tr>
+                            ))}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        {/* GOALIES – PENNYDEL-STATISTIK */}
+        <div className={styles.subHeader}>
+            <span>NHL • LOS ANGELES BLOODYARMY</span>
+            <h3>TORHÜTER-STATISTIKEN</h3>
+        </div>
+
+        <div className={styles.tableFrame}>
+            <div className={styles.tableFrameHeader}>
+                <div>
+                    <span className={styles.tableEyebrow}>
+                        SAISONÜBERSICHT
+                    </span>
+                    <h3>Torhüter</h3>
+                </div>
+            </div>
+
+            <div className={styles.standingsScroller}>
+                <table className={styles.standingsTable}>
+                    <thead>
+                        <tr>
+                            <th>Pos.</th>
+                            <th>Nr.</th>
+                            <th style={{ textAlign: "left" }}>Torhüter</th>
+                            <th>SP</th>
+                            <th>S</th>
+                            <th>N</th>
+                            <th>OTN</th>
+                            <th>SO</th>
+                            <th>FQ</th>
+                            <th>GGS</th>
+                            <th>Schüsse</th>
+                            <th>GT</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {bloodyArmyGoalies.map((goalie) => (
+                            <tr key={goalie.gamertag}>
+                                <td>{goalie.position}</td>
+                                <td>{goalie.jerseyNumber}</td>
+
+                                <td
+                                    className={styles.standingsTeamCell}
+                                    style={{ textAlign: "left" }}
+                                >
+                                    <span>{goalie.gamertag}</span>
+                                </td>
+
+                                <td>{goalie.games}</td>
+                                <td>{goalie.wins}</td>
+                                <td>{goalie.losses}</td>
+                                <td>{goalie.overtimeLosses}</td>
+                                <td>{goalie.shutouts}</td>
+                                <td>
+                                    {goalie.savePercentage.toLocaleString(
+                                        "de-DE",
+                                        {
+                                            minimumFractionDigits: 3,
+                                            maximumFractionDigits: 3,
+                                        }
+                                    )}
+                                </td>
+                                <td>
+                                    {goalie.goalsAgainstAverage.toLocaleString(
+                                        "de-DE",
+                                        {
+                                            minimumFractionDigits: 2,
+                                            maximumFractionDigits: 2,
+                                        }
+                                    )}
+                                </td>
+                                <td>{goalie.shotsAgainst}</td>
+                                <td>{goalie.goalsAgainst}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        {/* SPIELPLAN */}
+        <div className={styles.subHeader}>
+            <span>NHL • LOS ANGELES BLOODYARMY</span>
+            <h3>ERGEBNISSE &amp; SPIELPLAN</h3>
+        </div>
+
+        <div className={styles.gameList}>
+            <div className={styles.gameListHeader}>
+                <div>
+                    <span className={styles.tableEyebrow}>
+                        SAISONVERLAUF
+                    </span>
+                    <h3>Spiele der BloodyArmy</h3>
+                </div>
+
+                <span className={styles.tableStatus}>NHL</span>
+            </div>
+
+            <div className={styles.krefeldGameList}>
+                {bloodyArmyGames.map((game) => {
+                    const isHome =
+                        game.home === "Los Angeles BloodyArmy";
+
+                    const opponent = isHome ? game.away : game.home;
+
+                    const hasResult =
+                        game.homeScore !== null &&
+                        game.awayScore !== null;
+
+                    const bloodyScore = isHome
+                        ? game.homeScore
+                        : game.awayScore;
+
+                    const opponentScore = isHome
+                        ? game.awayScore
+                        : game.homeScore;
+
+                    return (
+                        <div
+                            className={styles.krefeldGameRow}
+                            key={game.gameDay}
+                        >
+                            <div className={styles.gameDayLabel}>
+                                <span>SPIELTAG</span>
+                                <strong>{game.gameDay}</strong>
+                                <small>{game.date}</small>
+                            </div>
+
+                            <div className={styles.gameMatchInfo}>
+                                <strong>
+                                    {isHome
+                                        ? "Los Angeles BloodyArmy"
+                                        : opponent}
+                                </strong>
+
+                                <span className={styles.gameVs}>
+                                    {isHome ? "vs." : "@"}{" "}
+                                    {isHome
+                                        ? opponent
+                                        : "Los Angeles BloodyArmy"}
+                                </span>
+                            </div>
+
+                            <div className={styles.gameScoreUpcoming}>
+                                <span>
+                                    {hasResult
+                                        ? `${bloodyScore} : ${opponentScore}`
+                                        : "SPIELPLAN"}
+                                </span>
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
+    </section>
+)}
+
+           {activeProject === "youngarmy" && (
+    <section
+        id="panel-youngarmy"
+        role="tabpanel"
+        aria-labelledby="tab-youngarmy"
+        className={`${styles.section} ${styles.youngArmySection}`}
+    >
+        <div className={styles.sectionHeader}>
+            <div>
+                <span className={styles.sectionEyebrow}>
+                    NHL 27 • YOUNGARMY • AHL
+                </span>
+                <h2>ONTARIO YOUNGARMY</h2>
+            </div>
+
+            <p>
+                Die AHL-Saison der Ontario YoungArmy – mit Divisionstabelle,
+                Feldspieler- und Goalie-Statistiken sowie Spielplan.
+            </p>
+        </div>
+
+{/* TEAMKARTE */}
+<div
+    className={`${styles.seasonIntroCard} ${styles.youngArmyProjectCard}`}
+>
+    <div className={styles.seasonIntroLogos}>
+        <Image
+            src="/images/nhl27/youngarmy-logo.png"
+            alt="Ontario YoungArmy Logo"
+            width={140}
+            height={140}
+            className={styles.bloodyArmyTeamLogo}
+        />
     </div>
 
-    <div className={styles.seasonIntroCard}>
-        <div className={styles.seasonIntroLogos}>
-            <Image
-                src="/images/nhl27/youngarmy-logo.png"
-                alt="Ontario YoungArmy Logo"
-                width={140}
-                height={140}
-                className={styles.bloodyArmyTeamLogo}
-            />
-        </div>
+    <div>
+        <span className={styles.projectStatus}>
+            AHL • PACIFIC DIVISION
+        </span>
 
-        <div>
-            <span className={styles.projectStatus}>
-                AHL • PACIFIC DIVISION
-            </span>
-            <h3>Ontario YoungArmy</h3>
-            <p>
-                Die Ontario YoungArmy steht für die nächste Generation
-                der BloodyArmy. Hier werden künftig das Team, die
-                Entwicklung der Spieler, Ergebnisse und Statistiken
-                des Nachwuchsprojekts präsentiert.
-            </p>
-        </div>
+        <h3>Ontario YoungArmy</h3>
+
+        <p>
+            Hier werden ausschließlich die Tabellenwerte der Division mit der YoungArmy sowie die teambezogenen Scorer und Spiele geführt.
+        </p>
     </div>
 </div>
 
-                </section>
-            )}
+        {/* AHL PACIFIC DIVISION */}
+        <div className={styles.subHeader}>
+            <span>AHL • PACIFIC DIVISION</span>
+            <h3>DIVISIONSTABELLE</h3>
+        </div>
+
+        <div className={styles.tableFrame}>
+            <div className={styles.tableFrameHeader}>
+                <div>
+                    <span className={styles.tableEyebrow}>
+                        SAISONÜBERSICHT
+                    </span>
+                    <h3>Pacific Division</h3>
+                </div>
+
+                <Image
+                    src="/images/nhl27/ahl-logo.webp"
+                    alt="AHL"
+                    width={112}
+                    height={44}
+                    className={styles.tableNhlLogo}
+                />
+            </div>
+
+            <div className={styles.standingsScroller}>
+                <table className={styles.standingsTable}>
+                    <thead>
+                        <tr>
+                            <th>Pl.</th>
+                            <th>Team</th>
+                            <th>SP</th>
+                            <th>PKT</th>
+                            <th>S</th>
+                            <th>N</th>
+                            <th>OTS</th>
+                            <th>OTN</th>
+                            <th>T</th>
+                            <th>GT</th>
+                            <th>Diff.</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {[...youngArmyStandings]
+                            .sort(
+                                (a, b) =>
+                                    b.points - a.points ||
+                                    b.wins - a.wins ||
+                                    a.team.localeCompare(b.team)
+                            )
+                            .map((team, index) => (
+                                <tr
+                                    key={team.team}
+                                    className={
+                                        team.team === "Ontario YoungArmy"
+                                            ? styles.krefeldStandingsRow
+                                            : ""
+                                    }
+                                >
+                                    <td>{index + 1}</td>
+
+                                    <td className={styles.standingsTeamCell}>
+                                        <span>{team.team}</span>
+                                    </td>
+
+                                    <td>{team.games}</td>
+
+                                    <td className={styles.standingsPoints}>
+                                        {team.points}
+                                    </td>
+
+                                    <td>{team.wins}</td>
+                                    <td>{team.losses}</td>
+                                    <td>{team.overtimeWins}</td>
+                                    <td>{team.overtimeLosses}</td>
+                                    <td>{team.goalsFor}</td>
+                                    <td>{team.goalsAgainst}</td>
+
+                                    <td>
+                                        {team.goalsFor - team.goalsAgainst}
+                                    </td>
+                                </tr>
+                            ))}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        {/* FELDSPIELER */}
+        <div className={styles.subHeader}>
+            <span>AHL • ONTARIO YOUNGARMY</span>
+            <h3>SCORERLISTE</h3>
+        </div>
+
+        <div className={styles.tableFrame}>
+            <div className={styles.tableFrameHeader}>
+                <div>
+                    <span className={styles.tableEyebrow}>
+                        TEAMSTATISTIKEN
+                    </span>
+                    <h3>Feldspieler</h3>
+                </div>
+            </div>
+
+            <div className={styles.standingsScroller}>
+                <table className={styles.standingsTable}>
+                    <thead>
+                        <tr>
+                            <th>Pos.</th>
+                            <th>Nr.</th>
+                            <th style={{ textAlign: "left" }}>Spieler</th>
+                            <th>SP</th>
+                            <th>T</th>
+                            <th>A</th>
+                            <th>P</th>
+                            <th>+/-</th>
+                            <th>STM</th>
+                            <th>S</th>
+                            <th>S %</th>
+                            <th>SGT</th>
+                            <th>PPT</th>
+                            <th>PPP</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {[...youngArmyScorers]
+                            .sort(
+                                (a, b) =>
+                                    b.points - a.points ||
+                                    b.goals - a.goals ||
+                                    a.gamertag.localeCompare(b.gamertag)
+                            )
+                            .map((player) => (
+                                <tr key={player.gamertag}>
+                                    <td>{player.position}</td>
+
+                                    <td>
+                                        {player.jerseyNumber ?? "—"}
+                                    </td>
+
+                                    <td
+                                        className={styles.standingsTeamCell}
+                                        style={{ textAlign: "left" }}
+                                    >
+                                        <span>{player.gamertag}</span>
+                                    </td>
+
+                                    <td>{player.games}</td>
+                                    <td>{player.goals}</td>
+                                    <td>{player.assists}</td>
+
+                                    <td className={styles.standingsPoints}>
+                                        {player.points}
+                                    </td>
+
+                                    <td>
+                                        {player.plusMinus > 0 ? "+" : ""}
+                                        {player.plusMinus}
+                                    </td>
+
+                                    <td>{player.penaltyMinutes}</td>
+                                    <td>{player.shots}</td>
+
+                                    <td>
+                                        {player.shootingPercentage.toLocaleString(
+                                            "de-DE",
+                                            {
+                                                minimumFractionDigits: 1,
+                                                maximumFractionDigits: 1,
+                                            }
+                                        )}{" "}
+                                        %
+                                    </td>
+
+                                    <td>{player.hits}</td>
+                                    <td>{player.powerPlayGoals}</td>
+                                    <td>{player.powerPlayPoints}</td>
+                                </tr>
+                            ))}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        {/* GOALIES */}
+        <div className={styles.subHeader}>
+            <span>AHL • ONTARIO YOUNGARMY</span>
+            <h3>TORHÜTER-STATISTIKEN</h3>
+        </div>
+
+        <div className={styles.tableFrame}>
+            <div className={styles.tableFrameHeader}>
+                <div>
+                    <span className={styles.tableEyebrow}>
+                        TEAMSTATISTIKEN
+                    </span>
+                    <h3>Torhüter</h3>
+                </div>
+            </div>
+
+            <div className={styles.standingsScroller}>
+                <table className={styles.standingsTable}>
+                    <thead>
+                        <tr>
+                            <th>Pos.</th>
+                            <th>Nr.</th>
+                            <th style={{ textAlign: "left" }}>Torhüter</th>
+                            <th>SP</th>
+                            <th>S</th>
+                            <th>N</th>
+                            <th>OTN</th>
+                            <th>SO</th>
+                            <th>FQ</th>
+                            <th>GGS</th>
+                            <th>Schüsse</th>
+                            <th>GT</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {youngArmyGoalies.map((goalie) => (
+                            <tr key={goalie.gamertag}>
+                                <td>{goalie.position}</td>
+                                <td>{goalie.jerseyNumber}</td>
+
+                                <td
+                                    className={styles.standingsTeamCell}
+                                    style={{ textAlign: "left" }}
+                                >
+                                    <span>{goalie.gamertag}</span>
+                                </td>
+
+                                <td>{goalie.games}</td>
+                                <td>{goalie.wins}</td>
+                                <td>{goalie.losses}</td>
+                                <td>{goalie.overtimeLosses}</td>
+                                <td>{goalie.shutouts}</td>
+
+                                <td>
+                                    {goalie.savePercentage.toLocaleString(
+                                        "de-DE",
+                                        {
+                                            minimumFractionDigits: 3,
+                                            maximumFractionDigits: 3,
+                                        }
+                                    )}
+                                </td>
+
+                                <td>
+                                    {goalie.goalsAgainstAverage.toLocaleString(
+                                        "de-DE",
+                                        {
+                                            minimumFractionDigits: 2,
+                                            maximumFractionDigits: 2,
+                                        }
+                                    )}
+                                </td>
+
+                                <td>{goalie.shotsAgainst}</td>
+                                <td>{goalie.goalsAgainst}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        {/* SPIELPLAN */}
+        <div className={styles.subHeader}>
+            <span>AHL • ONTARIO YOUNGARMY</span>
+            <h3>ERGEBNISSE &amp; SPIELPLAN</h3>
+        </div>
+
+        <div className={styles.gameList}>
+            <div className={styles.gameListHeader}>
+                <div>
+                    <span className={styles.tableEyebrow}>
+                        SAISONVERLAUF
+                    </span>
+                    <h3>Spiele der YoungArmy</h3>
+                </div>
+
+                <span className={styles.tableStatus}>AHL</span>
+            </div>
+
+            <div className={styles.krefeldGameList}>
+                {youngArmyGames.map((game) => {
+                    const isHome =
+                        game.home === "Ontario YoungArmy";
+
+                    const opponent = isHome
+                        ? game.away
+                        : game.home;
+
+                    const hasResult =
+                        game.homeScore !== null &&
+                        game.awayScore !== null;
+
+                    const youngArmyScore = isHome
+                        ? game.homeScore
+                        : game.awayScore;
+
+                    const opponentScore = isHome
+                        ? game.awayScore
+                        : game.homeScore;
+
+                    return (
+                        <div
+                            className={styles.krefeldGameRow}
+                            key={game.gameDay}
+                        >
+                            <div className={styles.gameDayLabel}>
+                                <span>SPIELTAG</span>
+                                <strong>{game.gameDay}</strong>
+                                <small>
+                                    {game.date}
+                                    {game.time ? ` • ${game.time}` : ""}
+                                </small>
+                            </div>
+
+                            <div className={styles.gameMatchInfo}>
+                                <strong>
+                                    {isHome
+                                        ? "Ontario YoungArmy"
+                                        : opponent}
+                                </strong>
+
+                                <span className={styles.gameVs}>
+                                    {isHome ? "vs." : "@"}{" "}
+                                    {isHome
+                                        ? opponent
+                                        : "Ontario YoungArmy"}
+                                </span>
+                            </div>
+
+                            <div className={styles.gameScoreUpcoming}>
+                                <span>
+                                    {hasResult
+                                        ? `${youngArmyScore} : ${opponentScore}`
+                                        : "SPIELPLAN"}
+                                </span>
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
+    </section>
+)}
 
         </main>
     );
