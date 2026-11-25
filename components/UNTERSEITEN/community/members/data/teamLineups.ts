@@ -240,7 +240,7 @@ forwards: {
 
     line4: {
 
-        lw: "BA-047",
+        lw: "BA-054",
 
         c: "BA-040",
 
@@ -280,9 +280,9 @@ defense: {
 
 goalies: {
 
-    starter: "",
+    starter: "BA-053",
 
-    backup: "",
+    backup: "BA-052",
 
 },
 
@@ -317,6 +317,26 @@ reserves: [
         {
         memberId: "BA-004",
         position: "LW",
+    },
+
+            {
+        memberId: "BA-055",
+        position: "RD",
+    },
+
+                {
+        memberId: "BA-056",
+        position: "RD",
+    },
+
+                    {
+        memberId: "BA-057",
+        position: "C",
+    },
+
+                        {
+        memberId: "BA-058",
+        position: "RW",
     },
 
   

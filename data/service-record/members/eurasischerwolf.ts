@@ -72,7 +72,7 @@ export const eurasischerwolf: ServiceRecordMember = {
     /**
      * Reihe
      */
-    line:4,
+    line:0,
 
     /**
      * Eintrittsjahr

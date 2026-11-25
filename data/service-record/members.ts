@@ -188,6 +188,19 @@ import { hitzicanada } from "./members/hitzicanada";
 
 import { hockeyboyaustria } from "./members/hockeyboy";
 
+import { arschanladde } from "./members/arschanladde";
+
+import { kleinerhans } from "./members/kleinerhans";
+
+import { wandalismus } from "./members/wandalismus";
+
+import { mrrioes } from "./members/mrrioes";
+
+import { donrwetter } from "./members/don-r-wetter";
+
+import { jaquetraktiv } from "./members/jaquetraktiv";
+
+import { harrygersack } from "./members/harrygersack";
 
 
 export const MEMBERS: ServiceRecordMember[] = [
@@ -295,4 +308,18 @@ export const MEMBERS: ServiceRecordMember[] = [
     hitzicanada,
 
     hockeyboyaustria,
+
+    arschanladde,
+
+    kleinerhans,
+
+    wandalismus,
+
+    mrrioes,
+
+    donrwetter,
+
+    jaquetraktiv,
+
+    harrygersack,
 ];

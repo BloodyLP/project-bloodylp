@@ -122,7 +122,6 @@ patreon: 0,
      * Decorations
      */
     decorations:[
-        "patreon-goat",
         "stanley-cup",
     ],
 
