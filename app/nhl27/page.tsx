@@ -1980,10 +1980,7 @@ className={`${styles.projectTab} ${styles.youngArmyTab} ${activeProject === "you
                             <div className={styles.gameDayLabel}>
                                 <span>SPIELTAG</span>
                                 <strong>{game.gameDay}</strong>
-                                <small>
-                                    {game.date}
-                                    {game.time ? ` • ${game.time}` : ""}
-                                </small>
+                                <small>{game.date}</small>
                             </div>
 
                             <div className={styles.gameMatchInfo}>

@@ -171,7 +171,7 @@ export const teamScorers: PlayerStat[] = roster.map(
 );
 
 const goalieRoster: [string, number][] = [
-    ["oilers_fan03", 27],
+    ["O1L3R5", 27],
     ["Ligoween", 50],
 ];
 
