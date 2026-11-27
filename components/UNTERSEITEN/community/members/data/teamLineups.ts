@@ -132,7 +132,7 @@ forwards: {
 
         lw: "BA-001",
 
-        c: "BA-028",
+        c: "BA-013",
 
         rw: "BA-006",
 
@@ -140,9 +140,9 @@ forwards: {
 
     line4: {
 
-        lw: "BA-030",
+        lw: "BA-029",
 
-        c: "BA-013",
+        c: "BA-041",
 
         rw: "BA-014",
 
@@ -154,25 +154,25 @@ defense: {
 
     pair1: {
 
-        ld: "BA-031",
+        ld: "BA-023",
 
-        rd: "BA-032",
+        rd: "BA-018",
 
     },
 
     pair2: {
 
-        ld: "BA-023",
+        ld: "BA-021",
 
-        rd: "BA-033",
+        rd: "BA-024",
 
     },
 
     pair3: {
 
-        ld: "BA-021",
+        ld: "BA-012",
 
-        rd: "BA-018",
+        rd: "BA-051",
 
     },
 
@@ -210,9 +210,9 @@ forwards: {
 
     line1: {
 
-        lw: "BA-029",
+        lw: "BA-019",
 
-        c: "BA-041",
+        c: "BA-043",
 
         rw: "BA-046",
 
@@ -220,9 +220,9 @@ forwards: {
 
     line2: {
 
-        lw: "BA-019",
+        lw: "BA-017",
 
-        c: "BA-043",
+        c: "BA-045",
 
         rw: "BA-042",
 
@@ -230,9 +230,9 @@ forwards: {
 
     line3: {
 
-        lw: "BA-017",
+        lw: "BA-047",
 
-        c: "BA-045",
+        c: "BA-040",
 
         rw: "BA-016",
 
@@ -242,7 +242,7 @@ forwards: {
 
         lw: "BA-054",
 
-        c: "BA-040",
+        c: "BA-057",
 
         rw: "BA-048",
 
@@ -254,25 +254,25 @@ defense: {
 
     pair1: {
 
-        ld: "BA-012",
+        ld: "BA-059",
 
-        rd: "BA-024",
+        rd: "BA-050",
 
     },
 
     pair2: {
 
-        ld: "BA-008",
+        ld: "",
 
-        rd: "BA-051",
+        rd: "BA-055",
 
     },
 
     pair3: {
 
-        ld: "BA-049",
+        ld: "BA-008",
 
-        rd: "BA-050",
+        rd: "BA-056",
 
     },
 
@@ -319,24 +319,19 @@ reserves: [
         position: "LW",
     },
 
-            {
-        memberId: "BA-055",
-        position: "RD",
-    },
-
-                {
-        memberId: "BA-056",
-        position: "RD",
-    },
-
-                    {
-        memberId: "BA-057",
-        position: "C",
-    },
-
                         {
         memberId: "BA-058",
         position: "RW",
+    },
+
+                            {
+        memberId: "BA-049",
+        position: "RW",
+    },
+
+                                {
+        memberId: "BA-026",
+        position: "C",
     },
 
   

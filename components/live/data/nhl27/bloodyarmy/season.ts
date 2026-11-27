@@ -147,18 +147,19 @@ const roster: [string, number, PlayerPosition][] = [
     ["HightowerSL", 73, "LF"],
     ["Surstroemingtyp124", 22, "C"],
     ["dungeon_02", 62, "RF"],
-    ["Krebser94", 94, "LV"],
-    ["ThePiotrek1993", 93, "RV"],
     ["derPolarstern", 18, "LV"],
-    ["Rosendorf1981", 23, "RV"],
     ["BloodyLP", 13, "LF"],
-    ["Dannylce87", 16, "C"],
     ["LOLFury37", 37, "RF"],
-    ["Krabson83", 83, "LF"],
     ["condor1986", 10, "C"],
     ["annihilatorLP97", 97, "RF"],
     ["B0bbe1e", 72, "LV"],
     ["NurSoEinDoggie", 58, "RV"],
+    ["SBC Schmiedli68", 68, "RV"],
+    ["ZentralratderSchneemänner", 66, "C"],   
+    ["hockeyboyaustria20", 9, "RV"],
+    ["sackzefix", 15, "LV"],
+    ["Maddog291201", 29, "LF"],
+
 ];
 
 export const teamScorers: PlayerStat[] = roster.map(

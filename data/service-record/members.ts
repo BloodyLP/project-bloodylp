@@ -202,6 +202,8 @@ import { jaquetraktiv } from "./members/jaquetraktiv";
 
 import { harrygersack } from "./members/harrygersack";
 
+import { phrasenschwein } from "./members/phrasenschwein";
+
 
 export const MEMBERS: ServiceRecordMember[] = [
 
@@ -322,4 +324,6 @@ export const MEMBERS: ServiceRecordMember[] = [
     jaquetraktiv,
 
     harrygersack,
+
+    phrasenschwein,
 ];

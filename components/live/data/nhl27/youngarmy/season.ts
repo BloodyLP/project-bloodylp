@@ -136,12 +136,6 @@ export const divisionStandings: DivisionStanding[] =
 /* ========================================================= */
 
 const roster: [string, number | null, PlayerPosition][] = [
-    ["SBC Schmiedli68", 68, "RV"],
-    ["ZentralratderSchneemänner", 66, "C"],
-    ["hockeyboyaustria20", 9, "RV"],
-    ["sackzefix", 15, "LV"],
-    ["annihilatorLP97", 97, "RA"],
-    ["Maddog291201", 29, "LA"],
     ["Tonska98", 2, "LA"],
     ["Mausefinger", 70, "LA"],
     ["FlorianH1999", 65, "RA"],
@@ -165,6 +159,9 @@ const roster: [string, number | null, PlayerPosition][] = [
     ["adriangross0602", 9, "LV"],
     ["d0n_pac0o", 7, "C"],
     ["Thellmfurter", 91, "LA"],
+    ["Fortnitelover", 80, "RV"],
+    ["Nightbot", 30, "LV"],
+    ["EurasischerWolf", 35, "LA"],
 ];
 
 export const teamScorers: PlayerStat[] = roster.map(
